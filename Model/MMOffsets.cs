@@ -95,6 +95,25 @@ namespace MajoraAutoItemTracker
         // public const int CST_INVENTORY = 0x1EF6E0; // Length: 0x18 //inventory: number = 0x801EF6E0; //0x18
 
         #region INVENTORY Equipment
+
+        // Equiped value
+        // First byte for shield: 0..2=None, Hero, Mirror
+        // Second byte for sword: 0..3=None, Kokiri, Razor, Gilded
+        // SwordAndShield = 1EF6DE //
+
+        // Sword = 1EF6BF // 4D..4F=Kokiri, Razor, Gilded FF=None
+        // TODO: Find Shield only address if exist
+
+        // Wallet 1EF729 // 00=Child, 10=Adult, 20=Giant
+
+        // ___B B_QQ
+        // 0000 0000
+        // Quiver and Bombbag 1EF728
+        // Quiver 1EF728 // read two last byte = 0, 1, 2, 3 = None, Normal, Large, Largest
+        // Bombbag 1EF728 // read bit 4 and 5 = 0, 1, 2, 3 = None, Normal, Big, Biggest
+
+        // Bomber's Notebook 1EF72E // 0A=Nothing, 0E=Got, TODO: check value
+
         #endregion
 
         #region INVENTORY C-Button Items
