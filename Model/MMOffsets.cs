@@ -128,6 +128,32 @@ namespace MajoraAutoItemTracker
         #endregion
 
         #region INVENTORY Masks
+
+        // Deku mask 1EF6FE // 32, FF
+        // Goron Mask 1EF700 // 33, FF
+        // Zora Mask 1EF70A // 34, FF
+        // Fierce Deity's Mask 1EF70C // 35, FF
+        // Postman's Hat 1EF6FB // 3E, FF
+        // All-Night Mask 1EF6FA // 38, FF
+        // Blast Mask 1EF6F9 // 47, FF
+        // Stone Mask 1EF6F8 // 45, FF
+        // Great Fairy's Mask 1EF6FF // 40, FF
+        // Keaton Mask 1EF6FD // 3A, FF
+        // Bremen Mask 1EF6FC // 46, FF
+        // Bunny Hood 1EF703 // 39, FF
+        // Don Gero's Mask 1EF702 // 42, FF
+        // Mask of SCents 1EF701 // 48, FF
+        // Romani's Mask 1EF707 // 3C, FF
+        // Circus Leader's Mask 1EF706 // 3D, FF
+        // Kafei's Mask 1EF705 // 37, FF
+        // Couple's Mask 1EF704 // 3F, FF
+        // Mask of Truth 1EF70B // 36, FF
+        // Kamaro's Mask 1EF709 // 43, FF
+        // Gibdo Mask 1EF708 // 41, FF
+        // Garo's mMask 1EF70F // 3B, FF
+        // Captain's Hat 1EF70E // 44, FF
+        // Giant's Mask 1EF70D // 49, FF
+
         #endregion
 
         #region INVENTORY Quest Items
