@@ -80,7 +80,7 @@ namespace MajoraAutoItemTracker
 
         //magic_meter_size_addr: number = 0x801EF6A8;
         //magic_current_addr: number = 0x801F35A0;
-        //magic_limit_addr: number = 0x801F359E;
+        //magic_limit_ad    dr: number = 0x801F359E;
         //magic_flag_1_addr: number = 0x801EF6B0;
         //magic_flag_2_addr: number = 0x801EF6B1;
 
@@ -92,7 +92,47 @@ namespace MajoraAutoItemTracker
         //sword_equip: number = 0x801EF6BC; // 0x1
         //tunic_boots: number = 0x801EF6DC; //0x1
         //sword_sheild: number = 0x801EF6DD;
-        //inventory: number = 0x801EF6E0; //0x18
+        // public const int CST_INVENTORY = 0x1EF6E0; // Length: 0x18 //inventory: number = 0x801EF6E0; //0x18
+
+        #region INVENTORY Equipment
+        #endregion
+
+        #region INVENTORY C-Button Items
+        public const int CST_INVENTORY_OCARINA = 0x1EF6E3; // 00=Got, FF=Nothing
+        public const int CST_INVENTORY_HERO_BOW = 0x1EF6E2; // 01=Got, FF=Nothing
+        public const int CST_INVENTORY_FIRE_AARROWS = 0x1EF6E0; // 02=Got, FF=Nothing
+        public const int CST_INVENTORY_ICE_ARROWS = 0x1EF6E1; // 03=Got, FF=Nothing
+        public const int CST_INVENTORY_LIGHT_ARROWS = 0x1EF6E7; // 04=Got, FF=Nothing
+
+        // TODO
+        // Bomb 1EF6E5 // 06=Got, FF=Nothing
+        // Bombchus 1EF6E4 // 07, FF
+        // Deku Sticks = 1EF6EB // 08, FF
+        // Deku nuts = 1EF6EA // 09, FF
+        // Magic Beans = 1EF6E9 // 0A, FF
+        // Powder Keg 1EF6EF // 0C, FF
+        // Pictograpg Box 1EF6EE // 0D, FF
+        // Lens Of truth 1EF6ED // 0E, FF
+        // Hooksot 1EF6EC // 0F, FF
+        // Great Fairy's 1EF6F3 Sword // 10, FF
+        // Trading Item 1 1EF6E6 // 28..2C=Moon's Tear, Land Title Deed, Swmap Title Deed, Mountain Tiutle Deed, Ocean Title Deed, FF=Nothing
+        // Trading Item 2 1EF6E8 // 2D..2E=Room Key, Special Delivery To Mama, FF=Nothing
+        // Trading Item 3 1EF6F2 // 2F..30=Letter to Kafei, Pendant Of Memories, FF=Nothing
+        // Bottle 1 1EF6F1 // Lazy to find value, FF=Nothing
+        // Bottle 2 1EF6F0 // Lazy to find value, FF=Nothing
+        // Bottle 3 1EF6F7 // Lazy to find value, FF=Nothing
+        // Bottle 4 1EF6F6 // Lazy to find value, FF=Nothing
+        // Bottle 5 1EF6F5 // Lazy to find value, FF=Nothing
+        // Bottle 6 1EF6F4 // Lazy to find value, FF=Nothing
+
+        #endregion
+
+        #region INVENTORY Masks
+        #endregion
+
+        #region INVENTORY Quest Items
+        #endregion
+
         //masks: number = 0x801EF6F8; //0x18
         //item_amts: number = 0x801EF710; //0x18
         //upgrades: number = 0x801EF728; //0x4
