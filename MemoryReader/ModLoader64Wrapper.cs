@@ -61,26 +61,27 @@ namespace MajoraAutoItemTracker
         
         public int readInt8(int offset)
         {
-            Debug.WriteLine("Reading 8bit starting offset: " + offset);
             return Memory.readInt8(m_Process, new IntPtr(m_romAddrStart) + offset);          
         }
 
         public int readInt16(int offset)
         {
-            Debug.WriteLine("Reading 16bit starting offset: " + offset);
             return Memory.readInt16(m_Process, new IntPtr(m_romAddrStart) + offset);
         }
 
         public int readInt32(int offset)
         {
-            Debug.WriteLine("Reading 32bit starting offset: " + offset);
             return Memory.readInt32(m_Process, new IntPtr(m_romAddrStart) + offset);
         }
 
         public uint readUInt32(int offset)
         {
-            Debug.WriteLine("Reading 32 unsigned bit starting offset: " + offset);
             return Memory.readUInt32(m_Process, new IntPtr(m_romAddrStart) + offset);
+        }
+
+        public byte[] readByte(int offset, int bytesToRead)
+        {
+            return Memory.readBytes(m_Process, new IntPtr(m_romAddrStart) + offset, bytesToRead);
         }
     }
 }
