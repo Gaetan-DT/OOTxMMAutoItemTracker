@@ -11,7 +11,7 @@ namespace MajoraAutoItemTracker
 
     class MemoryListener
     {
-        private const int CST_THREAD_DELLAY = 2000;
+        private const int CST_THREAD_DELLAY = 500;
 
         private BasicCallback mBasicCallback;
         private ModLoader64Wrapper mModLoader64Wrapper;

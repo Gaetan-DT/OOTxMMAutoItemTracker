@@ -119,17 +119,17 @@ namespace MajoraAutoItemTracker
         // Quiver 1EF728 // read two last byte = 0, 1, 2, 3 = None, Normal, Large, Largest
         // Bombbag 1EF728 // read bit 4 and 5 = 0, 1, 2, 3 = None, Normal, Big, Biggest
 
-        public const int CST_INVENTORY_EQUIPEMENT_BOMBERS_NOTEBOOK = 0x1EF72E; // Bomber's Notebook 1EF72E // right part bit 2: Bomber's
+        public const int CST_INVENTORY_EQUIPEMENT_BOMBERS_NOTEBOOK = 0x1EF72E; // Bomber's Notebook 1EF72E // right part bit 2: Bomber's [XXXX X1XX]
 
         #endregion
 
         #region INVENTORY C-Button Items
         public const int CST_INVENTORY_OCARINA = 0x1EF6E3; // 00=Got, FF=Nothing
         public const int CST_INVENTORY_HERO_BOW = 0x1EF6E2; // 01=Got, FF=Nothing
-        public const int CST_INVENTORY_FIRE_AARROWS = 0x1EF6E0; // 02=Got, FF=Nothing
+        public const int CST_INVENTORY_FIRE_ARROWS = 0x1EF6E0; // 02=Got, FF=Nothing
         public const int CST_INVENTORY_ICE_ARROWS = 0x1EF6E1; // 03=Got, FF=Nothing
         public const int CST_INVENTORY_LIGHT_ARROWS = 0x1EF6E7; // 04=Got, FF=Nothing
-        public const int CST_INVENTORY_BBOMB = 0x1EF6E5; // Bomb 1EF6E5 // 06=Got, FF=Nothing        
+        public const int CST_INVENTORY_BOMB = 0x1EF6E5; // Bomb 1EF6E5 // 06=Got, FF=Nothing        
         public const int CST_INVENTORY_BOMBCHUS = 0x1EF6E4; // Bombchus 1EF6E4 // 07, FF
         public const int CST_INVENTORY_DEKU_STICKS = 0x1EF6EB;// Deku Sticks = 1EF6EB // 08, FF
         public const int CST_INVENTORY_DEKU_NUTS = 0x1EF6EA;// Deku nuts = 1EF6EA // 09, FF
@@ -190,7 +190,7 @@ namespace MajoraAutoItemTracker
         // Songs [1EF72C, 1EF72D, 1EF72E, 1EF72F]
 
         // Bit read left to right (ex 1234 1234)
-        public const int CST_SONG_SONG_OF_TIME = 0x1EF72D; // Song of Time 1EF72D // Right part bit 1
+        public const int CST_SONG_SONG_OF_TIME = 0x1EF72D; // Song of Time 1EF72D // Left part bit 4 (XXX1 XXXX)
         public const int CST_SONG_SONG_OF_HEALING = 0x1EF72D; // Song of Healing 1EF72D // Left part bit 3
         public const int CST_SONG_EPONA_SONG = 0x1EF72D; // Epona's Song 1EF72D // Left part bit 2
         public const int CST_SONG_SONG_OF_SOARING = 0x1EF72D; // Song of Soaring 1EF72D // Left part bit 1
