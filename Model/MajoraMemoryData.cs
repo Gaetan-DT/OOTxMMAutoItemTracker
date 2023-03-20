@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker
 {
+    using Model.Enum;
+
     class MajoraMemoryData
     {
-        public int currentLinkTransformation = -1;        
+        public LinkTransformation currentLinkTransformation = Model.Enum.LinkTransformation.Human;
 
         public void UdpateStateData(ModLoader64Wrapper mModLoader64Wrapper)
         {
-
-            currentLinkTransformation = mModLoader64Wrapper.readInt8(MMOffsets.CURRENT_TRANSFORMATION);
+            currentLinkTransformation = LinkTransformationMethods.ReadFromMemory(mModLoader64Wrapper.readInt8(MMOffsets.CURRENT_TRANSFORMATION));
         }
     }
 }

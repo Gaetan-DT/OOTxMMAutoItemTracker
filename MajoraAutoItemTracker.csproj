@@ -75,7 +75,7 @@
     </Compile>
     <Compile Include="MemoryReader\Memory.cs" />
     <Compile Include="MemoryReader\MemoryListener.cs" />
-    <Compile Include="MemoryReader\MajoraMemoryData.cs" />
+    <Compile Include="Model\MajoraMemoryData.cs" />
     <Compile Include="Model\MMOffsets.cs" />
     <Compile Include="MemoryReader\ModLoader64Wrapper.cs" />
     <Compile Include="Program.cs" />
