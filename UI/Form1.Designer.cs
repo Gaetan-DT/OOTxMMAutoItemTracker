@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-namespace WindowsFormsApp1
+namespace MajoraAutoItemTracker
 {
     partial class Form1
     {

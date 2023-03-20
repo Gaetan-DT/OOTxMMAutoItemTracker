@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace WindowsFormsApp1
+namespace MajoraAutoItemTracker
 {
     class ModLoader64Wrapper
     {

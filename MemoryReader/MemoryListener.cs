@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1
+namespace MajoraAutoItemTracker
 {
     public delegate void BasicCallback(String message);
 
@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
 
         private BasicCallback mBasicCallback;
         private ModLoader64Wrapper mModLoader64Wrapper;
-        private MMMemoryDumpHelper memoryDumpHelper = new MMMemoryDumpHelper();
+        private MajoraMemoryData memoryDumpHelper = new MajoraMemoryData();
         private Thread mThread;
 
         public MemoryListener(ModLoader64Wrapper modLoader64Wrapper, BasicCallback basicCallback)
@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             this.mBasicCallback = basicCallback;
         }
 
-        public MMMemoryDumpHelper getMemoryDump()
+        public MajoraMemoryData getMemoryDump()
         {
             return this.memoryDumpHelper;
         }
