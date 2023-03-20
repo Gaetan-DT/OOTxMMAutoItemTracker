@@ -94,6 +94,13 @@ namespace MajoraAutoItemTracker
         //sword_sheild: number = 0x801EF6DD;
         // public const int CST_INVENTORY = 0x1EF6E0; // Length: 0x18 //inventory: number = 0x801EF6E0; //0x18
 
+        #region Link 
+
+        // Magic meter 1EF6AB // 0..2 = No magic, small, large
+        // Double Defense 1EF740 // Left part bit 4 and Right part bit 2
+
+        #endregion
+
         #region INVENTORY Equipment
 
         // Equiped value
@@ -112,7 +119,7 @@ namespace MajoraAutoItemTracker
         // Quiver 1EF728 // read two last byte = 0, 1, 2, 3 = None, Normal, Large, Largest
         // Bombbag 1EF728 // read bit 4 and 5 = 0, 1, 2, 3 = None, Normal, Big, Biggest
 
-        // Bomber's Notebook 1EF72E // 0A=Nothing, 0E=Got, TODO: check value
+        // Bomber's Notebook 1EF72E // right part bit 2: Bomber's
 
         #endregion
 
@@ -176,6 +183,34 @@ namespace MajoraAutoItemTracker
         #endregion
 
         #region INVENTORY Quest Items
+
+        // Dugeon Items TODO
+
+        //   1EF72C     1EF72D     1EF72E    1EF72F
+        // 0000 0000  0000 0000  0000 1010  0011 0000 = Nothing/Default value
+        //                 X -> Song of time
+        // Songs [1EF72C, 1EF72D, 1EF72E, 1EF72F]
+
+        // Bit read left to right (ex 1234 1234)
+        // Song of Time 1EF72D // Right part bit 1
+        // Song of Healing 1EF72D // Left part bit 3
+        // Epona's Song 1EF72D // Left part bit 2
+        // Song of Soaring 1EF72D // Left part bit 1
+        // Song of Storms 1EF72E // Right part bit 4
+        // Sonata of Awakening 1EF72C // Left part bit 2
+        // Goron Lullaby - Lullaby Intro 1EF72F // Right part bit 4 (0=none, 1=Lullaby)
+        // Goron Lullaby - Goron Lullaby 1EF72C // Left part bit 1 (0=None, 1=Lullaby (Intro must be mandatory))
+        // New Wave Bossa Nova 1EF72D // Right part bit 4
+        // Elegy of EMptyness 1EF72D // Right part bit 3
+        // Oath to Order 1EF72D // Right part bit 2
+
+        // Boss Masks
+
+        // Odolwa 1EF72C // Right part bit 4
+        // Goht 1EF72C // Right part bit 3
+        // Gyorg 1EF72C // Right part bit 2
+        // Twinmold 1EF72C // Right part bit 1
+
         #endregion
 
         //masks: number = 0x801EF6F8; //0x18
