@@ -6,93 +6,8 @@ using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker
 {
-    class MMOffsets
+    class MMOffsets // Big Endian
     {
-        // Stored in Litte Endian, need Big Endian converter
-        const int CST_LINK_INSTANCE = 0x3FFDB0; //Default: 0x803FFDB0
-
-        //link_state: number = 0xA6C;
-        //current_scene: number = 0x803e6bc4;
-        //scene_framecount: number = 0x803FF360;
-        //checksum: number = 0x801EF694;
-        //paused: number = 0x801D1500;
-        //interface_shown: number = 0x803FD77B;
-        //save_context: number = 0x801EF670;
-        //mask_offset: number = 0x0020;
-        //anim: number = 0x400500;
-
-        //continue_state_addr: number = 0x0; //TODO: Find for MM
-
-        //sword_addr: number = 0x801EF6DD;
-        //shield_addr: number = 0x801EF6DD;
-
-        //current_room_addr: number = 0x803FF20C;
-
-        //global_context_pointer: number = 0x801F9C60;
-
-        //overlay_table: number = 0x801AEFD0;
-        //gui_isShown: number = 0x803FD77B;
-        //Save Context
-
-        //intro_flag: number = 0x801EF675; //0x1
-        //have_tatl: number = 0x801EF692; //0x1
-        /*
-        0x0000 = 12:00 AM
-        0x1000 = 01:30 AM
-        0x2000 = 03:00 AM
-        0x3000 = 04:30 AM
-        0x4000 = 06:00 AM
-        0x402D = Dawn of Day
-        0x5000 = 07:30 AM
-        0x6000 = 09:00 AM
-        0x7000 = 10:30 AM
-        0x8000 = 12:00 PM
-        0x9000 = 01:30 PM
-        0xA000 = 03:00 PM
-        0xB000 = 04:30 PM
-        0xC000 = 06:00 PM
-        0xD000 = 07:30 PM
-        0xE000 = 09:00 PM
-        0xF000 = 10:30 PM
-        0xFFFF = 11:59 PM
-        */
-        //day_time: number = 0x801EF67C; //0x2 
-        //day_night: number = 0x801EF680; //0x4 // set to 0 during day, 1 at night
-        //time_speed: number = 0x801EF684; //0x4 // normally 1 when inverted song of time and 3 at normal speed; rando can change this
-        //current_day: number = 0x801EF688; //0x4 //0 to 4. modulo 5?
-
-        public const int CURRENT_TRANSFORMATION = 0x1EF693; //BE=1EF693 Default:0x801EF690 Length:0x1 from 0: fierce deity, goron, zora, deku, human
-
-        //pictograph_photo_addr: number = 0x801F0750; //0x2BC0
-        //pictograph_spec: number = 0x801F04EA; //0x1
-        //pictograph_quality: number = 0x801F04EB; //0x1
-        //pictograph_unk: number = 0x801F04EC; //0x1
-
-        //map_visited: number = 0x801F05CC; //0x4
-        //map_visible: number = 0x801F05D0; //0x4
-        //minimap_flags: number = 0x801F0514; //0xE
-
-        //max_heart_flag: number = 0x801EF6A4; //0x2
-        //hearts: number = 0x801EF6A6; //0x2
-        //health_mod: number = 0x801F35CA; //0x1
-        //magic: number = 0x801EF6A9; //0x1
-        //rupees: number = 0x801EF6AA; //0x2
-
-        //magic_meter_size_addr: number = 0x801EF6A8;
-        //magic_current_addr: number = 0x801F35A0;
-        //magic_limit_ad    dr: number = 0x801F359E;
-        //magic_flag_1_addr: number = 0x801EF6B0;
-        //magic_flag_2_addr: number = 0x801EF6B1;
-
-        //deku_b_addr: number = 0x801EF6C8;
-
-        //razor_hits: number = 0x801EF6AC; // 0x2
-
-        //owl_statues: number = 0x801EF6B6; //0x2
-        //sword_equip: number = 0x801EF6BC; // 0x1
-        //tunic_boots: number = 0x801EF6DC; //0x1
-        //sword_sheild: number = 0x801EF6DD;
-        // public const int CST_INVENTORY = 0x1EF6E0; // Length: 0x18 //inventory: number = 0x801EF6E0; //0x18
 
         #region Link 
 
@@ -213,6 +128,128 @@ namespace MajoraAutoItemTracker
 
         #endregion
 
+        #region Dungeon Items
+
+        // Woodfall
+        // Map
+        // Compass
+        // Boss Key
+        // Key
+        // Fairies
+
+        // Snow Head
+        // Map
+        // Compass
+        // Boss Key
+        // Key
+        // Fairies
+
+        // Great Bay
+        // Map
+        // Compass
+        // Boss Key
+        // Key
+        // Fairies
+
+        // Stone Tower
+        // Map
+        // Compass
+        // Boss Key
+        // Key
+        // Fairies
+
+        #endregion
+
+        #region Other
+
+        public const int CURRENT_TRANSFORMATION = 0x1EF693; //BE=1EF693 Default:0x801EF690 Length:0x1 from 0: fierce deity, goron, zora, deku, human
+
+        #endregion
+
+        #region Unknown
+
+        // const int CST_LINK_INSTANCE = 0x3FFDB0; //Default: 0x803FFDB0
+
+        //link_state: number = 0xA6C;
+        //current_scene: number = 0x803e6bc4;
+        //scene_framecount: number = 0x803FF360;
+        //checksum: number = 0x801EF694;
+        //paused: number = 0x801D1500;
+        //interface_shown: number = 0x803FD77B;
+        //save_context: number = 0x801EF670;
+        //mask_offset: number = 0x0020;
+        //anim: number = 0x400500;
+
+        //continue_state_addr: number = 0x0; //TODO: Find for MM
+
+        //sword_addr: number = 0x801EF6DD;
+        //shield_addr: number = 0x801EF6DD;
+
+        //current_room_addr: number = 0x803FF20C;
+
+        //global_context_pointer: number = 0x801F9C60;
+
+        //overlay_table: number = 0x801AEFD0;
+        //gui_isShown: number = 0x803FD77B;
+        //Save Context
+
+        //intro_flag: number = 0x801EF675; //0x1
+        //have_tatl: number = 0x801EF692; //0x1
+        /*
+        0x0000 = 12:00 AM
+        0x1000 = 01:30 AM
+        0x2000 = 03:00 AM
+        0x3000 = 04:30 AM
+        0x4000 = 06:00 AM
+        0x402D = Dawn of Day
+        0x5000 = 07:30 AM
+        0x6000 = 09:00 AM
+        0x7000 = 10:30 AM
+        0x8000 = 12:00 PM
+        0x9000 = 01:30 PM
+        0xA000 = 03:00 PM
+        0xB000 = 04:30 PM
+        0xC000 = 06:00 PM
+        0xD000 = 07:30 PM
+        0xE000 = 09:00 PM
+        0xF000 = 10:30 PM
+        0xFFFF = 11:59 PM
+        */
+        //day_time: number = 0x801EF67C; //0x2 
+        //day_night: number = 0x801EF680; //0x4 // set to 0 during day, 1 at night
+        //time_speed: number = 0x801EF684; //0x4 // normally 1 when inverted song of time and 3 at normal speed; rando can change this
+        //current_day: number = 0x801EF688; //0x4 //0 to 4. modulo 5?
+
+        //pictograph_photo_addr: number = 0x801F0750; //0x2BC0
+        //pictograph_spec: number = 0x801F04EA; //0x1
+        //pictograph_quality: number = 0x801F04EB; //0x1
+        //pictograph_unk: number = 0x801F04EC; //0x1
+
+        //map_visited: number = 0x801F05CC; //0x4
+        //map_visible: number = 0x801F05D0; //0x4
+        //minimap_flags: number = 0x801F0514; //0xE
+
+        //max_heart_flag: number = 0x801EF6A4; //0x2
+        //hearts: number = 0x801EF6A6; //0x2
+        //health_mod: number = 0x801F35CA; //0x1
+        //magic: number = 0x801EF6A9; //0x1
+        //rupees: number = 0x801EF6AA; //0x2
+
+        //magic_meter_size_addr: number = 0x801EF6A8;
+        //magic_current_addr: number = 0x801F35A0;
+        //magic_limit_ad    dr: number = 0x801F359E;
+        //magic_flag_1_addr: number = 0x801EF6B0;
+        //magic_flag_2_addr: number = 0x801EF6B1;
+
+        //deku_b_addr: number = 0x801EF6C8;
+
+        //razor_hits: number = 0x801EF6AC; // 0x2
+
+        //owl_statues: number = 0x801EF6B6; //0x2
+        //sword_equip: number = 0x801EF6BC; // 0x1
+        //tunic_boots: number = 0x801EF6DC; //0x1
+        //sword_sheild: number = 0x801EF6DD;
+
         //masks: number = 0x801EF6F8; //0x18
         //item_amts: number = 0x801EF710; //0x18
         //upgrades: number = 0x801EF728; //0x4
@@ -260,5 +297,6 @@ namespace MajoraAutoItemTracker
         //bomber_code = 0x801F066B; //0x5
 
         //permFlags = 0x801F35D8; // 0x960
+        #endregion
     }
 }
