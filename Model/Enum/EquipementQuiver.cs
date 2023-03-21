@@ -17,19 +17,22 @@ namespace MajoraAutoItemTracker.Model.Enum
 
     static class EquipementQuiverMethod
     {
-        public static EquipementQuiver readFromMemory(this byte equipementQuiver)
+        public static EquipementQuiver readFromMemory(this byte equipementQuiverBombBag)
         {
-            Debug.WriteLine("equipementQuiver: " + equipementQuiver); // FIXME: Not working
-            if ((equipementQuiver & 0x00) == 0x00)
-                return EquipementQuiver.None;
-            else if ((equipementQuiver & 0x00) == 0x01)
-                return EquipementQuiver.Normal;
-            else if ((equipementQuiver & 0x00) == 0x02)
-                return EquipementQuiver.Large;
-            else if ((equipementQuiver & 0x00) == 0x03)
-                return EquipementQuiver.Largest;
-            else
-                throw new Exception("Unknown EquipementWallet");
+            var equipementQuiver = equipementQuiverBombBag & 0x3;
+            switch (equipementQuiver)
+            {
+                case 0:
+                    return EquipementQuiver.None;
+                case 1:
+                    return EquipementQuiver.Normal;
+                case 2:
+                    return EquipementQuiver.Large;
+                case 3:
+                    return EquipementQuiver.Largest;
+                default:
+                    throw new Exception("Unknown EquipementWallet");
+            }
         }
     }
 }

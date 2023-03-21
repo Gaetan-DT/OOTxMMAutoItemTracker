@@ -16,18 +16,22 @@ namespace MajoraAutoItemTracker.Model.Enum
 
     static class EquipementBombBagMethod
     {
-        public static EquipementBombBag readFromMemory(this int equipementBombBag)
+        public static EquipementBombBag readFromMemory(this int equipementQuiverBombBag)
         {
-            if ((equipementBombBag & 0x00) == 0x00) // FIXME: Not working
-                return EquipementBombBag.None;
-            else if ((equipementBombBag & 0x00) == 0x08)
-                return EquipementBombBag.Normal;
-            else if ((equipementBombBag & 0x00) == 0x10)
-                return EquipementBombBag.Big;
-            else if ((equipementBombBag & 0x00) == 0x18)
-                return EquipementBombBag.Biggest;
-            else
-                throw new Exception("Unknown EquipementWallet");
+            var equipementBombBag = (equipementQuiverBombBag >> 3) & 0x3;
+            switch(equipementBombBag)
+            {
+                case 0:
+                    return EquipementBombBag.None;
+                case 1:
+                    return EquipementBombBag.Normal;
+                case 2:
+                    return EquipementBombBag.Big;
+                case 3:
+                    return EquipementBombBag.Biggest;
+                default:
+                    throw new Exception("Unknown EquipementWallet");
+            }
         }
     }
 }

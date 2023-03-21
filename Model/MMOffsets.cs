@@ -118,6 +118,7 @@ namespace MajoraAutoItemTracker
         public const int CST_INVENTORY_EQUIPEMENT_QUIVER_BOMBBAG = 0x1EF728; // Quiver and Bombbag 1EF728
         // Quiver 1EF728 // read two last byte = 0, 1, 2, 3 = None, Normal, Large, Largest
         // Bombbag 1EF728 // read bit 4 and 5 = 0, 1, 2, 3 = None, Normal, Big, Biggest
+        // 000B B0QQ
 
         public const int CST_INVENTORY_EQUIPEMENT_BOMBERS_NOTEBOOK = 0x1EF72E; // Bomber's Notebook 1EF72E // right part bit 2: Bomber's [XXXX X1XX]
 
