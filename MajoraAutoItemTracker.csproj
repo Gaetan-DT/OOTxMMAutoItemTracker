@@ -56,6 +56,7 @@
     <Reference Include="Json.Net, Version=1.0.33.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Json.Net.1.0.33\lib\netstandard2.0\Json.Net.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -120,6 +121,13 @@
   <ItemGroup>
     <Folder Include="Logic\" />
     <Folder Include="Resource\CheckMaps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\Itemicons\mm_items.png" />
+    <Content Include="UI\Itemicons\mm_items_mono.png" />
+    <Content Include="UI\Layout\BarinadesItemTracker_R4tPCG0m05.png" />
+    <Content Include="UI\Layout\mm_layout.png" />
+    <Content Include="UI\Map\82k78q66tcha1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
