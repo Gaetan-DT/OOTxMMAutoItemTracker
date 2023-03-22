@@ -1,0 +1,54 @@
+﻿{
+  "Ocarina": {
+    "ItemOcarina": {
+      "Name": "Ocarina",
+      "PositionX": 0,
+      "PositionY": 0
+    }
+  },
+  "Bow": {
+    "ItemBow": {
+      "Name": "Bow",
+      "PositionX": 0,
+      "PositionY": 42
+    }
+  },
+  "Arrow": {
+    "ItemFireArrow": {
+      "Name": "Fire arrows",
+      "PositionX": 0,
+      "PositionY": 84
+    },
+    "ItemIceArrow": {
+      "Name": "Ice Arrows",
+      "PositionX": 0,
+      "PositionY": 126
+    },
+    "ItemLightArrow": {
+      "Name": "Light Arrows",
+      "PositionX": 0,
+      "PositionY": 168
+    }
+  },
+  "Bomb": {
+    "ItemBombBag": {
+      "Name": "Bombs",
+      "PositionX": 0,
+      "PositionY": 252
+    }
+  },
+  "Bombchus": {
+    "ItemBombBag": {
+      "Name": "Bombchus",
+      "PositionX": 0,
+      "PositionY": 294
+    }
+  },
+  "DekuStick": {
+    "DekuStick": {
+      "Name": "Deku sticks",
+      "PositionX": 0,
+      "PositionY": 294
+    }
+  }
+}

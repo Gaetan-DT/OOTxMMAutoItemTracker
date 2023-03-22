@@ -120,5 +120,8 @@
     <Folder Include="Logic\" />
     <Folder Include="Resource\CheckMaps\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\Mappings\InterfaceItemsPositionsMapping.json" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
