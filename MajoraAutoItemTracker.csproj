@@ -69,7 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DictionaryParser.cs" />
     <Compile Include="Model\Enum\EquipementBombBag.cs" />
     <Compile Include="Model\Enum\EquipementQuiver.cs" />
     <Compile Include="Model\Enum\EquipementWallet.cs" />
