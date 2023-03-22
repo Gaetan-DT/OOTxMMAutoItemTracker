@@ -44,26 +44,26 @@ namespace MajoraAutoItemTracker
             this.ImgBow = new System.Windows.Forms.PictureBox();
             this.ImgFireArrow = new System.Windows.Forms.PictureBox();
             this.ImgIceArrow = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.ImgLightArrow = new System.Windows.Forms.PictureBox();
+            this.ImgBomb = new System.Windows.Forms.PictureBox();
+            this.ImgBombchu = new System.Windows.Forms.PictureBox();
+            this.ImgStick = new System.Windows.Forms.PictureBox();
+            this.ImgNuts = new System.Windows.Forms.PictureBox();
+            this.ImgBeans = new System.Windows.Forms.PictureBox();
+            this.ImgScrubTrade = new System.Windows.Forms.PictureBox();
+            this.ImgKeyMama = new System.Windows.Forms.PictureBox();
+            this.ImgLetterpendant = new System.Windows.Forms.PictureBox();
+            this.ImgKrieg = new System.Windows.Forms.PictureBox();
+            this.ImgPicto = new System.Windows.Forms.PictureBox();
+            this.ImgLenth = new System.Windows.Forms.PictureBox();
+            this.ImgHook = new System.Windows.Forms.PictureBox();
+            this.ImgGfsword = new System.Windows.Forms.PictureBox();
+            this.Imgbottle1 = new System.Windows.Forms.PictureBox();
+            this.Imgbottle2 = new System.Windows.Forms.PictureBox();
+            this.Imgbottle3 = new System.Windows.Forms.PictureBox();
+            this.Imgbottle4 = new System.Windows.Forms.PictureBox();
+            this.Imgbottle5 = new System.Windows.Forms.PictureBox();
+            this.Imgbottle6 = new System.Windows.Forms.PictureBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
@@ -106,26 +106,26 @@ namespace MajoraAutoItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.ImgBow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFireArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgIceArrow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgLightArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgBomb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgBombchu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgStick)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgNuts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgBeans)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgScrubTrade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgKeyMama)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgLetterpendant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgKrieg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgPicto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgLenth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgHook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgGfsword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -207,7 +207,7 @@ namespace MajoraAutoItemTracker
             this.pictureBox1.Image = global::MajoraAutoItemTracker.Properties.Resources.mm_layout;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 522);
+            this.pictureBox1.Size = new System.Drawing.Size(320, 522);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -221,210 +221,211 @@ namespace MajoraAutoItemTracker
             // 
             // ImgBow
             // 
-            this.ImgBow.Location = new System.Drawing.Point(65, 21);
+            this.ImgBow.Location = new System.Drawing.Point(68, 21);
             this.ImgBow.Name = "ImgBow";
-            this.ImgBow.Size = new System.Drawing.Size(45, 39);
+            this.ImgBow.Size = new System.Drawing.Size(43, 42);
             this.ImgBow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImgBow.TabIndex = 7;
             this.ImgBow.TabStop = false;
             // 
             // ImgFireArrow
             // 
-            this.ImgFireArrow.Location = new System.Drawing.Point(116, 21);
+            this.ImgFireArrow.Location = new System.Drawing.Point(117, 21);
             this.ImgFireArrow.Name = "ImgFireArrow";
-            this.ImgFireArrow.Size = new System.Drawing.Size(39, 39);
+            this.ImgFireArrow.Size = new System.Drawing.Size(43, 42);
             this.ImgFireArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImgFireArrow.TabIndex = 8;
             this.ImgFireArrow.TabStop = false;
             // 
             // ImgIceArrow
             // 
-            this.ImgIceArrow.Location = new System.Drawing.Point(161, 21);
+            this.ImgIceArrow.Location = new System.Drawing.Point(166, 21);
             this.ImgIceArrow.Name = "ImgIceArrow";
-            this.ImgIceArrow.Size = new System.Drawing.Size(39, 39);
+            this.ImgIceArrow.Size = new System.Drawing.Size(43, 42);
             this.ImgIceArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImgIceArrow.TabIndex = 9;
             this.ImgIceArrow.TabStop = false;
             // 
-            // pictureBox7
+            // ImgLightArrow
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(206, 21);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(48, 39);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 10;
-            this.pictureBox7.TabStop = false;
+            this.ImgLightArrow.Location = new System.Drawing.Point(215, 21);
+            this.ImgLightArrow.Name = "ImgLightArrow";
+            this.ImgLightArrow.Size = new System.Drawing.Size(43, 42);
+            this.ImgLightArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgLightArrow.TabIndex = 10;
+            this.ImgLightArrow.TabStop = false;
             // 
-            // pictureBox8
+            // ImgBomb
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(20, 68);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
+            this.ImgBomb.Location = new System.Drawing.Point(20, 69);
+            this.ImgBomb.Name = "ImgBomb";
+            this.ImgBomb.Size = new System.Drawing.Size(42, 39);
+            this.ImgBomb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgBomb.TabIndex = 11;
+            this.ImgBomb.TabStop = false;
             // 
-            // pictureBox9
+            // ImgBombchu
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(65, 69);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(45, 39);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
+            this.ImgBombchu.Location = new System.Drawing.Point(68, 68);
+            this.ImgBombchu.Name = "ImgBombchu";
+            this.ImgBombchu.Size = new System.Drawing.Size(43, 39);
+            this.ImgBombchu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgBombchu.TabIndex = 12;
+            this.ImgBombchu.TabStop = false;
             // 
-            // pictureBox10
+            // ImgStick
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(116, 68);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
+            this.ImgStick.Location = new System.Drawing.Point(117, 68);
+            this.ImgStick.Name = "ImgStick";
+            this.ImgStick.Size = new System.Drawing.Size(43, 39);
+            this.ImgStick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgStick.TabIndex = 13;
+            this.ImgStick.TabStop = false;
             // 
-            // pictureBox11
+            // ImgNuts
             // 
-            this.pictureBox11.Location = new System.Drawing.Point(161, 68);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 14;
-            this.pictureBox11.TabStop = false;
+            this.ImgNuts.Location = new System.Drawing.Point(166, 68);
+            this.ImgNuts.Name = "ImgNuts";
+            this.ImgNuts.Size = new System.Drawing.Size(43, 39);
+            this.ImgNuts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgNuts.TabIndex = 14;
+            this.ImgNuts.TabStop = false;
             // 
-            // pictureBox12
+            // ImgBeans
             // 
-            this.pictureBox12.Location = new System.Drawing.Point(206, 68);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(48, 39);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 15;
-            this.pictureBox12.TabStop = false;
+            this.ImgBeans.Location = new System.Drawing.Point(215, 68);
+            this.ImgBeans.Name = "ImgBeans";
+            this.ImgBeans.Size = new System.Drawing.Size(43, 39);
+            this.ImgBeans.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgBeans.TabIndex = 15;
+            this.ImgBeans.TabStop = false;
+            this.ImgBeans.Click += new System.EventHandler(this.ImgBeans_Click);
             // 
-            // pictureBox13
+            // ImgScrubTrade
             // 
-            this.pictureBox13.Location = new System.Drawing.Point(260, 21);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(39, 45);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 16;
-            this.pictureBox13.TabStop = false;
+            this.ImgScrubTrade.Location = new System.Drawing.Point(264, 21);
+            this.ImgScrubTrade.Name = "ImgScrubTrade";
+            this.ImgScrubTrade.Size = new System.Drawing.Size(43, 42);
+            this.ImgScrubTrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgScrubTrade.TabIndex = 16;
+            this.ImgScrubTrade.TabStop = false;
             // 
-            // pictureBox14
+            // ImgKeyMama
             // 
-            this.pictureBox14.Location = new System.Drawing.Point(260, 68);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(39, 45);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 17;
-            this.pictureBox14.TabStop = false;
+            this.ImgKeyMama.Location = new System.Drawing.Point(264, 67);
+            this.ImgKeyMama.Name = "ImgKeyMama";
+            this.ImgKeyMama.Size = new System.Drawing.Size(43, 40);
+            this.ImgKeyMama.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgKeyMama.TabIndex = 17;
+            this.ImgKeyMama.TabStop = false;
             // 
-            // pictureBox15
+            // ImgLetterpendant
             // 
-            this.pictureBox15.Location = new System.Drawing.Point(260, 118);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 18;
-            this.pictureBox15.TabStop = false;
+            this.ImgLetterpendant.Location = new System.Drawing.Point(260, 118);
+            this.ImgLetterpendant.Name = "ImgLetterpendant";
+            this.ImgLetterpendant.Size = new System.Drawing.Size(39, 39);
+            this.ImgLetterpendant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgLetterpendant.TabIndex = 18;
+            this.ImgLetterpendant.TabStop = false;
             // 
-            // pictureBox16
+            // ImgKrieg
             // 
-            this.pictureBox16.Location = new System.Drawing.Point(20, 118);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 19;
-            this.pictureBox16.TabStop = false;
+            this.ImgKrieg.Location = new System.Drawing.Point(20, 118);
+            this.ImgKrieg.Name = "ImgKrieg";
+            this.ImgKrieg.Size = new System.Drawing.Size(39, 39);
+            this.ImgKrieg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgKrieg.TabIndex = 19;
+            this.ImgKrieg.TabStop = false;
             // 
-            // pictureBox17
+            // ImgPicto
             // 
-            this.pictureBox17.Location = new System.Drawing.Point(65, 118);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(45, 39);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 20;
-            this.pictureBox17.TabStop = false;
+            this.ImgPicto.Location = new System.Drawing.Point(65, 118);
+            this.ImgPicto.Name = "ImgPicto";
+            this.ImgPicto.Size = new System.Drawing.Size(45, 39);
+            this.ImgPicto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgPicto.TabIndex = 20;
+            this.ImgPicto.TabStop = false;
             // 
-            // pictureBox18
+            // ImgLenth
             // 
-            this.pictureBox18.Location = new System.Drawing.Point(116, 118);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 21;
-            this.pictureBox18.TabStop = false;
+            this.ImgLenth.Location = new System.Drawing.Point(116, 118);
+            this.ImgLenth.Name = "ImgLenth";
+            this.ImgLenth.Size = new System.Drawing.Size(39, 39);
+            this.ImgLenth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgLenth.TabIndex = 21;
+            this.ImgLenth.TabStop = false;
             // 
-            // pictureBox19
+            // ImgHook
             // 
-            this.pictureBox19.Location = new System.Drawing.Point(161, 118);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(46, 39);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 22;
-            this.pictureBox19.TabStop = false;
+            this.ImgHook.Location = new System.Drawing.Point(161, 118);
+            this.ImgHook.Name = "ImgHook";
+            this.ImgHook.Size = new System.Drawing.Size(46, 39);
+            this.ImgHook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgHook.TabIndex = 22;
+            this.ImgHook.TabStop = false;
             // 
-            // pictureBox20
+            // ImgGfsword
             // 
-            this.pictureBox20.Location = new System.Drawing.Point(211, 113);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(43, 44);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 23;
-            this.pictureBox20.TabStop = false;
+            this.ImgGfsword.Location = new System.Drawing.Point(211, 113);
+            this.ImgGfsword.Name = "ImgGfsword";
+            this.ImgGfsword.Size = new System.Drawing.Size(43, 44);
+            this.ImgGfsword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgGfsword.TabIndex = 23;
+            this.ImgGfsword.TabStop = false;
             // 
-            // pictureBox21
+            // Imgbottle1
             // 
-            this.pictureBox21.Location = new System.Drawing.Point(20, 163);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(39, 44);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox21.TabIndex = 24;
-            this.pictureBox21.TabStop = false;
+            this.Imgbottle1.Location = new System.Drawing.Point(20, 163);
+            this.Imgbottle1.Name = "Imgbottle1";
+            this.Imgbottle1.Size = new System.Drawing.Size(39, 44);
+            this.Imgbottle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imgbottle1.TabIndex = 24;
+            this.Imgbottle1.TabStop = false;
             // 
-            // pictureBox22
+            // Imgbottle2
             // 
-            this.pictureBox22.Location = new System.Drawing.Point(65, 163);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(39, 44);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 25;
-            this.pictureBox22.TabStop = false;
+            this.Imgbottle2.Location = new System.Drawing.Point(65, 163);
+            this.Imgbottle2.Name = "Imgbottle2";
+            this.Imgbottle2.Size = new System.Drawing.Size(39, 44);
+            this.Imgbottle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imgbottle2.TabIndex = 25;
+            this.Imgbottle2.TabStop = false;
             // 
-            // pictureBox23
+            // Imgbottle3
             // 
-            this.pictureBox23.Location = new System.Drawing.Point(116, 163);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(39, 44);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox23.TabIndex = 26;
-            this.pictureBox23.TabStop = false;
+            this.Imgbottle3.Location = new System.Drawing.Point(116, 163);
+            this.Imgbottle3.Name = "Imgbottle3";
+            this.Imgbottle3.Size = new System.Drawing.Size(39, 44);
+            this.Imgbottle3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imgbottle3.TabIndex = 26;
+            this.Imgbottle3.TabStop = false;
             // 
-            // pictureBox24
+            // Imgbottle4
             // 
-            this.pictureBox24.Location = new System.Drawing.Point(161, 163);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(39, 44);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 27;
-            this.pictureBox24.TabStop = false;
+            this.Imgbottle4.Location = new System.Drawing.Point(161, 163);
+            this.Imgbottle4.Name = "Imgbottle4";
+            this.Imgbottle4.Size = new System.Drawing.Size(39, 44);
+            this.Imgbottle4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imgbottle4.TabIndex = 27;
+            this.Imgbottle4.TabStop = false;
             // 
-            // pictureBox25
+            // Imgbottle5
             // 
-            this.pictureBox25.Location = new System.Drawing.Point(215, 163);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(39, 44);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 28;
-            this.pictureBox25.TabStop = false;
+            this.Imgbottle5.Location = new System.Drawing.Point(215, 163);
+            this.Imgbottle5.Name = "Imgbottle5";
+            this.Imgbottle5.Size = new System.Drawing.Size(39, 44);
+            this.Imgbottle5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imgbottle5.TabIndex = 28;
+            this.Imgbottle5.TabStop = false;
             // 
-            // pictureBox26
+            // Imgbottle6
             // 
-            this.pictureBox26.Location = new System.Drawing.Point(260, 163);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(39, 44);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox26.TabIndex = 29;
-            this.pictureBox26.TabStop = false;
+            this.Imgbottle6.Location = new System.Drawing.Point(260, 163);
+            this.Imgbottle6.Name = "Imgbottle6";
+            this.Imgbottle6.Size = new System.Drawing.Size(39, 44);
+            this.Imgbottle6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imgbottle6.TabIndex = 29;
+            this.Imgbottle6.TabStop = false;
             // 
             // pictureBox27
             // 
@@ -768,26 +769,26 @@ namespace MajoraAutoItemTracker
             this.Controls.Add(this.pictureBox29);
             this.Controls.Add(this.pictureBox28);
             this.Controls.Add(this.pictureBox27);
-            this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.pictureBox25);
-            this.Controls.Add(this.pictureBox24);
-            this.Controls.Add(this.pictureBox23);
-            this.Controls.Add(this.pictureBox22);
-            this.Controls.Add(this.pictureBox21);
-            this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.pictureBox19);
-            this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.Imgbottle6);
+            this.Controls.Add(this.Imgbottle5);
+            this.Controls.Add(this.Imgbottle4);
+            this.Controls.Add(this.Imgbottle3);
+            this.Controls.Add(this.Imgbottle2);
+            this.Controls.Add(this.Imgbottle1);
+            this.Controls.Add(this.ImgGfsword);
+            this.Controls.Add(this.ImgHook);
+            this.Controls.Add(this.ImgLenth);
+            this.Controls.Add(this.ImgPicto);
+            this.Controls.Add(this.ImgKrieg);
+            this.Controls.Add(this.ImgLetterpendant);
+            this.Controls.Add(this.ImgKeyMama);
+            this.Controls.Add(this.ImgScrubTrade);
+            this.Controls.Add(this.ImgBeans);
+            this.Controls.Add(this.ImgNuts);
+            this.Controls.Add(this.ImgStick);
+            this.Controls.Add(this.ImgBombchu);
+            this.Controls.Add(this.ImgBomb);
+            this.Controls.Add(this.ImgLightArrow);
             this.Controls.Add(this.ImgIceArrow);
             this.Controls.Add(this.ImgFireArrow);
             this.Controls.Add(this.ImgBow);
@@ -804,26 +805,26 @@ namespace MajoraAutoItemTracker
             ((System.ComponentModel.ISupportInitialize)(this.ImgBow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgFireArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgIceArrow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgLightArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgBomb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgBombchu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgStick)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgNuts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgBeans)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgScrubTrade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgKeyMama)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgLetterpendant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgKrieg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgPicto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgLenth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgHook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgGfsword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imgbottle6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
@@ -877,26 +878,26 @@ namespace MajoraAutoItemTracker
         private System.Windows.Forms.PictureBox ImgBow;
         private System.Windows.Forms.PictureBox ImgFireArrow;
         private System.Windows.Forms.PictureBox ImgIceArrow;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.PictureBox pictureBox24;
-        private System.Windows.Forms.PictureBox pictureBox25;
-        private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.PictureBox ImgLightArrow;
+        private System.Windows.Forms.PictureBox ImgBomb;
+        private System.Windows.Forms.PictureBox ImgBombchu;
+        private System.Windows.Forms.PictureBox ImgStick;
+        private System.Windows.Forms.PictureBox ImgNuts;
+        private System.Windows.Forms.PictureBox ImgBeans;
+        private System.Windows.Forms.PictureBox ImgScrubTrade;
+        private System.Windows.Forms.PictureBox ImgKeyMama;
+        private System.Windows.Forms.PictureBox ImgLetterpendant;
+        private System.Windows.Forms.PictureBox ImgKrieg;
+        private System.Windows.Forms.PictureBox ImgPicto;
+        private System.Windows.Forms.PictureBox ImgLenth;
+        private System.Windows.Forms.PictureBox ImgHook;
+        private System.Windows.Forms.PictureBox ImgGfsword;
+        private System.Windows.Forms.PictureBox Imgbottle1;
+        private System.Windows.Forms.PictureBox Imgbottle2;
+        private System.Windows.Forms.PictureBox Imgbottle3;
+        private System.Windows.Forms.PictureBox Imgbottle4;
+        private System.Windows.Forms.PictureBox Imgbottle5;
+        private System.Windows.Forms.PictureBox Imgbottle6;
         private System.Windows.Forms.PictureBox pictureBox27;
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.PictureBox pictureBox29;

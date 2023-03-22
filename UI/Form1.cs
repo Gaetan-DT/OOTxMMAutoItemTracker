@@ -62,9 +62,10 @@ namespace MajoraAutoItemTracker
             //Debug.WriteLine(System.IO.Directory.GetCurrentDirectory());
 
             Image PngOcarina = Image.FromFile(@"..\..\UI\Itemicons\mm_items_mono.png");
-            Bitmap bitmapOcarina = new Bitmap(PngOcarina);
+
+            /** Bitmap bitmapOcarina = new Bitmap(PngOcarina);
             Image croppedOcarina = bitmapOcarina.Clone(new Rectangle(0, 0, 42, 42), bitmapOcarina.PixelFormat);
-            this.ImgOcarina.Image = croppedOcarina;
+            this.ImgOcarina.Image = croppedOcarina;            
 
             Bitmap bitmapBow = new Bitmap(PngOcarina);
             Image croppedBow = bitmapBow.Clone(new Rectangle(42, 0, 42, 42), bitmapBow.PixelFormat);
@@ -78,6 +79,37 @@ namespace MajoraAutoItemTracker
             Image croppedIceArrow = bitmapIceArrow.Clone(new Rectangle(126, 0, 42, 42), bitmapIceArrow.PixelFormat);
             this.ImgIceArrow.Image = croppedIceArrow;
 
+            Bitmap bitmapLightArrow = new Bitmap(PngOcarina);
+            Image croppedLightArrow = bitmapLightArrow.Clone(new Rectangle(168, 0, 42, 42), bitmapLightArrow.PixelFormat);
+            this.ImgLightArrow.Image = croppedLightArrow;
+
+            Bitmap bitmapScrubTrade = new Bitmap(PngOcarina);
+            Image croppedScrubTrade = bitmapScrubTrade.Clone(new Rectangle(336, 84, 42, 42), bitmapScrubTrade.PixelFormat);
+            this.ImgScrubTrade.Image = croppedScrubTrade;
+
+            Bitmap bitmapBomb = new Bitmap(PngOcarina);
+            Image croppedBomb = bitmapBomb.Clone(new Rectangle(252, 0, 42, 42),bitmapBomb.PixelFormat);
+            this.ImgBomb.Image = croppedBomb;
+
+            Bitmap bitmapBombchu = new Bitmap(PngOcarina);
+            Image croppedBombchu = bitmapBombchu.Clone(new Rectangle(294, 0, 42, 42), bitmapBombchu.PixelFormat);
+            this.ImgBombchu.Image = croppedBombchu;
+
+            Bitmap bitmapStick = new Bitmap(PngOcarina);
+            Image croppedStick = bitmapStick.Clone(new Rectangle(336, 0 , 42, 42),bitmapStick.PixelFormat);
+            this.ImgStick.Image = croppedStick;
+
+            Bitmap bitmapNuts = new Bitmap(PngOcarina);
+            Image croppedNuts = bitmapNuts.Clone(new Rectangle(378, 0, 42, 42), bitmapNuts.PixelFormat);
+            this.ImgNuts.Image = croppedNuts;
+
+            Bitmap bitmapBeans = new Bitmap(PngOcarina);
+            Image croppedBeans = bitmapBeans.Clone(new Rectangle(420,0, 42, 42),bitmapNuts.PixelFormat);
+            this.ImgBeans.Image = croppedBeans;
+
+            Bitmap bitmapKey = new Bitmap(PngOcarina);
+            Image croppedKey = bitmapKey.Clone(new Rectangle(546, 84, 42, 42), bitmapKey.PixelFormat);
+            this.ImgKeyMama.Image = croppedKey; **/
         }
 
         private void Log(String message)
@@ -92,6 +124,11 @@ namespace MajoraAutoItemTracker
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ImgBeans_Click(object sender, EventArgs e)
         {
 
         }
