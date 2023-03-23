@@ -122,7 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resource\Mappings\InterfaceItemsPositionsMapping.json" />
-    <Content Include="test.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
