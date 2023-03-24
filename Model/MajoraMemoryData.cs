@@ -22,9 +22,9 @@ namespace MajoraAutoItemTracker
         #endregion
 
         #region Inventory Equipement
-        public EquipementWallet equipementWallet = EquipementWallet.Child;
-        public EquipementQuiver equipementQuiver = EquipementQuiver.None;
-        public EquipementBombBag equipementBombBag = EquipementBombBag.None;
+        public EquipmentWallet hasEquipmentWallet = EquipmentWallet.Child;
+        public EquipmentQuiver hasEquipmentQuiver = EquipmentQuiver.None;
+        public EquipmentBombBag hasEquipmentBombBag = EquipmentBombBag.None;
         public bool hasBombersNoteBook = false;
         #endregion
 
@@ -99,7 +99,7 @@ namespace MajoraAutoItemTracker
         public bool hasBoosMaskTwinmold = false;
         #endregion
 
-        public void UdpateStateData(ModLoader64Wrapper modLoader)
+        public void UpdateStateData(ModLoader64Wrapper modLoader)
         {
             // Other
             currentLinkTransformation = LinkTransformationMethods.ReadFromMemory(modLoader.readInt8(MMOffsets.CURRENT_TRANSFORMATION));
@@ -107,14 +107,14 @@ namespace MajoraAutoItemTracker
             // Link
             magicMeter = MagicMeterMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_LINKG_MAGIC_METER));
             var bDoubleDefense = modLoader.readByte(MMOffsets.CST_LINKG_DOUBLE_DEFENSE, 8);
-            hasDoubleDefense = !((bDoubleDefense[0] & 00010020) == bDoubleDefense[0]);
+            hasDoubleDefense = (bDoubleDefense[0] & 00010020) != bDoubleDefense[0];
 
-            // Inventory Equipement
-            equipementWallet = EquipementWalletMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
+            // Inventory Equipment
+            hasEquipmentWallet = EquipmentWalletMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
             hasBombersNoteBook = checkHexRaised(modLoader, MMOffsets.CST_INVENTORY_EQUIPEMENT_BOMBERS_NOTEBOOK, 2);
             var byteQuiverAndBombBag = modLoader.readByte(MMOffsets.CST_INVENTORY_EQUIPEMENT_QUIVER_BOMBBAG, 1)[0];
-            equipementQuiver = EquipementQuiverMethod.readFromMemory(byteQuiverAndBombBag);
-            equipementBombBag = EquipementBombBagMethod.readFromMemory(byteQuiverAndBombBag);
+            hasEquipmentQuiver = EquipmentQuiverMethod.ReadFromMemory(byteQuiverAndBombBag);
+            hasEquipmentBombBag = EquipmentBombBagMethod.ReadFromMemory(byteQuiverAndBombBag);
 
             // INVENTORY C-Button Items
             hasOcarina = readItem(modLoader, MMOffsets.CST_INVENTORY_OCARINA, 0x00);
@@ -186,7 +186,7 @@ namespace MajoraAutoItemTracker
             hasBoosMaskGyorg = (bossMask & (1 << 2)) != 0;
             hasBoosMaskTwinmold = (bossMask & (1 << 3)) != 0;
             //Debug.WriteLine(this.toStringQuestItem());
-            Debug.WriteLine(this.toStringInventoryEquipement());
+            Debug.WriteLine(this.ToStringInventoryEquipment());
         }
 
         #region Utilit
@@ -221,13 +221,13 @@ namespace MajoraAutoItemTracker
 
         #endregion
 
-        public String toStringInventoryEquipement()
+        public String ToStringInventoryEquipment()
         {
             return "" +
                 "Inventory Equipement:" +
-                "- equipementWallet:" + equipementWallet + "\r\n" +
-                "- equipementQuiver:" + equipementQuiver + "\r\n" +
-                "- equipementBombBag:" + equipementBombBag + "\r\n" +
+                "- equipementWallet:" + hasEquipmentWallet + "\r\n" +
+                "- equipementQuiver:" + hasEquipmentQuiver + "\r\n" +
+                "- equipementBombBag:" + hasEquipmentBombBag + "\r\n" +
                 "- hasBombersNoteBook:" + hasBombersNoteBook + "\r\n" +
                 "";
              
@@ -235,7 +235,7 @@ namespace MajoraAutoItemTracker
             
         }
 
-        public String toStringQuestItem()
+        public String ToStringQuestItem()
         {
             return "" +
                 "INVENTORY Quest Items\r\n" +
@@ -315,7 +315,7 @@ namespace MajoraAutoItemTracker
                 "- hasGaroMask=" + hasGaroMask + "\r\n" +
                 "- hasCaptainHat=" + hasCaptainHat + "\r\n" +
                 "- hasGiantMask=" + hasGiantMask + "\r\n" +
-                toStringQuestItem() +
+                ToStringQuestItem() +
                 "";
         }
     }
