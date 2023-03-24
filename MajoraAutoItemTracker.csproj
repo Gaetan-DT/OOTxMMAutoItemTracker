@@ -95,11 +95,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\CheckLogic.cs" />
     <Compile Include="Model\Enum\EquipementBombBag.cs" />
     <Compile Include="Model\Enum\EquipementQuiver.cs" />
     <Compile Include="Model\Enum\EquipementWallet.cs" />
     <Compile Include="Model\Enum\LinkTransformation.cs" />
     <Compile Include="Model\Enum\MagicMeter.cs" />
+    <Compile Include="Model\Item\ItemLogic.cs" />
+    <Compile Include="Model\Logic.cs" />
+    <Compile Include="Logic\LogicResolver.cs" />
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,7 +147,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logic\" />
     <Folder Include="Resource\CheckMaps\" />
   </ItemGroup>
   <ItemGroup>
