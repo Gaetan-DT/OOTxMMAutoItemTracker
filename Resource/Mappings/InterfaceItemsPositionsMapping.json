@@ -1,54 +1,144 @@
 ﻿{
-  "Ocarina": {
-    "ItemOcarina": {
-      "Name": "Ocarina",
-      "PositionX": 0,
-      "PositionY": 0
-    }
+  "ocarina": {
+    "displayName": "Ocarina",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemOcarina",
+        "positionX": 0,
+        "positionY": 0
+      }
+    ]
   },
-  "Bow": {
-    "ItemBow": {
-      "Name": "Bow",
-      "PositionX": 0,
-      "PositionY": 42
-    }
+  "bow": {
+    "displayName": "Bow",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBow",
+        "positionX": 0,
+        "positionY": 1
+      }
+    ]
   },
-  "Arrow": {
-    "ItemFireArrow": {
-      "Name": "Fire arrows",
-      "PositionX": 0,
-      "PositionY": 84
-    },
-    "ItemIceArrow": {
-      "Name": "Ice Arrows",
-      "PositionX": 0,
-      "PositionY": 126
-    },
-    "ItemLightArrow": {
-      "Name": "Light Arrows",
-      "PositionX": 0,
-      "PositionY": 168
-    }
+  "arrow": {
+    "displayName": "Arrow",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemFireArrow",
+        "positionX": 0,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemIceArrow",
+        "positionX": 0,
+        "positionY": 3
+      },
+      {
+        "idLogic": "ItemLightArrow",
+        "positionX": 0,
+        "positionY": 4
+      }
+    ]
   },
-  "Bomb": {
-    "ItemBombBag": {
-      "Name": "Bombs",
-      "PositionX": 0,
-      "PositionY": 252
-    }
+  "bomb": {
+    "displayName": "Bomb",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBombBag",
+        "positionX": 0,
+        "positionY": 6
+      }
+    ]
   },
-  "Bombchus": {
-    "ItemBombBag": {
-      "Name": "Bombchus",
-      "PositionX": 0,
-      "PositionY": 294
-    }
+  "bombchu": {
+    "displayName": "Bombchu",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBombBag",
+        "positionX": 0,
+        "positionY": 7
+      }
+    ]
   },
-  "DekuStick": {
-    "DekuStick": {
-      "Name": "Deku sticks",
-      "PositionX": 0,
-      "PositionY": 294
-    }
+  "dekuStick": {
+    "displayName": "Deku Stick",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "Deku Stick Fighting",
+        "positionX": 0,
+        "positionY": 8
+      }
+    ]
+  },
+  "dekuNut": {
+    "displayName": "Deku Nut",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 0,
+        "positionY": 9
+      }
+    ]
+  },
+  "magicBean": {
+    "displayName": "Magic Bean",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemMagicBean",
+        "positionX": 0,
+        "positionY": 10
+      }
+    ]
+  },
+  "powderKeg": {
+    "displayName": "Powder Keg",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemPowderKeg",
+        "positionX": 0,
+        "positionY": 12
+      }
+    ]
+  },
+  "pictobox": {
+    "displayName": "Pictobox",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemPictobox",
+        "positionX": 0,
+        "positionY": 13
+      }
+    ]
+  },
+  "lens": {
+    "displayName": "Lens",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemLens",
+        "positionX": 0,
+        "positionY": 14
+      }
+    ]
+  },
+  "hookshot": {
+    "displayName": "Hookshot",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemHookshot",
+        "positionX": 0,
+        "positionY": 15
+      }
+    ]
   }
 }
