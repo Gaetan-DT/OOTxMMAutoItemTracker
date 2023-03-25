@@ -1,5 +1,6 @@
-﻿using Json.Net;
+﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace MajoraAutoItemTracker.Model.Check
@@ -13,17 +14,22 @@ namespace MajoraAutoItemTracker.Model.Check
 
     public class CheckLogicMethod
     {
-        private const string CST_DEFAULT_FILE_PATH = "check_logic.json";
+        public const string CST_DEFAULT_FILE_NAME = "check_logic.json";
 
-        public static CheckLogic[] LoadDefault()
+        public static List<CheckLogic> LoadDefault()
         {
-            return Deserialize(CST_DEFAULT_FILE_PATH);
+            return Deserialize(CST_DEFAULT_FILE_NAME);
         }
 
-        public static CheckLogic[] Deserialize(String filePath)
+        public static List<CheckLogic> Deserialize(String filePath)
         {
             var jsonFile = File.ReadAllText(filePath);
-            return JsonNet.Deserialize<CheckLogic[]>(jsonFile);
+            return JsonConvert.DeserializeObject<List<CheckLogic>>(jsonFile);
+        }
+
+        public static string ToJson(List<CheckLogic> checkLogics)
+        {
+            return JsonConvert.SerializeObject(checkLogics);
         }
     }
 }

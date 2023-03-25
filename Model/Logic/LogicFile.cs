@@ -1,5 +1,4 @@
-﻿using System;
-using Json.Net;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace MajoraAutoItemTracker.Model.Logic
@@ -11,12 +10,12 @@ namespace MajoraAutoItemTracker.Model.Logic
 
         public override string ToString()
         {
-            return JsonNet.Serialize(this);
+            return JsonConvert.SerializeObject(this);
         }
 
         public static LogicFile FromJson(string json)
         {
-            var _logic = JsonNet.Deserialize<LogicFile>(json);
+            var _logic = JsonConvert.DeserializeObject<LogicFile>(json);
             /*
             foreach (var logicItem in _logic.Logic)
             {

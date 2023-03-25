@@ -1,4 +1,4 @@
-﻿using Json.Net;
+﻿using Newtonsoft.Json;
 using System;
 using System.IO;
 
@@ -26,7 +26,7 @@ namespace MajoraAutoItemTracker.Model.Item
         public static ItemLogic Deserialize(String filePath)
         {
             var jsonFile = File.ReadAllText(filePath);
-            return JsonNet.Deserialize<ItemLogic>(jsonFile);
+            return JsonConvert.DeserializeObject<ItemLogic>(jsonFile);
         }
     }
 }
