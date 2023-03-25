@@ -102,8 +102,16 @@
     <Compile Include="Model\Enum\LinkTransformation.cs" />
     <Compile Include="Model\Enum\MagicMeter.cs" />
     <Compile Include="Model\Item\ItemLogic.cs" />
-    <Compile Include="Model\Logic.cs" />
+    <Compile Include="Model\Logic\JsonFormatLogicItem.cs" />
     <Compile Include="Logic\LogicResolver.cs" />
+    <Compile Include="Model\Logic\LogicFile.cs" />
+    <Compile Include="Model\Logic\TimeOfDay.cs" />
+    <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.Designer.cs">
+      <DependentUpon>CheckLogicEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

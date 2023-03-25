@@ -18,6 +18,7 @@ namespace MajoraAutoItemTracker.Model.Item
         public String idLogic { get; set; }
         public int positionX { get; set; }
         public int positionY { get; set; }
+        public bool hasItem { get; set; }
     }
 
     public static class ItemLogicMethod
