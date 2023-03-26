@@ -37,6 +37,19 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             this.lbCheck = new System.Windows.Forms.ListBox();
             this.lbLogicVerion = new System.Windows.Forms.Label();
             this.textLogicFilter = new System.Windows.Forms.TextBox();
+            this.btnLoadFromCategory = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textCheckId = new System.Windows.Forms.TextBox();
+            this.textCheckSquareX = new System.Windows.Forms.TextBox();
+            this.textCheckIsAvailable = new System.Windows.Forms.TextBox();
+            this.textCheckIsClaim = new System.Windows.Forms.TextBox();
+            this.textCheckSquareY = new System.Windows.Forms.TextBox();
+            this.textCheckZone = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +72,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             // 
             // btnLoadCheck
             // 
-            this.btnLoadCheck.Location = new System.Drawing.Point(550, 12);
+            this.btnLoadCheck.Location = new System.Drawing.Point(672, 14);
             this.btnLoadCheck.Name = "btnLoadCheck";
             this.btnLoadCheck.Size = new System.Drawing.Size(116, 23);
             this.btnLoadCheck.TabIndex = 2;
@@ -69,7 +82,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             // 
             // btnSaveCheck
             // 
-            this.btnSaveCheck.Location = new System.Drawing.Point(672, 12);
+            this.btnSaveCheck.Location = new System.Drawing.Point(672, 43);
             this.btnSaveCheck.Name = "btnSaveCheck";
             this.btnSaveCheck.Size = new System.Drawing.Size(116, 23);
             this.btnSaveCheck.TabIndex = 3;
@@ -82,9 +95,9 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             this.lbLogic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lbLogic.FormattingEnabled = true;
-            this.lbLogic.Location = new System.Drawing.Point(15, 33);
+            this.lbLogic.Location = new System.Drawing.Point(15, 72);
             this.lbLogic.Name = "lbLogic";
-            this.lbLogic.Size = new System.Drawing.Size(364, 407);
+            this.lbLogic.Size = new System.Drawing.Size(364, 368);
             this.lbLogic.TabIndex = 4;
             this.lbLogic.DoubleClick += new System.EventHandler(this.lbLogic_DoubleClick);
             // 
@@ -93,10 +106,11 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             this.lbCheck.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lbCheck.FormattingEnabled = true;
-            this.lbCheck.Location = new System.Drawing.Point(451, 33);
+            this.lbCheck.Location = new System.Drawing.Point(451, 72);
             this.lbCheck.Name = "lbCheck";
-            this.lbCheck.Size = new System.Drawing.Size(337, 407);
+            this.lbCheck.Size = new System.Drawing.Size(337, 264);
             this.lbCheck.TabIndex = 5;
+            this.lbCheck.SelectedIndexChanged += new System.EventHandler(this.lbCheck_SelectedIndexChanged);
             this.lbCheck.DoubleClick += new System.EventHandler(this.lbLogic_DoubleClick);
             // 
             // lbLogicVerion
@@ -110,17 +124,136 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             // 
             // textLogicFilter
             // 
-            this.textLogicFilter.Location = new System.Drawing.Point(183, 13);
+            this.textLogicFilter.Location = new System.Drawing.Point(15, 33);
             this.textLogicFilter.Name = "textLogicFilter";
-            this.textLogicFilter.Size = new System.Drawing.Size(196, 20);
+            this.textLogicFilter.Size = new System.Drawing.Size(364, 20);
             this.textLogicFilter.TabIndex = 7;
             this.textLogicFilter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            // 
+            // btnLoadFromCategory
+            // 
+            this.btnLoadFromCategory.Location = new System.Drawing.Point(540, 14);
+            this.btnLoadFromCategory.Name = "btnLoadFromCategory";
+            this.btnLoadFromCategory.Size = new System.Drawing.Size(116, 23);
+            this.btnLoadFromCategory.TabIndex = 8;
+            this.btnLoadFromCategory.Text = "Load from category";
+            this.btnLoadFromCategory.UseVisualStyleBackColor = true;
+            this.btnLoadFromCategory.Click += new System.EventHandler(this.btnLoadFromCategory_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(492, 349);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Id";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(476, 371);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Zone";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(457, 397);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Square X";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(631, 401);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Square Y";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(448, 427);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Is available";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(640, 427);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Is claim";
+            // 
+            // textCheckId
+            // 
+            this.textCheckId.Location = new System.Drawing.Point(514, 342);
+            this.textCheckId.Name = "textCheckId";
+            this.textCheckId.Size = new System.Drawing.Size(274, 20);
+            this.textCheckId.TabIndex = 15;
+            // 
+            // textCheckSquareX
+            // 
+            this.textCheckSquareX.Location = new System.Drawing.Point(514, 394);
+            this.textCheckSquareX.Name = "textCheckSquareX";
+            this.textCheckSquareX.Size = new System.Drawing.Size(100, 20);
+            this.textCheckSquareX.TabIndex = 16;
+            // 
+            // textCheckIsAvailable
+            // 
+            this.textCheckIsAvailable.Location = new System.Drawing.Point(514, 420);
+            this.textCheckIsAvailable.Name = "textCheckIsAvailable";
+            this.textCheckIsAvailable.Size = new System.Drawing.Size(100, 20);
+            this.textCheckIsAvailable.TabIndex = 17;
+            // 
+            // textCheckIsClaim
+            // 
+            this.textCheckIsClaim.Location = new System.Drawing.Point(688, 420);
+            this.textCheckIsClaim.Name = "textCheckIsClaim";
+            this.textCheckIsClaim.Size = new System.Drawing.Size(100, 20);
+            this.textCheckIsClaim.TabIndex = 18;
+            // 
+            // textCheckSquareY
+            // 
+            this.textCheckSquareY.Location = new System.Drawing.Point(688, 394);
+            this.textCheckSquareY.Name = "textCheckSquareY";
+            this.textCheckSquareY.Size = new System.Drawing.Size(100, 20);
+            this.textCheckSquareY.TabIndex = 19;
+            // 
+            // textCheckZone
+            // 
+            this.textCheckZone.Location = new System.Drawing.Point(514, 368);
+            this.textCheckZone.Name = "textCheckZone";
+            this.textCheckZone.Size = new System.Drawing.Size(274, 20);
+            this.textCheckZone.TabIndex = 20;
             // 
             // CheckLogicEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textCheckZone);
+            this.Controls.Add(this.textCheckSquareY);
+            this.Controls.Add(this.textCheckIsClaim);
+            this.Controls.Add(this.textCheckIsAvailable);
+            this.Controls.Add(this.textCheckSquareX);
+            this.Controls.Add(this.textCheckId);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnLoadFromCategory);
             this.Controls.Add(this.textLogicFilter);
             this.Controls.Add(this.lbLogicVerion);
             this.Controls.Add(this.lbCheck);
@@ -147,5 +280,18 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
         private System.Windows.Forms.ListBox lbCheck;
         private System.Windows.Forms.Label lbLogicVerion;
         private System.Windows.Forms.TextBox textLogicFilter;
+        private System.Windows.Forms.Button btnLoadFromCategory;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textCheckId;
+        private System.Windows.Forms.TextBox textCheckSquareX;
+        private System.Windows.Forms.TextBox textCheckIsAvailable;
+        private System.Windows.Forms.TextBox textCheckIsClaim;
+        private System.Windows.Forms.TextBox textCheckSquareY;
+        private System.Windows.Forms.TextBox textCheckZone;
     }
 }

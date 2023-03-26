@@ -1,4 +1,4 @@
-﻿using MajoraAutoItemTracker.Model.Check;
+﻿using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Logic;
 using System;
 using System.Collections.Generic;
@@ -109,7 +109,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             {
                 try
                 {
-                    checkLogics = CheckLogicMethod.Deserialize(openFileDialog.FileName);
+                    checkLogics = CheckLogic.Deserialize(openFileDialog.FileName);
                     UpdateCheckListBox();
                 }
                 catch (Exception exception)
@@ -128,15 +128,62 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
                 CheckPathExists = true,
                 DefaultExt = "json",
                 Filter = "Json files (*.json)|*.json|All files (*.*)|*.*",
-                FileName = CheckLogicMethod.CST_DEFAULT_FILE_NAME
+                FileName = CheckLogic.CST_DEFAULT_FILE_NAME
             };
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
                 {
-                    sw.WriteLine(CheckLogicMethod.ToJson(checkLogics));
+                    sw.WriteLine(CheckLogic.ToJson(checkLogics));
                 }
             }
+        }
+
+        private void btnLoadFromCategory_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog()
+            {
+                InitialDirectory = Application.StartupPath,
+                Title = "Select check json file",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "json",
+                Filter = "json files (*.json)|*.json",
+                FilterIndex = 2,
+                RestoreDirectory = true,
+
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    checkLogics = CheckLogic.FromHeader(CheckLogicCategory.fromJson(File.ReadAllText(openFileDialog.FileName)));
+                    UpdateCheckListBox();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void lbCheck_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbCheck.SelectedIndex < 0)
+                return;
+            var selectedItem = (CheckLogic) lbCheck.Items[lbCheck.SelectedIndex];
+            textCheckId.Text = selectedItem.Id.ToString();
+            textCheckIsAvailable.Text = selectedItem.IsAvailable.ToString();
+            textCheckIsClaim.Text = selectedItem.IsClaim.ToString();
+            textCheckSquareX.Text = selectedItem.SquarePositionX.ToString();
+            textCheckSquareY.Text = selectedItem.SquarePositionY.ToString();
+            textCheckZone.Text = selectedItem.Zone.ToString();
         }
     }
 }

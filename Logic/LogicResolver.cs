@@ -1,4 +1,4 @@
-﻿using MajoraAutoItemTracker.Model.Check;
+﻿using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace MajoraAutoItemTracker.Model
     class LogicResolver
     {
         private Dictionary<string, JsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.JsonFormatLogicItem>();
-        public Subject<CheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic>();
+        public Subject<CheckLogic.CheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.CheckLogic>();
 
         public LogicResolver(LogicFile logicHeader)
         {
@@ -29,7 +29,7 @@ namespace MajoraAutoItemTracker.Model
             return logic;
         }
 
-        public void UpdateCheckForItem(List<ItemLogic> itemLogics, List<CheckLogic> checkLogics, bool allowTrick)
+        public void UpdateCheckForItem(List<ItemLogic> itemLogics, List<CheckLogic.CheckLogic> checkLogics, bool allowTrick)
         {
             Dictionary<string, ItemLogicVariant> dictionaryItemVariant = new Dictionary<string, ItemLogicVariant>();
             foreach (var itemLogic in itemLogics)
@@ -40,7 +40,7 @@ namespace MajoraAutoItemTracker.Model
                 UpdateCheckAvailable(dictionaryItemVariant, checkLogic, allowTrick);
         }
 
-        private void UpdateCheckAvailable(Dictionary<string, ItemLogicVariant> items, CheckLogic check, bool allowTrick)
+        private void UpdateCheckAvailable(Dictionary<string, ItemLogicVariant> items, CheckLogic.CheckLogic check, bool allowTrick)
         {
             var checkLogic = FindLogic(check.Id);
             if (checkLogic == null)

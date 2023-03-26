@@ -1,17 +1,11 @@
 ﻿using MajoraAutoItemTracker.Model;
-using MajoraAutoItemTracker.Model.Check;
+using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.UI.LogicTester
@@ -49,7 +43,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
         {
             try
             {
-                _checkLogics = CheckLogicMethod.Deserialize(GetPathOfJson());
+                _checkLogics = CheckLogic.Deserialize(GetPathOfJson());
                 Log($"check file loaded: ({_checkLogics.Count} check)");
             }
             catch (Exception exception)
