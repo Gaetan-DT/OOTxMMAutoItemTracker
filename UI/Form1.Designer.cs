@@ -101,6 +101,7 @@ namespace MajoraAutoItemTracker
             this.pictureBox61 = new System.Windows.Forms.PictureBox();
             this.pictureBox62 = new System.Windows.Forms.PictureBox();
             this.Map = new System.Windows.Forms.PictureBox();
+            this.CheckList = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgOcarina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgBow)).BeginInit();
@@ -728,11 +729,21 @@ namespace MajoraAutoItemTracker
             this.Map.Click += new System.EventHandler(this.pictureBox2_Click);
             this.Map.Paint += new System.Windows.Forms.PaintEventHandler(this.Map_Paint);
             // 
+            // CheckList
+            // 
+            this.CheckList.FormattingEnabled = true;
+            this.CheckList.Location = new System.Drawing.Point(12, 578);
+            this.CheckList.Name = "CheckList";
+            this.CheckList.Size = new System.Drawing.Size(320, 264);
+            this.CheckList.TabIndex = 67;
+            this.CheckList.SelectedIndexChanged += new System.EventHandler(this.CheckList_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 877);
+            this.Controls.Add(this.CheckList);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.pictureBox62);
             this.Controls.Add(this.pictureBox61);
@@ -937,6 +948,7 @@ namespace MajoraAutoItemTracker
         private System.Windows.Forms.PictureBox pictureBox61;
         private System.Windows.Forms.PictureBox pictureBox62;
         private System.Windows.Forms.PictureBox Map;
+        private System.Windows.Forms.ListBox CheckList;
     }
 }
 

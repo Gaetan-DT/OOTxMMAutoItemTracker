@@ -142,18 +142,33 @@ namespace MajoraAutoItemTracker
             }
         }
 
+
         private void Log(String message)
         {            
             tboxDebug.AppendText(message + "\r\n");
             Debug.WriteLine(message);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+            Point coordinates = me.Location;
+            // Debug.WriteLine(coordinates.X + " " + coordinates.Y);
+
+            foreach(var checkLogicCategory in _checkLogicCategories)
+            {
+                var scaleX = checkLogicCategory.SquarePositionX * Map.Size.Width / 6000;
+                var scaleY = checkLogicCategory.SquarePositionY * Map.Size.Height / 5555;
+                if (coordinates.X >= scaleX -10 && coordinates.X <= scaleX +10 && 
+                    coordinates.Y >= scaleY -10 && coordinates.Y <= scaleY +10)
+                {
+                    Debug.WriteLine("On a cliqué sur la catégorie" + checkLogicCategory.Name);
+                }
+            }
+        }
+
+        private void RefreshCheckListForCategory(CheckLogicCategory checkLogicCategory)
         {
 
         }
@@ -171,6 +186,11 @@ namespace MajoraAutoItemTracker
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadCheckCategory();
+        }
+
+        private void CheckList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
