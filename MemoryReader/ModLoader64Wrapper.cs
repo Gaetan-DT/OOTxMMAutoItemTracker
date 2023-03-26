@@ -45,7 +45,6 @@ namespace MajoraAutoItemTracker
                             m_romAddrStart = Memory.readInt32(process, module.BaseAddress + MM_START_ADRESS);
                             Debug.WriteLine("Start address: " + Convert.ToString(m_romAddrStart, 16));
                             var foo = BitConverter.ToString(Memory.readBytes(m_Process, new IntPtr(m_romAddrStart) + 0x9F6853, 8));
-                            Debug.WriteLine("Foo: " + foo);
                             // TODO: Add check to confirm we read correct rom
                             return true;
                         }
@@ -82,6 +81,33 @@ namespace MajoraAutoItemTracker
         public byte[] readByte(int offset, int bytesToRead)
         {
             return Memory.readBytes(m_Process, new IntPtr(m_romAddrStart) + offset, bytesToRead);
+        }
+
+        public bool ReadNotFF(int offset)
+        {
+            var address = readInt8(offset);
+            return address != 0xFF;
+        }
+
+        public bool ReadItem(int offset, int itemValue)
+        {
+            var address = readInt8(offset);
+            return (address & itemValue) == address;
+        }
+
+        public bool CheckHexRaised(int offset, int bitRaised)
+        {
+            var b = readByte(offset, 1)[0];
+            //Debug.WriteLine("byteArray: " + b);
+            //Debug.WriteLine("shift0: " + (b & (1 << 0)));
+            //Debug.WriteLine("shift1: " + (b & (1 << 1)));
+            //Debug.WriteLine("shift2: " + (b & (1 << 2)));
+            //Debug.WriteLine("shift3: " + (b & (1 << 3)));
+            //Debug.WriteLine("shift4: " + (b & (1 << 4)));
+            //Debug.WriteLine("shift5: " + (b & (1 << 5)));
+            //Debug.WriteLine("shift6: " + (b & (1 << 6)));
+            //Debug.WriteLine("shift7: " + (b & (1 << 7)));
+            return (b & (1 << bitRaised)) != 0;
         }
     }
 }

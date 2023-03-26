@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using MajoraAutoItemTracker.Model.Enum;
+using System;
+using System.Diagnostics;
+using System.Reactive.Subjects;
+using System.Reflection;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker
 {
@@ -11,42 +11,67 @@ namespace MajoraAutoItemTracker
 
     class MemoryListener
     {
-        private const int CST_THREAD_DELLAY = 500;
+        private const int CST_THREAD_DELLAY = 1000;
 
-        private BasicCallback mBasicCallback;
-        private ModLoader64Wrapper mModLoader64Wrapper;
-        private MajoraMemoryData memoryDumpHelper = new MajoraMemoryData();
-        private Thread mThread;
+        private readonly BasicCallback _basicCallback;
+        private readonly ModLoader64Wrapper _modLoader64Wrapper;
+        private readonly MajoraMemoryDataObserver _majoraMemoryDataObserver;
 
-        public MemoryListener(ModLoader64Wrapper modLoader64Wrapper, BasicCallback basicCallback)
+        private Thread _thread;
+        private bool _isThreadActive;
+
+        private MajoraMemoryData _previousMajoraMemoryData;
+
+        public MemoryListener(
+            ModLoader64Wrapper modLoader64Wrapper, 
+            MajoraMemoryDataObserver majoraMemoryDataObserver,
+            BasicCallback basicCallback)
         {
-            this.mModLoader64Wrapper = modLoader64Wrapper;
-            this.mBasicCallback = basicCallback;
+            _modLoader64Wrapper = modLoader64Wrapper;
+            _majoraMemoryDataObserver = majoraMemoryDataObserver;
+            _basicCallback = basicCallback;
         }
 
-        public MajoraMemoryData getMemoryDump()
+        public void Start()
         {
-            return this.memoryDumpHelper;
+            _thread = new Thread(new ThreadStart(Run));
+            _thread.Start();
         }
 
-        public void start()
+        public void Stop()
         {
-            mThread = new Thread(new ThreadStart(this.run));
-            mThread.Start();
+            _isThreadActive = false;
         }
 
-        public void stop()
+        private void Run()
         {
-            mThread.Abort();
-        }
-
-        private void run()
-        {
-            while (Thread.CurrentThread.IsAlive)
+            _isThreadActive = true;
+            while (_isThreadActive)
             {
-                memoryDumpHelper.UdpateStateData(this.mModLoader64Wrapper);
-                this.mBasicCallback.Invoke("Data updated");
+                var newMajoraMemoryData = new MajoraMemoryData(_modLoader64Wrapper);
+                foreach (var field in _majoraMemoryDataObserver.GetType().GetFields())
+                    CompareAndUpdateField(newMajoraMemoryData, field.Name);
+                _previousMajoraMemoryData = newMajoraMemoryData;
+                //_basicCallback?.Invoke("Data updated");
                 Thread.Sleep(CST_THREAD_DELLAY);
+            }
+        }
+
+        private void CompareAndUpdateField(MajoraMemoryData newMajoraMemoryData, String fieldName)
+        {            
+            bool triggerEventUpdate = true;
+            var newMemoryDataProp = newMajoraMemoryData.GetType().GetField(fieldName).GetValue(newMajoraMemoryData);
+            if (_previousMajoraMemoryData != null && newMemoryDataProp.Equals(_previousMajoraMemoryData.GetType().GetField(fieldName).GetValue(_previousMajoraMemoryData)))
+                triggerEventUpdate = false;
+            if (triggerEventUpdate)
+            {
+                var dataObserverEvent = _majoraMemoryDataObserver.GetType().GetField(fieldName).GetValue(_majoraMemoryDataObserver);
+                dataObserverEvent.GetType().InvokeMember(
+                    "OnNext",
+                    BindingFlags.InvokeMethod | BindingFlags.Instance | BindingFlags.Public, 
+                    null, 
+                    dataObserverEvent, 
+                    new object[] { newMemoryDataProp });
             }
         }
     }

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MajoraAutoItemTracker.UI.CheckLogicEditor;
+using MajoraAutoItemTracker.UI.LogicTester;
+using System;
 using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker
@@ -18,7 +17,9 @@ namespace MajoraAutoItemTracker
                 throw new Exception("64bit procesds");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+            Application.Run(new CheckLogicEditor());
+            Application.Run(new LogicTester());
         }
     }
 }
