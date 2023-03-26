@@ -1,8 +1,6 @@
 ﻿using MajoraAutoItemTracker.UI.CheckLogicEditor;
+using MajoraAutoItemTracker.UI.LogicTester;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker
@@ -21,6 +19,7 @@ namespace MajoraAutoItemTracker
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
             Application.Run(new CheckLogicEditor());
+            Application.Run(new LogicTester());
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace MajoraAutoItemTracker.Model.Item
@@ -23,10 +24,10 @@ namespace MajoraAutoItemTracker.Model.Item
 
     public static class ItemLogicMethod
     {
-        public static ItemLogic Deserialize(String filePath)
+        public static List<ItemLogic> Deserialize(String filePath)
         {
             var jsonFile = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<ItemLogic>(jsonFile);
+            return JsonConvert.DeserializeObject<List<ItemLogic>>(jsonFile);
         }
     }
 }
