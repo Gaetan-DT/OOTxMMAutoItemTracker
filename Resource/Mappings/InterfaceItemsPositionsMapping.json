@@ -16,8 +16,8 @@
     "variants": [
       {
         "idLogic": "ItemBow",
-        "positionX": 0,
-        "positionY": 1
+        "positionX": 1,
+        "positionY": 0
       }
     ]
   },
@@ -27,18 +27,18 @@
     "variants": [
       {
         "idLogic": "ItemFireArrow",
-        "positionX": 0,
-        "positionY": 2
+        "positionX": 2,
+        "positionY": 0
       },
       {
         "idLogic": "ItemIceArrow",
-        "positionX": 0,
-        "positionY": 3
+        "positionX": 3,
+        "positionY": 0
       },
       {
         "idLogic": "ItemLightArrow",
-        "positionX": 0,
-        "positionY": 4
+        "positionX": 4,
+        "positionY": 0
       }
     ]
   },
@@ -48,8 +48,8 @@
     "variants": [
       {
         "idLogic": "ItemBombBag",
-        "positionX": 0,
-        "positionY": 6
+        "positionX": 6,
+        "positionY": 0
       }
     ]
   },
@@ -59,8 +59,8 @@
     "variants": [
       {
         "idLogic": "ItemBombBag",
-        "positionX": 0,
-        "positionY": 7
+        "positionX": 7,
+        "positionY": 0
       }
     ]
   },
@@ -70,8 +70,8 @@
     "variants": [
       {
         "idLogic": "Deku Stick Fighting",
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 8,
+        "positionY": 0
       }
     ]
   },
@@ -81,8 +81,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 9
+        "positionX": 9,
+        "positionY": 0
       }
     ]
   },
@@ -92,8 +92,8 @@
     "variants": [
       {
         "idLogic": "ItemMagicBean",
-        "positionX": 0,
-        "positionY": 10
+        "positionX": 10,
+        "positionY": 0
       }
     ]
   },
@@ -103,8 +103,8 @@
     "variants": [
       {
         "idLogic": "ItemPowderKeg",
-        "positionX": 0,
-        "positionY": 12
+        "positionX": 12,
+        "positionY": 0
       }
     ]
   },
@@ -114,8 +114,8 @@
     "variants": [
       {
         "idLogic": "ItemPictobox",
-        "positionX": 0,
-        "positionY": 13
+        "positionX": 13,
+        "positionY": 0
       }
     ]
   },
@@ -125,8 +125,8 @@
     "variants": [
       {
         "idLogic": "ItemLens",
-        "positionX": 0,
-        "positionY": 14
+        "positionX": 14,
+        "positionY": 0
       }
     ]
   },
@@ -136,8 +136,74 @@
     "variants": [
       {
         "idLogic": "ItemHookshot",
-        "positionX": 0,
-        "positionY": 15
+        "positionX": 15,
+        "positionY": 0
+      }
+    ]
+  },
+  "bottleWitch": {
+    "displayName": "Witch Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleWitch",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleAliens": {
+    "displayName": "Aliens Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleAliens",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleBeavers": {
+    "displayName": "Beavers Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleBeavers",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleDampe": {
+    "displayName": "Dampe Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleDampe",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleMadameAroma": {
+    "displayName": "Madame Aroma Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleMadameAroma",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleGoronRace": {
+    "displayName": "Goron Race Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleGoronRace",
+        "positionX": 2,
+        "positionY": 1
       }
     ]
   }

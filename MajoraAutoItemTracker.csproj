@@ -163,7 +163,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="README.MD" />
-    <None Include="Resource\CheckLogic\check_logic_category.json" />
+    <None Include="Resource\CheckLogic\CheckLogicCategory.json" />
     <None Include="Resource\Logics\REQ_CASUAL_12.json" />
   </ItemGroup>
   <ItemGroup>
