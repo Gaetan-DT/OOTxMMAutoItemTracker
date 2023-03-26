@@ -35,6 +35,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             this.BtnResolve = new System.Windows.Forms.Button();
             this.textOutput = new System.Windows.Forms.TextBox();
             this.labelOutput = new System.Windows.Forms.Label();
+            this.chkAllowTrick = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnLoadLogic
@@ -95,11 +96,22 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             this.labelOutput.TabIndex = 5;
             this.labelOutput.Text = "Output";
             // 
+            // chkAllowTrick
+            // 
+            this.chkAllowTrick.AutoSize = true;
+            this.chkAllowTrick.Location = new System.Drawing.Point(12, 129);
+            this.chkAllowTrick.Name = "chkAllowTrick";
+            this.chkAllowTrick.Size = new System.Drawing.Size(74, 17);
+            this.chkAllowTrick.TabIndex = 6;
+            this.chkAllowTrick.Text = "Allow trick";
+            this.chkAllowTrick.UseVisualStyleBackColor = true;
+            // 
             // LogicTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chkAllowTrick);
             this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.textOutput);
             this.Controls.Add(this.BtnResolve);
@@ -122,5 +134,6 @@ namespace MajoraAutoItemTracker.UI.LogicTester
         private System.Windows.Forms.Button BtnResolve;
         private System.Windows.Forms.TextBox textOutput;
         private System.Windows.Forms.Label labelOutput;
+        private System.Windows.Forms.CheckBox chkAllowTrick;
     }
 }

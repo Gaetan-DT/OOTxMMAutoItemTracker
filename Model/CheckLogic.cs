@@ -8,6 +8,7 @@ namespace MajoraAutoItemTracker.Model.Check
     public class CheckLogic
     {
         public String Id { get; set; }
+        // TODO: Add zone object
         public bool IsClaim { get; set; }
         public bool IsAvailable { get; set; }
     }

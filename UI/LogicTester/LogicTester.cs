@@ -90,7 +90,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
                 DefaultExt = "json",
                 Filter = "json files (*.json)|*.json",
                 FilterIndex = 2,
-                RestoreDirectory = true,
+                //RestoreDirectory = true,
 
                 ReadOnlyChecked = true,
                 ShowReadOnly = true
@@ -121,7 +121,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
                 return;
             }
             LogicResolver logicResolver = new LogicResolver(_logicFile);
-            logicResolver.UpdateCheckForItem(_itemLogics, _checkLogics);
+            logicResolver.UpdateCheckForItem(_itemLogics, _checkLogics, chkAllowTrick.Checked);
             _checkLogics.ForEach(x => Log($"check: {x.Id}; IsAvailable={x.IsAvailable}"));
         }
 
