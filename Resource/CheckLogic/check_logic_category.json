@@ -1,8 +1,8 @@
 [
     {
         "Name": "South Clock Town",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3470,
+        "SquarePositionY": 2946,
         "CheckLogicId": [
             "HeartPieceSouthClockTown",
             "TradeItemLandDeed",
@@ -14,8 +14,8 @@
     },
     {
         "Name": "Laundry Pool",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3384,
+        "SquarePositionY": 3112,
         "CheckLogicId": [
             "MaskBremen",
             "CollectibleStrayFairyClockTown",
@@ -26,8 +26,8 @@
     },
     {
         "Name": "East Clock Town",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3537,
+        "SquarePositionY": 2808,
         "CheckLogicId": [
             "MaskKafei",
             "ItemBottleMadameAroma",
@@ -52,8 +52,8 @@
     },
     {
         "Name": "Stock Pot Inn",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3465,
+        "SquarePositionY": 2783,
         "CheckLogicId": [
             "TradeItemRoomKey", 
             "TradeItemKafeiLetter", 
@@ -67,8 +67,8 @@
     },
     {
         "Name": "West Clock Town",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3267,
+        "SquarePositionY": 2971,
         "CheckLogicId": [
             "UpgradeAdultWallet",
             "MundaneItemBankBlueRupee",
@@ -98,8 +98,8 @@
     },
     {
         "Name": "North Clock Town",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3246,
+        "SquarePositionY": 2781,
         "CheckLogicId": [
             "ItemNotebook",
             "HeartPieceNorthClockTown",
@@ -115,8 +115,8 @@
     },
     {
         "Name": "Termina Field",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3834,
+        "SquarePositionY": 2932,
         "CheckLogicId": [
             "TradeItemMoonTear",
             "HeartPieceZoraGrotto",
@@ -136,8 +136,8 @@
     },
     {
         "Name": "Road to Southern Swamp",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4061,
+        "SquarePositionY": 3673,
         "CheckLogicId": [
             "ChestToSwampGrotto",
             "HeartPieceToSwamp",
@@ -149,8 +149,8 @@
     },
     {
         "Name": "Southern Swamp",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4192,
+        "SquarePositionY": 4037,
         "CheckLogicId": [
             "HeartPieceBoatArchery",
             "ItemBottleWitch",
@@ -173,8 +173,8 @@
     },
     {
         "Name": "Swamp Spider House Items",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4363,
+        "SquarePositionY": 4209,
         "CheckLogicId": [
             "CollectibleSwampSpiderToken18",
             "CollectibleSwampSpiderToken2",
@@ -210,8 +210,8 @@
     },
     {
         "Name": "Deku Palace",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4607,
+        "SquarePositionY": 4669,
         "CheckLogicId": [
             "ChestBeanGrottoRedRupee",
             "ItemMagicBean",
@@ -222,8 +222,8 @@
     },
     {
         "Name": "Woodfall",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4510,
+        "SquarePositionY": 4048,
         "CheckLogicId": [
             "ChestWoodfallBlueRupee",
             "ChestWoodfallRedRupee",
@@ -233,8 +233,8 @@
     },
     {
         "Name": "Woodfall Temple",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4857,
+        "SquarePositionY": 3827,
         "CheckLogicId": [
             "RemainsOdolwa",
             "ItemBow",
@@ -262,8 +262,8 @@
     },
     {
         "Name": "Mountain Village",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 2223,
+        "SquarePositionY": 1919,
         "CheckLogicId": [
             "MaskGoron",
             "HeartPieceChoir",
@@ -277,8 +277,8 @@
     },
     {
         "Name": "Twin Islands",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 2807,
+        "SquarePositionY": 1667,
         "CheckLogicId": [
             "ItemBottleGoronRace",
             "ChestToGoronRaceGrotto",
@@ -291,8 +291,8 @@
     },
     {
         "Name": "Goron Village",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3079,
+        "SquarePositionY": 1395,
         "CheckLogicId": [
             "SongLullaby",
             "UpgradeBiggestBombBag",
@@ -309,8 +309,8 @@
     },
     {
         "Name": "Path to Snowhead",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 2027,
+        "SquarePositionY": 1547,
         "CheckLogicId": [
             "ChestToSnowheadGrotto",
             "HeartPieceToSnowhead"
@@ -318,16 +318,16 @@
     },
     {
         "Name": "Snowhead",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 1357,
+        "SquarePositionY": 933,
         "CheckLogicId": [
             "FairyDoubleMagic"
         ]
     },
     {
         "Name": "Snowhead Temple",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 517,
+        "SquarePositionY": 813,
         "CheckLogicId": [
             "RemainsGoht",
             "ItemFireArrow",
@@ -357,8 +357,8 @@
     },
     {
         "Name": "Milk Road",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3233,
+        "SquarePositionY": 3639,
         "CheckLogicId": [
             "ShopItemGormanBrosMilk",
             "MaskGaro",
@@ -369,8 +369,8 @@
     },
     {
         "Name": "Romani Ranch",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3369,
+        "SquarePositionY": 4107,
         "CheckLogicId": [
             "ItemBottleAliens",
             "MaskRomani",
@@ -385,8 +385,8 @@
     },
     {
         "Name": "Great Bay Coast",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 1865,
+        "SquarePositionY": 3175,
         "CheckLogicId": [
             "SongNewWaveBossaNova",
             "HeartPieceFishermanGame",
@@ -407,8 +407,8 @@
     },
     {
         "Name": "Ocean Spider House Items",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 2031,
+        "SquarePositionY": 3237,
         "CheckLogicId": [
             "CollectibleOceanSpiderToken29",
             "CollectibleOceanSpiderToken30",
@@ -444,8 +444,8 @@
     },
     {
         "Name": "Zora Cape",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 1260,
+        "SquarePositionY": 4200,
         "CheckLogicId": [
             "ItemBottleBeavers",
             "HeartPieceBeaverRace",
@@ -460,8 +460,8 @@
     },
     {
         "Name": "Zora Hall",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 1327,
+        "SquarePositionY": 3813,
         "CheckLogicId": [
             "MundaneItemLuluBadPictographBlueRupee",
             "MundaneItemLuluGoodPictographRedRupee",
@@ -478,8 +478,8 @@
     },
     {
         "Name": "Pirates' Fortress Exterior",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 1731,
+        "SquarePositionY": 2531,
         "CheckLogicId": [
             "ChestPiratesFortressEntranceRedRupee3",
             "ChestPiratesFortressEntranceRedRupee1",
@@ -488,8 +488,8 @@
     },
     {
         "Name": "Pirates' Fortress Sewer",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 1923,
+        "SquarePositionY": 2553,
         "CheckLogicId": [
             "HeartPiecePiratesFortress",
             "ChestInsidePiratesFortressHeartPieceRoomBlueRupee",
@@ -499,8 +499,8 @@
     },
     {
         "Name": "Pirates' Fortress Interior",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 1873,
+        "SquarePositionY": 2297,
         "CheckLogicId": [
             "ItemHookshot",
             "ChestInsidePiratesFortressGuardSilverRupee",
@@ -511,8 +511,8 @@
     },
     {
         "Name": "Pinnacle Rock",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 685,
+        "SquarePositionY": 2871,
         "CheckLogicId": [
             "ChestPinacleRockRedRupee1",
             "ChestPinacleRockRedRupee2",
@@ -521,8 +521,8 @@
     },
     {
         "Name": "Great Bay Temple",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 373,
+        "SquarePositionY": 3549,
         "CheckLogicId": [
             "RemainsGyorg",
             "CollectibleStrayFairyGreatBay10",
@@ -550,8 +550,8 @@
     },
     {
         "Name": "Road To Ikana",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4223,
+        "SquarePositionY": 2211,
         "CheckLogicId": [
             "MaskStone",
             "ChestToIkanaGrotto",
@@ -560,8 +560,8 @@
     },
     {
         "Name": "Ikana Graveyard",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 3959,
+        "SquarePositionY": 1961,
         "CheckLogicId": [
             "MaskCaptainHat",
             "ItemBottleDampe",
@@ -574,8 +574,8 @@
     },
     {
         "Name": "Ikana Canyon",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4861,
+        "SquarePositionY": 1693,
         "CheckLogicId": [
             "ShopItemBusinessScrubBluePotion",
             "IkanaScrubGoldRupee",
@@ -590,8 +590,8 @@
     },
     {
         "Name": "Secret Shrine",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4565,
+        "SquarePositionY": 1645,
         "CheckLogicId": [
             "ChestSecretShrineDinoGrotto",
             "ChestSecretShrineHeartPiece",
@@ -602,8 +602,8 @@
     },
     {
         "Name": "Beneath the Well",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 4619,
+        "SquarePositionY": 2197,
         "CheckLogicId": [
             "ItemWellCowMilk",
             "UpgradeMirrorShield",
@@ -613,8 +613,8 @@
     },
     {
         "Name": "Ikana Castle",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 5000,
+        "SquarePositionY": 1827,
         "CheckLogicId": [
             "HeartPieceCastle",
             "SongElegy"
@@ -622,8 +622,8 @@
     },
     {
         "Name": "Stone Tower",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 5245,
+        "SquarePositionY": 1507,
         "CheckLogicId": [
             "ChestInvertedStoneTowerBean",
             "ChestInvertedStoneTowerBombchu10",
@@ -632,8 +632,8 @@
     },
     {
         "Name": "Stone Tower Temple",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 5397,
+        "SquarePositionY": 1383,
         "CheckLogicId": [
             "RemainsTwinmold",
             "MaskGiant",
@@ -665,8 +665,8 @@
     },
     {
         "Name": "The Moon",
-        "SquarePositionX": 0,
-        "SquarePositionY": 0,
+        "SquarePositionX": 5569,
+        "SquarePositionY": 5269,
         "CheckLogicId": [
             "MaskFierceDeity"
         ]

@@ -1,9 +1,11 @@
-﻿using System;
+﻿using MajoraAutoItemTracker.Model.CheckLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,6 +19,8 @@ namespace MajoraAutoItemTracker
     public partial class Form1 : Form
     {
         MemoryListener mMemoryListener = null;
+        private List<CheckLogicCategory> _checkLogicCategories;
+        private List<CheckLogic> _checkLogics;
 
         public Form1()
         {
@@ -114,6 +118,28 @@ namespace MajoraAutoItemTracker
             Bitmap bitmapKey = new Bitmap(PngOcarina);
             Image croppedKey = bitmapKey.Clone(new Rectangle(546, 84, 42, 42), bitmapKey.PixelFormat);
             this.ImgKeyMama.Image = croppedKey; **/
+
+
+        }
+
+        private void LoadCheckCategory()
+        {
+           var filepath = Application.StartupPath + @"\Resource\CheckLogic\" + CheckLogicCategory.CST_DEFAULT_FILE_NAME;
+            var JsonStr = File.ReadAllText(filepath);
+            _checkLogicCategories = CheckLogicCategory.fromJson(JsonStr);
+            _checkLogics = CheckLogic.FromHeader(_checkLogicCategories);
+
+        }
+
+        private void DrawSquareCategory(PaintEventArgs e)
+        {
+            var brush = new SolidBrush(Color.Red);
+            foreach (var checkLogicCategory in _checkLogicCategories)
+            {
+                var scaleX = checkLogicCategory.SquarePositionX * Map.Size.Width / 6000;
+                var scaleY = checkLogicCategory.SquarePositionY * Map.Size.Height / 5555;
+                e.Graphics.FillRectangle(brush, new Rectangle(scaleX - 5, scaleY -5, 5, 5));
+            }
         }
 
         private void Log(String message)
@@ -135,6 +161,16 @@ namespace MajoraAutoItemTracker
         private void ImgBeans_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Map_Paint(object sender, PaintEventArgs e)
+        {
+            DrawSquareCategory(e);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LoadCheckCategory();
         }
     }
 }

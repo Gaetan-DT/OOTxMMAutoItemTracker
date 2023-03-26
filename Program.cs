@@ -17,9 +17,9 @@ namespace MajoraAutoItemTracker
                 throw new Exception("64bit procesds");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Application.Run(new CheckLogicEditor());
-            Application.Run(new LogicTester());
+            Application.Run(new Form1());
+           // Application.Run(new CheckLogicEditor());
+           // Application.Run(new LogicTester());
         }
     }
 }

@@ -726,6 +726,7 @@ namespace MajoraAutoItemTracker
             this.Map.TabIndex = 66;
             this.Map.TabStop = false;
             this.Map.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.Map.Paint += new System.Windows.Forms.PaintEventHandler(this.Map_Paint);
             // 
             // Form1
             // 
@@ -800,6 +801,7 @@ namespace MajoraAutoItemTracker
             this.Controls.Add(this.lblDebug);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgOcarina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgBow)).EndInit();
