@@ -1,0 +1,674 @@
+[
+    {
+        "Name": "South Clock Town",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "HeartPieceSouthClockTown",
+            "TradeItemLandDeed",
+            "ShopItemBusinessScrubMagicBean",
+            "ChestSouthClockTownRedRupee",
+            "ChestSouthClockTownPurpleRupee",
+            "HeartPiecePostBox"
+        ]
+    },
+    {
+        "Name": "Laundry Pool",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "MaskBremen",
+            "CollectibleStrayFairyClockTown",
+            "TradeItemPendant",
+            "MaskKeaton",
+            "TradeItemMamaLetter"
+        ]
+    },
+    {
+        "Name": "East Clock Town",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "MaskKafei",
+            "ItemBottleMadameAroma",
+            "MaskPostmanHat",
+            "HeartPieceNotebookMayor",
+            "MaskCircusLeader",
+            "ChestEastClockTownSilverRupee",
+            "ChestBomberHideoutSilverRupee",
+            "MundaneItemHoneyAndDarlingPurpleRupee",
+            "HeartPieceHoneyAndDarling",
+            "ShopItemMilkBarChateau",
+            "ShopItemMilkBarMilk",
+            "UpgradeBigQuiver",
+            "HeartPieceTownArchery",
+            "MundaneItemTreasureChestGamePurpleRupee",
+            "MundaneItemTreasureChestGameDekuNuts",
+            "HeartPieceTreasureChestGame",
+            "MundaneItemTreasureChestGameRedRupee",
+            "CollectibleStrayFairyClockTown",
+            "HeartPiecePostBox"
+        ]
+    },
+    {
+        "Name": "Stock Pot Inn",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "TradeItemRoomKey", 
+            "TradeItemKafeiLetter", 
+            "ChestInnStaffRoom", 
+            "ChestInnGuestRoom", 
+            "HeartPieceNotebookGran1", 
+            "HeartPieceNotebookGran2", 
+            "HeartPieceNotebookHand", 
+            "MaskCouple"
+        ]
+    },
+    {
+        "Name": "West Clock Town",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "UpgradeAdultWallet",
+            "MundaneItemBankBlueRupee",
+            "HeartPieceBank",
+            "HeartPieceNotebookPostman",
+            "HeartPieceNotebookRosa",
+            "HeartPieceSwordsmanSchool",
+            "MundaneItemLotteryPurpleRupee",
+            "MaskAllNight",
+            "MundaneItemCuriosityShopBlueRupee",
+            "MundaneItemCuriosityShopRedRupee",
+            "MundaneItemCuriosityShopPurpleRupee",
+            "MundaneItemCuriosityShopGoldRupee",
+            "ShopItemTradingPostNut10",
+            "ShopItemTradingPostArrow30",
+            "ShopItemTradingPostArrow50",
+            "ShopItemTradingPostStick",
+            "ShopItemTradingPostFairy",
+            "ShopItemTradingPostGreenPotion",
+            "ShopItemTradingPostShield",
+            "ShopItemTradingPostRedPotion",
+            "ShopItemBombsBombchu10",
+            "ShopItemBombsBomb10",
+            "ItemBombBag",
+            "UpgradeBigBombBag"
+        ]
+    },
+    {
+        "Name": "North Clock Town",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ItemNotebook",
+            "HeartPieceNorthClockTown",
+            "HeartPieceKeatonQuiz",
+            "MundaneItemDekuPlaygroundPurpleRupee",
+            "HeartPieceDekuPlayground",
+            "MaskGreatFairy",
+            "FairyMagic",
+            "ItemTingleMapTownInTown",
+            "ItemTingleMapWoodfallInTown",
+            "MaskBlast"
+        ]
+    },
+    {
+        "Name": "Termina Field",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "TradeItemMoonTear",
+            "HeartPieceZoraGrotto",
+            "HeartPieceTerminaBusinessScrub",
+            "HeartPieceDodong",
+            "HeartPieceTerminaGossipStones",
+            "MaskKamaro",
+            "HeartPiecePeahat",
+            "ChestTerminaGrassRedRupee",
+            "ChestTerminaGrottoRedRupee",
+            "ChestTerminaGrottoBombchu",
+            "ChestTerminaStumpRedRupee",
+            "ChestTerminaUnderwaterRedRupee",
+            "ItemTerminaGrottoCowMilk1",
+            "ItemTerminaGrottoCowMilk2"
+        ]
+    },
+    {
+        "Name": "Road to Southern Swamp",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ChestToSwampGrotto",
+            "HeartPieceToSwamp",
+            "ItemTingleMapSnowhead",
+            "UpgradeBiggestQuiver",
+            "HeartPieceSwampArchery",
+            "ItemTingleMapWoodfall"
+        ]
+    },
+    {
+        "Name": "Southern Swamp",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "HeartPieceBoatArchery",
+            "ItemBottleWitch",
+            "MundaneItemKotakeMushroomSaleRedRupee",
+            "ItemPictobox",
+            "ChestWoodsGrotto",
+            "ChestSwampGrotto",
+            "MundaneItemPictographContestRedRupee",
+            "MundaneItemPictographContestBlueRupee",
+            "HeartPiecePictobox",
+            "SongSoaring",
+            "ShopItemBusinessScrubMagicBean",
+            "TradeItemSwampDeed",
+            "MaskTruth",
+            "HeartPieceSwampScrub",
+            "ShopItemWitchBluePotion",
+            "ShopItemWitchGreenPotion",
+            "ShopItemWitchRedPotion"
+        ]
+    },
+    {
+        "Name": "Swamp Spider House Items",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "CollectibleSwampSpiderToken18",
+            "CollectibleSwampSpiderToken2",
+            "CollectibleSwampSpiderToken4",
+            "CollectibleSwampSpiderToken25",
+            "CollectibleSwampSpiderToken30",
+            "CollectibleSwampSpiderToken9",
+            "CollectibleSwampSpiderToken12",
+            "CollectibleSwampSpiderToken1",
+            "CollectibleSwampSpiderToken15",
+            "CollectibleSwampSpiderToken19",
+            "CollectibleSwampSpiderToken11",
+            "CollectibleSwampSpiderToken8",
+            "CollectibleSwampSpiderToken10",
+            "CollectibleSwampSpiderToken27",
+            "CollectibleSwampSpiderToken13",
+            "CollectibleSwampSpiderToken14",
+            "CollectibleSwampSpiderToken3",
+            "CollectibleSwampSpiderToken20",
+            "CollectibleSwampSpiderToken23",
+            "CollectibleSwampSpiderToken28",
+            "CollectibleSwampSpiderToken5",
+            "CollectibleSwampSpiderToken16",
+            "CollectibleSwampSpiderToken17",
+            "CollectibleSwampSpiderToken22",
+            "CollectibleSwampSpiderToken6",
+            "CollectibleSwampSpiderToken7",
+            "CollectibleSwampSpiderToken26",
+            "CollectibleSwampSpiderToken21",
+            "CollectibleSwampSpiderToken24",
+            "CollectibleSwampSpiderToken29"
+        ]
+    },
+    {
+        "Name": "Deku Palace",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ChestBeanGrottoRedRupee",
+            "ItemMagicBean",
+            "MaskScents",
+            "HeartPieceDekuPalace",
+            "SongSonata"
+        ]
+    },
+    {
+        "Name": "Woodfall",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ChestWoodfallBlueRupee",
+            "ChestWoodfallRedRupee",
+            "HeartPieceWoodFallChest",
+            "FairySpinAttack"
+        ]
+    },
+    {
+        "Name": "Woodfall Temple",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "RemainsOdolwa",
+            "ItemBow",
+            "HeartContainerWoodfall",
+            "ItemWoodfallBossKey",
+            "CollectibleStrayFairyWoodfall14",
+            "ItemWoodfallCompass",
+            "CollectibleStrayFairyWoodfall12",
+            "CollectibleStrayFairyWoodfall5",
+            "CollectibleStrayFairyWoodfall2",
+            "CollectibleStrayFairyWoodfall11",
+            "CollectibleStrayFairyWoodfall13",
+            "CollectibleStrayFairyWoodfall7",
+            "CollectibleStrayFairyWoodfall10",
+            "ItemWoodfallMap",
+            "CollectibleStrayFairyWoodfall15",
+            "CollectibleStrayFairyWoodfall6",
+            "CollectibleStrayFairyWoodfall1",
+            "CollectibleStrayFairyWoodfall4",
+            "CollectibleStrayFairyWoodfall3",
+            "CollectibleStrayFairyWoodfall9",
+            "CollectibleStrayFairyWoodfall8",
+            "ItemWoodfallKey1"
+        ]
+    },
+    {
+        "Name": "Mountain Village",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "MaskGoron",
+            "HeartPieceChoir",
+            "MaskDonGero",
+            "HeartPieceKeatonQuiz",
+            "UpgradeRazorSword",
+            "UpgradeGildedSword",
+            "ChestMountainVillageGrottoRedRupee",
+            "ChestMountainVillage"
+        ]
+    },
+    {
+        "Name": "Twin Islands",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ItemBottleGoronRace",
+            "ChestToGoronRaceGrotto",
+            "ChestHotSpringGrottoRedRupee",
+            "ItemTingleMapRanchInMountain",
+            "ItemTingleMapSnowheadInMountain",
+            "ChestToGoronVillageRedRupee",
+            "HeartPieceTwinIslandsChest"
+        ]
+    },
+    {
+        "Name": "Goron Village",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "SongLullaby",
+            "UpgradeBiggestBombBag",
+            "ShopItemGoronArrow10",
+            "ShopItemGoronBomb10",
+            "ShopItemGoronRedPotion",
+            "HeartPieceGoronVillageScrub",
+            "ChestLensCaveRedRupee",
+            "ChestLensCavePurpleRupee",
+            "ItemLens",
+            "TradeItemMountainDeed",
+            "ItemPowderKeg"
+        ]
+    },
+    {
+        "Name": "Path to Snowhead",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ChestToSnowheadGrotto",
+            "HeartPieceToSnowhead"
+        ]
+    },
+    {
+        "Name": "Snowhead",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "FairyDoubleMagic"
+        ]
+    },
+    {
+        "Name": "Snowhead Temple",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "RemainsGoht",
+            "ItemFireArrow",
+            "HeartContainerSnowhead",
+            "CollectibleStrayFairySnowhead9",
+            "ItemSnowheadKey1",
+            "ItemSnowheadBossKey",
+            "ItemSnowheadKey3",
+            "CollectibleStrayFairySnowhead4",
+            "CollectibleStrayFairySnowhead5",
+            "CollectibleStrayFairySnowhead2",
+            "ItemSnowheadCompass",
+            "CollectibleStrayFairySnowhead15",
+            "CollectibleStrayFairySnowhead3",
+            "CollectibleStrayFairySnowhead6",
+            "CollectibleStrayFairySnowhead14",
+            "ItemSnowheadKey2",
+            "CollectibleStrayFairySnowhead11",
+            "CollectibleStrayFairySnowhead12",
+            "ItemSnowheadMap",
+            "CollectibleStrayFairySnowhead7",
+            "CollectibleStrayFairySnowhead8",
+            "CollectibleStrayFairySnowhead13",
+            "CollectibleStrayFairySnowhead1",
+            "CollectibleStrayFairySnowhead10"
+        ]
+    },
+    {
+        "Name": "Milk Road",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ShopItemGormanBrosMilk",
+            "MaskGaro",
+            "ItemTingleMapGreatBayInRanch",
+            "HeartPieceKeatonQuiz",
+            "ItemTingleMapRanchInRanch"
+        ]
+    },
+    {
+        "Name": "Romani Ranch",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ItemBottleAliens",
+            "MaskRomani",
+            "HeartPieceDogRace",
+            "ChestDogRacePurpleRupee",
+            "MaskBunnyHood",
+            "ItemRanchBarnMainCowMilk",
+            "ItemRanchBarnOtherCowMilk1",
+            "ItemRanchBarnOtherCowMilk2",
+            "SongEpona"
+        ]
+    },
+    {
+        "Name": "Great Bay Coast",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "SongNewWaveBossaNova",
+            "HeartPieceFishermanGame",
+            "MundaneItemSeahorse",
+            "ChestGreatBayCoastGrotto",
+            "ItemCoastGrottoCowMilk1",
+            "ItemCoastGrottoCowMilk2",
+            "HeartPieceGreatBayCoast",
+            "ItemTingleMapGreatBay",
+            "HeartPieceLabFish",
+            "MaskZora",
+            "HeartPieceOceanSpiderHouse",
+            "UpgradeGiantWallet",
+            "MundaneItemOceanSpiderHouseDay2PurpleRupee",
+            "MundaneItemOceanSpiderHouseDay3RedRupee",
+            "ItemTingleMapStoneTowerInOcean"
+        ]
+    },
+    {
+        "Name": "Ocean Spider House Items",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "CollectibleOceanSpiderToken29",
+            "CollectibleOceanSpiderToken30",
+            "CollectibleOceanSpiderToken5",
+            "CollectibleOceanSpiderToken6",
+            "CollectibleOceanSpiderToken11",
+            "CollectibleOceanSpiderToken27",
+            "CollectibleOceanSpiderToken24",
+            "CollectibleOceanSpiderToken14",
+            "CollectibleOceanSpiderToken23",
+            "CollectibleOceanSpiderToken19",
+            "CollectibleOceanSpiderToken7",
+            "CollectibleOceanSpiderToken16",
+            "CollectibleOceanSpiderToken17",
+            "CollectibleOceanSpiderToken18",
+            "CollectibleOceanSpiderToken25",
+            "CollectibleOceanSpiderToken13",
+            "CollectibleOceanSpiderToken12",
+            "CollectibleOceanSpiderToken15",
+            "CollectibleOceanSpiderToken21",
+            "CollectibleOceanSpiderToken28",
+            "CollectibleOceanSpiderToken20",
+            "CollectibleOceanSpiderToken8",
+            "CollectibleOceanSpiderToken3",
+            "CollectibleOceanSpiderToken2",
+            "CollectibleOceanSpiderToken4",
+            "CollectibleOceanSpiderToken1",
+            "CollectibleOceanSpiderToken10",
+            "CollectibleOceanSpiderToken9",
+            "CollectibleOceanSpiderToken22",
+            "CollectibleOceanSpiderToken26"
+        ]
+    },
+    {
+        "Name": "Zora Cape",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ItemBottleBeavers",
+            "HeartPieceBeaverRace",
+            "FairyDoubleDefense",
+            "ChestGreatBayCapeGrotto",
+            "CollectableZoraCapeJarGame1",
+            "ChestGreatBayCapeLedge2",
+            "ChestGreatBayCapeLedge1",
+            "HeartPieceGreatBayCapeLikeLike",
+            "ChestGreatBayCapeUnderwater"
+        ]
+    },
+    {
+        "Name": "Zora Hall",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "MundaneItemLuluBadPictographBlueRupee",
+            "MundaneItemLuluGoodPictographRedRupee",
+            "HeartPieceEvan",
+            "MundaneItemLuluGoodPictographRedRupee",
+            "HeartPieceZoraHallScrub",
+            "ShopItemBusinessScrubGreenPotion",
+            "TradeItemOceanDeed",
+            "MundaneItemZoraStageLightsBlueRupee",
+            "ShopItemZoraArrow10",
+            "ShopItemZoraShield",
+            "ShopItemZoraRedPotion"
+        ]
+    },
+    {
+        "Name": "Pirates' Fortress Exterior",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ChestPiratesFortressEntranceRedRupee3",
+            "ChestPiratesFortressEntranceRedRupee1",
+            "ChestPiratesFortressEntranceRedRupee2"
+        ]
+    },
+    {
+        "Name": "Pirates' Fortress Sewer",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "HeartPiecePiratesFortress",
+            "ChestInsidePiratesFortressHeartPieceRoomBlueRupee",
+            "ChestInsidePiratesFortressHeartPieceRoomRedRupee",
+            "ChestInsidePiratesFortressMazeRedRupee"
+        ]
+    },
+    {
+        "Name": "Pirates' Fortress Interior",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ItemHookshot",
+            "ChestInsidePiratesFortressGuardSilverRupee",
+            "ChestPiratesFortressRedRupee1",
+            "ChestInsidePiratesFortressTankRedRupee",
+            "ChestPiratesFortressRedRupee2"
+        ]
+    },
+    {
+        "Name": "Pinnacle Rock",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ChestPinacleRockRedRupee1",
+            "ChestPinacleRockRedRupee2",
+            "HeartPieceSeaHorse"
+        ]
+    },
+    {
+        "Name": "Great Bay Temple",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "RemainsGyorg",
+            "CollectibleStrayFairyGreatBay10",
+            "ItemGreatBayBossKey",
+            "ItemGreatBayCompass",
+            "CollectibleStrayFairyGreatBay14",
+            "CollectibleStrayFairyGreatBay9",
+            "CollectibleStrayFairyGreatBay6",
+            "CollectibleStrayFairyGreatBay15",
+            "ItemGreatBayMap",
+            "CollectibleStrayFairyGreatBay4",
+            "CollectibleStrayFairyGreatBay2",
+            "CollectibleStrayFairyGreatBay7",
+            "CollectibleStrayFairyGreatBay1",
+            "ItemGreatBayKey1",
+            "CollectibleStrayFairyGreatBay11",
+            "CollectibleStrayFairyGreatBay3",
+            "CollectibleStrayFairyGreatBay8",
+            "CollectibleStrayFairyGreatBay5",
+            "CollectibleStrayFairyGreatBay13",
+            "CollectibleStrayFairyGreatBay12",
+            "HeartContainerGreatBay",
+            "ItemIceArrow"
+        ]
+    },
+    {
+        "Name": "Road To Ikana",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "MaskStone",
+            "ChestToIkanaGrotto",
+            "ChestToIkanaRedRupee"
+        ]
+    },
+    {
+        "Name": "Ikana Graveyard",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "MaskCaptainHat",
+            "ItemBottleDampe",
+            "ChestBadBatsGrottoPurpleRupee",
+            "SongStorms",
+            "CollectableIkanaGraveyardDay2Bats1",
+            "ChestGraveyardGrotto",
+            "HeartPieceKnuckle"
+        ]
+    },
+    {
+        "Name": "Ikana Canyon",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ShopItemBusinessScrubBluePotion",
+            "IkanaScrubGoldRupee",
+            "ItemTingleMapTownInCanyon",
+            "ItemTingleMapStoneTower",
+            "HeartPieceIkana",
+            "ItemFairySword",
+            "MaskGibdo",
+            "HeartPiecePoeHut",
+            "ChestIkanaSecretShrineGrotto"
+        ]
+    },
+    {
+        "Name": "Secret Shrine",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ChestSecretShrineDinoGrotto",
+            "ChestSecretShrineHeartPiece",
+            "ChestSecretShrineGaroGrotto",
+            "ChestSecretShrineWartGrotto",
+            "ChestSecretShrineWizzGrotto"
+        ]
+    },
+    {
+        "Name": "Beneath the Well",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ItemWellCowMilk",
+            "UpgradeMirrorShield",
+            "ChestWellLeftPurpleRupee",
+            "ChestWellRightPurpleRupee"
+        ]
+    },
+    {
+        "Name": "Ikana Castle",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "HeartPieceCastle",
+            "SongElegy"
+        ]
+    },
+    {
+        "Name": "Stone Tower",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "ChestInvertedStoneTowerBean",
+            "ChestInvertedStoneTowerBombchu10",
+            "ChestInvertedStoneTowerSilverRupee"
+        ]
+    },
+    {
+        "Name": "Stone Tower Temple",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "RemainsTwinmold",
+            "MaskGiant",
+            "ItemLightArrow",
+            "ItemStoneTowerKey1",
+            "CollectibleStrayFairyStoneTower11",
+            "ItemStoneTowerBossKey",
+            "CollectibleStrayFairyStoneTower14",
+            "ItemStoneTowerCompass",
+            "CollectibleStrayFairyStoneTower8",
+            "ItemStoneTowerKey4",
+            "CollectibleStrayFairyStoneTower6",
+            "CollectibleStrayFairyStoneTower2",
+            "ItemStoneTowerKey2",
+            "CollectibleStrayFairyStoneTower3",
+            "ItemStoneTowerKey3",
+            "ItemStoneTowerMap",
+            "CollectibleStrayFairyStoneTower1",
+            "CollectibleStrayFairyStoneTower5",
+            "CollectibleStrayFairyStoneTower12",
+            "CollectibleStrayFairyStoneTower10",
+            "CollectibleStrayFairyStoneTower13",
+            "CollectibleStrayFairyStoneTower4",
+            "CollectibleStrayFairyStoneTower9",
+            "ItemStoneTowerKey3",
+            "CollectibleStrayFairyStoneTower7",
+            "HeartContainerStoneTower"
+        ]
+    },
+    {
+        "Name": "The Moon",
+        "SquarePositionX": 0,
+        "SquarePositionY": 0,
+        "CheckLogicId": [
+            "MaskFierceDeity"
+        ]
+    }
+]

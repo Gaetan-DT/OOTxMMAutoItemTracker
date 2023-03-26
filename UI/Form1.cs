@@ -27,15 +27,20 @@ namespace MajoraAutoItemTracker
         {
             Log("Attaching to modloader");
             ModLoader64Wrapper modLoader64Wrapper = new ModLoader64Wrapper();
+            MajoraMemoryDataObserver majoraMemoryDataObserver = new MajoraMemoryDataObserver();
             Log("Initializing thread");
-            mMemoryListener = new MemoryListener(modLoader64Wrapper, CallBackMemoryListener);
-            mMemoryListener.start();
+            mMemoryListener = new MemoryListener(modLoader64Wrapper, majoraMemoryDataObserver, CallBackMemoryListener);
+            mMemoryListener.Start();
             Log("Thread started");
+            majoraMemoryDataObserver.CurrentLinkTransformation.Subscribe(foo =>
+            {
+                Debug.WriteLine("Update link transformatin: " + foo);
+            });
         }
 
         private void BtnStopListener_Click(object sender, EventArgs e)
         {
-            mMemoryListener.stop();
+            mMemoryListener.Stop();
             mMemoryListener = null;
             Log("Thread Stoped");
         }
@@ -46,7 +51,6 @@ namespace MajoraAutoItemTracker
             {
                 if (message != null)
                     this.Log(message);
-                Log("Link transformation: " + mMemoryListener.getMemoryDump().currentLinkTransformation);
             });
             // Open a Stream and decode a PNG image
 

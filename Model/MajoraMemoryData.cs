@@ -1,322 +1,276 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MajoraAutoItemTracker.Model.Enum;
+using System.Diagnostics;
+using System.Reactive.Subjects;
 
 namespace MajoraAutoItemTracker
 {
-    using Model.Enum;
-    using System.ComponentModel;
-    using System.Diagnostics;
 
     class MajoraMemoryData
     {
-        #region Other
-        public LinkTransformation currentLinkTransformation = LinkTransformation.Human;
-        #endregion
-
         #region Link
-        public MagicMeter magicMeter = MagicMeter.None;
-        public bool hasDoubleDefense = false;
+        public MagicMeter MagicMeter = MagicMeter.None;
+        public bool HasDoubleDefense = false;
         #endregion
 
         #region Inventory Equipement
-        public EquipementWallet equipementWallet = EquipementWallet.Child;
-        public EquipementQuiver equipementQuiver = EquipementQuiver.None;
-        public EquipementBombBag equipementBombBag = EquipementBombBag.None;
-        public bool hasBombersNoteBook = false;
+        public EquipementWallet EquipementWallet = EquipementWallet.Child;
+        public EquipementQuiver EquipementQuiver = EquipementQuiver.None;
+        public EquipementBombBag EquipementBombBag = EquipementBombBag.None;
+        public bool HasBombersNoteBook = false;
         #endregion
 
         #region INVENTORY C-Button Items
-        public bool hasOcarina = false;
-        public bool hasHeroBow = false;
-        public bool hasFireArrows = false;
-        public bool hasIceArrows = false;
-        public bool hasLightArrows = false;
-        public bool hasBomb = false;
-        public bool hasBombchus = false;
-        public bool hasDekuSticks = false;
-        public bool hasDekuNuts = false;
-        public bool hasMagicBeans = false;
-        public bool hasPowderKeg = false;
-        public bool hasPictographBox = false;
-        public bool hasLensOfTruth = false;
-        public bool hasHookShot = false;
-        public bool hasGreatFairySword = false;
-        public bool hasTradingItem1 = false; // TODO add enum for trading item
-        public bool hasTradingItem2 = false; // TODO add enum for trading item
-        public bool hasTradingItem3 = false; // TODO add enum for trading item
-        public bool hasBootle1 = false; // TODO add enum for bootle
-        public bool hasBootle2 = false; // TODO add enum for bootle
-        public bool hasBootle3 = false; // TODO add enum for bootle
-        public bool hasBootle4 = false; // TODO add enum for bootle
-        public bool hasBootle5 = false; // TODO add enum for bootle
-        public bool hasBootle6 = false; // TODO add enum for bootle
+        public bool HasOcarina = false;
+        public bool HasHeroBow = false;
+        public bool HasFireArrows = false;
+        public bool HasIceArrows = false;
+        public bool HasLightArrows = false;
+        public bool HasBomb = false;
+        public bool HasBombchus = false;
+        public bool HasDekuSticks = false;
+        public bool HasDekuNuts = false;
+        public bool HasMagicBeans = false;
+        public bool HasPowderKeg = false;
+        public bool HasPictographBox = false;
+        public bool HasLensOfTruth = false;
+        public bool HasHookShot = false;
+        public bool HasGreatFairySword = false;
+        public bool HasTradingItem1 = false; // TODO add enum for trading item
+        public bool HasTradingItem2 = false; // TODO add enum for trading item
+        public bool HasTradingItem3 = false; // TODO add enum for trading item
+        public bool HasBootle1 = false; // TODO add enum for bootle
+        public bool HasBootle2 = false; // TODO add enum for bootle
+        public bool HasBootle3 = false; // TODO add enum for bootle
+        public bool HasBootle4 = false; // TODO add enum for bootle
+        public bool HasBootle5 = false; // TODO add enum for bootle
+        public bool HasBootle6 = false; // TODO add enum for bootle
         #endregion
         
         #region INVENTORY Masks
-        public bool hasDekuMask = false;
-        public bool hasGoronMask = false;
-        public bool hasZoraMask = false;
-        public bool hasFierceDeityMask = false;
-        public bool hasPostmanHat = false;
-        public bool hasAllNightMask = false;
-        public bool hasBlastMask = false;
-        public bool hasStoneMask = false;
-        public bool hasGreatFairyMask = false;
-        public bool hasKeatonMask = false;
-        public bool hasBremenMask = false;
-        public bool hasBunnyHood = false;
-        public bool hasDonGeroMask = false;
-        public bool hasMaskOfScents = false;
-        public bool hasRomaniMask = false;
-        public bool hasCircusLeaderMask = false;
-        public bool hasKaefiMask = false;
-        public bool hasCoupleMask = false;
-        public bool hasMaskOfTruth = false;
-        public bool hasKamaroMask = false;
-        public bool hasGibdoMask = false;
-        public bool hasGaroMask = false;
-        public bool hasCaptainHat = false;
-        public bool hasGiantMask = false;
+        public bool HasDekuMask = false;
+        public bool HasGoronMask = false;
+        public bool HasZoraMask = false;
+        public bool HasFierceDeityMask = false;
+        public bool HasPostmanHat = false;
+        public bool HasAllNightMask = false;
+        public bool HasBlastMask = false;
+        public bool HasStoneMask = false;
+        public bool HasGreatFairyMask = false;
+        public bool HasKeatonMask = false;
+        public bool HasBremenMask = false;
+        public bool HasBunnyHood = false;
+        public bool HasDonGeroMask = false;
+        public bool HasMaskOfScents = false;
+        public bool HasRomaniMask = false;
+        public bool HasCircusLeaderMask = false;
+        public bool HasKaefiMask = false;
+        public bool HasCoupleMask = false;
+        public bool HasMaskOfTruth = false;
+        public bool HasKamaroMask = false;
+        public bool HasGibdoMask = false;
+        public bool HasGaroMask = false;
+        public bool HasCaptainHat = false;
+        public bool HasGiantMask = false;
         #endregion
 
         #region INVENTORY Quest Items
-        public bool hasSongOfTime = false;
-        public bool hasSongOfHealing = false;
-        public bool hasEponaSong = false;
-        public bool hasSongOfSoaring = false;
-        public bool hasSongOfStorm = false;
-        public bool hasSonataOfAwakening = false;
-        public bool hasGoronLullaby = false;
-        public bool hasNewWaveBossaNova = false;
-        public bool hasElegyOfEmptyness = false;
-        public bool hasSongOathToORder = false;
-        public bool hasBossMaskOdolwa = false;
-        public bool hasBoosMaskGoht = false;
-        public bool hasBoosMaskGyorg = false;
-        public bool hasBoosMaskTwinmold = false;
+        public bool HasSongOfTime = false;
+        public bool HasSongOfHealing = false;
+        public bool HasEponaSong = false;
+        public bool HasSongOfSoaring = false;
+        public bool HasSongOfStorm = false;
+        public bool HasSonataOfAwakening = false;
+        public bool HasGoronLullaby = false;
+        public bool HasNewWaveBossaNova = false;
+        public bool HasElegyOfEmptyness = false;
+        public bool HasSongOathToORder = false;
+        public bool HasBossMaskOdolwa = false;
+        public bool HasBoosMaskGoht = false;
+        public bool HasBoosMaskGyorg = false;
+        public bool HasBoosMaskTwinmold = false;
         #endregion
 
-        public void UdpateStateData(ModLoader64Wrapper modLoader)
-        {
-            // Other
-            currentLinkTransformation = LinkTransformationMethods.ReadFromMemory(modLoader.readInt8(MMOffsets.CURRENT_TRANSFORMATION));
+        #region Other
+        public LinkTransformation CurrentLinkTransformation = LinkTransformation.Human;
+        #endregion
 
+        public MajoraMemoryData(ModLoader64Wrapper modLoader)
+        {
             // Link
-            magicMeter = MagicMeterMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_LINKG_MAGIC_METER));
+            MagicMeter = MagicMeterMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_LINKG_MAGIC_METER));
             var bDoubleDefense = modLoader.readByte(MMOffsets.CST_LINKG_DOUBLE_DEFENSE, 8);
-            hasDoubleDefense = !((bDoubleDefense[0] & 00010020) == bDoubleDefense[0]);
+            HasDoubleDefense = !((bDoubleDefense[0] & 00010020) == bDoubleDefense[0]);
 
             // Inventory Equipement
-            equipementWallet = EquipementWalletMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
-            hasBombersNoteBook = checkHexRaised(modLoader, MMOffsets.CST_INVENTORY_EQUIPEMENT_BOMBERS_NOTEBOOK, 2);
+            EquipementWallet = EquipementWalletMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
+            HasBombersNoteBook = modLoader.CheckHexRaised(MMOffsets.CST_INVENTORY_EQUIPEMENT_BOMBERS_NOTEBOOK, 2);
             var byteQuiverAndBombBag = modLoader.readByte(MMOffsets.CST_INVENTORY_EQUIPEMENT_QUIVER_BOMBBAG, 1)[0];
-            equipementQuiver = EquipementQuiverMethod.readFromMemory(byteQuiverAndBombBag);
-            equipementBombBag = EquipementBombBagMethod.readFromMemory(byteQuiverAndBombBag);
+            EquipementQuiver = EquipementQuiverMethod.readFromMemory(byteQuiverAndBombBag);
+            EquipementBombBag = EquipementBombBagMethod.readFromMemory(byteQuiverAndBombBag);
 
             // INVENTORY C-Button Items
-            hasOcarina = readItem(modLoader, MMOffsets.CST_INVENTORY_OCARINA, 0x00);
-            hasHeroBow = readItem(modLoader, MMOffsets.CST_INVENTORY_HERO_BOW, 0x01);
+            HasOcarina = modLoader.ReadItem(MMOffsets.CST_INVENTORY_OCARINA, 0x00);
+            HasHeroBow = modLoader.ReadItem(MMOffsets.CST_INVENTORY_HERO_BOW, 0x01);
             //
-            hasHeroBow = readItem(modLoader, MMOffsets.CST_INVENTORY_FIRE_ARROWS, 0x02);
-            hasIceArrows = readItem(modLoader, MMOffsets.CST_INVENTORY_ICE_ARROWS, 0x03);
-            hasLightArrows = readItem(modLoader, MMOffsets.CST_INVENTORY_LIGHT_ARROWS , 0x04);
-            hasBomb = readItem(modLoader, MMOffsets.CST_INVENTORY_BOMB , 0x06);
-            hasBombchus = readItem(modLoader, MMOffsets.CST_INVENTORY_BOMBCHUS , 0x07);
-            hasDekuSticks = readItem(modLoader, MMOffsets.CST_INVENTORY_DEKU_STICKS , 0x08);
-            hasDekuNuts = readItem(modLoader, MMOffsets.CST_INVENTORY_DEKU_NUTS, 0x09);
-            hasMagicBeans = readItem(modLoader, MMOffsets.CST_INVENTORY_MAGIC_BEANS , 0x0A);
-            hasPowderKeg = readItem(modLoader, MMOffsets.CST_INVENTORY_POWDER_KEG , 0x0C);
-            hasPictographBox = readItem(modLoader, MMOffsets.CST_INVENTORY_PICTOGRAPH_BOX , 0x0D);
-            hasLensOfTruth = readItem(modLoader, MMOffsets.CST_INVENTORY_LENS_OF_TRUTH, 0x0E);
-            hasHookShot = readItem(modLoader, MMOffsets.CST_INVENTORY_HOOKSHOT, 0x0F);
-            hasGreatFairySword = readItem(modLoader, MMOffsets.CST_INVENTORY_GREAT_FAIRY_SWORD, 0x10);
-            hasTradingItem1 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_TRADING_ITEM_1);
-            hasTradingItem2 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_TRADING_ITEM_2);
-            hasTradingItem3 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_TRADING_ITEM_3);
-            hasBootle1 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_BOTTLE_1);
-            hasBootle2 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_BOTTLE_2);
-            hasBootle3 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_BOTTLE_3);
-            hasBootle4 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_BOTTLE_4);
-            hasBootle5 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_BOTTLE_5);
-            hasBootle6 = readNotFF(modLoader, MMOffsets.CST_INVENTORY_BOTTLE_6);
+            HasHeroBow = modLoader.ReadItem(MMOffsets.CST_INVENTORY_FIRE_ARROWS, 0x02);
+            HasIceArrows = modLoader.ReadItem(MMOffsets.CST_INVENTORY_ICE_ARROWS, 0x03);
+            HasLightArrows = modLoader.ReadItem(MMOffsets.CST_INVENTORY_LIGHT_ARROWS, 0x04);
+            HasBomb = modLoader.ReadItem(MMOffsets.CST_INVENTORY_BOMB, 0x06);
+            HasBombchus = modLoader.ReadItem(MMOffsets.CST_INVENTORY_BOMBCHUS, 0x07);
+            HasDekuSticks = modLoader.ReadItem(MMOffsets.CST_INVENTORY_DEKU_STICKS, 0x08);
+            HasDekuNuts = modLoader.ReadItem(MMOffsets.CST_INVENTORY_DEKU_NUTS, 0x09);
+            HasMagicBeans = modLoader.ReadItem(MMOffsets.CST_INVENTORY_MAGIC_BEANS, 0x0A);
+            HasPowderKeg = modLoader.ReadItem(MMOffsets.CST_INVENTORY_POWDER_KEG, 0x0C);
+            HasPictographBox = modLoader.ReadItem(MMOffsets.CST_INVENTORY_PICTOGRAPH_BOX, 0x0D);
+            HasLensOfTruth = modLoader.ReadItem(MMOffsets.CST_INVENTORY_LENS_OF_TRUTH, 0x0E);
+            HasHookShot = modLoader.ReadItem(MMOffsets.CST_INVENTORY_HOOKSHOT, 0x0F);
+            HasGreatFairySword = modLoader.ReadItem(MMOffsets.CST_INVENTORY_GREAT_FAIRY_SWORD, 0x10);
+            HasTradingItem1 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_1);
+            HasTradingItem2 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_2);
+            HasTradingItem3 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_3);
+            HasBootle1 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_1);
+            HasBootle2 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_2);
+            HasBootle3 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_3);
+            HasBootle4 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_4);
+            HasBootle5 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_5);
+            HasBootle6 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_6);
             // INVENTORY Masks
-            hasDekuMask = readNotFF(modLoader, MMOffsets.CST_MASK_DEKU_MASK);
-            hasGoronMask = readNotFF(modLoader, MMOffsets.CST_MASK_GORON_MASK);
-            hasZoraMask = readNotFF(modLoader, MMOffsets.CST_MASK_ZORA_MASK);
-            hasFierceDeityMask = readNotFF(modLoader, MMOffsets.CST_MASK_FIERCE_DEITY_MASK);
-            hasPostmanHat = readNotFF(modLoader, MMOffsets.CST_MASK_POSTMAN_HAT);
-            hasAllNightMask = readNotFF(modLoader, MMOffsets.CST_MASK_ALL_NIGHT_MASK);
-            hasBlastMask = readNotFF(modLoader, MMOffsets.CST_MASK_BLAST_MASK);
-            hasStoneMask = readNotFF(modLoader, MMOffsets.CST_MASK_STONE_MASK);
-            hasGreatFairyMask = readNotFF(modLoader, MMOffsets.CST_MASK_GREAT_FAIRY_MASK);
-            hasKeatonMask = readNotFF(modLoader, MMOffsets.CST_MASK_KEATON_MASK);
-            hasBremenMask = readNotFF(modLoader, MMOffsets.CST_MASK_BREMEN_MASK);
-            hasBunnyHood = readNotFF(modLoader, MMOffsets.CST_MASK_BUNNY_HOOD);
-            hasDonGeroMask = readNotFF(modLoader, MMOffsets.CST_MASK_DON_GERO_MASK);
-            hasMaskOfScents = readNotFF(modLoader, MMOffsets.CST_MASK_MASK_OF_SCENTS);
-            hasRomaniMask = readNotFF(modLoader, MMOffsets.CST_MASK_ROMANI_MASK);
-            hasCircusLeaderMask = readNotFF(modLoader, MMOffsets.CST_MASK_CIRCUS_LEADER_MASK);
-            hasKaefiMask = readNotFF(modLoader, MMOffsets.CST_MASK_KAFEI_MASK);
-            hasCoupleMask = readNotFF(modLoader, MMOffsets.CST_MASK_COUPLE_MASK);
-            hasMaskOfTruth = readNotFF(modLoader, MMOffsets.CST_MASK_MASK_OF_TRUTH);
-            hasKamaroMask = readNotFF(modLoader, MMOffsets.CST_MASK_KAMARO_MASK);
-            hasGibdoMask = readNotFF(modLoader, MMOffsets.CST_MASK_GIBDO_MASK);
-            hasGaroMask = readNotFF(modLoader, MMOffsets.CST_MASK_GARO_MASK);
-            hasCaptainHat = readNotFF(modLoader, MMOffsets.CST_MASK_CAPTAIN_HAT);
-            hasGiantMask = readNotFF(modLoader, MMOffsets.CST_MASK_GIANT_MASK);
+            HasDekuMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_DEKU_MASK);
+            HasGoronMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GORON_MASK);
+            HasZoraMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_ZORA_MASK);
+            HasFierceDeityMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_FIERCE_DEITY_MASK);
+            HasPostmanHat = modLoader.ReadNotFF(MMOffsets.CST_MASK_POSTMAN_HAT);
+            HasAllNightMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_ALL_NIGHT_MASK);
+            HasBlastMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_BLAST_MASK);
+            HasStoneMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_STONE_MASK);
+            HasGreatFairyMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GREAT_FAIRY_MASK);
+            HasKeatonMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_KEATON_MASK);
+            HasBremenMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_BREMEN_MASK);
+            HasBunnyHood = modLoader.ReadNotFF(MMOffsets.CST_MASK_BUNNY_HOOD);
+            HasDonGeroMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_DON_GERO_MASK);
+            HasMaskOfScents = modLoader.ReadNotFF(MMOffsets.CST_MASK_MASK_OF_SCENTS);
+            HasRomaniMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_ROMANI_MASK);
+            HasCircusLeaderMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_CIRCUS_LEADER_MASK);
+            HasKaefiMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_KAFEI_MASK);
+            HasCoupleMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_COUPLE_MASK);
+            HasMaskOfTruth = modLoader.ReadNotFF(MMOffsets.CST_MASK_MASK_OF_TRUTH);
+            HasKamaroMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_KAMARO_MASK);
+            HasGibdoMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GIBDO_MASK);
+            HasGaroMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GARO_MASK);
+            HasCaptainHat = modLoader.ReadNotFF(MMOffsets.CST_MASK_CAPTAIN_HAT);
+            HasGiantMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GIANT_MASK);
             // INVENTORY Quest Items
-            hasSongOfTime = checkHexRaised(modLoader, MMOffsets.CST_SONG_SONG_OF_TIME, 4);
-            hasSongOfHealing = checkHexRaised(modLoader, MMOffsets.CST_SONG_SONG_OF_HEALING, 5);
-            hasEponaSong = checkHexRaised(modLoader, MMOffsets.CST_SONG_EPONA_SONG, 6);
-            hasSongOfSoaring = checkHexRaised(modLoader, MMOffsets.CST_SONG_SONG_OF_SOARING, 7);
-            hasSongOfStorm = checkHexRaised(modLoader, MMOffsets.CST_SONG_SONG_OF_STORMS, 0);
-            hasSonataOfAwakening = checkHexRaised(modLoader, MMOffsets.CST_SONG_SONATA_OF_AWAKENING, 6);
-            hasGoronLullaby = checkHexRaised(modLoader, MMOffsets.CST_SONG_GORON_LULLABY_INTRO, 0);
-            hasNewWaveBossaNova = checkHexRaised(modLoader, MMOffsets.CST_SONG_NEW_WAVE_BOSSA_NOVA, 0);
-            hasElegyOfEmptyness = checkHexRaised(modLoader, MMOffsets.CST_SONG_ELEGY_OF_EMPTYNESS, 1);
-            hasSongOathToORder = checkHexRaised(modLoader, MMOffsets.CST_SONG_OATH_TO_ORDER, 2);
+            HasSongOfTime = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONG_OF_TIME, 4);
+            HasSongOfHealing = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONG_OF_HEALING, 5);
+            HasEponaSong = modLoader.CheckHexRaised(MMOffsets.CST_SONG_EPONA_SONG, 6);
+            HasSongOfSoaring = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONG_OF_SOARING, 7);
+            HasSongOfStorm = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONG_OF_STORMS, 0);
+            HasSonataOfAwakening = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONATA_OF_AWAKENING, 6);
+            HasGoronLullaby = modLoader.CheckHexRaised(MMOffsets.CST_SONG_GORON_LULLABY_INTRO, 0);
+            HasNewWaveBossaNova = modLoader.CheckHexRaised(MMOffsets.CST_SONG_NEW_WAVE_BOSSA_NOVA, 0);
+            HasElegyOfEmptyness = modLoader.CheckHexRaised(MMOffsets.CST_SONG_ELEGY_OF_EMPTYNESS, 1);
+            HasSongOathToORder = modLoader.CheckHexRaised(MMOffsets.CST_SONG_OATH_TO_ORDER, 2);
             // Boss Masks
-            //CST_BOSS_MASK
             var bossMask = modLoader.readByte(MMOffsets.CST_BOSS_MASK, 1)[0];
-            hasBossMaskOdolwa = (bossMask & (1 << 0)) != 0;
-            hasBoosMaskGoht = (bossMask & (1 << 1)) != 0;
-            hasBoosMaskGyorg = (bossMask & (1 << 2)) != 0;
-            hasBoosMaskTwinmold = (bossMask & (1 << 3)) != 0;
-            //Debug.WriteLine(this.toStringQuestItem());
-            Debug.WriteLine(this.toStringInventoryEquipement());
+            HasBossMaskOdolwa = (bossMask & (1 << 0)) != 0;
+            HasBoosMaskGoht = (bossMask & (1 << 1)) != 0;
+            HasBoosMaskGyorg = (bossMask & (1 << 2)) != 0;
+            HasBoosMaskTwinmold = (bossMask & (1 << 3)) != 0;
+
+            // Other
+            CurrentLinkTransformation = LinkTransformationMethods.ReadFromMemory(modLoader.readInt8(MMOffsets.CURRENT_TRANSFORMATION));
         }
+    }
 
-        #region Utilit
-
-        private bool readNotFF(ModLoader64Wrapper modLoader, int offset)
-        {
-            var address = modLoader.readInt8(offset);
-            return address != 0xFF;
-        }
-
-        private bool readItem(ModLoader64Wrapper modLoader,  int offset, int itemValue)
-        {
-            var address = modLoader.readInt8(offset);
-            //Debug.WriteLine("adress: " + adress);
-            return (address & itemValue) == address;
-        }
-
-        private bool checkHexRaised(ModLoader64Wrapper modLoader, int offset, int bitRaised)
-        {
-            var b = modLoader.readByte(offset, 1)[0];
-            //Debug.WriteLine("byteArray: " + b);
-            //Debug.WriteLine("shift0: " + (b & (1 << 0)));
-            //Debug.WriteLine("shift1: " + (b & (1 << 1)));
-            //Debug.WriteLine("shift2: " + (b & (1 << 2)));
-            //Debug.WriteLine("shift3: " + (b & (1 << 3)));
-            //Debug.WriteLine("shift4: " + (b & (1 << 4)));
-            //Debug.WriteLine("shift5: " + (b & (1 << 5)));
-            //Debug.WriteLine("shift6: " + (b & (1 << 6)));
-            //Debug.WriteLine("shift7: " + (b & (1 << 7)));
-            return (b & (1 << bitRaised)) != 0;
-        }
-
+    class MajoraMemoryDataObserver
+    { 
+        #region Other
+        // ReplaySubject<>
+        public ReplaySubject<LinkTransformation> CurrentLinkTransformation = new ReplaySubject<LinkTransformation>(1);
         #endregion
 
-        public String toStringInventoryEquipement()
-        {
-            return "" +
-                "Inventory Equipement:" +
-                "- equipementWallet:" + equipementWallet + "\r\n" +
-                "- equipementQuiver:" + equipementQuiver + "\r\n" +
-                "- equipementBombBag:" + equipementBombBag + "\r\n" +
-                "- hasBombersNoteBook:" + hasBombersNoteBook + "\r\n" +
-                "";
-             
-             
-            
-        }
+        #region Link
+        public ReplaySubject<MagicMeter> MagicMeter = new ReplaySubject<MagicMeter>(1);
+        public ReplaySubject<bool> HasDoubleDefense = new ReplaySubject<bool>(1);
+        #endregion
 
-        public String toStringQuestItem()
-        {
-            return "" +
-                "INVENTORY Quest Items\r\n" +
-                "- hasSongOfTime:" + hasSongOfTime + "\r\n" +
-                "- hasSongOfHealing:" + hasSongOfHealing + "\r\n" +
-                "- hasEponaSong:" + hasEponaSong + "\r\n" +
-                "- hasSongOfSoaring:" + hasSongOfSoaring + "\r\n" +
-                "- hasSongOfStorm:" + hasSongOfStorm + "\r\n" +
-                "- hasSonataOfAwakening:" + hasSonataOfAwakening + "\r\n" +
-                "- hasGoronLullaby:" + hasGoronLullaby + "\r\n" +
-                "- hasNewWaveBossaNova:" + hasNewWaveBossaNova + "\r\n" +
-                "- hasElegyOfEmptyness:" + hasElegyOfEmptyness + "\r\n" +
-                "- hasSongOathToORder:" + hasSongOathToORder + "\r\n" +
-                "- hasBossMaskOdolwa:" + hasBossMaskOdolwa + "\r\n" +
-                "- hasBoosMaskGoht:" + hasBoosMaskGoht + "\r\n" +
-                "- hasBoosMaskGyorg:" + hasBoosMaskGyorg + "\r\n" +
-                "- hasBoosMaskTwinmold:" + hasBoosMaskTwinmold + "\r\n" +
-                "";
-        }
+        #region Inventory Equipement
+        public ReplaySubject<EquipementWallet> EquipementWallet = new ReplaySubject<EquipementWallet>(1);
+        public ReplaySubject<EquipementQuiver> EquipementQuiver = new ReplaySubject<EquipementQuiver>(1);
+        public ReplaySubject<EquipementBombBag> EquipementBombBag = new ReplaySubject<EquipementBombBag>(1);
+        public ReplaySubject<bool> HasBombersNoteBook = new ReplaySubject<bool>(1);
+        #endregion
 
-        public override String ToString()
-        {
-            return "" +
-                "Other:\r\n" +
-                "- currentLinkTransformation="+ currentLinkTransformation + "\r\n" +
-                "Link:\r\n" +
-                "- magicMeter=" + magicMeter + "\r\n" +
-                "- hasDoubleDefense=" + hasDoubleDefense + "\r\n" +
-                "Inventory Equipement:\r\n" +
-                "INVENTORY C-Button Items:\r\n" +
-                "- hasOcarina=" + hasOcarina + "\r\n" +
-                "- hasHeroBow=" + hasHeroBow + "\r\n" +
-                "- hasFireArrows=" + hasFireArrows + "\r\n" +
-                "- hasIceArrows=" + hasIceArrows + "\r\n" +
-                "- hasLightArrows=" + hasLightArrows + "\r\n" +
-                "- hasBomb=" + hasBomb + "\r\n" +
-                "- hasBombchus=" + hasBombchus + "\r\n" +
-                "- hasDekuSticks=" + hasDekuSticks + "\r\n" +
-                "- hasDekuNuts=" + hasDekuNuts + "\r\n" +
-                "- hasMagicBeans=" + hasMagicBeans + "\r\n" +
-                "- hasPowderKeg=" + hasPowderKeg + "\r\n" +
-                "- hasPictographBox=" + hasPictographBox + "\r\n" +
-                "- hasLensOfTruth=" + hasLensOfTruth + "\r\n" +
-                "- hasHookShot=" + hasHookShot + "\r\n" +
-                "- hasGreatFairySword=" + hasGreatFairySword + "\r\n" +
-                "- hasTradingItem1=" + hasTradingItem1 + "\r\n" +
-                "- hasTradingItem2=" + hasTradingItem2 + "\r\n" +
-                "- hasTradingItem3=" + hasTradingItem3 + "\r\n" +
-                "- hasBootle1=" + hasBootle1 + "\r\n" +
-                "- hasBootle2=" + hasBootle2 + "\r\n" +
-                "- hasBootle3=" + hasBootle3 + "\r\n" +
-                "- hasBootle4=" + hasBootle4 + "\r\n" +
-                "- hasBootle5=" + hasBootle5 + "\r\n" +
-                "- hasBootle6=" + hasBootle6 + "\r\n" +
-                "INVENTORY Masks:\r\n" +
-                "- hasDekuMask=" + hasDekuMask + "\r\n" +
-                "- hasGoronMask=" + hasGoronMask + "\r\n" +
-                "- hasZoraMask=" + hasZoraMask + "\r\n" +
-                "- hasFierceDeityMask=" + hasFierceDeityMask + "\r\n" +
-                "- hasPostmanHat=" + hasPostmanHat + "\r\n" +
-                "- hasAllNightMask=" + hasAllNightMask + "\r\n" +
-                "- hasBlastMask=" + hasBlastMask + "\r\n" +
-                "- hasStoneMask=" + hasStoneMask + "\r\n" +
-                "- hasGreatFairyMask=" + hasGreatFairyMask + "\r\n" +
-                "- hasKeatonMask=" + hasKeatonMask + "\r\n" +
-                "- hasBremenMask=" + hasBremenMask + "\r\n" +
-                "- hasBunnyHood=" + hasBunnyHood + "\r\n" +
-                "- hasDonGeroMask=" + hasDonGeroMask + "\r\n" +
-                "- hasMaskOfScents=" + hasMaskOfScents + "\r\n" +
-                "- hasRomaniMask=" + hasRomaniMask + "\r\n" +
-                "- hasCircusLeaderMask=" + hasCircusLeaderMask + "\r\n" +
-                "- hasKaefiMask=" + hasKaefiMask + "\r\n" +
-                "- hasCoupleMask=" + hasCoupleMask + "\r\n" +
-                "- hasMaskOfTruth=" + hasMaskOfTruth + "\r\n" +
-                "- hasKamaroMask=" + hasKamaroMask + "\r\n" +
-                "- hasGibdoMask=" + hasGibdoMask + "\r\n" +
-                "- hasGaroMask=" + hasGaroMask + "\r\n" +
-                "- hasCaptainHat=" + hasCaptainHat + "\r\n" +
-                "- hasGiantMask=" + hasGiantMask + "\r\n" +
-                toStringQuestItem() +
-                "";
-        }
+        #region INVENTORY C-Button Items
+        public ReplaySubject<bool> HasOcarina = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasHeroBow = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasFireArrows = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasIceArrows = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasLightArrows = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBomb = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBombchus = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasDekuSticks = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasDekuNuts = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasMagicBeans = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasPowderKeg = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasPictographBox = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasLensOfTruth = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasHookShot = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasGreatFairySword = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasTradingItem1 = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasTradingItem2 = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasTradingItem3 = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBootle1 = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBootle2 = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBootle3 = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBootle4 = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBootle5 = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBootle6 = new ReplaySubject<bool>(1);
+        #endregion
+
+        #region INVENTORY Masks
+        public ReplaySubject<bool> HasDekuMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasGoronMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasZoraMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasFierceDeityMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasPostmanHat = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasAllNightMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBlastMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasStoneMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasGreatFairyMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasKeatonMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBremenMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBunnyHood = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasDonGeroMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasMaskOfScents = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasRomaniMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasCircusLeaderMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasKaefiMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasCoupleMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasMaskOfTruth = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasKamaroMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasGibdoMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasGaroMask = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasCaptainHat = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasGiantMask = new ReplaySubject<bool>(1);
+        #endregion
+        
+        #region INVENTORY Quest Items
+        public ReplaySubject<bool> HasSongOfTime = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasSongOfHealing = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasEponaSong = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasSongOfSoaring = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasSongOfStorm = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasSonataOfAwakening = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasGoronLullaby = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasNewWaveBossaNova = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasElegyOfEmptyness = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasSongOathToORder = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBossMaskOdolwa = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBoosMaskGoht = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBoosMaskGyorg = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasBoosMaskTwinmold = new ReplaySubject<bool>(1);
+        #endregion
     }
 }
