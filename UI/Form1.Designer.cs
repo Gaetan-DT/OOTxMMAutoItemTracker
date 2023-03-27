@@ -731,12 +731,13 @@ namespace MajoraAutoItemTracker
             // 
             // CheckList
             // 
+            this.CheckList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CheckList.FormattingEnabled = true;
             this.CheckList.Location = new System.Drawing.Point(12, 578);
             this.CheckList.Name = "CheckList";
             this.CheckList.Size = new System.Drawing.Size(320, 264);
             this.CheckList.TabIndex = 67;
-            this.CheckList.SelectedIndexChanged += new System.EventHandler(this.CheckList_SelectedIndexChanged);
+            this.CheckList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.CheckList_DrawItem);
             // 
             // Form1
             // 

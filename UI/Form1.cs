@@ -1,4 +1,5 @@
 ﻿using MajoraAutoItemTracker.Model.CheckLogic;
+using MajoraAutoItemTracker.Model.Enum;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,8 +12,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml.Linq;
+using Brush = System.Drawing.Brush;
+using Brushes = System.Drawing.Brushes;
+using Color = System.Drawing.Color;
 
 namespace MajoraAutoItemTracker
 {
@@ -163,14 +168,24 @@ namespace MajoraAutoItemTracker
                 if (coordinates.X >= scaleX -10 && coordinates.X <= scaleX +10 && 
                     coordinates.Y >= scaleY -10 && coordinates.Y <= scaleY +10)
                 {
-                    Debug.WriteLine("On a cliqué sur la catégorie" + checkLogicCategory.Name);
+                    RefreshCheckListForCategory(checkLogicCategory);
+                    CheckList.DisplayMember = "Id";
+                    //Debug.WriteLine("On a cliqué sur la catégorie " + checkLogicCategory.Name);
                 }
             }
         }
 
         private void RefreshCheckListForCategory(CheckLogicCategory checkLogicCategory)
         {
+            CheckList.Items.Clear();
 
+            foreach ( var checkLogic in _checkLogics) // recuperer tout les checks dans la catégorie
+            {
+                if (checkLogic.Zone == CheckLogicZoneMethod.FromString(checkLogicCategory.Name)) 
+                {
+                    CheckList.Items.Add(checkLogic);
+                }
+            }
         }
 
         private void ImgBeans_Click(object sender, EventArgs e)
@@ -188,9 +203,33 @@ namespace MajoraAutoItemTracker
             LoadCheckCategory();
         }
 
-        private void CheckList_SelectedIndexChanged(object sender, EventArgs e)
+        private void CheckList_DrawItem(object sender, DrawItemEventArgs e)
         {
+            var checkLogic = (CheckLogic)CheckList.Items[e.Index];
 
+            Brush brush = Brushes.Red;
+
+            if (checkLogic.IsClaim)
+            {
+                brush = Brushes.Gray;
+                
+            }
+            else if (checkLogic.IsAvailable)
+            {
+                brush = Brushes.Green;
+            }
+
+            e.Graphics.DrawString(checkLogic.Id, e.Font, brush, e.Bounds, StringFormat.GenericDefault);
         }
+
+        /** if (checklogic.IsClaim){
+                fonction pour colorié le text en gris et changer la font par exemple
+            }
+            else if (checklogic.IsAvailable){
+                fonction pour colorié le texte en vert et change la font
+            }
+            else {
+                fonction pour colorié en rouge + changer de font}
+     **/
     }
 }
