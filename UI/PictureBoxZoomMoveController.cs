@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.UI
 {
-    public class PictureBoxZoomMoveController
+    public class PictureBoxZoomMoveController<T>
     {
         #region CONSTANT
         private const double CST_ZOOMFACTOR = 1.25;
@@ -18,57 +19,39 @@ namespace MajoraAutoItemTracker.UI
 
         #region event
         public event MouseEventHandler MouseClick;
+        public event Action<T> OnGraphicPathClick;
         #endregion
 
-        private PictureBox _pictureBox; // PicBox
+        private PictureBox _pictureBox;
         private Panel _panel;
-        private Point _mouseDownLocation; // MouseDownLocation
+        private Point _mouseDownLocation;
+
+        private bool _isLeftClickDown = false;
+
+        private List<Tuple<GraphicsPath, T>> _ListPath = new List<Tuple<GraphicsPath, T>>();
 
         public PictureBoxZoomMoveController(Panel panel)
         {
             _panel = panel;
             // Init
             _pictureBox = new PictureBox();
-            // 
-            // PicBox
-            // 
+            // TODO: Understand and clean this
             _pictureBox.Location = new Point(0, 0);
-            //_pictureBox.Name = "PicBox";
-            //_pictureBox.Size = new Size(150, 240);
             _pictureBox.TabIndex = 3;
             _pictureBox.TabStop = false;
-            // 
-            // OuterPanel
-            // 
-            //this.OuterPanel.BorderStyle = BorderStyle.FixedSingle;
             _panel.Controls.Add(this._pictureBox);
-            //this.OuterPanel.Dock = DockStyle.Fill;
-            //this.OuterPanel.Location = new Point(0, 0);
-            //this.OuterPanel.Name = "OuterPanel";
-            //this.OuterPanel.Size = new Size(210, 190);
-            //this.OuterPanel.TabIndex = 4;
-            // 
-            // PictureBox
-            // 
-            //this.Controls.Add(this.OuterPanel);
-            //this.Name = "PictureBox";
-            //this.Size = new System.Drawing.Size(210, 190);
-            //this.OuterPanel.ResumeLayout(false);
-            //this.ResumeLayout(false);
-
-            // InitCtrl
             _pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             _pictureBox.Location = new Point(0, 0);
-            //OuterPanel.Dock = DockStyle.Fill;
             _panel.Cursor = Cursors.NoMove2D;
             _panel.AutoScroll = true;
             _panel.MouseEnter += new EventHandler(OnPicBoxMouseEnter);
             _panel.MouseWheel += new MouseEventHandler(OnPanelMouseWheel);
-            _pictureBox.SizeChanged += new EventHandler(OnSizeChange);
+            _panel.SizeChanged += new EventHandler(OnSizeChange);
             _pictureBox.MouseEnter += new EventHandler(OnPicBoxMouseEnter);
             _pictureBox.MouseDown += new MouseEventHandler(OnPicMouseDown);
             _pictureBox.MouseMove += new MouseEventHandler(OnPicMouseMove);
             _pictureBox.MouseClick += new MouseEventHandler(OnPicMouseClick);
+            _pictureBox.Paint += new PaintEventHandler(OnPicImagePaint);
         }
 
         public void SetSrcImage(Image image)
@@ -77,24 +60,81 @@ namespace MajoraAutoItemTracker.UI
             _pictureBox.Size = image.Size;
         }
 
+        public void AddPath(GraphicsPath path, T tag)
+        {
+            _ListPath.Add(new Tuple<GraphicsPath, T>(path, tag));
+            _pictureBox.Invalidate();
+        }
+
+        public void AddRect(int left, int top, int width, int height, T tag)
+        {
+            var rect = new Rectangle(left, top, width, height);
+            GraphicsPath path = new GraphicsPath();
+            path.AddRectangle(rect);
+            AddPath(path, tag);
+        }
+
+        public void ClearPath()
+        {
+            _ListPath.Clear();
+            _pictureBox.Invalidate();
+        }
+
+        private void OnPicImagePaint(object sender, PaintEventArgs e)
+        {
+            var pen = new Pen(Color.Red);
+            _ListPath.ForEach(x => e.Graphics.DrawPath(pen, GetScaledPath(x.Item1)));
+        }
+
+        private GraphicsPath GetScaledPath(GraphicsPath path)
+        {
+            float matrixScaleX = (float)_pictureBox.Width / (float)_pictureBox.Image.Width;
+            float matrixScaleY = (float)_pictureBox.Height / (float)_pictureBox.Image.Height;
+            Matrix matrix = new Matrix();
+            matrix.Scale(matrixScaleX, matrixScaleY);
+            GraphicsPath scaledPath = (GraphicsPath)path.Clone();
+            scaledPath.Transform(matrix);
+            return scaledPath;
+        }
+
+        private bool HasClickInPath(MouseEventArgs e, Tuple<GraphicsPath, T> pathObject)
+        {
+            var scaledPath = GetScaledPath(pathObject.Item1);
+            var bounds = scaledPath.GetBounds();
+            return e.X >= bounds.Left && e.X <= bounds.Right &&
+                e.Y >= bounds.Top && e.Y <= bounds.Bottom;
+        }
+
         private void OnSizeChange(object sender, EventArgs e)
         {
-            Debug.WriteLine("OnSizeChange");
-            UpdateImageSize(_pictureBox.Width, _pictureBox.Height);
+            if (!_isLeftClickDown)
+                UpdateImageSize(_pictureBox.Width, _pictureBox.Height);
         }
 
         private void OnPicMouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
+                _isLeftClickDown = true;
                 _mouseDownLocation = e.Location;
             }
+        }
+
+        private void OnPicMouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                _isLeftClickDown = false;
         }
 
         private void OnPicMouseClick(object sender, MouseEventArgs e)
         {
             if (MouseClick != null)
                 MouseClick(sender, e);
+            // Check if we click on any graphic element
+            if (OnGraphicPathClick != null)
+                foreach (var path in _ListPath)
+                    if (HasClickInPath(e, path))
+                        OnGraphicPathClick(path.Item2);
         }
 
         private void OnPicMouseMove(object sender, MouseEventArgs e)
@@ -103,17 +143,56 @@ namespace MajoraAutoItemTracker.UI
             {
                 var newLeft = e.X + _pictureBox.Left - _mouseDownLocation.X;
                 var newTop = e.Y + _pictureBox.Top - _mouseDownLocation.Y;
-                // Debug.WriteLine($"newLeft:{newLeft}, newTop:{newTop}");
-                if (newLeft > _pictureBox.Left && newLeft < _panel.Width - _pictureBox.Width) // Fix me, not working on zoom
-                    _pictureBox.Left = newLeft;
-                else if (newLeft < _pictureBox.Left && newLeft >= 0)
-                    _pictureBox.Left = newLeft;
 
-                if (newTop > _pictureBox.Top && newTop < _panel.Height - _pictureBox.Height) // Fix me, not working on zoom
-                    _pictureBox.Top = newTop;
-                else if (newTop < _pictureBox.Top && newTop >= 0)
+                var movementLeftRight = _mouseDownLocation.X - e.X;
+                var movementTopBottom = _mouseDownLocation.Y - e.Y;
+
+                if (IsNewPosValid(newLeft, _pictureBox.Left, _pictureBox.Right, _pictureBox.Width, _panel.Width, _pictureBox.Image.Width, movementLeftRight))
+                    _pictureBox.Left = newLeft;
+                if (IsNewPosValid(newTop, _pictureBox.Top, _pictureBox.Bottom, _pictureBox.Height, _panel.Height, _pictureBox.Image.Height, movementTopBottom))
                     _pictureBox.Top = newTop;
             }
+        }
+        
+        private bool IsNewPosValid(
+            int newPos, 
+            int picBoxStartPos, 
+            int picBoxEndPos, 
+            int picBoxSize, 
+            int panelSize, 
+            int imgSize,
+            int movement)
+        {
+            // TODO Issue to fix when zoomed
+            if (picBoxSize > panelSize)
+            {
+                // Zoom in
+                //Debug.WriteLine($"newPos {newPos}");
+                //Debug.WriteLine($"panelSize {panelSize}");
+                //Debug.WriteLine($"imgSize {imgSize}");
+                //Debug.WriteLine($"picBoxSize {picBoxSize}");
+                //Debug.WriteLine($"picBoxStartPos {picBoxStartPos}");
+                //Debug.WriteLine($"picBoxEndPos {picBoxEndPos}");
+                //Debug.WriteLine($"movement {movement}");
+                if (movement >= 0 && picBoxEndPos < panelSize)
+                    return false;
+                if (newPos < panelSize - imgSize || newPos > 0)
+                    return false;
+            }
+            else
+            {
+                // Zoom out
+                if (newPos < 0)
+                    return false;
+                if (newPos > panelSize - picBoxSize)
+                    return false;
+                if (picBoxStartPos < 0 && newPos < picBoxStartPos)
+                    return false;
+                if (picBoxEndPos > panelSize && newPos + picBoxSize > picBoxEndPos)
+                    return false;
+                return true;
+            }
+            return true;
         }
 
         private void OnPicBoxMouseEnter(object sender, EventArgs e)
