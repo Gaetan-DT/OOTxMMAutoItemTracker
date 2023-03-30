@@ -133,6 +133,7 @@
     <Compile Include="UI\LogicTester\LogicTester.Designer.cs">
       <DependentUpon>LogicTester.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\PictureBoxZoomMoveController.cs" />
     <EmbeddedResource Include="UI\CheckLogicEditor\CheckLogicEditor.resx">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </EmbeddedResource>
