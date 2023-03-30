@@ -52,7 +52,7 @@ namespace MajoraAutoItemTracker.UI
             _pictureBox.MouseWheel += new MouseEventHandler(OnPanelOrImageMouseWheel);
         }
 
-        #region Drawing managment
+        #region Drawing management
 
         public void SetSrcImage(Image image)
         {
