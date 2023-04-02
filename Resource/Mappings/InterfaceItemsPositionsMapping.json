@@ -206,5 +206,104 @@
         "positionY": 1
       }
     ]
+  },
+  "moonTear": {
+    "displayName": "Moon Tear",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemMoonTear",
+        "positionX": 8,
+        "positionY": 2
+      }
+    ]
+  },
+  "landDeed": {
+    "displayName": "Land Deed",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemLandDeed",
+        "positionX": 9,
+        "positionY": 2
+      }
+    ]
+  },
+  "swampDeed": {
+    "displayName": "Swamp Deed",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemSwampDeed",
+        "positionX": 10,
+        "positionY": 2
+      }
+    ]
+  },
+  "mountainDeed": {
+    "displayName": "Mountain Deed",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemMountainDeed",
+        "positionX": 11,
+        "positionY": 2
+      }
+    ]
+  },
+  "oceanDeed": {
+    "displayName": "Ocean Deed",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemOceanDeed",
+        "positionX": 12,
+        "positionY": 2
+      }
+    ]
+  },
+  "roomKey": {
+    "displayName": "Room Key",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemRoomKey",
+        "positionX": 13,
+        "positionY": 2
+      }
+    ]
+  },
+  "kafeiLetter": {
+    "displayName": "Kafei Letter",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemKafeiLetter",
+        "positionX": 14,
+        "positionY": 2
+      }
+    ]
+  },
+  "mamaLetter": {
+    "displayName": "Mama Letter",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemMamaLetter",
+        "positionX": 15,
+        "positionY": 2
+      }
+    ]
+  },
+  "pendant": {
+    "displayName": "Pendant",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemPendant",
+        "positionX": 0,
+        "positionY": 3
+      }
+    ]
   }
 }
