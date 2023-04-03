@@ -19,7 +19,7 @@ namespace MajoraAutoItemTracker.Model.Enum
         public static EquipmentBombBag ReadFromMemory(this byte equipmentQuiverBombBag)
         {
             var equipmentBombBag = (equipmentQuiverBombBag >> 3) & 0x3;
-            if (System.Enum.IsDefined(typeof(LinkTransformation), equipmentBombBag))
+            if (System.Enum.IsDefined(typeof(EquipmentBombBag), equipmentBombBag))
             {
                 return (EquipmentBombBag)equipmentBombBag;
             }
