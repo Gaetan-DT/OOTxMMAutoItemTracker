@@ -15,12 +15,11 @@ namespace MajoraAutoItemTracker.Model.Enum
 
     static class MagicMeterMethod
     {
-        public static MagicMeter ReadFromMemory(this int magicMerger)
+        public static MagicMeter ReadFromMemory(this int magicMeter)
         {
-            var enumValue = (MagicMeter) magicMerger;
-            if (enumValue is MagicMeter)
+            if (System.Enum.IsDefined(typeof(MagicMeter), magicMeter))
             {
-                return enumValue;
+                return (MagicMeter)magicMeter;
             }
             
             throw new Exception("Unknown MagicMeter");

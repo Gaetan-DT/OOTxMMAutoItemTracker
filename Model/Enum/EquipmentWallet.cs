@@ -18,10 +18,9 @@ namespace MajoraAutoItemTracker.Model.Enum
         public static EquipmentWallet ReadFromMemory(this int equipmentWallet)
         {
             equipmentWallet = (equipmentWallet >> 4) & 0x3;
-            var enumValue = (EquipmentWallet) equipmentWallet;
-            if (enumValue is EquipmentWallet)
+            if (System.Enum.IsDefined(typeof(EquipmentWallet), equipmentWallet))
             {
-                return enumValue;
+                return (EquipmentWallet)equipmentWallet;
             }
             
             throw new Exception("Unknown EquipmentWallet");

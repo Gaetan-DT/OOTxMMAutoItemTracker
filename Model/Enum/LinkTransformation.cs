@@ -37,10 +37,9 @@ namespace MajoraAutoItemTracker.Model.Enum
 
         public static LinkTransformation ReadFromMemory(this int linkTransformation)
         {
-            var enumValue = (LinkTransformation) linkTransformation;
-            if (enumValue is LinkTransformation)
+            if (System.Enum.IsDefined(typeof(LinkTransformation), linkTransformation))
             {
-                return enumValue;
+                return (LinkTransformation)linkTransformation;
             }
             
             throw new Exception("Unknown LinkTransformation");

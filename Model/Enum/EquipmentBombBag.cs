@@ -19,10 +19,9 @@ namespace MajoraAutoItemTracker.Model.Enum
         public static EquipmentBombBag ReadFromMemory(this byte equipmentQuiverBombBag)
         {
             var equipmentBombBag = (equipmentQuiverBombBag >> 3) & 0x3;
-            var enumValue = (EquipmentBombBag) equipmentBombBag;
-            if (enumValue is EquipmentBombBag)
+            if (System.Enum.IsDefined(typeof(LinkTransformation), equipmentBombBag))
             {
-                return enumValue;
+                return (EquipmentBombBag)equipmentBombBag;
             }
             
             throw new Exception("Unknown EquipmentBombBag");

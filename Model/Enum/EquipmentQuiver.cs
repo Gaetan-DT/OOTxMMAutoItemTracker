@@ -20,10 +20,9 @@ namespace MajoraAutoItemTracker.Model.Enum
         public static EquipmentQuiver ReadFromMemory(this byte equipmentQuiverBombBag)
         {
             var equipmentQuiver = equipmentQuiverBombBag & 0x3;
-            var enumValue = (EquipmentQuiver) equipmentQuiver;
-            if (enumValue is EquipmentQuiver)
+            if (System.Enum.IsDefined(typeof(EquipmentQuiver), equipmentQuiver))
             {
-                return enumValue;
+                return (EquipmentQuiver)equipmentQuiver;
             }
             
             throw new Exception("Unknown EquipmentQuiver");
