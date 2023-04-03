@@ -7,11 +7,11 @@ namespace MajoraAutoItemTracker.Model.Enum
 {
     enum LinkTransformation
     {
-        Fierce_Deity,
-        Goron,
-        Zora,
-        Deku,
-        Human
+        FierceDeity = 0,
+        Goron = 1,
+        Zora = 2,
+        Deku = 3,
+        Human = 4
     }
 
     static class LinkTransformationMethods
@@ -20,7 +20,7 @@ namespace MajoraAutoItemTracker.Model.Enum
         {
             switch (eLinkTransformation)
             {
-                case LinkTransformation.Fierce_Deity:
+                case LinkTransformation.FierceDeity:
                     return "Fierce Deity";
                 case LinkTransformation.Goron:
                     return "Goron";
@@ -35,23 +35,14 @@ namespace MajoraAutoItemTracker.Model.Enum
             }
         }
 
-        public static LinkTransformation ReadFromMemory(this int LinkTransformation)
+        public static LinkTransformation ReadFromMemory(this int linkTransformation)
         {
-            switch (LinkTransformation)
+            if (System.Enum.IsDefined(typeof(LinkTransformation), linkTransformation))
             {
-                case 0: // 
-                    return Enum.LinkTransformation.Fierce_Deity;
-                case 1: // Goron
-                    return Enum.LinkTransformation.Goron;
-                case 2: // Zora
-                    return Enum.LinkTransformation.Zora;
-                case 3: // Deku
-                    return Enum.LinkTransformation.Deku;
-                case 4:
-                    return Enum.LinkTransformation.Human;
-                default:
-                    throw new Exception("Unknown link transformation");
+                return (LinkTransformation)linkTransformation;
             }
+            
+            throw new Exception("Unknown LinkTransformation");
         }
     }
 }

@@ -14,9 +14,9 @@ namespace MajoraAutoItemTracker
         #endregion
 
         #region Inventory Equipement
-        public EquipementWallet EquipementWallet = EquipementWallet.Child;
-        public EquipementQuiver EquipementQuiver = EquipementQuiver.None;
-        public EquipementBombBag EquipementBombBag = EquipementBombBag.None;
+        public EquipmentWallet EquipmentWallet = Model.Enum.EquipmentWallet.Child;
+        public EquipmentQuiver EquipmentQuiver = Model.Enum.EquipmentQuiver.None;
+        public EquipmentBombBag EquipmentBombBag = Model.Enum.EquipmentBombBag.None;
         public bool HasBombersNoteBook = false;
         #endregion
 
@@ -90,7 +90,7 @@ namespace MajoraAutoItemTracker
         public bool HasBoosMaskGyorg = false;
         public bool HasBoosMaskTwinmold = false;
         #endregion
-
+        
         #region Other
         public LinkTransformation CurrentLinkTransformation = LinkTransformation.Human;
         #endregion
@@ -100,14 +100,14 @@ namespace MajoraAutoItemTracker
             // Link
             MagicMeter = MagicMeterMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_LINKG_MAGIC_METER));
             var bDoubleDefense = modLoader.readByte(MMOffsets.CST_LINKG_DOUBLE_DEFENSE, 8);
-            HasDoubleDefense = !((bDoubleDefense[0] & 00010020) == bDoubleDefense[0]);
+            HasDoubleDefense = (bDoubleDefense[0] & 00010020) != bDoubleDefense[0];
 
-            // Inventory Equipement
-            EquipementWallet = EquipementWalletMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
+            // Inventory Equipment
+            EquipmentWallet = EquipmentWalletMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
             HasBombersNoteBook = modLoader.CheckHexRaised(MMOffsets.CST_INVENTORY_EQUIPEMENT_BOMBERS_NOTEBOOK, 2);
             var byteQuiverAndBombBag = modLoader.readByte(MMOffsets.CST_INVENTORY_EQUIPEMENT_QUIVER_BOMBBAG, 1)[0];
-            EquipementQuiver = EquipementQuiverMethod.readFromMemory(byteQuiverAndBombBag);
-            EquipementBombBag = EquipementBombBagMethod.readFromMemory(byteQuiverAndBombBag);
+            EquipmentQuiver = EquipmentQuiverMethod.ReadFromMemory(byteQuiverAndBombBag);
+            EquipmentBombBag = EquipmentBombBagMethod.ReadFromMemory(byteQuiverAndBombBag);
 
             // INVENTORY C-Button Items
             HasOcarina = modLoader.ReadItem(MMOffsets.CST_INVENTORY_OCARINA, 0x00);
@@ -196,9 +196,9 @@ namespace MajoraAutoItemTracker
         #endregion
 
         #region Inventory Equipement
-        public ReplaySubject<EquipementWallet> EquipementWallet = new ReplaySubject<EquipementWallet>(1);
-        public ReplaySubject<EquipementQuiver> EquipementQuiver = new ReplaySubject<EquipementQuiver>(1);
-        public ReplaySubject<EquipementBombBag> EquipementBombBag = new ReplaySubject<EquipementBombBag>(1);
+        public ReplaySubject<EquipmentWallet> EquipmentWallet = new ReplaySubject<EquipmentWallet>(1);
+        public ReplaySubject<EquipmentQuiver> EquipmentQuiver = new ReplaySubject<EquipmentQuiver>(1);
+        public ReplaySubject<EquipmentBombBag> EquipmentBombBag = new ReplaySubject<EquipmentBombBag>(1);
         public ReplaySubject<bool> HasBombersNoteBook = new ReplaySubject<bool>(1);
         #endregion
 

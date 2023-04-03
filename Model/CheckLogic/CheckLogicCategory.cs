@@ -5,7 +5,7 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
 {
     public class CheckLogicCategory
     {
-        public const string CST_DEFAULT_FILE_NAME = "check_logic_category.json";
+        public const string CST_DEFAULT_FILE_NAME = "CheckLogicCategory.json";
 
         public string Name { get; set; }
         public int SquarePositionX { get; set; }
