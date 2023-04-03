@@ -196,9 +196,9 @@ namespace MajoraAutoItemTracker
         #endregion
 
         #region Inventory Equipement
-        public ReplaySubject<EquipmentWallet> EquipementWallet = new ReplaySubject<EquipmentWallet>(1);
-        public ReplaySubject<EquipmentQuiver> EquipementQuiver = new ReplaySubject<EquipmentQuiver>(1);
-        public ReplaySubject<EquipmentBombBag> EquipementBombBag = new ReplaySubject<EquipmentBombBag>(1);
+        public ReplaySubject<EquipmentWallet> EquipmentWallet = new ReplaySubject<EquipmentWallet>(1);
+        public ReplaySubject<EquipmentQuiver> EquipmentQuiver = new ReplaySubject<EquipmentQuiver>(1);
+        public ReplaySubject<EquipmentBombBag> EquipmentBombBag = new ReplaySubject<EquipmentBombBag>(1);
         public ReplaySubject<bool> HasBombersNoteBook = new ReplaySubject<bool>(1);
         #endregion
 
