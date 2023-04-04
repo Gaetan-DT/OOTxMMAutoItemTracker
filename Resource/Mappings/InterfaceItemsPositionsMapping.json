@@ -1,0 +1,759 @@
+﻿{
+  "ocarina": {
+    "displayName": "Ocarina",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemOcarina",
+        "positionX": 0,
+        "positionY": 0
+      }
+    ]
+  },
+  "bow": {
+    "displayName": "Bow",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBow",
+        "positionX": 1,
+        "positionY": 0
+      }
+    ]
+  },
+  "arrow": {
+    "displayName": "Arrow",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemFireArrow",
+        "positionX": 2,
+        "positionY": 0
+      },
+      {
+        "idLogic": "ItemIceArrow",
+        "positionX": 3,
+        "positionY": 0
+      },
+      {
+        "idLogic": "ItemLightArrow",
+        "positionX": 4,
+        "positionY": 0
+      }
+    ]
+  },
+  "bomb": {
+    "displayName": "Bomb",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBombBag",
+        "positionX": 6,
+        "positionY": 0
+      }
+    ]
+  },
+  "bombchu": {
+    "displayName": "Bombchu",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBombBag",
+        "positionX": 7,
+        "positionY": 0
+      }
+    ]
+  },
+  "dekuStick": {
+    "displayName": "Deku Stick",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "Deku Stick Fighting",
+        "positionX": 8,
+        "positionY": 0
+      }
+    ]
+  },
+  "dekuNut": {
+    "displayName": "Deku Nut",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 9,
+        "positionY": 0
+      }
+    ]
+  },
+  "magicBean": {
+    "displayName": "Magic Bean",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemMagicBean",
+        "positionX": 10,
+        "positionY": 0
+      }
+    ]
+  },
+  "powderKeg": {
+    "displayName": "Powder Keg",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemPowderKeg",
+        "positionX": 12,
+        "positionY": 0
+      }
+    ]
+  },
+  "pictobox": {
+    "displayName": "Pictobox",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemPictobox",
+        "positionX": 13,
+        "positionY": 0
+      }
+    ]
+  },
+  "lens": {
+    "displayName": "Lens",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemLens",
+        "positionX": 14,
+        "positionY": 0
+      }
+    ]
+  },
+  "hookshot": {
+    "displayName": "Hookshot",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemHookshot",
+        "positionX": 15,
+        "positionY": 0
+      }
+    ]
+  },
+  "fairySword": {
+    "displayName": "Fairy Sword",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemFairySword",
+        "positionX": 0,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleWitch": {
+    "displayName": "Witch Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleWitch",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleAliens": {
+    "displayName": "Aliens Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleAliens",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleBeavers": {
+    "displayName": "Beavers Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleBeavers",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleDampe": {
+    "displayName": "Dampe Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleDampe",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleMadameAroma": {
+    "displayName": "Madame Aroma Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleMadameAroma",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "bottleGoronRace": {
+    "displayName": "Goron Race Bottle",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "ItemBottleGoronRace",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  "moonTear": {
+    "displayName": "Moon Tear",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemMoonTear",
+        "positionX": 8,
+        "positionY": 2
+      }
+    ]
+  },
+  "landDeed": {
+    "displayName": "Land Deed",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemLandDeed",
+        "positionX": 9,
+        "positionY": 2
+      }
+    ]
+  },
+  "swampDeed": {
+    "displayName": "Swamp Deed",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemSwampDeed",
+        "positionX": 10,
+        "positionY": 2
+      }
+    ]
+  },
+  "mountainDeed": {
+    "displayName": "Mountain Deed",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemMountainDeed",
+        "positionX": 11,
+        "positionY": 2
+      }
+    ]
+  },
+  "oceanDeed": {
+    "displayName": "Ocean Deed",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemOceanDeed",
+        "positionX": 12,
+        "positionY": 2
+      }
+    ]
+  },
+  "roomKey": {
+    "displayName": "Room Key",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemRoomKey",
+        "positionX": 13,
+        "positionY": 2
+      }
+    ]
+  },
+  "kafeiLetter": {
+    "displayName": "Kafei Letter",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemKafeiLetter",
+        "positionX": 15,
+        "positionY": 2
+      }
+    ]
+  },
+  "mamaLetter": {
+    "displayName": "Mama Letter",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemMamaLetter",
+        "positionX": 14,
+        "positionY": 2
+      }
+    ]
+  },
+  "pendant": {
+    "displayName": "Pendant",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "TradeItemPendant",
+        "positionX": 0,
+        "positionY": 3
+      }
+    ]
+  },
+  "dekuMask": {
+    "displayName": "Deku Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskDeku",
+        "positionX": 2,
+        "positionY": 3
+      }
+    ]
+  },
+  "goronMask": {
+    "displayName": "Goron Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskGoron",
+        "positionX": 3,
+        "positionY": 3
+      }
+    ]
+  },
+  "zoraMask": {
+    "displayName": "Zora Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskZora",
+        "positionX": 4,
+        "positionY": 3
+      }
+    ]
+  },
+  "fierceDeityMask": {
+    "displayName": "Fierce Deity's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskFierceDeity",
+        "positionX": 5,
+        "positionY": 3
+      }
+    ]
+  },
+  "truthMask": {
+    "displayName": "Mask of truth",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskTruth",
+        "positionX": 6,
+        "positionY": 3
+      }
+    ]
+  },
+  "kafeiMask": {
+    "displayName": "Kafei's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskKafei",
+        "positionX": 7,
+        "positionY": 3
+      }
+    ]
+  },
+  "allNightMask": {
+    "displayName": "All-Night Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskAllNight",
+        "positionX": 8,
+        "positionY": 3
+      }
+    ]
+  },
+  "bunnyHoodMask": {
+    "displayName": "Bunny Hood",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskBunnyHood",
+        "positionX": 9,
+        "positionY": 3
+      }
+    ]
+  },
+  "keatonMask": {
+    "displayName": "Keaton Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskKeaton",
+        "positionX": 10,
+        "positionY": 3
+      }
+    ]
+  },
+  "garoMask": {
+    "displayName": "Garo's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskGaro",
+        "positionX": 11,
+        "positionY": 3
+      }
+    ]
+  },
+  "romaniMask": {
+    "displayName": "Romani's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskRomani",
+        "positionX": 12,
+        "positionY": 3
+      }
+    ]
+  },
+  "troupeLeaderMask": {
+    "displayName": "Troupe Leader's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskCircusLeader",
+        "positionX": 13,
+        "positionY": 3
+      }
+    ]
+  },
+  "postmanHatMask": {
+    "displayName": "Postman's Hat",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskPostmanHat",
+        "positionX": 14,
+        "positionY": 3
+      }
+    ]
+  },
+  "coupleMask": {
+    "displayName": "Couple's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskCouple",
+        "positionX": 15,
+        "positionY": 3
+      }
+    ]
+  },
+  "greatFairyMask": {
+    "displayName": "Great Fairy's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskGreatFairy",
+        "positionX": 0,
+        "positionY": 4
+      }
+    ]
+  },
+  "gibdoMask": {
+    "displayName": "Gibdo Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskGibdo",
+        "positionX": 1,
+        "positionY": 4
+      }
+    ]
+  },
+  "donGeroMask": {
+    "displayName": "Don Gero's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskDonGero",
+        "positionX": 2,
+        "positionY": 4
+      }
+    ]
+  },
+  "kamaroMask": {
+    "displayName": "Kamaro's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskKamaro",
+        "positionX": 3,
+        "positionY": 4
+      }
+    ]
+  },
+  "captainHatMask": {
+    "displayName": "Captain's Hat",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskCaptainHat",
+        "positionX": 4,
+        "positionY": 4
+      }
+    ]
+  },
+  "stoneMask": {
+    "displayName": "Stone Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskStone",
+        "positionX": 5,
+        "positionY": 4
+      }
+    ]
+  },
+  "bremenMask": {
+    "displayName": "Bremen Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskBremen",
+        "positionX": 6,
+        "positionY": 4
+      }
+    ]
+  },
+  "blastMask": {
+    "displayName": "Blast Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskBlast",
+        "positionX": 7,
+        "positionY": 4
+      }
+    ]
+  },
+  "scentsMask": {
+    "displayName": "Mask of Scents",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskScents",
+        "positionX": 8,
+        "positionY": 4
+      }
+    ]
+  },
+  "giantMask": {
+    "displayName": "Giant's Mask",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "MaskGiant",
+        "positionX": 9,
+        "positionY": 4
+      }
+    ]
+  },
+  "sword": {
+    "displayName": "Sword",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 13,
+        "positionY": 4
+      },
+      {
+        "idLogic": "StartingSword",
+        "positionX": 13,
+        "positionY": 4
+      },
+      {
+        "idLogic": "UpgradeRazorSword",
+        "positionX": 14,
+        "positionY": 4
+      },
+      {
+        "idLogic": "UpgradeGildedSword",
+        "positionX": 15,
+        "positionY": 4
+      }
+    ]
+  },
+  "shield": {
+    "displayName": "Shield",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 5
+      },
+      {
+        "idLogic": "StartingShield",
+        "positionX": 1,
+        "positionY": 5
+      },
+      {
+        "idLogic": "UpgradeMirrorShield",
+        "positionX": 2,
+        "positionY": 5
+      }
+    ]
+  },
+  "quiver": {
+    "displayName": "Quiver",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 3,
+        "positionY": 5
+      },
+      {
+        "idLogic": "ItemBow",
+        "positionX": 3,
+        "positionY": 5
+      },
+      {
+        "idLogic": "UpgradeBigQuiver",
+        "positionX": 4,
+        "positionY": 5
+      },
+      {
+        "idLogic": "UpgradeBiggestQuiver",
+        "positionX": 5,
+        "positionY": 5
+      }
+    ]
+  },
+  "bombBag": {
+    "displayName": "Bomb Bag",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 6,
+        "positionY": 5
+      },
+      {
+        "idLogic": "ItemBombBag",
+        "positionX": 6,
+        "positionY": 5
+      },
+      {
+        "idLogic": "UpgradeBigBombBag",
+        "positionX": 7,
+        "positionY": 5
+      },
+      {
+        "idLogic": "UpgradeBiggestBombBag",
+        "positionX": 8,
+        "positionY": 5
+      }
+    ]
+  },
+  "wallet": {
+    "displayName": "Wallet",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 10,
+        "positionY": 5
+      },
+      {
+        "idLogic": "UpgradeAdultWallet",
+        "positionX": 10,
+        "positionY": 5
+      },
+      {
+        "idLogic": "UpgradeGiantWallet",
+        "positionX": 11,
+        "positionY": 5
+      }
+    ]
+  },
+  "odolwaRemains": {
+    "displayName": "Odolwa's Remains",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "RemainsOdolwa",
+        "positionX": 13,
+        "positionY": 5
+      }
+    ]
+  },
+  "gohtRemains": {
+    "displayName": "Goht's Remains",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "RemainsGoht",
+        "positionX": 14,
+        "positionY": 5
+      }
+    ]
+  },
+  "gyorgRemains": {
+    "displayName": "Gyorg's Remains",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "RemainsGyorg",
+        "positionX": 15,
+        "positionY": 5
+      }
+    ]
+  },
+  "twinmoldRemains": {
+    "displayName": "Twinmold's Remains",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "RemainsTwinmold",
+        "positionX": 0,
+        "positionY": 6
+      }
+    ]
+  },
+  "bomberNotebook": {
+    "displayName": "Bombers' Notebook",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 0,
+        "positionY": 13
+      }
+    ]
+  }
+}

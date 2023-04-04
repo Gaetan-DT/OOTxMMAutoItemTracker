@@ -8,26 +8,21 @@ namespace MajoraAutoItemTracker.Model.Enum
 {
     enum MagicMeter
     {
-        None,
-        Small,
-        Large
+        None = 0,
+        Small = 1,
+        Large = 2
     }
 
     static class MagicMeterMethod
     {
-        public static MagicMeter ReadFromMemory(this int magicMerger)
+        public static MagicMeter ReadFromMemory(this int magicMeter)
         {
-            switch (magicMerger)
+            if (System.Enum.IsDefined(typeof(MagicMeter), magicMeter))
             {
-                case 0x00:
-                    return MagicMeter.None;
-                case 0x01:
-                    return MagicMeter.Small;
-                case 0x02:
-                    return MagicMeter.Large;
-                default:
-                    throw new Exception("Unknown MagicMeter");
+                return (MagicMeter)magicMeter;
             }
+            
+            throw new Exception("Unknown MagicMeter");
         }
     }
 }

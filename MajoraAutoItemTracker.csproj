@@ -96,12 +96,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Enum\EquipmentBombBag.cs" />
+    <Compile Include="Model\Enum\EquipmentQuiver.cs" />
+    <Compile Include="Model\Enum\EquipmentWallet.cs" />
     <Compile Include="Model\CheckLogic\CheckLogic.cs" />
     <Compile Include="Model\CheckLogic\CheckLogicCategory.cs" />
     <Compile Include="Model\Enum\CheckLogicZone.cs" />
-    <Compile Include="Model\Enum\EquipementBombBag.cs" />
-    <Compile Include="Model\Enum\EquipementQuiver.cs" />
-    <Compile Include="Model\Enum\EquipementWallet.cs" />
     <Compile Include="Model\Enum\LinkTransformation.cs" />
     <Compile Include="Model\Enum\MagicMeter.cs" />
     <Compile Include="Model\Item\ItemLogic.cs" />
@@ -134,6 +134,7 @@
     <Compile Include="UI\LogicTester\LogicTester.Designer.cs">
       <DependentUpon>LogicTester.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\PictureBoxZoomMoveController.cs" />
     <EmbeddedResource Include="UI\CheckLogicEditor\CheckLogicEditor.resx">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,7 +165,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="README.MD" />
-    <None Include="Resource\CheckLogic\check_logic_category.json" />
+    <None Include="Resource\CheckLogic\CheckLogicCategory.json" />
     <None Include="Resource\Logics\REQ_CASUAL_12.json" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +190,7 @@
     <Content Include="UI\Layout\BarinadesItemTracker_R4tPCG0m05.png" />
     <Content Include="UI\Layout\mm_layout.png" />
     <Content Include="UI\Map\82k78q66tcha1.png" />
+    <Content Include="Resource\Mappings\InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
