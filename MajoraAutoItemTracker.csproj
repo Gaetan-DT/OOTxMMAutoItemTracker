@@ -102,6 +102,7 @@
     <Compile Include="Model\CheckLogic\CheckLogic.cs" />
     <Compile Include="Model\CheckLogic\CheckLogicCategory.cs" />
     <Compile Include="Model\Enum\CheckLogicZone.cs" />
+    <Compile Include="Model\Enum\ItemLogicPopertyName.cs" />
     <Compile Include="Model\Enum\LinkTransformation.cs" />
     <Compile Include="Model\Enum\MagicMeter.cs" />
     <Compile Include="Model\Item\ItemLogic.cs" />
