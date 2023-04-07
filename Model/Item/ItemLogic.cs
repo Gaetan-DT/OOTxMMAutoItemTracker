@@ -12,6 +12,10 @@ namespace MajoraAutoItemTracker.Model.Item
         public String propertyName { get; set; }
 
         public ItemLogicVariant[] variants { get; set; }
+
+        public bool hasItem { get; set; }
+
+        public int CurrentVariant { get; set; }
     }
 
     public class ItemLogicVariant

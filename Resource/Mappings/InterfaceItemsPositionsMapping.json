@@ -762,7 +762,7 @@
     "propertyName": "ImgBombersNote",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemNotebook",
         "positionX": 13,
         "positionY": 6
       }
@@ -773,7 +773,7 @@
     "propertyName": "ImgDoubleDefense",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "FairyDoubleDefense",
         "positionX": 1,
         "positionY": 14
       }
@@ -784,7 +784,18 @@
     "propertyName": "ImgMagic",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "FairyMagic",
+        "positionX": 13,
+        "positionY": 14
+      }
+    ]
+  },
+  {
+    "displayName": "Double Magic",
+    "propertyName": "",
+    "variants": [
+      {
+        "idLogic": "FairyDoubleMagic",
         "positionX": 13,
         "positionY": 14
       }
