@@ -1,14 +1,18 @@
 ﻿using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Model.Item;
+using MajoraAutoItemTracker.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,9 +27,13 @@ namespace MajoraAutoItemTracker
 {
     public partial class Form1 : Form
     {
+        private const int CST_RECT_WIDTH_HEIGHT = 40;
         MemoryListener mMemoryListener = null;
         private List<CheckLogicCategory> _checkLogicCategories;
         private List<CheckLogic> _checkLogics;
+        private PictureBoxZoomMoveController<CheckLogicZone> _pictureBoxZoomMoveController;
+        private List<ItemLogic> _itemLogics;
+        private Bitmap _itemSpriteMono;
 
         public Form1()
         {
@@ -74,7 +82,7 @@ namespace MajoraAutoItemTracker
             myImage.Margin = new Thickness(20); **/
             //Debug.WriteLine(System.IO.Directory.GetCurrentDirectory());
 
-            Image PngOcarina = Image.FromFile(@"..\..\UI\Itemicons\mm_items_mono.png");
+            // Image PngOcarina = Image.FromFile(@"..\..\UI\Itemicons\mm_items_mono.png");
 
             /** Bitmap bitmapOcarina = new Bitmap(PngOcarina);
             Image croppedOcarina = bitmapOcarina.Clone(new Rectangle(0, 0, 42, 42), bitmapOcarina.PixelFormat);
@@ -135,15 +143,48 @@ namespace MajoraAutoItemTracker
             _checkLogics = CheckLogic.FromHeader(_checkLogicCategories);
 
         }
-
-        private void DrawSquareCategory(PaintEventArgs e)
+        
+        private void LoadAllItemImage()
         {
-            var brush = new SolidBrush(Color.Red);
+            var filepath = Application.StartupPath + @"\Resource\Itemicons\mm_items_mono.png";
+            _itemSpriteMono = new Bitmap (Image.FromFile(filepath));
+
+        }
+
+        private void LoadItemLogic()
+        {
+            var filepath = Application.StartupPath + @"\Resource\Mappings\" + ItemLogicMethod.CST_DEFAULT_FILE_NAME;
+            _itemLogics = ItemLogicMethod.Deserialize(filepath);
+        }
+
+        private void DrawAllItems()
+        {
+            foreach (var item in _itemLogics)
+            {
+                DrawItem(item);
+            }
+        }
+
+        private void DrawItem(ItemLogic itemLogic)
+        {
+            if (itemLogic.propertyName == null || itemLogic.propertyName == "")
+                return;
+            var pictureboxItem = ((System.Reflection.TypeInfo)GetType()).GetDeclaredField(itemLogic.propertyName).GetValue(this) as PictureBox;
+            var posX = itemLogic.variants[0].positionX * 42;
+            var posY = itemLogic.variants[0].positionY * 42;
+            pictureboxItem.Image = _itemSpriteMono.Clone(new Rectangle(posX, posY, 42, 42), _itemSpriteMono.PixelFormat);
+        }
+
+        private void DrawSquareCategory()
+        {
             foreach (var checkLogicCategory in _checkLogicCategories)
             {
-                var scaleX = checkLogicCategory.SquarePositionX * Map.Size.Width / 6000;
-                var scaleY = checkLogicCategory.SquarePositionY * Map.Size.Height / 5555;
-                e.Graphics.FillRectangle(brush, new Rectangle(scaleX - 5, scaleY -5, 5, 5));
+                _pictureBoxZoomMoveController.AddRect(
+                    checkLogicCategory.SquarePositionX - CST_RECT_WIDTH_HEIGHT/2,
+                    checkLogicCategory.SquarePositionY - CST_RECT_WIDTH_HEIGHT/2,
+                    CST_RECT_WIDTH_HEIGHT, CST_RECT_WIDTH_HEIGHT, 
+                    CheckLogicZoneMethod.FromString(checkLogicCategory.Name)
+                );
             }
         }
 
@@ -155,7 +196,7 @@ namespace MajoraAutoItemTracker
         }
 
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        /*private void pictureBox2_Click(object sender, EventArgs e)
         {
             MouseEventArgs me = (MouseEventArgs)e;
             Point coordinates = me.Location;
@@ -173,15 +214,15 @@ namespace MajoraAutoItemTracker
                     //Debug.WriteLine("On a cliqué sur la catégorie " + checkLogicCategory.Name);
                 }
             }
-        }
+        }*/
 
-        private void RefreshCheckListForCategory(CheckLogicCategory checkLogicCategory)
+        private void RefreshCheckListForCategory(CheckLogicZone checkLogicZone)
         {
             CheckList.Items.Clear();
 
             foreach ( var checkLogic in _checkLogics) // recuperer tout les checks dans la catégorie
             {
-                if (checkLogic.Zone == CheckLogicZoneMethod.FromString(checkLogicCategory.Name)) 
+                if (checkLogic.Zone == checkLogicZone)
                 {
                     CheckList.Items.Add(checkLogic);
                 }
@@ -193,14 +234,21 @@ namespace MajoraAutoItemTracker
 
         }
 
-        private void Map_Paint(object sender, PaintEventArgs e)
+       /* private void Map_Paint(object sender, PaintEventArgs e)
         {
             DrawSquareCategory(e);
-        }
+        } */
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LoadAllItemImage();
+            LoadItemLogic();
             LoadCheckCategory();
+            _pictureBoxZoomMoveController = new PictureBoxZoomMoveController<CheckLogicZone>(mapMm);
+            _pictureBoxZoomMoveController.SetSrcImage(Image.FromFile(Application.StartupPath + @"\Resource\Map\82k78q66tcha1.png"));
+            _pictureBoxZoomMoveController.OnGraphicPathClick += RefreshCheckListForCategory;
+            DrawSquareCategory();
+            DrawAllItems();
         }
 
         private void CheckList_DrawItem(object sender, DrawItemEventArgs e)
@@ -222,14 +270,11 @@ namespace MajoraAutoItemTracker
             e.Graphics.DrawString(checkLogic.Id, e.Font, brush, e.Bounds, StringFormat.GenericDefault);
         }
 
-        /** if (checklogic.IsClaim){
-                fonction pour colorié le text en gris et changer la font par exemple
-            }
-            else if (checklogic.IsAvailable){
-                fonction pour colorié le texte en vert et change la font
-            }
-            else {
-                fonction pour colorié en rouge + changer de font}
-     **/
+        private void CheckList_MouseClick(object sender, MouseEventArgs e)
+        {
+            var checkList = (CheckLogic)CheckList.SelectedItem;
+            checkList.IsClaim = !checkList.IsClaim;
+            CheckList.Invalidate();
+        }
     }
 }

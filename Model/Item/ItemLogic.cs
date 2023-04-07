@@ -24,6 +24,7 @@ namespace MajoraAutoItemTracker.Model.Item
 
     public static class ItemLogicMethod
     {
+        public const string CST_DEFAULT_FILE_NAME = "InterfaceItemsPositionsMapping.json";
         public static List<ItemLogic> Deserialize(String filePath)
         {
             var jsonFile = File.ReadAllText(filePath);

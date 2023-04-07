@@ -109,6 +109,11 @@
     <Compile Include="Logic\LogicResolver.cs" />
     <Compile Include="Model\Logic\LogicFile.cs" />
     <Compile Include="Model\Logic\TimeOfDay.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,14 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UI\LogicTester\LogicTester.resx">
       <DependentUpon>LogicTester.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,11 +185,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="UI\Itemicons\mm_items.png" />
-    <Content Include="UI\Itemicons\mm_items_mono.png" />
+    <Content Include="Resource\Itemicons\mm_items.png" />
+    <Content Include="Resource\Itemicons\mm_items_mono.png" />
     <Content Include="UI\Layout\BarinadesItemTracker_R4tPCG0m05.png" />
     <Content Include="UI\Layout\mm_layout.png" />
-    <Content Include="UI\Map\82k78q66tcha1.png" />
+    <Content Include="Resource\Map\82k78q66tcha1.png" />
     <Content Include="Resource\Mappings\InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
