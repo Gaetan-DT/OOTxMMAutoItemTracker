@@ -95,6 +95,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MemoryReader\Project64EM\P64EMWrapper.cs" />
     <Compile Include="Model\Enum\EquipmentBombBag.cs" />
     <Compile Include="Model\Enum\EquipmentQuiver.cs" />
     <Compile Include="Model\Enum\EquipmentWallet.cs" />
