@@ -1,5 +1,4 @@
-﻿using MajoraAutoItemTracker.Model.CheckLogic;
-using MajoraAutoItemTracker.Model.Item;
+﻿using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,111 +8,133 @@ namespace MajoraAutoItemTracker.Model
 {
     class LogicResolver
     {
-        private Dictionary<string, JsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.JsonFormatLogicItem>();
+        private readonly Dictionary<string, JsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.JsonFormatLogicItem>();
         public Subject<CheckLogic.CheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.CheckLogic>();
 
-        public LogicResolver(LogicFile logicHeader)
+        public bool debugMode = false;
+        private int indentDebug = 0;
+
+        public LogicResolver(LogicFile logicFile)
         {
-            foreach (var logic in logicHeader.Logic)
+            foreach (var logic in logicFile.Logic)
                 _logicDictionary.Add(logic.Id, logic);
         }
 
-        private Logic.JsonFormatLogicItem FindLogic(string logicId)
+        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<CheckLogic.CheckLogic> checkLogicList, bool allowTrick)
         {
-            Logic.JsonFormatLogicItem logic;
-            if (!_logicDictionary.TryGetValue(logicId, out logic))
-            {
-                Debug.WriteLine("Unable to find logic for check: " + logicId);
-                return null;
-            }
-            return logic;
-        }
-
-        public void UpdateCheckForItem(List<ItemLogic> itemLogics, List<CheckLogic.CheckLogic> checkLogics, bool allowTrick)
-        {
-            Dictionary<string, ItemLogicVariant> dictionaryItemVariant = new Dictionary<string, ItemLogicVariant>();
-            foreach (var itemLogic in itemLogics)
-                foreach (var itemLogicVariant in itemLogic.variants)
-                    dictionaryItemVariant.Add(itemLogicVariant.idLogic, itemLogicVariant);
+            WriteToDebug("-------- UpdateCheckForItem called ---------");
             // We receive a new list of item, we will see if we can update every check available
-            foreach (var checkLogic in checkLogics)
-                UpdateCheckAvailable(dictionaryItemVariant, checkLogic, allowTrick);
+            foreach (var checkLogic in checkLogicList)
+                UpdateCheckAvailable(ToDictionaryItemLogicList(itemLogicList), checkLogic, allowTrick);
+            WriteToDebug("-------- UpdateCheckForItem end -------------");
         }
 
-        private void UpdateCheckAvailable(Dictionary<string, ItemLogicVariant> items, CheckLogic.CheckLogic check, bool allowTrick)
+        private void UpdateCheckAvailable(
+            Dictionary<string, ItemLogic> dicItemLogic, 
+            CheckLogic.CheckLogic checkLogic, 
+            bool allowTrick)
         {
-            var checkLogic = FindLogic(check.Id);
-            if (checkLogic == null)
+            var jsonLogicItem = FindLogic(checkLogic.Id);
+            if (jsonLogicItem == null)
                 return;
-            var isItemLogicCanBeValidated = IsItemLogicCanBeValidated(checkLogic, items, allowTrick, new HashSet<string>());
-            if (isItemLogicCanBeValidated != check.IsAvailable)
+            var isItemLogicCanBeValidated = IsItemLogicCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, new HashSet<string>());
+            if (isItemLogicCanBeValidated != checkLogic.IsAvailable)
             {
-                check.IsAvailable = isItemLogicCanBeValidated;
-                OnCheckUpdate.OnNext(check);
+                checkLogic.IsAvailable = isItemLogicCanBeValidated;
+                OnCheckUpdate.OnNext(checkLogic);
             }
         }
 
         private bool IsItemLogicCanBeValidated(
-            JsonFormatLogicItem logic, 
-            Dictionary<string, ItemLogicVariant> items, 
+            JsonFormatLogicItem jsonLogicItem, 
+            Dictionary<string, ItemLogic> dicItemLogic, 
             bool allowTrick,
             HashSet<string> recursivityCheck)
         {
+            WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} BEGIN", false);
             HashSet<string> currentRecursivityCheck = new HashSet<string>(recursivityCheck);
             // Check if the logic id has not already been added in previous validation
-            if (currentRecursivityCheck.Contains(logic.Id))
+            if (currentRecursivityCheck.Contains(jsonLogicItem.Id))
             {
-                Debug.WriteLine($"Recursivity error: Logic Id:{logic.Id} has been checked twice");
+                WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (Recursivity error Id has been checked twice)", true);
                 return false;
             }
             // Check if we allow trick
-            if (logic.IsTrick && !allowTrick)
+            if (jsonLogicItem.IsTrick && !allowTrick)
+            {
+                WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (no trick allowed)", true);
                 return false;
-            // Check if logic is item and we got it
-            if (items.TryGetValue(logic.Id, out ItemLogicVariant itemLogic) && itemLogic.hasItem) 
-                return true;
+            }
+            // Check if logic is an check item and we got it
+            if (IsAnItemLogic(jsonLogicItem, dicItemLogic, out bool isItemLogicClaim))
+            {
+                WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH {isItemLogicClaim} (item with claim check performed)", true);
+                return isItemLogicClaim;
+            }
+                
             // Check if we have the require condition
-            if (!IsRequireItemCanBeValidated(logic, items, allowTrick, currentRecursivityCheck)) 
+            if (!IsRequireItemCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, currentRecursivityCheck))
+            {
+                WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (require item cannot be validated)", true);
                 return false;
+            }                
             // Check if we have any conditional item
-            if (!IsAnyConditionalItemsCanBeValidated(logic, items, allowTrick, currentRecursivityCheck)) 
+            if (!IsAnyConditionalItemsCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, currentRecursivityCheck))
+            {
+                WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (conditional item cannot be validated)", true);
                 return false;
-
+            }                
+            WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH TRUE (logic without condition and not an item)", true);
             return true;
         }
 
+        private bool IsAnItemLogic(JsonFormatLogicItem jsonLogicItem, Dictionary<string, ItemLogic> dicItemLogic, out bool isItemClaim)
+        {
+            // Check if it a item and get the itemLogic
+            if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic itemLogic))
+            {
+                isItemClaim = itemLogic.IsVariantClaim(jsonLogicItem.Id);
+                return true;
+            }
+            else
+            {
+                isItemClaim = false;
+                return false;
+            }
+        }
+
         private bool IsRequireItemCanBeValidated(
-            JsonFormatLogicItem logic, 
-            Dictionary<string, ItemLogicVariant> items,
+            JsonFormatLogicItem jsonLogicItem, 
+            Dictionary<string, ItemLogic> dicItemLogic,
             bool allowTrick,
             HashSet<string> recursivityCheck)
         {
             // All require item must be valid
-            recursivityCheck.Add(logic.Id);
-            if (logic.RequiredItems.Count == 0)
+            recursivityCheck.Add(jsonLogicItem.Id);
+            if (jsonLogicItem.RequiredItems.Count == 0)
                 return true;
-            foreach (var requireItemId in logic.RequiredItems)
+            foreach (var requireItemId in jsonLogicItem.RequiredItems)
             {
                 var requireItem = FindLogic(requireItemId);
                 if (requireItem == null)
                     throw new System.Exception($"itemId did not exitst: {requireItemId}");
-                if (!IsItemLogicCanBeValidated(requireItem, items, allowTrick, recursivityCheck))
+                if (!IsItemLogicCanBeValidated(requireItem, dicItemLogic, allowTrick, recursivityCheck))
                     return false;
             }
             return true;
         }
 
         private bool IsAnyConditionalItemsCanBeValidated(
-            JsonFormatLogicItem logic, 
-            Dictionary<string, ItemLogicVariant> items,
+            JsonFormatLogicItem jsonLogicItem, 
+            Dictionary<string, ItemLogic> dicItemLogic,
             bool allowTrick,
             HashSet<string> recursivityCheck)
         {
             // Only one conditional item must be valid
-            recursivityCheck.Add(logic.Id);
-            if (logic.ConditionalItems.Count == 0)
+            recursivityCheck.Add(jsonLogicItem.Id);
+            if (jsonLogicItem.ConditionalItems.Count == 0)
                 return true;
-            foreach (var conditionalItemList in logic.ConditionalItems)
+            foreach (var conditionalItemList in jsonLogicItem.ConditionalItems)
             {
                 bool isConditionalItemValid = true;
                 foreach (var conditionalItemId in conditionalItemList)
@@ -121,7 +142,7 @@ namespace MajoraAutoItemTracker.Model
                     var conditionalItem = FindLogic(conditionalItemId);
                     if (conditionalItem == null)
                         throw new System.Exception($"itemId did not exitst: {conditionalItemId}");
-                    isConditionalItemValid = IsItemLogicCanBeValidated(conditionalItem, items, allowTrick, recursivityCheck);
+                    isConditionalItemValid = IsItemLogicCanBeValidated(conditionalItem, dicItemLogic, allowTrick, recursivityCheck);
                     if (!isConditionalItemValid)
                         break;
                 }
@@ -130,5 +151,52 @@ namespace MajoraAutoItemTracker.Model
             }
             return false;
         }
+
+        #region Utilities
+
+        private JsonFormatLogicItem FindLogic(string logicIdStr)
+        {
+            if (!_logicDictionary.TryGetValue(logicIdStr, out JsonFormatLogicItem jsonLogicItem))
+            {
+                Debug.WriteLine("Unable to find logic for check: " + logicIdStr);
+                return null;
+            }
+            return jsonLogicItem;
+        }
+
+        private Dictionary<string, ItemLogic> ToDictionaryItemLogicList(List<ItemLogic> itemLogicList)
+        {
+            Dictionary<string, ItemLogic> dicItemLogic = new Dictionary<string, ItemLogic>();
+            foreach (var itemLogic in itemLogicList)
+                foreach (var itemLogicVariant in itemLogic.variants)
+                    dicItemLogic.Add(itemLogicVariant.idLogic, itemLogic);
+            return dicItemLogic;
+        }
+
+        private void WriteToDebug(string message, bool endOfFunction)
+        {
+            if (endOfFunction)
+            {
+                indentDebug--;
+                WriteToDebug(message);
+            }
+            else
+            {
+                WriteToDebug(message);
+                indentDebug++;
+            }
+                
+        }
+
+        private void WriteToDebug(string message)
+        {
+            string intentStr = "";
+            for (int i = 0; i < indentDebug; i++)
+                intentStr += "\t";
+            if (debugMode)
+                Debug.WriteLine(intentStr + message);
+        }
+
+        #endregion
     }
 }
