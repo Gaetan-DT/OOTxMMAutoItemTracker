@@ -17,7 +17,7 @@ namespace MajoraAutoItemTracker
             if (Environment.Is64BitProcess)
                 throw new Exception("64bit procesds");
 
-            P64EMWrapper.Test();
+            Project64Wrapper.Test();
 
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
