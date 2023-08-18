@@ -26,37 +26,44 @@ namespace MajoraAutoItemTracker.MemoryReader
         protected int GetZeldaCheckFollowingEndian()
         {
             return UseBigEndian ? ZELDAZ_CHECK_BE : ZELDAZ_CHECK_LE;
+        }
 
+        public UIntPtr GetCorrectPtrAddress(uint offset)
+        {
+            var address = m_romAddrStart + offset;
+            if (!UseBigEndian)
+                address -= 3;
+            return new UIntPtr(address);
         }
 
         public int ReadInt8(uint offset)
         {
-            return Memory.ReadInt8(m_Process, new UIntPtr(m_romAddrStart + offset), UseBigEndian);
+            return Memory.ReadInt8(m_Process, GetCorrectPtrAddress(offset), UseBigEndian);
         }
 
         public int ReadInt16(uint offset)
         {
-            return Memory.ReadInt16(m_Process, new UIntPtr(m_romAddrStart + offset), UseBigEndian);
+            return Memory.ReadInt16(m_Process, GetCorrectPtrAddress(offset), UseBigEndian);
         }
 
         public int ReadInt32(uint offset)
         {
-            return Memory.ReadInt32(m_Process, new UIntPtr(m_romAddrStart + offset), UseBigEndian);
+            return Memory.ReadInt32(m_Process, GetCorrectPtrAddress(offset), UseBigEndian);
         }
 
         public uint ReadUInt32(uint offset)
         {
-            return Memory.ReadUInt32(m_Process, new UIntPtr(m_romAddrStart + offset), UseBigEndian);
+            return Memory.ReadUInt32(m_Process, GetCorrectPtrAddress(offset), UseBigEndian);
         }
 
         public byte[] ReadByte(uint offset, int bytesToRead)
         {
-            return Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart + offset), bytesToRead, UseBigEndian);
+            return Memory.ReadBytes(m_Process, GetCorrectPtrAddress(offset), bytesToRead, UseBigEndian);
         }
 
         public String ReadToHexString(uint offset, int size)
         {
-            return ByteArrayToString(Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart + offset), size, UseBigEndian));
+            return ByteArrayToString(Memory.ReadBytes(m_Process, GetCorrectPtrAddress(offset), size, UseBigEndian));
         }
 
         public static string ByteArrayToString(byte[] ba)

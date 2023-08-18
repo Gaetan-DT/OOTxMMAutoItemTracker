@@ -74,12 +74,26 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
             {
                 var result = wrapper.ReadInt32(0x011A648).ToString("X");
                 var result2 = wrapper.ReadInt32(Model.OOTOffsets.CST_INVENTORY_OCARINA).ToString("X");
+                var result3 = wrapper.ReadInt32(0x11A637).ToString("X");
+                var result4 = wrapper.ReadInt32(0x11A63A).ToString("X");
                 // Ocarina oot adress: 0x0011A648 but 0x8011A64B in emulator memory acces
                 // @see https://fr.wiktionary.org/wiki/big-endian & https://fr.wiktionary.org/wiki/little-endian
                 // Item ocarina seems to be store in 3 or 4 bytes ?
                 Debug.WriteLine("result: " + result);
                 Debug.WriteLine("result2: " + result2);
+                Debug.WriteLine("result3: " + result3);
+                Debug.WriteLine("result4: " + result4);
             }
+        }
+
+        public static int SwapEndianness(int value)
+        {
+            var b1 = (value >> 0) & 0xff;
+            var b2 = (value >> 8) & 0xff;
+            var b3 = (value >> 16) & 0xff;
+            var b4 = (value >> 24) & 0xff;
+
+            return b1 << 24 | b2 << 16 | b3 << 8 | b4 << 0;
         }
 
     }
