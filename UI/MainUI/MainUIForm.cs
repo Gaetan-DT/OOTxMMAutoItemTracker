@@ -184,6 +184,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             cbEmulatorList.SelectedIndex = -1;
             cbEmulatorList.Items.Clear();
             cbEmulatorList.Items.AddRange(emulatorList.Select(it => it.GetDisplayName()).ToArray());
+            cbEmulatorList.SelectedIndex = cbEmulatorList.Items.Count > 0 ? 0 : -1;
         }
 
         private void CheckList_DrawItem(object sender, DrawItemEventArgs e)
