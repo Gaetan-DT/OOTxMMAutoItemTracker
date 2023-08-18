@@ -72,7 +72,9 @@
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Reactive, Version=5.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
       <HintPath>packages\System.Reactive.5.0.0\lib\net472\System.Reactive.dll</HintPath>
     </Reference>
@@ -95,6 +97,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MemoryReader\AbstractEmulatorWrapper.cs" />
+    <Compile Include="MemoryReader\EmulatorWrapperProvider.cs" />
+    <Compile Include="MemoryReader\IEmulatorWrapper.cs" />
+    <Compile Include="MemoryReader\Project64\Project64Wrapper.cs" />
+    <Compile Include="MemoryReader\Projetc64EM\Project64EMWrapper.cs" />
     <Compile Include="Model\Enum\EquipmentBombBag.cs" />
     <Compile Include="Model\Enum\EquipmentQuiver.cs" />
     <Compile Include="Model\Enum\EquipmentWallet.cs" />
@@ -109,6 +116,7 @@
     <Compile Include="Logic\LogicResolver.cs" />
     <Compile Include="Model\Logic\LogicFile.cs" />
     <Compile Include="Model\Logic\TimeOfDay.cs" />
+    <Compile Include="Model\OOTOffsets.cs" />
     <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.cs">
       <SubType>Form</SubType>
     </Compile>
