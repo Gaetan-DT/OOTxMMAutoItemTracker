@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 
-namespace MajoraAutoItemTracker
+namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
 {
-    class ModLoader64Wrapper
+    class ModLoader64Wrapper : AbstractEmulatorWrapper
     {
         #region Constants
 
@@ -16,19 +15,18 @@ namespace MajoraAutoItemTracker
         const int OOT_START_ADRESS = 0x4B46BB4;
         const int MM_START_ADRESS = 0x4B46BB4; // 0x4B46BB4
 
-        const bool useBigE = true;
-
         #endregion
 
-        private static Process m_Process;
-        private static ProcessModule m_Module;
-        private static uint m_romAddrStart;
+        protected override bool IsEmulatorUseBigEndian => false;
 
-        public ModLoader64Wrapper()
+        public override bool AttachToProcess()
         {
-            var result = attachToModLoader64x86();
-            if (!result)
-                throw new Exception("Unable to attache to mod loader 64");
+            return attachToModLoader64x86();
+        }
+
+        public override bool ProcessExist()
+        {
+            return Process.GetProcessesByName(MODE_LOADER_PROCESS_NAME).Length > 0;
         }
 
         private bool attachToModLoader64x86()
@@ -43,10 +41,9 @@ namespace MajoraAutoItemTracker
                         if (module.ModuleName.ToLower() == MODE_LOADER_MUPEN_DLL)
                         {
                             m_Process = process;
-                            m_Module = module;
-                            m_romAddrStart = Memory.ReadUInt32(process, new UIntPtr((uint)(module.BaseAddress + MM_START_ADRESS)), useBigE);
+                            m_romAddrStart = Memory.ReadUInt32(process, new UIntPtr((uint)(module.BaseAddress + MM_START_ADRESS)), IsEmulatorUseBigEndian);
                             Debug.WriteLine("Start address: " + Convert.ToString(m_romAddrStart, 16));
-                            var foo = BitConverter.ToString(Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart) + 0x9F6853, 8, useBigE));
+                            var foo = BitConverter.ToString(Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart) + 0x9F6853, 8, IsEmulatorUseBigEndian));
                             // TODO: Add check to confirm we read correct rom
                             return true;
                         }
@@ -58,31 +55,30 @@ namespace MajoraAutoItemTracker
             }
             return false;
         }
-
         
         public int readInt8(int offset)
         {
-            return Memory.ReadInt8(m_Process, new UIntPtr(m_romAddrStart) + offset, useBigE);          
+            return Memory.ReadInt8(m_Process, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);          
         }
 
         public int readInt16(int offset)
         {
-            return Memory.ReadInt16(m_Process, new UIntPtr(m_romAddrStart) + offset, useBigE);
+            return Memory.ReadInt16(m_Process, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
         }
 
         public int readInt32(int offset)
         {
-            return Memory.ReadInt32(m_Process, new UIntPtr(m_romAddrStart) + offset, useBigE);
+            return Memory.ReadInt32(m_Process, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
         }
 
         public uint readUInt32(int offset)
         {
-            return Memory.ReadUInt32(m_Process, new UIntPtr(m_romAddrStart) + offset, useBigE);
+            return Memory.ReadUInt32(m_Process, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
         }
 
         public byte[] readByte(int offset, int bytesToRead)
         {
-            return Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart) + offset, bytesToRead, useBigE);
+            return Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart) + offset, bytesToRead, IsEmulatorUseBigEndian);
         }
 
         public bool ReadNotFF(int offset)

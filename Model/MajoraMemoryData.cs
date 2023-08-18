@@ -1,7 +1,6 @@
-﻿using System;
-using MajoraAutoItemTracker.Model.Enum;
-using System.Diagnostics;
+﻿using MajoraAutoItemTracker.Model.Enum;
 using System.Reactive.Subjects;
+using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 
 namespace MajoraAutoItemTracker
 {

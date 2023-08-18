@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.Model.Enum;
+﻿using MajoraAutoItemTracker.MemoryReader.ModLoader64;
+using MajoraAutoItemTracker.Model.Enum;
 using System;
 using System.Reactive.Subjects;
 using System.Reflection;

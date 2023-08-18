@@ -38,6 +38,11 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             }
         }
 
+        public override bool ProcessExist()
+        {
+            return Process.GetProcessesByName(PROCESS_NAME).Length > 0;
+        }
+
         public Process FindProcessOrThrow()
         {
             var processList = Process.GetProcessesByName(PROCESS_NAME);

@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.Model.CheckLogic;
+﻿using MajoraAutoItemTracker.MemoryReader.ModLoader64;
+using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.UI;
