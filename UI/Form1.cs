@@ -4,24 +4,12 @@ using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.UI;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.Drawing.Text;
 using System.IO;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Xml.Linq;
 using Brush = System.Drawing.Brush;
 using Brushes = System.Drawing.Brushes;
-using Color = System.Drawing.Color;
 
 namespace MajoraAutoItemTracker
 {

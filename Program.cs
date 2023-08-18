@@ -16,7 +16,7 @@ namespace MajoraAutoItemTracker
         static void Main()
         {
             if (Environment.Is64BitProcess)
-                throw new Exception("64bit procesds");
+                throw new Exception("64bit process, need to be build in x86");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
