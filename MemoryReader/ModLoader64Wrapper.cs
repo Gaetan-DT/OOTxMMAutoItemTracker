@@ -16,11 +16,13 @@ namespace MajoraAutoItemTracker
         const int OOT_START_ADRESS = 0x4B46BB4;
         const int MM_START_ADRESS = 0x4B46BB4; // 0x4B46BB4
 
+        const bool useBigE = true;
+
         #endregion
 
         private static Process m_Process;
         private static ProcessModule m_Module;
-        private static int m_romAddrStart;
+        private static uint m_romAddrStart;
 
         public ModLoader64Wrapper()
         {
@@ -42,9 +44,9 @@ namespace MajoraAutoItemTracker
                         {
                             m_Process = process;
                             m_Module = module;
-                            m_romAddrStart = Memory.readInt32(process, module.BaseAddress + MM_START_ADRESS);
+                            m_romAddrStart = Memory.ReadUInt32(process, new UIntPtr((uint)(module.BaseAddress + MM_START_ADRESS)), useBigE);
                             Debug.WriteLine("Start address: " + Convert.ToString(m_romAddrStart, 16));
-                            var foo = BitConverter.ToString(Memory.readBytes(m_Process, new IntPtr(m_romAddrStart) + 0x9F6853, 8));
+                            var foo = BitConverter.ToString(Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart) + 0x9F6853, 8, useBigE));
                             // TODO: Add check to confirm we read correct rom
                             return true;
                         }
@@ -60,27 +62,27 @@ namespace MajoraAutoItemTracker
         
         public int readInt8(int offset)
         {
-            return Memory.readInt8(m_Process, new IntPtr(m_romAddrStart) + offset);          
+            return Memory.ReadInt8(m_Process, new UIntPtr(m_romAddrStart) + offset, useBigE);          
         }
 
         public int readInt16(int offset)
         {
-            return Memory.readInt16(m_Process, new IntPtr(m_romAddrStart) + offset);
+            return Memory.ReadInt16(m_Process, new UIntPtr(m_romAddrStart) + offset, useBigE);
         }
 
         public int readInt32(int offset)
         {
-            return Memory.readInt32(m_Process, new IntPtr(m_romAddrStart) + offset);
+            return Memory.ReadInt32(m_Process, new UIntPtr(m_romAddrStart) + offset, useBigE);
         }
 
         public uint readUInt32(int offset)
         {
-            return Memory.readUInt32(m_Process, new IntPtr(m_romAddrStart) + offset);
+            return Memory.ReadUInt32(m_Process, new UIntPtr(m_romAddrStart) + offset, useBigE);
         }
 
         public byte[] readByte(int offset, int bytesToRead)
         {
-            return Memory.readBytes(m_Process, new IntPtr(m_romAddrStart) + offset, bytesToRead);
+            return Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart) + offset, bytesToRead, useBigE);
         }
 
         public bool ReadNotFF(int offset)

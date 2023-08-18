@@ -1,4 +1,6 @@
-﻿using MajoraAutoItemTracker.UI.CheckLogicEditor;
+﻿using MajoraAutoItemTracker.MemoryReader.Project64;
+using MajoraAutoItemTracker.MemoryReader.Projetc64EM;
+using MajoraAutoItemTracker.UI.CheckLogicEditor;
 using MajoraAutoItemTracker.UI.LogicTester;
 using System;
 using System.Windows.Forms;

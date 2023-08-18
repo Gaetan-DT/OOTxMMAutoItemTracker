@@ -36,6 +36,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             this.textOutput = new System.Windows.Forms.TextBox();
             this.labelOutput = new System.Windows.Forms.Label();
             this.chkAllowTrick = new System.Windows.Forms.CheckBox();
+            this.btnRunUnitTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLoadLogic
@@ -46,7 +47,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             this.btnLoadLogic.TabIndex = 0;
             this.btnLoadLogic.Text = "Load logic";
             this.btnLoadLogic.UseVisualStyleBackColor = true;
-            this.btnLoadLogic.Click += new System.EventHandler(this.btnLoadLogic_Click);
+            this.btnLoadLogic.Click += new System.EventHandler(this.BtnLoadLogic_Click);
             // 
             // btnLoadCheck
             // 
@@ -56,7 +57,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             this.btnLoadCheck.TabIndex = 1;
             this.btnLoadCheck.Text = "Load check";
             this.btnLoadCheck.UseVisualStyleBackColor = true;
-            this.btnLoadCheck.Click += new System.EventHandler(this.btnLoadCheck_Click);
+            this.btnLoadCheck.Click += new System.EventHandler(this.BtnLoadCheck_Click);
             // 
             // BtnLoadItem
             // 
@@ -106,11 +107,22 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             this.chkAllowTrick.Text = "Allow trick";
             this.chkAllowTrick.UseVisualStyleBackColor = true;
             // 
+            // btnRunUnitTest
+            // 
+            this.btnRunUnitTest.Location = new System.Drawing.Point(11, 415);
+            this.btnRunUnitTest.Name = "btnRunUnitTest";
+            this.btnRunUnitTest.Size = new System.Drawing.Size(75, 23);
+            this.btnRunUnitTest.TabIndex = 7;
+            this.btnRunUnitTest.Text = "Run unit test";
+            this.btnRunUnitTest.UseVisualStyleBackColor = true;
+            this.btnRunUnitTest.Click += new System.EventHandler(this.BtnRunUnitTest_Click);
+            // 
             // LogicTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRunUnitTest);
             this.Controls.Add(this.chkAllowTrick);
             this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.textOutput);
@@ -135,5 +147,6 @@ namespace MajoraAutoItemTracker.UI.LogicTester
         private System.Windows.Forms.TextBox textOutput;
         private System.Windows.Forms.Label labelOutput;
         private System.Windows.Forms.CheckBox chkAllowTrick;
+        private System.Windows.Forms.Button btnRunUnitTest;
     }
 }
