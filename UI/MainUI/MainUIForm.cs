@@ -51,7 +51,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             DrawAllItems();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnStartListenerClick(object sender, EventArgs e)
         {
             Log("Attaching to modloader");
             ModLoader64Wrapper modLoader64Wrapper = new ModLoader64Wrapper();
@@ -60,10 +60,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             mMemoryListener = new MemoryListener(modLoader64Wrapper, majoraMemoryDataObserver, null);
             mMemoryListener.Start();
             Log("Thread started");
-            mMemoryListener.OnAnyItemLogicChange.Subscribe(onItemLogicChange);
+            mMemoryListener.OnAnyItemLogicChange.Subscribe(OnItemLogicChange);
         }
 
-        private void onItemLogicChange(Tuple <ItemLogicPopertyName, object> itemLogicProperty)
+        private void OnItemLogicChange(Tuple <ItemLogicPopertyName, object> itemLogicProperty)
         {
             this.Invoke((MethodInvoker)delegate
             {

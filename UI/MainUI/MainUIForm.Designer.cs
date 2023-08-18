@@ -183,7 +183,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.btnStartListener.TabIndex = 1;
             this.btnStartListener.Text = "Start";
             this.btnStartListener.UseVisualStyleBackColor = true;
-            this.btnStartListener.Click += new System.EventHandler(this.button1_Click);
+            this.btnStartListener.Click += new System.EventHandler(this.BtnStartListenerClick);
             // 
             // btnStopListener
             // 
