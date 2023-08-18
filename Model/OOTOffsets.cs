@@ -10,7 +10,7 @@
         public const int ZELDAZ_CHECK_LE = 0x444C455A;
 
         // Src: https://www.gamegenie.com/cheats/gameshark/n64/legend_of_zelda_oot.html
-        // Game shark useage, first part is emulator address (need to remove '80') second part is value to set
+        // Game shark usage, first part is emulator address (need to remove '80') second part is value to set
 
         //8011A64B 0007     Have Fairy Ocarina
         //8011A64B 0008     Have Ocarina of Time
