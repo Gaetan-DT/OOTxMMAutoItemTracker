@@ -30,9 +30,10 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         public UIntPtr GetCorrectPtrAddress(uint offset)
         {
-            var address = m_romAddrStart + offset;
+            uint offsetCorrection = 0;
             if (!UseBigEndian)
-                address -= 3;
+                offsetCorrection = offset % 4;
+            var address = (m_romAddrStart + offset) - offsetCorrection;
             return new UIntPtr(address);
         }
 

@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 
 namespace MajoraAutoItemTracker.MemoryReader.Project64
 {
@@ -84,6 +88,60 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
                 Debug.WriteLine("result3: " + result3);
                 Debug.WriteLine("result4: " + result4);
             }
+            TestEndianConverter();
+            var bitNumberInSeriesOfFour = Model.OOTOffsets.CST_INVENTORY_OCARINA % 4;
+            Debug.WriteLine($"bitNumberInSeriesOfFour= {bitNumberInSeriesOfFour}");
+        }
+
+        public static void TestEndianConverter()
+        {
+            const int sampleAddress = 0x1F2F_3F;
+            WellFormatAndPringHex(sampleAddress, "Base value");
+            int newAdress = GetValueFolloginEndian(sampleAddress, true, 2);
+            WellFormatAndPringHex(newAdress, "New value value");
+        }
+
+        public static int GetValueFolloginEndian(int value, bool useBigEndian, int endianByteSize)
+        {
+            // Convert to byte
+            var arrayByte = BitConverter.GetBytes(value).ToList();
+            // Add padding
+            for (int i = 0; i < arrayByte.Count - sizeof(int); i++)
+            {
+                arrayByte.Insert(0, 0x0);
+            }
+            // Rebuild byte with swapping each endian
+            var buffer = new List<byte>();
+            var result = new List<byte>();
+            for (int i = 1; i <= arrayByte.Count; i++)
+            {
+                var isEndOfSize = (i % endianByteSize) == 0;
+                buffer.Add(arrayByte[i-1]);
+                if (isEndOfSize)
+                {
+                    if (useBigEndian)
+                        buffer.Reverse();
+                    result.AddRange(buffer);
+                    buffer.Clear();
+                }
+            }
+            return BitConverter.ToInt32(result.ToArray(), 0);
+        }
+
+        public static void WellFormatAndPringHex(int hexValue, string message = "")
+        {
+            var hexValueStr = hexValue.ToString("X4");
+            var result = "";
+            for (int i = 1; i <= hexValueStr.Length; i++)
+            {
+                bool addSeparator = (i % 4) == 0;
+                result += hexValueStr[i-1];
+                if (addSeparator)
+                    result += " ";
+            }
+            if (message != "")
+                result = result + " " + message;
+            Debug.WriteLine(result);
         }
 
         public static int SwapEndianness(int value)

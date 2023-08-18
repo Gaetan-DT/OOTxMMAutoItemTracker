@@ -100,7 +100,7 @@
     <Compile Include="MemoryReader\AbstractEmulatorWrapper.cs" />
     <Compile Include="MemoryReader\EmulatorWrapperProvider.cs" />
     <Compile Include="MemoryReader\IEmulatorWrapper.cs" />
-    <Compile Include="MemoryReader\Project64EM\Project64Wrapper.cs" />
+    <Compile Include="MemoryReader\Project64\Project64Wrapper.cs" />
     <Compile Include="Model\Enum\EquipmentBombBag.cs" />
     <Compile Include="Model\Enum\EquipmentQuiver.cs" />
     <Compile Include="Model\Enum\EquipmentWallet.cs" />
