@@ -28,9 +28,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private List<CheckLogicCategory> _checkLogicCategories;
         private List<CheckLogic> _checkLogics;
         private PictureBoxZoomMoveController<CheckLogicZone> _pictureBoxZoomMoveController;
-        private List<ItemLogic> _itemLogics;
-        private Bitmap _itemSpriteMono;
-        private Bitmap _itemSpriteColor;
 
         public MainUIForm()
         {
@@ -41,14 +38,17 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             emulatorController.RefreshEmulatorAndGameList();
             emulatorController.subEmulatorList.Subscribe(UpdateCbEmulatorList);
-            LoadAllItemImage();
-            LoadItemLogic();
+
+            // Init game controller
+            string errorMessage = "";
+            if (!majoraMaskController.Init(GetPictureBoxFromItemLogic, out errorMessage))
+                Log(errorMessage);
+
             LoadCheckCategory();
             _pictureBoxZoomMoveController = new PictureBoxZoomMoveController<CheckLogicZone>(mapMm);
             _pictureBoxZoomMoveController.SetSrcImage(Image.FromFile(Application.StartupPath + @"\Resource\Map\82k78q66tcha1.png"));
             _pictureBoxZoomMoveController.OnGraphicPathClick += RefreshCheckListForCategory;
             DrawSquareCategory();
-            DrawAllItems();
         }
 
         private void BtnStartListenerClick(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             {
                 Log($"update for:{itemLogicProperty.Item1} with value: {itemLogicProperty.Item2}");
                 var strItemLogicPropertyName = ItemLogicPopertyNameMethod.ToString(itemLogicProperty.Item1);
-                foreach (var itemLogic in _itemLogics)
+                foreach (var itemLogic in majoraMaskController.itemLogics)
                 {
                     if (strItemLogicPropertyName == itemLogic.propertyName)
                     {
@@ -79,7 +79,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                             itemLogic.CurrentVariant = 0;
                         }
                         // TODO: gerer les différent cas pour les enum
-                        DrawItem(itemLogic);
+                        majoraMaskController.DrawItem(GetPictureBoxFromItemLogic, itemLogic);
                         // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
                         break;
                     }
@@ -108,44 +108,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             _checkLogics = CheckLogic.FromHeader(_checkLogicCategories);
 
         }
-        
-        private void LoadAllItemImage()
-        {
-            var filepath = Application.StartupPath + @"\Resource\Itemicons\mm_items_mono.png";
-            _itemSpriteMono = new Bitmap (Image.FromFile(filepath)); // FIXME: Missing file
-            filepath = Application.StartupPath + @"\Resource\Itemicons\mm_items.png";
-            _itemSpriteColor = new Bitmap (Image.FromFile(filepath)); // FIXME: Missing file
-        }
 
-        private void LoadItemLogic()
+        private PictureBox GetPictureBoxFromItemLogic(ItemLogic itemLogic)
         {
-            var filepath = Application.StartupPath + @"\Resource\Mappings\" + ItemLogicMethod.CST_DEFAULT_FILE_NAME;
-            _itemLogics = ItemLogicMethod.Deserialize(filepath);
-        }
-
-        private void DrawAllItems()
-        {
-            foreach (var item in _itemLogics)
-            {
-                DrawItem(item);
-            }
-        }
-
-        private void DrawItem(ItemLogic itemLogic)
-        {
-            if (itemLogic.propertyName == null || itemLogic.propertyName == "")
-                return;
-            var pictureboxItem = ((System.Reflection.TypeInfo)GetType()).GetDeclaredField(itemLogic.propertyName).GetValue(this) as PictureBox;
-            var posX = itemLogic.variants[itemLogic.CurrentVariant].positionX * 42;
-            var posY = itemLogic.variants[itemLogic.CurrentVariant].positionY * 42;
-            if( itemLogic.hasItem)
-            {
-                pictureboxItem.Image = _itemSpriteColor.Clone(new Rectangle(posX, posY, 42, 42), _itemSpriteColor.PixelFormat);
-            }
-            else
-            {
-                pictureboxItem.Image = _itemSpriteMono.Clone(new Rectangle(posX, posY, 42, 42), _itemSpriteMono.PixelFormat);
-            }
+            return ((System.Reflection.TypeInfo)GetType()).GetDeclaredField(itemLogic.propertyName).GetValue(this) as PictureBox;
         }
 
 
