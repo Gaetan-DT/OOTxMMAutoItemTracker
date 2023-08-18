@@ -129,10 +129,10 @@
     <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.Designer.cs">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Form1.cs">
+    <Compile Include="UI\MainUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Form1.Designer.cs">
+    <Compile Include="UI\MainUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MemoryReader\Memory.cs" />
@@ -152,7 +152,7 @@
     <EmbeddedResource Include="UI\CheckLogicEditor\CheckLogicEditor.resx">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Form1.resx">
+    <EmbeddedResource Include="UI\MainUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
