@@ -75,6 +75,11 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Management" />
     <Reference Include="System.Reactive, Version=5.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
       <HintPath>packages\System.Reactive.5.0.0\lib\net472\System.Reactive.dll</HintPath>
@@ -129,6 +134,7 @@
     <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.Designer.cs">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\MainUI\EmulatorController.cs" />
     <Compile Include="UI\MainUI\MainUIController.cs" />
     <Compile Include="UI\MainUI\MainUIForm.cs">
       <SubType>Form</SubType>
@@ -149,6 +155,8 @@
     <Compile Include="UI\LogicTester\LogicTester.Designer.cs">
       <DependentUpon>LogicTester.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\MainUI\MajoraMaskController.cs" />
+    <Compile Include="UI\MainUI\OcarinaOfTimeController.cs" />
     <Compile Include="UI\PictureBoxZoomMoveController.cs" />
     <EmbeddedResource Include="UI\CheckLogicEditor\CheckLogicEditor.resx">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>

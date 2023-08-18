@@ -43,6 +43,11 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             return Process.GetProcessesByName(PROCESS_NAME).Length > 0;
         }
 
+        public override string GetDisplayName()
+        {
+            return "Project64-EM";
+        }
+
         public Process FindProcessOrThrow()
         {
             var processList = Process.GetProcessesByName(PROCESS_NAME);

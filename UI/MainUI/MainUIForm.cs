@@ -8,15 +8,20 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using System.Linq;
 using Brush = System.Drawing.Brush;
 using Brushes = System.Drawing.Brushes;
+using MajoraAutoItemTracker.MemoryReader;
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
     public partial class MainUIForm : Form
     {
 
-        private MainUIController mainUIController = new MainUIController();
+        private readonly MainUIController mainUIController = new MainUIController();
+        private readonly EmulatorController emulatorController = new EmulatorController();
+        private readonly MajoraMaskController majoraMaskController = new MajoraMaskController();
+        private readonly OcarinaOfTimeController ocarinaOfTimeController = new OcarinaOfTimeController();
 
         private const int CST_RECT_WIDTH_HEIGHT = 40;
         MemoryListener mMemoryListener = null;
@@ -30,6 +35,20 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public MainUIForm()
         {
             InitializeComponent();
+        }
+
+        private void OnMainUiFormLoad(object sender, EventArgs e)
+        {
+            emulatorController.RefreshEmulatorAndGameList();
+            emulatorController.subEmulatorList.Subscribe(UpdateCbEmulatorList);
+            LoadAllItemImage();
+            LoadItemLogic();
+            LoadCheckCategory();
+            _pictureBoxZoomMoveController = new PictureBoxZoomMoveController<CheckLogicZone>(mapMm);
+            _pictureBoxZoomMoveController.SetSrcImage(Image.FromFile(Application.StartupPath + @"\Resource\Map\82k78q66tcha1.png"));
+            _pictureBoxZoomMoveController.OnGraphicPathClick += RefreshCheckListForCategory;
+            DrawSquareCategory();
+            DrawAllItems();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -194,16 +213,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
             DrawSquareCategory(e);
         } */
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void UpdateCbEmulatorList(List<AbstractEmulatorWrapper> emulatorList)
         {
-            LoadAllItemImage();
-            LoadItemLogic();
-            LoadCheckCategory();
-            _pictureBoxZoomMoveController = new PictureBoxZoomMoveController<CheckLogicZone>(mapMm);
-            _pictureBoxZoomMoveController.SetSrcImage(Image.FromFile(Application.StartupPath + @"\Resource\Map\82k78q66tcha1.png"));
-            _pictureBoxZoomMoveController.OnGraphicPathClick += RefreshCheckListForCategory;
-            DrawSquareCategory();
-            DrawAllItems();
+            cbEmulatorList.SelectedIndex = -1;
+            cbEmulatorList.Items.Clear();
+            cbEmulatorList.Items.AddRange(emulatorList.Select(it => it.GetDisplayName()).ToArray());
         }
 
         private void CheckList_DrawItem(object sender, DrawItemEventArgs e)

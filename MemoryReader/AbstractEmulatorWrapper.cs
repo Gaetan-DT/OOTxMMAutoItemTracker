@@ -16,6 +16,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         public abstract bool AttachToProcess();
         public abstract bool ProcessExist();
+        public abstract string GetDisplayName();
 
         protected int GetZeldaCheckFollowingEndian()
         {

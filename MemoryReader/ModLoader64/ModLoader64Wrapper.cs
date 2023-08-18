@@ -29,6 +29,11 @@ namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
             return Process.GetProcessesByName(MODE_LOADER_PROCESS_NAME).Length > 0;
         }
 
+        public override string GetDisplayName()
+        {
+            return "ModLoader64";
+        }
+
         private bool attachToModLoader64x86()
         {
             try

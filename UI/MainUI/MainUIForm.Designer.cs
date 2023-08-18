@@ -102,6 +102,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.ImgBombBag = new System.Windows.Forms.PictureBox();
             this.CheckList = new System.Windows.Forms.ListBox();
             this.mapMm = new System.Windows.Forms.Panel();
+            this.cbEmulatorList = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgOcarina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgBow)).BeginInit();
@@ -734,11 +735,20 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.mapMm.Size = new System.Drawing.Size(754, 522);
             this.mapMm.TabIndex = 68;
             // 
-            // Form1
+            // cbEmulatorList
+            // 
+            this.cbEmulatorList.FormattingEnabled = true;
+            this.cbEmulatorList.Location = new System.Drawing.Point(693, 664);
+            this.cbEmulatorList.Name = "cbEmulatorList";
+            this.cbEmulatorList.Size = new System.Drawing.Size(121, 21);
+            this.cbEmulatorList.TabIndex = 69;
+            // 
+            // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 877);
+            this.Controls.Add(this.cbEmulatorList);
             this.Controls.Add(this.mapMm);
             this.Controls.Add(this.CheckList);
             this.Controls.Add(this.ImgBombBag);
@@ -806,9 +816,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.Controls.Add(this.btnStopListener);
             this.Controls.Add(this.btnStartListener);
             this.Controls.Add(this.lblDebug);
-            this.Name = "Form1";
+            this.Name = "MainUIForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.OnMainUiFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgOcarina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgBow)).EndInit();
@@ -944,6 +954,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.PictureBox ImgBombBag;
         private System.Windows.Forms.ListBox CheckList;
         private System.Windows.Forms.Panel mapMm;
+        private System.Windows.Forms.ComboBox cbEmulatorList;
     }
 }
 
