@@ -14,7 +14,7 @@ using Brushes = System.Drawing.Brushes;
 
 namespace MajoraAutoItemTracker
 {
-    public partial class Form1 : Form
+    public partial class MainUIForm : Form
     {
         private const int CST_RECT_WIDTH_HEIGHT = 40;
         MemoryListener mMemoryListener = null;
@@ -25,7 +25,7 @@ namespace MajoraAutoItemTracker
         private Bitmap _itemSpriteMono;
         private Bitmap _itemSpriteColor;
 
-        public Form1()
+        public MainUIForm()
         {
             InitializeComponent();
         }

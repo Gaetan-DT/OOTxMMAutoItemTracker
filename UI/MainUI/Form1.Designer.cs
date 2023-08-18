@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace MajoraAutoItemTracker
 {
-    partial class Form1
+    partial class MainUIForm
     {
 
         
