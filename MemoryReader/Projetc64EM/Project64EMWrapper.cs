@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MajoraAutoItemTracker.MemoryReader.Project64
+namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 {
-    internal class Project64Wrapper : AbstractEmulatorWrapper
+    class Project64EMWrapper : AbstractEmulatorWrapper
     {
-        const String PROCESS_NAME = "Project64";
-
-        private const uint ZELDAZ_ADDRESS = 0xA800003C; // Size 4byte ?
+        const String PROCESS_NAME = "Project64-EM";
 
         private const uint CST_POSSIBLE_ROM_ADDR_START_1 = 0xDFE40000;
         private const uint CST_POSSIBLE_ROM_ADDR_START_2 = 0xDFE70000;
@@ -23,11 +25,14 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
 
         public override bool AttachToProcess()
         {
-            try {
+            try
+            {
                 m_Process = FindProcessOrThrow();
                 m_romAddrStart = FindStratAddressOrThrow();
                 return true;
-            } catch (Exception e) { 
+            }
+            catch (Exception e)
+            {
                 Debug.WriteLine(e);
                 return false;
             }
@@ -40,7 +45,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
                 throw new Exception($"Unable to find process: {PROCESS_NAME}");
             return processList[0];
         }
-        
+
         public uint FindStratAddressOrThrow()
         {
             // Src: https://github.com/SM64-TAS-ABC/STROOP/blob/096d0ced5bd460b71022ac1da8c8800e95c4fb32/STROOP/Config/Config.xml#L19
@@ -69,14 +74,15 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
 
         public static void Test()
         {
-            var wrapper = new Project64Wrapper();
+            var wrapper = new Project64EMWrapper();
             if (wrapper.AttachToProcess())
             {
                 var result5 = wrapper.ReadUint8InEdianSize(Model.OOTOffsets.CST_INVENTORY_OCARINA).ToString("X");
                 // Ocarina oot adress: 0x0011A648 but 0x8011A64B in emulator memory acces
                 // @see https://fr.wiktionary.org/wiki/big-endian & https://fr.wiktionary.org/wiki/little-endian
                 Debug.WriteLine("result5: " + result5);
-            } else
+            }
+            else
             {
                 Debug.WriteLine("Unable to find process :(");
             }
