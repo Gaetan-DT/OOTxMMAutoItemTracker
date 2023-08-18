@@ -129,6 +129,7 @@
     <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.Designer.cs">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\MainUI\MainUIController.cs" />
     <Compile Include="UI\MainUI\MainUIForm.cs">
       <SubType>Form</SubType>
     </Compile>

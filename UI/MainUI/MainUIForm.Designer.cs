@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-namespace MajoraAutoItemTracker
+namespace MajoraAutoItemTracker.UI.MainUI
 {
     partial class MainUIForm
     {

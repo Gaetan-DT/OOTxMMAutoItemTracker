@@ -2,7 +2,6 @@
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Item;
-using MajoraAutoItemTracker.UI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,10 +11,13 @@ using System.Windows.Forms;
 using Brush = System.Drawing.Brush;
 using Brushes = System.Drawing.Brushes;
 
-namespace MajoraAutoItemTracker
+namespace MajoraAutoItemTracker.UI.MainUI
 {
     public partial class MainUIForm : Form
     {
+
+        private MainUIController mainUIController = new MainUIController();
+
         private const int CST_RECT_WIDTH_HEIGHT = 40;
         MemoryListener mMemoryListener = null;
         private List<CheckLogicCategory> _checkLogicCategories;
