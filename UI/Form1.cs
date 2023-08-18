@@ -90,9 +90,9 @@ namespace MajoraAutoItemTracker
         private void LoadAllItemImage()
         {
             var filepath = Application.StartupPath + @"\Resource\Itemicons\mm_items_mono.png";
-            _itemSpriteMono = new Bitmap (Image.FromFile(filepath));
+            //_itemSpriteMono = new Bitmap (Image.FromFile(filepath)); // FIXME: Missing file
             filepath = Application.StartupPath + @"\Resource\Itemicons\mm_items.png";
-            _itemSpriteColor = new Bitmap (Image.FromFile(filepath));
+            //_itemSpriteColor = new Bitmap (Image.FromFile(filepath)); // FIXME: Missing file
         }
 
         private void LoadItemLogic()

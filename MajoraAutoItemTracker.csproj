@@ -139,7 +139,7 @@
     <Compile Include="MemoryReader\MemoryListener.cs" />
     <Compile Include="Model\MajoraMemoryData.cs" />
     <Compile Include="Model\MMOffsets.cs" />
-    <Compile Include="MemoryReader\ModLoader64Wrapper.cs" />
+    <Compile Include="MemoryReader\ModLoader64\ModLoader64Wrapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\LogicTester\LogicTester.cs">
