@@ -25,8 +25,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private const int CST_RECT_WIDTH_HEIGHT = 40;
         MemoryListener mMemoryListener = null;
-        private List<CheckLogicCategory> _checkLogicCategories;
-        private List<CheckLogic> _checkLogics;
         private PictureBoxZoomMoveController<CheckLogicZone> _pictureBoxZoomMoveController;
 
         public MainUIForm()
@@ -39,16 +37,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
             emulatorController.RefreshEmulatorAndGameList();
             emulatorController.subEmulatorList.Subscribe(UpdateCbEmulatorList);
 
-            // Init game controller
-            string errorMessage = "";
-            if (!majoraMaskController.Init(GetPictureBoxFromItemLogic, out errorMessage))
-                Log(errorMessage);
-
-            LoadCheckCategory();
+            // Init PictureBox
             _pictureBoxZoomMoveController = new PictureBoxZoomMoveController<CheckLogicZone>(mapMm);
             _pictureBoxZoomMoveController.SetSrcImage(Image.FromFile(Application.StartupPath + @"\Resource\Map\82k78q66tcha1.png"));
-            _pictureBoxZoomMoveController.OnGraphicPathClick += RefreshCheckListForCategory;
-            DrawSquareCategory();
+            _pictureBoxZoomMoveController.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
+
+            // Init game controller
+            if (majoraMaskController.Init(GetPictureBoxFromItemLogic, out string errorMessage))
+                majoraMaskController.DrawSquareCategory(_pictureBoxZoomMoveController, CST_RECT_WIDTH_HEIGHT);
+            else
+                Log(errorMessage);
         }
 
         private void BtnStartListenerClick(object sender, EventArgs e)
@@ -99,33 +97,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             mMemoryListener = null;
             Log("Thread Stoped");
         }
-      
-        private void LoadCheckCategory()
-        {
-           var filepath = Application.StartupPath + @"\Resource\CheckLogic\" + CheckLogicCategory.CST_DEFAULT_FILE_NAME;
-            var JsonStr = File.ReadAllText(filepath);
-            _checkLogicCategories = CheckLogicCategory.fromJson(JsonStr);
-            _checkLogics = CheckLogic.FromHeader(_checkLogicCategories);
-
-        }
 
         private PictureBox GetPictureBoxFromItemLogic(ItemLogic itemLogic)
         {
             return ((System.Reflection.TypeInfo)GetType()).GetDeclaredField(itemLogic.propertyName).GetValue(this) as PictureBox;
-        }
-
-
-        private void DrawSquareCategory()
-        {
-            foreach (var checkLogicCategory in _checkLogicCategories)
-            {
-                _pictureBoxZoomMoveController.AddRect(
-                    checkLogicCategory.SquarePositionX - CST_RECT_WIDTH_HEIGHT/2,
-                    checkLogicCategory.SquarePositionY - CST_RECT_WIDTH_HEIGHT/2,
-                    CST_RECT_WIDTH_HEIGHT, CST_RECT_WIDTH_HEIGHT, 
-                    CheckLogicZoneMethod.FromString(checkLogicCategory.Name)
-                );
-            }
         }
 
 
@@ -156,19 +131,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }*/
 
-        private void RefreshCheckListForCategory(CheckLogicZone checkLogicZone)
-        {
-            CheckList.Items.Clear();
-
-            foreach ( var checkLogic in _checkLogics) // recuperer tout les checks dans la catégorie
-            {
-                if (checkLogic.Zone == checkLogicZone)
-                {
-                    CheckList.Items.Add(checkLogic);
-                }
-            }
-        }
-
         private void ImgBeans_Click(object sender, EventArgs e)
         {
 
@@ -189,7 +151,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void CheckList_DrawItem(object sender, DrawItemEventArgs e)
         {
-            var checkLogic = (CheckLogic)CheckList.Items[e.Index];
+            var checkLogic = (CheckLogic)lbCheckListMM.Items[e.Index];
 
             Brush brush = Brushes.Red;
 
@@ -208,9 +170,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void CheckList_MouseClick(object sender, MouseEventArgs e)
         {
-            var checkList = (CheckLogic)CheckList.SelectedItem;
+            var checkList = (CheckLogic)lbCheckListMM.SelectedItem;
             checkList.IsClaim = !checkList.IsClaim;
-            CheckList.Invalidate();
+            lbCheckListMM.Invalidate();
         }
     }
 }

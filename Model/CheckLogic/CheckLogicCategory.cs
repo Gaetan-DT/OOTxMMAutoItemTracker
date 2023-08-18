@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.IO;
 
 namespace MajoraAutoItemTracker.Model.CheckLogic
 {
@@ -15,6 +16,11 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
         public static List<CheckLogicCategory> fromJson(string jsonStr)
         {
             return JsonConvert.DeserializeObject<List<CheckLogicCategory>>(jsonStr);
+        }
+
+        public static List<CheckLogicCategory> LoadFromFile(string filepath)
+        {
+            return fromJson(File.ReadAllText(filepath));
         }
 
     }

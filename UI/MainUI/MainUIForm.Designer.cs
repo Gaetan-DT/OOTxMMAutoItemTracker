@@ -100,7 +100,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.ImgMagic = new System.Windows.Forms.PictureBox();
             this.ImgQuiver = new System.Windows.Forms.PictureBox();
             this.ImgBombBag = new System.Windows.Forms.PictureBox();
-            this.CheckList = new System.Windows.Forms.ListBox();
+            this.lbCheckListMM = new System.Windows.Forms.ListBox();
             this.mapMm = new System.Windows.Forms.Panel();
             this.cbEmulatorList = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -717,16 +717,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.ImgBombBag.TabIndex = 65;
             this.ImgBombBag.TabStop = false;
             // 
-            // CheckList
+            // lbCheckListMM
             // 
-            this.CheckList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CheckList.FormattingEnabled = true;
-            this.CheckList.Location = new System.Drawing.Point(12, 578);
-            this.CheckList.Name = "CheckList";
-            this.CheckList.Size = new System.Drawing.Size(320, 264);
-            this.CheckList.TabIndex = 67;
-            this.CheckList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CheckList_MouseClick);
-            this.CheckList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.CheckList_DrawItem);
+            this.lbCheckListMM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.lbCheckListMM.FormattingEnabled = true;
+            this.lbCheckListMM.Location = new System.Drawing.Point(12, 578);
+            this.lbCheckListMM.Name = "lbCheckListMM";
+            this.lbCheckListMM.Size = new System.Drawing.Size(320, 264);
+            this.lbCheckListMM.TabIndex = 67;
+            this.lbCheckListMM.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CheckList_MouseClick);
+            this.lbCheckListMM.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.CheckList_DrawItem);
             // 
             // mapMm
             // 
@@ -750,7 +750,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.ClientSize = new System.Drawing.Size(1223, 877);
             this.Controls.Add(this.cbEmulatorList);
             this.Controls.Add(this.mapMm);
-            this.Controls.Add(this.CheckList);
+            this.Controls.Add(this.lbCheckListMM);
             this.Controls.Add(this.ImgBombBag);
             this.Controls.Add(this.ImgQuiver);
             this.Controls.Add(this.ImgMagic);
@@ -952,7 +952,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.PictureBox ImgMagic;
         private System.Windows.Forms.PictureBox ImgQuiver;
         private System.Windows.Forms.PictureBox ImgBombBag;
-        private System.Windows.Forms.ListBox CheckList;
+        private System.Windows.Forms.ListBox lbCheckListMM;
         private System.Windows.Forms.Panel mapMm;
         private System.Windows.Forms.ComboBox cbEmulatorList;
     }
