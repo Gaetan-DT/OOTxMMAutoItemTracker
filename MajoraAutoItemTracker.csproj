@@ -110,7 +110,6 @@
     <Compile Include="Model\Enum\ItemLogicPopertyName.cs" />
     <Compile Include="Model\Enum\LinkTransformation.cs" />
     <Compile Include="Model\Enum\MagicMeter.cs" />
-    <Compile Include="Model\Enum\MemoryFormatType.cs" />
     <Compile Include="Model\Item\ItemLogic.cs" />
     <Compile Include="Model\Logic\JsonFormatLogicItem.cs" />
     <Compile Include="Logic\LogicResolver.cs" />

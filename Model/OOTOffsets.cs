@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker.Model
 {
-    class OOTOffsets
+    class OOTOffsets // Address set in Little endian
     {
         // Src: https://www.gamegenie.com/cheats/gameshark/n64/legend_of_zelda_oot.html
         // Game shark useage, first part is emulator address (need to remove '80') second part is value to set

@@ -23,7 +23,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
             CST_POSSIBLE_ROM_ADDR_START_3
         };
 
-        protected override bool UseBigEndian => false;
+        protected override bool IsEmulatorUseBigEndian => true;
 
         public override bool AttachToProcess()
         {
@@ -44,6 +44,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
                 throw new Exception($"Unable to find process: {PROCESS_NAME}");
             return processList[0];
         }
+        
         public uint FindStratAddressOrThrow()
         {
             // Src: https://github.com/SM64-TAS-ABC/STROOP/blob/096d0ced5bd460b71022ac1da8c8800e95c4fb32/STROOP/Config/Config.xml#L19
@@ -58,7 +59,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
                 int ootCheck = 0;
                 try
                 {
-                    ootCheck = Memory.ReadInt32(m_Process, new UIntPtr(romAddrStart + 0x11A5EC), UseBigEndian);
+                    ootCheck = Memory.ReadInt32(m_Process, new UIntPtr(romAddrStart + 0x11A5EC), IsEmulatorUseBigEndian);
                 }
                 catch (Exception e)
                 {
@@ -76,83 +77,14 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
             var wrapper = new Project64Wrapper();
             if (wrapper.AttachToProcess())
             {
-                var result = wrapper.ReadInt32(0x011A648).ToString("X");
-                var result2 = wrapper.ReadInt32(Model.OOTOffsets.CST_INVENTORY_OCARINA).ToString("X");
-                var result3 = wrapper.ReadInt32(0x11A637).ToString("X");
-                var result4 = wrapper.ReadInt32(0x11A63A).ToString("X");
+                var result5 = wrapper.ReadUint8InEdianSize(Model.OOTOffsets.CST_INVENTORY_OCARINA).ToString("X");
                 // Ocarina oot adress: 0x0011A648 but 0x8011A64B in emulator memory acces
                 // @see https://fr.wiktionary.org/wiki/big-endian & https://fr.wiktionary.org/wiki/little-endian
-                // Item ocarina seems to be store in 3 or 4 bytes ?
-                Debug.WriteLine("result: " + result);
-                Debug.WriteLine("result2: " + result2);
-                Debug.WriteLine("result3: " + result3);
-                Debug.WriteLine("result4: " + result4);
-            }
-            TestEndianConverter();
-            var bitNumberInSeriesOfFour = Model.OOTOffsets.CST_INVENTORY_OCARINA % 4;
-            Debug.WriteLine($"bitNumberInSeriesOfFour= {bitNumberInSeriesOfFour}");
-        }
-
-        public static void TestEndianConverter()
-        {
-            const int sampleAddress = 0x1F2F_3F;
-            WellFormatAndPringHex(sampleAddress, "Base value");
-            int newAdress = GetValueFolloginEndian(sampleAddress, true, 2);
-            WellFormatAndPringHex(newAdress, "New value value");
-        }
-
-        public static int GetValueFolloginEndian(int value, bool useBigEndian, int endianByteSize)
-        {
-            // Convert to byte
-            var arrayByte = BitConverter.GetBytes(value).ToList();
-            // Add padding
-            for (int i = 0; i < arrayByte.Count - sizeof(int); i++)
+                Debug.WriteLine("result5: " + result5);
+            } else
             {
-                arrayByte.Insert(0, 0x0);
+                Debug.WriteLine("Unable to find process :(");
             }
-            // Rebuild byte with swapping each endian
-            var buffer = new List<byte>();
-            var result = new List<byte>();
-            for (int i = 1; i <= arrayByte.Count; i++)
-            {
-                var isEndOfSize = (i % endianByteSize) == 0;
-                buffer.Add(arrayByte[i-1]);
-                if (isEndOfSize)
-                {
-                    if (useBigEndian)
-                        buffer.Reverse();
-                    result.AddRange(buffer);
-                    buffer.Clear();
-                }
-            }
-            return BitConverter.ToInt32(result.ToArray(), 0);
         }
-
-        public static void WellFormatAndPringHex(int hexValue, string message = "")
-        {
-            var hexValueStr = hexValue.ToString("X4");
-            var result = "";
-            for (int i = 1; i <= hexValueStr.Length; i++)
-            {
-                bool addSeparator = (i % 4) == 0;
-                result += hexValueStr[i-1];
-                if (addSeparator)
-                    result += " ";
-            }
-            if (message != "")
-                result = result + " " + message;
-            Debug.WriteLine(result);
-        }
-
-        public static int SwapEndianness(int value)
-        {
-            var b1 = (value >> 0) & 0xff;
-            var b2 = (value >> 8) & 0xff;
-            var b3 = (value >> 16) & 0xff;
-            var b4 = (value >> 24) & 0xff;
-
-            return b1 << 24 | b2 << 16 | b3 << 8 | b4 << 0;
-        }
-
     }
 }
