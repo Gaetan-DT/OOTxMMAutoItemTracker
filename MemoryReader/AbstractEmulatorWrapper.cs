@@ -1,21 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MajoraAutoItemTracker.Model;
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
     abstract class AbstractEmulatorWrapper : IEmulatorWrapper
     {
-        // To find it we need to check 32byte that match:   'ZELD' ->  0x5A454C44 (1514490948)
-        // If done the next 32 byte should match :          'AZ  ' ->  0x415A0000 (1096417280)
-        protected const int ZELDAZ_CHECK_BE = 0x5A454C44;   // = 
-        protected const int ZELDAZ_CHECK_2_BE = 0x415A0000; // = 
-
-        protected const int ZELDAZ_CHECK_LE = 0x444C455A;
-
         protected const int EMULATOR_ENDIAN_SIZE = 4;
 
         protected abstract bool IsEmulatorUseBigEndian { get; }
@@ -27,7 +18,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         protected int GetZeldaCheckFollowingEndian()
         {
-            return IsEmulatorUseBigEndian ? ZELDAZ_CHECK_BE : ZELDAZ_CHECK_LE;
+            return IsEmulatorUseBigEndian ? OOTOffsets.ZELDAZ_CHECK_BE : OOTOffsets.ZELDAZ_CHECK_LE;
         }
 
         public UIntPtr GetPtrOffsetWithRomStart(uint offset)
