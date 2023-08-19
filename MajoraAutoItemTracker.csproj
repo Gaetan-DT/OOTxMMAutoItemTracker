@@ -112,17 +112,23 @@
     <Compile Include="MemoryReader\MemoryListener\AbstractMemoryListener.cs" />
     <Compile Include="MemoryReader\MemoryListener\MemoryListenerProvider.cs" />
     <Compile Include="MemoryReader\MemoryListener\OcarinaOfTimeMemoryListener.cs" />
+    <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogic.cs" />
+    <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogicCategory.cs" />
     <Compile Include="Model\Enum\EquipmentBombBag.cs" />
     <Compile Include="Model\Enum\EquipmentQuiver.cs" />
     <Compile Include="Model\Enum\EquipmentWallet.cs" />
-    <Compile Include="Model\CheckLogic\CheckLogic.cs" />
-    <Compile Include="Model\CheckLogic\CheckLogicCategory.cs" />
-    <Compile Include="Model\Enum\MajoraMaskCheckLogicZone.cs" />
-    <Compile Include="Model\Enum\ItemLogicPopertyName.cs" />
+    <Compile Include="Model\CheckLogic\MajoraMaskCheckLogic.cs" />
+    <Compile Include="Model\CheckLogic\MajoraMaskCheckLogicCategory.cs" />
+    <Compile Include="Model\Enum\MM\MajoraMaskCheckLogicZone.cs" />
+    <Compile Include="Model\Enum\MM\MajoraMaskItemLogicPopertyName.cs" />
     <Compile Include="Model\Enum\LinkTransformation.cs" />
     <Compile Include="Model\Enum\MagicMeter.cs" />
+    <Compile Include="Model\Enum\OOT\OcarinaOfTimeCheckLogicZone.cs" />
+    <Compile Include="Model\Enum\OOT\OcarinaOfTimeItemLogicPopertyName.cs" />
     <Compile Include="Model\Enum\RomType.cs" />
     <Compile Include="Model\Item\ItemLogic.cs" />
+    <Compile Include="Model\Item\ItemLogicMethod.cs" />
+    <Compile Include="Model\Item\ItemLogicVariant.cs" />
     <Compile Include="Model\Logic\JsonFormatLogicItem.cs" />
     <Compile Include="Logic\LogicResolver.cs" />
     <Compile Include="Model\Logic\LogicFile.cs" />
@@ -140,7 +146,7 @@
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MainUI\EmulatorController.cs" />
-    <Compile Include="UI\MainUI\AbstractRoomController.cs" />
+    <Compile Include="UI\MainUI\AbstractUIRoomController.cs" />
     <Compile Include="UI\MainUI\MainUIController.cs" />
     <Compile Include="UI\MainUI\MainUIForm.cs">
       <SubType>Form</SubType>
@@ -190,7 +196,9 @@
     </Compile>
     <None Include="README.MD" />
     <None Include="Resource\CheckLogic\CheckLogicCategory.json" />
+    <None Include="Resource\CheckLogic\oot_CheckLogicCategory.json.json" />
     <None Include="Resource\Logics\REQ_CASUAL_12.json" />
+    <None Include="Resource\Mappings\oot_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

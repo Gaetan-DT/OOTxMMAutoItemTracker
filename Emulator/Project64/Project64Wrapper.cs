@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace MajoraAutoItemTracker.MemoryReader.Project64
 {
-    internal class Project64Wrapper : AbstractEmulatorWrapper
+    internal class Project64Wrapper : AbstractRomController
     {
         const String PROCESS_NAME = "Project64";
 

@@ -12,7 +12,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
     {
 
         private LogicFile _logicFile;
-        private List<CheckLogic> checkLogics = new List<CheckLogic>();
+        private List<OcarinaOfTimeCheckLogic> checkLogics = new List<OcarinaOfTimeCheckLogic>();
 
         public CheckLogicEditor()
         {
@@ -62,7 +62,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
                 if (logic == null || check != null)
                     return;
 
-                checkLogics.Add(new CheckLogic()
+                checkLogics.Add(new OcarinaOfTimeCheckLogic()
                 {
                     Id = itemId,
                     IsAvailable = false,
@@ -77,7 +77,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             if (sender == lbLogic)
                 addRemoveToCheck((lbLogic.Items[lbLogic.SelectedIndex] as JsonFormatLogicItem).Id);
             else if (sender == lbCheck)
-                addRemoveToCheck((lbCheck.Items[lbCheck.SelectedIndex] as CheckLogic).Id, true);
+                addRemoveToCheck((lbCheck.Items[lbCheck.SelectedIndex] as OcarinaOfTimeCheckLogic).Id, true);
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -109,7 +109,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             {
                 try
                 {
-                    checkLogics = CheckLogic.Deserialize(openFileDialog.FileName);
+                    checkLogics = OcarinaOfTimeCheckLogic.Deserialize(openFileDialog.FileName);
                     UpdateCheckListBox();
                 }
                 catch (Exception exception)
@@ -128,13 +128,13 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
                 CheckPathExists = true,
                 DefaultExt = "json",
                 Filter = "Json files (*.json)|*.json|All files (*.*)|*.*",
-                FileName = CheckLogic.CST_DEFAULT_FILE_NAME
+                FileName = OcarinaOfTimeCheckLogic.CST_DEFAULT_FILE_NAME
             };
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
                 {
-                    sw.WriteLine(CheckLogic.ToJson(checkLogics));
+                    sw.WriteLine(OcarinaOfTimeCheckLogic.ToJson(checkLogics));
                 }
             }
         }
@@ -163,7 +163,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             {
                 try
                 {
-                    checkLogics = CheckLogic.FromHeader(CheckLogicCategory.fromJson(File.ReadAllText(openFileDialog.FileName)));
+                    checkLogics = OcarinaOfTimeCheckLogic.FromHeader(OcarinaOfTimeCheckLogicCategory.fromJson(File.ReadAllText(openFileDialog.FileName)));
                     UpdateCheckListBox();
                 }
                 catch (Exception exception)
@@ -177,7 +177,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
         {
             if (lbCheck.SelectedIndex < 0)
                 return;
-            var selectedItem = (CheckLogic) lbCheck.Items[lbCheck.SelectedIndex];
+            var selectedItem = (OcarinaOfTimeCheckLogic) lbCheck.Items[lbCheck.SelectedIndex];
             textCheckId.Text = selectedItem.Id.ToString();
             textCheckIsAvailable.Text = selectedItem.IsAvailable.ToString();
             textCheckIsClaim.Text = selectedItem.IsClaim.ToString();

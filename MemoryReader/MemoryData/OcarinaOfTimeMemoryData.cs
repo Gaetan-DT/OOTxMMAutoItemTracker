@@ -13,7 +13,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 
         #endregion
 
-        public override void ReadDataFromEmulator(AbstractEmulatorWrapper emulatorWrapper)
+        public override void ReadDataFromEmulator(AbstractRomController emulatorWrapper)
         {
             HasOcarina = emulatorWrapper.CheckAnykHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_OCARINA, new byte[] { 
                 Model.OOTOffsets.CST_INVENTORY_VALUE_OCARINA_VALUE_FAIRY_OCARINA,
@@ -30,9 +30,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 
         #endregion
 
-        public override void BindAllEvent(ReplaySubject<Tuple<ItemLogicPopertyName, object>> replaySubject)
+        public override void BindAllEvent(ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> replaySubject)
         {
-            HasOcarina.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName.ImgOcarina, value)));
+            HasOcarina.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgOcarina, value)));
         }
     }
 }

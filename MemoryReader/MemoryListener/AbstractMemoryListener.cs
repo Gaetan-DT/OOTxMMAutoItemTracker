@@ -10,12 +10,12 @@ namespace MajoraAutoItemTracker.MemoryReader
         private Thread _thread;
         private bool _isThreadActive;
 
-        private AbstractEmulatorWrapper emulatorWrapper;
+        private AbstractRomController emulatorWrapper;
         private AbstractMemoryDataObserver memoryDataObserver;
 
         private AbstractMemoryData previousMemoryData;
 
-        public AbstractMemoryListener(AbstractEmulatorWrapper emulatorWrapper, AbstractMemoryDataObserver memoryDataObserver)
+        public AbstractMemoryListener(AbstractRomController emulatorWrapper, AbstractMemoryDataObserver memoryDataObserver)
         {
             this.emulatorWrapper = emulatorWrapper;
             this.memoryDataObserver = memoryDataObserver;

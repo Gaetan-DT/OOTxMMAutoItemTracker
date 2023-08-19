@@ -4,7 +4,7 @@ using System.IO;
 
 namespace MajoraAutoItemTracker.Model.CheckLogic
 {
-    public class CheckLogicCategory
+    public class MajoraMaskCheckLogicCategory
     {
         public const string CST_DEFAULT_FILE_NAME = "CheckLogicCategory.json";
 
@@ -13,12 +13,12 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
         public int SquarePositionY { get; set; }
         public List<string> CheckLogicId { get; set; }
 
-        public static List<CheckLogicCategory> fromJson(string jsonStr)
+        public static List<MajoraMaskCheckLogicCategory> fromJson(string jsonStr)
         {
-            return JsonConvert.DeserializeObject<List<CheckLogicCategory>>(jsonStr);
+            return JsonConvert.DeserializeObject<List<MajoraMaskCheckLogicCategory>>(jsonStr);
         }
 
-        public static List<CheckLogicCategory> LoadFromFile(string filepath)
+        public static List<MajoraMaskCheckLogicCategory> LoadFromFile(string filepath)
         {
             return fromJson(File.ReadAllText(filepath));
         }

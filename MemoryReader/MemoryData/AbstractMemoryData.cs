@@ -7,12 +7,12 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 {
     abstract class AbstractMemoryData
     {
-        public abstract void ReadDataFromEmulator(AbstractEmulatorWrapper emulatorWrapper);
+        public abstract void ReadDataFromEmulator(AbstractRomController emulatorWrapper);
     }
 
     abstract class AbstractMemoryDataObserver
     {
-        public abstract void BindAllEvent(ReplaySubject<Tuple<ItemLogicPopertyName, object>> replaySubject);
+        public abstract void BindAllEvent(ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> replaySubject);
 
         public void CompareAndUpdateAllField(AbstractMemoryData previousMemoryData, AbstractMemoryData newMemoryData)
         {

@@ -4,7 +4,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 {
     class OcarinaOfTimeMemoryListener : AbstractMemoryListener
     {
-        public OcarinaOfTimeMemoryListener(AbstractEmulatorWrapper emulatorWrapper, OcarinaOfTimeMemoryDataObserver memoryDataObserver) 
+        public OcarinaOfTimeMemoryListener(AbstractRomController emulatorWrapper, OcarinaOfTimeMemoryDataObserver memoryDataObserver) 
             : base(emulatorWrapper, memoryDataObserver)
         {
 

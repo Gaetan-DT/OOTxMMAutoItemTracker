@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
 {
-    class ModLoader64Wrapper : AbstractEmulatorWrapper
+    class ModLoader64Wrapper : AbstractRomController
     {
         #region Constants
 

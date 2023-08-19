@@ -3,6 +3,7 @@ using MajoraAutoItemTracker.MemoryReader.MemoryData;
 using MajoraAutoItemTracker.MemoryReader.MemoryListener;
 using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -22,9 +23,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private AbstractMemoryListener memoryListener = null;
         public ReplaySubject<bool> isMemoryListenerStartedSubject = new ReplaySubject<bool>();
-        public ReplaySubject<Tuple<ItemLogicPopertyName, object>> OnAnyItemLogicChange = new ReplaySubject<Tuple<ItemLogicPopertyName, object>>();
+        public ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> OnAnyItemLogicChange = new ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>>();
 
-        public PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxMapOOT;
+        public PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBoxMapOOT;
         public PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxMapMM;
 
         public MainUIController()
@@ -35,7 +36,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public void InitPictureBox(Panel panelOOT, Panel panelMM)
         {
             // Init OOT
-            pictureBoxMapOOT = new PictureBoxZoomMoveController<MajoraMaskCheckLogicZone>(panelOOT);
+            pictureBoxMapOOT = new PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone>(panelOOT);
             pictureBoxMapOOT.SetSrcImage(Image.FromFile(Application.StartupPath + CST_OOT_MAP_PATH));
             // Init MM
             pictureBoxMapMM = new PictureBoxZoomMoveController<MajoraMaskCheckLogicZone>(panelMM);
@@ -44,9 +45,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         }
 
         public bool StartMemoryListener(
-            AbstractEmulatorWrapper emulatorWrapper,
+            AbstractRomController emulatorWrapper,
             RomType romType,
-            Action<Tuple<ItemLogicPopertyName, object>> onItemLogicChange, 
+            Action<Tuple<MajoraMaskItemLogicPopertyName, object>> onItemLogicChange, 
             out string error)
         {
             error = "";

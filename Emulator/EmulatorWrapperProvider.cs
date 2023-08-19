@@ -5,9 +5,9 @@ namespace MajoraAutoItemTracker.MemoryReader
 {
     class EmulatorWrapperProvider
     {
-        private static AbstractEmulatorWrapper[] GetArrayEmulator()
+        private static AbstractRomController[] GetArrayEmulator()
         {
-            return new AbstractEmulatorWrapper[]
+            return new AbstractRomController[]
             {
                 new Project64.Project64Wrapper(),
                 new Projetc64EM.Project64EMWrapper(),
@@ -15,7 +15,7 @@ namespace MajoraAutoItemTracker.MemoryReader
             };
         }
 
-        public static AbstractEmulatorWrapper ProvideEmulatorWrapper()
+        public static AbstractRomController ProvideEmulatorWrapper()
         {
             foreach (var emulatorWrapper in GetArrayEmulator())
                 if (emulatorWrapper.ProcessExist())
@@ -23,9 +23,9 @@ namespace MajoraAutoItemTracker.MemoryReader
             throw new Exception("No emulator found");
         }
 
-        public static List<AbstractEmulatorWrapper> ProvideEmulatorWrapperList()
+        public static List<AbstractRomController> ProvideEmulatorWrapperList()
         {
-            List<AbstractEmulatorWrapper> result = new List<AbstractEmulatorWrapper>();
+            List<AbstractRomController> result = new List<AbstractRomController>();
             foreach ( var emulatorWrapper in GetArrayEmulator() )
                 if (emulatorWrapper.ProcessExist())
                     result.Add(emulatorWrapper);

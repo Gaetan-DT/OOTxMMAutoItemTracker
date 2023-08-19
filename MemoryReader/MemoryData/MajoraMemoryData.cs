@@ -181,7 +181,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             CurrentLinkTransformation = LinkTransformationMethods.ReadFromMemory(modLoader.readInt8(MMOffsets.CURRENT_TRANSFORMATION));
         }
 
-        public override void ReadDataFromEmulator(AbstractEmulatorWrapper emulatorWrapper)
+        public override void ReadDataFromEmulator(AbstractRomController emulatorWrapper)
         {
             throw new System.NotImplementedException();
         }

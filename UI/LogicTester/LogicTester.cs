@@ -13,7 +13,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
     public partial class LogicTester : Form
     {
         private LogicFile _logicFile;
-        private List<CheckLogic> _checkLogics;
+        private List<OcarinaOfTimeCheckLogic> _checkLogics;
         private List<ItemLogic> _itemLogics;
 
         public LogicTester()
@@ -43,7 +43,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
         {
             try
             {
-                _checkLogics = CheckLogic.Deserialize(GetPathOfJson());
+                _checkLogics = OcarinaOfTimeCheckLogic.Deserialize(GetPathOfJson());
                 Log($"check file loaded: ({_checkLogics.Count} check)");
             }
             catch (Exception exception)
@@ -165,7 +165,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             List<ItemLogic> itemLogicList = new List<ItemLogic>() { itemLogicZoraMask };
 
             // Sample check            
-            List<CheckLogic> checkLogicList = new List<CheckLogic>() { checkUnderWaterChest };
+            List<OcarinaOfTimeCheckLogic> checkLogicList = new List<OcarinaOfTimeCheckLogic>() { checkUnderWaterChest };
 
             // Try to resolve
             LogicResolver logicResolver = new LogicResolver(logicFile) { debugMode = true };
@@ -215,7 +215,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             };
 
             // Sample check            
-            List<CheckLogic> checkLogicList = new List<CheckLogic>()
+            List<OcarinaOfTimeCheckLogic> checkLogicList = new List<OcarinaOfTimeCheckLogic>()
             {
                 checkUnderWaterChest
             };
@@ -294,7 +294,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             };
 
             // Sample check            
-            List<CheckLogic> checkLogicList = new List<CheckLogic>()
+            List<OcarinaOfTimeCheckLogic> checkLogicList = new List<OcarinaOfTimeCheckLogic>()
             {
                 checkUnderWaterChest
             };
@@ -386,9 +386,9 @@ class LogicTesterHelper // class helper to create logic file from logic and chec
         };
     }
 
-    public static CheckLogic QuickCreateCheckLogic(string id)
+    public static OcarinaOfTimeCheckLogic QuickCreateCheckLogic(string id)
     {
-        return new CheckLogic()
+        return new OcarinaOfTimeCheckLogic()
         {
             Id = id,
             IsAvailable = false,

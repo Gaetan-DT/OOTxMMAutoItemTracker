@@ -5,7 +5,7 @@ using MajoraAutoItemTracker.Model;
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
-    abstract class AbstractEmulatorWrapper
+    abstract class AbstractRomController
     {
         protected const int EMULATOR_ENDIAN_SIZE = 4;
 

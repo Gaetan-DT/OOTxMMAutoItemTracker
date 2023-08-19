@@ -9,26 +9,18 @@ using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
-    class MajoraMaskController
+    class MajoraMaskController : AbstractUIRoomController<MajoraMaskCheckLogicZone>
     {
         const string ITEM_SPRITE_MONO_PATH = @"\Resource\Itemicons\mm_items_mono.png";
         const string ITEM_SPRITE_COLOR_PATH = @"\Resource\Itemicons\mm_items.png";
         const string ITEM_LOGIC_FILE_NAME = @"\Resource\Mappings\" + ItemLogicMethod.CST_DEFAULT_FILE_NAME;
-        const string ITEM_CHECK_LOGIC_CATEGORY_PATH = @"\Resource\CheckLogic\" + CheckLogicCategory.CST_DEFAULT_FILE_NAME;
-
-        const int ITEM_LIST_SIZE_IN_FILE = 42; // in px
-        const int ITEM_LIST_SIZE= 42; // in px
-
-        private Bitmap itemSpriteMono;
-        private Bitmap itemSpriteColor;
+        const string ITEM_CHECK_LOGIC_CATEGORY_PATH = @"\Resource\CheckLogic\" + MajoraMaskCheckLogicCategory.CST_DEFAULT_FILE_NAME;
 
         public List<ItemLogic> itemLogics;
-        public List<CheckLogicCategory> checkLogicCategories;
-        public List<CheckLogic> checkLogics;
+        public List<MajoraMaskCheckLogicCategory> checkLogicCategories;
+        public List<MajoraMaskCheckLogic> checkLogics;
 
-        public PictureBox pictureBoxItemList;
-
-        public bool Init(PictureBox pbItemList, ListBox lbCheckList, out string errorMessage)
+        public override bool Init(PictureBox pbItemList, ListBox lbCheckList, out string errorMessage)
         {
             errorMessage = "";
             try
@@ -45,8 +37,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
                 // Init json
                 itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_LOGIC_FILE_NAME);
-                checkLogicCategories = CheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH);
-                checkLogics = CheckLogic.FromHeader(checkLogicCategories);
+                checkLogicCategories = MajoraMaskCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH);
+                checkLogics = MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
                 return true;
             }
             catch (Exception e)
@@ -67,7 +59,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     listbox.Items.Add(checkLogic);
         }
 
-        public void DrawSquareCategory(PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBox, int rectWidthAndHeight)
+        public override void DrawSquareCategory(PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBox, int rectWidthAndHeight)
         {
             foreach (var checkLogicCategory in checkLogicCategories)
             {
@@ -81,9 +73,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         }
 
         // Call when change is trigger from memory
-        public void OnItemLogicChange(Tuple<ItemLogicPopertyName, object> itemLogicProperty)
+        public void OnItemLogicChange(Tuple<MajoraMaskItemLogicPopertyName, object> itemLogicProperty)
         {
-            var strItemLogicPropertyName = ItemLogicPopertyNameMethod.ToString(itemLogicProperty.Item1);
+            var strItemLogicPropertyName = MajoraMaskItemLogicPopertyNameMethod.ToString(itemLogicProperty.Item1);
             foreach (var itemLogic in itemLogics)
             {
                 if (strItemLogicPropertyName == itemLogic.propertyName)
@@ -107,9 +99,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             */
         }
 
-        public void DrawAllItemList(object sender, PaintEventArgs e)
+        public override void DrawAllItemList(object sender, PaintEventArgs e)
         {
-            PictureBox pictureBox = sender as PictureBox;
             Graphics g = e.Graphics;
             g.Clear(Color.White);
             foreach (var itemLogic in itemLogics)
@@ -128,10 +119,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }
 
-        public void DrawCheckList(object sender, DrawItemEventArgs e)
+        public override void DrawCheckList(object sender, DrawItemEventArgs e)
         {
             var listBox = (ListBox)sender;
-            var checkLogic = (CheckLogic)listBox.Items[e.Index];
+            var checkLogic = (MajoraMaskCheckLogic)listBox.Items[e.Index];
             Brush brush;
             if (checkLogic.IsClaim)
                 brush = Brushes.Gray;
@@ -142,137 +133,137 @@ namespace MajoraAutoItemTracker.UI.MainUI
             e.Graphics.DrawString(checkLogic.Id, e.Font, brush, e.Bounds, StringFormat.GenericDefault);
         }
 
-        public void OnCheckListItemClick(object sender, MouseEventArgs e)
+        public override void OnCheckListItemClick(object sender, MouseEventArgs e)
         {
             var listBox = (ListBox)sender;
-            var checkList = (CheckLogic)listBox.SelectedItem;
+            var checkList = (MajoraMaskCheckLogic)listBox.SelectedItem;
             checkList.IsClaim = !checkList.IsClaim;
             listBox.Refresh();
         }
 
         private Point GetPositionInDrawingOfItemLogicPropertyName(ItemLogic itemLogic)
         {
-            switch (ItemLogicPopertyNameMethod.FromString(itemLogic.propertyName))
+            switch (MajoraMaskItemLogicPopertyNameMethod.FromString(itemLogic.propertyName))
             {
-                case ItemLogicPopertyName.ImgOcarina:
+                case MajoraMaskItemLogicPopertyName.ImgOcarina:
                     return new Point(0, 0);
-                case ItemLogicPopertyName.ImgBow:
+                case MajoraMaskItemLogicPopertyName.ImgBow:
                     return new Point(1, 0);
-                case ItemLogicPopertyName.ImgFireArrow:
+                case MajoraMaskItemLogicPopertyName.ImgFireArrow:
                     return new Point(2, 0);
-                case ItemLogicPopertyName.ImgIceArrow:
+                case MajoraMaskItemLogicPopertyName.ImgIceArrow:
                     return new Point(3, 0);
-                case ItemLogicPopertyName.ImgLightArrow:
+                case MajoraMaskItemLogicPopertyName.ImgLightArrow:
                     return new Point(4, 0);
-                case ItemLogicPopertyName.ImgBomb:
+                case MajoraMaskItemLogicPopertyName.ImgBomb:
                     return new Point(0, 1);
-                case ItemLogicPopertyName.ImgBombchu:
+                case MajoraMaskItemLogicPopertyName.ImgBombchu:
                     return new Point(1, 1);
-                case ItemLogicPopertyName.ImgStick:
+                case MajoraMaskItemLogicPopertyName.ImgStick:
                     return new Point(2, 1);
-                case ItemLogicPopertyName.ImgNuts:
+                case MajoraMaskItemLogicPopertyName.ImgNuts:
                     return new Point(3, 1);
-                case ItemLogicPopertyName.ImgBeans:
+                case MajoraMaskItemLogicPopertyName.ImgBeans:
                     return new Point(4, 1);
-                case ItemLogicPopertyName.ImgKeg:
+                case MajoraMaskItemLogicPopertyName.ImgKeg:
                     return new Point(0, 2);
-                case ItemLogicPopertyName.ImgPicto:
+                case MajoraMaskItemLogicPopertyName.ImgPicto:
                     return new Point(1, 2);
-                case ItemLogicPopertyName.ImgLens:
+                case MajoraMaskItemLogicPopertyName.ImgLens:
                     return new Point(2, 2);
-                case ItemLogicPopertyName.ImgHook:
+                case MajoraMaskItemLogicPopertyName.ImgHook:
                     return new Point(3, 2);
-                case ItemLogicPopertyName.ImgGfsword:
+                case MajoraMaskItemLogicPopertyName.ImgGfsword:
                     return new Point(4, 2);
-                case ItemLogicPopertyName.Imgbottle1:
+                case MajoraMaskItemLogicPopertyName.Imgbottle1:
                     return new Point(0, 3);
-                case ItemLogicPopertyName.Imgbottle2:
+                case MajoraMaskItemLogicPopertyName.Imgbottle2:
                     return new Point(1, 3);
-                case ItemLogicPopertyName.Imgbottle3:
+                case MajoraMaskItemLogicPopertyName.Imgbottle3:
                     return new Point(2, 3);
-                case ItemLogicPopertyName.Imgbottle4:
+                case MajoraMaskItemLogicPopertyName.Imgbottle4:
                     return new Point(3, 3);
-                case ItemLogicPopertyName.Imgbottle5:
+                case MajoraMaskItemLogicPopertyName.Imgbottle5:
                     return new Point(4, 3);
-                case ItemLogicPopertyName.Imgbottle6:
+                case MajoraMaskItemLogicPopertyName.Imgbottle6:
                     return new Point(5, 3);
-                case ItemLogicPopertyName.ImgScrubTrade:
+                case MajoraMaskItemLogicPopertyName.ImgScrubTrade:
                     return new Point(5, 0);
-                case ItemLogicPopertyName.ImgKeyMama:
+                case MajoraMaskItemLogicPopertyName.ImgKeyMama:
                     return new Point(5, 1);
-                case ItemLogicPopertyName.ImgLetterpendant:
+                case MajoraMaskItemLogicPopertyName.ImgLetterpendant:
                     return new Point(5, 2);
-                case ItemLogicPopertyName.DekuMask:
+                case MajoraMaskItemLogicPopertyName.DekuMask:
                     return new Point(5, 4);
-                case ItemLogicPopertyName.GoronMask:
+                case MajoraMaskItemLogicPopertyName.GoronMask:
                     return new Point(5, 5);
-                case ItemLogicPopertyName.ZoraMask:
+                case MajoraMaskItemLogicPopertyName.ZoraMask:
                     return new Point(5, 6);
-                case ItemLogicPopertyName.FiercedeityMask:
+                case MajoraMaskItemLogicPopertyName.FiercedeityMask:
                     return new Point(5, 7);
-                case ItemLogicPopertyName.TruthMask:
+                case MajoraMaskItemLogicPopertyName.TruthMask:
                     return new Point(4, 6);
-                case ItemLogicPopertyName.KafeiMask:
+                case MajoraMaskItemLogicPopertyName.KafeiMask:
                     return new Point(2, 6);
-                case ItemLogicPopertyName.AllnightMask:
+                case MajoraMaskItemLogicPopertyName.AllnightMask:
                     return new Point(1, 4);
-                case ItemLogicPopertyName.BunnyhoodMask:
+                case MajoraMaskItemLogicPopertyName.BunnyhoodMask:
                     return new Point(2, 5);
-                case ItemLogicPopertyName.KeatonMask:
+                case MajoraMaskItemLogicPopertyName.KeatonMask:
                     return new Point(0, 5);
-                case ItemLogicPopertyName.GaroMask:
+                case MajoraMaskItemLogicPopertyName.GaroMask:
                     return new Point(2, 7);
-                case ItemLogicPopertyName.RomaniMask:
+                case MajoraMaskItemLogicPopertyName.RomaniMask:
                     return new Point(0, 6);
-                case ItemLogicPopertyName.CircusleaderMask:
+                case MajoraMaskItemLogicPopertyName.CircusleaderMask:
                     return new Point(1, 6);
-                case ItemLogicPopertyName.PostmanMask:
+                case MajoraMaskItemLogicPopertyName.PostmanMask:
                     return new Point(0, 4);
-                case ItemLogicPopertyName.CoupleMask:
+                case MajoraMaskItemLogicPopertyName.CoupleMask:
                     return new Point(3, 6);
-                case ItemLogicPopertyName.GreatfairyMask:
+                case MajoraMaskItemLogicPopertyName.GreatfairyMask:
                     return new Point(4, 4);
-                case ItemLogicPopertyName.GibdoMask:
+                case MajoraMaskItemLogicPopertyName.GibdoMask:
                     return new Point(1, 7);
-                case ItemLogicPopertyName.DonGeroMask:
+                case MajoraMaskItemLogicPopertyName.DonGeroMask:
                     return new Point(3, 5);
-                case ItemLogicPopertyName.KamaroMask:
+                case MajoraMaskItemLogicPopertyName.KamaroMask:
                     return new Point(0, 7);
-                case ItemLogicPopertyName.CaptainMask:
+                case MajoraMaskItemLogicPopertyName.CaptainMask:
                     return new Point(3, 7);
-                case ItemLogicPopertyName.StoneMask:
+                case MajoraMaskItemLogicPopertyName.StoneMask:
                     return new Point(3, 4);
-                case ItemLogicPopertyName.BremenMask:
+                case MajoraMaskItemLogicPopertyName.BremenMask:
                     return new Point(1, 5);
-                case ItemLogicPopertyName.BlastMask:
+                case MajoraMaskItemLogicPopertyName.BlastMask:
                     return new Point(2, 4);
-                case ItemLogicPopertyName.ScentsMask:
+                case MajoraMaskItemLogicPopertyName.ScentsMask:
                     return new Point(4, 5);
-                case ItemLogicPopertyName.GiantMask:
+                case MajoraMaskItemLogicPopertyName.GiantMask:
                     return new Point(4, 7);
-                case ItemLogicPopertyName.ImgSword:
+                case MajoraMaskItemLogicPopertyName.ImgSword:
                     return new Point(4, 8);
-                case ItemLogicPopertyName.ImgShield:
+                case MajoraMaskItemLogicPopertyName.ImgShield:
                     return new Point(5, 8);
-                case ItemLogicPopertyName.ImgQuiver:
+                case MajoraMaskItemLogicPopertyName.ImgQuiver:
                     return new Point(4, 9);
-                case ItemLogicPopertyName.ImgBombBag:
+                case MajoraMaskItemLogicPopertyName.ImgBombBag:
                     return new Point(5, 9);
-                case ItemLogicPopertyName.ImgWallet:
+                case MajoraMaskItemLogicPopertyName.ImgWallet:
                     return new Point(1, 9);
-                case ItemLogicPopertyName.OdolwaMask:
+                case MajoraMaskItemLogicPopertyName.OdolwaMask:
                     return new Point(0, 8);
-                case ItemLogicPopertyName.GohtMask:
+                case MajoraMaskItemLogicPopertyName.GohtMask:
                     return new Point(1, 8);
-                case ItemLogicPopertyName.GyorgMask:
+                case MajoraMaskItemLogicPopertyName.GyorgMask:
                     return new Point(2, 8);
-                case ItemLogicPopertyName.TwinmoldMask:
+                case MajoraMaskItemLogicPopertyName.TwinmoldMask:
                     return new Point(3, 8);
-                case ItemLogicPopertyName.ImgBombersNote:
+                case MajoraMaskItemLogicPopertyName.ImgBombersNote:
                     return new Point(0, 9);
-                case ItemLogicPopertyName.ImgDoubleDefense:
+                case MajoraMaskItemLogicPopertyName.ImgDoubleDefense:
                     return new Point(2, 9);
-                case ItemLogicPopertyName.ImgMagic:
+                case MajoraMaskItemLogicPopertyName.ImgMagic:
                     return new Point(3, 9);
                 default:
                     throw new Exception($"Unknown property name: {itemLogic}");

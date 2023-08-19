@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 {
-    class Project64EMWrapper : AbstractEmulatorWrapper
+    class Project64EMWrapper : AbstractRomController
     {
         const String PROCESS_NAME = "Project64-EM";
 

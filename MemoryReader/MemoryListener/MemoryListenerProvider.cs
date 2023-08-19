@@ -8,8 +8,8 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
     class MemoryListenerProvider
     {
         public static AbstractMemoryListener ProvideMemoryListener(
-            AbstractEmulatorWrapper emulatorWrapper,
-            ReplaySubject<Tuple<ItemLogicPopertyName, object>> replaySubject,
+            AbstractRomController emulatorWrapper,
+            ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> replaySubject,
             RomType romType)
         {
             AbstractMemoryDataObserver observer = ProvideAbstractMemoryDataObserver(romType);

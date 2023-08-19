@@ -8,7 +8,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
     class EmulatorController
     {
 
-        public readonly BehaviorSubject<List<AbstractEmulatorWrapper>> subEmulatorList = new BehaviorSubject<List<AbstractEmulatorWrapper>>(new List<AbstractEmulatorWrapper>());
+        public readonly BehaviorSubject<List<AbstractRomController>> subEmulatorList = new BehaviorSubject<List<AbstractRomController>>(new List<AbstractRomController>());
         public readonly BehaviorSubject<List<RomType>> subRomList = new BehaviorSubject<List<RomType>>(RomTypeMethod.getAsList());
 
         public void RefreshEmulatorAndGameList()
@@ -27,7 +27,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             subRomList.OnNext(RomTypeMethod.getAsList());
         }
 
-        public AbstractEmulatorWrapper GetSelectedEmulator(int index)
+        public AbstractRomController GetSelectedEmulator(int index)
         {
             return subEmulatorList.Value[index];
         }

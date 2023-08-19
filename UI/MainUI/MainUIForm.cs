@@ -34,12 +34,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
             mainUIController.pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListOOT, it);
 
             // Init game controller
-            if (majoraMaskController.Init(pictureBoxOOTItemList, lbCheckListOOT, out string errorMessage))
-                majoraMaskController.DrawSquareCategory(mainUIController.pictureBoxMapMM, CST_RECT_WIDTH_HEIGHT);
+            string errorMessage;
+            if (ocarinaOfTimeController.Init(pictureBoxOOTItemList, lbCheckListOOT, out errorMessage))
+                ocarinaOfTimeController.DrawSquareCategory(mainUIController.pictureBoxMapOOT, CST_RECT_WIDTH_HEIGHT);
             else
                 Log(errorMessage);
 
-
+            if (majoraMaskController.Init(pictureBoxMMItemList, lbCheckListMM, out errorMessage))
+                majoraMaskController.DrawSquareCategory(mainUIController.pictureBoxMapMM, CST_RECT_WIDTH_HEIGHT);
+            else
+                Log(errorMessage);
         }
 
         private void BtnStartListenerClick(object sender, EventArgs e)
@@ -58,7 +62,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Log("Thread Stoped");
         }
 
-        private void OnItemLogicChange(Tuple <ItemLogicPopertyName, object> itemLogicProperty)
+        private void OnItemLogicChange(Tuple <MajoraMaskItemLogicPopertyName, object> itemLogicProperty)
         {
             this.Invoke((MethodInvoker)delegate
             {
@@ -75,7 +79,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             cbRomTypeList.SelectedIndex = cbRomTypeList.Items.Count > 0 ? 0 : -1;
         }
 
-        private void UpdateCbEmulatorList(List<AbstractEmulatorWrapper> emulatorList)
+        private void UpdateCbEmulatorList(List<AbstractRomController> emulatorList)
         {
             cbEmulatorList.SelectedIndex = -1;
             cbEmulatorList.Items.Clear();
