@@ -25,8 +25,7 @@ namespace MajoraAutoItemTracker
 
         public MemoryListener(
             ModLoader64Wrapper modLoader64Wrapper, 
-            MajoraMemoryDataObserver majoraMemoryDataObserver,
-            BasicCallback basicCallback) //TODO: Remove basicCallback
+            MajoraMemoryDataObserver majoraMemoryDataObserver)
         {
             _modLoader64Wrapper = modLoader64Wrapper;
             _majoraMemoryDataObserver = majoraMemoryDataObserver;

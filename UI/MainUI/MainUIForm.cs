@@ -50,9 +50,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void BtnStartListenerClick(object sender, EventArgs e)
         {
-            
             Log("Attaching to modloader");
-            if (!mainUIController.StartMemoryListener(OnItemLogicChange, out string error))
+            if (!mainUIController.StartMemoryListener(emulatorController.GetSelectedEmulator(lbCheckListMM.SelectedIndex), OnItemLogicChange, out string error))
                 Log(error);
             Log("Thread started");
         }

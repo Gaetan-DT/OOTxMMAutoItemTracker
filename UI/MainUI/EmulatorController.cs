@@ -7,7 +7,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
     class EmulatorController
     {
 
-        public ReplaySubject<List<AbstractEmulatorWrapper>> subEmulatorList = new ReplaySubject<List<AbstractEmulatorWrapper>>();
+        public BehaviorSubject<List<AbstractEmulatorWrapper>> subEmulatorList = new BehaviorSubject<List<AbstractEmulatorWrapper>>(new List<AbstractEmulatorWrapper>());
 
         public void RefreshEmulatorAndGameList()
         {
@@ -23,6 +23,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private void RefreshGameList()
         {
             //TODO: Implement game gestion
+        }
+
+        public AbstractEmulatorWrapper GetSelectedEmulator(int index)
+        {
+            if (index < 0)
+                return null;
+            return subEmulatorList.Value[index];
         }
     }
 }
