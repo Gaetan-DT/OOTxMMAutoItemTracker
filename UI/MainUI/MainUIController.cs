@@ -13,7 +13,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 {
     class MainUIController
     {
-        private MemoryListener memoryListener = null;
+        private MajoraMaskMemoryListener memoryListener = null;
         public ReplaySubject<bool> isMemoryListenerStartedSubject = new ReplaySubject<bool>();
 
         public MainUIController()
@@ -31,7 +31,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             {
                 ModLoader64Wrapper modLoader64Wrapper = new ModLoader64Wrapper(); // TODO: Change with abstract implementation
                 MajoraMemoryDataObserver majoraMemoryDataObserver = new MajoraMemoryDataObserver();
-                memoryListener = new MemoryListener(modLoader64Wrapper, majoraMemoryDataObserver);
+                memoryListener = new MajoraMaskMemoryListener(modLoader64Wrapper, majoraMemoryDataObserver);
                 memoryListener.Start();
                 memoryListener.OnAnyItemLogicChange.Subscribe(onItemLogicChange);
                 isMemoryListenerStartedSubject.OnNext(true);

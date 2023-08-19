@@ -2,10 +2,10 @@
 using System.Reactive.Subjects;
 using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 
-namespace MajoraAutoItemTracker
+namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 {
 
-    class MajoraMemoryData
+    class MajoraMemoryData : AbstractMemoryData
     {
         #region Link
         public MagicMeter MagicMeter = MagicMeter.None;
@@ -180,6 +180,11 @@ namespace MajoraAutoItemTracker
             // Other
             CurrentLinkTransformation = LinkTransformationMethods.ReadFromMemory(modLoader.readInt8(MMOffsets.CURRENT_TRANSFORMATION));
         }
+
+        public override void ReadDataFromEmulator(AbstractEmulatorWrapper emulatorWrapper)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 
     class MajoraMemoryDataObserver
@@ -271,5 +276,7 @@ namespace MajoraAutoItemTracker
         public ReplaySubject<bool> HasBoosMaskGyorg = new ReplaySubject<bool>(1);
         public ReplaySubject<bool> HasBoosMaskTwinmold = new ReplaySubject<bool>(1);
         #endregion
+
+
     }
 }

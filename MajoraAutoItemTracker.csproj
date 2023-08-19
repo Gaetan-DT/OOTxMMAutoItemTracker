@@ -108,6 +108,11 @@
     <Compile Include="Emulator\IEmulatorWrapper.cs" />
     <Compile Include="Emulator\Project64\Project64Wrapper.cs" />
     <Compile Include="Emulator\Projetc64EM\Project64EMWrapper.cs" />
+    <Compile Include="MemoryReader\MemoryData\AbstractMemoryData.cs" />
+    <Compile Include="MemoryReader\MemoryData\OcarinaOfTimeMemoryData.cs" />
+    <Compile Include="MemoryReader\MemoryListener\AbstractMemoryListener.cs" />
+    <Compile Include="MemoryReader\MemoryListener\MemoryListenerProvider.cs" />
+    <Compile Include="MemoryReader\MemoryListener\OcarinaOfTimeMemoryListener.cs" />
     <Compile Include="Model\Enum\EquipmentBombBag.cs" />
     <Compile Include="Model\Enum\EquipmentQuiver.cs" />
     <Compile Include="Model\Enum\EquipmentWallet.cs" />
@@ -128,7 +133,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Model\OOTOffsets.cs" />
+    <Compile Include="MemoryReader\MemoryOffset\OOTOffsets.cs" />
     <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,9 +149,9 @@
       <DependentUpon>MainUIForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MemoryReader\Memory.cs" />
-    <Compile Include="MemoryReader\MemoryListener.cs" />
-    <Compile Include="Model\MajoraMemoryData.cs" />
-    <Compile Include="Model\MMOffsets.cs" />
+    <Compile Include="MemoryReader\MemoryListener\MajoraMaskMemoryListener.cs" />
+    <Compile Include="MemoryReader\MemoryData\MajoraMemoryData.cs" />
+    <Compile Include="MemoryReader\MemoryOffset\MMOffsets.cs" />
     <Compile Include="Emulator\ModLoader64\ModLoader64Wrapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

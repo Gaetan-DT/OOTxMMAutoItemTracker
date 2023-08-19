@@ -28,7 +28,12 @@ namespace MajoraAutoItemTracker.MemoryReader
             return new UIntPtr(m_romAddrStart + offset);
         }
 
-        public uint ReadUint8InEdianSize(uint offset)
+        public uint ReadUint8InEdianSizeAsInt(uint offset)
+        {
+            return ReadUint8InEdianBlock(offset, IsEmulatorUseBigEndian, 4);
+        }
+
+        public byte ReadUint8InEdianSizeAsByte(uint offset)
         {
             return ReadUint8InEdianBlock(offset, IsEmulatorUseBigEndian, 4);
         }
@@ -65,6 +70,16 @@ namespace MajoraAutoItemTracker.MemoryReader
         public bool CheckBitRaiseIn(byte aByte, int pos)
         {
             return (aByte & (1 << pos)) != 0;
+        }
+
+        public bool ReadAndCheckIsFF(uint offset)
+        {
+            return CheckIsFF(ReadUint8InEdianSizeAsByte(offset));
+        }
+
+        public bool CheckIsFF(byte aByte)
+        {
+            return aByte == 0xFF;
         }
 
         private string GetDebugPrintHex(uint hexValue)

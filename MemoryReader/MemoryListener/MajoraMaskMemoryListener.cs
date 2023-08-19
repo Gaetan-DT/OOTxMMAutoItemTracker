@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.MemoryReader.ModLoader64;
+﻿using MajoraAutoItemTracker.MemoryReader.MemoryData;
+using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 using MajoraAutoItemTracker.Model.Enum;
 using System;
 using System.Reactive.Subjects;
@@ -7,9 +8,7 @@ using System.Threading;
 
 namespace MajoraAutoItemTracker
 {
-    public delegate void BasicCallback(String message);
-
-    class MemoryListener
+    class MajoraMaskMemoryListener
     {
         private const int CST_THREAD_DELLAY = 1000;
 
@@ -23,7 +22,7 @@ namespace MajoraAutoItemTracker
 
         public ReplaySubject<Tuple<ItemLogicPopertyName, object>> OnAnyItemLogicChange = new ReplaySubject<Tuple<ItemLogicPopertyName, object>>(1);
 
-        public MemoryListener(
+        public MajoraMaskMemoryListener(
             ModLoader64Wrapper modLoader64Wrapper, 
             MajoraMemoryDataObserver majoraMemoryDataObserver)
         {
