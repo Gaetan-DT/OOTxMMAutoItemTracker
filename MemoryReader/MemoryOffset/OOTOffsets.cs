@@ -14,7 +14,10 @@
 
         //8011A64B 0007     Have Fairy Ocarina
         //8011A64B 0008     Have Ocarina of Time
-        public const int CST_INVENTORY_OCARINA = 0x11A64B;
+        public const int CST_INVENTORY_ADDRESS_OCARINA = 0x11A64B;
+        public const int CST_INVENTORY_VALUE_OCARINA_VALUE_FAIRY_OCARINA = 0x07;
+        public const int CST_INVENTORY_VALUE_OCARINA_VALUE_OCARINA_OF_TIME = 0x08;
+
 
         //8011A80B 0007     Always Have Fairy Ocarina
         //8011A80B 0008     Have Ocarina of Time

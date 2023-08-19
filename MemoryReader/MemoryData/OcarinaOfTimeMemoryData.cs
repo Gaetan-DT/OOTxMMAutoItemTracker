@@ -15,7 +15,10 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 
         public override void ReadDataFromEmulator(AbstractEmulatorWrapper emulatorWrapper)
         {
-            HasOcarina = !emulatorWrapper.ReadAndCheckIsFF(Model.OOTOffsets.CST_INVENTORY_OCARINA);
+            HasOcarina = emulatorWrapper.CheckAnykHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_OCARINA, new byte[] { 
+                Model.OOTOffsets.CST_INVENTORY_VALUE_OCARINA_VALUE_FAIRY_OCARINA,
+                Model.OOTOffsets.CST_INVENTORY_VALUE_OCARINA_VALUE_OCARINA_OF_TIME,
+            });
         }
     }
 

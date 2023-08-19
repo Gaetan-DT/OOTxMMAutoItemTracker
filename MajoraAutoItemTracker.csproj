@@ -105,7 +105,6 @@
   <ItemGroup>
     <Compile Include="Emulator\AbstractEmulatorWrapper.cs" />
     <Compile Include="Emulator\EmulatorWrapperProvider.cs" />
-    <Compile Include="Emulator\IEmulatorWrapper.cs" />
     <Compile Include="Emulator\Project64\Project64Wrapper.cs" />
     <Compile Include="Emulator\Projetc64EM\Project64EMWrapper.cs" />
     <Compile Include="MemoryReader\MemoryData\AbstractMemoryData.cs" />

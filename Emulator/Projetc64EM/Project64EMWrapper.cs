@@ -87,7 +87,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             var wrapper = new Project64EMWrapper();
             if (wrapper.AttachToProcess())
             {
-                var result5 = wrapper.ReadUint8InEdianSizeAsInt(Model.OOTOffsets.CST_INVENTORY_OCARINA).ToString("X");
+                var result5 = wrapper.ReadUint8InEdianSizeAsInt(Model.OOTOffsets.CST_INVENTORY_ADDRESS_OCARINA).ToString("X");
                 // Ocarina oot adress: 0x0011A648 but 0x8011A64B in emulator memory acces
                 // @see https://fr.wiktionary.org/wiki/big-endian & https://fr.wiktionary.org/wiki/little-endian
                 Debug.WriteLine("result5: " + result5);

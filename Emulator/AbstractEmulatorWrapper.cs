@@ -5,7 +5,7 @@ using MajoraAutoItemTracker.Model;
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
-    abstract class AbstractEmulatorWrapper : IEmulatorWrapper
+    abstract class AbstractEmulatorWrapper
     {
         protected const int EMULATOR_ENDIAN_SIZE = 4;
 
@@ -70,6 +70,28 @@ namespace MajoraAutoItemTracker.MemoryReader
         public bool CheckBitRaiseIn(byte aByte, int pos)
         {
             return (aByte & (1 << pos)) != 0;
+        }
+
+        public bool CheckBitRaiseIn(uint offset, int pos)
+        {
+            return CheckBitRaiseIn(ReadUint8InEdianSizeAsByte(offset), pos);
+        }
+
+        public bool CheckHexValue(uint offset, byte hexValue)
+        {
+            var aByte = ReadUint8InEdianSizeAsByte(offset);
+            return aByte == hexValue;
+        }
+
+        public bool CheckAnykHexValue(uint offset, byte[] hexValues)
+        {
+            if (hexValues.Length == 0)
+                return false;
+            var aByte = ReadUint8InEdianSizeAsByte(offset);
+            foreach (var hexValue in hexValues)
+                if (hexValue == aByte)
+                    return true;
+            return false;
         }
 
         public bool ReadAndCheckIsFF(uint offset)

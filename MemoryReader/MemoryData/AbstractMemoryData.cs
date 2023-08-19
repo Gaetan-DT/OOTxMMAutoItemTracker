@@ -28,8 +28,13 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 
         private bool IsFieldNeedToBeUpdated(AbstractMemoryData previousMemoryData, AbstractMemoryData newMemoryData, String fieldName)
         {
+            if (previousMemoryData == null)
+                return true;
             var newMemoryDataProp = GetMemoryDataProp(newMemoryData, fieldName);
-            if (newMemoryDataProp != null && newMemoryData.Equals(GetMemoryDataProp(previousMemoryData, fieldName)))
+            var oldMemoryDataProp = GetMemoryDataProp(previousMemoryData, fieldName);
+            if (oldMemoryDataProp is bool && newMemoryDataProp is bool)
+                return (bool)oldMemoryDataProp != (bool)newMemoryDataProp;
+            if (newMemoryDataProp != null && newMemoryData.Equals(oldMemoryDataProp))
                 return false;
             return true;
         }

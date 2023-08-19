@@ -1,12 +1,10 @@
-﻿using MajoraAutoItemTracker.MemoryReader.ModLoader64;
-using MajoraAutoItemTracker.Model.CheckLogic;
+﻿using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Item;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 using System.Linq;
 using Brush = System.Drawing.Brush;
