@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.MemoryReader.ModLoader64;
+﻿using MajoraAutoItemTracker.MemoryReader;
+using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 using MajoraAutoItemTracker.Model.Enum;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             isMemoryListenerStartedSubject.OnNext(false);
         }
 
-        public bool StartMemoryListener(Action<Tuple<ItemLogicPopertyName, object>> onItemLogicChange, out string error)
+        public bool StartMemoryListener(
+            AbstractEmulatorWrapper abstractEmulatorWrapper, // TODO Use AbstractEmulatorWrapper 
+            Action<Tuple<ItemLogicPopertyName, object>> onItemLogicChange, 
+            out string error)
         {
             error = "";
             try
