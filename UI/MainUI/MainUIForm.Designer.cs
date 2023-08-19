@@ -49,6 +49,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.cbRomTypeList = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRefreshGameAndRom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -152,7 +153,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tabMajoraMask.Location = new System.Drawing.Point(4, 22);
             this.tabMajoraMask.Name = "tabMajoraMask";
             this.tabMajoraMask.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMajoraMask.Size = new System.Drawing.Size(746, 741);
+            this.tabMajoraMask.Size = new System.Drawing.Size(1322, 799);
             this.tabMajoraMask.TabIndex = 1;
             this.tabMajoraMask.Text = "Majora mask";
             this.tabMajoraMask.UseVisualStyleBackColor = true;
@@ -183,11 +184,22 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.label2.TabIndex = 73;
             this.label2.Text = "Rom type";
             // 
+            // btnRefreshGameAndRom
+            // 
+            this.btnRefreshGameAndRom.Location = new System.Drawing.Point(1453, 79);
+            this.btnRefreshGameAndRom.Name = "btnRefreshGameAndRom";
+            this.btnRefreshGameAndRom.Size = new System.Drawing.Size(77, 23);
+            this.btnRefreshGameAndRom.TabIndex = 74;
+            this.btnRefreshGameAndRom.Text = "Refresh";
+            this.btnRefreshGameAndRom.UseVisualStyleBackColor = true;
+            this.btnRefreshGameAndRom.Click += new System.EventHandler(this.btnRefreshGameAndRom_Click);
+            // 
             // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1708, 829);
+            this.Controls.Add(this.btnRefreshGameAndRom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbRomTypeList);
@@ -224,6 +236,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.ComboBox cbRomTypeList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRefreshGameAndRom;
     }
 }
 

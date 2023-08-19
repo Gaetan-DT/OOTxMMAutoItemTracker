@@ -89,6 +89,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             btnStartListener.Enabled = !started;
             btnStopListener.Enabled = started;
+            btnRefreshGameAndRom.Enabled = !started;
             cbEmulatorList.Enabled = !started;
             cbRomTypeList.Enabled = !started;
             if (started)
@@ -115,6 +116,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             tboxDebug.AppendText(message + "\r\n");
             Debug.WriteLine(message);
+        }
+
+        private void btnRefreshGameAndRom_Click(object sender, EventArgs e)
+        {
+            emulatorController.RefreshEmulatorAndGameList();
         }
     }
 }
