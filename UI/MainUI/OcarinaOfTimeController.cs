@@ -53,6 +53,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }
 
+        public void RefreshCheckListForCategory(ListBox listbox, OcarinaOfTimeCheckLogicZone checkLogicZone)
+        {   
+            listbox.Items.Clear();
+            foreach (var checkLogic in checkLogics) // recuperer tout les checks dans la catégorie
+                if (checkLogic.Zone == checkLogicZone)
+                    listbox.Items.Add(checkLogic);
+        }
+
         public override void DrawSquareCategory(PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBox, int rectWidthAndHeight)
         {
             foreach (var checkLogicCategory in checkLogicCategories)
