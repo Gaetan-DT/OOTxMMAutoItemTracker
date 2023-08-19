@@ -59,7 +59,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         // Refrehs all check available for a zone
         // Use the list of all check logic and filter it by zone
-        public void RefreshCheckListForCategory(ListBox listbox, CheckLogicZone checkLogicZone)
+        public void RefreshCheckListForCategory(ListBox listbox, MajoraMaskCheckLogicZone checkLogicZone)
         {
             listbox.Items.Clear();
             foreach (var checkLogic in checkLogics) // recuperer tout les checks dans la catégorie
@@ -67,7 +67,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     listbox.Items.Add(checkLogic);
         }
 
-        public void DrawSquareCategory(PictureBoxZoomMoveController<CheckLogicZone> pictureBox, int rectWidthAndHeight)
+        public void DrawSquareCategory(PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBox, int rectWidthAndHeight)
         {
             foreach (var checkLogicCategory in checkLogicCategories)
             {
@@ -75,7 +75,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     checkLogicCategory.SquarePositionX - rectWidthAndHeight / 2,
                     checkLogicCategory.SquarePositionY - rectWidthAndHeight / 2,
                     rectWidthAndHeight, rectWidthAndHeight,
-                    CheckLogicZoneMethod.FromString(checkLogicCategory.Name)
+                    MajoraMaskCheckLogicZoneMethod.FromString(checkLogicCategory.Name)
                 );
             }
         }

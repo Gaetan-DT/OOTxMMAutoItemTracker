@@ -11,7 +11,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
     abstract class AbstractRoomController
     {
         public abstract bool Init(PictureBox pbItemList, ListBox lbCheckList, out string errorMessage);
-        public abstract void DrawSquareCategory(PictureBoxZoomMoveController<CheckLogicZone> pictureBox, int rectWidthAndHeight);
+        public abstract void DrawSquareCategory(PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBox, int rectWidthAndHeight);
         public abstract void DrawAllItemList(object sender, PaintEventArgs e);
         public abstract void DrawCheckList(object sender, DrawItemEventArgs e)
     }

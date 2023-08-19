@@ -11,7 +11,7 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
         public const string CST_DEFAULT_FILE_NAME = "check_logic.json";
 
         public String Id { get; set; }        
-        public CheckLogicZone Zone { get; set; }
+        public MajoraMaskCheckLogicZone Zone { get; set; }
         public int SquarePositionX { get; set; }
         public int SquarePositionY { get; set; }
         public bool IsClaim { get; set; }
@@ -47,7 +47,7 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
                         IsClaim = false,
                         SquarePositionX = checkLogicHeader.SquarePositionX,
                         SquarePositionY = checkLogicHeader.SquarePositionY,
-                        Zone = CheckLogicZoneMethod.FromString(checkLogicHeader.Name)
+                        Zone = MajoraMaskCheckLogicZoneMethod.FromString(checkLogicHeader.Name)
                     });
                 }
             }

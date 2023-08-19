@@ -24,8 +24,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public ReplaySubject<bool> isMemoryListenerStartedSubject = new ReplaySubject<bool>();
         public ReplaySubject<Tuple<ItemLogicPopertyName, object>> OnAnyItemLogicChange = new ReplaySubject<Tuple<ItemLogicPopertyName, object>>();
 
-        public PictureBoxZoomMoveController<CheckLogicZone> pictureBoxMapOOT;
-        public PictureBoxZoomMoveController<CheckLogicZone> pictureBoxMapMM;
+        public PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxMapOOT;
+        public PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxMapMM;
 
         public MainUIController()
         {
@@ -35,10 +35,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public void InitPictureBox(Panel panelOOT, Panel panelMM)
         {
             // Init OOT
-            pictureBoxMapOOT = new PictureBoxZoomMoveController<CheckLogicZone>(panelOOT);
+            pictureBoxMapOOT = new PictureBoxZoomMoveController<MajoraMaskCheckLogicZone>(panelOOT);
             pictureBoxMapOOT.SetSrcImage(Image.FromFile(Application.StartupPath + CST_OOT_MAP_PATH));
             // Init MM
-            pictureBoxMapMM = new PictureBoxZoomMoveController<CheckLogicZone>(panelMM);
+            pictureBoxMapMM = new PictureBoxZoomMoveController<MajoraMaskCheckLogicZone>(panelMM);
             pictureBoxMapMM.SetSrcImage(Image.FromFile(Application.StartupPath + CST_MM_MAP_PATH));
             //pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListOOT, it);
         }
