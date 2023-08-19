@@ -40,7 +40,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             _pictureBoxZoomMoveController.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
 
             // Init game controller
-            if (majoraMaskController.Init(GetPictureBoxFromItemLogic, out string errorMessage))
+            if (majoraMaskController.Init(pictureBoxMMItemList, lbCheckListMM, out string errorMessage))
                 majoraMaskController.DrawSquareCategory(_pictureBoxZoomMoveController, CST_RECT_WIDTH_HEIGHT);
             else
                 Log(errorMessage);
@@ -67,13 +67,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.Invoke((MethodInvoker)delegate
             {
                 Log($"update for:{itemLogicProperty.Item1} with value: {itemLogicProperty.Item2}");
-                majoraMaskController.OnItemLogicChange(itemLogicProperty, GetPictureBoxFromItemLogic);
+                majoraMaskController.OnItemLogicChange(itemLogicProperty);
             });
-        }
-
-        private PictureBox GetPictureBoxFromItemLogic(ItemLogic itemLogic)
-        {
-            return ((System.Reflection.TypeInfo)GetType()).GetDeclaredField(itemLogic.propertyName).GetValue(this) as PictureBox;
         }
 
         private void UpdateCbEmulatorList(List<AbstractEmulatorWrapper> emulatorList)
@@ -82,26 +77,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             cbEmulatorList.Items.Clear();
             cbEmulatorList.Items.AddRange(emulatorList.Select(it => it.GetDisplayName()).ToArray());
             cbEmulatorList.SelectedIndex = cbEmulatorList.Items.Count > 0 ? 0 : -1;
-        }
-
-        private void OnCheckListMMDrawItem(object sender, DrawItemEventArgs e)
-        {
-            var checkLogic = (CheckLogic)lbCheckListMM.Items[e.Index];
-            Brush brush;
-            if (checkLogic.IsClaim)
-                brush = Brushes.Gray;
-            else if (checkLogic.IsAvailable)
-                brush = Brushes.Green;
-            else
-                brush = Brushes.Red;
-            e.Graphics.DrawString(checkLogic.Id, e.Font, brush, e.Bounds, StringFormat.GenericDefault);
-        }
-
-        private void OnCheckListMMClick(object sender, MouseEventArgs e)
-        {
-            var checkList = (CheckLogic)lbCheckListMM.SelectedItem;
-            checkList.IsClaim = !checkList.IsClaim;
-            lbCheckListMM.Invalidate();
         }
 
         private void Log(String message)
