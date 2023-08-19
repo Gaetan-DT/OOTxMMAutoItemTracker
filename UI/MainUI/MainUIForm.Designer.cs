@@ -39,9 +39,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.btnStartListener = new System.Windows.Forms.Button();
             this.btnStopListener = new System.Windows.Forms.Button();
             this.tboxDebug = new System.Windows.Forms.TextBox();
-            this.pictureBoxMMItemList = new System.Windows.Forms.PictureBox();
-            this.lbCheckListMM = new System.Windows.Forms.ListBox();
-            this.mapMm = new System.Windows.Forms.Panel();
+            this.pictureBoxOOTItemList = new System.Windows.Forms.PictureBox();
+            this.lbCheckListOOT = new System.Windows.Forms.ListBox();
+            this.panelMapOOT = new System.Windows.Forms.Panel();
             this.cbEmulatorList = new System.Windows.Forms.ComboBox();
             this.tabGameMenu = new System.Windows.Forms.TabControl();
             this.tabOcarinaOfTime = new System.Windows.Forms.TabPage();
@@ -50,9 +50,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRefreshGameAndRom = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).BeginInit();
+            this.pictureBoxMMItemList = new System.Windows.Forms.PictureBox();
+            this.lbCheckListMM = new System.Windows.Forms.ListBox();
+            this.panelMapMM = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
+            this.tabMajoraMask.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDebug
@@ -92,30 +97,30 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tboxDebug.Size = new System.Drawing.Size(360, 717);
             this.tboxDebug.TabIndex = 3;
             // 
-            // pictureBoxMMItemList
+            // pictureBoxOOTItemList
             // 
-            this.pictureBoxMMItemList.InitialImage = null;
-            this.pictureBoxMMItemList.Location = new System.Drawing.Point(6, 3);
-            this.pictureBoxMMItemList.Name = "pictureBoxMMItemList";
-            this.pictureBoxMMItemList.Size = new System.Drawing.Size(320, 522);
-            this.pictureBoxMMItemList.TabIndex = 4;
-            this.pictureBoxMMItemList.TabStop = false;
+            this.pictureBoxOOTItemList.InitialImage = null;
+            this.pictureBoxOOTItemList.Location = new System.Drawing.Point(6, 3);
+            this.pictureBoxOOTItemList.Name = "pictureBoxOOTItemList";
+            this.pictureBoxOOTItemList.Size = new System.Drawing.Size(320, 522);
+            this.pictureBoxOOTItemList.TabIndex = 4;
+            this.pictureBoxOOTItemList.TabStop = false;
             // 
-            // lbCheckListMM
+            // lbCheckListOOT
             // 
-            this.lbCheckListMM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.lbCheckListMM.FormattingEnabled = true;
-            this.lbCheckListMM.Location = new System.Drawing.Point(6, 531);
-            this.lbCheckListMM.Name = "lbCheckListMM";
-            this.lbCheckListMM.Size = new System.Drawing.Size(320, 264);
-            this.lbCheckListMM.TabIndex = 67;
+            this.lbCheckListOOT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.lbCheckListOOT.FormattingEnabled = true;
+            this.lbCheckListOOT.Location = new System.Drawing.Point(6, 531);
+            this.lbCheckListOOT.Name = "lbCheckListOOT";
+            this.lbCheckListOOT.Size = new System.Drawing.Size(320, 264);
+            this.lbCheckListOOT.TabIndex = 67;
             // 
-            // mapMm
+            // panelMapOOT
             // 
-            this.mapMm.Location = new System.Drawing.Point(332, 3);
-            this.mapMm.Name = "mapMm";
-            this.mapMm.Size = new System.Drawing.Size(978, 792);
-            this.mapMm.TabIndex = 68;
+            this.panelMapOOT.Location = new System.Drawing.Point(332, 3);
+            this.panelMapOOT.Name = "panelMapOOT";
+            this.panelMapOOT.Size = new System.Drawing.Size(978, 792);
+            this.panelMapOOT.TabIndex = 68;
             // 
             // cbEmulatorList
             // 
@@ -137,9 +142,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // tabOcarinaOfTime
             // 
-            this.tabOcarinaOfTime.Controls.Add(this.pictureBoxMMItemList);
-            this.tabOcarinaOfTime.Controls.Add(this.mapMm);
-            this.tabOcarinaOfTime.Controls.Add(this.lbCheckListMM);
+            this.tabOcarinaOfTime.Controls.Add(this.pictureBoxOOTItemList);
+            this.tabOcarinaOfTime.Controls.Add(this.panelMapOOT);
+            this.tabOcarinaOfTime.Controls.Add(this.lbCheckListOOT);
             this.tabOcarinaOfTime.Location = new System.Drawing.Point(4, 22);
             this.tabOcarinaOfTime.Name = "tabOcarinaOfTime";
             this.tabOcarinaOfTime.Padding = new System.Windows.Forms.Padding(3);
@@ -150,6 +155,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // tabMajoraMask
             // 
+            this.tabMajoraMask.Controls.Add(this.panelMapMM);
+            this.tabMajoraMask.Controls.Add(this.lbCheckListMM);
+            this.tabMajoraMask.Controls.Add(this.pictureBoxMMItemList);
             this.tabMajoraMask.Location = new System.Drawing.Point(4, 22);
             this.tabMajoraMask.Name = "tabMajoraMask";
             this.tabMajoraMask.Padding = new System.Windows.Forms.Padding(3);
@@ -194,6 +202,31 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.btnRefreshGameAndRom.UseVisualStyleBackColor = true;
             this.btnRefreshGameAndRom.Click += new System.EventHandler(this.btnRefreshGameAndRom_Click);
             // 
+            // pictureBoxMMItemList
+            // 
+            this.pictureBoxMMItemList.InitialImage = null;
+            this.pictureBoxMMItemList.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxMMItemList.Name = "pictureBoxMMItemList";
+            this.pictureBoxMMItemList.Size = new System.Drawing.Size(320, 522);
+            this.pictureBoxMMItemList.TabIndex = 5;
+            this.pictureBoxMMItemList.TabStop = false;
+            // 
+            // lbCheckListMM
+            // 
+            this.lbCheckListMM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.lbCheckListMM.FormattingEnabled = true;
+            this.lbCheckListMM.Location = new System.Drawing.Point(0, 528);
+            this.lbCheckListMM.Name = "lbCheckListMM";
+            this.lbCheckListMM.Size = new System.Drawing.Size(320, 264);
+            this.lbCheckListMM.TabIndex = 68;
+            // 
+            // panelMapMM
+            // 
+            this.panelMapMM.Location = new System.Drawing.Point(322, 3);
+            this.panelMapMM.Name = "panelMapMM";
+            this.panelMapMM.Size = new System.Drawing.Size(978, 792);
+            this.panelMapMM.TabIndex = 69;
+            // 
             // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,9 +245,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.Name = "MainUIForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.OnMainUiFormLoad);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).EndInit();
             this.tabGameMenu.ResumeLayout(false);
             this.tabOcarinaOfTime.ResumeLayout(false);
+            this.tabMajoraMask.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,9 +261,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.Button btnStartListener;
         private System.Windows.Forms.Button btnStopListener;
         private System.Windows.Forms.TextBox tboxDebug;
-        private System.Windows.Forms.PictureBox pictureBoxMMItemList;
-        private System.Windows.Forms.ListBox lbCheckListMM;
-        private System.Windows.Forms.Panel mapMm;
+        private System.Windows.Forms.PictureBox pictureBoxOOTItemList;
+        private System.Windows.Forms.ListBox lbCheckListOOT;
+        private System.Windows.Forms.Panel panelMapOOT;
         private System.Windows.Forms.ComboBox cbEmulatorList;
         private System.Windows.Forms.TabControl tabGameMenu;
         private System.Windows.Forms.TabPage tabOcarinaOfTime;
@@ -237,6 +272,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRefreshGameAndRom;
+        private System.Windows.Forms.Panel panelMapMM;
+        private System.Windows.Forms.ListBox lbCheckListMM;
+        private System.Windows.Forms.PictureBox pictureBoxMMItemList;
     }
 }
 

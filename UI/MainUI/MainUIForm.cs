@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
 using MajoraAutoItemTracker.MemoryReader;
@@ -18,8 +17,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private readonly MajoraMaskController majoraMaskController = new MajoraMaskController();
         private readonly OcarinaOfTimeController ocarinaOfTimeController = new OcarinaOfTimeController();
 
-        private PictureBoxZoomMoveController<CheckLogicZone> _pictureBoxZoomMoveController;
-
         public MainUIForm()
         {
             InitializeComponent();
@@ -33,15 +30,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
             mainUIController.isMemoryListenerStartedSubject.Subscribe(OnEmulatorStartStop);
 
             // Init PictureBox
-            _pictureBoxZoomMoveController = new PictureBoxZoomMoveController<CheckLogicZone>(mapMm);
-            _pictureBoxZoomMoveController.SetSrcImage(Image.FromFile(Application.StartupPath + @"\Resource\Map\82k78q66tcha1.png"));
-            _pictureBoxZoomMoveController.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
+            mainUIController.InitPictureBox(panelMapOOT, panelMapMM);
+            mainUIController.pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListOOT, it);
 
             // Init game controller
-            if (majoraMaskController.Init(pictureBoxMMItemList, lbCheckListMM, out string errorMessage))
-                majoraMaskController.DrawSquareCategory(_pictureBoxZoomMoveController, CST_RECT_WIDTH_HEIGHT);
+            if (majoraMaskController.Init(pictureBoxOOTItemList, lbCheckListOOT, out string errorMessage))
+                majoraMaskController.DrawSquareCategory(mainUIController.pictureBoxMapMM, CST_RECT_WIDTH_HEIGHT);
             else
                 Log(errorMessage);
+
+
         }
 
         private void BtnStartListenerClick(object sender, EventArgs e)

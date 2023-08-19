@@ -140,6 +140,7 @@
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MainUI\EmulatorController.cs" />
+    <Compile Include="UI\MainUI\AbstractRoomController.cs" />
     <Compile Include="UI\MainUI\MainUIController.cs" />
     <Compile Include="UI\MainUI\MainUIForm.cs">
       <SubType>Form</SubType>
