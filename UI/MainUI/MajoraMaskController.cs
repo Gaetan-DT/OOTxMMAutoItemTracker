@@ -88,5 +88,34 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 );
             }
         }
+
+        // Call when change is trigger from memory
+        public void OnItemLogicChange(
+            Tuple<ItemLogicPopertyName, object> itemLogicProperty, 
+            Func<ItemLogic, PictureBox> getPictureBoxFromItemLogic)
+        {
+            var strItemLogicPropertyName = ItemLogicPopertyNameMethod.ToString(itemLogicProperty.Item1);
+            foreach (var itemLogic in itemLogics)
+            {
+                if (strItemLogicPropertyName == itemLogic.propertyName)
+                {
+                    if (itemLogicProperty.Item2 is bool)
+                    {
+                        itemLogic.hasItem = (bool)itemLogicProperty.Item2;
+                        itemLogic.CurrentVariant = 0;
+                    }
+                    // TODO: gerer les différent cas pour les enum
+                    DrawItem(getPictureBoxFromItemLogic, itemLogic);
+                    // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
+                    break;
+                }
+            }
+            /* recuperer l'item logic grace au param itemlogicproperty.item1 de l'event
+            * avec l'item logic maj itemlogic "hasItem" grace au param foo de l'event 
+            * si le foo.Item2 est autre qu'un bool on va maj l'itemlogic.currentvariant
+            rappeler drawitem
+            * appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
+            */
+        }
     }
 }

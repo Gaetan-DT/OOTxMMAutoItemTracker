@@ -300,7 +300,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.ImgBeans.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImgBeans.TabIndex = 15;
             this.ImgBeans.TabStop = false;
-            this.ImgBeans.Click += new System.EventHandler(this.ImgBeans_Click);
             // 
             // ImgScrubTrade
             // 
@@ -725,8 +724,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.lbCheckListMM.Name = "lbCheckListMM";
             this.lbCheckListMM.Size = new System.Drawing.Size(320, 264);
             this.lbCheckListMM.TabIndex = 67;
-            this.lbCheckListMM.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CheckList_MouseClick);
-            this.lbCheckListMM.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.CheckList_DrawItem);
+            this.lbCheckListMM.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OnCheckListMMClick);
+            this.lbCheckListMM.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.OnCheckListMMDrawItem);
             // 
             // mapMm
             // 
