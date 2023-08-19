@@ -1,12 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MajoraAutoItemTracker.MemoryReader.MemoryData;
+using MajoraAutoItemTracker.Model.Enum;
+using System;
+using System.Reactive.Subjects;
 
 namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 {
     class MemoryListenerProvider
     {
+        public static AbstractMemoryListener ProvideMemoryListener(
+            AbstractEmulatorWrapper emulatorWrapper,
+            ReplaySubject<Tuple<ItemLogicPopertyName, object>> replaySubject,
+            RomType romType)
+        {
+            AbstractMemoryDataObserver observer = ProvideAbstractMemoryDataObserver(romType);
+            observer.BindAllEvent(replaySubject);
+            switch (romType)
+            {
+                case RomType.OCARINA_OF_TIME_US_V0:
+                    return new OcarinaOfTimeMemoryListener(emulatorWrapper, (OcarinaOfTimeMemoryDataObserver)observer);
+                case RomType.MAJORA_MASK_:
+                    throw new Exception("Not yet implemented"); // TODO
+                    //return new MajoraMaskMemoryListener(emulatorWrapper, observer);
+                default:
+                    throw new Exception($"Unknown rom type {romType}");
+            }
+        }
+
+        private static AbstractMemoryDataObserver ProvideAbstractMemoryDataObserver(RomType romType)
+        {
+            switch (romType)
+            {
+                case RomType.OCARINA_OF_TIME_US_V0:
+                    return new OcarinaOfTimeMemoryDataObserver();
+                case RomType.MAJORA_MASK_:
+                    throw new Exception("Not yet implemented"); // TODO
+                    //observer = new MajoraMemoryDataObserver();
+                default:
+                    throw new Exception($"Unknown rom type {romType}");
+            }
+        }
     }
 }

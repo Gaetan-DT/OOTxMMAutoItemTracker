@@ -1,4 +1,6 @@
 ﻿using MajoraAutoItemTracker.MemoryReader;
+using MajoraAutoItemTracker.MemoryReader.MemoryData;
+using MajoraAutoItemTracker.MemoryReader.MemoryListener;
 using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 using MajoraAutoItemTracker.Model.Enum;
 using System;
@@ -13,8 +15,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
 {
     class MainUIController
     {
-        private MajoraMaskMemoryListener memoryListener = null;
+        private AbstractMemoryListener memoryListener = null;
         public ReplaySubject<bool> isMemoryListenerStartedSubject = new ReplaySubject<bool>();
+        public ReplaySubject<Tuple<ItemLogicPopertyName, object>> OnAnyItemLogicChange = new ReplaySubject<Tuple<ItemLogicPopertyName, object>>();
 
         public MainUIController()
         {
@@ -22,18 +25,27 @@ namespace MajoraAutoItemTracker.UI.MainUI
         }
 
         public bool StartMemoryListener(
-            AbstractEmulatorWrapper abstractEmulatorWrapper, // TODO Use AbstractEmulatorWrapper 
+            AbstractEmulatorWrapper emulatorWrapper,
+            RomType romType,
             Action<Tuple<ItemLogicPopertyName, object>> onItemLogicChange, 
             out string error)
         {
             error = "";
+            if (emulatorWrapper == null)
+            {
+                error = "No emulator selected";
+                return false;
+            }
+            if (!emulatorWrapper.AttachToProcess())
+            {
+                error = "Unable to attach to process emulator";
+                return false;
+            }
             try
             {
-                ModLoader64Wrapper modLoader64Wrapper = new ModLoader64Wrapper(); // TODO: Change with abstract implementation
-                MajoraMemoryDataObserver majoraMemoryDataObserver = new MajoraMemoryDataObserver();
-                memoryListener = new MajoraMaskMemoryListener(modLoader64Wrapper, majoraMemoryDataObserver);
-                memoryListener.Start();
-                memoryListener.OnAnyItemLogicChange.Subscribe(onItemLogicChange);
+                memoryListener = MemoryListenerProvider.ProvideMemoryListener(emulatorWrapper, OnAnyItemLogicChange, romType);
+                memoryListener.StartThread();
+                OnAnyItemLogicChange.Subscribe(onItemLogicChange);
                 isMemoryListenerStartedSubject.OnNext(true);
                 return true;
             }
@@ -49,7 +61,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             try
             {
-                memoryListener.Stop();
+                memoryListener.StartThread();
                 memoryListener = null;
             }
             finally

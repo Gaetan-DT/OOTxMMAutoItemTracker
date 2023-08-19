@@ -79,7 +79,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                 if (ootCheck == GetZeldaCheckFollowingEndian())
                     return romAddrStart;
             }
-            throw new Exception("Process not found");
+            throw new Exception("Process not found or unable to find Zelda check address");
         }
 
         public static void Test()
