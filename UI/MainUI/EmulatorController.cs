@@ -1,4 +1,5 @@
 ﻿using MajoraAutoItemTracker.MemoryReader;
+using MajoraAutoItemTracker.Model.Enum;
 using System.Collections.Generic;
 using System.Reactive.Subjects;
 
@@ -7,7 +8,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
     class EmulatorController
     {
 
-        public BehaviorSubject<List<AbstractEmulatorWrapper>> subEmulatorList = new BehaviorSubject<List<AbstractEmulatorWrapper>>(new List<AbstractEmulatorWrapper>());
+        public readonly BehaviorSubject<List<AbstractEmulatorWrapper>> subEmulatorList = new BehaviorSubject<List<AbstractEmulatorWrapper>>(new List<AbstractEmulatorWrapper>());
+        public readonly BehaviorSubject<List<RomType>> subRomList = new BehaviorSubject<List<RomType>>(RomTypeMethod.getAsList());
 
         public void RefreshEmulatorAndGameList()
         {
@@ -22,14 +24,17 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void RefreshGameList()
         {
-            //TODO: Implement game gestion
+            subRomList.OnNext(RomTypeMethod.getAsList());
         }
 
         public AbstractEmulatorWrapper GetSelectedEmulator(int index)
         {
-            if (index < 0)
-                return null;
             return subEmulatorList.Value[index];
+        }
+
+        public RomType GetSelectedRomType(int index)
+        {
+            return subRomList.Value[index];
         }
     }
 }

@@ -46,6 +46,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tabGameMenu = new System.Windows.Forms.TabControl();
             this.tabOcarinaOfTime = new System.Windows.Forms.TabPage();
             this.tabMajoraMask = new System.Windows.Forms.TabPage();
+            this.cbRomTypeList = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -54,7 +57,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // lblDebug
             // 
             this.lblDebug.AutoSize = true;
-            this.lblDebug.Location = new System.Drawing.Point(1342, 49);
+            this.lblDebug.Location = new System.Drawing.Point(1342, 89);
             this.lblDebug.Name = "lblDebug";
             this.lblDebug.Size = new System.Drawing.Size(42, 13);
             this.lblDebug.TabIndex = 0;
@@ -62,7 +65,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // btnStartListener
             // 
-            this.btnStartListener.Location = new System.Drawing.Point(1342, 23);
+            this.btnStartListener.Location = new System.Drawing.Point(1536, 79);
             this.btnStartListener.Name = "btnStartListener";
             this.btnStartListener.Size = new System.Drawing.Size(77, 23);
             this.btnStartListener.TabIndex = 1;
@@ -72,7 +75,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // btnStopListener
             // 
-            this.btnStopListener.Location = new System.Drawing.Point(1425, 23);
+            this.btnStopListener.Location = new System.Drawing.Point(1619, 79);
             this.btnStopListener.Name = "btnStopListener";
             this.btnStopListener.Size = new System.Drawing.Size(77, 23);
             this.btnStopListener.TabIndex = 2;
@@ -82,10 +85,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // tboxDebug
             // 
-            this.tboxDebug.Location = new System.Drawing.Point(1342, 65);
+            this.tboxDebug.Location = new System.Drawing.Point(1342, 105);
             this.tboxDebug.Multiline = true;
             this.tboxDebug.Name = "tboxDebug";
-            this.tboxDebug.Size = new System.Drawing.Size(360, 757);
+            this.tboxDebug.Size = new System.Drawing.Size(360, 717);
             this.tboxDebug.TabIndex = 3;
             // 
             // pictureBoxMMItemList
@@ -116,9 +119,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // cbEmulatorList
             // 
             this.cbEmulatorList.FormattingEnabled = true;
-            this.cbEmulatorList.Location = new System.Drawing.Point(1508, 23);
+            this.cbEmulatorList.Location = new System.Drawing.Point(1446, 12);
             this.cbEmulatorList.Name = "cbEmulatorList";
-            this.cbEmulatorList.Size = new System.Drawing.Size(123, 21);
+            this.cbEmulatorList.Size = new System.Drawing.Size(250, 21);
             this.cbEmulatorList.TabIndex = 69;
             // 
             // tabGameMenu
@@ -154,11 +157,40 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tabMajoraMask.Text = "Majora mask";
             this.tabMajoraMask.UseVisualStyleBackColor = true;
             // 
+            // cbRomTypeList
+            // 
+            this.cbRomTypeList.FormattingEnabled = true;
+            this.cbRomTypeList.Location = new System.Drawing.Point(1446, 39);
+            this.cbRomTypeList.Name = "cbRomTypeList";
+            this.cbRomTypeList.Size = new System.Drawing.Size(250, 21);
+            this.cbRomTypeList.TabIndex = 71;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1342, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Emulator";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1342, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Rom type";
+            // 
             // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1708, 829);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbRomTypeList);
             this.Controls.Add(this.tabGameMenu);
             this.Controls.Add(this.cbEmulatorList);
             this.Controls.Add(this.tboxDebug);
@@ -189,6 +221,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.TabControl tabGameMenu;
         private System.Windows.Forms.TabPage tabOcarinaOfTime;
         private System.Windows.Forms.TabPage tabMajoraMask;
+        private System.Windows.Forms.ComboBox cbRomTypeList;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

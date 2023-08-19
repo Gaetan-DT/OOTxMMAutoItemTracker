@@ -16,9 +16,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
             observer.BindAllEvent(replaySubject);
             switch (romType)
             {
-                case RomType.OCARINA_OF_TIME_US_V0:
+                case RomType.OCARINA_OF_TIME_USA_V0:
                     return new OcarinaOfTimeMemoryListener(emulatorWrapper, (OcarinaOfTimeMemoryDataObserver)observer);
-                case RomType.MAJORA_MASK_:
+                case RomType.MAJORA_MASK_USA_V0:
                     throw new Exception("Not yet implemented"); // TODO
                     //return new MajoraMaskMemoryListener(emulatorWrapper, observer);
                 default:
@@ -30,9 +30,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
         {
             switch (romType)
             {
-                case RomType.OCARINA_OF_TIME_US_V0:
+                case RomType.OCARINA_OF_TIME_USA_V0:
                     return new OcarinaOfTimeMemoryDataObserver();
-                case RomType.MAJORA_MASK_:
+                case RomType.MAJORA_MASK_USA_V0:
                     throw new Exception("Not yet implemented"); // TODO
                     //observer = new MajoraMemoryDataObserver();
                 default:

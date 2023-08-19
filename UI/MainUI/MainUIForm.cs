@@ -1,14 +1,10 @@
-﻿using MajoraAutoItemTracker.Model.CheckLogic;
-using MajoraAutoItemTracker.Model.Enum;
-using MajoraAutoItemTracker.Model.Item;
+﻿using MajoraAutoItemTracker.Model.Enum;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
-using Brush = System.Drawing.Brush;
-using Brushes = System.Drawing.Brushes;
 using MajoraAutoItemTracker.MemoryReader;
 
 namespace MajoraAutoItemTracker.UI.MainUI
@@ -33,6 +29,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             emulatorController.RefreshEmulatorAndGameList();
             emulatorController.subEmulatorList.Subscribe(UpdateCbEmulatorList);
+            emulatorController.subRomList.Subscribe(UpdateRomList);
+            mainUIController.isMemoryListenerStartedSubject.Subscribe(OnEmulatorStartStop);
 
             // Init PictureBox
             _pictureBoxZoomMoveController = new PictureBoxZoomMoveController<CheckLogicZone>(mapMm);
@@ -50,7 +48,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             Log("Attaching to modloader");
             var emulatorWrapper = emulatorController.GetSelectedEmulator(cbEmulatorList.SelectedIndex);
-            var romeType = RomType.OCARINA_OF_TIME_US_V0; // TODO: Manage rom type
+            var romeType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
             if (!mainUIController.StartMemoryListener(emulatorWrapper, romeType, OnItemLogicChange, out string error))
                 Log(error);
             Log("Thread started");
@@ -71,12 +69,46 @@ namespace MajoraAutoItemTracker.UI.MainUI
             });
         }
 
+        private void UpdateRomList(List<RomType> romTypes)
+        {
+            cbRomTypeList.SelectedIndex = -1;
+            cbRomTypeList.Items.Clear();
+            cbRomTypeList.Items.AddRange(romTypes.Select((it) => it.ToString()).ToArray());
+            cbRomTypeList.SelectedIndex = cbRomTypeList.Items.Count > 0 ? 0 : -1;
+        }
+
         private void UpdateCbEmulatorList(List<AbstractEmulatorWrapper> emulatorList)
         {
             cbEmulatorList.SelectedIndex = -1;
             cbEmulatorList.Items.Clear();
             cbEmulatorList.Items.AddRange(emulatorList.Select(it => it.GetDisplayName()).ToArray());
             cbEmulatorList.SelectedIndex = cbEmulatorList.Items.Count > 0 ? 0 : -1;
+        }
+
+        private void OnEmulatorStartStop(bool started)
+        {
+            btnStartListener.Enabled = !started;
+            btnStopListener.Enabled = started;
+            cbEmulatorList.Enabled = !started;
+            cbRomTypeList.Enabled = !started;
+            if (started)
+            {
+                var romType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
+                tabGameMenu.TabPages.Clear();
+                switch (romType)
+                {
+                    case RomType.MAJORA_MASK_USA_V0:
+                        tabGameMenu.TabPages.Add(tabMajoraMask);
+                        break;
+                    case RomType.OCARINA_OF_TIME_USA_V0:
+                        tabGameMenu.TabPages.Add(tabOcarinaOfTime);
+                        break;
+                    case RomType.RANDOMIZE_OOT_X_MM:
+                        tabGameMenu.TabPages.Add(tabOcarinaOfTime);
+                        tabGameMenu.TabPages.Add(tabMajoraMask);
+                        break;
+                }
+            }
         }
 
         private void Log(String message)
