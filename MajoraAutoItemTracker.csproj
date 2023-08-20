@@ -198,7 +198,7 @@
     </Compile>
     <None Include="README.MD" />
     <None Include="Resource\CheckLogic\CheckLogicCategory.json" />
-    <None Include="Resource\CheckLogic\oot_CheckLogicCategory.json.json" />
+    <None Include="Resource\CheckLogic\oot_CheckLogicCategory.json" />
     <None Include="Resource\Logics\REQ_CASUAL_12.json" />
     <None Include="Resource\Mappings\oot_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
@@ -223,6 +223,7 @@
     <Content Include="Resource\Itemicons\mm_items_mono.png" />
     <Content Include="Resource\Itemicons\oot_items.png" />
     <Content Include="Resource\Itemicons\oot_items_mono.png" />
+    <Content Include="Resource\Map\OOT.png" />
     <Content Include="UI\Layout\BarinadesItemTracker_R4tPCG0m05.png" />
     <Content Include="UI\Layout\mm_layout.png" />
     <Content Include="Resource\Map\82k78q66tcha1.png" />
