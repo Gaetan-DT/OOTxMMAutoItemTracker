@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 using MajoraAutoItemTracker.Model;
+using MajoraAutoItemTracker.Model.Enum;
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
@@ -14,13 +15,34 @@ namespace MajoraAutoItemTracker.MemoryReader
         protected Process m_Process;
         protected uint m_romAddrStart;
 
-        public abstract bool AttachToProcess();
+        public abstract bool AttachToProcess(RomType romType);
         public abstract bool ProcessExist();
         public abstract string GetDisplayName();
 
-        protected int GetZeldaCheckFollowingEndian()
+        protected int GetZeldaCheckFollowingEndianAndRomType(RomType romType)
         {
-            return IsEmulatorUseBigEndian ? OOTOffsets.ZELDAZ_CHECK_BE : OOTOffsets.ZELDAZ_CHECK_LE;
+            switch (romType)
+            {
+                case RomType.OCARINA_OF_TIME_USA_V0:
+                    return IsEmulatorUseBigEndian ? OOTOffsets.ZELDAZ_CHECK_BE : OOTOffsets.ZELDAZ_CHECK_LE;
+                case RomType.MAJORA_MASK_USA_V0:
+                    return IsEmulatorUseBigEndian ? MMOffsets.ZELDAZ_CHECK_BE : MMOffsets.ZELDAZ_CHECK_LE;
+                default :
+                    throw new Exception($"Unknown rom type: {romType}");
+            }   
+        }
+
+        protected uint GetZeldazAddress(RomType romType)
+        {
+            switch (romType)
+            {
+                case RomType.OCARINA_OF_TIME_USA_V0:
+                    return OOTOffsets.ZELDAZ_CHECK_ADDRESS;
+                case RomType.MAJORA_MASK_USA_V0:
+                    return MMOffsets.ZELDAZ_CHECK_ADDRESS;
+                default:
+                    throw new Exception($"Unknown rom type: {romType}");
+            }
         }
 
         public UIntPtr GetPtrOffsetWithRomStart(uint offset)

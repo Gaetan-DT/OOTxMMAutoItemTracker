@@ -2,6 +2,7 @@
 {
     class OOTOffsets // Address set in Little endian
     {
+        public const int ZELDAZ_CHECK_ADDRESS = 0x11A5EC;
         // To find it we need to check 32byte that match:   'ZELD' ->  0x5A454C44 (1514490948)
         // If done the next 32 byte should match :          'AZ  ' ->  0x415A0000 (1096417280)
         public const int ZELDAZ_CHECK_BE = 0x5A454C44;   // = 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MajoraAutoItemTracker.Model.Enum;
+using System;
 using System.Diagnostics;
 
 namespace MajoraAutoItemTracker.MemoryReader.Project64
@@ -21,11 +22,11 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
 
         protected override bool IsEmulatorUseBigEndian => true;
 
-        public override bool AttachToProcess()
+        public override bool AttachToProcess(RomType romType)
         {
             try {
                 m_Process = FindProcessOrThrow();
-                m_romAddrStart = FindStratAddressOrThrow();
+                m_romAddrStart = FindStratAddressOrThrow(romType);
                 return true;
             } catch (Exception e) { 
                 Debug.WriteLine(e);
@@ -51,7 +52,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
             return processList[0];
         }
         
-        public uint FindStratAddressOrThrow()
+        public uint FindStratAddressOrThrow(RomType romType)
         {
             // Src: https://github.com/SM64-TAS-ABC/STROOP/blob/096d0ced5bd460b71022ac1da8c8800e95c4fb32/STROOP/Config/Config.xml#L19
             // ramStart seems to be at this adress "0x4BAF0000"
@@ -65,13 +66,13 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
                 int ootCheck = 0;
                 try
                 {
-                    ootCheck = Memory.ReadInt32(m_Process, new UIntPtr(romAddrStart + 0x11A5EC), IsEmulatorUseBigEndian);
+                    ootCheck = Memory.ReadInt32(m_Process, new UIntPtr(romAddrStart + GetZeldazAddress(romType)), IsEmulatorUseBigEndian);
                 }
                 catch (Exception e)
                 {
                     Debug.WriteLine(e);
                 }
-                if (ootCheck == GetZeldaCheckFollowingEndian())
+                if (ootCheck == GetZeldaCheckFollowingEndianAndRomType(romType))
                     return romAddrStart;
             }
             throw new Exception("Process not found");
@@ -80,7 +81,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
         public static void Test()
         {
             var wrapper = new Project64Wrapper();
-            if (wrapper.AttachToProcess())
+            if (wrapper.AttachToProcess(RomType.OCARINA_OF_TIME_USA_V0))
             {
                 var result5 = wrapper.ReadUint8InEdianSizeAsInt(Model.OOTOffsets.CST_INVENTORY_ADDRESS_OCARINA).ToString("X");
                 // Ocarina oot adress: 0x0011A648 but 0x8011A64B in emulator memory acces

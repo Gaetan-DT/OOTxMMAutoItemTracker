@@ -1,6 +1,6 @@
 ﻿using MajoraAutoItemTracker.Model.Enum;
 using System.Reactive.Subjects;
-using MajoraAutoItemTracker.MemoryReader.ModLoader64;
+using System;
 
 namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 {
@@ -84,6 +84,8 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
         public bool HasNewWaveBossaNova = false;
         public bool HasElegyOfEmptyness = false;
         public bool HasSongOathToORder = false;
+        public bool HasSunSong = false;
+
         public bool HasBossMaskOdolwa = false;
         public bool HasBoosMaskGoht = false;
         public bool HasBoosMaskGyorg = false;
@@ -94,100 +96,104 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
         public LinkTransformation CurrentLinkTransformation = LinkTransformation.Human;
         #endregion
 
-        public MajoraMemoryData(ModLoader64Wrapper modLoader)
-        {
-            // Link
-            MagicMeter = MagicMeterMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_LINKG_MAGIC_METER));
-            var bDoubleDefense = modLoader.readByte(MMOffsets.CST_LINKG_DOUBLE_DEFENSE, 8);
-            HasDoubleDefense = (bDoubleDefense[0] & 00010020) != bDoubleDefense[0];
-
-            // Inventory Equipment
-            EquipmentWallet = EquipmentWalletMethod.ReadFromMemory(modLoader.readInt8(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
-            HasBombersNoteBook = modLoader.CheckHexRaised(MMOffsets.CST_INVENTORY_EQUIPEMENT_BOMBERS_NOTEBOOK, 2);
-            var byteQuiverAndBombBag = modLoader.readByte(MMOffsets.CST_INVENTORY_EQUIPEMENT_QUIVER_BOMBBAG, 1)[0];
-            EquipmentQuiver = EquipmentQuiverMethod.ReadFromMemory(byteQuiverAndBombBag);
-            EquipmentBombBag = EquipmentBombBagMethod.ReadFromMemory(byteQuiverAndBombBag);
-
-            // INVENTORY C-Button Items
-            HasOcarina = modLoader.ReadItem(MMOffsets.CST_INVENTORY_OCARINA, 0x00);
-            HasHeroBow = modLoader.ReadItem(MMOffsets.CST_INVENTORY_HERO_BOW, 0x01);
-            //
-            HasHeroBow = modLoader.ReadItem(MMOffsets.CST_INVENTORY_FIRE_ARROWS, 0x02);
-            HasIceArrows = modLoader.ReadItem(MMOffsets.CST_INVENTORY_ICE_ARROWS, 0x03);
-            HasLightArrows = modLoader.ReadItem(MMOffsets.CST_INVENTORY_LIGHT_ARROWS, 0x04);
-            HasBomb = modLoader.ReadItem(MMOffsets.CST_INVENTORY_BOMB, 0x06);
-            HasBombchus = modLoader.ReadItem(MMOffsets.CST_INVENTORY_BOMBCHUS, 0x07);
-            HasDekuSticks = modLoader.ReadItem(MMOffsets.CST_INVENTORY_DEKU_STICKS, 0x08);
-            HasDekuNuts = modLoader.ReadItem(MMOffsets.CST_INVENTORY_DEKU_NUTS, 0x09);
-            HasMagicBeans = modLoader.ReadItem(MMOffsets.CST_INVENTORY_MAGIC_BEANS, 0x0A);
-            HasPowderKeg = modLoader.ReadItem(MMOffsets.CST_INVENTORY_POWDER_KEG, 0x0C);
-            HasPictographBox = modLoader.ReadItem(MMOffsets.CST_INVENTORY_PICTOGRAPH_BOX, 0x0D);
-            HasLensOfTruth = modLoader.ReadItem(MMOffsets.CST_INVENTORY_LENS_OF_TRUTH, 0x0E);
-            HasHookShot = modLoader.ReadItem(MMOffsets.CST_INVENTORY_HOOKSHOT, 0x0F);
-            HasGreatFairySword = modLoader.ReadItem(MMOffsets.CST_INVENTORY_GREAT_FAIRY_SWORD, 0x10);
-            HasTradingItem1 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_1);
-            HasTradingItem2 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_2);
-            HasTradingItem3 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_3);
-            HasBootle1 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_1);
-            HasBootle2 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_2);
-            HasBootle3 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_3);
-            HasBootle4 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_4);
-            HasBootle5 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_5);
-            HasBootle6 = modLoader.ReadNotFF(MMOffsets.CST_INVENTORY_BOTTLE_6);
-            // INVENTORY Masks
-            HasDekuMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_DEKU_MASK);
-            HasGoronMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GORON_MASK);
-            HasZoraMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_ZORA_MASK);
-            HasFierceDeityMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_FIERCE_DEITY_MASK);
-            HasPostmanHat = modLoader.ReadNotFF(MMOffsets.CST_MASK_POSTMAN_HAT);
-            HasAllNightMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_ALL_NIGHT_MASK);
-            HasBlastMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_BLAST_MASK);
-            HasStoneMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_STONE_MASK);
-            HasGreatFairyMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GREAT_FAIRY_MASK);
-            HasKeatonMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_KEATON_MASK);
-            HasBremenMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_BREMEN_MASK);
-            HasBunnyHood = modLoader.ReadNotFF(MMOffsets.CST_MASK_BUNNY_HOOD);
-            HasDonGeroMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_DON_GERO_MASK);
-            HasMaskOfScents = modLoader.ReadNotFF(MMOffsets.CST_MASK_MASK_OF_SCENTS);
-            HasRomaniMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_ROMANI_MASK);
-            HasCircusLeaderMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_CIRCUS_LEADER_MASK);
-            HasKaefiMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_KAFEI_MASK);
-            HasCoupleMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_COUPLE_MASK);
-            HasMaskOfTruth = modLoader.ReadNotFF(MMOffsets.CST_MASK_MASK_OF_TRUTH);
-            HasKamaroMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_KAMARO_MASK);
-            HasGibdoMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GIBDO_MASK);
-            HasGaroMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GARO_MASK);
-            HasCaptainHat = modLoader.ReadNotFF(MMOffsets.CST_MASK_CAPTAIN_HAT);
-            HasGiantMask = modLoader.ReadNotFF(MMOffsets.CST_MASK_GIANT_MASK);
-            // INVENTORY Quest Items
-            HasSongOfTime = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONG_OF_TIME, 4);
-            HasSongOfHealing = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONG_OF_HEALING, 5);
-            HasEponaSong = modLoader.CheckHexRaised(MMOffsets.CST_SONG_EPONA_SONG, 6);
-            HasSongOfSoaring = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONG_OF_SOARING, 7);
-            HasSongOfStorm = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONG_OF_STORMS, 0);
-            HasSonataOfAwakening = modLoader.CheckHexRaised(MMOffsets.CST_SONG_SONATA_OF_AWAKENING, 6);
-            HasGoronLullaby = modLoader.CheckHexRaised(MMOffsets.CST_SONG_GORON_LULLABY_INTRO, 0);
-            HasNewWaveBossaNova = modLoader.CheckHexRaised(MMOffsets.CST_SONG_NEW_WAVE_BOSSA_NOVA, 0);
-            HasElegyOfEmptyness = modLoader.CheckHexRaised(MMOffsets.CST_SONG_ELEGY_OF_EMPTYNESS, 1);
-            HasSongOathToORder = modLoader.CheckHexRaised(MMOffsets.CST_SONG_OATH_TO_ORDER, 2);
-            // Boss Masks
-            var bossMask = modLoader.readByte(MMOffsets.CST_BOSS_MASK, 1)[0];
-            HasBossMaskOdolwa = (bossMask & (1 << 0)) != 0;
-            HasBoosMaskGoht = (bossMask & (1 << 1)) != 0;
-            HasBoosMaskGyorg = (bossMask & (1 << 2)) != 0;
-            HasBoosMaskTwinmold = (bossMask & (1 << 3)) != 0;
-
-            // Other
-            CurrentLinkTransformation = LinkTransformationMethods.ReadFromMemory(modLoader.readInt8(MMOffsets.CURRENT_TRANSFORMATION));
-        }
-
         public override void ReadDataFromEmulator(AbstractRomController emulatorWrapper)
         {
-            throw new System.NotImplementedException();
+            // Link
+            // FIXME: MagicMeter = MagicMeterMethod.ReadFromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_LINKG_MAGIC_METER));
+            //var bDoubleDefense = emulatorWrapper.ReadUint8InEdianSizeAsByte(MMOffsets.CST_LINKG_DOUBLE_DEFENSE);
+            //HasDoubleDefense = (bDoubleDefense[0] & 00010020) != bDoubleDefense[0];
+
+            // Inventory Equipment
+            // FIXME: EquipmentWallet = EquipmentWalletMethod.ReadFromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
+
+            // INVENTORY C-Button Items
+            HasOcarina = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_OCARINA);
+            HasHeroBow = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_HERO_BOW);
+            HasHeroBow = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_HERO_BOW);
+            HasIceArrows = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_ICE_ARROWS);
+            HasLightArrows = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_LIGHT_ARROWS);
+            HasBomb = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOMB);
+            HasBombchus = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOMBCHUS);
+            HasDekuSticks = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_DEKU_STICKS);
+            HasDekuNuts = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_DEKU_NUTS);
+            HasMagicBeans = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_MAGIC_BEANS);
+            HasPowderKeg = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_POWDER_KEG);
+            HasPictographBox = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_PICTOGRAPH_BOX);
+            HasLensOfTruth = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_LENS_OF_TRUTH);
+            HasHookShot = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_HOOKSHOT);
+            HasGreatFairySword = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_GREAT_FAIRY_SWORD);
+            HasTradingItem1 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_1);
+            HasTradingItem2 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_2);
+            HasTradingItem3 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_3);
+            HasBootle1 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_1);
+            HasBootle2 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_2);
+            HasBootle3 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_3);
+            HasBootle4 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_4);
+            HasBootle5 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_5);
+            HasBootle6 = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_6);
+            // INVENTORY Masks
+            HasDekuMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_DEKU_MASK);
+            HasGoronMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_GORON_MASK);
+            HasZoraMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_ZORA_MASK);
+            HasFierceDeityMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_FIERCE_DEITY_MASK);
+            HasPostmanHat = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_POSTMAN_HAT);
+            HasAllNightMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_ALL_NIGHT_MASK);
+            HasBlastMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_BLAST_MASK);
+            HasStoneMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_STONE_MASK);
+            HasGreatFairyMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_GREAT_FAIRY_MASK);
+            HasKeatonMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_KEATON_MASK);
+            HasBremenMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_BREMEN_MASK);
+            HasBunnyHood = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_BUNNY_HOOD);
+            HasDonGeroMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_DON_GERO_MASK);
+            HasMaskOfScents = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_MASK_OF_SCENTS);
+            HasRomaniMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_ROMANI_MASK);
+            HasCircusLeaderMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_CIRCUS_LEADER_MASK);
+            HasKaefiMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_KAFEI_MASK);
+            HasCoupleMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_COUPLE_MASK);
+            HasMaskOfTruth = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_MASK_OF_TRUTH);
+            HasKamaroMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_KAMARO_MASK);
+            HasGibdoMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_GIBDO_MASK);
+            HasGaroMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_GARO_MASK);
+            HasCaptainHat = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_CAPTAIN_HAT);
+            HasGiantMask = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_MASK_GIANT_MASK);
+            // INVENTORY Quest Items //FIXME: C'est de la merde
+
+            var valueQuiverAndBombBag = emulatorWrapper.ReadUint8InEdianSizeAsByte(MMOffsets.CST_INVENTORY_ADDRESS_QUIVER_BOMB_BAG);
+            var valueLulabyIntroAndHearthPieces = emulatorWrapper.ReadUint8InEdianSizeAsByte(MMOffsets.CST_INVENTORY_ADDRESS_LULLABY_INTRO_AND_HEART_PIECES);
+            var valueSongAndBomberNotebook = emulatorWrapper.ReadUint8InEdianSizeAsByte(MMOffsets.CST_INVENTORY_ADDRESS_SONG_AND_BOMBER_NOTEBOOK);
+            var valuePartialSong = emulatorWrapper.ReadUint8InEdianSizeAsByte(MMOffsets.CST_INVENTORY_ADDRESS_PARTIAL_SONG);
+            var valueSongAndRemains = emulatorWrapper.ReadUint8InEdianSizeAsByte(MMOffsets.CST_INVENTORY_ADDRESS_SONG_AND_REMAINS);
+
+            EquipmentQuiver = EquipmentQuiverMethod.ReadFromMemory(valueQuiverAndBombBag);
+            EquipmentBombBag = EquipmentBombBagMethod.ReadFromMemory(valueQuiverAndBombBag);
+
+            HasBombersNoteBook = emulatorWrapper.CheckBitRaise(valueSongAndBomberNotebook, MMOffsets.CST_INVENTORY_VALUE_BOMBER_NOTEBOOK);
+
+            HasSongOfTime = emulatorWrapper.CheckBitRaise(valuePartialSong, MMOffsets.CST_INVENTORY_VALUE_SONG_OF_TIME);
+            HasSongOfHealing = emulatorWrapper.CheckBitRaise(valuePartialSong, MMOffsets.CST_INVENTORY_VALUE_SONG_OF_HEALING);
+            HasEponaSong = emulatorWrapper.CheckBitRaise(valuePartialSong, MMOffsets.CST_INVENTORY_VALUE_EPONA_SONG);
+            HasSongOfSoaring = emulatorWrapper.CheckBitRaise(valuePartialSong, MMOffsets.CST_INVENTORY_VALUE_SONG_OF_SOARING);
+            HasSongOfStorm = emulatorWrapper.CheckBitRaise(valueSongAndBomberNotebook, MMOffsets.CST_INVENTORY_VALUE_SONG_OF_STORMS);
+            HasSonataOfAwakening = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_SONG_SONATA_OF_AWAKENING);
+            HasGoronLullaby = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_SONG_GORON_LULLABY);
+            HasNewWaveBossaNova = emulatorWrapper.CheckBitRaise(valuePartialSong, MMOffsets.CST_INVENTORY_VALUE_SONG_NEW_WAVE_BOSSA_NOVA);
+            HasElegyOfEmptyness = emulatorWrapper.CheckBitRaise(valuePartialSong, MMOffsets.CST_INVENTORY_VALUE_SONG_ELEGY_OF_EMPTINESS);
+            HasSongOathToORder = emulatorWrapper.CheckBitRaise(valuePartialSong, MMOffsets.CST_INVENTORY_VALUE_SONG_OATH_TO_ORDER);
+            //Does not exist in MM: emulatorWrapper.CheckBitRaise(valuePartialSong, MMOffsets.CST_INVENTORY_VALUE_SONG_SARIA_SONG);
+            HasSunSong = emulatorWrapper.CheckBitRaise(valueSongAndBomberNotebook, MMOffsets.CST_INVENTORY_VALUE_SUN_SONG);
+            // Boss Masks
+
+            HasBossMaskOdolwa = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_ODOLWA_REMAINS);
+            HasBoosMaskGoht = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_GOHT_REMAINS);
+            HasBoosMaskGyorg = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_GYORG_REMAINS);
+            HasBoosMaskTwinmold = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_TWINMODL_REMAINS);
+
+            // Other
+            // FIXME: CurrentLinkTransformation = LinkTransformationMethods.ReadFromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CURRENT_TRANSFORMATION));
         }
     }
 
-    class MajoraMemoryDataObserver
+    class MajoraMemoryDataObserver : AbstractMemoryDataObserver<MajoraMaskItemLogicPopertyName>
     { 
         #region Other
         // ReplaySubject<>
@@ -271,12 +277,86 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
         public ReplaySubject<bool> HasNewWaveBossaNova = new ReplaySubject<bool>(1);
         public ReplaySubject<bool> HasElegyOfEmptyness = new ReplaySubject<bool>(1);
         public ReplaySubject<bool> HasSongOathToORder = new ReplaySubject<bool>(1);
+        public ReplaySubject<bool> HasSunSong = new ReplaySubject<bool>(1);
         public ReplaySubject<bool> HasBossMaskOdolwa = new ReplaySubject<bool>(1);
         public ReplaySubject<bool> HasBoosMaskGoht = new ReplaySubject<bool>(1);
         public ReplaySubject<bool> HasBoosMaskGyorg = new ReplaySubject<bool>(1);
         public ReplaySubject<bool> HasBoosMaskTwinmold = new ReplaySubject<bool>(1);
         #endregion
 
+        public override void BindAllEvent(ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> replaySubject)
+        {
+            //observer.CurrentLinkTransformation.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            MagicMeter.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgMagic, value)));
+            HasDoubleDefense.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgDoubleDefense, value)));
+            EquipmentWallet.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgWallet, value)));
+            EquipmentQuiver.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgQuiver, value)));
+            EquipmentBombBag.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgBombBag, value)));
+            HasBombersNoteBook.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgBombersNote, value)));
+            HasOcarina.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgOcarina, value)));
+            HasHeroBow.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgBow, value)));
+            HasFireArrows.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgFireArrow, value)));
+            HasIceArrows.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgIceArrow, value)));
+            HasLightArrows.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgLightArrow, value)));
+            HasBomb.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgBombBag, value)));
+            HasBombchus.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgBombchu, value)));
+            HasDekuSticks.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgStick, value)));
+            HasDekuNuts.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgNuts, value)));
+            HasMagicBeans.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgBeans, value)));
+            HasPowderKeg.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgKeg, value)));
+            HasPictographBox.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgPicto, value)));
+            HasLensOfTruth.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgLens, value)));
+            HasHookShot.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgHook, value)));
+            HasGreatFairySword.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgGfsword, value)));
+            //observer.HasTradingItem1.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasTradingItem2.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasTradingItem3.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            HasBootle1.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle1, value)));
+            HasBootle2.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle2, value)));
+            HasBootle3.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle3, value)));
+            HasBootle4.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle4, value)));
+            HasBootle5.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle5, value)));
+            HasBootle6.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle6, value)));
+            HasDekuMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.DekuMask, value)));
+            HasGoronMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GoronMask, value)));
+            HasZoraMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ZoraMask, value)));
+            HasFierceDeityMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.FiercedeityMask, value)));
+            HasPostmanHat.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.PostmanMask, value)));
+            HasAllNightMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.AllnightMask, value)));
+            HasBlastMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.BlastMask, value)));
+            HasStoneMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.StoneMask, value)));
+            HasGreatFairyMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GreatfairyMask, value)));
+            HasKeatonMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.KeatonMask, value)));
+            HasBremenMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.BremenMask, value)));
+            HasBunnyHood.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.BunnyhoodMask, value)));
+            HasDonGeroMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.DonGeroMask, value)));
+            HasMaskOfScents.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ScentsMask, value)));
+            HasRomaniMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.RomaniMask, value)));
+            HasCircusLeaderMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.CircusleaderMask, value)));
+            HasKaefiMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.KafeiMask, value)));
+            HasCoupleMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.CoupleMask, value)));
+            HasMaskOfTruth.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.TruthMask, value)));
+            HasKamaroMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.KamaroMask, value)));
+            HasGibdoMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GibdoMask, value)));
+            HasGaroMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GaroMask, value)));
+            HasCaptainHat.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.CaptainMask, value)));
+            HasGiantMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GiantMask, value)));
+            //observer.HasSongOfTime.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasSongOfHealing.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasEponaSong.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasSongOfSoaring.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasSongOfStorm.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasSonataOfAwakening.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasGoronLullaby.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasNewWaveBossaNova.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasElegyOfEmptyness.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //observer.HasSongOathToORder.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            //HasSunSong.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName., value)));
+            HasBossMaskOdolwa.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.OdolwaMask, value)));
+            HasBoosMaskGoht.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GohtMask, value)));
+            HasBoosMaskGyorg.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GyorgMask, value)));
+            HasBoosMaskTwinmold.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.TwinmoldMask, value)));
+        }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MajoraAutoItemTracker.Model.Enum;
+using System;
 using System.Diagnostics;
 
 namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
@@ -19,9 +20,9 @@ namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
 
         protected override bool IsEmulatorUseBigEndian => false;
 
-        public override bool AttachToProcess()
+        public override bool AttachToProcess(RomType romType)
         {
-            return attachToModLoader64x86();
+            return attachToModLoader64x86(romType);
         }
 
         public override bool ProcessExist()
@@ -34,8 +35,10 @@ namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
             return "ModLoader64";
         }
 
-        private bool attachToModLoader64x86()
+        private bool attachToModLoader64x86(RomType romType)
         {
+            if (romType != RomType.MAJORA_MASK_USA_V0)
+                throw new Exception("Not yet supported for modloader64");
             try
             {
                 var processList = Process.GetProcessesByName(MODE_LOADER_PROCESS_NAME);

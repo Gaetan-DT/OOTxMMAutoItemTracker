@@ -59,7 +59,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 error = "No emulator selected";
                 return false;
             }
-            if (!emulatorWrapper.AttachToProcess())
+            if (!emulatorWrapper.AttachToProcess(romType))
             {
                 error = "Unable to attach to process emulator";
                 return false;

@@ -85,18 +85,17 @@ namespace MajoraAutoItemTracker.UI.MainUI
                         itemLogic.hasItem = (bool)itemLogicProperty.Item2;
                         itemLogic.CurrentVariant = 0;
                     }
+                    else if (itemLogicProperty.Item2 is EquipmentQuiver)
+                    {
+                        itemLogic.hasItem = (EquipmentQuiver)itemLogicProperty.Item2 != EquipmentQuiver.None;
+                        itemLogic.CurrentVariant = (int)itemLogicProperty.Item2;
+                    }
                     // TODO: gerer les différent cas pour les enum
                     pictureBoxItemList.Refresh();
                     // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
                     break;
                 }
             }
-            /* recuperer l'item logic grace au param itemlogicproperty.item1 de l'event
-            * avec l'item logic maj itemlogic "hasItem" grace au param foo de l'event 
-            * si le foo.Item2 est autre qu'un bool on va maj l'itemlogic.currentvariant
-            rappeler drawitem
-            * appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
-            */
         }
 
         public override void DrawAllItemList(object sender, PaintEventArgs e)
