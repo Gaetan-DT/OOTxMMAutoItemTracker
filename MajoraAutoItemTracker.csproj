@@ -131,9 +131,10 @@
     <Compile Include="Model\Item\ItemLogic.cs" />
     <Compile Include="Model\Item\ItemLogicMethod.cs" />
     <Compile Include="Model\Item\ItemLogicVariant.cs" />
-    <Compile Include="Model\Logic\JsonFormatLogicItem.cs" />
+    <Compile Include="Model\Logic\MM\MajoraMaskJsonFormatLogicItem.cs" />
     <Compile Include="Logic\LogicResolver.cs" />
     <Compile Include="Model\Logic\LogicFile.cs" />
+    <Compile Include="Model\Logic\OOT\OcarinaOfTimeJsonFormatLogicItem.cs" />
     <Compile Include="Model\Logic\TimeOfDay.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

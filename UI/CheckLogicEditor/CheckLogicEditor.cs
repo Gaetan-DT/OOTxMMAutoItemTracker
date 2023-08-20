@@ -75,7 +75,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
         private void lbLogic_DoubleClick(object sender, EventArgs e)
         {
             if (sender == lbLogic)
-                addRemoveToCheck((lbLogic.Items[lbLogic.SelectedIndex] as JsonFormatLogicItem).Id);
+                addRemoveToCheck((lbLogic.Items[lbLogic.SelectedIndex] as MajoraMaskJsonFormatLogicItem).Id);
             else if (sender == lbCheck)
                 addRemoveToCheck((lbCheck.Items[lbCheck.SelectedIndex] as OcarinaOfTimeCheckLogic).Id, true);
         }

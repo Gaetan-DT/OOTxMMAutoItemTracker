@@ -8,7 +8,7 @@ namespace MajoraAutoItemTracker.Model
 {
     class LogicResolver
     {
-        private readonly Dictionary<string, JsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.JsonFormatLogicItem>();
+        private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.MajoraMaskJsonFormatLogicItem>();
         public Subject<CheckLogic.OcarinaOfTimeCheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.OcarinaOfTimeCheckLogic>();
 
         public bool debugMode = false;
@@ -46,7 +46,7 @@ namespace MajoraAutoItemTracker.Model
         }
 
         private bool IsItemLogicCanBeValidated(
-            JsonFormatLogicItem jsonLogicItem, 
+            MajoraMaskJsonFormatLogicItem jsonLogicItem, 
             Dictionary<string, ItemLogic> dicItemLogic, 
             bool allowTrick,
             HashSet<string> recursivityCheck)
@@ -88,7 +88,7 @@ namespace MajoraAutoItemTracker.Model
             return true;
         }
 
-        private bool IsAnItemLogic(JsonFormatLogicItem jsonLogicItem, Dictionary<string, ItemLogic> dicItemLogic, out bool isItemClaim)
+        private bool IsAnItemLogic(MajoraMaskJsonFormatLogicItem jsonLogicItem, Dictionary<string, ItemLogic> dicItemLogic, out bool isItemClaim)
         {
             // Check if it a item and get the itemLogic
             if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic itemLogic))
@@ -104,7 +104,7 @@ namespace MajoraAutoItemTracker.Model
         }
 
         private bool IsRequireItemCanBeValidated(
-            JsonFormatLogicItem jsonLogicItem, 
+            MajoraMaskJsonFormatLogicItem jsonLogicItem, 
             Dictionary<string, ItemLogic> dicItemLogic,
             bool allowTrick,
             HashSet<string> recursivityCheck)
@@ -125,7 +125,7 @@ namespace MajoraAutoItemTracker.Model
         }
 
         private bool IsAnyConditionalItemsCanBeValidated(
-            JsonFormatLogicItem jsonLogicItem, 
+            MajoraMaskJsonFormatLogicItem jsonLogicItem, 
             Dictionary<string, ItemLogic> dicItemLogic,
             bool allowTrick,
             HashSet<string> recursivityCheck)
@@ -154,9 +154,9 @@ namespace MajoraAutoItemTracker.Model
 
         #region Utilities
 
-        private JsonFormatLogicItem FindLogic(string logicIdStr)
+        private MajoraMaskJsonFormatLogicItem FindLogic(string logicIdStr)
         {
-            if (!_logicDictionary.TryGetValue(logicIdStr, out JsonFormatLogicItem jsonLogicItem))
+            if (!_logicDictionary.TryGetValue(logicIdStr, out MajoraMaskJsonFormatLogicItem jsonLogicItem))
             {
                 Debug.WriteLine("Unable to find logic for check: " + logicIdStr);
                 return null;

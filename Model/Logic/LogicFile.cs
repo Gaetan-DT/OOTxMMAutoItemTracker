@@ -1,9 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using MajoraAutoItemTracker.Model.Logic.MM;
+using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.IO;
 
 namespace MajoraAutoItemTracker.Model.Logic
 {
-    class LogicFile
+    class LogicFile<JsonFormatLogicItem>
     {
         public int Version { get; set; }
         public List<JsonFormatLogicItem> Logic { get; set; }
@@ -13,34 +15,16 @@ namespace MajoraAutoItemTracker.Model.Logic
             return JsonConvert.SerializeObject(this);
         }
 
-        public static LogicFile FromJson(string json)
+        public static LogicFile<JsonFormatLogicItem> FromFile(string filePath)
         {
-            var _logic = JsonConvert.DeserializeObject<LogicFile>(json);
-            /*
-            foreach (var logicItem in _logic.Logic)
-            {
-                if (System.Enum.TryParse(logicItem.Id, out Item item))
-                {
-                    var multiLocationAttribute = item.GetAttribute<MultiLocationAttribute>();
-                    if (multiLocationAttribute != null)
-                    {
-                        logicItem.RequiredItems.Clear();
-                        logicItem.ConditionalItems.Clear();
-                        logicItem.TimeAvailable = TimeOfDay.None;
-                        logicItem.TimeNeeded = TimeOfDay.None;
-                        logicItem.TimeSetup = TimeOfDay.None;
-                        logicItem.IsTrick = false;
-                        logicItem.TrickTooltip = null;
-                        foreach (var location in multiLocationAttribute.Locations)
-                        {
-                            logicItem.ConditionalItems.Add(new List<string> { location.ToString() });
-                        }
-                        logicItem.IsMultiLocation = true;
-                    }
-                }
-            }
-            */
-            return _logic;
+            return FromJson(File.ReadAllText(filePath));
+        }
+
+        public static LogicFile<JsonFormatLogicItem> FromJson(string json)
+        {
+            // MajoraMaskJsonFormatLogicItem
+            // OcarinaOfTimeJsonFormatLogicItem
+            return JsonConvert.DeserializeObject<LogicFile<JsonFormatLogicItem>>(json);
         }
     }
 }

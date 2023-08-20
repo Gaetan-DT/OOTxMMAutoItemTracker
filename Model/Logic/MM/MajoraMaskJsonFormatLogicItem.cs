@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace MajoraAutoItemTracker.Model.Logic
+namespace MajoraAutoItemTracker.Model.Logic.MM
 {
-    public class JsonFormatLogicItem
+    public class MajoraMaskJsonFormatLogicItem
     {
         public String Id { get; set; }
         public List<String> RequiredItems { get; set; } = new List<string>();

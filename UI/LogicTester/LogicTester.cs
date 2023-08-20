@@ -154,7 +154,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             var checkUnderWaterChest = LogicTesterHelper.QuickCreateCheckLogic(strItemCheckUnderwaterChest);
 
             // Sample logic file
-            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<JsonFormatLogicItem>
+            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
             {
                 LogicTesterHelper.QuickCreateJsonItemLogic(strItemCheckUnderwaterChest, new List<string> { strItemRequireZoraMask, strItemAccesToTheUnderwaterZone }),
                 LogicTesterHelper.QuickCreateJsonItemLogic(strItemRequireZoraMask),
@@ -197,7 +197,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             var checkUnderWaterChest = LogicTesterHelper.QuickCreateCheckLogic(strItemCheckUnderwaterChest);
 
             // Sample logic file
-            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<JsonFormatLogicItem>
+            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
             {
                 LogicTesterHelper.QuickCreateJsonItemLogic(strItemCheckUnderwaterChest, new List<List<string>> {
                     new List<string>() { strItemRequireZoraMask },
@@ -268,7 +268,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             var checkUnderWaterChest = LogicTesterHelper.QuickCreateCheckLogic(strItemCheckUnderwaterChest);
 
             // Sample logic file
-            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<JsonFormatLogicItem>
+            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
             {
                 LogicTesterHelper.QuickCreateJsonItemLogic(
                     strItemCheckUnderwaterChest, 
@@ -337,7 +337,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
 
 class LogicTesterHelper // class helper to create logic file from logic and check added
 {
-    public static LogicFile CreateLogicFile(List<JsonFormatLogicItem> jsonFormatLogicItem)
+    public static LogicFile CreateLogicFile(List<MajoraMaskJsonFormatLogicItem> jsonFormatLogicItem)
     {
         return new LogicFile()
         {
@@ -345,27 +345,27 @@ class LogicTesterHelper // class helper to create logic file from logic and chec
         };
     }
 
-    public static JsonFormatLogicItem QuickCreateJsonItemLogic(string id)
+    public static MajoraMaskJsonFormatLogicItem QuickCreateJsonItemLogic(string id)
     {
         return QuickCreateJsonItemLogic(id, new List<string>(), new List<List<string>>());
     }
 
-    public static JsonFormatLogicItem QuickCreateJsonItemLogic(string id, List<string> arrayRequireId)
+    public static MajoraMaskJsonFormatLogicItem QuickCreateJsonItemLogic(string id, List<string> arrayRequireId)
     {
         return QuickCreateJsonItemLogic(id, arrayRequireId, new List<List<string>>());
     }
 
-    public static JsonFormatLogicItem QuickCreateJsonItemLogic(string id, List<List<string>> arrayArrayConditionalItem)
+    public static MajoraMaskJsonFormatLogicItem QuickCreateJsonItemLogic(string id, List<List<string>> arrayArrayConditionalItem)
     {
         return QuickCreateJsonItemLogic(id, new List<string>(), arrayArrayConditionalItem);
     }
 
-    public static JsonFormatLogicItem QuickCreateJsonItemLogic(
+    public static MajoraMaskJsonFormatLogicItem QuickCreateJsonItemLogic(
         string id,
         List<string> arrayRequireId,
         List<List<string>> arrayArrayConditionalItem)
     {
-        return new JsonFormatLogicItem()
+        return new MajoraMaskJsonFormatLogicItem()
         {
             Id = id,
             RequiredItems = arrayRequireId,

@@ -23,6 +23,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         private void OcarinaOfTimeLogicCreator_Load(object sender, EventArgs e)
         {
             controller.LoadLogic();
+
         }
     }
 }
