@@ -55,7 +55,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             var romeType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
             if (!mainUIController.StartMemoryListener(emulatorWrapper, romeType, OnOOTItemLogicChange, OnMMItemLogicChange, out string error))
                 Log(error);
-            Log("Thread started");
+            else
+                Log("Thread started");
         }
 
         private void BtnStopListener_Click(object sender, EventArgs e)
