@@ -15,10 +15,26 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
         private const uint CST_POSSIBLE_ROM_ADDR_START_2 = 0xDFE70000;
         private const uint CST_POSSIBLE_ROM_ADDR_START_3 = 0xDFFB0000;
 
+        //private const uint CST_POSSIBLE_ROM_ADDR_START_EM_1 = 0x4CD8_19E8; // Not working
+        private const uint CST_POSSIBLE_ROM_ADDR_START_EM_2 = 0x4CDA_0000;
+        //private const uint CST_POSSIBLE_ROM_ADDR_START_EM_3 = 0x4D2A_D69C;
+        //private const uint CST_POSSIBLE_ROM_ADDR_START_EM_4 = 0x0011_A5EC;
+
+        //From cheat engin zeldaz start here:
+        //          magic number
+        // 0x4CE9BFD4 - 0x11A5EC  =
+        // 0x4CEBA5EC - 0x11A5EC  =
+        // 0x4D3C7C88 - 0x11A5EC  =
+        // 0x4D3D0CC4 - 0x11A5EC  =
+
         private readonly uint[] CST_POSSIBLE_ROOM_ADDR_START = {
             CST_POSSIBLE_ROM_ADDR_START_1,
             CST_POSSIBLE_ROM_ADDR_START_2,
-            CST_POSSIBLE_ROM_ADDR_START_3
+            CST_POSSIBLE_ROM_ADDR_START_3,
+            //CST_POSSIBLE_ROM_ADDR_START_EM_1,
+            CST_POSSIBLE_ROM_ADDR_START_EM_2,
+            //CST_POSSIBLE_ROM_ADDR_START_EM_3,
+            //CST_POSSIBLE_ROM_ADDR_START_EM_4
         };
 
         protected override bool IsEmulatorUseBigEndian => true;

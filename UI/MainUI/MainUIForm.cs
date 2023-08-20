@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Linq;
 using MajoraAutoItemTracker.MemoryReader;
+using MajoraAutoItemTracker.Model.Enum.OOT;
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
@@ -52,7 +53,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Log("Attaching to modloader");
             var emulatorWrapper = emulatorController.GetSelectedEmulator(cbEmulatorList.SelectedIndex);
             var romeType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
-            if (!mainUIController.StartMemoryListener(emulatorWrapper, romeType, OnItemLogicChange, out string error))
+            if (!mainUIController.StartMemoryListener(emulatorWrapper, romeType, OnOOTItemLogicChange, OnMMItemLogicChange, out string error))
                 Log(error);
             Log("Thread started");
         }
@@ -63,7 +64,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Log("Thread Stoped");
         }
 
-        private void OnItemLogicChange(Tuple <MajoraMaskItemLogicPopertyName, object> itemLogicProperty)
+        private void OnOOTItemLogicChange(Tuple<OcarinaOfTimeItemLogicPopertyName, object> itemLogicProperty)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                Log($"update for:{itemLogicProperty.Item1} with value: {itemLogicProperty.Item2}");
+                ocarinaOfTimeController.OnItemLogicChange(itemLogicProperty);
+            });
+        }
+
+        private void OnMMItemLogicChange(Tuple <MajoraMaskItemLogicPopertyName, object> itemLogicProperty)
         {
             this.Invoke((MethodInvoker)delegate
             {

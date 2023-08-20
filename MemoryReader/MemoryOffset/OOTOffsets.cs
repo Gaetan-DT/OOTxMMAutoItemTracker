@@ -12,51 +12,89 @@
         // Src: https://www.gamegenie.com/cheats/gameshark/n64/legend_of_zelda_oot.html
         // Game shark usage, first part is emulator address (need to remove '80') second part is value to set
 
-        //8011A64B 0007     Have Fairy Ocarina
-        //8011A64B 0008     Have Ocarina of Time
-        public const int CST_INVENTORY_ADDRESS_OCARINA = 0x11A64B;
-        public const int CST_INVENTORY_VALUE_OCARINA_VALUE_FAIRY_OCARINA = 0x07;
-        public const int CST_INVENTORY_VALUE_OCARINA_VALUE_OCARINA_OF_TIME = 0x08;
-
-
-        //8011A80B 0007     Always Have Fairy Ocarina
-        //8011A80B 0008     Have Ocarina of Time
-
         //Version 1.0
+
         //8011B9E3 0020     Beta Quest
         //8111A605 03E7     Unlimited Rupees
         //8011B9A1 003B     Infinite Time To Ride Epona at Lon Lon's Ranch
 
+        //8011A64B 0007     Have Fairy Ocarina
+        //8011A64B 0008     Have Ocarina of Time
+        //8011A80B 0007     Always Have Fairy Ocarina
+        //8011A80B 0008     Have Ocarina of Time
+        public const int CST_INVENTORY_ADDRESS_OCARINA = 0x11A64B;
+        public const int CST_INVENTORY_VALUE_FAIRY_OCARINA = 0x07;
+        public const int CST_INVENTORY_VALUE_OCARINA_OF_TIME = 0x08;
+
+        //8011A644 0000     Have Deku Stick
+        //8011A65C 0009     Infinite Deku Sticks
+        public const int CST_INVENTORY_ADDRESS_DEKU_STICK = 0x11A644;
+
+        //8011A645 0001     Have Deku Nut
+        //8011A65D 0009     Infinite Deku Nuts
+        public const int CST_INVENTORY_ADDRESS_DEKU_NUT = 0x11A645;
+
         //8011A64D 000A     Have Hookshot
         //8011A64D 000B     Have Longshot
+        public const int CST_INVENTORY_ADDRESS_HOOKSHOT = 0x11A64D;
+        public const int CST_INVENTORY_VALUE_HOOKSHOT = 0x000A;
+        public const int CST_INVENTORY_VALUE_LONGSHOT = 0x000B;
+
         //8011A650 000E     Have Boomerang
+        public const int CST_INVENTORY_ADDRESS_BOOMERANG = 0x11A650;
+        public const int CST_INVENTORY_VALUE_BOOMERANG = 0x000E;
+
         //8011A651 000F     Have Lens of Truth
+        public const int CST_INVENTORY_ADDRESS_LENS_OF_TRUTH = 0x11A651;
+
         //8011A652 0010     Have Magic Beans
         //8011A66A 0009     Infinite Magic Beans
+        public const int CST_INVENTORY_ADDRESS_MAGIC_BEANS = 0x11A652;
+
         //8011A653 0011     Have Megaton Hammer
+        public const int CST_INVENTORY_ADDRESS_MEGATON_HAMMER = 0x11A653;
+
         //8011A60E 0001     Turn Giant's Knife Into Biggoron's Sword 
+
         //8011A671 0001     Have Quiver(Holds 30)
         //8011A699 0009     Infinite Small Keys
         //8011A678 0007     Have Big Key, Compass, & Map 
 
         //8011A649 0005     Have Din's Fire (MP6)
+        public const int CST_INVENTORY_ADDRESS_DIN_FIRE = 0x11A649;
+
         //8011A64F 000D     Have Fairies Wind(MP6)
+        public const int CST_INVENTORY_ADDRESS_FAIRIES_WINDS = 0x11A64F;
+
         //8011A655 0013     Have Nayru's Love (MP12)
-        //8011A644 0000     Have Deku Stick
-        //8011A65C 0009     Infinite Deku Sticks
-        //8011A645 0001     Have Deku Nut
-        //8011A65D 0009     Infinite Deku Nuts
+        public const int CST_INVENTORY_ADDRESS_NAYRU_LOVE = 0x11A655;
+
         //8011A646 0002     Have Bombs
+        public const int CST_INVENTORY_ADDRESS_BOMBS = 0x11A646;
+
         //8011A65E 0009     Infinite Bombs
+
         //8011A647 0003     Have Fairy Bow
         //8011A65F 0009     Infinite Arrows
+        public const int CST_INVENTORY_ADDRESS_BOW = 0x11A647;
+
         //8011A64A 0006     Have Fairy Slingshot
         //8011A662 0009     Infinite Slingshot Ammo
+        public const int CST_INVENTORY_ADDRESS_SLINGSHOT = 0x11A64A;
+
         //8011A64C 0009     Have Bombchu
         //8011A664 0009     Infinite Bombchu's
+        public const int CST_INVENTORY_ADDRESS_BOMBCHU = 0x11A64C;
+
         //8011A648 0004     Have Fire Arrow(MP2)
+        public const int CST_INVENTORY_ADDRESS_FIRE_ARROW = 0x11A648;
+
         //8011A64E 000C     Have Ice Arrow(MP2)
+        public const int CST_INVENTORY_ADDRESS_ICE_ARROW = 0x11A64E;
+
         //8011A654 0012     Have Light Arrow(MP4)
+        public const int CST_INVENTORY_ADDRESS_LIGHT_ARROW = 0x11A654;
+
         //8111A600 0140     Infinite Energy
         //8111A5FE 0140     Max Heart
         //8011A6A1 00FF     Skulltulas Killed
@@ -101,6 +139,10 @@
         //1E     Big Poe
         //1F     Lon Lon Milk (Half)
         //20     Poe
+        public const int CST_INVENTORY_ADDRESS_BOTTLE_1 = 0x11A656;
+        public const int CST_INVENTORY_ADDRESS_BOTTLE_2 = 0x11A657;
+        public const int CST_INVENTORY_ADDRESS_BOTTLE_3 = 0x11A658;
+        public const int CST_INVENTORY_ADDRESS_BOTTLE_4 = 0x11A659;
 
         //8011A65A 00xx Item Modifier 1
         //Replace xx with:
@@ -115,6 +157,7 @@
         //35     Eyeball Frog
         //36     Eye Drops
         //37     Claim Check
+        public const int CST_INVENTORY_ADDRESS_ITEM_MODIFIER_1 = 0x11A65A;
 
         //8011A65B 00xx Item Modifier 2
         //Replace xx with:
@@ -130,6 +173,7 @@
         //2A Gerudo Mask
         //2B Mask of Truth
         //2C SOLD OUT
+        public const int CST_INVENTORY_ADDRESS_ITEM_MODIFIER_2 = 0x11A65B;
 
         //8011A672 00xx Equipment Modifier 1
         //Replace xx with:
@@ -139,6 +183,7 @@
         //40     Bullet Bag (Holds 30)
         //80     Bullet Bag(Holds 40)
         //C0 Bullet Bag(Holds 50)
+        public const int CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_1 = 0x11A672;
 
         //8011A673 00xx Equipment Modifier 2
         //Replace xx with:
@@ -148,6 +193,7 @@
         //20     Goron's Bracelet
         //28     Silver Gauntlets
         //30     Silver Scale
+        public const int CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_2 = 0x11A673;
 
         //8011A640 00xx Equipped Stuff Modifier
         //Replace xx with:
@@ -160,6 +206,7 @@
         //31     Kokiri Tunic & Hover Boots
         //32     Goron Tunic & Hover Boots
         //33     Zora Tunic & Hover Boots
+        public const int CST_INVENTORY_ADDRESS_EQUIPPED_STUFF = 0x11A640;
 
         //8111A5DC xxxx     Time of Day Modifier
         //Replace xxxx with:
@@ -168,7 +215,9 @@
         //7000     Very Bright Out
         //C000     At Sunset
         //D000 Fairly Dark
-
+    }
+    class OOTOffsets1_1
+    {
         //Version 1.1
 
 

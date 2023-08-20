@@ -1,5 +1,6 @@
 ﻿using MajoraAutoItemTracker.MemoryReader.MemoryData;
 using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
 using System.Reactive.Subjects;
 
@@ -9,32 +10,21 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
     {
         public static AbstractMemoryListener ProvideMemoryListener(
             AbstractRomController emulatorWrapper,
-            ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> replaySubject,
+            ReplaySubject<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> ootReplaySubject,
+            ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> mmReplaySubject,
             RomType romType)
         {
-            AbstractMemoryDataObserver observer = ProvideAbstractMemoryDataObserver(romType);
-            observer.BindAllEvent(replaySubject);
+            var ootObserver = new OcarinaOfTimeMemoryDataObserver();
+            var mmObserver = new MajoraMemoryDataObserver();
+
             switch (romType)
             {
                 case RomType.OCARINA_OF_TIME_USA_V0:
-                    return new OcarinaOfTimeMemoryListener(emulatorWrapper, (OcarinaOfTimeMemoryDataObserver)observer);
+                    ootObserver.BindAllEvent(ootReplaySubject);
+                    return new OcarinaOfTimeMemoryListener(emulatorWrapper, ootObserver);
                 case RomType.MAJORA_MASK_USA_V0:
                     throw new Exception("Not yet implemented"); // TODO
                     //return new MajoraMaskMemoryListener(emulatorWrapper, observer);
-                default:
-                    throw new Exception($"Unknown rom type {romType}");
-            }
-        }
-
-        private static AbstractMemoryDataObserver ProvideAbstractMemoryDataObserver(RomType romType)
-        {
-            switch (romType)
-            {
-                case RomType.OCARINA_OF_TIME_USA_V0:
-                    return new OcarinaOfTimeMemoryDataObserver();
-                case RomType.MAJORA_MASK_USA_V0:
-                    throw new Exception("Not yet implemented"); // TODO
-                    //observer = new MajoraMemoryDataObserver();
                 default:
                     throw new Exception($"Unknown rom type {romType}");
             }

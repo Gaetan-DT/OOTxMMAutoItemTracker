@@ -23,7 +23,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private AbstractMemoryListener memoryListener = null;
         public ReplaySubject<bool> isMemoryListenerStartedSubject = new ReplaySubject<bool>();
-        public ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> OnAnyItemLogicChange = new ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>>();
+        // FIXME: Duplicate with StartMemoryListener
+        public ReplaySubject<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> OnOOTAnyItemLogicChange = new ReplaySubject<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>();
+        public ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> OnMMAnyItemLogicChange = new ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>>();
 
         public PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBoxMapOOT;
         public PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxMapMM;
@@ -47,7 +49,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public bool StartMemoryListener(
             AbstractRomController emulatorWrapper,
             RomType romType,
-            Action<Tuple<MajoraMaskItemLogicPopertyName, object>> onItemLogicChange, 
+            Action<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> onOOTItemLogicChange,
+            Action<Tuple<MajoraMaskItemLogicPopertyName, object>> onMMItemLogicChange, 
             out string error)
         {
             error = "";
@@ -63,9 +66,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
             try
             {
-                memoryListener = MemoryListenerProvider.ProvideMemoryListener(emulatorWrapper, OnAnyItemLogicChange, romType);
+                memoryListener = MemoryListenerProvider.ProvideMemoryListener(
+                    emulatorWrapper,
+                    OnOOTAnyItemLogicChange,
+                    OnMMAnyItemLogicChange,
+                    romType);
                 memoryListener.StartThread();
-                OnAnyItemLogicChange.Subscribe(onItemLogicChange);
+                OnOOTAnyItemLogicChange.Subscribe(onOOTItemLogicChange);
+                OnMMAnyItemLogicChange.Subscribe(onMMItemLogicChange);
                 isMemoryListenerStartedSubject.OnNext(true);
                 return true;
             }

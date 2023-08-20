@@ -1,18 +1,25 @@
 ﻿using MajoraAutoItemTracker.MemoryReader.MemoryData;
+using MajoraAutoItemTracker.Model.Enum.OOT;
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
     class OcarinaOfTimeMemoryListener : AbstractMemoryListener
     {
-        public OcarinaOfTimeMemoryListener(AbstractRomController emulatorWrapper, OcarinaOfTimeMemoryDataObserver memoryDataObserver) 
-            : base(emulatorWrapper, memoryDataObserver)
-        {
+        private OcarinaOfTimeMemoryDataObserver memoryDataObserver;
+        private OcarinaOfTimeMemoryData previousMemoryData;
 
+        public OcarinaOfTimeMemoryListener(AbstractRomController emulatorWrapper, OcarinaOfTimeMemoryDataObserver memoryDataObserver) 
+            : base(emulatorWrapper)
+        {
+            this.memoryDataObserver = memoryDataObserver;
         }
 
-        protected override AbstractMemoryData CreateNewMemoryData()
+        protected override void OnTick()
         {
-            return new OcarinaOfTimeMemoryData();
+            var newMemoryData = new OcarinaOfTimeMemoryData();
+            newMemoryData.ReadDataFromEmulator(emulatorWrapper);
+            memoryDataObserver.CompareAndUpdateAllField(previousMemoryData, newMemoryData);
+            previousMemoryData = newMemoryData;
         }
     }
 }

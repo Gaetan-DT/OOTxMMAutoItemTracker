@@ -98,7 +98,7 @@
     "variants": [
       {
         "idLogic": "ItemBombBag",
-        "positionX": 7,
+        "positionX": 9,
         "positionY": 0
       }
     ]
@@ -109,12 +109,12 @@
     "variants": [
       {
         "idLogic": "ItemHookshot",
-        "positionX": 8,
+        "positionX": 10,
         "positionY": 0
       },
       {
         "idLogic": "ItemLongshot",
-        "positionX": 9,
+        "positionX": 11,
         "positionY": 0
       }
     ]

@@ -46,13 +46,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tabGameMenu = new System.Windows.Forms.TabControl();
             this.tabOcarinaOfTime = new System.Windows.Forms.TabPage();
             this.tabMajoraMask = new System.Windows.Forms.TabPage();
+            this.panelMapMM = new System.Windows.Forms.Panel();
+            this.lbCheckListMM = new System.Windows.Forms.ListBox();
+            this.pictureBoxMMItemList = new System.Windows.Forms.PictureBox();
             this.cbRomTypeList = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRefreshGameAndRom = new System.Windows.Forms.Button();
-            this.pictureBoxMMItemList = new System.Windows.Forms.PictureBox();
-            this.lbCheckListMM = new System.Windows.Forms.ListBox();
-            this.panelMapMM = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -142,8 +142,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // tabOcarinaOfTime
             // 
-            this.tabOcarinaOfTime.Controls.Add(this.pictureBoxOOTItemList);
             this.tabOcarinaOfTime.Controls.Add(this.panelMapOOT);
+            this.tabOcarinaOfTime.Controls.Add(this.pictureBoxOOTItemList);
             this.tabOcarinaOfTime.Controls.Add(this.lbCheckListOOT);
             this.tabOcarinaOfTime.Location = new System.Drawing.Point(4, 22);
             this.tabOcarinaOfTime.Name = "tabOcarinaOfTime";
@@ -165,6 +165,31 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tabMajoraMask.TabIndex = 1;
             this.tabMajoraMask.Text = "Majora mask";
             this.tabMajoraMask.UseVisualStyleBackColor = true;
+            // 
+            // panelMapMM
+            // 
+            this.panelMapMM.Location = new System.Drawing.Point(322, 3);
+            this.panelMapMM.Name = "panelMapMM";
+            this.panelMapMM.Size = new System.Drawing.Size(978, 792);
+            this.panelMapMM.TabIndex = 69;
+            // 
+            // lbCheckListMM
+            // 
+            this.lbCheckListMM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.lbCheckListMM.FormattingEnabled = true;
+            this.lbCheckListMM.Location = new System.Drawing.Point(0, 528);
+            this.lbCheckListMM.Name = "lbCheckListMM";
+            this.lbCheckListMM.Size = new System.Drawing.Size(320, 264);
+            this.lbCheckListMM.TabIndex = 68;
+            // 
+            // pictureBoxMMItemList
+            // 
+            this.pictureBoxMMItemList.InitialImage = null;
+            this.pictureBoxMMItemList.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxMMItemList.Name = "pictureBoxMMItemList";
+            this.pictureBoxMMItemList.Size = new System.Drawing.Size(320, 522);
+            this.pictureBoxMMItemList.TabIndex = 5;
+            this.pictureBoxMMItemList.TabStop = false;
             // 
             // cbRomTypeList
             // 
@@ -201,31 +226,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.btnRefreshGameAndRom.Text = "Refresh";
             this.btnRefreshGameAndRom.UseVisualStyleBackColor = true;
             this.btnRefreshGameAndRom.Click += new System.EventHandler(this.btnRefreshGameAndRom_Click);
-            // 
-            // pictureBoxMMItemList
-            // 
-            this.pictureBoxMMItemList.InitialImage = null;
-            this.pictureBoxMMItemList.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxMMItemList.Name = "pictureBoxMMItemList";
-            this.pictureBoxMMItemList.Size = new System.Drawing.Size(320, 522);
-            this.pictureBoxMMItemList.TabIndex = 5;
-            this.pictureBoxMMItemList.TabStop = false;
-            // 
-            // lbCheckListMM
-            // 
-            this.lbCheckListMM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.lbCheckListMM.FormattingEnabled = true;
-            this.lbCheckListMM.Location = new System.Drawing.Point(0, 528);
-            this.lbCheckListMM.Name = "lbCheckListMM";
-            this.lbCheckListMM.Size = new System.Drawing.Size(320, 264);
-            this.lbCheckListMM.TabIndex = 68;
-            // 
-            // panelMapMM
-            // 
-            this.panelMapMM.Location = new System.Drawing.Point(322, 3);
-            this.panelMapMM.Name = "panelMapMM";
-            this.panelMapMM.Size = new System.Drawing.Size(978, 792);
-            this.panelMapMM.TabIndex = 69;
             // 
             // MainUIForm
             // 

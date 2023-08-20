@@ -10,9 +10,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
         public abstract void ReadDataFromEmulator(AbstractRomController emulatorWrapper);
     }
 
-    abstract class AbstractMemoryDataObserver
+    abstract class AbstractMemoryDataObserver<ItemLogicPropertyName>
     {
-        public abstract void BindAllEvent(ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> replaySubject);
+        public abstract void BindAllEvent(ReplaySubject<Tuple<ItemLogicPropertyName, object>> replaySubject);
 
         public void CompareAndUpdateAllField(AbstractMemoryData previousMemoryData, AbstractMemoryData newMemoryData)
         {
@@ -44,7 +44,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             return abstractMemoryData.GetType().GetField(fieldName).GetValue(abstractMemoryData);
         }
 
-        private void InvokeDataObserverEvent(AbstractMemoryDataObserver abstractMemoryDataObserver, String fieldName, object newMemoryDataProp)
+        private void InvokeDataObserverEvent(AbstractMemoryDataObserver<ItemLogicPropertyName> abstractMemoryDataObserver, String fieldName, object newMemoryDataProp)
         {
             var dataObserverEvent = abstractMemoryDataObserver.GetType().GetField(fieldName).GetValue(abstractMemoryDataObserver);
             dataObserverEvent.GetType().InvokeMember(
