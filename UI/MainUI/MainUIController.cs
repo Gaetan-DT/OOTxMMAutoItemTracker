@@ -19,9 +19,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private AbstractMemoryListener memoryListener = null;
         public ReplaySubject<bool> isMemoryListenerStartedSubject = new ReplaySubject<bool>();
-        // FIXME: Duplicate with StartMemoryListener
-        public ReplaySubject<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> OnOOTAnyItemLogicChange = new ReplaySubject<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>();
-        public ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> OnMMAnyItemLogicChange = new ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>>();
 
         public PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBoxMapOOT;
         public PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxMapMM;
@@ -64,12 +61,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             {
                 memoryListener = MemoryListenerProvider.ProvideMemoryListener(
                     emulatorWrapper,
-                    OnOOTAnyItemLogicChange,
-                    OnMMAnyItemLogicChange,
+                    onOOTItemLogicChange,
+                    onMMItemLogicChange,
                     romType);
                 memoryListener.StartThread();
-                OnOOTAnyItemLogicChange.Subscribe(onOOTItemLogicChange);
-                OnMMAnyItemLogicChange.Subscribe(onMMItemLogicChange);
                 isMemoryListenerStartedSubject.OnNext(true);
                 return true;
             }

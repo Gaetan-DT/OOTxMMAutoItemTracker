@@ -12,7 +12,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 
     abstract class AbstractMemoryDataObserver<ItemLogicPropertyName>
     {
-        public abstract void BindAllEvent(ReplaySubject<Tuple<ItemLogicPropertyName, object>> replaySubject);
+        public abstract void BindAllEvent(Action<Tuple<ItemLogicPropertyName, object>> replaySubject);
 
         public void CompareAndUpdateAllField(AbstractMemoryData previousMemoryData, AbstractMemoryData newMemoryData)
         {

@@ -10,10 +10,11 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
     {
         public static AbstractMemoryListener ProvideMemoryListener(
             AbstractRomController emulatorWrapper,
-            ReplaySubject<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> ootReplaySubject,
-            ReplaySubject<Tuple<MajoraMaskItemLogicPopertyName, object>> mmReplaySubject,
+            Action<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> ootReplaySubject,
+            Action<Tuple<MajoraMaskItemLogicPopertyName, object>> mmReplaySubject,
             RomType romType)
         {
+            
             var ootObserver = new OcarinaOfTimeMemoryDataObserver();
             var mmObserver = new MajoraMemoryDataObserver();
             switch (romType)
