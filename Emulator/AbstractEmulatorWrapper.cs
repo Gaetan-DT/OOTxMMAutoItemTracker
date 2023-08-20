@@ -83,13 +83,18 @@ namespace MajoraAutoItemTracker.MemoryReader
             return aByte == hexValue;
         }
 
-        public bool CheckAnykHexValue(uint offset, byte[] hexValues)
+        public bool CheckAnyHexValue(uint offset, byte[] hexValues)
         {
             if (hexValues.Length == 0)
                 return false;
             var aByte = ReadUint8InEdianSizeAsByte(offset);
+            return CheckAnyHexValue(aByte, hexValues);
+        }
+
+        public bool CheckAnyHexValue(byte aByte, byte[] hexValues)
+        {
             foreach (var hexValue in hexValues)
-                if (hexValue == aByte)
+                if ((hexValue & aByte) == hexValue)
                     return true;
             return false;
         }

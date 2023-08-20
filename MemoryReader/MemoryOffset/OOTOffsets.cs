@@ -177,13 +177,18 @@
 
         //8011A672 00xx Equipment Modifier 1
         //Replace xx with:
-        //02     Silver Scale
-        //04     Golden Scale
-        //06     Giant's Knife (Broken)
-        //40     Bullet Bag (Holds 30)
-        //80     Bullet Bag(Holds 40)
+        //02 Silver Scale
+        //04 Golden Scale
+        //06 Giant's Knife (Broken)
+        //40 Bullet Bag (Holds 30)
+        //80 Bullet Bag(Holds 40)
         //C0 Bullet Bag(Holds 50)
         public const int CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_1 = 0x11A672;
+        public const int CST_INVENTORY_ADDRESS_SILVER_SCALE = 0x0002;
+        public const int CST_INVENTORY_ADDRESS_GOLDEN_SCALE = 0x0004;
+        public const int CST_INVENTORY_ADDRESS_BULLET_BAG_30 = 0x0040;
+        public const int CST_INVENTORY_ADDRESS_BULLET_BAG_40 = 0x0080;
+        public const int CST_INVENTORY_ADDRESS_BULLET_BAG_50 = 0x00C0;
 
         //8011A673 00xx Equipment Modifier 2
         //Replace xx with:
@@ -194,6 +199,12 @@
         //28     Silver Gauntlets
         //30     Silver Scale
         public const int CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_2 = 0x11A673;
+        public const int CST_INVENTORY_ADDRESS_BOMB_BAG_20 = 0x0008;
+        public const int CST_INVENTORY_ADDRESS_BOMB_BAG_30 = 0x0010;
+        public const int CST_INVENTORY_ADDRESS_BOMB_BAG_40 = 0x0018;
+        public const int CST_INVENTORY_ADDRESS_GORON_BRACELET = 0x0020;
+        public const int CST_INVENTORY_ADDRESS_SILVER_GAUNTLETS = 0x0028;
+        public const int CST_INVENTORY_ADDRESS_GOLDEN_GAUNTLETS = 0x0030;
 
         //8011A640 00xx Equipped Stuff Modifier
         //Replace xx with:
@@ -215,6 +226,49 @@
         //7000     Very Bright Out
         //C000     At Sunset
         //D000 Fairly Dark
+
+        // Src: https://cloudmodding.com/zelda/oot
+        // Contain more informùation regarding memory
+
+        // #Magic 0x8011A603 [Byte]
+        // 0x30 is a filled normal bar
+        // 0x60 is a filled double bar
+
+        // 0x800F7618 [Tble] #Wallet Digits Table
+        // This table specifies how many digits each wallet size uses for the rupee counter.
+        // Setting it to a value higher than 0x4 will cause visual errors.
+        // When the counter is 4 digits long, the 4th digit will always be 0, and only the first 3 are used.
+        // Each entry is a halfword.
+        // Entries:
+        //  0x0 Default Wallet (0002)
+        //  0x2 Adult's Wallet (0003)
+        //  0x4 Giant's Wallet (0003)
+        //  0x6 Unused Wallet  (0000)
+
+        // 0x8011A66C [Byte]  #Tunic & Boots
+        // 0x01 Kokiri Tunic
+        // 0x02 Goron Tunic
+        // 0x04 Zora Tunic
+        // 0x10 Kokiri Boots
+        // 0x20 Iron Boots
+        // 0x40 Hover Boots
+
+        // 0x8011A66C [Byte]  #Sword & Shield
+        // 0x01 Kokiri Sword
+        // 0x02 Master Sword
+        // 0x04 Biggoron's Sword / Giant's Knife
+        // 0x08 Broken Giant's Knife Icon Flag
+        //      This will cause the 3rd Sword Slot to be displayed as the Broken Giant's Knife
+        // 0x10 Kokiri Shield
+        // 0x20 Hylian Shield
+        // 0x40 Mirror Shield
+
+        // Possible song address:
+        // Status
+        //  0x8011A674 Heart Pieces
+        //  0x8011A675 Spiritual Stones, Gear, Song of Time, Song of Storm
+        //  0x8011A676 Songs
+        //  0x8011A677 Minuet, Boloero, Medallions
     }
     class OOTOffsets1_1
     {
