@@ -76,7 +76,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 
         #endregion
 
-        #region Quest Item
+        #region Song
 
         public bool HasMinuetOfForest = false;
         public bool HasBoleroOfFire = false;
