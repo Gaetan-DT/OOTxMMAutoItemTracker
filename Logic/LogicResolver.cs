@@ -1,5 +1,6 @@
 ﻿using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
+using MajoraAutoItemTracker.Model.Logic.MM;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reactive.Subjects;
@@ -8,13 +9,13 @@ namespace MajoraAutoItemTracker.Model
 {
     class LogicResolver
     {
-        private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.MajoraMaskJsonFormatLogicItem>();
+        private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.MM.MajoraMaskJsonFormatLogicItem>();
         public Subject<CheckLogic.OcarinaOfTimeCheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.OcarinaOfTimeCheckLogic>();
 
         public bool debugMode = false;
         private int indentDebug = 0;
 
-        public LogicResolver(LogicFile logicFile)
+        public LogicResolver(LogicFile<MajoraMaskJsonFormatLogicItem> logicFile)
         {
             foreach (var logic in logicFile.Logic)
                 _logicDictionary.Add(logic.Id, logic);

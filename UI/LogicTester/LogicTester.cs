@@ -2,6 +2,7 @@
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
+using MajoraAutoItemTracker.Model.Logic.MM;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +13,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
 {
     public partial class LogicTester : Form
     {
-        private LogicFile _logicFile;
+        private LogicFile<MajoraMaskJsonFormatLogicItem> _logicFile;
         private List<OcarinaOfTimeCheckLogic> _checkLogics;
         private List<ItemLogic> _itemLogics;
 
@@ -30,7 +31,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
         {
             try
             {
-                _logicFile = LogicFile.FromJson(File.ReadAllText(GetPathOfJson()));
+                _logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromJson(File.ReadAllText(GetPathOfJson()));
                 Log($"logic file loaded: ({_logicFile.Logic.Count} logic)");
             }
             catch (Exception exception)
@@ -154,7 +155,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             var checkUnderWaterChest = LogicTesterHelper.QuickCreateCheckLogic(strItemCheckUnderwaterChest);
 
             // Sample logic file
-            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
+            LogicFile<MajoraMaskJsonFormatLogicItem> logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
             {
                 LogicTesterHelper.QuickCreateJsonItemLogic(strItemCheckUnderwaterChest, new List<string> { strItemRequireZoraMask, strItemAccesToTheUnderwaterZone }),
                 LogicTesterHelper.QuickCreateJsonItemLogic(strItemRequireZoraMask),
@@ -197,7 +198,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             var checkUnderWaterChest = LogicTesterHelper.QuickCreateCheckLogic(strItemCheckUnderwaterChest);
 
             // Sample logic file
-            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
+            LogicFile<MajoraMaskJsonFormatLogicItem> logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
             {
                 LogicTesterHelper.QuickCreateJsonItemLogic(strItemCheckUnderwaterChest, new List<List<string>> {
                     new List<string>() { strItemRequireZoraMask },
@@ -268,7 +269,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             var checkUnderWaterChest = LogicTesterHelper.QuickCreateCheckLogic(strItemCheckUnderwaterChest);
 
             // Sample logic file
-            LogicFile logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
+            LogicFile<MajoraMaskJsonFormatLogicItem> logicFile = LogicTesterHelper.CreateLogicFile(new List<MajoraMaskJsonFormatLogicItem>
             {
                 LogicTesterHelper.QuickCreateJsonItemLogic(
                     strItemCheckUnderwaterChest, 
@@ -337,9 +338,9 @@ namespace MajoraAutoItemTracker.UI.LogicTester
 
 class LogicTesterHelper // class helper to create logic file from logic and check added
 {
-    public static LogicFile CreateLogicFile(List<MajoraMaskJsonFormatLogicItem> jsonFormatLogicItem)
+    public static LogicFile<MajoraMaskJsonFormatLogicItem> CreateLogicFile(List<MajoraMaskJsonFormatLogicItem> jsonFormatLogicItem)
     {
-        return new LogicFile()
+        return new LogicFile<MajoraMaskJsonFormatLogicItem>()
         {
             Logic = jsonFormatLogicItem
         };

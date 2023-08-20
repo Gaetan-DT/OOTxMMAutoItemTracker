@@ -1,5 +1,6 @@
 ﻿using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Logic;
+using MajoraAutoItemTracker.Model.Logic.MM;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,7 +12,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
     public partial class CheckLogicEditor : Form
     {
 
-        private LogicFile _logicFile;
+        private LogicFile<MajoraMaskJsonFormatLogicItem> _logicFile;
         private List<OcarinaOfTimeCheckLogic> checkLogics = new List<OcarinaOfTimeCheckLogic>();
 
         public CheckLogicEditor()
@@ -27,7 +28,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
 
         private void LoadJsonFile()
         {
-            _logicFile = LogicFile.FromJson(File.ReadAllText(Application.StartupPath + @"\Resource\Logics\REQ_CASUAL_12.json"));
+            _logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromJson(File.ReadAllText(Application.StartupPath + @"\Resource\Logics\REQ_CASUAL_12.json"));
             lbLogicVerion.Text = "V:" + _logicFile.Version;
             UpdateLogicFile();
         }
