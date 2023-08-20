@@ -209,19 +209,6 @@
         public const int CST_INVENTORY_ADDRESS_SILVER_GAUNTLETS = 0x0028;
         public const int CST_INVENTORY_ADDRESS_GOLDEN_GAUNTLETS = 0x0030;
 
-        //8011A640 00xx Equipped Stuff Modifier
-        //Replace xx with:
-        //11     Kokiri Tunic & Kokiri Boots
-        //12     Goron Tunic & Kokiri Boots
-        //13     Zora Tunic & Kokiri Boots
-        //21     Kokiri Tunic & Iron Boots
-        //22     Goron Tunic & Iron Boots
-        //23     Zora Tunic & Iron Boots
-        //31     Kokiri Tunic & Hover Boots
-        //32     Goron Tunic & Hover Boots
-        //33     Zora Tunic & Hover Boots
-        public const int CST_INVENTORY_ADDRESS_EQUIPPED_STUFF = 0x11A640;
-
         //8111A5DC xxxx     Time of Day Modifier
         //Replace xxxx with:
         //4000     At Sunrise
@@ -233,9 +220,26 @@
         // Src: https://cloudmodding.com/zelda/oot
         // Contain more informùation regarding memory
 
+        // 0x800F7618 [Tble] #Wallet Digits Table
+        //  This table specifies how many digits each wallet size uses for the rupee counter.
+        //  Setting it to a value higher than 0x4 will cause visual errors.
+        //  When the counter is 4 digits long, the 4th digit will always be 0, and only the first 3 are used.
+        //  Each entry is a halfword.
+        //  Entries
+        //      0x0 Default Wallet (0002)
+        //      0x2 Adult's Wallet (0003)
+        //      0x4 Giant's Wallet (0003)
+        //      0x6 Unused Wallet  (0000)
+        public const int CST_INVENTORY_ADDRESS_WALLET = 0x0F7618;
+        public const int CST_INVENTORY_DEFAULT_WALLET = 0x00;
+        public const int CST_INVENTORY_ADULT_WALLET = 0x02;
+        public const int CST_INVENTORY_GIANT_WALLET = 0x04;
+        public const int CST_INVENTORY_UNSUED_WALLET = 0x06;
+
+
         // 0x8011A603 Current Magic (Byte)
         // 0x8011A60A Can Use Magic (Byte)
-
+        public const int CST_INVENTORY_ADDRESS_CAN_USE_MAGIC = 0x11A60A;
 
 
         // 0x8011A66C [Byte]  #Tunic & Boots
@@ -245,6 +249,13 @@
         // 0x10 Kokiri Boots
         // 0x20 Iron Boots
         // 0x40 Hover Boots
+        public const int CST_INVENTORY_ADDRESS_TUNIC_BOOTS = 0x11A66C;
+        public const int CST_INVENTORY_ITEM_KOKIRI_TUNIC = 0x01;
+        public const int CST_INVENTORY_ITEM_GORON_TUNIC= 0x02;
+        public const int CST_INVENTORY_ITEM_ZORA_TUNIC= 0x04;
+        public const int CST_INVENTORY_ITEM_KOKIRI_BOOTS = 0x10;
+        public const int CST_INVENTORY_ITEM_IRON_BOOTS = 0x20;
+        public const int CST_INVENTORY_ITEM_HOVER_BOOTS = 0x40;
 
         // 0x8011A66D [Byte]  #Sword & Shield
         // 0x01 Kokiri Sword
@@ -255,7 +266,13 @@
         // 0x10 Kokiri Shield
         // 0x20 Hylian Shield
         // 0x40 Mirror Shield
-
+        public const int CST_INVENTORY_ADDRESS_SWORD_SHIELD = 0x11A66D;
+        public const int CST_INVENTORY_ITEM_KOKIRI_SWORD = 0x01;
+        public const int CST_INVENTORY_ITEM_MASTER_SWORD = 0x02;
+        public const int CST_INVENTORY_ITEM_BIGGORON_GIANT_KNIFE = 0x04;
+        public const int CST_INVENTORY_ITEM_KOKIRI_SHIELD = 0x10;
+        public const int CST_INVENTORY_ITEM_HYLIAN_SHIELD = 0x20;
+        public const int CST_INVENTORY_ITEM_MIRROR_SHIELD = 0x40;
         // Possible song address:
         // Status
         //  0x8011A674 Heart Pieces
@@ -268,6 +285,15 @@
         //      0x20 = Stone of agony
         //      0x40 = Gerudo card
         //      0x80 = Unlock skultula counter???
+        public const int CST_INVENTORY_ADDRES_SONG_AND_QUEST_ITEM = 0x11A675;
+        public const int CST_INVENTORY_ITEM_SONG_OF_TIME = 0x01;
+        public const int CST_INVENTORY_ITEM_SONG_OF_STORM = 0x02;
+        public const int CST_INVENTORY_ITEM_KOKIRI_EMERAD = 0x04;
+        public const int CST_INVENTORY_ITEM_GORON_RUBY = 0x08;
+        public const int CST_INVENTORY_ITEM_ZORA_SAPPHIRE = 0x10;
+        public const int CST_INVENTORY_ITEM_STONE_OF_AGONY = 0x20;
+        public const int CST_INVENTORY_ITEM_GERUDA_CARD = 0x40;
+
         //  0x8011A676 Songs
         //      0x01 = Serenade of water
         //      0x02 = Requiem of spirit
@@ -277,6 +303,16 @@
         //      0x20 = Epona song
         //      0x40 = Saria's song
         //      0x80 = Sun's song
+        public const int CST_INVENTORY_ADDRES_PARTIAL_SONG = 0x11A676;
+        public const int CST_INVENTORY_ITEM_SERENADE_OF_WATER = 0x01;
+        public const int CST_INVENTORY_ITEM_REQUIEM_OF_SPIRIT = 0x02;
+        public const int CST_INVENTORY_ITEM_NOCTURNE_OF_SHADOW = 0x04;
+        public const int CST_INVENTORY_ITEM_PRELUDE_OF_LIGHT = 0x08;
+        public const int CST_INVENTORY_ITEM_ZLDA_LULABY = 0x10;
+        public const int CST_INVENTORY_ITEM_EPONA_SONG = 0x20;
+        public const int CST_INVENTORY_ITEM_SARIA_SONG = 0x40;
+        public const int CST_INVENTORY_ITEM_SUN_SONG = 0x80;
+
         //  0x8011A677 Minuet, Boloero, Medallions
         //      0x01 = Forest medallion
         //      0x02 = Fire medallion
@@ -286,6 +322,16 @@
         //      0x20 = Light medallion
         //      0x40 = Minuet of forest
         //      0x80 = Bolero of fire
+        public const int CST_INVENTORY_ADDRESS_MEDALLION_AND_SONG = 0x11A677;
+        public const int CST_INVENTORY_ITEM_FOREST_MEDALLION = 0x01;
+        public const int CST_INVENTORY_ITEM_FIRE_MEDALLION = 0x02;
+        public const int CST_INVENTORY_ITEM_WATER_MEDALLION = 0x04;
+        public const int CST_INVENTORY_ITEM_SPIRIT_MEDALLION = 0x08;
+        public const int CST_INVENTORY_ITEM_SHADOW_MEDALLION = 0x10;
+        public const int CST_INVENTORY_ITEM_LIGHT_MEDALLION = 0x20;
+        public const int CST_INVENTORY_ITEM_MINUET_OF_FOREST = 0x40;
+        public const int CST_INVENTORY_ITEM_BOLERO_OF_FIRE = 0x80;
+
     }
     class OOTOffsets1_1
     {

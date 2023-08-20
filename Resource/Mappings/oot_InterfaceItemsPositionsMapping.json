@@ -863,8 +863,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 6,
+        "positionY": 11
       }
     ]
   },
@@ -874,8 +874,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 7,
+        "positionY": 11
       }
     ]
   },
@@ -885,8 +885,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 8,
+        "positionY": 11
       }
     ]
   },
@@ -896,8 +896,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 9,
+        "positionY": 11
       }
     ]
   },
@@ -907,8 +907,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 10,
+        "positionY": 11
       }
     ]
   },
@@ -918,8 +918,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 11,
+        "positionY": 11
       }
     ]
   },
@@ -930,7 +930,7 @@
       {
         "idLogic": null,
         "positionX": 0,
-        "positionY": 8
+        "positionY": 11
       }
     ]
   },
@@ -940,8 +940,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 1,
+        "positionY": 11
       }
     ]
   },
@@ -951,8 +951,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 2,
+        "positionY": 11
       }
     ]
   },
@@ -962,8 +962,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 3,
+        "positionY": 11
       }
     ]
   },
@@ -973,8 +973,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 4,
+        "positionY": 11
       }
     ]
   },
@@ -984,8 +984,8 @@
     "variants": [
       {
         "idLogic": null,
-        "positionX": 0,
-        "positionY": 8
+        "positionX": 5,
+        "positionY": 11
       }
     ]
   }

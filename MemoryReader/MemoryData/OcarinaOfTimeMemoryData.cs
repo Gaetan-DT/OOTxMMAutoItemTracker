@@ -98,72 +98,107 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
         public override void ReadDataFromEmulator(AbstractRomController emulatorWrapper)
         {
             // INVENTORY C-Button Items
-            HasDekuStick = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_DEKU_STICK, 0x0000);
-            HasDekuNut = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_DEKU_NUT, 0x0001);
-            HasBomb = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOMBS, 0x0002);
-            HasBow = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOW, 0x0003);
-            HasFireArrow = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_FIRE_ARROW, 0x0004);
-            HasDinFire = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_DIN_FIRE, 0x0005);
-            HasSlingshot = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_SLINGSHOT, 0x0006);
-            HasOcarina = emulatorWrapper.CheckAnyHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_OCARINA, new byte[] {
+            HasDekuStick = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_DEKU_STICK);
+            HasDekuNut = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_DEKU_NUT);
+            HasBomb = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOMBS);
+            HasBow = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOW);
+            HasFireArrow = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_FIRE_ARROW);
+            HasDinFire = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_DIN_FIRE);
+            HasSlingshot = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_SLINGSHOT);
+            HasOcarina = emulatorWrapper.CheckAnyHexValueEqualTo(Model.OOTOffsets.CST_INVENTORY_ADDRESS_OCARINA, new byte[] {
                 Model.OOTOffsets.CST_INVENTORY_VALUE_FAIRY_OCARINA,
                 Model.OOTOffsets.CST_INVENTORY_VALUE_OCARINA_OF_TIME,
             });
-            HasBombchu = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOMBCHU, 0x0009);
-            HasHookshot = emulatorWrapper.CheckAnyHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_HOOKSHOT, new byte[] {
+            HasBombchu = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOMBCHU);
+            HasHookshot = emulatorWrapper.CheckAnyHexValueEqualTo(Model.OOTOffsets.CST_INVENTORY_ADDRESS_HOOKSHOT, new byte[] {
                 Model.OOTOffsets.CST_INVENTORY_VALUE_HOOKSHOT,
                 Model.OOTOffsets.CST_INVENTORY_VALUE_LONGSHOT
             });
-            HasIceArrow = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ICE_ARROW, 0x000C);
-            HasFaroreWind = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_FAIRIES_WINDS, 0x000D);
-            HasBoomerang = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOOMERANG, 0x000E);
-            HasLensOfTruth = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_LENS_OF_TRUTH, 0x000F);
-            HasMagicBean = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_MAGIC_BEANS, 0x0010);
-            HasMegatonHammer = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_MEGATON_HAMMER, 0x0011);
-            HasLightArrow = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_LIGHT_ARROW, 0x0012);
-            HasNayruLove = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_NAYRU_LOVE, 0x0013);
-            HasBottle1 = !emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_1, 0x00FF);
-            HasBottle2 = !emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_2, 0x00FF);
-            HasBottle3 = !emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_3, 0x00FF);
-            HasBottle4 = !emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_4, 0x00FF);
-            HasWeirdEgg = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ITEM_MODIFIER_1, 0x00FF);
-            HasWeirdEgg2 = emulatorWrapper.CheckHexValue(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ITEM_MODIFIER_2, 0x00FF);
+            HasIceArrow = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ICE_ARROW);
+            HasFaroreWind = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_FAIRIES_WINDS);
+            HasBoomerang = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOOMERANG);
+            HasLensOfTruth = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_LENS_OF_TRUTH);
+            HasMagicBean = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_MAGIC_BEANS);
+            HasMegatonHammer = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_MEGATON_HAMMER);
+            HasLightArrow = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_LIGHT_ARROW);
+            HasNayruLove = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_NAYRU_LOVE);
+            HasBottle1 = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_1);
+            HasBottle2 = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_2);
+            HasBottle3 = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_3);
+            HasBottle4 = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_4);
+            HasWeirdEgg = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ITEM_MODIFIER_1);
+            HasWeirdEgg2 = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ITEM_MODIFIER_2);
 
             // Stuff
-            //HasKokiriSword = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
-            //HasMasterSword = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
-            //HasGiantKnifeBiggoronSword = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
-            //HasStoneOfAgony = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
-            //HasGerudoCard = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
-            //HasGoldSkulltula = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
-            //HasDekuShield = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
-            //HasHylianShield = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
-            //HasMirrorShield = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
             var addressEquipementModifier1 = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_1);
             var addressEquipementModifier2 = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_2);
-            var addressEquippedStuff = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_EQUIPPED_STUFF);
-            HasGoronBracelet = emulatorWrapper.CheckAnyHexValue(addressEquipementModifier1, new byte[] {
+            HasGoronBracelet = emulatorWrapper.CheckAnyHexValueRaised(addressEquipementModifier1, new byte[] {
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_GORON_BRACELET,
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_SILVER_GAUNTLETS,
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_GOLDEN_GAUNTLETS
             });
-            HasSilverScale = emulatorWrapper.CheckAnyHexValue(addressEquipementModifier1, new byte[] {
+            HasSilverScale = emulatorWrapper.CheckAnyHexValueRaised(addressEquipementModifier1, new byte[] {
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_SILVER_SCALE,
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_GOLDEN_SCALE
             });
-            //HasWallet = 
-            //HasKokiriTunic = 
-            //HasGoronTunic = 
-            //HasZoraTunic = 
+
+            //TODO: Find Address
+            HasWallet = emulatorWrapper.CheckAnyHexValueRaised(Model.OOTOffsets.CST_INVENTORY_ADDRESS_WALLET, new byte[] {
+                Model.OOTOffsets.CST_INVENTORY_DEFAULT_WALLET,
+                Model.OOTOffsets.CST_INVENTORY_ADULT_WALLET,
+                Model.OOTOffsets.CST_INVENTORY_GIANT_WALLET
+            });
+            HasMagic = emulatorWrapper.CheckBitRaise(Model.OOTOffsets.CST_INVENTORY_ADDRESS_CAN_USE_MAGIC, 0x01);
             //HasHeartContainer = 
-            //HasMagic = 
-            //HasKokiriBoots = 
-            //HasIronBoots = 
-            //HasHoverBoots = 
+
+            var addressTunicAndBoot = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_TUNIC_BOOTS);
+            HasKokiriTunic = emulatorWrapper.CheckBitRaise(addressTunicAndBoot, Model.OOTOffsets.CST_INVENTORY_ITEM_KOKIRI_TUNIC);
+            HasGoronTunic = emulatorWrapper.CheckBitRaise(addressTunicAndBoot, Model.OOTOffsets.CST_INVENTORY_ITEM_GORON_TUNIC);
+            HasZoraTunic = emulatorWrapper.CheckBitRaise(addressTunicAndBoot, Model.OOTOffsets.CST_INVENTORY_ITEM_ZORA_TUNIC);
+            HasKokiriBoots = emulatorWrapper.CheckBitRaise(addressTunicAndBoot, Model.OOTOffsets.CST_INVENTORY_ITEM_KOKIRI_BOOTS);
+            HasIronBoots = emulatorWrapper.CheckBitRaise(addressTunicAndBoot, Model.OOTOffsets.CST_INVENTORY_ITEM_IRON_BOOTS);
+            HasHoverBoots = emulatorWrapper.CheckBitRaise(addressTunicAndBoot, Model.OOTOffsets.CST_INVENTORY_ITEM_HOVER_BOOTS);
+
+            var addressSwordAndShield = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_SWORD_SHIELD);
+            HasKokiriSword = emulatorWrapper.CheckBitRaise(addressSwordAndShield, Model.OOTOffsets.CST_INVENTORY_ITEM_KOKIRI_SWORD);
+            HasMasterSword = emulatorWrapper.CheckBitRaise(addressSwordAndShield, Model.OOTOffsets.CST_INVENTORY_ITEM_MASTER_SWORD);
+            HasGiantKnifeBiggoronSword = emulatorWrapper.CheckBitRaise(addressSwordAndShield, Model.OOTOffsets.CST_INVENTORY_ITEM_BIGGORON_GIANT_KNIFE);
+            HasDekuShield = emulatorWrapper.CheckBitRaise(addressSwordAndShield, Model.OOTOffsets.CST_INVENTORY_ITEM_KOKIRI_SHIELD);
+            HasHylianShield = emulatorWrapper.CheckBitRaise(addressSwordAndShield, Model.OOTOffsets.CST_INVENTORY_ITEM_HYLIAN_SHIELD);
+            HasMirrorShield = emulatorWrapper.CheckBitRaise(addressSwordAndShield, Model.OOTOffsets.CST_INVENTORY_ITEM_MIRROR_SHIELD);
+
+            var addressSongAndQuestItem = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRES_SONG_AND_QUEST_ITEM);
+            var addressParialSong = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRES_PARTIAL_SONG);
+            var addressMedallionAndSong = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_MEDALLION_AND_SONG);
+
+            HasStoneOfAgony = emulatorWrapper.CheckBitRaise(addressSongAndQuestItem, Model.OOTOffsets.CST_INVENTORY_ITEM_STONE_OF_AGONY);
+            HasGerudoCard = emulatorWrapper.CheckBitRaise(addressSongAndQuestItem, Model.OOTOffsets.CST_INVENTORY_ITEM_GERUDA_CARD);
+            //HasGoldSkulltula = emulatorWrapper.CheckHexValue(Model.OOTOffsets., );
 
             // Quest Item
+            HasKokiriEmerald = emulatorWrapper.CheckBitRaise(addressSongAndQuestItem, Model.OOTOffsets.CST_INVENTORY_ITEM_KOKIRI_EMERAD);
+            HasGoronRuby = emulatorWrapper.CheckBitRaise(addressSongAndQuestItem, Model.OOTOffsets.CST_INVENTORY_ITEM_GORON_RUBY);
+            HasZoraSapphire = emulatorWrapper.CheckBitRaise(addressSongAndQuestItem, Model.OOTOffsets.CST_INVENTORY_ITEM_ZORA_SAPPHIRE);
+            HasForestMedallion = emulatorWrapper.CheckBitRaise(addressMedallionAndSong, Model.OOTOffsets.CST_INVENTORY_ITEM_FOREST_MEDALLION);
+            HasFireMedallion = emulatorWrapper.CheckBitRaise(addressMedallionAndSong, Model.OOTOffsets.CST_INVENTORY_ITEM_FIRE_MEDALLION);
+            HasWaterMedallion = emulatorWrapper.CheckBitRaise(addressMedallionAndSong, Model.OOTOffsets.CST_INVENTORY_ITEM_WATER_MEDALLION);
+            HasSpiritMedallion = emulatorWrapper.CheckBitRaise(addressMedallionAndSong, Model.OOTOffsets.CST_INVENTORY_ITEM_SPIRIT_MEDALLION);
+            HasShadowMedallion = emulatorWrapper.CheckBitRaise(addressMedallionAndSong, Model.OOTOffsets.CST_INVENTORY_ITEM_SHADOW_MEDALLION);
+            HasLightMedallion = emulatorWrapper.CheckBitRaise(addressMedallionAndSong, Model.OOTOffsets.CST_INVENTORY_ITEM_LIGHT_MEDALLION);
 
             // Song
+            HasMinuetOfForest = emulatorWrapper.CheckBitRaise(addressMedallionAndSong, Model.OOTOffsets.CST_INVENTORY_ITEM_MINUET_OF_FOREST);
+            HasBoleroOfFire = emulatorWrapper.CheckBitRaise(addressMedallionAndSong, Model.OOTOffsets.CST_INVENTORY_ITEM_BOLERO_OF_FIRE);
+            HasSerenadeOfWater = emulatorWrapper.CheckBitRaise(addressParialSong, Model.OOTOffsets.CST_INVENTORY_ITEM_SERENADE_OF_WATER);
+            HasRequiemOfSpirit = emulatorWrapper.CheckBitRaise(addressParialSong, Model.OOTOffsets.CST_INVENTORY_ITEM_REQUIEM_OF_SPIRIT);
+            HasNocturneOfShadow = emulatorWrapper.CheckBitRaise(addressParialSong, Model.OOTOffsets.CST_INVENTORY_ITEM_NOCTURNE_OF_SHADOW);
+            HasPreludeOfLight = emulatorWrapper.CheckBitRaise(addressParialSong, Model.OOTOffsets.CST_INVENTORY_ITEM_PRELUDE_OF_LIGHT);
+            HasZeldaLullaby = emulatorWrapper.CheckBitRaise(addressParialSong, Model.OOTOffsets.CST_INVENTORY_ITEM_ZLDA_LULABY);
+            HasEponaSong = emulatorWrapper.CheckBitRaise(addressParialSong, Model.OOTOffsets.CST_INVENTORY_ITEM_EPONA_SONG);
+            HasSariaSong = emulatorWrapper.CheckBitRaise(addressParialSong, Model.OOTOffsets.CST_INVENTORY_ITEM_SARIA_SONG);
+            HasSunSong = emulatorWrapper.CheckBitRaise(addressParialSong, Model.OOTOffsets.CST_INVENTORY_ITEM_SUN_SONG);
+            HasSongOfTime = emulatorWrapper.CheckBitRaise(addressSongAndQuestItem, Model.OOTOffsets.CST_INVENTORY_ITEM_SONG_OF_TIME);
+            HasSongOfStorms = emulatorWrapper.CheckBitRaise(addressSongAndQuestItem, Model.OOTOffsets.CST_INVENTORY_ITEM_SONG_OF_STORM);
         }
     }
 

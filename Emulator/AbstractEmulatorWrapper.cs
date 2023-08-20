@@ -56,15 +56,9 @@ namespace MajoraAutoItemTracker.MemoryReader
             return arrayByte[startAddressInEdian];
         }
 
-
-        private int SwapEndianness(int value)
+        public bool CheckIsNotFF(uint offset)
         {
-            var b1 = (value >> 0) & 0xff;
-            var b2 = (value >> 8) & 0xff;
-            var b3 = (value >> 16) & 0xff;
-            var b4 = (value >> 24) & 0xff;
-
-            return b1 << 24 | b2 << 16 | b3 << 8 | b4 << 0;
+            return !CheckBitEqualTo(offset, 0xFF);
         }
 
         public bool CheckBitRaiseIn(byte aByte, int pos)
@@ -72,41 +66,58 @@ namespace MajoraAutoItemTracker.MemoryReader
             return (aByte & (1 << pos)) != 0;
         }
 
-        public bool CheckBitRaiseIn(uint offset, int pos)
-        {
-            return CheckBitRaiseIn(ReadUint8InEdianSizeAsByte(offset), pos);
-        }
-
-        public bool CheckHexValue(uint offset, byte hexValue)
+        public bool CheckBitEqualTo(uint offset, byte hexValue)
         {
             var aByte = ReadUint8InEdianSizeAsByte(offset);
             return aByte == hexValue;
         }
 
-        public bool CheckAnyHexValue(uint offset, byte[] hexValues)
+        public bool CheckBitEqualTo(byte aByte, byte hexValue)
+        {
+            return aByte == hexValue;
+        }
+
+        public bool CheckBitRaise(uint offset, byte hexValue)
+        {
+            var aByte = ReadUint8InEdianSizeAsByte(offset);
+            return CheckBitRaise(aByte, hexValue);
+        }
+
+        public bool CheckBitRaise(byte aByte, byte hexValue)
+        {
+            return (hexValue & aByte) == hexValue;
+        }
+
+        public bool CheckAnyHexValueEqualTo(uint offset, byte[] hexValues)
         {
             if (hexValues.Length == 0)
                 return false;
             var aByte = ReadUint8InEdianSizeAsByte(offset);
-            return CheckAnyHexValue(aByte, hexValues);
+            return CheckAnyHexValueEqualTo(aByte, hexValues);
         }
 
-        public bool CheckAnyHexValue(byte aByte, byte[] hexValues)
+        public bool CheckAnyHexValueEqualTo(byte aByte, byte[] hexValues)
         {
             foreach (var hexValue in hexValues)
-                if ((hexValue & aByte) == hexValue)
+                if (CheckBitEqualTo(aByte, hexValue))
                     return true;
             return false;
         }
 
-        public bool ReadAndCheckIsFF(uint offset)
+        public bool CheckAnyHexValueRaised(uint offset, byte[] hexValues)
         {
-            return CheckIsFF(ReadUint8InEdianSizeAsByte(offset));
+            if (hexValues.Length == 0)
+                return false;
+            var aByte = ReadUint8InEdianSizeAsByte(offset);
+            return CheckAnyHexValueRaised(aByte, hexValues);
         }
 
-        public bool CheckIsFF(byte aByte)
+        public bool CheckAnyHexValueRaised(byte aByte, byte[] hexValues)
         {
-            return aByte == 0xFF;
+            foreach (var hexValue in hexValues)
+                if (CheckBitRaise(aByte, hexValue))
+                    return true;
+            return false;
         }
 
         private string GetDebugPrintHex(uint hexValue)

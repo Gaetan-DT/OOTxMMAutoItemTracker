@@ -254,29 +254,29 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 case OcarinaOfTimeItemLogicPopertyName.Light_Medallion:
                     return new Point(5, 8);
                 case OcarinaOfTimeItemLogicPopertyName.Minuet_of_Forest:
-                    return new Point(0, 9);
-                case OcarinaOfTimeItemLogicPopertyName.Bolero_of_Fire:
-                    return new Point(1, 9);
-                case OcarinaOfTimeItemLogicPopertyName.Serenade_of_Water:
-                    return new Point(2, 9);
-                case OcarinaOfTimeItemLogicPopertyName.Requiem_of_Spirit:
-                    return new Point(3, 9);
-                case OcarinaOfTimeItemLogicPopertyName.Nocturne_of_Shadow:
-                    return new Point(4, 9);
-                case OcarinaOfTimeItemLogicPopertyName.Prelude_of_Light:
-                    return new Point(5, 9);
-                case OcarinaOfTimeItemLogicPopertyName.Zelda_Lullaby:
                     return new Point(0, 10);
-                case OcarinaOfTimeItemLogicPopertyName.Epona_Song:
+                case OcarinaOfTimeItemLogicPopertyName.Bolero_of_Fire:
                     return new Point(1, 10);
-                case OcarinaOfTimeItemLogicPopertyName.Saria_Song:
+                case OcarinaOfTimeItemLogicPopertyName.Serenade_of_Water:
                     return new Point(2, 10);
-                case OcarinaOfTimeItemLogicPopertyName.Sun_Song:
+                case OcarinaOfTimeItemLogicPopertyName.Requiem_of_Spirit:
                     return new Point(3, 10);
-                case OcarinaOfTimeItemLogicPopertyName.Song_of_Time:
+                case OcarinaOfTimeItemLogicPopertyName.Nocturne_of_Shadow:
                     return new Point(4, 10);
-                case OcarinaOfTimeItemLogicPopertyName.Song_of_Storms:
+                case OcarinaOfTimeItemLogicPopertyName.Prelude_of_Light:
                     return new Point(5, 10);
+                case OcarinaOfTimeItemLogicPopertyName.Zelda_Lullaby:
+                    return new Point(0, 9);
+                case OcarinaOfTimeItemLogicPopertyName.Epona_Song:
+                    return new Point(1, 9);
+                case OcarinaOfTimeItemLogicPopertyName.Saria_Song:
+                    return new Point(2, 9);
+                case OcarinaOfTimeItemLogicPopertyName.Sun_Song:
+                    return new Point(3, 9);
+                case OcarinaOfTimeItemLogicPopertyName.Song_of_Time:
+                    return new Point(4, 9);
+                case OcarinaOfTimeItemLogicPopertyName.Song_of_Storms:
+                    return new Point(5, 9);
                 default:
                     throw new Exception($"Unknown property name: {itemLogic.propertyName}");
             }

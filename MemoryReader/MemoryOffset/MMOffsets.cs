@@ -8,6 +8,10 @@ namespace MajoraAutoItemTracker
 {
     class MMOffsets // Big Endian
     {
+        // 0x8076D55C: Zeldaz check address for mm
+        public const int ZELDAZ_CHECK_ADDRESS = 0x76D55C;
+        public const int ZELDAZ_CHECK_BE = 0x5A454C44;
+        public const int ZELDAZ_CHECK_LE = 0x444C455A;
 
         #region Link 
 
