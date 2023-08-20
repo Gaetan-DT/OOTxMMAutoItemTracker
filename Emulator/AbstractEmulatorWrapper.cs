@@ -19,7 +19,7 @@ namespace MajoraAutoItemTracker.MemoryReader
         public abstract bool ProcessExist();
         public abstract string GetDisplayName();
 
-        protected int GetZeldaCheckFollowingEndianAndRomType(RomType romType)
+        private int GetZeldaCheckFollowingEndianAndRomType(RomType romType)
         {
             switch (romType)
             {
@@ -27,22 +27,45 @@ namespace MajoraAutoItemTracker.MemoryReader
                     return IsEmulatorUseBigEndian ? OOTOffsets.ZELDAZ_CHECK_BE : OOTOffsets.ZELDAZ_CHECK_LE;
                 case RomType.MAJORA_MASK_USA_V0:
                     return IsEmulatorUseBigEndian ? MMOffsets.ZELDAZ_CHECK_BE : MMOffsets.ZELDAZ_CHECK_LE;
-                default :
+                default:
                     throw new Exception($"Unknown rom type: {romType}");
             }   
         }
 
-        protected uint GetZeldazAddress(RomType romType)
+        // Perform with current start address
+        public bool PerformCheckFollowingRomType(RomType romType)
+        {
+            return PerformCheckFollowingRomType(romType, m_romAddrStart);
+        }
+
+        public bool PerformCheckFollowingRomType(RomType romType, uint possibleRomAddrStart)
         {
             switch (romType)
             {
                 case RomType.OCARINA_OF_TIME_USA_V0:
-                    return OOTOffsets.ZELDAZ_CHECK_ADDRESS;
+                    return PerformOOTCheck(possibleRomAddrStart);
                 case RomType.MAJORA_MASK_USA_V0:
-                    return MMOffsets.ZELDAZ_CHECK_ADDRESS;
-                default:
-                    throw new Exception($"Unknown rom type: {romType}");
+                    return PerformMMCheck(possibleRomAddrStart);
+                case RomType.RANDOMIZE_OOT_X_MM:
+                    return PerformOOTCheck(possibleRomAddrStart) || PerformMMCheck(possibleRomAddrStart);
             }
+            return false;
+        }
+
+        private bool PerformOOTCheck(uint possibleRomAddrStart)
+        {
+            var ootCheck = Memory.ReadInt32(m_Process, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
+            if (ootCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.OCARINA_OF_TIME_USA_V0))
+                return true;
+            return false;
+        }
+
+        private bool PerformMMCheck(uint possibleRomAddrStart)
+        {
+            var mmCheck = Memory.ReadInt32(m_Process, new UIntPtr(possibleRomAddrStart + MMOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
+            if (mmCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.MAJORA_MASK_USA_V0))
+                return true;
+            return false;
         }
 
         public UIntPtr GetPtrOffsetWithRomStart(uint offset)

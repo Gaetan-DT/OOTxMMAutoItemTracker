@@ -80,12 +80,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     break;
                 }
             }
-            /* recuperer l'item logic grace au param itemlogicproperty.item1 de l'event
-            * avec l'item logic maj itemlogic "hasItem" grace au param foo de l'event 
-            * si le foo.Item2 est autre qu'un bool on va maj l'itemlogic.currentvariant
-            rappeler drawitem
-            * appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
-            */
         }
 
         public override void DrawSquareCategory(PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBox, int rectWidthAndHeight)
@@ -123,6 +117,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public override void DrawCheckList(object sender, DrawItemEventArgs e)
         {
+            if (e.Index < 0)
+                return;
             var listBox = (ListBox)sender;
             var checkLogic = (OcarinaOfTimeCheckLogic)listBox.Items[e.Index];
             Brush brush;

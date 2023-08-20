@@ -69,6 +69,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             this.Invoke((MethodInvoker)delegate
             {
+                UpdateTabIfOOTxMM(tabOcarinaOfTime);
                 Log($"update for:{itemLogicProperty.Item1} with value: {itemLogicProperty.Item2}");
                 ocarinaOfTimeController.OnItemLogicChange(itemLogicProperty);
             });
@@ -78,9 +79,19 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             this.Invoke((MethodInvoker)delegate
             {
+                UpdateTabIfOOTxMM(tabMajoraMask);
                 Log($"update for:{itemLogicProperty.Item1} with value: {itemLogicProperty.Item2}");
                 majoraMaskController.OnItemLogicChange(itemLogicProperty);
             });
+        }
+
+        private void UpdateTabIfOOTxMM(TabPage newTabToDisplay)
+        {
+            if (emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex) != RomType.RANDOMIZE_OOT_X_MM)
+                return;
+            if (tabGameMenu.SelectedTab == newTabToDisplay)
+                return;
+            tabGameMenu.SelectedTab = newTabToDisplay;
         }
 
         private void UpdateRomList(List<RomType> romTypes)

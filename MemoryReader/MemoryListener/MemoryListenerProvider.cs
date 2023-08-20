@@ -16,7 +16,6 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
         {
             var ootObserver = new OcarinaOfTimeMemoryDataObserver();
             var mmObserver = new MajoraMemoryDataObserver();
-
             switch (romType)
             {
                 case RomType.OCARINA_OF_TIME_USA_V0:
@@ -26,7 +25,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
                     mmObserver.BindAllEvent(mmReplaySubject);
                     return new MajoraMaskMemoryListener(emulatorWrapper, mmObserver);
                 case RomType.RANDOMIZE_OOT_X_MM:
-                    throw new Exception("Not yet implemented"); // TODO
+                    ootObserver.BindAllEvent(ootReplaySubject);
+                    mmObserver.BindAllEvent(mmReplaySubject);
+                    return new OOTxMMMemoryListener(emulatorWrapper, ootObserver, mmObserver);
                 default:
                     throw new Exception($"Unknown rom type {romType}");
             }

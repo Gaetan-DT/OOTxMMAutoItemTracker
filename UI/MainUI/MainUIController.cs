@@ -5,13 +5,9 @@ using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
 using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.UI.MainUI

@@ -308,19 +308,21 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             HasLensOfTruth.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgLens, value)));
             HasHookShot.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgHook, value)));
             HasGreatFairySword.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgGfsword, value)));
-            //observer.HasTradingItem1.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasTradingItem2.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasTradingItem3.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
+            HasTradingItem1.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgScrubTrade, value)));
+            HasTradingItem2.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgKeyMama, value)));
+            HasTradingItem3.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ImgLetterpendant, value)));
             HasBootle1.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle1, value)));
             HasBootle2.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle2, value)));
             HasBootle3.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle3, value)));
             HasBootle4.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle4, value)));
             HasBootle5.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle5, value)));
             HasBootle6.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.Imgbottle6, value)));
+            
             HasDekuMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.DekuMask, value)));
             HasGoronMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GoronMask, value)));
             HasZoraMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ZoraMask, value)));
             HasFierceDeityMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.FiercedeityMask, value)));
+            
             HasPostmanHat.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.PostmanMask, value)));
             HasAllNightMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.AllnightMask, value)));
             HasBlastMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.BlastMask, value)));
@@ -341,17 +343,19 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             HasGaroMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GaroMask, value)));
             HasCaptainHat.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.CaptainMask, value)));
             HasGiantMask.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GiantMask, value)));
-            //observer.HasSongOfTime.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasSongOfHealing.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasEponaSong.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasSongOfSoaring.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasSongOfStorm.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasSonataOfAwakening.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasGoronLullaby.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasNewWaveBossaNova.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasElegyOfEmptyness.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //observer.HasSongOathToORder.Subscribe(value => replaySubject.OnNext(new Tuple<ItemLogicPopertyName, object>(ItemLogicPopertyName., value)));
-            //HasSunSong.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName., value)));
+            
+            HasSongOfTime.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.SongOfTime, value)));
+            HasSongOfHealing.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.SongOfHealing, value)));
+            HasEponaSong.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.EponaSong, value)));
+            HasSongOfSoaring.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.SongOfSoaring, value)));
+            HasSongOfStorm.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.SongOfStorm, value)));
+            HasSonataOfAwakening.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.SonataOfAwakening, value)));
+            HasGoronLullaby.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GoronLullaby, value)));
+            HasNewWaveBossaNova.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.NewWaveBossaNova, value)));
+            HasElegyOfEmptyness.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.ElegyOfEmptyness, value)));
+            HasSongOathToORder.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.SongOathToOrder, value)));
+            HasSunSong.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.SunSong, value)));
+
             HasBossMaskOdolwa.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.OdolwaMask, value)));
             HasBoosMaskGoht.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GohtMask, value)));
             HasBoosMaskGyorg.Subscribe(value => replaySubject.OnNext(new Tuple<MajoraMaskItemLogicPopertyName, object>(MajoraMaskItemLogicPopertyName.GyorgMask, value)));

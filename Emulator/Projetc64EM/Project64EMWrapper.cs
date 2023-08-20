@@ -82,20 +82,8 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             // Src: 
             // I have found 3 different addresses when connecting to project 64
             foreach (uint romAddrStart in CST_POSSIBLE_ROOM_ADDR_START)
-            {
-                // ' Try to read what should be the first part of the ZELDAZ check
-                int ootCheck = 0;
-                try
-                {
-                    ootCheck = Memory.ReadInt32(m_Process, new UIntPtr(romAddrStart + GetZeldazAddress(romType)), IsEmulatorUseBigEndian);
-                }
-                catch (Exception e)
-                {
-                    Debug.WriteLine(e);
-                }
-                if (ootCheck == GetZeldaCheckFollowingEndianAndRomType(romType))
+                if (PerformCheckFollowingRomType(romType, romAddrStart)) // ' Try to read what should be the first part of the ZELDAZ check
                     return romAddrStart;
-            }
             throw new Exception("Process not found or unable to find Zelda check address");
         }
 

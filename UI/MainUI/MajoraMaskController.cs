@@ -75,10 +75,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
         // Call when change is trigger from memory
         public void OnItemLogicChange(Tuple<MajoraMaskItemLogicPopertyName, object> itemLogicProperty)
         {
-            var strItemLogicPropertyName = MajoraMaskItemLogicPopertyNameMethod.ToString(itemLogicProperty.Item1);
             foreach (var itemLogic in itemLogics)
             {
-                if (strItemLogicPropertyName == itemLogic.propertyName)
+                if (itemLogic.propertyName == null || itemLogic.propertyName == "")
+                    continue;
+                else if (itemLogicProperty.Item1 == MajoraMaskItemLogicPopertyNameMethod.FromString(itemLogic.propertyName))
                 {
                     if (itemLogicProperty.Item2 is bool)
                     {
@@ -89,6 +90,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     {
                         itemLogic.hasItem = (EquipmentQuiver)itemLogicProperty.Item2 != EquipmentQuiver.None;
                         itemLogic.CurrentVariant = (int)itemLogicProperty.Item2;
+                    }
+                    else
+                    {
+                        itemLogic.hasItem = false;
+                        itemLogic.CurrentVariant = 0;
                     }
                     // TODO: gerer les différent cas pour les enum
                     pictureBoxItemList.Refresh();
@@ -120,6 +126,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public override void DrawCheckList(object sender, DrawItemEventArgs e)
         {
+            if (e.Index < 0)
+                return;
             var listBox = (ListBox)sender;
             var checkLogic = (MajoraMaskCheckLogic)listBox.Items[e.Index];
             Brush brush;
@@ -264,6 +272,28 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     return new Point(2, 9);
                 case MajoraMaskItemLogicPopertyName.ImgMagic:
                     return new Point(3, 9);
+                case MajoraMaskItemLogicPopertyName.SongOfTime: 
+                    return new Point(0, 10);
+                case MajoraMaskItemLogicPopertyName.SongOfHealing: 
+                    return new Point(1, 10);
+                case MajoraMaskItemLogicPopertyName.EponaSong: 
+                    return new Point(2, 10);
+                case MajoraMaskItemLogicPopertyName.SongOfSoaring: 
+                    return new Point(3, 10);
+                case MajoraMaskItemLogicPopertyName.SongOfStorm: 
+                    return new Point(4, 10);
+                case MajoraMaskItemLogicPopertyName.SonataOfAwakening: 
+                    return new Point(0, 11);
+                case MajoraMaskItemLogicPopertyName.GoronLullaby: 
+                    return new Point(1, 11);
+                case MajoraMaskItemLogicPopertyName.NewWaveBossaNova: 
+                    return new Point(2, 11);
+                case MajoraMaskItemLogicPopertyName.ElegyOfEmptyness: 
+                    return new Point(3, 11);
+                case MajoraMaskItemLogicPopertyName.SongOathToOrder: 
+                    return new Point(4, 11);
+                case MajoraMaskItemLogicPopertyName.SunSong: 
+                    return new Point(5, 11);
                 default:
                     throw new Exception($"Unknown property name: {itemLogic}");
             }

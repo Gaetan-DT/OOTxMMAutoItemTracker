@@ -800,5 +800,131 @@
         "positionY": 14
       }
     ]
+  },
+  {
+    "displayName": "Song Of Time",
+    "propertyName": "SongOfTime",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Song Of Healing",
+    "propertyName": "SongOfHealing",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 2,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Epona Song",
+    "propertyName": "EponaSong",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 3,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Song Of Soaring",
+    "propertyName": "SongOfSoaring",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 4,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Song Of Storm",
+    "propertyName": "SongOfStorm",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 5,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Sonata Of Awakening",
+    "propertyName": "SonataOfAwakening",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 6,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Goron Lullaby",
+    "propertyName": "GoronLullaby",
+    "variants": [
+      {
+        "idLogic": "GoronLullabyHalf",
+        "positionX": 7,
+        "positionY": 6
+      },
+      {
+        "idLogic": "GoronLullabyFull",
+        "positionX": 8,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "New Wave Bossa Nova",
+    "propertyName": "NewWaveBossaNova",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 9,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Elegy Of Emptyness",
+    "propertyName": "ElegyOfEmptyness",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 10,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Song Oath To Order",
+    "propertyName": "SongOathToOrder",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 11,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Sun Song",
+    "propertyName": "SunSong",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 12,
+        "positionY": 6
+      }
+    ]
   }
 ]

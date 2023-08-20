@@ -112,6 +112,7 @@
     <Compile Include="MemoryReader\MemoryListener\AbstractMemoryListener.cs" />
     <Compile Include="MemoryReader\MemoryListener\MemoryListenerProvider.cs" />
     <Compile Include="MemoryReader\MemoryListener\OcarinaOfTimeMemoryListener.cs" />
+    <Compile Include="MemoryReader\MemoryListener\OOTxMMMemoryListener.cs" />
     <Compile Include="MemoryReader\MemoryOffset\OOTxMMOffsets.cs" />
     <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogic.cs" />
     <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogicCategory.cs" />
