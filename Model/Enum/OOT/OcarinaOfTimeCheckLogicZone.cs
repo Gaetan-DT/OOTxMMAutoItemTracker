@@ -40,7 +40,8 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
         Zora_Fountain,
         Jabu_Jabus_Belly_V,
         Jabu_Jabus_Belly_MQ,
-        Ice_Cavern,
+        Ice_Cavern_V,
+        Ice_Cavern_MQ,
         Kakariko_Village,
         Bottom_of_the_Well_V,
         Bottom_of_the_Well_MQ,
@@ -126,8 +127,10 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
                     return OcarinaOfTimeCheckLogicZone.Jabu_Jabus_Belly_V;
                 case "Jabu Jabu's Belly MQ":
                     return OcarinaOfTimeCheckLogicZone.Jabu_Jabus_Belly_MQ;
-                case "Ice Cavern":
-                    return OcarinaOfTimeCheckLogicZone.Ice_Cavern;
+                case "Ice Cavern V":
+                    return OcarinaOfTimeCheckLogicZone.Ice_Cavern_V;
+                case "Ice Cavern MQ":
+                    return OcarinaOfTimeCheckLogicZone.Ice_Cavern_MQ;
                 case "Kakariko Village":
                     return OcarinaOfTimeCheckLogicZone.Kakariko_Village;
                 case "Bottom of the Well V":

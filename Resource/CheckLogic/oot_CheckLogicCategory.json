@@ -31,7 +31,29 @@
         "SquarePositionX": 52,
         "SquarePositionY": 191,
         "CheckLogicId": [
-
+            "Entrance Front Left Chest",
+            "Entrance Back Left Chest",
+            "Entrance Back Right Chest",
+            "Child Left Chest",
+            "Map Chest",
+            "Child CLimb North Chest",
+            "Compass Chest",
+            "Silver Block Hallway Chest",
+            "Sun Block Room",
+            "Silver Gauntlets Chest",
+            "Child Center Chest",
+            "Child CLimb South",
+            "Lower NE Main Room CHest",
+            "Upper NE Main Room Chest",
+            "Lower Adult Left Chest",
+            "Lower Adult Right Chest",
+            "Entrance Front Right Chest",
+            "Beamos Room",
+            "Dinolfos Room Chest",
+            "Mirror Shield Chest",
+            "Boos Key Chest",
+            "Mirror PUzzle Invisible Chest",
+            "Twinvora"
         ]
     },
     {
@@ -40,6 +62,8 @@
         "SquarePositionY": 257,
         "CheckLogicId": [
             "Requiem of Spirit",
+            "Desert Grotto Left Deku Salesman",
+            "Desert Grotto Right Deku Salesman",
             "Deset Colossus Fairy",
             "Desert Colossus Heart Piece"
         ]
@@ -49,7 +73,8 @@
         "SquarePositionX": 261,
         "SquarePositionY": 254,
         "CheckLogicId": [
-
+            "Haunted Wasteland Chest",
+            "Bombchu Carpet Salesman"
         ]
     },
     {
@@ -57,7 +82,14 @@
         "SquarePositionX": 394,
         "SquarePositionY": 189,
         "CheckLogicId": [
-
+            "Fortress Rooftop Chest",
+            "Carpenter Guard 1",
+            "Carpenter Guard 2",
+            "Carpenter Guard 3",
+            "Carpenter Guard 4",
+            "Rescued all Carpenters",
+            "Horseback Archery Game 1000pts",
+            "Horseback Archery Game 1500pts"
         ]
     },
     {
@@ -65,7 +97,28 @@
         "SquarePositionX": 367,
         "SquarePositionY": 303,
         "CheckLogicId": [
-
+            "Lobby Left Chest",
+            "Lobby Right Chest",
+            "Stalfos Chest",
+            "Beamos Chest",
+            "Hidden Ceiling Chest",
+            "Maze Path First Chest",
+            "Maze Path Second Chest",
+            "Maze Path Third Chest",
+            "Maze Path Final Chest",
+            "Maze Right Central Chest",
+            "Maze Right Side Chest",
+            "Maze Right Side Key",
+            "Underwater Silver Rupee Chest",
+            "Hammer Room Clear Chest",
+            "Hammer Room Switch CHest",
+            "Eye Statue Chest",
+            "Near Scarecrow Chest",
+            "Beafore Heavy Block CHest",
+            "Heavy Block First Chest",
+            "Heavy Block Second Chest",
+            "Heavy Block Third Chest",
+            "Heavy Block Fourth Chest"
         ]
     },
     {
@@ -73,7 +126,23 @@
         "SquarePositionX": 367,
         "SquarePositionY": 303,
         "CheckLogicId": [
-
+            "Lobby Left Chest",
+            "Lobby Right Chest",
+            "Hidden Ceiling Chest",
+            "Maze Path Fiest Chest",
+            "Maze Path Second Chest",
+            "Maze Path Third Chest",
+            "Dinolfos Chest",
+            "Underwater Silver Rupees Chest",
+            "First Iron Knuckle Chest",
+            "Before Heavy Block Chest",
+            "Heavy Block Chest",
+            "Eye Statue Chest",
+            "Second Iron Knuckle Chest",
+            "Flame Circle Chest",
+            "Maze Right Central Chest",
+            "Maze Right Side Chest",
+            "Ice Arrows Chest"
         ]
     },
     {
@@ -81,7 +150,12 @@
         "SquarePositionX": 468,
         "SquarePositionY": 392,
         "CheckLogicId": [
-
+            "Gerudo Valley Hammer Rocks Chest",
+            "Gerudo Valley Crate Heart Piece",
+            "Gerudo Valley Waterfall Heart Piece",
+            "Gerudo Behind Tent Grotto Left Deku Salesman",
+            "Gerudo Behind Tent Grotto Right Deku Salesman",
+            "Cow Near Gerudo Fortress"
         ]
     },
     {
@@ -89,7 +163,17 @@
         "SquarePositionX": 693,
         "SquarePositionY": 986,
         "CheckLogicId": [
-
+            "Map Chest",
+            "Compass Chest",
+            "Torches Chest",
+            "Dragon Chest",
+            "Central Bow Target Chest",
+            "Boos Key Chest",
+            "Central Pillar Chest",
+            "Cracked Wall Chest",
+            "Dark Link Chest",
+            "River Chest",
+            "Morpha"
         ]
     },
     {
@@ -97,7 +181,13 @@
         "SquarePositionX": 693,
         "SquarePositionY": 986,
         "CheckLogicId": [
-
+            "Map Chest",
+            "Central Pillar Chest",
+            "Compass Chest",
+            "Longshot Chest",
+            "Boss Key Chest",
+            "Freestanding Key",
+            "Morpha"
         ]
     },
     {
@@ -105,7 +195,15 @@
         "SquarePositionX": 742,
         "SquarePositionY": 853,
         "CheckLogicId": [
-
+            "Underwater Bottle",
+            "Laku Hylia Sun",
+            "Diving in the Lab",
+            "Child Lake Fishing",
+            "Adult Lake Fishing",
+            "Lab Roof Heart Piece",
+            "Lake Hylia Grace Left Deku Salesman",
+            "Lake Hylia Grace Middle Deku Salesman",
+            "Lake Hylia Grace Right Deku Salesman"
         ]
     },
     {
@@ -113,7 +211,16 @@
         "SquarePositionX": 903,
         "SquarePositionY": 443,
         "CheckLogicId": [
-
+           "Epona Song",
+           "Talon Chickens Minigame",
+           "Tower Heart Piece",
+           "Left Cow In Tower",
+           "Right Cow In Tower",
+           "Left Cow In Stables",
+           "Right Cow In Stables",
+           "Lon Lon Farm Grotto Left Deku Salesman",
+           "Lon Lon Farm Grotto Middle Deku Salesman",
+           "Lon Lon Farm Grotto Right Deku Salesman"
         ]
     },
     {
@@ -121,7 +228,14 @@
         "SquarePositionX": 1057,
         "SquarePositionY": 409,
         "CheckLogicId": [
-
+            "Ocarina of Time",
+            "Song of Time",
+            "Hyrule Field Deku Salesman Grotto",
+            "Hyrule Field South Grotto",
+            "Hyrule Field Diving Heart Piece Grotto",
+            "Hyrule Field North Grotto",
+            "Hyrule Field Forest Grotto",
+            "Hyrule Field Cow in West Grotto"
         ]
     },
     {
@@ -129,7 +243,7 @@
         "SquarePositionX": 1008,
         "SquarePositionY": 322,
         "CheckLogicId": [
-
+            "TenBigPoes"
         ]
     },
     {
@@ -137,7 +251,35 @@
         "SquarePositionX": 985,
         "SquarePositionY": 241,
         "CheckLogicId": [
-
+            "Child Shooting Gallery",
+            "Bombchu Bowling 1",
+            "Bombchu Bowling 2",
+            "Treasure Chest Game",
+            "Dog Lady",
+            "Bombchu Shop Left Top Left",
+            "Bombchu Shop Left Bottom Left",
+            "Bombchu Shop Left Top Right",
+            "Bombchu Shop Left Top Right",
+            "Bombchu Shop Right Top Left",
+            "Bombchu Shop Right Bottom Left",
+            "Bombchu Shop Right Top Right",
+            "Bombchu Shop Right Bottom Right",
+            "Child Bazaar Left Top Left",
+            "Child Bazaar Left Top Left",
+            "Child Bazaar Left Bottom Right",
+            "Child Bazaar Left Bottom Right",
+            "Child Bazaar Right Top Left",
+            "Child Bazaar Right Top Left",
+            "Child Bazaar Right Bottom Right",
+            "Child Bazaar Right Bottom Right",
+            "Child Potion Shop Left Top Left",
+            "Child Potion Shop Left Bottom Left",
+            "Child Potion Shop Left Top Right",
+            "Child Potion Shop Left Bottom Right",
+            "Child Potion Shop Right Top Left",
+            "Child Potion Shop Right Bottom Left",
+            "Child Potion Shop Right Top Right",
+            "Child Potion Shop Right Bottom Right"
         ]
     },
     {
@@ -145,7 +287,8 @@
         "SquarePositionX": 1097,
         "SquarePositionY": 200,
         "CheckLogicId": [
-
+            "Prelude Of Light",
+            "Light Arrows"
         ]
     },
     {
@@ -153,7 +296,9 @@
         "SquarePositionX": 987,
         "SquarePositionY": 173,
         "CheckLogicId": [
-
+            "Malon Weird Egg",
+            "Zelda Lullaby",
+            "Hyrule Castle Fairy"
         ]
     },
     {
@@ -161,7 +306,7 @@
         "SquarePositionX": 1036,
         "SquarePositionY": 161,
         "CheckLogicId": [
-
+            "Gannon Castle Fairy"
         ]
     },
     {
@@ -169,7 +314,27 @@
         "SquarePositionX": 1005,
         "SquarePositionY": 61,
         "CheckLogicId": [
-
+            "Under Bridge First Deku Salesman",
+            "Under Bridge Second Deku Salesman",
+            "Under Bridge Third Deku Salesman",
+            "Under Bridge Fourth Deku Salesman",
+            "Forest Trial Chest",
+            "Water Trial Left Chest",
+            "Water Trial Right Chest",
+            "Shadow Trial First Chest",
+            "Shadow Trial Second Chest",
+            "Spirit Trial First Chest",
+            "Spirit Trial Second Chest",
+            "Light Trial First Left Chest",
+            "Light Trial Second Left Chest",
+            "Light Trial Third Left Chest",
+            "Light Trial First Right Chest",
+            "Light Trial Second Right Chest",
+            "Light Trial Third Right Chest",
+            "Light Trial Invisible Enemies Chest",
+            "Light Trial Lullaby Chest",
+            "Boss Key Chest",
+            "Gannon Fight"
         ]
     },
     {
@@ -177,7 +342,26 @@
         "SquarePositionX": 1005,
         "SquarePositionY": 61,
         "CheckLogicId": [
-
+            "Under Bridge First Deku Salesman",
+            "Under Bridge Second Deku Salesman",
+            "Under Bridge Third Deku Salesman",
+            "Under Bridge Fourth Deku Salesman",
+            "Under Bridge Fifth Deku Salesman",
+            "Forest Trial First Chest",
+            "Forest Trial Second Chest",
+            "Forest Trial Freestanding Key",
+            "Water Trial Chest",
+            "Shadow Trial First Chest",
+            "Shadow Trial Second Chest",
+            "Spirit Trial First Chest",
+            "Spirit Trial Second Chest",
+            "Spirit Trial Sun Front Left Chest",
+            "Spirit Trial Sun Back Left Chest",
+            "Golden Gauntlets Chest",
+            "Spirit Trial Sun Back Right Chest",
+            "Light Trial Lullaby Chest",
+            "Boss Key Chest",
+            "Gannon Fight"
         ]
     },
     {
@@ -185,7 +369,21 @@
         "SquarePositionX": 1517,
         "SquarePositionY": 664,
         "CheckLogicId": [
-
+            "Kokiri Sword Chest",
+            "Cow In Link House",
+            "Mido Chest 1",
+            "Mido Chest 2",
+            "Mido Chest 3",
+            "Mido Chest 4",
+            "Kokiri Song of Storms Grotto", 
+            "Kokiri Shop Left Top Left",
+            "Kokiri Shop Left Bottom Left",
+            "Kokiri Shop Left Top Right",
+            "Kokiri Shop Left Bottom Right",
+            "Kokiri Shop Right Top Left",
+            "Kokiri Shop Right Bottom Left",
+            "Kokiri Shop Right Top Right",
+            "Kokiri Shop Right Bottom Right"
         ]
     },
     {
@@ -193,7 +391,13 @@
         "SquarePositionX": 1712,
         "SquarePositionY": 590,
         "CheckLogicId": [
-
+            "Lobby Chest",
+            "Slingshot Chest",
+            "Slingshot Room Side Chest",
+            "Compass Chest",
+            "Compass Room Side Chest",
+            "Basement Chest",
+            "Gohma"
         ]
     },
     {
@@ -201,7 +405,15 @@
         "SquarePositionX": 1712,
         "SquarePositionY": 590,
         "CheckLogicId": [
-
+            "Lobby Chest",
+            "Slingshot Chest", 
+            "Slingshot Room Back",
+            "Compass Chest",
+            "Basement Chest",
+            "Before Spinning Log",
+            "After Spinning Log",
+            "Deku Basement Salesman",
+            "Gohma"
         ]
     },
     {
@@ -209,7 +421,18 @@
         "SquarePositionX": 1439,
         "SquarePositionY": 542,
         "CheckLogicId": [
-
+            "Saria Ocarina",
+            "Skull Kid",
+            "Near Bridge Deku Salesman",
+            "Ocarina Memory Game",
+            "Target in Wood",
+            "Boom Grotto Chest",
+            "Deku Theather Skull Mask",
+            "Deku Theather Mask Of Truth",
+            "Near Meado Grotto Left Deku Salesman",
+            "Near Meado Grotto Right Deku Salesman",
+            "Forest Above Theather Left Deku Salesman",
+            "Forest Above Theather Right Deku Salesman"
         ]
     },
     {
@@ -217,7 +440,11 @@
         "SquarePositionX": 1556,
         "SquarePositionY": 488,
         "CheckLogicId": [
-
+            "Wolfos Grotto Chest",
+            "Forest Meadow Grotto Left Deku Salesman",
+            "Forest Meadow Grotto Right Deku Salesman",
+            "Saria Song",
+            "Minuet Of Forest"
         ]
     },
     {
@@ -225,7 +452,20 @@
         "SquarePositionX": 1500,
         "SquarePositionY": 416,
         "CheckLogicId": [
-
+            "First Chest",
+            "Chest Behind Lobby",
+            "Well CHest",
+            "Map Chest", 
+            "Outside Hookshot Chest",
+            "Block Push Chest", 
+            "Boss Key Chest",
+            "Floormaster Chest",
+            "Bow Chest", 
+            "Red Poe Chest",
+            "Blue Poe Chest",
+            "Falling Room Chest",
+            "Near Boss Chest",
+            "Phantom Ganon"
         ]
     },
     {
@@ -233,7 +473,19 @@
         "SquarePositionX": 1500,
         "SquarePositionY": 416,
         "CheckLogicId": [
-
+            "First Chest",
+            "Chest Behind Lobby",
+            "Boss Key Chest", 
+            "Redead Chest",
+            "Well Chest", 
+            "NE Outdoors Upper Chest",
+            "NE Outdoors Lower Chest",
+            "Bow Chest",
+            "Map Chest",
+            "Compass Chest",
+            "Falling Room Chest",
+            "Near Boos Chest",
+            "Phantom Ganon"
         ]
     },
     {
@@ -241,7 +493,14 @@
         "SquarePositionX": 1440,
         "SquarePositionY": 350,
         "CheckLogicId": [
-
+            "Frogs in the Rain",
+            "Frog Ocarina Game",
+            "Zora River Heart Piece 1",
+            "Zora River Heart Piece 2",
+            "Zora River Grotto",
+            "Zora River Entrance Grotto Left Deku Salesman",
+            "Zora River Entrance Grotto Right Deku Salesman",
+            "Zora River Bean Salesman"
         ]
     },
     {
@@ -249,7 +508,17 @@
         "SquarePositionX": 1800,
         "SquarePositionY": 340,
         "CheckLogicId": [
-
+            "Diving Minigame",
+            "Zoras Domain Torch Run",
+            "King Zora Thawed",
+            "Zora Shop Left Top Left",
+            "Zora Shop Left Bottom Left",
+            "Zora Shop Left Top Right",
+            "Zora Shop Left Bottom Right",
+            "Zora Shop Right Top Left",
+            "Zora Shop Right Bottom Left",
+            "Zora Shop Right Top Right",
+            "Zora Shop Right Bottom Right"
         ]
     },
     {
@@ -257,7 +526,9 @@
         "SquarePositionX": 1830,
         "SquarePositionY": 250,
         "CheckLogicId": [
-
+            "Fairy Fountain",
+            "Inceberg Heart Piece",
+            "Underwater Heart Piece"
         ]
     },
     {
@@ -265,7 +536,11 @@
         "SquarePositionX": 1740,
         "SquarePositionY": 215,
         "CheckLogicId": [
-
+            "Jabu Jabu Near Elevator Deku Salesman",
+            "Boomerang Chest",
+            "Map Chest", 
+            "Compass Chest",
+            "Barinade"
         ]
     },
     {
@@ -273,15 +548,43 @@
         "SquarePositionX": 1740,
         "SquarePositionY": 215,
         "CheckLogicId": [
-
+            "Map Chest",
+            "Entry Room Side Chest",
+            "Second Room Lower Chest",
+            "Compass Chest",
+            "Basement South Chest",
+            "Basement North Chest",
+            "Boomerang Room Small Chest",
+            "Bommerang Chest",
+            "Falling Like Like Chest",
+            "Cow in Jabu Jabu",
+            "Second Room Upper Chest",
+            "Near Boss Chest",
+            "Barinade"
         ]
     },
     {
-        "Name": "Ice Cavern",
+        "Name": "Ice Cavern V",
         "SquarePositionX": 1760,
         "SquarePositionY": 150,
         "CheckLogicId": [
-
+            "Map Chest",
+            "Compass Chest",
+            "Heart Piece",
+            "Iron Boots Chest",
+            "Serenade Of Water"
+        ]
+    },
+    {
+        "Name": "Ice Cavern MQ",
+        "SquarePositionX": 1760,
+        "SquarePositionY": 150,
+        "CheckLogicId": [
+            "Map Chest",
+            "Compass Chest",
+            "Heart Piece",
+            "Iron Boots Chest",
+            "Serenade Of Water"
         ]
     },
     {
@@ -289,7 +592,38 @@
         "SquarePositionX": 1223,
         "SquarePositionY": 258,
         "CheckLogicId": [
-
+            "Anju As Adult",
+            "Anju As Chickens",
+            "Kakariko Redead Grotto Chest",
+            "Kakariko Grotto Chest",
+            "Windmill Heart Piece",
+            "Song of Storms",
+            "Man On Roof",
+            "Cow In Impa House",
+            "Cow Heart Piece",
+            "Nocture Of Shadow",
+            "Skultula House 10",
+            "Skultula House 20",
+            "Skultula House 30",
+            "Skultula House 40",
+            "Skultula House 50",
+            "Adult Shooting Gallery",
+            "Adult Bazzar Left Top Left",
+            "Adult Bazzar Left Bottom Left",
+            "Adult Bazzar Left Top Right",
+            "Adult Bazzar Left Bottom Right",
+            "Adult Bazzar Right Top Left",
+            "Adult Bazzar Right Bottom Left",
+            "Adult Bazzar Right Top Right",
+            "Adult Bazzar Right Bottom Right",
+            "Adult Potion Shop Left Top Left",
+            "Adult Potion Shop Left Bottom Left",
+            "Adult Potion Shop Left Top Right",
+            "Adult Potion Shop Left Bottom Right",
+            "Adult Potion Shop Right Top Left",
+            "Adult Potion Shop Right Bottom Left",
+            "Adult Potion Shop Right Top Right",
+            "Adult Potion Shop Right Bottom Right"
         ]
     },
     {
@@ -297,7 +631,20 @@
         "SquarePositionX": 1320,
         "SquarePositionY": 260,
         "CheckLogicId": [
-
+            "Front Left Hidden Wall",
+            "Fonrt Center Bombable",
+            "Right Bottom Hidden Wall",
+            "Center West Chest",
+            "Center East Chest",
+            "Back Left Bombable",
+            "Coffin Key",
+            "Defeat Boss",
+            "Invisible Chest",
+            "Underwater Front Chest",
+            "Underwater Left Chest",
+            "Basement Chest",
+            "Locked Pits",
+            "Behind Right Grate"
         ]
     },
     {
@@ -305,7 +652,11 @@
         "SquarePositionX": 1320,
         "SquarePositionY": 260,
         "CheckLogicId": [
-
+            "Compass Chest", 
+            "Map Chest", 
+            "Lens Of Truth Chest",
+            "Deadhand Freestanding Key",
+            "East Inner Room Freestanding key"
         ]
     },
     {
@@ -313,7 +664,14 @@
         "SquarePositionX": 1420,
         "SquarePositionY": 255,
         "CheckLogicId": [
-
+            "Dampe Digging",
+            "Dampe Race 1", 
+            "Dampe Race 2",
+            "Shield Grace Chest",
+            "Redead Grave Chest",
+            "Royal Grave Sun Song",
+            "Royal Grave Sun Song Chest",
+            "Magic Bean Heart Piece"
         ]
     },
     {
@@ -321,7 +679,24 @@
         "SquarePositionX": 1515,
         "SquarePositionY": 210,
         "CheckLogicId": [
-
+            "Map Chest",
+            "Hover Boots Chest", 
+            "Compass Chest",
+            "Early Silver Rupee Chest",
+            "Invisible Blades Visible Chest",
+            "Invisible Blades Invisible Chest",
+            "Falling Spikes Lower Chest",
+            "Falling Spikes Upper Chest",
+            "Falling Spikes Switch Chest",
+            "Invisible Spikes Chest",
+            "Giant Pot Key",
+            "Wind Hint Chest",
+            "After Wind Enemy Chest",
+            "After Wind Hidden Chest",
+            "Spike Walls Left Chest",
+            "Boss Key Chest",
+            "Hidden Floormaster Chest",
+            "Bongo Bongo"
         ]
     },
     {
@@ -329,7 +704,26 @@
         "SquarePositionX": 1515,
         "SquarePositionY": 210,
         "CheckLogicId": [
-
+            "Compass Chest",
+            "Hover Boots Chest",
+            "Map Chest",
+            "Early Gibdos Chest",
+            "Near Ship Invisible Chest",
+            "Invisible Blades Visible Chest",
+            "Invisible Blades Invisible Chest",
+            "Beamos Silver Rupees Chest",
+            "Falling Spikes Lower Chest",
+            "Falling Spikes Upper Chest",
+            "Falling Spikes Switch Chest",
+            "Invisible Spikes Chest",
+            "Stalfos Room",
+            "Wind Hint Chest",
+            "After Wind Hidden Chest",
+            "Spike Walls Left Chest", 
+            "Boss Key Chest",
+            "Bomb Flower Chest",
+            "Freestanding Key",
+            "Bongo Bongo"
         ]
     },
     {
@@ -337,7 +731,17 @@
         "SquarePositionX": 1155,
         "SquarePositionY": 155,
         "CheckLogicId": [
-
+            "Dodongo Lobby Deku Salesman",
+            "Dodongo East Corridor Deku Salesman",
+            "Map Chest",
+            "Compass Chest",
+            "Bomb Flower Platform",
+            "Bomb Bag Chest",
+            "Dodongo Near Bomb Bag Left Deku Salesman",
+            "Dodongo Near Bomb Right Deku Salesman",
+            "End Of Bridge Chest",
+            "Chest Above King Dodongo",
+            "King Dodongo"
         ]
     },
     {
@@ -345,7 +749,18 @@
         "SquarePositionX": 1155,
         "SquarePositionY": 155,
         "CheckLogicId": [
-
+            "Map Chest",
+            "Compass Chest",
+            "Goham Larva Room",
+            "Torch Puzzle Room",
+            "Under Grave Chest",
+            "Bomb Bag Chest",
+            "Dodongo Main Room Right Salesman",
+            "Dodongo Main Room Left Salesman",
+            "Dodongo 1F Right Side Salesman",
+            "Dodongo Above Stairs Salesman",
+            "Chest ABove King Dodongo",
+            "King Dodongo"
         ]
     },
     {
@@ -353,7 +768,12 @@
         "SquarePositionX": 1280,
         "SquarePositionY": 125,
         "CheckLogicId": [
-
+            "Hear Piece Above Dodongo Cevern",
+            "Outside Goron City Chest",
+            "Summit Fairy Fountain",
+            "Cow In Mountain Grotto",
+            "Outside Goron City Grotto",
+            "Biggoron Sword"
         ]
     },
     {
@@ -361,7 +781,25 @@
         "SquarePositionX": 1165,
         "SquarePositionY": 62,
         "CheckLogicId": [
-
+            "Left Boulder Maze Chest",
+            "Center Boulder Maze Chest",
+            "Right Boulder Maze Chest",
+            "Hot Rodder Goron",
+            "Link The Goron",
+            "MediGoron",
+            "Spinning Pot Heart Piece", 
+            "Darunia Joy",
+            "Goron City Grotto Left Deku Salesman",
+            "Goron City Grotto Middle Deku Salesman",
+            "Goron City Grotto Right Deku Salesman",
+            "Goron Shop Left Top Left",
+            "Goron Shop Left Bottom Left",
+            "Goron Shop Left Top Right",
+            "Goron Shop Left Bottom Right",
+            "Goron Shop Right Top Left",
+            "Goron Shop Right Bottom Left",
+            "Goron Shop Right Top Right",
+            "Goron Shop Right Bottom Right"
         ]
     },
     {
@@ -369,7 +807,21 @@
         "SquarePositionX": 1340,
         "SquarePositionY": 64,
         "CheckLogicId": [
-
+            "Chest Near Boss",
+            "Fire Dancer Chest",
+            "Boss Key Chest",
+            "Big Lava Room Bombable Chest",
+            "Big Lave Room Open Chest",
+            "Boulder Maze Lower Chest",
+            "Boulder Maze Side Chest",
+            "Boulder Maze Upper Chest",
+            "Boulder Maze Bombable Pit",
+            "Scarecrow Chest",
+            "Map Chest",
+            "Compass Chest",
+            "Highest Goron Chest",
+            "Megaton Hammer Chest",
+            "Volvagia"
         ]
     },
     {
@@ -377,7 +829,19 @@
         "SquarePositionX": 1340,
         "SquarePositionY": 64,
         "CheckLogicId": [
-
+            "Chest Near Boss",
+            "Megaton Hammer Chest",
+            "Map Chest",
+            "Map Room Small Chest",
+            "Boss Key Chest",
+            "Big Lava Room Bombable Chest",
+            "Lizalfos Maze Lower Chest",
+            "Lizalfos Maze Upper Chest",
+            "Lizalfos Maze Side Room Chest",
+            "Compass Chest",
+            "Freestanding Key",
+            "West Tower Top",
+            "Volvagia"
         ]
     },
     {
@@ -385,7 +849,15 @@
         "SquarePositionX": 1258,
         "SquarePositionY": 24,
         "CheckLogicId": [
-
+            "Bolero Of Fire",
+            "Crater Wall Heart Piece",
+            "Mountain Crater Ladder Deku Salesman",
+            "Crater Bomb Grotto",
+            "Cater Magic Bean Heart Piece",
+            "Crater Fairy Fountain",
+            "Mountain Crater Near Goron City Grotto Left Deku Salesman",
+            "Mountain Crater Near Goron City Grotto Middle Deku Salesman",
+            "Mountain Crater Near Goron City Grotto Right Deku Salesman"
         ]
     }
 ]
