@@ -177,12 +177,15 @@
 
         //8011A672 00xx Equipment Modifier 1
         //Replace xx with:
-        //02 Silver Scale
-        //04 Golden Scale
-        //06 Giant's Knife (Broken)
-        //40 Bullet Bag (Holds 30)
-        //80 Bullet Bag(Holds 40)
-        //C0 Bullet Bag(Holds 50)
+        // 0x01 ????
+        // 0x02 Silver Scale
+        // 0x04 Golden Scale
+        // 0x08 ???? TODO: Check if this modifier can also contain wallet size int bit (child wallet, adult wallet, giant wallet)
+        // 0x10 ????
+        // 0x20 ????
+        // 0x40 Bullet Bag (Holds 30)
+        // 0x80 Bullet Bag(Holds 40)
+        // 0xC0 Bullet Bag(Holds 50) (0x40+0x80)
         public const int CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_1 = 0x11A672;
         public const int CST_INVENTORY_ADDRESS_SILVER_SCALE = 0x0002;
         public const int CST_INVENTORY_ADDRESS_GOLDEN_SCALE = 0x0004;
@@ -230,20 +233,10 @@
         // Src: https://cloudmodding.com/zelda/oot
         // Contain more informùation regarding memory
 
-        // #Magic 0x8011A603 [Byte]
-        // 0x30 is a filled normal bar
-        // 0x60 is a filled double bar
+        // 0x8011A603 Current Magic (Byte)
+        // 0x8011A60A Can Use Magic (Byte)
 
-        // 0x800F7618 [Tble] #Wallet Digits Table
-        // This table specifies how many digits each wallet size uses for the rupee counter.
-        // Setting it to a value higher than 0x4 will cause visual errors.
-        // When the counter is 4 digits long, the 4th digit will always be 0, and only the first 3 are used.
-        // Each entry is a halfword.
-        // Entries:
-        //  0x0 Default Wallet (0002)
-        //  0x2 Adult's Wallet (0003)
-        //  0x4 Giant's Wallet (0003)
-        //  0x6 Unused Wallet  (0000)
+
 
         // 0x8011A66C [Byte]  #Tunic & Boots
         // 0x01 Kokiri Tunic
@@ -253,7 +246,7 @@
         // 0x20 Iron Boots
         // 0x40 Hover Boots
 
-        // 0x8011A66C [Byte]  #Sword & Shield
+        // 0x8011A66D [Byte]  #Sword & Shield
         // 0x01 Kokiri Sword
         // 0x02 Master Sword
         // 0x04 Biggoron's Sword / Giant's Knife
@@ -267,8 +260,32 @@
         // Status
         //  0x8011A674 Heart Pieces
         //  0x8011A675 Spiritual Stones, Gear, Song of Time, Song of Storm
+        //      0x01 = Song of time
+        //      0x02 = Song of storm
+        //      0x04 = Kokiri emerad
+        //      0x08 = Goron ruby
+        //      0x10 = Zora sapphire
+        //      0x20 = Stone of agony
+        //      0x40 = Gerudo card
+        //      0x80 = Unlock skultula counter???
         //  0x8011A676 Songs
+        //      0x01 = Serenade of water
+        //      0x02 = Requiem of spirit
+        //      0x04 = Nocturne of shadow
+        //      0x08 = Prelude of light
+        //      0x10 = Zelda lulaby
+        //      0x20 = Epona song
+        //      0x40 = Saria's song
+        //      0x80 = Sun's song
         //  0x8011A677 Minuet, Boloero, Medallions
+        //      0x01 = Forest medallion
+        //      0x02 = Fire medallion
+        //      0x04 = Water medallion
+        //      0x08 = Spirit medallion
+        //      0x10 = Shadow medallion
+        //      0x20 = Light medallion
+        //      0x40 = Minuet of forest
+        //      0x80 = Bolero of fire
     }
     class OOTOffsets1_1
     {
