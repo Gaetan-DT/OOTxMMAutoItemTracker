@@ -20,8 +20,6 @@ namespace MajoraAutoItemTracker
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainUIForm());
-           // Application.Run(new CheckLogicEditor());
-           // Application.Run(new LogicTester());
         }
     }
 }

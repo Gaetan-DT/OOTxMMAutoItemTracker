@@ -53,6 +53,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRefreshGameAndRom = new System.Windows.Forms.Button();
+            this.btnOpenChekLogicEditor = new System.Windows.Forms.Button();
+            this.btnOpenLogicTester = new System.Windows.Forms.Button();
+            this.btnOotLogicCreator = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -63,7 +66,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // lblDebug
             // 
             this.lblDebug.AutoSize = true;
-            this.lblDebug.Location = new System.Drawing.Point(1342, 89);
+            this.lblDebug.Location = new System.Drawing.Point(1342, 105);
             this.lblDebug.Name = "lblDebug";
             this.lblDebug.Size = new System.Drawing.Size(42, 13);
             this.lblDebug.TabIndex = 0;
@@ -91,10 +94,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // tboxDebug
             // 
-            this.tboxDebug.Location = new System.Drawing.Point(1342, 105);
+            this.tboxDebug.Location = new System.Drawing.Point(1342, 179);
             this.tboxDebug.Multiline = true;
             this.tboxDebug.Name = "tboxDebug";
-            this.tboxDebug.Size = new System.Drawing.Size(360, 717);
+            this.tboxDebug.Size = new System.Drawing.Size(360, 643);
             this.tboxDebug.TabIndex = 3;
             // 
             // pictureBoxOOTItemList
@@ -227,11 +230,44 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.btnRefreshGameAndRom.UseVisualStyleBackColor = true;
             this.btnRefreshGameAndRom.Click += new System.EventHandler(this.btnRefreshGameAndRom_Click);
             // 
+            // btnOpenChekLogicEditor
+            // 
+            this.btnOpenChekLogicEditor.Location = new System.Drawing.Point(1338, 150);
+            this.btnOpenChekLogicEditor.Name = "btnOpenChekLogicEditor";
+            this.btnOpenChekLogicEditor.Size = new System.Drawing.Size(109, 23);
+            this.btnOpenChekLogicEditor.TabIndex = 75;
+            this.btnOpenChekLogicEditor.Text = "Check logic editor";
+            this.btnOpenChekLogicEditor.UseVisualStyleBackColor = true;
+            this.btnOpenChekLogicEditor.Click += new System.EventHandler(this.btnOpenChekLogicEditor_Click);
+            // 
+            // btnOpenLogicTester
+            // 
+            this.btnOpenLogicTester.Location = new System.Drawing.Point(1453, 150);
+            this.btnOpenLogicTester.Name = "btnOpenLogicTester";
+            this.btnOpenLogicTester.Size = new System.Drawing.Size(77, 23);
+            this.btnOpenLogicTester.TabIndex = 76;
+            this.btnOpenLogicTester.Text = "Logic Tester";
+            this.btnOpenLogicTester.UseVisualStyleBackColor = true;
+            this.btnOpenLogicTester.Click += new System.EventHandler(this.btnOpenLogicTester_Click);
+            // 
+            // btnOotLogicCreator
+            // 
+            this.btnOotLogicCreator.Location = new System.Drawing.Point(1536, 150);
+            this.btnOotLogicCreator.Name = "btnOotLogicCreator";
+            this.btnOotLogicCreator.Size = new System.Drawing.Size(109, 23);
+            this.btnOotLogicCreator.TabIndex = 77;
+            this.btnOotLogicCreator.Text = "OOT Logic creator";
+            this.btnOotLogicCreator.UseVisualStyleBackColor = true;
+            this.btnOotLogicCreator.Click += new System.EventHandler(this.btnOotLogicCreator_Click);
+            // 
             // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1708, 829);
+            this.Controls.Add(this.btnOotLogicCreator);
+            this.Controls.Add(this.btnOpenLogicTester);
+            this.Controls.Add(this.btnOpenChekLogicEditor);
             this.Controls.Add(this.btnRefreshGameAndRom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -275,6 +311,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.Panel panelMapMM;
         private System.Windows.Forms.ListBox lbCheckListMM;
         private System.Windows.Forms.PictureBox pictureBoxMMItemList;
+        private System.Windows.Forms.Button btnOpenChekLogicEditor;
+        private System.Windows.Forms.Button btnOpenLogicTester;
+        private System.Windows.Forms.Button btnOotLogicCreator;
     }
 }
 

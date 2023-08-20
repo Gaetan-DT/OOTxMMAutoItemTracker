@@ -171,6 +171,13 @@
     </Compile>
     <Compile Include="UI\MainUI\MajoraMaskController.cs" />
     <Compile Include="UI\MainUI\OcarinaOfTimeController.cs" />
+    <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.Designer.cs">
+      <DependentUpon>OcarinaOfTimeLogicCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreatorController.cs" />
     <Compile Include="UI\PictureBoxZoomMoveController.cs" />
     <EmbeddedResource Include="UI\CheckLogicEditor\CheckLogicEditor.resx">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
@@ -186,6 +193,9 @@
     <EmbeddedResource Include="UI\LogicTester\LogicTester.resx">
       <DependentUpon>LogicTester.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.resx">
+      <DependentUpon>OcarinaOfTimeLogicCreator.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -199,6 +209,7 @@
     <None Include="README.MD" />
     <None Include="Resource\CheckLogic\CheckLogicCategory.json" />
     <None Include="Resource\CheckLogic\oot_CheckLogicCategory.json" />
+    <None Include="Resource\Logics\OOT_CUSTOM_REQ_CASUAL_1.json" />
     <None Include="Resource\Logics\REQ_CASUAL_12.json" />
     <None Include="Resource\Mappings\oot_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>

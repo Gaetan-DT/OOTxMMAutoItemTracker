@@ -147,5 +147,20 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             emulatorController.RefreshEmulatorAndGameList();
         }
+
+        private void btnOpenChekLogicEditor_Click(object sender, EventArgs e)
+        {
+            new CheckLogicEditor.CheckLogicEditor().Show(this);
+        }
+
+        private void btnOpenLogicTester_Click(object sender, EventArgs e)
+        {
+            new LogicTester.LogicTester().Show(this);
+        }
+
+        private void btnOotLogicCreator_Click(object sender, EventArgs e)
+        {
+            new OcarinaOfTimeLogicCreator.OcarinaOfTimeLogicCreator().Show(this);
+        }
     }
 }
