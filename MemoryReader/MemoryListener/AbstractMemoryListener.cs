@@ -31,12 +31,14 @@ namespace MajoraAutoItemTracker.MemoryReader
         public void StartThread()
         {
             _thread = new Thread(new ThreadStart(ThreadRun));
+            _thread.IsBackground = true;
             _thread.Start();
         }
 
         public void StopThread()
         {
             _isThreadActive = false;
+            _thread = null;
         }
     }
 }
