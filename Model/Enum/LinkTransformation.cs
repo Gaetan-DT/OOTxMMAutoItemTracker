@@ -35,7 +35,7 @@ namespace MajoraAutoItemTracker.Model.Enum
             }
         }
 
-        public static LinkTransformation ReadFromMemory(this int linkTransformation)
+        public static LinkTransformation ReadFromMemory(this uint linkTransformation)
         {
             if (System.Enum.IsDefined(typeof(LinkTransformation), linkTransformation))
             {

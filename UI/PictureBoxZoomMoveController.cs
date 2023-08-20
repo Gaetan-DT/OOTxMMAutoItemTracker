@@ -82,8 +82,8 @@ namespace MajoraAutoItemTracker.UI
 
         private void OnPicImagePaint(object sender, PaintEventArgs e)
         {
-            var pen = new Pen(Color.Red);
-            _ListPath.ForEach(x => e.Graphics.DrawPath(pen, GetScaledPath(x.Item1)));
+            var Brush = new SolidBrush(Color.Red);
+            _ListPath.ForEach(x => e.Graphics.FillPath(Brush, GetScaledPath(x.Item1)));
         }
 
         private GraphicsPath GetScaledPath(GraphicsPath path)

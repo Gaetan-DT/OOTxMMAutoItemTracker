@@ -15,7 +15,7 @@ namespace MajoraAutoItemTracker.Model.Enum
 
     static class MagicMeterMethod
     {
-        public static MagicMeter ReadFromMemory(this int magicMeter)
+        public static MagicMeter ReadFromMemory(this uint magicMeter)
         {
             if (System.Enum.IsDefined(typeof(MagicMeter), magicMeter))
             {

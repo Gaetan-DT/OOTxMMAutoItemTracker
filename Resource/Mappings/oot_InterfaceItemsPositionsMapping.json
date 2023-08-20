@@ -1,0 +1,992 @@
+﻿[
+  {
+    "displayName": "Deku Stick",
+    "propertyName": "Deku_Stick",
+    "variants": [
+      {
+        "idLogic": "Deku Stick Fighting",
+        "positionX": 0,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Deku Nut",
+    "propertyName": "Deku_Nut",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Bomb",
+    "propertyName": "Bomb",
+    "variants": [
+      {
+        "idLogic": "ItemBombBag",
+        "positionX": 2,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Bow",
+    "propertyName": "Bow",
+    "variants": [
+      {
+        "idLogic": "ItemBow",
+        "positionX": 3,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Fire Arrow",
+    "propertyName": "Fire_Arrow",
+    "variants": [
+      {
+        "idLogic": "ItemFireArrow",
+        "positionX": 4,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Din's Fire",
+    "propertyName": "Din_Fire",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 5,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Fairy Slingshot",
+    "propertyName": "Fairy_Slingshot",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 6,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Ocarina",
+    "propertyName": "Ocarina",
+    "variants": [
+      {
+        "idLogic": "ItemFairyOcarina",
+        "positionX": 7,
+        "positionY": 0
+      },
+      {
+        "idLogic": "ItemOcarinaOfTime",
+        "positionX": 8,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Bombchu",
+    "propertyName": "Bombchu",
+    "variants": [
+      {
+        "idLogic": "ItemBombBag",
+        "positionX": 9,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Hookshot",
+    "propertyName": "Hookshot",
+    "variants": [
+      {
+        "idLogic": "ItemHookshot",
+        "positionX": 10,
+        "positionY": 0
+      },
+      {
+        "idLogic": "ItemLongshot",
+        "positionX": 11,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Ice Arrow",
+    "propertyName": "Ice_Arrow",
+    "variants": [
+      {
+        "idLogic": "ItemIceArrow",
+        "positionX": 12,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Farore's Wind",
+    "propertyName": "Farore_Wind",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 13,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Boomerang",
+    "propertyName": "Boomerang",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 14,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Lens of Truth",
+    "propertyName": "Lens_of_Truth",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 15,
+        "positionY": 0
+      }
+    ]
+  },
+  {
+    "displayName": "Magic Bean",
+    "propertyName": "Magic_Bean",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 0,
+        "positionY": 1
+      }
+    ]
+  },
+  {
+    "displayName": "Megaton Hammer",
+    "propertyName": "Megaton_Hammer",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 1
+      }
+    ]
+  },
+  {
+    "displayName": "Light Arrow",
+    "propertyName": "Light_Arrow",
+    "variants": [
+      {
+        "idLogic": "ItemLightArrow",
+        "positionX": 2,
+        "positionY": 1
+      }
+    ]
+  },
+  {
+    "displayName": "Nayru's Love",
+    "propertyName": "Nayru_Love",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 3,
+        "positionY": 1
+      }
+    ]
+  },
+  {
+    "displayName": "Bottle 1",
+    "propertyName": "Bottle_1",
+    "variants": [
+      {
+        "idLogic": "Empty Bottle",
+        "positionX": 4,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Red Potion",
+        "positionX": 5,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Green Potion",
+        "positionX": 6,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Blue Potion",
+        "positionX": 7,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Bottled Fairy",
+        "positionX": 8,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Fish",
+        "positionX": 9,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Lon Lon Milk & Bottle",
+        "positionX": 10,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Ruto's Letter",
+        "positionX": 11,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Blue Fire",
+        "positionX": 12,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Bug",
+        "positionX": 13,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Big Poe",
+        "positionX": 14,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Lon Lon Milk (Half)",
+        "positionX": 15,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Poe",
+        "positionX": 0,
+        "positionY": 2
+      }
+    ]
+  },
+  {
+    "displayName": "Bottle 2",
+    "propertyName": "Bottle_2",
+    "variants": [
+      {
+        "idLogic": "Empty Bottle",
+        "positionX": 4,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Red Potion",
+        "positionX": 5,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Green Potion",
+        "positionX": 6,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Blue Potion",
+        "positionX": 7,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Bottled Fairy",
+        "positionX": 8,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Fish",
+        "positionX": 9,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Lon Lon Milk & Bottle",
+        "positionX": 10,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Ruto's Letter",
+        "positionX": 11,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Blue Fire",
+        "positionX": 12,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Bug",
+        "positionX": 13,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Big Poe",
+        "positionX": 14,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Lon Lon Milk (Half)",
+        "positionX": 15,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Poe",
+        "positionX": 0,
+        "positionY": 2
+      }
+    ]
+  },
+  {
+    "displayName": "Bottle 3",
+    "propertyName": "Bottle_3",
+    "variants": [
+      {
+        "idLogic": "Empty Bottle",
+        "positionX": 4,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Red Potion",
+        "positionX": 5,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Green Potion",
+        "positionX": 6,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Blue Potion",
+        "positionX": 7,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Bottled Fairy",
+        "positionX": 8,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Fish",
+        "positionX": 9,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Lon Lon Milk & Bottle",
+        "positionX": 10,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Ruto's Letter",
+        "positionX": 11,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Blue Fire",
+        "positionX": 12,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Bug",
+        "positionX": 13,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Big Poe",
+        "positionX": 14,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Lon Lon Milk (Half)",
+        "positionX": 15,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Poe",
+        "positionX": 0,
+        "positionY": 2
+      }
+    ]
+  },
+  {
+    "displayName": "Bottle 4",
+    "propertyName": "Bottle_4",
+    "variants": [
+      {
+        "idLogic": "Empty Bottle",
+        "positionX": 4,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Red Potion",
+        "positionX": 5,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Green Potion",
+        "positionX": 6,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Blue Potion",
+        "positionX": 7,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Bottled Fairy",
+        "positionX": 8,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Fish",
+        "positionX": 9,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Lon Lon Milk & Bottle",
+        "positionX": 10,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Ruto's Letter",
+        "positionX": 11,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Blue Fire",
+        "positionX": 12,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Bug",
+        "positionX": 13,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Big Poe",
+        "positionX": 14,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Lon Lon Milk (Half)",
+        "positionX": 15,
+        "positionY": 1
+      },
+      {
+        "idLogic": "Poe",
+        "positionX": 0,
+        "positionY": 2
+      }
+    ]
+  },
+  {
+    "displayName": "Weird Egg",
+    "propertyName": "Weird_Egg",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 2
+      }
+    ]
+  },
+  {
+    "displayName": "Weird Egg 2",
+    "propertyName": "Weird_Egg_2",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 2
+      }
+    ]
+  },
+  {
+    "displayName": "Kokiri Sword",
+    "propertyName": "Kokiri_Sword",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 12,
+        "positionY": 3
+      }
+    ]
+  },
+  {
+    "displayName": "Master Sword",
+    "propertyName": "Master_Sword",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 13,
+        "positionY": 3
+      }
+    ]
+  },
+  {
+    "displayName": "Giant's Knife & Biggoron's Sword",
+    "propertyName": "Giant_Knife_Biggoron_Sword",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 13,
+        "positionY": 3
+      }
+    ]
+  },
+  {
+    "displayName": "Stone of Agony",
+    "propertyName": "Stone_of_Agony",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 15,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Gerudo's Card",
+    "propertyName": "Gerudo_Card",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 0,
+        "positionY": 7
+      }
+    ]
+  },
+  {
+    "displayName": "Gold Skulltula",
+    "propertyName": "Gold_Skulltula",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 7
+      }
+    ]
+  },
+  {
+    "displayName": "Deku Shield",
+    "propertyName": "Deku_Shield",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 14,
+        "positionY": 3
+      }
+    ]
+  },
+  {
+    "displayName": "Hylian Shield",
+    "propertyName": "Hylian_Shield",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 15,
+        "positionY": 3
+      }
+    ]
+  },
+  {
+    "displayName": "Mirror Shield",
+    "propertyName": "Mirror_Shield",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 0,
+        "positionY": 4
+      }
+    ]
+  },
+  {
+    "displayName": "Goron's Bracelet",
+    "propertyName": "Goron_Bracelet",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 0,
+        "positionY": 5
+      },
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 5
+      },
+      {
+        "idLogic": null,
+        "positionX": 2,
+        "positionY": 5
+      }
+    ]
+  },
+  {
+    "displayName": "Silver Scale",
+    "propertyName": "Silver_Scale",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 3,
+        "positionY": 5
+      },
+      {
+        "idLogic": null,
+        "positionX": 4,
+        "positionY": 5
+      }
+    ]
+  },
+  {
+    "displayName": "Wallet",
+    "propertyName": "Wallet",
+    "variants": [
+      {
+        "idLogic": "Adult's Wallet",
+        "positionX": 6,
+        "positionY": 5
+      },
+      {
+        "idLogic": "Giant's Wallet",
+        "positionX": 7,
+        "positionY": 5
+      }
+    ]
+  },
+  {
+    "displayName": "Kokiri Tunic",
+    "propertyName": "Kokiri_Tunic",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 4
+      }
+    ]
+  },
+  {
+    "displayName": "Goron Tunic",
+    "propertyName": "Goron_Tunic",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 2,
+        "positionY": 4
+      }
+    ]
+  },
+  {
+    "displayName": "Zora Tunic",
+    "propertyName": "Zora_Tunic",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 3,
+        "positionY": 4
+      }
+    ]
+  },
+  {
+    "displayName": "Heart Container",
+    "propertyName": "Heart_Container",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 2,
+        "positionY": 7
+      }
+    ]
+  },
+  {
+    "displayName": "Magic",
+    "propertyName": "Magic",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 8,
+        "positionY": 7
+      },
+      {
+        "idLogic": null,
+        "positionX": 9,
+        "positionY": 7
+      }
+    ]
+  },
+  {
+    "displayName": "Kokiri Boots",
+    "propertyName": "Kokiri_Boots",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 4,
+        "positionY": 4
+      }
+    ]
+  },
+  {
+    "displayName": "Iron Boots",
+    "propertyName": "Iron_Boots",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 5,
+        "positionY": 4
+      }
+    ]
+  },
+  {
+    "displayName": "Hover Boots",
+    "propertyName": "Hover_Boots",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 6,
+        "positionY": 4
+      }
+    ]
+  },
+  {
+    "displayName": "Kokiri's Emerald",
+    "propertyName": "Kokiri_Emerald",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 12,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Goron's Ruby",
+    "propertyName": "Goron_Ruby",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 13,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Zora's Sapphire",
+    "propertyName": "Zora_Sapphire",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 14,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Forest Medallion",
+    "propertyName": "Forest_Medallion",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 6,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Fire Medallion",
+    "propertyName": "Fire_Medallion",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 7,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Water Medallion",
+    "propertyName": "Water_Medallion",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 8,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Spirit Medallion",
+    "propertyName": "Spirit_Medallion",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 9,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Shadow Medallion",
+    "propertyName": "Shadow_Medallion",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 10,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Light Medallion",
+    "propertyName": "Light_Medallion",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 11,
+        "positionY": 6
+      }
+    ]
+  },
+  {
+    "displayName": "Minuet of Forest",
+    "propertyName": "Minuet_of_Forest",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 6,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Bolero of Fire",
+    "propertyName": "Bolero_of_Fire",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 7,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Serenade of Water",
+    "propertyName": "Serenade_of_Water",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 8,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Requiem of Spirit",
+    "propertyName": "Requiem_of_Spirit",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 9,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Nocturne of Shadow",
+    "propertyName": "Nocturne_of_Shadow",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 10,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Prelude of Light",
+    "propertyName": "Prelude_of_Light",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 11,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Zelda's Lullaby",
+    "propertyName": "Zelda_Lullaby",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 0,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Epona's Song",
+    "propertyName": "Epona_Song",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 1,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Saria's Song",
+    "propertyName": "Saria_Song",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 2,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Sun's Song",
+    "propertyName": "Sun_Song",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 3,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Song of Time",
+    "propertyName": "Song_of_Time",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 4,
+        "positionY": 11
+      }
+    ]
+  },
+  {
+    "displayName": "Song of Storms",
+    "propertyName": "Song_of_Storms",
+    "variants": [
+      {
+        "idLogic": null,
+        "positionX": 5,
+        "positionY": 11
+      }
+    ]
+  }
+]

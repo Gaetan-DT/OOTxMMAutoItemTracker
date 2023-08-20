@@ -29,20 +29,4 @@ namespace MajoraAutoItemTracker.Model.Item
             return false; // We didn't have the correct variant
         }
     }
-
-    public class ItemLogicVariant
-    {
-        public String idLogic { get; set; }
-        public int positionX { get; set; }
-        public int positionY { get; set; }
-    }
-
-    public static class ItemLogicMethod
-    {
-        public static List<ItemLogic> Deserialize(String filePath)
-        {
-            var jsonFile = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<List<ItemLogic>>(jsonFile);
-        }
-    }
 }

@@ -15,7 +15,7 @@ namespace MajoraAutoItemTracker.Model.Enum
 
     static class EquipmentWalletMethod
     {
-        public static EquipmentWallet ReadFromMemory(this int equipmentWallet)
+        public static EquipmentWallet ReadFromMemory(this uint equipmentWallet)
         {
             equipmentWallet = (equipmentWallet >> 4) & 0x3;
             if (System.Enum.IsDefined(typeof(EquipmentWallet), equipmentWallet))

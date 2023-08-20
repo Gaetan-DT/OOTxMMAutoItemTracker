@@ -1,0 +1,391 @@
+[
+    {
+        "Name": "Spirit Temple V",
+        "SquarePositionX": 52,
+        "SquarePositionY": 191,
+        "CheckLogicId": [
+            "Child Left Chest",
+            "Child Right Chest",
+            "Compass Chest",
+            "Early Adult Right Chest",
+            "First Mirror Right Chest",
+            "First Mirror Left Chest",
+            "Map Chest",
+            "Child Climb East Chest",
+            "Child Climb North Chest",
+            "Sun Block Room Chest",
+            "Statue Hand Chest",
+            "NE Main Room Chest",
+            "Silver Gauntlets Chest",
+            "Mirror Shield Chest",
+            "Near Four Armos Chest",
+            "Hallway Left Invisible Chest",
+            "Hallway Right Invisible Chest",
+            "Boos Key Chest",
+            "Topmost Chest",
+            "Twinrova"
+        ]
+    },
+    {
+        "Name": "Spirit Temple MQ",
+        "SquarePositionX": 52,
+        "SquarePositionY": 191,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Desert Colossus",
+        "SquarePositionX": 126,
+        "SquarePositionY": 257,
+        "CheckLogicId": [
+            "Requiem of Spirit",
+            "Deset Colossus Fairy",
+            "Desert Colossus Heart Piece"
+        ]
+    },
+    {
+        "Name": "Haunted Wastelar",
+        "SquarePositionX": 261,
+        "SquarePositionY": 254,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Gerudo Fortress",
+        "SquarePositionX": 394,
+        "SquarePositionY": 189,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Gerudo Training Grounds V",
+        "SquarePositionX": 367,
+        "SquarePositionY": 303,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Gerudo Training Grounds MQ",
+        "SquarePositionX": 367,
+        "SquarePositionY": 303,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Gerudo Valley",
+        "SquarePositionX": 468,
+        "SquarePositionY": 392,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Water Temple V",
+        "SquarePositionX": 693,
+        "SquarePositionY": 986,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Water Temple MQ",
+        "SquarePositionX": 693,
+        "SquarePositionY": 986,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Lake Hylia",
+        "SquarePositionX": 742,
+        "SquarePositionY": 853,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Lon Lon Ranch",
+        "SquarePositionX": 903,
+        "SquarePositionY": 443,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Hyrule Field",
+        "SquarePositionX": 1057,
+        "SquarePositionY": 409,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Castle Town Entrance",
+        "SquarePositionX": 1008,
+        "SquarePositionY": 322,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Castle Town",
+        "SquarePositionX": 985,
+        "SquarePositionY": 241,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Temple of Time",
+        "SquarePositionX": 1097,
+        "SquarePositionY": 200,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Hyrule Castle Grounds",
+        "SquarePositionX": 987,
+        "SquarePositionY": 173,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Ganon's Castle Ground",
+        "SquarePositionX": 1036,
+        "SquarePositionY": 161,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Ganon's Castle V",
+        "SquarePositionX": 1005,
+        "SquarePositionY": 61,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Ganon's Castle MQ",
+        "SquarePositionX": 1005,
+        "SquarePositionY": 61,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Kokiri Forest",
+        "SquarePositionX": 1517,
+        "SquarePositionY": 664,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Deku Tree V",
+        "SquarePositionX": 1712,
+        "SquarePositionY": 590,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Deku Tree MQ",
+        "SquarePositionX": 1712,
+        "SquarePositionY": 590,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Lost Woods",
+        "SquarePositionX": 1439,
+        "SquarePositionY": 542,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Sacred Forest Meadow",
+        "SquarePositionX": 1556,
+        "SquarePositionY": 488,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Forest Temple V",
+        "SquarePositionX": 1500,
+        "SquarePositionY": 416,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Forest Temple MQ",
+        "SquarePositionX": 1500,
+        "SquarePositionY": 416,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Zora River",
+        "SquarePositionX": 1440,
+        "SquarePositionY": 350,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Zora's Domain",
+        "SquarePositionX": 1800,
+        "SquarePositionY": 340,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Zora Fountain",
+        "SquarePositionX": 1830,
+        "SquarePositionY": 250,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Jabu Jabu's Belly V",
+        "SquarePositionX": 1740,
+        "SquarePositionY": 215,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Jabu Jabu's Belly MQ",
+        "SquarePositionX": 1740,
+        "SquarePositionY": 215,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Ice Cavern",
+        "SquarePositionX": 1760,
+        "SquarePositionY": 150,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Kakariko Village",
+        "SquarePositionX": 1223,
+        "SquarePositionY": 258,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Bottom of the Well V",
+        "SquarePositionX": 1320,
+        "SquarePositionY": 260,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Bottom of the Well MQ",
+        "SquarePositionX": 1320,
+        "SquarePositionY": 260,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Graveyard",
+        "SquarePositionX": 1420,
+        "SquarePositionY": 255,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Shadow Temple V",
+        "SquarePositionX": 1515,
+        "SquarePositionY": 210,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Shadow Temple MQ",
+        "SquarePositionX": 1515,
+        "SquarePositionY": 210,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Dodongo's Cavern V",
+        "SquarePositionX": 1155,
+        "SquarePositionY": 155,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Dodongo's Cavern MQ",
+        "SquarePositionX": 1155,
+        "SquarePositionY": 155,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Death Mountain",
+        "SquarePositionX": 1280,
+        "SquarePositionY": 125,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Goron City",
+        "SquarePositionX": 1165,
+        "SquarePositionY": 62,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Fire Temple V",
+        "SquarePositionX": 1340,
+        "SquarePositionY": 64,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Fire Temple MQ",
+        "SquarePositionX": 1340,
+        "SquarePositionY": 64,
+        "CheckLogicId": [
+
+        ]
+    },
+    {
+        "Name": "Death Mountain Crater",
+        "SquarePositionX": 1258,
+        "SquarePositionY": 24,
+        "CheckLogicId": [
+
+        ]
+    }
+]

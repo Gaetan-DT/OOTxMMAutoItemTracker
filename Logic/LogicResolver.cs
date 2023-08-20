@@ -9,7 +9,7 @@ namespace MajoraAutoItemTracker.Model
     class LogicResolver
     {
         private readonly Dictionary<string, JsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.JsonFormatLogicItem>();
-        public Subject<CheckLogic.CheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.CheckLogic>();
+        public Subject<CheckLogic.OcarinaOfTimeCheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.OcarinaOfTimeCheckLogic>();
 
         public bool debugMode = false;
         private int indentDebug = 0;
@@ -20,7 +20,7 @@ namespace MajoraAutoItemTracker.Model
                 _logicDictionary.Add(logic.Id, logic);
         }
 
-        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<CheckLogic.CheckLogic> checkLogicList, bool allowTrick)
+        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<CheckLogic.OcarinaOfTimeCheckLogic> checkLogicList, bool allowTrick)
         {
             WriteToDebug("-------- UpdateCheckForItem called ---------");
             // We receive a new list of item, we will see if we can update every check available
@@ -31,7 +31,7 @@ namespace MajoraAutoItemTracker.Model
 
         private void UpdateCheckAvailable(
             Dictionary<string, ItemLogic> dicItemLogic, 
-            CheckLogic.CheckLogic checkLogic, 
+            CheckLogic.OcarinaOfTimeCheckLogic checkLogic, 
             bool allowTrick)
         {
             var jsonLogicItem = FindLogic(checkLogic.Id);
