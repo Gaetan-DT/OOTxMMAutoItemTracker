@@ -4,7 +4,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 {
     abstract class AbstractMemoryListener
     {
-        const int CST_DEFAULT_THREAD_DELLAY_MS = 1_000;
+        const int CST_DEFAULT_THREAD_DELLAY_MS = 2_000;
 
         private Thread _thread;
         private bool _isThreadActive;
