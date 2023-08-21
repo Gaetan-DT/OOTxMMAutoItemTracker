@@ -172,6 +172,7 @@
     </Compile>
     <Compile Include="UI\MainUI\MajoraMaskController.cs" />
     <Compile Include="UI\MainUI\OcarinaOfTimeController.cs" />
+    <Compile Include="UI\OcarinaOfTimeLogicCreator\LogicFileController.cs" />
     <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.cs">
       <SubType>Form</SubType>
     </Compile>

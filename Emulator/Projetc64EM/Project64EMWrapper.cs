@@ -12,14 +12,20 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
     {
         const String PROCESS_NAME = "Project64-EM";
 
-        private const uint CST_POSSIBLE_ROM_ADDR_START_1 = 0xDFE40000;
-        private const uint CST_POSSIBLE_ROM_ADDR_START_2 = 0xDFE70000;
-        private const uint CST_POSSIBLE_ROM_ADDR_START_3 = 0xDFFB0000;
+        private const uint CST_POSSIBLE_ROM_ADDR_START_1 = 0xDFE4_0000;
+        private const uint CST_POSSIBLE_ROM_ADDR_START_2 = 0xDFE7_0000;
+        private const uint CST_POSSIBLE_ROM_ADDR_START_3 = 0xDFFB_0000;
 
         //private const uint CST_POSSIBLE_ROM_ADDR_START_EM_1 = 0x4CD8_19E8; // Not working
-        private const uint CST_POSSIBLE_ROM_ADDR_START_EM_2 = 0x4CDA_0000;
+        private const uint CST_POSSIBLE_ROM_ADDR_START_EM_2 = 0x4CDA_0000;  // 
         //private const uint CST_POSSIBLE_ROM_ADDR_START_EM_3 = 0x4D2A_D69C;
         //private const uint CST_POSSIBLE_ROM_ADDR_START_EM_4 = 0x0011_A5EC;
+
+        // Another possible address
+        // 3AF3_BFD4
+        // 3AF5_A5EC
+        // 3B46_7C88
+        // 3B47_0CC4
 
         //From cheat engin zeldaz start here:
         //          magic number

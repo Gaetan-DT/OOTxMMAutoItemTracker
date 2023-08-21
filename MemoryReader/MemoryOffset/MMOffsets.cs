@@ -235,6 +235,8 @@ namespace MajoraAutoItemTracker
 		// 0x04 Link
         public const int CURRENT_TRANSFORMATION = 0x1EF690;
 
+        public const int CST_ADDRESS_CURRENT_RUPEE = 0x1EF6A;
+
         #endregion
     }
 }

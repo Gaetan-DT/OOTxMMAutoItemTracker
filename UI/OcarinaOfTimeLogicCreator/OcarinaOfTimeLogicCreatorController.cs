@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reactive.Subjects;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
     {
         const string CST_REQ_CASUAL_PATH = @"\Resource\Logics\OOT_CUSTOM_REQ_CASUAL_1.json";
 
-        private LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile;
+        public LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile;
 
         public void LoadLogic()
         {

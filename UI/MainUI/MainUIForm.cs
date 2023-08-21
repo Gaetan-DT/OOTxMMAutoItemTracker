@@ -50,7 +50,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void BtnStartListenerClick(object sender, EventArgs e)
         {
-            Log("Attaching to modloader");
             var emulatorWrapper = emulatorController.GetSelectedEmulator(cbEmulatorList.SelectedIndex);
             var romeType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
             if (!mainUIController.StartMemoryListener(emulatorWrapper, romeType, OnOOTItemLogicChange, OnMMItemLogicChange, out string error))
