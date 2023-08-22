@@ -26,5 +26,10 @@ namespace MajoraAutoItemTracker.Model.Logic
             // OcarinaOfTimeJsonFormatLogicItem
             return JsonConvert.DeserializeObject<LogicFile<JsonFormatLogicItem>>(json);
         }
+
+        public static void Save(string filePath, LogicFile<JsonFormatLogicItem> logicFile)
+        {
+            File.WriteAllText(filePath, JsonConvert.SerializeObject(logicFile));
+        }
     }
 }

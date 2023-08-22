@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.Model.Item
 {
@@ -13,6 +14,12 @@ namespace MajoraAutoItemTracker.Model.Item
         public const string CST_DEFAULT_FILE_NAME = "InterfaceItemsPositionsMapping.json";
         public const string CST_OOT_FILE_NAME = "oot_InterfaceItemsPositionsMapping.json";
         public const string CST_MM_FILE_NAME = CST_DEFAULT_FILE_NAME;
+        
+        public static List<ItemLogic> DeserializeOOT()
+        {
+            return Deserialize(Application.StartupPath + @"\Resource\Mappings\" + CST_OOT_FILE_NAME);
+        }
+        
         public static List<ItemLogic> Deserialize(String filePath)
         {
             var jsonFile = File.ReadAllText(filePath);
