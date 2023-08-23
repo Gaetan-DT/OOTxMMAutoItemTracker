@@ -25,12 +25,12 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
 
         public static OotItemGoldSkulltula FromString(string item)
         {
-            throw new Exception("Not yet implemented");
+            return (OotItemGoldSkulltula)System.Enum.Parse(typeof(OotItemGoldSkulltula), item);
         }
 
         public static string ToString(OotItemGoldSkulltula item)
         {
-            throw new Exception("Not yet implemented");
+            return item.ToString();
         }
     }
 }

@@ -22,12 +22,12 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
 
         public static OotItemGoronBracelet FromString(string item)
         {
-            throw new Exception("Not yet implemented");
+            return (OotItemGoronBracelet)System.Enum.Parse(typeof(OotItemGoronBracelet), item);
         }
 
         public static string ToString(OotItemGoronBracelet item)
         {
-            throw new Exception("Not yet implemented");
+            return item.ToString();
         }
     }
 }

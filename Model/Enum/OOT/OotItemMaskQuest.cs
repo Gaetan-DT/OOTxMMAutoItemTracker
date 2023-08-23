@@ -25,14 +25,14 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
             throw new Exception("Not yet implemented");
         }
 
-        public static OotItemMaskQuest FromString(string ootItemMaskQuest)
+        public static OotItemMaskQuest FromString(string item)
         {
-            throw new Exception("Not yet implemented");
+            return (OotItemMaskQuest)System.Enum.Parse(typeof(OotItemMaskQuest), item);
         }
 
-        public static string ToString(OotItemMaskQuest ootItemMaskQuest)
+        public static string ToString(OotItemMaskQuest item)
         {
-            throw new Exception("Not yet implemented");
+            return item.ToString();
         }
     }
 }

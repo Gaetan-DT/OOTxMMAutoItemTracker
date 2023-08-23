@@ -21,12 +21,12 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
 
         public static OotItemGiantKnifeBiggoronSword FromString(string item)
         {
-            throw new Exception("Not yet implemented");
+            return (OotItemGiantKnifeBiggoronSword)System.Enum.Parse(typeof(OotItemGiantKnifeBiggoronSword), item);
         }
 
         public static string ToString(OotItemGiantKnifeBiggoronSword item)
         {
-            throw new Exception("Not yet implemented");
+            return item.ToString();
         }
     }
 }

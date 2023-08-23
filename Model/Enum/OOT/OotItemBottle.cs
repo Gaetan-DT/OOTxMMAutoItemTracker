@@ -32,12 +32,12 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
 
         public static OotItemBottle FromString(string item)
         {
-            throw new Exception("Not yet implemented");
+            return (OotItemBottle)System.Enum.Parse(typeof(OotItemBottle), item);
         }
 
         public static string ToString(OotItemBottle item)
         {
-            throw new Exception("Not yet implemented");
+            return item.ToString();
         }
     }
 }

@@ -21,12 +21,12 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
 
         public static OotItemScale FromString(string item)
         {
-            throw new Exception("Not yet implemented");
+            return (OotItemScale)System.Enum.Parse(typeof(OotItemScale), item);
         }
 
         public static string ToString(OotItemScale item)
         {
-            throw new Exception("Not yet implemented");
+            return item.ToString();
         }
     }
 }

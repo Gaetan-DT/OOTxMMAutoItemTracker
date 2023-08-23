@@ -21,12 +21,12 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
         
         public static OotItemOcarina FromString(string item)
         {
-            throw new Exception("Not yet implemented");
+            return (OotItemOcarina)System.Enum.Parse(typeof(OotItemOcarina), item);
         }
 
         public static string ToString(OotItemOcarina item)
         {
-            throw new Exception("Not yet implemented");
+            return item.ToString();
         }
     }
 }

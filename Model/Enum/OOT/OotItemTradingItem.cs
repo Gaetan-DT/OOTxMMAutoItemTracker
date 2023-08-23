@@ -28,14 +28,14 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
             throw new Exception("Not yet implemented");
         }
 
-        public static OotItemTradingItem FromString(string ootItemTradingItem)
+        public static OotItemTradingItem FromString(string item)
         {
-            throw new Exception("Not yet implemented");
+            return (OotItemTradingItem)System.Enum.Parse(typeof(OotItemTradingItem), item);
         }
 
-        public static string ToString(OotItemTradingItem ootItemTradingItem)
+        public static string ToString(OotItemTradingItem item)
         {
-            throw new Exception("Not yet implemented");
+            return item.ToString();
         }
     }
 }
