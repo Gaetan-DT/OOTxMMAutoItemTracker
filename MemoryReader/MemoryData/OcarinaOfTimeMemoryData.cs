@@ -314,7 +314,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             HasBottle3.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Bottle_3, value)));
             HasBottle4.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Bottle_4, value)));
             HasWeirdEgg.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Weird_Egg, value)));
-            HasWeirdEgg2.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Weird_Egg_2, value)));
+            HasWeirdEgg2.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Mask_Quest, value)));
             HasKokiriSword.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Kokiri_Sword, value)));
             HasMasterSword.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Master_Sword, value)));
             HasGiantKnifeBiggoronSword.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Giant_Knife_Biggoron_Sword, value)));
@@ -325,7 +325,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             HasHylianShield.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Hylian_Shield, value)));
             HasMirrorShield.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Mirror_Shield, value)));
             HasGoronBracelet.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Goron_Bracelet, value)));
-            HasSilverScale.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Silver_Scale, value)));
+            HasSilverScale.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Scale, value)));
             HasWallet.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Wallet, value)));
             HasKokiriTunic.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Kokiri_Tunic, value)));
             HasGoronTunic.Subscribe(value => replaySubject(new Tuple<OcarinaOfTimeItemLogicPopertyName, object>(OcarinaOfTimeItemLogicPopertyName.Goron_Tunic, value)));

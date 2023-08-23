@@ -189,7 +189,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     return new Point(3, 3);
                 case OcarinaOfTimeItemLogicPopertyName.Weird_Egg:
                     return new Point(4, 3);
-                case OcarinaOfTimeItemLogicPopertyName.Weird_Egg_2:
+                case OcarinaOfTimeItemLogicPopertyName.Mask_Quest:
                     return new Point(5, 3);
                 case OcarinaOfTimeItemLogicPopertyName.Kokiri_Sword:
                     return new Point(0, 4);
@@ -211,7 +211,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     return new Point(2, 5);
                 case OcarinaOfTimeItemLogicPopertyName.Goron_Bracelet:
                     return new Point(3, 5);
-                case OcarinaOfTimeItemLogicPopertyName.Silver_Scale:
+                case OcarinaOfTimeItemLogicPopertyName.Scale:
                     return new Point(4, 5);
                 case OcarinaOfTimeItemLogicPopertyName.Wallet:
                     return new Point(5, 5);

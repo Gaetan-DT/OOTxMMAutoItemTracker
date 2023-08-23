@@ -16,17 +16,23 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
     {
         const string CST_REQ_CASUAL_PATH = @"\Resource\Logics\";
         const string CST_REQ_FILE_NAME = "OOT_CUSTOM_REQ_CASUAL_1.json";
+        const string CST_REQ_FILE_NAME_UPDATED = "OOT_CUSTOM_REQ_CASUAL_1_updated.json";
 
         public LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile;
 
         public void LoadLogic()
         {
-            logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(GetFilPath());
+            logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(GetFilPath(true, false));
         }
 
-        private string GetFilPath(bool withFileName = true)
+        private string GetFilPath(bool withFileName, bool updatedFile)
         {
-            return Application.StartupPath + CST_REQ_CASUAL_PATH + (withFileName ? CST_REQ_FILE_NAME : "");
+            var fileName = CST_REQ_FILE_NAME;
+            if (updatedFile)
+                fileName = CST_REQ_FILE_NAME_UPDATED;
+            if (!withFileName)
+                fileName = "";
+            return Application.StartupPath + CST_REQ_CASUAL_PATH + fileName;
         }
 
         public int GetLogicFileVersion()
@@ -36,12 +42,12 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void SaveLogic(int version, List<OcarinaOfTimeJsonFormatLogicItem> logicFile)
         {
-            LogicFile<OcarinaOfTimeJsonFormatLogicItem>.Save(GetFilPath(), new LogicFile<OcarinaOfTimeJsonFormatLogicItem>()
+            LogicFile<OcarinaOfTimeJsonFormatLogicItem>.Save(GetFilPath(true, true), new LogicFile<OcarinaOfTimeJsonFormatLogicItem>()
             {
                 Version = version,
                 Logic = logicFile
             });
-            Process.Start(GetFilPath(false));
+            Process.Start(GetFilPath(false, false));
         }
 
     }

@@ -4,26 +4,26 @@
         "SquarePositionX": 52,
         "SquarePositionY": 191,
         "CheckLogicId": [
-            "Child Left Chest",
-            "Child Right Chest",
-            "Compass Chest",
-            "Early Adult Right Chest",
-            "First Mirror Right Chest",
-            "First Mirror Left Chest",
-            "Map Chest",
-            "Child Climb East Chest",
-            "Child Climb North Chest",
-            "Sun Block Room Chest",
-            "Statue Hand Chest",
-            "NE Main Room Chest",
-            "Silver Gauntlets Chest",
-            "Mirror Shield Chest",
-            "Near Four Armos Chest",
-            "Hallway Left Invisible Chest",
-            "Hallway Right Invisible Chest",
-            "Boos Key Chest",
-            "Topmost Chest",
-            "Twinrova"
+            "STV Child Left Chest",
+            "STV Child Right Chest",
+            "STV Compass Chest",
+            "STV Early Adult Right Chest",
+            "STV First Mirror Right Chest",
+            "STV First Mirror Left Chest",
+            "STV Map Chest",
+            "STV Child Climb East Chest",
+            "STV Child Climb North Chest",
+            "STV Sun Block Room Chest",
+            "STV Statue Hand Chest",
+            "STV NE Main Room Chest",
+            "STV Silver Gauntlets Chest",
+            "STV Mirror Shield Chest",
+            "STV Near Four Armos Chest",
+            "STV Hallway Left Invisible Chest",
+            "STV Hallway Right Invisible Chest",
+            "STV Boos Key Chest",
+            "STV Topmost Chest",
+            "STV Twinrova"
         ]
     },
     {
@@ -31,29 +31,29 @@
         "SquarePositionX": 52,
         "SquarePositionY": 191,
         "CheckLogicId": [
-            "Entrance Front Left Chest",
-            "Entrance Back Left Chest",
-            "Entrance Back Right Chest",
-            "Child Left Chest",
-            "Map Chest",
-            "Child CLimb North Chest",
-            "Compass Chest",
-            "Silver Block Hallway Chest",
-            "Sun Block Room",
-            "Silver Gauntlets Chest",
-            "Child Center Chest",
-            "Child CLimb South",
-            "Lower NE Main Room CHest",
-            "Upper NE Main Room Chest",
-            "Lower Adult Left Chest",
-            "Lower Adult Right Chest",
-            "Entrance Front Right Chest",
-            "Beamos Room",
-            "Dinolfos Room Chest",
-            "Mirror Shield Chest",
-            "Boos Key Chest",
-            "Mirror PUzzle Invisible Chest",
-            "Twinvora"
+            "ST MQ Entrance Front Left Chest",
+            "ST MQ Entrance Back Left Chest",
+            "ST MQ Entrance Back Right Chest",
+            "ST MQ Child Left Chest",
+            "ST MQ Map Chest",
+            "ST MQ Child CLimb North Chest",
+            "ST MQ Compass Chest",
+            "ST MQ Silver Block Hallway Chest",
+            "ST MQ Sun Block Room",
+            "ST MQ Silver Gauntlets Chest",
+            "ST MQ Child Center Chest",
+            "ST MQ Child CLimb South",
+            "ST MQ Lower NE Main Room CHest",
+            "ST MQ Upper NE Main Room Chest",
+            "ST MQ Lower Adult Left Chest",
+            "ST MQ Lower Adult Right Chest",
+            "ST MQ Entrance Front Right Chest",
+            "ST MQ Beamos Room",
+            "ST MQ Dinolfos Room Chest",
+            "ST MQ Mirror Shield Chest",
+            "ST MQ Boos Key Chest",
+            "ST MQ Mirror PUzzle Invisible Chest",
+            "ST MQ Twinvora"
         ]
     },
     {
@@ -61,35 +61,35 @@
         "SquarePositionX": 126,
         "SquarePositionY": 257,
         "CheckLogicId": [
-            "Requiem of Spirit",
-            "Desert Grotto Left Deku Salesman",
-            "Desert Grotto Right Deku Salesman",
-            "Deset Colossus Fairy",
-            "Desert Colossus Heart Piece"
+            "Desert Colossus Requiem of Spirit",
+            "Desert Colossus Desert Grotto Left Deku Salesman",
+            "Desert Colossus Desert Grotto Right Deku Salesman",
+            "Desert Colossus Deset Colossus Fairy",
+            "Desert Colossus Desert Colossus Heart Piece"
         ]
     },
     {
         "Name": "Haunted Wastelar",
         "SquarePositionX": 261,
         "SquarePositionY": 254,
-        "CheckLogicId": [
-            "Haunted Wasteland Chest",
-            "Bombchu Carpet Salesman"
-        ]
+      "CheckLogicId": [
+        "Haunted Wasteland Chest",
+        "Haunted Wastelar Bombchu Carpet Salesman"
+      ]
     },
     {
         "Name": "Gerudo Fortress",
         "SquarePositionX": 394,
         "SquarePositionY": 189,
         "CheckLogicId": [
-            "Fortress Rooftop Chest",
-            "Carpenter Guard 1",
-            "Carpenter Guard 2",
-            "Carpenter Guard 3",
-            "Carpenter Guard 4",
-            "Rescued all Carpenters",
-            "Horseback Archery Game 1000pts",
-            "Horseback Archery Game 1500pts"
+          "Gerudo Fortress Fortress Rooftop Chest",
+          "Gerudo Fortress Carpenter Guard 1",
+          "Gerudo Fortress Carpenter Guard 2",
+          "Gerudo Fortress Carpenter Guard 3",
+          "Gerudo Fortress Carpenter Guard 4",
+          "Gerudo Fortress Rescued all Carpenters",
+          "Gerudo Fortress Horseback Archery Game 1000pts",
+          "Gerudo Fortress Horseback Archery Game 1500pts"
         ]
     },
     {
@@ -97,28 +97,28 @@
         "SquarePositionX": 367,
         "SquarePositionY": 303,
         "CheckLogicId": [
-            "Lobby Left Chest",
-            "Lobby Right Chest",
-            "Stalfos Chest",
-            "Beamos Chest",
-            "Hidden Ceiling Chest",
-            "Maze Path First Chest",
-            "Maze Path Second Chest",
-            "Maze Path Third Chest",
-            "Maze Path Final Chest",
-            "Maze Right Central Chest",
-            "Maze Right Side Chest",
-            "Maze Right Side Key",
-            "Underwater Silver Rupee Chest",
-            "Hammer Room Clear Chest",
-            "Hammer Room Switch CHest",
-            "Eye Statue Chest",
-            "Near Scarecrow Chest",
-            "Beafore Heavy Block CHest",
-            "Heavy Block First Chest",
-            "Heavy Block Second Chest",
-            "Heavy Block Third Chest",
-            "Heavy Block Fourth Chest"
+            "GTG V Lobby Left Chest",
+            "GTG V Lobby Right Chest",
+            "GTG V Stalfos Chest",
+            "GTG V Beamos Chest",
+            "GTG V Hidden Ceiling Chest",
+            "GTG V Maze Path First Chest",
+            "GTG V Maze Path Second Chest",
+            "GTG V Maze Path Third Chest",
+            "GTG V Maze Path Final Chest",
+            "GTG V Maze Right Central Chest",
+            "GTG V Maze Right Side Chest",
+            "GTG V Maze Right Side Key",
+            "GTG V Underwater Silver Rupee Chest",
+            "GTG V Hammer Room Clear Chest",
+            "GTG V Hammer Room Switch CHest",
+            "GTG V Eye Statue Chest",
+            "GTG V Near Scarecrow Chest",
+            "GTG V Beafore Heavy Block CHest",
+            "GTG V Heavy Block First Chest",
+            "GTG V Heavy Block Second Chest",
+            "GTG V Heavy Block Third Chest",
+            "GTG V Heavy Block Fourth Chest"
         ]
     },
     {
@@ -126,23 +126,23 @@
         "SquarePositionX": 367,
         "SquarePositionY": 303,
         "CheckLogicId": [
-            "Lobby Left Chest",
-            "Lobby Right Chest",
-            "Hidden Ceiling Chest",
-            "Maze Path Fiest Chest",
-            "Maze Path Second Chest",
-            "Maze Path Third Chest",
-            "Dinolfos Chest",
-            "Underwater Silver Rupees Chest",
-            "First Iron Knuckle Chest",
-            "Before Heavy Block Chest",
-            "Heavy Block Chest",
-            "Eye Statue Chest",
-            "Second Iron Knuckle Chest",
-            "Flame Circle Chest",
-            "Maze Right Central Chest",
-            "Maze Right Side Chest",
-            "Ice Arrows Chest"
+            "GTG MQ Lobby Left Chest",
+            "GTG MQ Lobby Right Chest",
+            "GTG MQ Hidden Ceiling Chest",
+            "GTG MQ Maze Path Fiest Chest",
+            "GTG MQ Maze Path Second Chest",
+            "GTG MQ Maze Path Third Chest",
+            "GTG MQ Dinolfos Chest",
+            "GTG MQ Underwater Silver Rupees Chest",
+            "GTG MQ First Iron Knuckle Chest",
+            "GTG MQ Before Heavy Block Chest",
+            "GTG MQ Heavy Block Chest",
+            "GTG MQ Eye Statue Chest",
+            "GTG MQ Second Iron Knuckle Chest",
+            "GTG MQ Flame Circle Chest",
+            "GTG MQ Maze Right Central Chest",
+            "GTG MQ Maze Right Side Chest",
+            "GTG MQ Ice Arrows Chest"
         ]
     },
     {
@@ -150,714 +150,714 @@
         "SquarePositionX": 468,
         "SquarePositionY": 392,
         "CheckLogicId": [
-            "Gerudo Valley Hammer Rocks Chest",
-            "Gerudo Valley Crate Heart Piece",
-            "Gerudo Valley Waterfall Heart Piece",
-            "Gerudo Behind Tent Grotto Left Deku Salesman",
-            "Gerudo Behind Tent Grotto Right Deku Salesman",
-            "Cow Near Gerudo Fortress"
+          "Gerudo Valley Hammer Rocks Chest",
+          "Gerudo Valley Crate Heart Piece",
+          "Gerudo Valley Waterfall Heart Piece",
+          "Gerudo Valley Gerudo Behind Tent Grotto Left Deku Salesman",
+          "Gerudo Valley Gerudo Behind Tent Grotto Right Deku Salesman",
+          "Gerudo Valley Cow Near Gerudo Fortress"
         ]
     },
     {
         "Name": "Water Temple V",
         "SquarePositionX": 693,
         "SquarePositionY": 986,
-        "CheckLogicId": [
-            "Map Chest",
-            "Compass Chest",
-            "Torches Chest",
-            "Dragon Chest",
-            "Central Bow Target Chest",
-            "Boos Key Chest",
-            "Central Pillar Chest",
-            "Cracked Wall Chest",
-            "Dark Link Chest",
-            "River Chest",
-            "Morpha"
-        ]
+      "CheckLogicId": [
+        "Water Temple V Map Chest",
+        "Water Temple V Compass Chest",
+        "Water Temple V Torches Chest",
+        "Water Temple V Dragon Chest",
+        "Water Temple V Central Bow Target Chest",
+        "Water Temple V Boos Key Chest",
+        "Water Temple V Central Pillar Chest",
+        "Water Temple V Cracked Wall Chest",
+        "Water Temple V Dark Link Chest",
+        "Water Temple V River Chest",
+        "Water Temple V Morpha"
+      ]
     },
     {
         "Name": "Water Temple MQ",
         "SquarePositionX": 693,
         "SquarePositionY": 986,
-        "CheckLogicId": [
-            "Map Chest",
-            "Central Pillar Chest",
-            "Compass Chest",
-            "Longshot Chest",
-            "Boss Key Chest",
-            "Freestanding Key",
-            "Morpha"
-        ]
+      "CheckLogicId": [
+        "Water Temple MQ Map Chest",
+        "Water Temple MQ Central Pillar Chest",
+        "Water Temple MQ Compass Chest",
+        "Water Temple MQ Longshot Chest",
+        "Water Temple MQ Boss Key Chest",
+        "Water Temple MQ Freestanding Key",
+        "Water Temple MQ Morpha"
+      ]
     },
     {
         "Name": "Lake Hylia",
         "SquarePositionX": 742,
         "SquarePositionY": 853,
-        "CheckLogicId": [
-            "Underwater Bottle",
-            "Laku Hylia Sun",
-            "Diving in the Lab",
-            "Child Lake Fishing",
-            "Adult Lake Fishing",
-            "Lab Roof Heart Piece",
-            "Lake Hylia Grace Left Deku Salesman",
-            "Lake Hylia Grace Middle Deku Salesman",
-            "Lake Hylia Grace Right Deku Salesman"
-        ]
+      "CheckLogicId": [
+        "Lake Hylia Underwater Bottle",
+        "Laku Hylia Sun",
+        "Lake Hylia Diving in the Lab",
+        "Lake Hylia Child Lake Fishing",
+        "Lake Hylia Adult Lake Fishing",
+        "Lake Hylia Lab Roof Heart Piece",
+        "Lake Hylia Grace Left Deku Salesman",
+        "Lake Hylia Grace Middle Deku Salesman",
+        "Lake Hylia Grace Right Deku Salesman"
+      ]
     },
     {
         "Name": "Lon Lon Ranch",
         "SquarePositionX": 903,
         "SquarePositionY": 443,
-        "CheckLogicId": [
-           "Epona Song",
-           "Talon Chickens Minigame",
-           "Tower Heart Piece",
-           "Left Cow In Tower",
-           "Right Cow In Tower",
-           "Left Cow In Stables",
-           "Right Cow In Stables",
-           "Lon Lon Farm Grotto Left Deku Salesman",
-           "Lon Lon Farm Grotto Middle Deku Salesman",
-           "Lon Lon Farm Grotto Right Deku Salesman"
-        ]
+      "CheckLogicId": [
+        "Lon Lon Ranch Epona Song",
+        "Lon Lon Ranch Talon Chickens Minigame",
+        "Lon Lon Ranch Tower Heart Piece",
+        "Lon Lon Ranch Left Cow In Tower",
+        "Lon Lon Ranch Right Cow In Tower",
+        "Lon Lon Ranch Left Cow In Stables",
+        "Lon Lon Ranch Right Cow In Stables",
+        "Lon Lon Ranch Lon Lon Farm Grotto Left Deku Salesman",
+        "Lon Lon Ranch Lon Lon Farm Grotto Middle Deku Salesman",
+        "Lon Lon Ranch Lon Lon Farm Grotto Right Deku Salesman"
+      ]
     },
     {
         "Name": "Hyrule Field",
         "SquarePositionX": 1057,
         "SquarePositionY": 409,
-        "CheckLogicId": [
-            "Ocarina of Time",
-            "Song of Time",
-            "Hyrule Field Deku Salesman Grotto",
-            "Hyrule Field South Grotto",
-            "Hyrule Field Diving Heart Piece Grotto",
-            "Hyrule Field North Grotto",
-            "Hyrule Field Forest Grotto",
-            "Hyrule Field Cow in West Grotto"
-        ]
+      "CheckLogicId": [
+        "Hyrule Field Ocarina of Time",
+        "Hyrule Field Song of Time",
+        "Hyrule Field Deku Salesman Grotto",
+        "Hyrule Field South Grotto",
+        "Hyrule Field Diving Heart Piece Grotto",
+        "Hyrule Field North Grotto",
+        "Hyrule Field Forest Grotto",
+        "Hyrule Field Cow in West Grotto"
+      ]
     },
     {
         "Name": "Castle Town Entrance",
         "SquarePositionX": 1008,
         "SquarePositionY": 322,
-        "CheckLogicId": [
-            "TenBigPoes"
-        ]
+      "CheckLogicId": [
+        "Castle Town Entrance Ten Big Poes"
+      ]
     },
     {
         "Name": "Castle Town",
         "SquarePositionX": 985,
         "SquarePositionY": 241,
-        "CheckLogicId": [
-            "Child Shooting Gallery",
-            "Bombchu Bowling 1",
-            "Bombchu Bowling 2",
-            "Treasure Chest Game",
-            "Dog Lady",
-            "Bombchu Shop Left Top Left",
-            "Bombchu Shop Left Bottom Left",
-            "Bombchu Shop Left Top Right",
-            "Bombchu Shop Left Top Right",
-            "Bombchu Shop Right Top Left",
-            "Bombchu Shop Right Bottom Left",
-            "Bombchu Shop Right Top Right",
-            "Bombchu Shop Right Bottom Right",
-            "Child Bazaar Left Top Left",
-            "Child Bazaar Left Top Left",
-            "Child Bazaar Left Bottom Right",
-            "Child Bazaar Left Bottom Right",
-            "Child Bazaar Right Top Left",
-            "Child Bazaar Right Top Left",
-            "Child Bazaar Right Bottom Right",
-            "Child Bazaar Right Bottom Right",
-            "Child Potion Shop Left Top Left",
-            "Child Potion Shop Left Bottom Left",
-            "Child Potion Shop Left Top Right",
-            "Child Potion Shop Left Bottom Right",
-            "Child Potion Shop Right Top Left",
-            "Child Potion Shop Right Bottom Left",
-            "Child Potion Shop Right Top Right",
-            "Child Potion Shop Right Bottom Right"
-        ]
+      "CheckLogicId": [
+        "Castle Town Child Shooting Gallery",
+        "Castle Town Bombchu Bowling 1",
+        "Castle Town Bombchu Bowling 2",
+        "Castle Town Treasure Chest Game",
+        "Castle Town Dog Lady",
+        "Castle Town Bombchu Shop Left Top Left",
+        "Castle Town Bombchu Shop Left Bottom Left",
+        "Castle Town Bombchu Shop Left Top Right",
+        "Castle Town Bombchu Shop Left Top Right",
+        "Castle Town Bombchu Shop Right Top Left",
+        "Castle Town Bombchu Shop Right Bottom Left",
+        "Castle Town Bombchu Shop Right Top Right",
+        "Castle Town Bombchu Shop Right Bottom Right",
+        "Castle Town Child Bazaar Left Top Left",
+        "Castle Town Child Bazaar Left Top Left",
+        "Castle Town Child Bazaar Left Bottom Right",
+        "Castle Town Child Bazaar Left Bottom Right",
+        "Castle Town Child Bazaar Right Top Left",
+        "Castle Town Child Bazaar Right Top Left",
+        "Castle Town Child Bazaar Right Bottom Right",
+        "Castle Town Child Bazaar Right Bottom Right",
+        "Castle Town Child Potion Shop Left Top Left",
+        "Castle Town Child Potion Shop Left Bottom Left",
+        "Castle Town Child Potion Shop Left Top Right",
+        "Castle Town Child Potion Shop Left Bottom Right",
+        "Castle Town Child Potion Shop Right Top Left",
+        "Castle Town Child Potion Shop Right Bottom Left",
+        "Castle Town Child Potion Shop Right Top Right",
+        "Castle Town Child Potion Shop Right Bottom Right"
+      ]
     },
     {
         "Name": "Temple of Time",
         "SquarePositionX": 1097,
         "SquarePositionY": 200,
-        "CheckLogicId": [
-            "Prelude Of Light",
-            "Light Arrows"
-        ]
+      "CheckLogicId": [
+        "Temple of Time Prelude Of Light",
+        "Temple of Time Light Arrows"
+      ]
     },
     {
         "Name": "Hyrule Castle Grounds",
         "SquarePositionX": 987,
         "SquarePositionY": 173,
-        "CheckLogicId": [
-            "Malon Weird Egg",
-            "Zelda Lullaby",
-            "Hyrule Castle Fairy"
-        ]
+      "CheckLogicId": [
+        "Hyrule Castle Grounds Malon Weird Egg",
+        "Hyrule Castle Grounds Zelda Lullaby",
+        "Hyrule Castle Grounds Hyrule Castle Fairy"
+      ]
     },
     {
         "Name": "Ganon's Castle Ground",
         "SquarePositionX": 1036,
         "SquarePositionY": 161,
-        "CheckLogicId": [
-            "Gannon Castle Fairy"
-        ]
+      "CheckLogicId": [
+        "Gannon Castle Ground Fairy"
+      ]
     },
     {
         "Name": "Ganon's Castle V",
         "SquarePositionX": 1005,
         "SquarePositionY": 61,
-        "CheckLogicId": [
-            "Under Bridge First Deku Salesman",
-            "Under Bridge Second Deku Salesman",
-            "Under Bridge Third Deku Salesman",
-            "Under Bridge Fourth Deku Salesman",
-            "Forest Trial Chest",
-            "Water Trial Left Chest",
-            "Water Trial Right Chest",
-            "Shadow Trial First Chest",
-            "Shadow Trial Second Chest",
-            "Spirit Trial First Chest",
-            "Spirit Trial Second Chest",
-            "Light Trial First Left Chest",
-            "Light Trial Second Left Chest",
-            "Light Trial Third Left Chest",
-            "Light Trial First Right Chest",
-            "Light Trial Second Right Chest",
-            "Light Trial Third Right Chest",
-            "Light Trial Invisible Enemies Chest",
-            "Light Trial Lullaby Chest",
-            "Boss Key Chest",
-            "Gannon Fight"
-        ]
+      "CheckLogicId": [
+        "Gannon Castle V Under Bridge First Deku Salesman",
+        "Gannon Castle V Under Bridge Second Deku Salesman",
+        "Gannon Castle V Under Bridge Third Deku Salesman",
+        "Gannon Castle V Under Bridge Fourth Deku Salesman",
+        "Gannon Castle V Forest Trial Chest",
+        "Gannon Castle V Water Trial Left Chest",
+        "Gannon Castle V Water Trial Right Chest",
+        "Gannon Castle V Shadow Trial First Chest",
+        "Gannon Castle V Shadow Trial Second Chest",
+        "Gannon Castle V Spirit Trial First Chest",
+        "Gannon Castle V Spirit Trial Second Chest",
+        "Gannon Castle V Light Trial First Left Chest",
+        "Gannon Castle V Light Trial Second Left Chest",
+        "Gannon Castle V Light Trial Third Left Chest",
+        "Gannon Castle V Light Trial First Right Chest",
+        "Gannon Castle V Light Trial Second Right Chest",
+        "Gannon Castle V Light Trial Third Right Chest",
+        "Gannon Castle V Light Trial Invisible Enemies Chest",
+        "Gannon Castle V Light Trial Lullaby Chest",
+        "Gannon Castle V Boss Key Chest",
+        "Gannon Castle V Gannon Fight"
+      ]
     },
     {
         "Name": "Ganon's Castle MQ",
         "SquarePositionX": 1005,
         "SquarePositionY": 61,
-        "CheckLogicId": [
-            "Under Bridge First Deku Salesman",
-            "Under Bridge Second Deku Salesman",
-            "Under Bridge Third Deku Salesman",
-            "Under Bridge Fourth Deku Salesman",
-            "Under Bridge Fifth Deku Salesman",
-            "Forest Trial First Chest",
-            "Forest Trial Second Chest",
-            "Forest Trial Freestanding Key",
-            "Water Trial Chest",
-            "Shadow Trial First Chest",
-            "Shadow Trial Second Chest",
-            "Spirit Trial First Chest",
-            "Spirit Trial Second Chest",
-            "Spirit Trial Sun Front Left Chest",
-            "Spirit Trial Sun Back Left Chest",
-            "Golden Gauntlets Chest",
-            "Spirit Trial Sun Back Right Chest",
-            "Light Trial Lullaby Chest",
-            "Boss Key Chest",
-            "Gannon Fight"
-        ]
+      "CheckLogicId": [
+        "Gannon Castle MQ Under Bridge First Deku Salesman",
+        "Gannon Castle MQ Under Bridge Second Deku Salesman",
+        "Gannon Castle MQ Under Bridge Third Deku Salesman",
+        "Gannon Castle MQ Under Bridge Fourth Deku Salesman",
+        "Gannon Castle MQ Under Bridge Fifth Deku Salesman",
+        "Gannon Castle MQ Forest Trial First Chest",
+        "Gannon Castle MQ Forest Trial Second Chest",
+        "Gannon Castle MQ Forest Trial Freestanding Key",
+        "Gannon Castle MQ Water Trial Chest",
+        "Gannon Castle MQ Shadow Trial First Chest",
+        "Gannon Castle MQ Shadow Trial Second Chest",
+        "Gannon Castle MQ Spirit Trial First Chest",
+        "Gannon Castle MQ Spirit Trial Second Chest",
+        "Gannon Castle MQ Spirit Trial Sun Front Left Chest",
+        "Gannon Castle MQ Spirit Trial Sun Back Left Chest",
+        "Gannon Castle MQ Golden Gauntlets Chest",
+        "Gannon Castle MQ Spirit Trial Sun Back Right Chest",
+        "Gannon Castle MQ Light Trial Lullaby Chest",
+        "Gannon Castle MQ Boss Key Chest",
+        "Gannon Castle MQ Gannon Fight"
+      ]
     },
     {
         "Name": "Kokiri Forest",
         "SquarePositionX": 1517,
         "SquarePositionY": 664,
-        "CheckLogicId": [
-            "Kokiri Sword Chest",
-            "Cow In Link House",
-            "Mido Chest 1",
-            "Mido Chest 2",
-            "Mido Chest 3",
-            "Mido Chest 4",
-            "Kokiri Song of Storms Grotto", 
-            "Kokiri Shop Left Top Left",
-            "Kokiri Shop Left Bottom Left",
-            "Kokiri Shop Left Top Right",
-            "Kokiri Shop Left Bottom Right",
-            "Kokiri Shop Right Top Left",
-            "Kokiri Shop Right Bottom Left",
-            "Kokiri Shop Right Top Right",
-            "Kokiri Shop Right Bottom Right"
-        ]
+      "CheckLogicId": [
+        "Kokiri Forest Kokiri Sword Chest",
+        "Kokiri Forest Cow In Link House",
+        "Kokiri Forest Mido Chest 1",
+        "Kokiri Forest Mido Chest 2",
+        "Kokiri Forest Mido Chest 3",
+        "Kokiri Forest Mido Chest 4",
+        "Kokiri Forest Kokiri Song of Storms Grotto",
+        "Kokiri Forest Kokiri Shop Left Top Left",
+        "Kokiri Forest Kokiri Shop Left Bottom Left",
+        "Kokiri Forest Kokiri Shop Left Top Right",
+        "Kokiri Forest Kokiri Shop Left Bottom Right",
+        "Kokiri Forest Kokiri Shop Right Top Left",
+        "Kokiri Forest Kokiri Shop Right Bottom Left",
+        "Kokiri Forest Kokiri Shop Right Top Right",
+        "Kokiri Forest Kokiri Shop Right Bottom Right"
+      ]
     },
     {
         "Name": "Deku Tree V",
         "SquarePositionX": 1712,
         "SquarePositionY": 590,
-        "CheckLogicId": [
-            "Lobby Chest",
-            "Slingshot Chest",
-            "Slingshot Room Side Chest",
-            "Compass Chest",
-            "Compass Room Side Chest",
-            "Basement Chest",
-            "Gohma"
-        ]
+      "CheckLogicId": [
+        "Deku Tree V Lobby Chest",
+        "Deku Tree V Slingshot Chest",
+        "Deku Tree V Slingshot Room Side Chest",
+        "Deku Tree V Compass Chest",
+        "Deku Tree V Compass Room Side Chest",
+        "Deku Tree V Basement Chest",
+        "Deku Tree V Gohma"
+      ]
     },
     {
         "Name": "Deku Tree MQ",
         "SquarePositionX": 1712,
         "SquarePositionY": 590,
-        "CheckLogicId": [
-            "Lobby Chest",
-            "Slingshot Chest", 
-            "Slingshot Room Back",
-            "Compass Chest",
-            "Basement Chest",
-            "Before Spinning Log",
-            "After Spinning Log",
-            "Deku Basement Salesman",
-            "Gohma"
-        ]
+      "CheckLogicId": [
+        "Deku Tree MQ Lobby Chest",
+        "Deku Tree MQ Slingshot Chest",
+        "Deku Tree MQ Slingshot Room Back",
+        "Deku Tree MQ Compass Chest",
+        "Deku Tree MQ Basement Chest",
+        "Deku Tree MQ Before Spinning Log",
+        "Deku Tree MQ After Spinning Log",
+        "Deku Tree MQ Deku Basement Salesman",
+        "Deku Tree MQ Gohma"
+      ]
     },
     {
         "Name": "Lost Woods",
         "SquarePositionX": 1439,
         "SquarePositionY": 542,
-        "CheckLogicId": [
-            "Saria Ocarina",
-            "Skull Kid",
-            "Near Bridge Deku Salesman",
-            "Ocarina Memory Game",
-            "Target in Wood",
-            "Boom Grotto Chest",
-            "Deku Theather Skull Mask",
-            "Deku Theather Mask Of Truth",
-            "Near Meado Grotto Left Deku Salesman",
-            "Near Meado Grotto Right Deku Salesman",
-            "Forest Above Theather Left Deku Salesman",
-            "Forest Above Theather Right Deku Salesman"
-        ]
+      "CheckLogicId": [
+        "Lost Woods Saria Ocarina",
+        "Lost Woods Skull Kid",
+        "Lost Woods Near Bridge Deku Salesman",
+        "Lost Woods Ocarina Memory Game",
+        "Lost Woods Target in Wood",
+        "Lost Woods Boom Grotto Chest",
+        "Lost Woods Deku Theather Skull Mask",
+        "Lost Woods Deku Theather Mask Of Truth",
+        "Lost Woods Near Meado Grotto Left Deku Salesman",
+        "Lost Woods Near Meado Grotto Right Deku Salesman",
+        "Lost Woods Forest Above Theather Left Deku Salesman",
+        "Lost Woods Forest Above Theather Right Deku Salesman"
+      ]
     },
     {
         "Name": "Sacred Forest Meadow",
         "SquarePositionX": 1556,
         "SquarePositionY": 488,
-        "CheckLogicId": [
-            "Wolfos Grotto Chest",
-            "Forest Meadow Grotto Left Deku Salesman",
-            "Forest Meadow Grotto Right Deku Salesman",
-            "Saria Song",
-            "Minuet Of Forest"
-        ]
+      "CheckLogicId": [
+        "Sacred Forest Meadow Wolfos Grotto Chest",
+        "Sacred Forest Meadow Forest Meadow Grotto Left Deku Salesman",
+        "Sacred Forest Meadow Forest Meadow Grotto Right Deku Salesman",
+        "Sacred Forest Meadow Saria Song",
+        "Sacred Forest Meadow Minuet Of Forest"
+      ]
     },
     {
         "Name": "Forest Temple V",
         "SquarePositionX": 1500,
         "SquarePositionY": 416,
-        "CheckLogicId": [
-            "First Chest",
-            "Chest Behind Lobby",
-            "Well CHest",
-            "Map Chest", 
-            "Outside Hookshot Chest",
-            "Block Push Chest", 
-            "Boss Key Chest",
-            "Floormaster Chest",
-            "Bow Chest", 
-            "Red Poe Chest",
-            "Blue Poe Chest",
-            "Falling Room Chest",
-            "Near Boss Chest",
-            "Phantom Ganon"
-        ]
+      "CheckLogicId": [
+        "Forest Temple V First Chest",
+        "Forest Temple V Chest Behind Lobby",
+        "Forest Temple V Well CHest",
+        "Forest Temple V Map Chest",
+        "Forest Temple V Outside Hookshot Chest",
+        "Forest Temple V Block Push Chest",
+        "Forest Temple V Boss Key Chest",
+        "Forest Temple V Floormaster Chest",
+        "Forest Temple V Bow Chest",
+        "Forest Temple V Red Poe Chest",
+        "Forest Temple V Blue Poe Chest",
+        "Forest Temple V Falling Room Chest",
+        "Forest Temple V Near Boss Chest",
+        "Forest Temple V Phantom Ganon"
+      ]
     },
     {
         "Name": "Forest Temple MQ",
         "SquarePositionX": 1500,
         "SquarePositionY": 416,
-        "CheckLogicId": [
-            "First Chest",
-            "Chest Behind Lobby",
-            "Boss Key Chest", 
-            "Redead Chest",
-            "Well Chest", 
-            "NE Outdoors Upper Chest",
-            "NE Outdoors Lower Chest",
-            "Bow Chest",
-            "Map Chest",
-            "Compass Chest",
-            "Falling Room Chest",
-            "Near Boos Chest",
-            "Phantom Ganon"
-        ]
+      "CheckLogicId": [
+        "Forest Temple MQ First Chest",
+        "Forest Temple MQ Chest Behind Lobby",
+        "Forest Temple MQ Boss Key Chest",
+        "Forest Temple MQ Redead Chest",
+        "Forest Temple MQ Well Chest",
+        "Forest Temple MQ NE Outdoors Upper Chest",
+        "Forest Temple MQ NE Outdoors Lower Chest",
+        "Forest Temple MQ Bow Chest",
+        "Forest Temple MQ Map Chest",
+        "Forest Temple MQ Compass Chest",
+        "Forest Temple MQ Falling Room Chest",
+        "Forest Temple MQ Near Boos Chest",
+        "Forest Temple MQ Phantom Ganon"
+      ]
     },
     {
         "Name": "Zora River",
         "SquarePositionX": 1440,
         "SquarePositionY": 350,
-        "CheckLogicId": [
-            "Frogs in the Rain",
-            "Frog Ocarina Game",
-            "Zora River Heart Piece 1",
-            "Zora River Heart Piece 2",
-            "Zora River Grotto",
-            "Zora River Entrance Grotto Left Deku Salesman",
-            "Zora River Entrance Grotto Right Deku Salesman",
-            "Zora River Bean Salesman"
-        ]
+      "CheckLogicId": [
+        "Zora River Frogs in the Rain",
+        "Zora River Frog Ocarina Game",
+        "Zora River Heart Piece 1",
+        "Zora River Heart Piece 2",
+        "Zora River Grotto",
+        "Zora River Entrance Grotto Left Deku Salesman",
+        "Zora River Entrance Grotto Right Deku Salesman",
+        "Zora River Bean Salesman"
+      ]
     },
     {
         "Name": "Zora's Domain",
         "SquarePositionX": 1800,
         "SquarePositionY": 340,
-        "CheckLogicId": [
-            "Diving Minigame",
-            "Zoras Domain Torch Run",
-            "King Zora Thawed",
-            "Zora Shop Left Top Left",
-            "Zora Shop Left Bottom Left",
-            "Zora Shop Left Top Right",
-            "Zora Shop Left Bottom Right",
-            "Zora Shop Right Top Left",
-            "Zora Shop Right Bottom Left",
-            "Zora Shop Right Top Right",
-            "Zora Shop Right Bottom Right"
-        ]
+      "CheckLogicId": [
+        "Zora Domain Diving Minigame",
+        "Zora Domain Zoras Domain Torch Run",
+        "Zora Domain King Zora Thawed",
+        "Zora Domain Zora Shop Left Top Left",
+        "Zora Domain Zora Shop Left Bottom Left",
+        "Zora Domain Zora Shop Left Top Right",
+        "Zora Domain Zora Shop Left Bottom Right",
+        "Zora Domain Zora Shop Right Top Left",
+        "Zora Domain Zora Shop Right Bottom Left",
+        "Zora Domain Zora Shop Right Top Right",
+        "Zora Domain Zora Shop Right Bottom Right"
+      ]
     },
     {
         "Name": "Zora Fountain",
         "SquarePositionX": 1830,
         "SquarePositionY": 250,
-        "CheckLogicId": [
-            "Fairy Fountain",
-            "Inceberg Heart Piece",
-            "Underwater Heart Piece"
-        ]
+      "CheckLogicId": [
+        "Zora Fountain Fairy Fountain",
+        "Zora Fountain Inceberg Heart Piece",
+        "Zora Fountain Underwater Heart Piece"
+      ]
     },
     {
         "Name": "Jabu Jabu's Belly V",
         "SquarePositionX": 1740,
         "SquarePositionY": 215,
-        "CheckLogicId": [
-            "Jabu Jabu Near Elevator Deku Salesman",
-            "Boomerang Chest",
-            "Map Chest", 
-            "Compass Chest",
-            "Barinade"
-        ]
+      "CheckLogicId": [
+        "Jabu Jabu V Near Elevator Deku Salesman",
+        "Jabu Jabu V Boomerang Chest",
+        "Jabu Jabu V Map Chest",
+        "Jabu Jabu V Compass Chest",
+        "Jabu Jabu V Barinade"
+      ]
     },
     {
         "Name": "Jabu Jabu's Belly MQ",
         "SquarePositionX": 1740,
         "SquarePositionY": 215,
-        "CheckLogicId": [
-            "Map Chest",
-            "Entry Room Side Chest",
-            "Second Room Lower Chest",
-            "Compass Chest",
-            "Basement South Chest",
-            "Basement North Chest",
-            "Boomerang Room Small Chest",
-            "Bommerang Chest",
-            "Falling Like Like Chest",
-            "Cow in Jabu Jabu",
-            "Second Room Upper Chest",
-            "Near Boss Chest",
-            "Barinade"
-        ]
+      "CheckLogicId": [
+        "Jabu Jabu MQ Map Chest",
+        "Jabu Jabu MQ Entry Room Side Chest",
+        "Jabu Jabu MQ Second Room Lower Chest",
+        "Jabu Jabu MQ Compass Chest",
+        "Jabu Jabu MQ Basement South Chest",
+        "Jabu Jabu MQ Basement North Chest",
+        "Jabu Jabu MQ Boomerang Room Small Chest",
+        "Jabu Jabu MQ Bommerang Chest",
+        "Jabu Jabu MQ Falling Like Like Chest",
+        "Jabu Jabu MQ Cow in Jabu Jabu",
+        "Jabu Jabu MQ Second Room Upper Chest",
+        "Jabu Jabu MQ Near Boss Chest",
+        "Jabu Jabu MQ Barinade"
+      ]
     },
     {
         "Name": "Ice Cavern V",
         "SquarePositionX": 1760,
         "SquarePositionY": 150,
-        "CheckLogicId": [
-            "Map Chest",
-            "Compass Chest",
-            "Heart Piece",
-            "Iron Boots Chest",
-            "Serenade Of Water"
-        ]
+      "CheckLogicId": [
+        "Ice Cavern V Map Chest",
+        "Ice Cavern V Compass Chest",
+        "Ice Cavern V Heart Piece",
+        "Ice Cavern V Iron Boots Chest",
+        "Ice Cavern V Serenade Of Water"
+      ]
     },
     {
         "Name": "Ice Cavern MQ",
         "SquarePositionX": 1760,
         "SquarePositionY": 150,
-        "CheckLogicId": [
-            "Map Chest",
-            "Compass Chest",
-            "Heart Piece",
-            "Iron Boots Chest",
-            "Serenade Of Water"
-        ]
+      "CheckLogicId": [
+        "Ice Cavern MQ Map Chest",
+        "Ice Cavern MQ Compass Chest",
+        "Ice Cavern MQ Heart Piece",
+        "Ice Cavern MQ Iron Boots Chest",
+        "Ice Cavern MQ Serenade Of Water"
+      ]
     },
     {
         "Name": "Kakariko Village",
         "SquarePositionX": 1223,
         "SquarePositionY": 258,
-        "CheckLogicId": [
-            "Anju As Adult",
-            "Anju As Chickens",
-            "Kakariko Redead Grotto Chest",
-            "Kakariko Grotto Chest",
-            "Windmill Heart Piece",
-            "Song of Storms",
-            "Man On Roof",
-            "Cow In Impa House",
-            "Cow Heart Piece",
-            "Nocture Of Shadow",
-            "Skultula House 10",
-            "Skultula House 20",
-            "Skultula House 30",
-            "Skultula House 40",
-            "Skultula House 50",
-            "Adult Shooting Gallery",
-            "Adult Bazzar Left Top Left",
-            "Adult Bazzar Left Bottom Left",
-            "Adult Bazzar Left Top Right",
-            "Adult Bazzar Left Bottom Right",
-            "Adult Bazzar Right Top Left",
-            "Adult Bazzar Right Bottom Left",
-            "Adult Bazzar Right Top Right",
-            "Adult Bazzar Right Bottom Right",
-            "Adult Potion Shop Left Top Left",
-            "Adult Potion Shop Left Bottom Left",
-            "Adult Potion Shop Left Top Right",
-            "Adult Potion Shop Left Bottom Right",
-            "Adult Potion Shop Right Top Left",
-            "Adult Potion Shop Right Bottom Left",
-            "Adult Potion Shop Right Top Right",
-            "Adult Potion Shop Right Bottom Right"
-        ]
+      "CheckLogicId": [
+        "Kakariko Village Anju As Adult",
+        "Kakariko Village Anju As Chickens",
+        "Kakariko Village Kakariko Redead Grotto Chest",
+        "Kakariko Village Kakariko Grotto Chest",
+        "Kakariko Village Windmill Heart Piece",
+        "Kakariko Village Song of Storms",
+        "Kakariko Village Man On Roof",
+        "Kakariko Village Cow In Impa House",
+        "Kakariko Village Cow Heart Piece",
+        "Kakariko Village Nocture Of Shadow",
+        "Kakariko Village Skultula House 10",
+        "Kakariko Village Skultula House 20",
+        "Kakariko Village Skultula House 30",
+        "Kakariko Village Skultula House 40",
+        "Kakariko Village Skultula House 50",
+        "Kakariko Village Adult Shooting Gallery",
+        "Kakariko Village Adult Bazzar Left Top Left",
+        "Kakariko Village Adult Bazzar Left Bottom Left",
+        "Kakariko Village Adult Bazzar Left Top Right",
+        "Kakariko Village Adult Bazzar Left Bottom Right",
+        "Kakariko Village Adult Bazzar Right Top Left",
+        "Kakariko Village Adult Bazzar Right Bottom Left",
+        "Kakariko Village Adult Bazzar Right Top Right",
+        "Kakariko Village Adult Bazzar Right Bottom Right",
+        "Kakariko Village Adult Potion Shop Left Top Left",
+        "Kakariko Village Adult Potion Shop Left Bottom Left",
+        "Kakariko Village Adult Potion Shop Left Top Right",
+        "Kakariko Village Adult Potion Shop Left Bottom Right",
+        "Kakariko Village Adult Potion Shop Right Top Left",
+        "Kakariko Village Adult Potion Shop Right Bottom Left",
+        "Kakariko Village Adult Potion Shop Right Top Right",
+        "Kakariko Village Adult Potion Shop Right Bottom Right"
+      ]
     },
     {
         "Name": "Bottom of the Well V",
         "SquarePositionX": 1320,
         "SquarePositionY": 260,
-        "CheckLogicId": [
-            "Front Left Hidden Wall",
-            "Fonrt Center Bombable",
-            "Right Bottom Hidden Wall",
-            "Center West Chest",
-            "Center East Chest",
-            "Back Left Bombable",
-            "Coffin Key",
-            "Defeat Boss",
-            "Invisible Chest",
-            "Underwater Front Chest",
-            "Underwater Left Chest",
-            "Basement Chest",
-            "Locked Pits",
-            "Behind Right Grate"
-        ]
+      "CheckLogicId": [
+        "Bottom of the Well V Front Left Hidden Wall",
+        "Bottom of the Well V Fonrt Center Bombable",
+        "Bottom of the Well V Right Bottom Hidden Wall",
+        "Bottom of the Well V Center West Chest",
+        "Bottom of the Well V Center East Chest",
+        "Bottom of the Well V Back Left Bombable",
+        "Bottom of the Well V Coffin Key",
+        "Bottom of the Well V Defeat Boss",
+        "Bottom of the Well V Invisible Chest",
+        "Bottom of the Well V Underwater Front Chest",
+        "Bottom of the Well V Underwater Left Chest",
+        "Bottom of the Well V Basement Chest",
+        "Bottom of the Well V Locked Pits",
+        "Bottom of the Well V Behind Right Grate"
+      ]
     },
     {
         "Name": "Bottom of the Well MQ",
         "SquarePositionX": 1320,
         "SquarePositionY": 260,
-        "CheckLogicId": [
-            "Compass Chest", 
-            "Map Chest", 
-            "Lens Of Truth Chest",
-            "Deadhand Freestanding Key",
-            "East Inner Room Freestanding key"
-        ]
+      "CheckLogicId": [
+        "Bottom of the Well MQ Compass Chest",
+        "Bottom of the Well MQ Map Chest",
+        "Bottom of the Well MQ Lens Of Truth Chest",
+        "Bottom of the Well MQ Deadhand Freestanding Key",
+        "Bottom of the Well MQ East Inner Room Freestanding key"
+      ]
     },
     {
         "Name": "Graveyard",
         "SquarePositionX": 1420,
         "SquarePositionY": 255,
-        "CheckLogicId": [
-            "Dampe Digging",
-            "Dampe Race 1", 
-            "Dampe Race 2",
-            "Shield Grace Chest",
-            "Redead Grave Chest",
-            "Royal Grave Sun Song",
-            "Royal Grave Sun Song Chest",
-            "Magic Bean Heart Piece"
-        ]
+      "CheckLogicId": [
+        "Graveyard Dampe Digging",
+        "Graveyard Dampe Race 1",
+        "Graveyard Dampe Race 2",
+        "Graveyard Shield Grace Chest",
+        "Graveyard Redead Grave Chest",
+        "Graveyard Royal Grave Sun Song",
+        "Graveyard Royal Grave Sun Song Chest",
+        "Graveyard Magic Bean Heart Piece"
+      ]
     },
     {
         "Name": "Shadow Temple V",
         "SquarePositionX": 1515,
         "SquarePositionY": 210,
-        "CheckLogicId": [
-            "Map Chest",
-            "Hover Boots Chest", 
-            "Compass Chest",
-            "Early Silver Rupee Chest",
-            "Invisible Blades Visible Chest",
-            "Invisible Blades Invisible Chest",
-            "Falling Spikes Lower Chest",
-            "Falling Spikes Upper Chest",
-            "Falling Spikes Switch Chest",
-            "Invisible Spikes Chest",
-            "Giant Pot Key",
-            "Wind Hint Chest",
-            "After Wind Enemy Chest",
-            "After Wind Hidden Chest",
-            "Spike Walls Left Chest",
-            "Boss Key Chest",
-            "Hidden Floormaster Chest",
-            "Bongo Bongo"
-        ]
+      "CheckLogicId": [
+        "Shadow Temple V Map Chest",
+        "Shadow Temple V Hover Boots Chest",
+        "Shadow Temple V Compass Chest",
+        "Shadow Temple V Early Silver Rupee Chest",
+        "Shadow Temple V Invisible Blades Visible Chest",
+        "Shadow Temple V Invisible Blades Invisible Chest",
+        "Shadow Temple V Falling Spikes Lower Chest",
+        "Shadow Temple V Falling Spikes Upper Chest",
+        "Shadow Temple V Falling Spikes Switch Chest",
+        "Shadow Temple V Invisible Spikes Chest",
+        "Shadow Temple V Giant Pot Key",
+        "Shadow Temple V Wind Hint Chest",
+        "Shadow Temple V After Wind Enemy Chest",
+        "Shadow Temple V After Wind Hidden Chest",
+        "Shadow Temple V Spike Walls Left Chest",
+        "Shadow Temple V Boss Key Chest",
+        "Shadow Temple V Hidden Floormaster Chest",
+        "Shadow Temple V Bongo Bongo"
+      ]
     },
     {
         "Name": "Shadow Temple MQ",
         "SquarePositionX": 1515,
         "SquarePositionY": 210,
-        "CheckLogicId": [
-            "Compass Chest",
-            "Hover Boots Chest",
-            "Map Chest",
-            "Early Gibdos Chest",
-            "Near Ship Invisible Chest",
-            "Invisible Blades Visible Chest",
-            "Invisible Blades Invisible Chest",
-            "Beamos Silver Rupees Chest",
-            "Falling Spikes Lower Chest",
-            "Falling Spikes Upper Chest",
-            "Falling Spikes Switch Chest",
-            "Invisible Spikes Chest",
-            "Stalfos Room",
-            "Wind Hint Chest",
-            "After Wind Hidden Chest",
-            "Spike Walls Left Chest", 
-            "Boss Key Chest",
-            "Bomb Flower Chest",
-            "Freestanding Key",
-            "Bongo Bongo"
-        ]
+      "CheckLogicId": [
+        "Shadow Temple MQ Compass Chest",
+        "Shadow Temple MQ Hover Boots Chest",
+        "Shadow Temple MQ Map Chest",
+        "Shadow Temple MQ Early Gibdos Chest",
+        "Shadow Temple MQ Near Ship Invisible Chest",
+        "Shadow Temple MQ Invisible Blades Visible Chest",
+        "Shadow Temple MQ Invisible Blades Invisible Chest",
+        "Shadow Temple MQ Beamos Silver Rupees Chest",
+        "Shadow Temple MQ Falling Spikes Lower Chest",
+        "Shadow Temple MQ Falling Spikes Upper Chest",
+        "Shadow Temple MQ Falling Spikes Switch Chest",
+        "Shadow Temple MQ Invisible Spikes Chest",
+        "Shadow Temple MQ Stalfos Room",
+        "Shadow Temple MQ Wind Hint Chest",
+        "Shadow Temple MQ After Wind Hidden Chest",
+        "Shadow Temple MQ Spike Walls Left Chest",
+        "Shadow Temple MQ Boss Key Chest",
+        "Shadow Temple MQ Bomb Flower Chest",
+        "Shadow Temple MQ Freestanding Key",
+        "Shadow Temple MQ Bongo Bongo"
+      ]
     },
     {
         "Name": "Dodongo's Cavern V",
         "SquarePositionX": 1155,
         "SquarePositionY": 155,
-        "CheckLogicId": [
-            "Dodongo Lobby Deku Salesman",
-            "Dodongo East Corridor Deku Salesman",
-            "Map Chest",
-            "Compass Chest",
-            "Bomb Flower Platform",
-            "Bomb Bag Chest",
-            "Dodongo Near Bomb Bag Left Deku Salesman",
-            "Dodongo Near Bomb Right Deku Salesman",
-            "End Of Bridge Chest",
-            "Chest Above King Dodongo",
-            "King Dodongo"
-        ]
+      "CheckLogicId": [
+        "Dodongos Cavern V Dodongo Lobby Deku Salesman",
+        "Dodongos Cavern V Dodongo East Corridor Deku Salesman",
+        "Dodongos Cavern V Map Chest",
+        "Dodongos Cavern V Compass Chest",
+        "Dodongos Cavern V Bomb Flower Platform",
+        "Dodongos Cavern V Bomb Bag Chest",
+        "Dodongos Cavern V Dodongo Near Bomb Bag Left Deku Salesman",
+        "Dodongos Cavern V Dodongo Near Bomb Right Deku Salesman",
+        "Dodongos Cavern V End Of Bridge Chest",
+        "Dodongos Cavern V Chest Above King Dodongo",
+        "Dodongos Cavern V King Dodongo"
+      ]
     },
     {
         "Name": "Dodongo's Cavern MQ",
         "SquarePositionX": 1155,
         "SquarePositionY": 155,
-        "CheckLogicId": [
-            "Map Chest",
-            "Compass Chest",
-            "Goham Larva Room",
-            "Torch Puzzle Room",
-            "Under Grave Chest",
-            "Bomb Bag Chest",
-            "Dodongo Main Room Right Salesman",
-            "Dodongo Main Room Left Salesman",
-            "Dodongo 1F Right Side Salesman",
-            "Dodongo Above Stairs Salesman",
-            "Chest ABove King Dodongo",
-            "King Dodongo"
-        ]
+      "CheckLogicId": [
+        "Dodongos Cavern MQ Map Chest",
+        "Dodongos Cavern MQ Compass Chest",
+        "Dodongos Cavern MQ Goham Larva Room",
+        "Dodongos Cavern MQ Torch Puzzle Room",
+        "Dodongos Cavern MQ Under Grave Chest",
+        "Dodongos Cavern MQ Bomb Bag Chest",
+        "Dodongos Cavern MQ Dodongo Main Room Right Salesman",
+        "Dodongos Cavern MQ Dodongo Main Room Left Salesman",
+        "Dodongos Cavern MQ Dodongo 1F Right Side Salesman",
+        "Dodongos Cavern MQ Dodongo Above Stairs Salesman",
+        "Dodongos Cavern MQ Chest ABove King Dodongo",
+        "Dodongos Cavern MQ King Dodongo"
+      ]
     },
     {
         "Name": "Death Mountain",
         "SquarePositionX": 1280,
         "SquarePositionY": 125,
-        "CheckLogicId": [
-            "Hear Piece Above Dodongo Cevern",
-            "Outside Goron City Chest",
-            "Summit Fairy Fountain",
-            "Cow In Mountain Grotto",
-            "Outside Goron City Grotto",
-            "Biggoron Sword"
-        ]
+      "CheckLogicId": [
+        "Death Mountain Hear Piece Above Dodongo Cevern",
+        "Death Mountain Outside Goron City Chest",
+        "Death Mountain Summit Fairy Fountain",
+        "Death Mountain Cow In Mountain Grotto",
+        "Death Mountain Outside Goron City Grotto",
+        "Death Mountain Biggoron Sword"
+      ]
     },
     {
         "Name": "Goron City",
         "SquarePositionX": 1165,
         "SquarePositionY": 62,
-        "CheckLogicId": [
-            "Left Boulder Maze Chest",
-            "Center Boulder Maze Chest",
-            "Right Boulder Maze Chest",
-            "Hot Rodder Goron",
-            "Link The Goron",
-            "MediGoron",
-            "Spinning Pot Heart Piece", 
-            "Darunia Joy",
-            "Goron City Grotto Left Deku Salesman",
-            "Goron City Grotto Middle Deku Salesman",
-            "Goron City Grotto Right Deku Salesman",
-            "Goron Shop Left Top Left",
-            "Goron Shop Left Bottom Left",
-            "Goron Shop Left Top Right",
-            "Goron Shop Left Bottom Right",
-            "Goron Shop Right Top Left",
-            "Goron Shop Right Bottom Left",
-            "Goron Shop Right Top Right",
-            "Goron Shop Right Bottom Right"
-        ]
+      "CheckLogicId": [
+        "Goron City Left Boulder Maze Chest",
+        "Goron City Center Boulder Maze Chest",
+        "Goron City Right Boulder Maze Chest",
+        "Goron City Hot Rodder Goron",
+        "Goron City Link The Goron",
+        "Goron City MediGoron",
+        "Goron City Spinning Pot Heart Piece",
+        "Goron City Darunia Joy",
+        "Goron City Goron City Grotto Left Deku Salesman",
+        "Goron City Goron City Grotto Middle Deku Salesman",
+        "Goron City Goron City Grotto Right Deku Salesman",
+        "Goron City Goron Shop Left Top Left",
+        "Goron City Goron Shop Left Bottom Left",
+        "Goron City Goron Shop Left Top Right",
+        "Goron City Goron Shop Left Bottom Right",
+        "Goron City Goron Shop Right Top Left",
+        "Goron City Goron Shop Right Bottom Left",
+        "Goron City Goron Shop Right Top Right",
+        "Goron City Goron Shop Right Bottom Right"
+      ]
     },
     {
         "Name": "Fire Temple V",
         "SquarePositionX": 1340,
         "SquarePositionY": 64,
-        "CheckLogicId": [
-            "Chest Near Boss",
-            "Fire Dancer Chest",
-            "Boss Key Chest",
-            "Big Lava Room Bombable Chest",
-            "Big Lave Room Open Chest",
-            "Boulder Maze Lower Chest",
-            "Boulder Maze Side Chest",
-            "Boulder Maze Upper Chest",
-            "Boulder Maze Bombable Pit",
-            "Scarecrow Chest",
-            "Map Chest",
-            "Compass Chest",
-            "Highest Goron Chest",
-            "Megaton Hammer Chest",
-            "Volvagia"
-        ]
+      "CheckLogicId": [
+        "Fire Temple V Chest Near Boss",
+        "Fire Temple V Fire Dancer Chest",
+        "Fire Temple V Boss Key Chest",
+        "Fire Temple V Big Lava Room Bombable Chest",
+        "Fire Temple V Big Lave Room Open Chest",
+        "Fire Temple V Boulder Maze Lower Chest",
+        "Fire Temple V Boulder Maze Side Chest",
+        "Fire Temple V Boulder Maze Upper Chest",
+        "Fire Temple V Boulder Maze Bombable Pit",
+        "Fire Temple V Scarecrow Chest",
+        "Fire Temple V Map Chest",
+        "Fire Temple V Compass Chest",
+        "Fire Temple V Highest Goron Chest",
+        "Fire Temple V Megaton Hammer Chest",
+        "Fire Temple V Volvagia"
+      ]
     },
     {
         "Name": "Fire Temple MQ",
         "SquarePositionX": 1340,
         "SquarePositionY": 64,
-        "CheckLogicId": [
-            "Chest Near Boss",
-            "Megaton Hammer Chest",
-            "Map Chest",
-            "Map Room Small Chest",
-            "Boss Key Chest",
-            "Big Lava Room Bombable Chest",
-            "Lizalfos Maze Lower Chest",
-            "Lizalfos Maze Upper Chest",
-            "Lizalfos Maze Side Room Chest",
-            "Compass Chest",
-            "Freestanding Key",
-            "West Tower Top",
-            "Volvagia"
-        ]
+      "CheckLogicId": [
+        "Fire Temple MQ Chest Near Boss",
+        "Fire Temple MQ Megaton Hammer Chest",
+        "Fire Temple MQ Map Chest",
+        "Fire Temple MQ Map Room Small Chest",
+        "Fire Temple MQ Boss Key Chest",
+        "Fire Temple MQ Big Lava Room Bombable Chest",
+        "Fire Temple MQ Lizalfos Maze Lower Chest",
+        "Fire Temple MQ Lizalfos Maze Upper Chest",
+        "Fire Temple MQ Lizalfos Maze Side Room Chest",
+        "Fire Temple MQ Compass Chest",
+        "Fire Temple MQ Freestanding Key",
+        "Fire Temple MQ West Tower Top",
+        "Fire Temple MQ Volvagia"
+      ]
     },
     {
         "Name": "Death Mountain Crater",
         "SquarePositionX": 1258,
         "SquarePositionY": 24,
-        "CheckLogicId": [
-            "Bolero Of Fire",
-            "Crater Wall Heart Piece",
-            "Mountain Crater Ladder Deku Salesman",
-            "Crater Bomb Grotto",
-            "Cater Magic Bean Heart Piece",
-            "Crater Fairy Fountain",
-            "Mountain Crater Near Goron City Grotto Left Deku Salesman",
-            "Mountain Crater Near Goron City Grotto Middle Deku Salesman",
-            "Mountain Crater Near Goron City Grotto Right Deku Salesman"
-        ]
+      "CheckLogicId": [
+        "Death Mountain Crater Bolero Of Fire",
+        "Death Mountain Crater Crater Wall Heart Piece",
+        "Death Mountain Crater Mountain Crater Ladder Deku Salesman",
+        "Death Mountain Crater Crater Bomb Grotto",
+        "Death Mountain Crater Cater Magic Bean Heart Piece",
+        "Death Mountain Crater Crater Fairy Fountain",
+        "Death Mountain Crater Mountain Crater Near Goron City Grotto Left Deku Salesman",
+        "Death Mountain Crater Mountain Crater Near Goron City Grotto Middle Deku Salesman",
+        "Death Mountain Crater Mountain Crater Near Goron City Grotto Right Deku Salesman"
+      ]
     }
 ]

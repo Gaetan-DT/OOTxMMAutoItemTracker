@@ -201,7 +201,7 @@
         //18     Bomb Bag(Holds 40)
         //20     Goron's Bracelet
         //28     Silver Gauntlets
-        //30     Silver Scale
+        //30     Gold Gauntlets
         public const int CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_2 = 0x11A673;
         public const int CST_INVENTORY_ADDRESS_BOMB_BAG_20 = 0x0008;
         public const int CST_INVENTORY_ADDRESS_BOMB_BAG_30 = 0x0010;

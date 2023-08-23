@@ -15,7 +15,7 @@
     "propertyName": "Deku_Nut",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemDekuNut",
         "positionX": 1,
         "positionY": 0
       }
@@ -59,7 +59,7 @@
     "propertyName": "Din_Fire",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemDinFire",
         "positionX": 5,
         "positionY": 0
       }
@@ -70,7 +70,7 @@
     "propertyName": "Fairy_Slingshot",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemFairySlingshot",
         "positionX": 6,
         "positionY": 0
       }
@@ -135,7 +135,7 @@
     "propertyName": "Farore_Wind",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemFaroreWind",
         "positionX": 13,
         "positionY": 0
       }
@@ -146,7 +146,7 @@
     "propertyName": "Boomerang",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemBoomerang",
         "positionX": 14,
         "positionY": 0
       }
@@ -157,7 +157,7 @@
     "propertyName": "Lens_of_Truth",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemLensOfTruth",
         "positionX": 15,
         "positionY": 0
       }
@@ -168,7 +168,7 @@
     "propertyName": "Magic_Bean",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemMagicBean",
         "positionX": 0,
         "positionY": 1
       }
@@ -179,7 +179,7 @@
     "propertyName": "Megaton_Hammer",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemMegatonHammer",
         "positionX": 1,
         "positionY": 1
       }
@@ -201,7 +201,7 @@
     "propertyName": "Nayru_Love",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemNayruLove",
         "positionX": 3,
         "positionY": 1
       }
@@ -212,67 +212,67 @@
     "propertyName": "Bottle_1",
     "variants": [
       {
-        "idLogic": "Empty Bottle",
+        "idLogic": "ItemEmptyBottle",
         "positionX": 4,
         "positionY": 1
       },
       {
-        "idLogic": "Red Potion",
+        "idLogic": "ItemRedPotion",
         "positionX": 5,
         "positionY": 1
       },
       {
-        "idLogic": "Green Potion",
+        "idLogic": "ItemGreenPotion",
         "positionX": 6,
         "positionY": 1
       },
       {
-        "idLogic": "Blue Potion",
+        "idLogic": "ItemBluePotion",
         "positionX": 7,
         "positionY": 1
       },
       {
-        "idLogic": "Bottled Fairy",
+        "idLogic": "ItemBottledFairy",
         "positionX": 8,
         "positionY": 1
       },
       {
-        "idLogic": "Fish",
+        "idLogic": "ItemFish",
         "positionX": 9,
         "positionY": 1
       },
       {
-        "idLogic": "Lon Lon Milk & Bottle",
+        "idLogic": "ItemLonLonMilkBottle",
         "positionX": 10,
         "positionY": 1
       },
       {
-        "idLogic": "Ruto's Letter",
+        "idLogic": "ItemRutosLetter",
         "positionX": 11,
         "positionY": 1
       },
       {
-        "idLogic": "Blue Fire",
+        "idLogic": "ItemBlueFire",
         "positionX": 12,
         "positionY": 1
       },
       {
-        "idLogic": "Bug",
+        "idLogic": "ItemBug",
         "positionX": 13,
         "positionY": 1
       },
       {
-        "idLogic": "Big Poe",
+        "idLogic": "ItemBigPoe",
         "positionX": 14,
         "positionY": 1
       },
       {
-        "idLogic": "Lon Lon Milk (Half)",
+        "idLogic": "ItemLonLonMilkHalf",
         "positionX": 15,
         "positionY": 1
       },
       {
-        "idLogic": "Poe",
+        "idLogic": "ItemPoe",
         "positionX": 0,
         "positionY": 2
       }
@@ -283,67 +283,67 @@
     "propertyName": "Bottle_2",
     "variants": [
       {
-        "idLogic": "Empty Bottle",
+        "idLogic": "ItemEmptyBottle",
         "positionX": 4,
         "positionY": 1
       },
       {
-        "idLogic": "Red Potion",
+        "idLogic": "ItemRedPotion",
         "positionX": 5,
         "positionY": 1
       },
       {
-        "idLogic": "Green Potion",
+        "idLogic": "ItemGreenPotion",
         "positionX": 6,
         "positionY": 1
       },
       {
-        "idLogic": "Blue Potion",
+        "idLogic": "ItemBluePotion",
         "positionX": 7,
         "positionY": 1
       },
       {
-        "idLogic": "Bottled Fairy",
+        "idLogic": "ItemBottledFairy",
         "positionX": 8,
         "positionY": 1
       },
       {
-        "idLogic": "Fish",
+        "idLogic": "ItemFish",
         "positionX": 9,
         "positionY": 1
       },
       {
-        "idLogic": "Lon Lon Milk & Bottle",
+        "idLogic": "ItemLonLonMilkBottle",
         "positionX": 10,
         "positionY": 1
       },
       {
-        "idLogic": "Ruto's Letter",
+        "idLogic": "ItemRutosLetter",
         "positionX": 11,
         "positionY": 1
       },
       {
-        "idLogic": "Blue Fire",
+        "idLogic": "ItemBlueFire",
         "positionX": 12,
         "positionY": 1
       },
       {
-        "idLogic": "Bug",
+        "idLogic": "ItemBug",
         "positionX": 13,
         "positionY": 1
       },
       {
-        "idLogic": "Big Poe",
+        "idLogic": "ItemBigPoe",
         "positionX": 14,
         "positionY": 1
       },
       {
-        "idLogic": "Lon Lon Milk (Half)",
+        "idLogic": "ItemLonLonMilkHalf",
         "positionX": 15,
         "positionY": 1
       },
       {
-        "idLogic": "Poe",
+        "idLogic": "ItemPoe",
         "positionX": 0,
         "positionY": 2
       }
@@ -354,67 +354,67 @@
     "propertyName": "Bottle_3",
     "variants": [
       {
-        "idLogic": "Empty Bottle",
+        "idLogic": "ItemEmptyBottle",
         "positionX": 4,
         "positionY": 1
       },
       {
-        "idLogic": "Red Potion",
+        "idLogic": "ItemRedPotion",
         "positionX": 5,
         "positionY": 1
       },
       {
-        "idLogic": "Green Potion",
+        "idLogic": "ItemGreenPotion",
         "positionX": 6,
         "positionY": 1
       },
       {
-        "idLogic": "Blue Potion",
+        "idLogic": "ItemBluePotion",
         "positionX": 7,
         "positionY": 1
       },
       {
-        "idLogic": "Bottled Fairy",
+        "idLogic": "ItemBottledFairy",
         "positionX": 8,
         "positionY": 1
       },
       {
-        "idLogic": "Fish",
+        "idLogic": "ItemFish",
         "positionX": 9,
         "positionY": 1
       },
       {
-        "idLogic": "Lon Lon Milk & Bottle",
+        "idLogic": "ItemLonLonMilkBottle",
         "positionX": 10,
         "positionY": 1
       },
       {
-        "idLogic": "Ruto's Letter",
+        "idLogic": "ItemRutosLetter",
         "positionX": 11,
         "positionY": 1
       },
       {
-        "idLogic": "Blue Fire",
+        "idLogic": "ItemBlueFire",
         "positionX": 12,
         "positionY": 1
       },
       {
-        "idLogic": "Bug",
+        "idLogic": "ItemBug",
         "positionX": 13,
         "positionY": 1
       },
       {
-        "idLogic": "Big Poe",
+        "idLogic": "ItemBigPoe",
         "positionX": 14,
         "positionY": 1
       },
       {
-        "idLogic": "Lon Lon Milk (Half)",
+        "idLogic": "ItemLonLonMilkHalf",
         "positionX": 15,
         "positionY": 1
       },
       {
-        "idLogic": "Poe",
+        "idLogic": "ItemPoe",
         "positionX": 0,
         "positionY": 2
       }
@@ -425,89 +425,175 @@
     "propertyName": "Bottle_4",
     "variants": [
       {
-        "idLogic": "Empty Bottle",
+        "idLogic": "ItemEmptyBottle",
         "positionX": 4,
         "positionY": 1
       },
       {
-        "idLogic": "Red Potion",
+        "idLogic": "ItemRedPotion",
         "positionX": 5,
         "positionY": 1
       },
       {
-        "idLogic": "Green Potion",
+        "idLogic": "ItemGreenPotion",
         "positionX": 6,
         "positionY": 1
       },
       {
-        "idLogic": "Blue Potion",
+        "idLogic": "ItemBluePotion",
         "positionX": 7,
         "positionY": 1
       },
       {
-        "idLogic": "Bottled Fairy",
+        "idLogic": "ItemBottledFairy",
         "positionX": 8,
         "positionY": 1
       },
       {
-        "idLogic": "Fish",
+        "idLogic": "ItemFish",
         "positionX": 9,
         "positionY": 1
       },
       {
-        "idLogic": "Lon Lon Milk & Bottle",
+        "idLogic": "ItemLonLonMilkBottle",
         "positionX": 10,
         "positionY": 1
       },
       {
-        "idLogic": "Ruto's Letter",
+        "idLogic": "ItemRutosLetter",
         "positionX": 11,
         "positionY": 1
       },
       {
-        "idLogic": "Blue Fire",
+        "idLogic": "ItemBlueFire",
         "positionX": 12,
         "positionY": 1
       },
       {
-        "idLogic": "Bug",
+        "idLogic": "ItemBug",
         "positionX": 13,
         "positionY": 1
       },
       {
-        "idLogic": "Big Poe",
+        "idLogic": "ItemBigPoe",
         "positionX": 14,
         "positionY": 1
       },
       {
-        "idLogic": "Lon Lon Milk (Half)",
+        "idLogic": "ItemLonLonMilkHalf",
         "positionX": 15,
         "positionY": 1
       },
       {
-        "idLogic": "Poe",
+        "idLogic": "ItemPoe",
         "positionX": 0,
         "positionY": 2
       }
     ]
   },
   {
-    "displayName": "Weird Egg",
+    "displayName": "Trading Item",
     "propertyName": "Weird_Egg",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemPocketEgg",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemPocketCucco",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemCojiro",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemOddMushroom",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemOddPotion",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemPoacherSaw",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemBrokenGoronSword",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemPrescription",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemEyeballFrog",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemWorldFinestEyeDrops",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemClaimCheck",
         "positionX": 1,
         "positionY": 2
       }
     ]
   },
   {
-    "displayName": "Weird Egg 2",
-    "propertyName": "Weird_Egg_2",
+    "displayName": "Mask Quest",
+    "propertyName": "Mask_Quest",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemKeatonMask",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemSkullMask",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemSpookyMask",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemBunnyHood",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemMaskOfTruth",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemGoronMask",
+        "positionX": 1,
+        "positionY": 2
+      },
+      {
+        "idLogic": "ItemZoraMask",
+        "positionX": 1,
+        "positionY": 2
+      },
+
+      {
+        "idLogic": "ItemGerudoMask",
         "positionX": 1,
         "positionY": 2
       }
@@ -518,7 +604,7 @@
     "propertyName": "Kokiri_Sword",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemKokiriSword",
         "positionX": 12,
         "positionY": 3
       }
@@ -529,7 +615,7 @@
     "propertyName": "Master_Sword",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemMasterSword",
         "positionX": 13,
         "positionY": 3
       }
@@ -540,7 +626,12 @@
     "propertyName": "Giant_Knife_Biggoron_Sword",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemGiantKnife",
+        "positionX": 13,
+        "positionY": 3
+      },
+      {
+        "idLogic": "ItemBiggoronSword",
         "positionX": 13,
         "positionY": 3
       }
@@ -551,7 +642,7 @@
     "propertyName": "Stone_of_Agony",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemStoneOfAgony",
         "positionX": 15,
         "positionY": 6
       }
@@ -562,7 +653,7 @@
     "propertyName": "Gerudo_Card",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "GerudoCard",
         "positionX": 0,
         "positionY": 7
       }
@@ -573,7 +664,32 @@
     "propertyName": "Gold_Skulltula",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "Item10Skultula",
+        "positionX": 1,
+        "positionY": 7
+      },
+      {
+        "idLogic": "Item20Skultula",
+        "positionX": 1,
+        "positionY": 7
+      },
+      {
+        "idLogic": "Item30Skultula",
+        "positionX": 1,
+        "positionY": 7
+      },
+      {
+        "idLogic": "Item40Skultula",
+        "positionX": 1,
+        "positionY": 7
+      },
+      {
+        "idLogic": "Item50Skultula",
+        "positionX": 1,
+        "positionY": 7
+      },
+      {
+        "idLogic": "Item100Skultula",
         "positionX": 1,
         "positionY": 7
       }
@@ -584,7 +700,7 @@
     "propertyName": "Deku_Shield",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemDekuShield",
         "positionX": 14,
         "positionY": 3
       }
@@ -595,7 +711,7 @@
     "propertyName": "Hylian_Shield",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "HylianShield",
         "positionX": 15,
         "positionY": 3
       }
@@ -606,7 +722,7 @@
     "propertyName": "Mirror_Shield",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "MirrorShield",
         "positionX": 0,
         "positionY": 4
       }
@@ -617,33 +733,33 @@
     "propertyName": "Goron_Bracelet",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemGoronBracelet",
         "positionX": 0,
         "positionY": 5
       },
       {
-        "idLogic": null,
+        "idLogic": "ItemSilverGauntlets",
         "positionX": 1,
         "positionY": 5
       },
       {
-        "idLogic": null,
+        "idLogic": "ItemGoldGauntlets",
         "positionX": 2,
         "positionY": 5
       }
     ]
   },
   {
-    "displayName": "Silver Scale",
-    "propertyName": "Silver_Scale",
+    "displayName": "Scale",
+    "propertyName": "Scale",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemSilverScale",
         "positionX": 3,
         "positionY": 5
       },
       {
-        "idLogic": null,
+        "idLogic": "ItemGoldenScale",
         "positionX": 4,
         "positionY": 5
       }
@@ -654,12 +770,17 @@
     "propertyName": "Wallet",
     "variants": [
       {
-        "idLogic": "Adult's Wallet",
+        "idLogic": "ItemDefaultWallet",
         "positionX": 6,
         "positionY": 5
       },
       {
-        "idLogic": "Giant's Wallet",
+        "idLogic": "ItemAdultWallet",
+        "positionX": 6,
+        "positionY": 5
+      },
+      {
+        "idLogic": "ItemGiantWallet",
         "positionX": 7,
         "positionY": 5
       }
@@ -670,7 +791,7 @@
     "propertyName": "Kokiri_Tunic",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemKokiriTunic",
         "positionX": 1,
         "positionY": 4
       }
@@ -681,7 +802,7 @@
     "propertyName": "Goron_Tunic",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemGoronTunic",
         "positionX": 2,
         "positionY": 4
       }
@@ -692,7 +813,7 @@
     "propertyName": "Zora_Tunic",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemZoraTunic",
         "positionX": 3,
         "positionY": 4
       }
@@ -703,7 +824,7 @@
     "propertyName": "Heart_Container",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemHeartContainer",
         "positionX": 2,
         "positionY": 7
       }
@@ -714,12 +835,12 @@
     "propertyName": "Magic",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemHalfMagic",
         "positionX": 8,
         "positionY": 7
       },
       {
-        "idLogic": null,
+        "idLogic": "ItemFullMagic",
         "positionX": 9,
         "positionY": 7
       }
@@ -730,7 +851,7 @@
     "propertyName": "Kokiri_Boots",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemKokiriBoots",
         "positionX": 4,
         "positionY": 4
       }
@@ -741,7 +862,7 @@
     "propertyName": "Iron_Boots",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemIronBoots",
         "positionX": 5,
         "positionY": 4
       }
@@ -752,7 +873,7 @@
     "propertyName": "Hover_Boots",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemHoverBoots",
         "positionX": 6,
         "positionY": 4
       }
@@ -763,7 +884,7 @@
     "propertyName": "Kokiri_Emerald",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemKokiriEmerald",
         "positionX": 12,
         "positionY": 6
       }
@@ -774,7 +895,7 @@
     "propertyName": "Goron_Ruby",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemGoronRuby",
         "positionX": 13,
         "positionY": 6
       }
@@ -785,7 +906,7 @@
     "propertyName": "Zora_Sapphire",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemZoraSapphire",
         "positionX": 14,
         "positionY": 6
       }
@@ -796,7 +917,7 @@
     "propertyName": "Forest_Medallion",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemForestMedallion",
         "positionX": 6,
         "positionY": 6
       }
@@ -807,7 +928,7 @@
     "propertyName": "Fire_Medallion",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemFireMedallion",
         "positionX": 7,
         "positionY": 6
       }
@@ -818,7 +939,7 @@
     "propertyName": "Water_Medallion",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemWaterMedallion",
         "positionX": 8,
         "positionY": 6
       }
@@ -829,7 +950,7 @@
     "propertyName": "Spirit_Medallion",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemSpiritMedallion",
         "positionX": 9,
         "positionY": 6
       }
@@ -840,7 +961,7 @@
     "propertyName": "Shadow_Medallion",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemShadowMedallion",
         "positionX": 10,
         "positionY": 6
       }
@@ -851,7 +972,7 @@
     "propertyName": "Light_Medallion",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemLightMedallion",
         "positionX": 11,
         "positionY": 6
       }
@@ -862,7 +983,7 @@
     "propertyName": "Minuet_of_Forest",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemMinuetOfForest",
         "positionX": 6,
         "positionY": 11
       }
@@ -873,7 +994,7 @@
     "propertyName": "Bolero_of_Fire",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemBoleroOfFire",
         "positionX": 7,
         "positionY": 11
       }
@@ -884,7 +1005,7 @@
     "propertyName": "Serenade_of_Water",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemSerenadeOfWater",
         "positionX": 8,
         "positionY": 11
       }
@@ -895,7 +1016,7 @@
     "propertyName": "Requiem_of_Spirit",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemRequiemOfSpirit",
         "positionX": 9,
         "positionY": 11
       }
@@ -906,7 +1027,7 @@
     "propertyName": "Nocturne_of_Shadow",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemNocturneOfShadow",
         "positionX": 10,
         "positionY": 11
       }
@@ -917,7 +1038,7 @@
     "propertyName": "Prelude_of_Light",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemPreludeOfLight",
         "positionX": 11,
         "positionY": 11
       }
@@ -928,7 +1049,7 @@
     "propertyName": "Zelda_Lullaby",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemZeldaLullaby",
         "positionX": 0,
         "positionY": 11
       }
@@ -939,7 +1060,7 @@
     "propertyName": "Epona_Song",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemEponaSong",
         "positionX": 1,
         "positionY": 11
       }
@@ -950,7 +1071,7 @@
     "propertyName": "Saria_Song",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemSariaSong",
         "positionX": 2,
         "positionY": 11
       }
@@ -961,7 +1082,7 @@
     "propertyName": "Sun_Song",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemSunSong",
         "positionX": 3,
         "positionY": 11
       }
@@ -972,7 +1093,7 @@
     "propertyName": "Song_of_Time",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemSongOfTime",
         "positionX": 4,
         "positionY": 11
       }
@@ -983,7 +1104,7 @@
     "propertyName": "Song_of_Storms",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemSongOfStorms",
         "positionX": 5,
         "positionY": 11
       }
