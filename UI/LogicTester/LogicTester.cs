@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.Model;
+﻿using MajoraAutoItemTracker.Logic;
+using MajoraAutoItemTracker.Model;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
@@ -14,7 +15,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
     public partial class LogicTester : Form
     {
         private LogicFile<MajoraMaskJsonFormatLogicItem> _logicFile;
-        private List<OcarinaOfTimeCheckLogic> _checkLogics;
+        private List<MajoraMaskCheckLogic> _checkLogics;
         private List<ItemLogic> _itemLogics;
 
         public LogicTester()
@@ -44,7 +45,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
         {
             try
             {
-                _checkLogics = OcarinaOfTimeCheckLogic.Deserialize(GetPathOfJson());
+                _checkLogics = MajoraMaskCheckLogic.Deserialize(GetPathOfJson());
                 Log($"check file loaded: ({_checkLogics.Count} check)");
             }
             catch (Exception exception)
@@ -114,7 +115,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
                 Log("item logic is null");
                 return;
             }
-            LogicResolver logicResolver = new LogicResolver(_logicFile);
+            MajoraMaskLogicResolver logicResolver = new MajoraMaskLogicResolver(_logicFile);
             logicResolver.UpdateCheckForItem(_itemLogics, _checkLogics, chkAllowTrick.Checked);
             _checkLogics.ForEach(x => Log($"check: {x.Id}; IsAvailable={x.IsAvailable}"));
         }
@@ -166,10 +167,10 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             List<ItemLogic> itemLogicList = new List<ItemLogic>() { itemLogicZoraMask };
 
             // Sample check            
-            List<OcarinaOfTimeCheckLogic> checkLogicList = new List<OcarinaOfTimeCheckLogic>() { checkUnderWaterChest };
+            List<MajoraMaskCheckLogic> checkLogicList = new List<MajoraMaskCheckLogic>() { checkUnderWaterChest };
 
             // Try to resolve
-            LogicResolver logicResolver = new LogicResolver(logicFile) { debugMode = true };
+            MajoraMaskLogicResolver logicResolver = new MajoraMaskLogicResolver(logicFile) { debugMode = true };
             // TEST 1
             itemLogicZoraMask.hasItem = false;
             logicResolver.UpdateCheckForItem(itemLogicList, checkLogicList, true);
@@ -216,13 +217,13 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             };
 
             // Sample check            
-            List<OcarinaOfTimeCheckLogic> checkLogicList = new List<OcarinaOfTimeCheckLogic>()
+            List<MajoraMaskCheckLogic> checkLogicList = new List<MajoraMaskCheckLogic>()
             {
                 checkUnderWaterChest
             };
 
             // Try to resolve
-            LogicResolver logicResolver = new LogicResolver(logicFile)
+            MajoraMaskLogicResolver logicResolver = new MajoraMaskLogicResolver(logicFile)
             {
                 debugMode = true
             };
@@ -295,13 +296,13 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             };
 
             // Sample check            
-            List<OcarinaOfTimeCheckLogic> checkLogicList = new List<OcarinaOfTimeCheckLogic>()
+            List<MajoraMaskCheckLogic> checkLogicList = new List<MajoraMaskCheckLogic>()
             {
                 checkUnderWaterChest
             };
 
             // Try to resolve
-            LogicResolver logicResolver = new LogicResolver(logicFile)
+            MajoraMaskLogicResolver logicResolver = new MajoraMaskLogicResolver(logicFile)
             {
                 debugMode = true
             };
@@ -387,9 +388,9 @@ class LogicTesterHelper // class helper to create logic file from logic and chec
         };
     }
 
-    public static OcarinaOfTimeCheckLogic QuickCreateCheckLogic(string id)
+    public static MajoraMaskCheckLogic QuickCreateCheckLogic(string id)
     {
-        return new OcarinaOfTimeCheckLogic()
+        return new MajoraMaskCheckLogic()
         {
             Id = id,
             IsAvailable = false,

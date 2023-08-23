@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker.Model.Logic.OOT
 {
-    class OcarinaOfTimeJsonFormatLogicItem
+    public class OcarinaOfTimeJsonFormatLogicItem : AbstractsonFormatLogicItem
     {
-        public String Id { get; set; }
-        public List<String> RequiredItems { get; set; } = new List<string>();
-        public List<List<string>> ConditionalItems { get; set; } = new List<List<string>>();
-        public bool IsTrick { get; set; }
+        public override String Id { get; set; }
+        public override List<String> RequiredItems { get; set; } = new List<string>();
+        public override List<List<string>> ConditionalItems { get; set; } = new List<List<string>>();
+        public override bool IsTrick { get; set; }
     }
 }

@@ -97,7 +97,7 @@
     "propertyName": "Bombchu",
     "variants": [
       {
-        "idLogic": "ItemBombBag",
+        "idLogic": "ItemBombchu",
         "positionX": 9,
         "positionY": 0
       }

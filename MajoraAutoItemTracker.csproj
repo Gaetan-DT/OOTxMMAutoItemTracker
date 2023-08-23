@@ -107,7 +107,8 @@
     <Compile Include="Emulator\EmulatorWrapperProvider.cs" />
     <Compile Include="Emulator\Project64\Project64Wrapper.cs" />
     <Compile Include="Emulator\Projetc64EM\Project64EMWrapper.cs" />
-    <Compile Include="Logic\MajoraMaskLogicResolver.cs" />
+    <Compile Include="Logic\AbstractLogicResolver.cs" />
+    <Compile Include="Logic\OcarinaOfTimeLogicResolver.cs" />
     <Compile Include="MemoryReader\MemoryData\AbstractMemoryData.cs" />
     <Compile Include="MemoryReader\MemoryData\OcarinaOfTimeMemoryData.cs" />
     <Compile Include="MemoryReader\MemoryListener\AbstractMemoryListener.cs" />
@@ -143,8 +144,9 @@
     <Compile Include="Model\Item\ItemLogic.cs" />
     <Compile Include="Model\Item\ItemLogicMethod.cs" />
     <Compile Include="Model\Item\ItemLogicVariant.cs" />
+    <Compile Include="Model\Logic\AbstractsonFormatLogicItem.cs" />
     <Compile Include="Model\Logic\MM\MajoraMaskJsonFormatLogicItem.cs" />
-    <Compile Include="Logic\OcarinaOfTimeLogicResolver.cs" />
+    <Compile Include="Logic\MajoraMaskLogicResolver.cs" />
     <Compile Include="Model\Logic\LogicFile.cs" />
     <Compile Include="Model\Logic\OOT\OcarinaOfTimeJsonFormatLogicItem.cs" />
     <Compile Include="Model\Logic\TimeOfDay.cs" />

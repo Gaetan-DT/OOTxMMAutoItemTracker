@@ -1,28 +1,30 @@
 ﻿using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
-using MajoraAutoItemTracker.Model.Logic.MM;
+using MajoraAutoItemTracker.Model.Logic.OOT;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Reactive.Subjects;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker.Logic
 {
-    class OcarinaOfTimeLogicResolver
+    class OcarinaOfTimeLogicResolver : AbstractLogicResolver
     {
-        private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, MajoraMaskJsonFormatLogicItem>();
-        public Subject<MajoraMaskCheckLogic> OnCheckUpdate { get; } = new Subject<MajoraMaskCheckLogic>();
+        protected readonly Dictionary<string, OcarinaOfTimeJsonFormatLogicItem> _logicDictionary = new Dictionary<string, OcarinaOfTimeJsonFormatLogicItem>();
 
-        public bool debugMode = false;
-        private int indentDebug = 0;
+        public Subject<OcarinaOfTimeCheckLogic> OnCheckUpdate { get; } = new Subject<OcarinaOfTimeCheckLogic>();
 
-        public OcarinaOfTimeLogicResolver(LogicFile<MajoraMaskJsonFormatLogicItem> logicFile)
+        public OcarinaOfTimeLogicResolver(LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile)
         {
             foreach (var logic in logicFile.Logic)
                 _logicDictionary.Add(logic.Id, logic);
         }
 
-        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<MajoraMaskCheckLogic> checkLogicList, bool allowTrick)
+        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<OcarinaOfTimeCheckLogic> checkLogicList, bool allowTrick)
         {
             WriteToDebug("-------- UpdateCheckForItem called ---------");
             // We receive a new list of item, we will see if we can update every check available
@@ -33,10 +35,10 @@ namespace MajoraAutoItemTracker.Logic
 
         private void UpdateCheckAvailable(
             Dictionary<string, ItemLogic> dicItemLogic,
-            MajoraMaskCheckLogic checkLogic, 
+            OcarinaOfTimeCheckLogic checkLogic,
             bool allowTrick)
         {
-            var jsonLogicItem = FindLogic(checkLogic.Id);
+            var jsonLogicItem = FindLogic(_logicDictionary, checkLogic.Id);
             if (jsonLogicItem == null)
                 return;
             var isItemLogicCanBeValidated = IsItemLogicCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, new HashSet<string>());
@@ -48,8 +50,8 @@ namespace MajoraAutoItemTracker.Logic
         }
 
         private bool IsItemLogicCanBeValidated(
-            MajoraMaskJsonFormatLogicItem jsonLogicItem, 
-            Dictionary<string, ItemLogic> dicItemLogic, 
+            OcarinaOfTimeJsonFormatLogicItem jsonLogicItem,
+            Dictionary<string, ItemLogic> dicItemLogic,
             bool allowTrick,
             HashSet<string> recursivityCheck)
         {
@@ -73,24 +75,24 @@ namespace MajoraAutoItemTracker.Logic
                 WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH {isItemLogicClaim} (item with claim check performed)", true);
                 return isItemLogicClaim;
             }
-                
+
             // Check if we have the require condition
             if (!IsRequireItemCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, currentRecursivityCheck))
             {
                 WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (require item cannot be validated)", true);
                 return false;
-            }                
+            }
             // Check if we have any conditional item
             if (!IsAnyConditionalItemsCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, currentRecursivityCheck))
             {
                 WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (conditional item cannot be validated)", true);
                 return false;
-            }                
+            }
             WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH TRUE (logic without condition and not an item)", true);
             return true;
         }
 
-        private bool IsAnItemLogic(MajoraMaskJsonFormatLogicItem jsonLogicItem, Dictionary<string, ItemLogic> dicItemLogic, out bool isItemClaim)
+        private bool IsAnItemLogic(OcarinaOfTimeJsonFormatLogicItem jsonLogicItem, Dictionary<string, ItemLogic> dicItemLogic, out bool isItemClaim)
         {
             // Check if it a item and get the itemLogic
             if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic itemLogic))
@@ -106,7 +108,7 @@ namespace MajoraAutoItemTracker.Logic
         }
 
         private bool IsRequireItemCanBeValidated(
-            MajoraMaskJsonFormatLogicItem jsonLogicItem, 
+            OcarinaOfTimeJsonFormatLogicItem jsonLogicItem,
             Dictionary<string, ItemLogic> dicItemLogic,
             bool allowTrick,
             HashSet<string> recursivityCheck)
@@ -117,7 +119,7 @@ namespace MajoraAutoItemTracker.Logic
                 return true;
             foreach (var requireItemId in jsonLogicItem.RequiredItems)
             {
-                var requireItem = FindLogic(requireItemId);
+                var requireItem = FindLogic(_logicDictionary, requireItemId);
                 if (requireItem == null)
                     throw new System.Exception($"itemId did not exitst: {requireItemId}");
                 if (!IsItemLogicCanBeValidated(requireItem, dicItemLogic, allowTrick, recursivityCheck))
@@ -127,7 +129,7 @@ namespace MajoraAutoItemTracker.Logic
         }
 
         private bool IsAnyConditionalItemsCanBeValidated(
-            MajoraMaskJsonFormatLogicItem jsonLogicItem, 
+            OcarinaOfTimeJsonFormatLogicItem jsonLogicItem,
             Dictionary<string, ItemLogic> dicItemLogic,
             bool allowTrick,
             HashSet<string> recursivityCheck)
@@ -141,7 +143,7 @@ namespace MajoraAutoItemTracker.Logic
                 bool isConditionalItemValid = true;
                 foreach (var conditionalItemId in conditionalItemList)
                 {
-                    var conditionalItem = FindLogic(conditionalItemId);
+                    var conditionalItem = FindLogic(_logicDictionary, conditionalItemId);
                     if (conditionalItem == null)
                         throw new System.Exception($"itemId did not exitst: {conditionalItemId}");
                     isConditionalItemValid = IsItemLogicCanBeValidated(conditionalItem, dicItemLogic, allowTrick, recursivityCheck);
@@ -153,52 +155,5 @@ namespace MajoraAutoItemTracker.Logic
             }
             return false;
         }
-
-        #region Utilities
-
-        private MajoraMaskJsonFormatLogicItem FindLogic(string logicIdStr)
-        {
-            if (!_logicDictionary.TryGetValue(logicIdStr, out MajoraMaskJsonFormatLogicItem jsonLogicItem))
-            {
-                Debug.WriteLine("Unable to find logic for check: " + logicIdStr);
-                return null;
-            }
-            return jsonLogicItem;
-        }
-
-        private Dictionary<string, ItemLogic> ToDictionaryItemLogicList(List<ItemLogic> itemLogicList)
-        {
-            Dictionary<string, ItemLogic> dicItemLogic = new Dictionary<string, ItemLogic>();
-            foreach (var itemLogic in itemLogicList)
-                foreach (var itemLogicVariant in itemLogic.variants)
-                    dicItemLogic.Add(itemLogicVariant.idLogic, itemLogic);
-            return dicItemLogic;
-        }
-
-        private void WriteToDebug(string message, bool endOfFunction)
-        {
-            if (endOfFunction)
-            {
-                indentDebug--;
-                WriteToDebug(message);
-            }
-            else
-            {
-                WriteToDebug(message);
-                indentDebug++;
-            }
-                
-        }
-
-        private void WriteToDebug(string message)
-        {
-            string intentStr = "";
-            for (int i = 0; i < indentDebug; i++)
-                intentStr += "\t";
-            if (debugMode)
-                Debug.WriteLine(intentStr + message);
-        }
-
-        #endregion
     }
 }

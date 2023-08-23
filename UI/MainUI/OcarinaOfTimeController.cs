@@ -1,7 +1,10 @@
-﻿using MajoraAutoItemTracker.Model.CheckLogic;
+﻿using MajoraAutoItemTracker.Logic;
+using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.Item;
+using MajoraAutoItemTracker.Model.Logic;
+using MajoraAutoItemTracker.Model.Logic.OOT;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,8 +20,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
     {
         const string ITEM_SPRITE_MONO_PATH = @"\Resource\Itemicons\oot_items_mono.png";
         const string ITEM_SPRITE_COLOR_PATH = @"\Resource\Itemicons\oot_items.png";
-        const string ITEM_LOGIC_FILE_NAME = @"\Resource\Mappings\" + ItemLogicMethod.CST_OOT_FILE_NAME;
+        const string ITEM_POSITION_MAPING_NAME = @"\Resource\Mappings\" + ItemLogicMethod.CST_OOT_FILE_NAME;
         const string ITEM_CHECK_LOGIC_CATEGORY_PATH = @"\Resource\CheckLogic\" + OcarinaOfTimeCheckLogicCategory.CST_DEFAULT_FILE_NAME;
+        const string ITEM_LOGIC_FILE_NAME = LogicFile<object>.CST_REQ_CASUAL_PATH + LogicFile<object>.CST_OOT_REQ_FILE_NAME;
+
+        private LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile;
+        public OcarinaOfTimeLogicResolver logicResolver;
 
         public List<ItemLogic> itemLogics;
         public List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories;
@@ -40,9 +47,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 itemSpriteMono = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_MONO_PATH));
                 itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
                 // Init json
-                itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_LOGIC_FILE_NAME);
+                itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_POSITION_MAPING_NAME);
                 checkLogicCategories = OcarinaOfTimeCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH);
                 checkLogics = OcarinaOfTimeCheckLogic.FromHeader(checkLogicCategories);
+                logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME);
+                // Init Logic resolver
+                logicResolver = new OcarinaOfTimeLogicResolver(logicFile);
+                logicResolver.OnCheckUpdate.Subscribe();
                 return true;
             }
             catch (Exception e)
@@ -79,10 +90,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
                         break;
                     }
                 }
+                // TODO: gerer les différent cas pour les enum
             }
-            // TODO: gerer les différent cas pour les enum
-            pictureBoxItemList.Refresh();
             // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
+            logicResolver.UpdateCheckForItem(itemLogics, checkLogics, false);
+            pictureBoxItemList.Refresh();
         }
 
         public override void DrawSquareCategory(PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBox, int rectWidthAndHeight)

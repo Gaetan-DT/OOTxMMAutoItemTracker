@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 
 namespace MajoraAutoItemTracker.Model.Logic.MM
 {
-    public class MajoraMaskJsonFormatLogicItem
+    public class MajoraMaskJsonFormatLogicItem : AbstractsonFormatLogicItem
     {
-        public String Id { get; set; }
-        public List<String> RequiredItems { get; set; } = new List<string>();
-        public List<List<string>> ConditionalItems { get; set; } = new List<List<string>>();        
+        public override String Id { get; set; }
+        public override List<String> RequiredItems { get; set; } = new List<string>();
+        public override List<List<string>> ConditionalItems { get; set; } = new List<List<string>>();        
         public TimeOfDay TimeNeeded { get; set; }
         public TimeOfDay TimeAvailable { get; set; }
         public TimeOfDay TimeSetup { get; set; }
-        public bool IsTrick { get; set; }
+        public override bool IsTrick { get; set; }
         public String TrickTooltip { get; set; }
         public String TrickCategory { get; set; }
     }
