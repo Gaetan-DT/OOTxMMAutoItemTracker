@@ -1,21 +1,22 @@
-﻿using MajoraAutoItemTracker.Model.Item;
+﻿using MajoraAutoItemTracker.Model.CheckLogic;
+using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
 using MajoraAutoItemTracker.Model.Logic.MM;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reactive.Subjects;
 
-namespace MajoraAutoItemTracker.Model
+namespace MajoraAutoItemTracker.Logic
 {
-    class LogicResolver
+    class OcarinaOfTimeLogicResolver
     {
-        private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, Logic.MM.MajoraMaskJsonFormatLogicItem>();
-        public Subject<CheckLogic.OcarinaOfTimeCheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.OcarinaOfTimeCheckLogic>();
+        private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, MajoraMaskJsonFormatLogicItem>();
+        public Subject<MajoraMaskCheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.OcarinaOfTimeCheckLogic>();
 
         public bool debugMode = false;
         private int indentDebug = 0;
 
-        public LogicResolver(LogicFile<MajoraMaskJsonFormatLogicItem> logicFile)
+        public OcarinaOfTimeLogicResolver(LogicFile<MajoraMaskJsonFormatLogicItem> logicFile)
         {
             foreach (var logic in logicFile.Logic)
                 _logicDictionary.Add(logic.Id, logic);

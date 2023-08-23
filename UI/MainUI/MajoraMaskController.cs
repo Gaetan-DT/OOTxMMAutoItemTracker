@@ -73,35 +73,38 @@ namespace MajoraAutoItemTracker.UI.MainUI
         }
 
         // Call when change is trigger from memory
-        public void OnItemLogicChange(Tuple<MajoraMaskItemLogicPopertyName, object> itemLogicProperty)
+        public void OnItemLogicChange(List<Tuple<MajoraMaskItemLogicPopertyName, object>> listItemLogicProperty)
         {
-            foreach (var itemLogic in itemLogics)
+            foreach (var itemLogicProperty in listItemLogicProperty)
             {
-                if (itemLogic.propertyName == null || itemLogic.propertyName == "")
-                    continue;
-                else if (itemLogicProperty.Item1 == MajoraMaskItemLogicPopertyNameMethod.FromString(itemLogic.propertyName))
+                foreach (var itemLogic in itemLogics)
                 {
-                    if (itemLogicProperty.Item2 is bool)
+                    if (itemLogic.propertyName == null || itemLogic.propertyName == "")
+                        continue;
+                    else if (itemLogicProperty.Item1 == MajoraMaskItemLogicPopertyNameMethod.FromString(itemLogic.propertyName))
                     {
-                        itemLogic.hasItem = (bool)itemLogicProperty.Item2;
-                        itemLogic.CurrentVariant = 0;
+                        if (itemLogicProperty.Item2 is bool)
+                        {
+                            itemLogic.hasItem = (bool)itemLogicProperty.Item2;
+                            itemLogic.CurrentVariant = 0;
+                        }
+                        else if (itemLogicProperty.Item2 is EquipmentQuiver)
+                        {
+                            itemLogic.hasItem = (EquipmentQuiver)itemLogicProperty.Item2 != EquipmentQuiver.None;
+                            itemLogic.CurrentVariant = (int)itemLogicProperty.Item2;
+                        }
+                        else
+                        {
+                            itemLogic.hasItem = false;
+                            itemLogic.CurrentVariant = 0;
+                        }
+                        break;
                     }
-                    else if (itemLogicProperty.Item2 is EquipmentQuiver)
-                    {
-                        itemLogic.hasItem = (EquipmentQuiver)itemLogicProperty.Item2 != EquipmentQuiver.None;
-                        itemLogic.CurrentVariant = (int)itemLogicProperty.Item2;
-                    }
-                    else
-                    {
-                        itemLogic.hasItem = false;
-                        itemLogic.CurrentVariant = 0;
-                    }
-                    // TODO: gerer les différent cas pour les enum
-                    pictureBoxItemList.Refresh();
-                    // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
-                    break;
                 }
             }
+            // TODO: gerer les différent cas pour les enum
+            pictureBoxItemList.Refresh();
+            // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
         }
 
         public override void DrawAllItemList(object sender, PaintEventArgs e)

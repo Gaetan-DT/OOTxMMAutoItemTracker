@@ -1,4 +1,6 @@
-﻿using System.Threading;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
@@ -26,7 +28,7 @@ namespace MajoraAutoItemTracker.MemoryReader
             }       
         }
 
-        protected abstract void OnTick();
+        public abstract void OnTick();
 
         public void StartThread()
         {

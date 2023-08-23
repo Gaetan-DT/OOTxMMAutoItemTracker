@@ -5,6 +5,7 @@ using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Reactive.Subjects;
@@ -42,8 +43,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public bool StartMemoryListener(
             AbstractRomController emulatorWrapper,
             RomType romType,
-            Action<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> onOOTItemLogicChange,
-            Action<Tuple<MajoraMaskItemLogicPopertyName, object>> onMMItemLogicChange, 
+            Action<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> onOOTItemLogicChange,
+            Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> onMMItemLogicChange, 
             out string error)
         {
             error = "";

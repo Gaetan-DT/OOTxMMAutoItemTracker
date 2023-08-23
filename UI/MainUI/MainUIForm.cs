@@ -64,22 +64,22 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Log("Thread Stoped");
         }
 
-        private void OnOOTItemLogicChange(Tuple<OcarinaOfTimeItemLogicPopertyName, object> itemLogicProperty)
+        private void OnOOTItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> itemLogicProperty)
         {
             this.Invoke((MethodInvoker)delegate
             {
                 UpdateTabIfOOTxMM(tabOcarinaOfTime);
-                Log($"update for:{itemLogicProperty.Item1} with value: {itemLogicProperty.Item2}");
+                Log($"OOT: updated {itemLogicProperty.Count} value");
                 ocarinaOfTimeController.OnItemLogicChange(itemLogicProperty);
             });
         }
 
-        private void OnMMItemLogicChange(Tuple <MajoraMaskItemLogicPopertyName, object> itemLogicProperty)
+        private void OnMMItemLogicChange(List<Tuple <MajoraMaskItemLogicPopertyName, object>> itemLogicProperty)
         {
             this.Invoke((MethodInvoker)delegate
             {
                 UpdateTabIfOOTxMM(tabMajoraMask);
-                Log($"update for:{itemLogicProperty.Item1} with value: {itemLogicProperty.Item2}");
+                Log($"MM: updated {itemLogicProperty.Count} value");
                 majoraMaskController.OnItemLogicChange(itemLogicProperty);
             });
         }

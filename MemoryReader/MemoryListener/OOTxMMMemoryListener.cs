@@ -1,12 +1,8 @@
-﻿using MajoraAutoItemTracker.MemoryReader.MemoryData;
-using MajoraAutoItemTracker.MemoryReader.MemoryOffset;
-using MajoraAutoItemTracker.Model;
+﻿using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 {
@@ -16,34 +12,31 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 
         private CurrentRom lastCurrentRom = CurrentRom.OcarinaOfTIme; // Used to prevend reading wrong rom each time when in MM
 
-        private OcarinaOfTimeMemoryDataObserver ootMemoryDataObserver;
-        private MajoraMemoryDataObserver mmMemoryDataObserver;
-
-        private OcarinaOfTimeMemoryData previousOOTMemoryData;
-        private MajoraMemoryData previousMMMemoryData;
+        private OcarinaOfTimeMemoryListener ocarinaOfTimeMemoryListener;
+        private MajoraMaskMemoryListener majoraMaskMemoryListener;
 
         public OOTxMMMemoryListener(
-            AbstractRomController emulatorWrapper, 
-            OcarinaOfTimeMemoryDataObserver ootMemoryDataObserver,
-            MajoraMemoryDataObserver mmMemoryDataObserver)
+            AbstractRomController emulatorWrapper,
+            Action<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> callBackOOT,
+            Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> callBackMM)
             : base(emulatorWrapper)
         {
-            this.ootMemoryDataObserver = ootMemoryDataObserver;
-            this.mmMemoryDataObserver = mmMemoryDataObserver;
+            ocarinaOfTimeMemoryListener = new OcarinaOfTimeMemoryListener(emulatorWrapper, callBackOOT);
+            majoraMaskMemoryListener = new MajoraMaskMemoryListener(emulatorWrapper, callBackMM);
         }
 
-        protected override void OnTick()
+        public override void OnTick()
         {
             var currentRom = CheckCurrentRom();
             switch (currentRom)
             {
                 case CurrentRom.OcarinaOfTIme:
                     Debug.WriteLine("Tick on OOT ROM");
-                    OnOOTTick();
+                    ocarinaOfTimeMemoryListener.OnTick();
                     break;
                 case CurrentRom.MajoraMask:
                     Debug.WriteLine("Tick on MM ROM");
-                    OnMMTick();
+                    majoraMaskMemoryListener.OnTick();
                     break;
                 case CurrentRom.Unknown:
                     Debug.WriteLine("Unknown current ROM");
@@ -63,22 +56,6 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
                 else if (roomToCheck == CurrentRom.MajoraMask && emulatorWrapper.PerformCheckFollowingRomType(Model.Enum.RomType.MAJORA_MASK_USA_V0))
                     return CurrentRom.MajoraMask;
             return CurrentRom.Unknown;
-        }
-
-        private void OnOOTTick()
-        {
-            var newMemoryData = new OcarinaOfTimeMemoryData();
-            newMemoryData.ReadDataFromEmulator(emulatorWrapper);
-            ootMemoryDataObserver.CompareAndUpdateAllField(previousOOTMemoryData, newMemoryData);
-            previousOOTMemoryData = newMemoryData;
-        }
-
-        private void OnMMTick()
-        {
-            var newMemoryData = new MajoraMemoryData();
-            newMemoryData.ReadDataFromEmulator(emulatorWrapper);
-            mmMemoryDataObserver.CompareAndUpdateAllField(previousMMMemoryData, newMemoryData);
-            previousMMMemoryData = newMemoryData;
         }
     }
 }

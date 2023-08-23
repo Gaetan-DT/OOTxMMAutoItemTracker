@@ -62,24 +62,27 @@ namespace MajoraAutoItemTracker.UI.MainUI
         }
 
         // Call when change is trigger from memory
-        public void OnItemLogicChange(Tuple<OcarinaOfTimeItemLogicPopertyName, object> itemLogicProperty)
+        public void OnItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> listItemLogicProperty)
         {
-            var strItemLogicPropertyName = OcarinaOfTimeItemLogicPopertyNameMethod.ToString(itemLogicProperty.Item1);
-            foreach (var itemLogic in itemLogics)
+            foreach(var itemLogicProperty in listItemLogicProperty)
             {
-                if (strItemLogicPropertyName == itemLogic.propertyName)
+                var strItemLogicPropertyName = OcarinaOfTimeItemLogicPopertyNameMethod.ToString(itemLogicProperty.Item1);
+                foreach (var itemLogic in itemLogics)
                 {
-                    if (itemLogicProperty.Item2 is bool)
+                    if (strItemLogicPropertyName == itemLogic.propertyName)
                     {
-                        itemLogic.hasItem = (bool)itemLogicProperty.Item2;
-                        itemLogic.CurrentVariant = 0;
+                        if (itemLogicProperty.Item2 is bool)
+                        {
+                            itemLogic.hasItem = (bool)itemLogicProperty.Item2;
+                            itemLogic.CurrentVariant = 0;
+                        }
+                        break;
                     }
-                    // TODO: gerer les différent cas pour les enum
-                    pictureBoxItemList.Refresh();
-                    // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
-                    break;
                 }
             }
+            // TODO: gerer les différent cas pour les enum
+            pictureBoxItemList.Refresh();
+            // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
         }
 
         public override void DrawSquareCategory(PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBox, int rectWidthAndHeight)

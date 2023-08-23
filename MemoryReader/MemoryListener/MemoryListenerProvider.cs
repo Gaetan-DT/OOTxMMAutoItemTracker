@@ -1,8 +1,7 @@
-﻿using MajoraAutoItemTracker.MemoryReader.MemoryData;
-using MajoraAutoItemTracker.Model.Enum;
+﻿using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
-using System.Reactive.Subjects;
+using System.Collections.Generic;
 
 namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 {
@@ -10,25 +9,18 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
     {
         public static AbstractMemoryListener ProvideMemoryListener(
             AbstractRomController emulatorWrapper,
-            Action<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> ootReplaySubject,
-            Action<Tuple<MajoraMaskItemLogicPopertyName, object>> mmReplaySubject,
+            Action<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> ootReplaySubject,
+            Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> mmReplaySubject,
             RomType romType)
         {
-            
-            var ootObserver = new OcarinaOfTimeMemoryDataObserver();
-            var mmObserver = new MajoraMemoryDataObserver();
             switch (romType)
             {
                 case RomType.OCARINA_OF_TIME_USA_V0:
-                    ootObserver.BindAllEvent(ootReplaySubject);
-                    return new OcarinaOfTimeMemoryListener(emulatorWrapper, ootObserver);
+                    return new OcarinaOfTimeMemoryListener(emulatorWrapper, ootReplaySubject);
                 case RomType.MAJORA_MASK_USA_V0:
-                    mmObserver.BindAllEvent(mmReplaySubject);
-                    return new MajoraMaskMemoryListener(emulatorWrapper, mmObserver);
+                    return new MajoraMaskMemoryListener(emulatorWrapper, mmReplaySubject);
                 case RomType.RANDOMIZE_OOT_X_MM:
-                    ootObserver.BindAllEvent(ootReplaySubject);
-                    mmObserver.BindAllEvent(mmReplaySubject);
-                    return new OOTxMMMemoryListener(emulatorWrapper, ootObserver, mmObserver);
+                    return new OOTxMMMemoryListener(emulatorWrapper, ootReplaySubject, mmReplaySubject);
                 default:
                     throw new Exception($"Unknown rom type {romType}");
             }
