@@ -32,7 +32,8 @@ namespace MajoraAutoItemTracker.Logic
             Dictionary<string, ItemLogic> dicItemLogic = new Dictionary<string, ItemLogic>();
             foreach (var itemLogic in itemLogicList)
                 foreach (var itemLogicVariant in itemLogic.variants)
-                    dicItemLogic.Add(itemLogicVariant.idLogic, itemLogic);
+                    if (!dicItemLogic.ContainsKey(itemLogicVariant.idLogic)) // Can be duplicate ex:Bottle
+                        dicItemLogic.Add(itemLogicVariant.idLogic, itemLogic);
             return dicItemLogic;
         }
 

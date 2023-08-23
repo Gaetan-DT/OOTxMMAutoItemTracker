@@ -53,7 +53,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME);
                 // Init Logic resolver
                 logicResolver = new OcarinaOfTimeLogicResolver(logicFile);
-                logicResolver.OnCheckUpdate.Subscribe();
+                logicResolver.OnCheckUpdate.Subscribe((it) => Debug.WriteLine($"Updated check change for [{it.Id}], new value [{it.IsAvailable}]")); // Temp
                 return true;
             }
             catch (Exception e)
