@@ -11,7 +11,7 @@ namespace MajoraAutoItemTracker.Logic
     class OcarinaOfTimeLogicResolver
     {
         private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, MajoraMaskJsonFormatLogicItem>();
-        public Subject<MajoraMaskCheckLogic> OnCheckUpdate { get; } = new Subject<CheckLogic.OcarinaOfTimeCheckLogic>();
+        public Subject<MajoraMaskCheckLogic> OnCheckUpdate { get; } = new Subject<MajoraMaskCheckLogic>();
 
         public bool debugMode = false;
         private int indentDebug = 0;
@@ -22,7 +22,7 @@ namespace MajoraAutoItemTracker.Logic
                 _logicDictionary.Add(logic.Id, logic);
         }
 
-        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<CheckLogic.OcarinaOfTimeCheckLogic> checkLogicList, bool allowTrick)
+        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<MajoraMaskCheckLogic> checkLogicList, bool allowTrick)
         {
             WriteToDebug("-------- UpdateCheckForItem called ---------");
             // We receive a new list of item, we will see if we can update every check available
@@ -32,8 +32,8 @@ namespace MajoraAutoItemTracker.Logic
         }
 
         private void UpdateCheckAvailable(
-            Dictionary<string, ItemLogic> dicItemLogic, 
-            CheckLogic.OcarinaOfTimeCheckLogic checkLogic, 
+            Dictionary<string, ItemLogic> dicItemLogic,
+            MajoraMaskCheckLogic checkLogic, 
             bool allowTrick)
         {
             var jsonLogicItem = FindLogic(checkLogic.Id);
