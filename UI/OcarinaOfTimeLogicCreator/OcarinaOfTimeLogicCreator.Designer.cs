@@ -50,14 +50,16 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             this.buttonAddConditionalItemContent = new System.Windows.Forms.Button();
             this.buttonRemoveConditionalItemContent = new System.Windows.Forms.Button();
             this.panelItemList = new System.Windows.Forms.Panel();
+            this.buttonInsertMissingRegionCheck = new System.Windows.Forms.Button();
+            this.buttonSaveFile = new System.Windows.Forms.Button();
             this.panelLogicItem = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panelAvailableId = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.listBoxAvailableItemId = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.buttonSaveFile = new System.Windows.Forms.Button();
-            this.buttonInsertMissingRegionCheck = new System.Windows.Forms.Button();
+            this.textBoxSearchAvailableId = new System.Windows.Forms.TextBox();
+            this.textBoxSearchLogicItemList = new System.Windows.Forms.TextBox();
             this.panelItemList.SuspendLayout();
             this.panelLogicItem.SuspendLayout();
             this.panelAvailableId.SuspendLayout();
@@ -67,9 +69,9 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             // 
             this.listBoxLogicItemList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.listBoxLogicItemList.FormattingEnabled = true;
-            this.listBoxLogicItemList.Location = new System.Drawing.Point(3, 31);
+            this.listBoxLogicItemList.Location = new System.Drawing.Point(3, 57);
             this.listBoxLogicItemList.Name = "listBoxLogicItemList";
-            this.listBoxLogicItemList.Size = new System.Drawing.Size(392, 745);
+            this.listBoxLogicItemList.Size = new System.Drawing.Size(392, 719);
             this.listBoxLogicItemList.TabIndex = 0;
             // 
             // labelLogicItemList
@@ -242,6 +244,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             // 
             // panelItemList
             // 
+            this.panelItemList.Controls.Add(this.textBoxSearchLogicItemList);
             this.panelItemList.Controls.Add(this.buttonInsertMissingRegionCheck);
             this.panelItemList.Controls.Add(this.buttonSaveFile);
             this.panelItemList.Controls.Add(this.listBoxLogicItemList);
@@ -252,6 +255,24 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             this.panelItemList.Name = "panelItemList";
             this.panelItemList.Size = new System.Drawing.Size(398, 847);
             this.panelItemList.TabIndex = 21;
+            // 
+            // buttonInsertMissingRegionCheck
+            // 
+            this.buttonInsertMissingRegionCheck.Location = new System.Drawing.Point(0, 821);
+            this.buttonInsertMissingRegionCheck.Name = "buttonInsertMissingRegionCheck";
+            this.buttonInsertMissingRegionCheck.Size = new System.Drawing.Size(382, 23);
+            this.buttonInsertMissingRegionCheck.TabIndex = 5;
+            this.buttonInsertMissingRegionCheck.Text = "Insert missing region check";
+            this.buttonInsertMissingRegionCheck.UseVisualStyleBackColor = true;
+            // 
+            // buttonSaveFile
+            // 
+            this.buttonSaveFile.Location = new System.Drawing.Point(265, 782);
+            this.buttonSaveFile.Name = "buttonSaveFile";
+            this.buttonSaveFile.Size = new System.Drawing.Size(117, 23);
+            this.buttonSaveFile.TabIndex = 4;
+            this.buttonSaveFile.Text = "Save file";
+            this.buttonSaveFile.UseVisualStyleBackColor = true;
             // 
             // panelLogicItem
             // 
@@ -288,6 +309,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             // 
             // panelAvailableId
             // 
+            this.panelAvailableId.Controls.Add(this.textBoxSearchAvailableId);
             this.panelAvailableId.Controls.Add(this.button12);
             this.panelAvailableId.Controls.Add(this.listBoxAvailableItemId);
             this.panelAvailableId.Controls.Add(this.label7);
@@ -308,9 +330,9 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             // listBoxAvailableItemId
             // 
             this.listBoxAvailableItemId.FormattingEnabled = true;
-            this.listBoxAvailableItemId.Location = new System.Drawing.Point(6, 34);
+            this.listBoxAvailableItemId.Location = new System.Drawing.Point(6, 73);
             this.listBoxAvailableItemId.Name = "listBoxAvailableItemId";
-            this.listBoxAvailableItemId.Size = new System.Drawing.Size(392, 810);
+            this.listBoxAvailableItemId.Size = new System.Drawing.Size(392, 771);
             this.listBoxAvailableItemId.TabIndex = 6;
             // 
             // label7
@@ -322,23 +344,21 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             this.label7.TabIndex = 5;
             this.label7.Text = "Available Id";
             // 
-            // buttonSaveFile
+            // textBoxSearchAvailableId
             // 
-            this.buttonSaveFile.Location = new System.Drawing.Point(265, 782);
-            this.buttonSaveFile.Name = "buttonSaveFile";
-            this.buttonSaveFile.Size = new System.Drawing.Size(117, 23);
-            this.buttonSaveFile.TabIndex = 4;
-            this.buttonSaveFile.Text = "Save file";
-            this.buttonSaveFile.UseVisualStyleBackColor = true;
+            this.textBoxSearchAvailableId.Location = new System.Drawing.Point(3, 47);
+            this.textBoxSearchAvailableId.Name = "textBoxSearchAvailableId";
+            this.textBoxSearchAvailableId.Size = new System.Drawing.Size(395, 20);
+            this.textBoxSearchAvailableId.TabIndex = 16;
+            this.textBoxSearchAvailableId.TextChanged += new System.EventHandler(this.textBoxSearchAvailableId_TextChanged);
             // 
-            // buttonInsertMissingRegionCheck
+            // textBoxSearchLogicItemList
             // 
-            this.buttonInsertMissingRegionCheck.Location = new System.Drawing.Point(0, 821);
-            this.buttonInsertMissingRegionCheck.Name = "buttonInsertMissingRegionCheck";
-            this.buttonInsertMissingRegionCheck.Size = new System.Drawing.Size(382, 23);
-            this.buttonInsertMissingRegionCheck.TabIndex = 5;
-            this.buttonInsertMissingRegionCheck.Text = "Insert missing region check";
-            this.buttonInsertMissingRegionCheck.UseVisualStyleBackColor = true;
+            this.textBoxSearchLogicItemList.Location = new System.Drawing.Point(3, 29);
+            this.textBoxSearchLogicItemList.Name = "textBoxSearchLogicItemList";
+            this.textBoxSearchLogicItemList.Size = new System.Drawing.Size(392, 20);
+            this.textBoxSearchLogicItemList.TabIndex = 6;
+            this.textBoxSearchLogicItemList.TextChanged += new System.EventHandler(this.textBoxSearchLogicItemList_TextChanged);
             // 
             // OcarinaOfTimeLogicCreator
             // 
@@ -392,5 +412,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonSaveFile;
         private System.Windows.Forms.Button buttonInsertMissingRegionCheck;
+        private System.Windows.Forms.TextBox textBoxSearchLogicItemList;
+        private System.Windows.Forms.TextBox textBoxSearchAvailableId;
     }
 }

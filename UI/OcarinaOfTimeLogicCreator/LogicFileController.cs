@@ -81,7 +81,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         private void RefreshListIdAvailable()
         {
-            var finalList = finalLogicItemList.Select((it) => it.Key).Except(listCheck).ToList();
+            var finalList = finalLogicItemList.Select((it) => it.Key)/*.Except(listCheck)*/.ToList();
             foreach (var itemLogic in listItemLogic)
                 foreach (var itemLogicVariant in itemLogic.variants)
                 {

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -106,7 +107,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
                 if (e.Index >= 0)
                 {
                     var result = listBoxLogicItemConditionalItemList.Items[e.Index] as List<string>;
-                    message = $"Conditional no:{e.Index}, {result.Count} item";
+                    message = $"Conditional no:{e.Index}, {String.Join(", ", result)}";
                 }
                 DrawListBoxLineAndRect(e, listBoxLogicItemConditionalItemList, message);
             };
@@ -192,6 +193,22 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         {
             e.Graphics.FillRectangle(lb.SelectedIndex == e.Index ? Brushes.LightBlue : Brushes.White, e.Bounds);
             e.Graphics.DrawString(message, e.Font, Brushes.Black, e.Bounds, StringFormat.GenericDefault);
+        }
+
+        private void textBoxSearchLogicItemList_TextChanged(object sender, EventArgs e)
+        {
+            if (isRefreshing)
+                return;
+            var filteredList = logicFileController.logicItemListSubject.Value.Where((it) => it.Id.ToLower().Contains(textBoxSearchLogicItemList.Text.ToLower()));
+            ClearAndAddList(listBoxLogicItemList, filteredList.ToList());
+        }
+
+        private void textBoxSearchAvailableId_TextChanged(object sender, EventArgs e)
+        {
+            if (isRefreshing)
+                return;
+            var filteredList = logicFileController.selectedLogicIdSubject.Value.Where((it) => it.ToLower().Contains(textBoxSearchAvailableId.Text.ToLower()));
+            ClearAndAddList(listBoxAvailableItemId, filteredList.ToList());
         }
     }
 }
