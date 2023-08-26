@@ -105,6 +105,37 @@ namespace MajoraAutoItemTracker.UI.MainUI
             zoneGraphucsPathWithData.pathInnerText = availableCheck.ToString();
         }
 
+        public void RefreshRegionInDrawingFollowingCheck(OcarinaOfTimeCheckLogicZone zone)
+        {
+            bool isAllClaim = true;
+            bool isAllCheckAvailable = true;
+            bool isAtLeastOneCheckAvailable = false;
+            int availableCheck = 0;
+            foreach (var checkInZone in checkLogics.FindAll((it) => it.Zone == zone))
+            {
+                if (!checkInZone.IsClaim)
+                    isAllClaim = false;
+                if (checkInZone.IsAvailable && !checkInZone.IsClaim)
+                    availableCheck++;
+                if (!checkInZone.IsAvailable)
+                    isAllCheckAvailable = false;
+                else
+                    isAtLeastOneCheckAvailable = true;
+            }
+            Color color;
+            if (isAllClaim)
+                color = Color.Gray;
+            else if (isAllCheckAvailable)
+                color = Color.Green;
+            else if (isAtLeastOneCheckAvailable)
+                color = Color.Yellow;
+            else
+                color = Color.Red;
+            var zoneGraphucsPathWithData = pictureBoxZoomMoveController.GetGraphicsPathWithData(zone);
+            zoneGraphucsPathWithData.pathColor = color;
+            zoneGraphucsPathWithData.pathInnerText = availableCheck.ToString();
+        }
+
         public void RefreshCheckListForCategory(ListBox listbox, OcarinaOfTimeCheckLogicZone checkLogicZone)
         {   
             listbox.Items.Clear();
@@ -193,7 +224,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             var listBox = (ListBox)sender;
             var checkList = (OcarinaOfTimeCheckLogic)listBox.SelectedItem;
             checkList.IsClaim = !checkList.IsClaim;
+            RefreshRegionInDrawingFollowingCheck(checkList.Zone);
             listBox.Refresh();
+            pictureBoxZoomMoveController.RefreshDrawwing();
         }
 
         private Point GetPositionInDrawingOfItemLogicPropertyName(ItemLogic itemLogic)
