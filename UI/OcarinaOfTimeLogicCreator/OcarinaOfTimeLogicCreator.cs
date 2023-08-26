@@ -37,8 +37,15 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             controller.LoadLogic();
             labelLogicItemList.Text = $"Logic Item List (version {controller.logicFile.Version}):";
             logicFileController.InitWith(controller.logicFile);
-            logicFileController.selectedLogicIdSubject.Subscribe((it) => ClearAndAddList(listBoxAvailableItemId, it));
-            logicFileController.logicItemListSubject.Subscribe((it) => ClearAndAddList(listBoxLogicItemList, it));
+            logicFileController.selectedLogicIdSubject.Subscribe((it) => {
+                // Filter list
+                var filteredList = it?.Where((idSubject) => idSubject.ToLower().Contains(textBoxSearchAvailableId.Text.ToLower()));
+                ClearAndAddList(listBoxAvailableItemId, filteredList?.ToList());
+            });
+            logicFileController.logicItemListSubject.Subscribe((it) => {
+                var filteredList = it?.Where((listLogicItem) => listLogicItem.Id.ToLower().Contains(textBoxSearchLogicItemList.Text.ToLower()));
+                ClearAndAddList(listBoxLogicItemList, filteredList?.ToList()); 
+            });
             logicFileController.selectedLogicItemSubject.Subscribe(DisplayLogicItem);
             logicFileController.selectedLogicItemListRequireItemListSubject.Subscribe((it) => ClearAndAddList(listBoxLogicItemRequireItemList, it));
             logicFileController.selectedLogicItemListListConditionalItemListSubject.Subscribe((it) => ClearAndAddList(listBoxLogicItemConditionalItemList, it));
@@ -194,6 +201,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             e.Graphics.FillRectangle(lb.SelectedIndex == e.Index ? Brushes.LightBlue : Brushes.White, e.Bounds);
             e.Graphics.DrawString(message, e.Font, Brushes.Black, e.Bounds, StringFormat.GenericDefault);
         }
+
 
         private void textBoxSearchLogicItemList_TextChanged(object sender, EventArgs e)
         {
