@@ -16,37 +16,49 @@ namespace MajoraAutoItemTracker.Logic
     {
         protected readonly Dictionary<string, OcarinaOfTimeJsonFormatLogicItem> _logicDictionary = new Dictionary<string, OcarinaOfTimeJsonFormatLogicItem>();
 
-        public Subject<OcarinaOfTimeCheckLogic> OnCheckUpdate { get; } = new Subject<OcarinaOfTimeCheckLogic>();
-
         public OcarinaOfTimeLogicResolver(LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile)
         {
             foreach (var logic in logicFile.Logic)
                 _logicDictionary.Add(logic.Id, logic);
         }
 
-        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<OcarinaOfTimeCheckLogic> checkLogicList, bool allowTrick)
+        public List<OcarinaOfTimeCheckLogic> UpdateCheckAndReturnListOfUpdatedCheck(
+            List<ItemLogic> itemLogicList, 
+            List<OcarinaOfTimeCheckLogic> checkLogicList, 
+            bool allowTrick)
         {
             WriteToDebug("-------- UpdateCheckForItem called ---------");
+            List<OcarinaOfTimeCheckLogic> listOfUpdatedCheck = new List<OcarinaOfTimeCheckLogic>();
             // We receive a new list of item, we will see if we can update every check available
             foreach (var checkLogic in checkLogicList)
-                UpdateCheckAvailable(ToDictionaryItemLogicList(itemLogicList), checkLogic, allowTrick);
+                if (UpdateCheckAvailable(ToDictionaryItemLogicList(itemLogicList), checkLogic, allowTrick))
+                    listOfUpdatedCheck.Add(checkLogic);
             WriteToDebug("-------- UpdateCheckForItem end -------------");
+            return listOfUpdatedCheck;
         }
 
-        private void UpdateCheckAvailable(
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dicItemLogic"></param>
+        /// <param name="checkLogic"></param>
+        /// <param name="allowTrick"></param>
+        /// <returns>True if the check has been updated, otherwise false</returns>
+        private bool UpdateCheckAvailable(
             Dictionary<string, ItemLogic> dicItemLogic,
             OcarinaOfTimeCheckLogic checkLogic,
             bool allowTrick)
         {
             var jsonLogicItem = FindLogic(_logicDictionary, checkLogic.Id);
             if (jsonLogicItem == null)
-                return;
+                return false;
             var isItemLogicCanBeValidated = IsItemLogicCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, new HashSet<string>());
             if (isItemLogicCanBeValidated != checkLogic.IsAvailable)
             {
                 checkLogic.IsAvailable = isItemLogicCanBeValidated;
-                OnCheckUpdate.OnNext(checkLogic);
+                return true;
             }
+            return false;
         }
 
         private bool IsItemLogicCanBeValidated(

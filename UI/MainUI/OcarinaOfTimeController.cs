@@ -58,7 +58,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME);
                 // Init Logic resolver
                 logicResolver = new OcarinaOfTimeLogicResolver(logicFile);
-                logicResolver.OnCheckUpdate.Subscribe((it) => RefreshRegionInDrawingFollowingCheck(it));
                 return true;
             }
             catch (Exception e)
@@ -69,40 +68,15 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }
 
-        public void RefreshRegionInDrawingFollowingCheck(OcarinaOfTimeCheckLogic checkLogic)
+        public void RefreshRegionInDrawingFollowingCheck(List<OcarinaOfTimeCheckLogic> checkLogic)
         {
-            Debug.WriteLine($"Updated check change for [{checkLogic.Id}], new value [{checkLogic.IsAvailable}]");
-            //checkLogic.Id
-            var checkLogicCat = checkLogicCategories.Find((it) => OcarinaOfTimeCheckLogicZoneMethod.FromString(it.Name) == checkLogic.Zone);
-            if (checkLogicCat == null)
-                return;
-            bool isAllClaim = true;
-            bool isAllCheckAvailable = true;
-            bool isAtLeastOneCheckAvailable = false;
-            int availableCheck = 0;
-            foreach (var checkInZone in checkLogics.FindAll((it) => it.Zone == checkLogic.Zone))
+            Debug.WriteLine($"Call RefreshRegionInDrawingFollowingCheck with {checkLogic.Count} check updated");
+            // Get all region to update from the list of checkLogic
+            foreach (var checkCategory in checkLogic.Select((it) => it.Zone).Distinct())
             {
-                if (!checkLogic.IsClaim)
-                    isAllClaim = false;
-                if (checkLogic.IsAvailable && !checkLogic.IsClaim)
-                    availableCheck++;
-                if (!checkLogic.IsAvailable)
-                    isAllCheckAvailable = false;
-                else
-                    isAtLeastOneCheckAvailable = true;
+                Debug.WriteLine($"Updated check for the following category: [{checkCategory}]");
+                RefreshRegionInDrawingFollowingCheck(checkCategory);
             }
-            Color color;
-            if (isAllClaim)
-                color = Color.Gray;
-            else if (isAllCheckAvailable)
-                color = Color.Green;
-            else if (isAtLeastOneCheckAvailable)
-                color = Color.Yellow;
-            else
-                color = Color.Red;
-            var zoneGraphucsPathWithData = pictureBoxZoomMoveController.GetGraphicsPathWithData(checkLogic.Zone);
-            zoneGraphucsPathWithData.pathColor = color;
-            zoneGraphucsPathWithData.pathInnerText = availableCheck.ToString();
         }
 
         public void RefreshRegionInDrawingFollowingCheck(OcarinaOfTimeCheckLogicZone zone)
@@ -164,8 +138,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 }
                 // TODO: gerer les différent cas pour les enum
             }
-            // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
-            logicResolver.UpdateCheckForItem(itemLogics, checkLogics, false);
+            //logicResolver.UpdateCheckForItem(itemLogics, checkLogics, false);
+            var listOfUpdatedCheck = logicResolver.UpdateCheckAndReturnListOfUpdatedCheck(itemLogics, checkLogics, false);
+            RefreshRegionInDrawingFollowingCheck(listOfUpdatedCheck);
             pictureBoxItemList.Refresh();
         }
 
