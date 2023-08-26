@@ -42,7 +42,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.panelMapOOT = new System.Windows.Forms.Panel();
             this.tabGameMenu = new System.Windows.Forms.TabControl();
             this.tabOcarinaOfTime = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainerOotSideContent = new System.Windows.Forms.SplitContainer();
             this.splitContainerOotCheckListCheckItemSeparator = new System.Windows.Forms.SplitContainer();
             this.tabMajoraMask = new System.Windows.Forms.TabPage();
             this.panelMapMM = new System.Windows.Forms.Panel();
@@ -65,10 +65,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerOotSideContent)).BeginInit();
+            this.splitContainerOotSideContent.Panel1.SuspendLayout();
+            this.splitContainerOotSideContent.Panel2.SuspendLayout();
+            this.splitContainerOotSideContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerOotCheckListCheckItemSeparator)).BeginInit();
             this.splitContainerOotCheckListCheckItemSeparator.Panel1.SuspendLayout();
             this.splitContainerOotCheckListCheckItemSeparator.Panel2.SuspendLayout();
@@ -140,7 +140,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // tabOcarinaOfTime
             // 
-            this.tabOcarinaOfTime.Controls.Add(this.splitContainer1);
+            this.tabOcarinaOfTime.Controls.Add(this.splitContainerOotSideContent);
             this.tabOcarinaOfTime.Location = new System.Drawing.Point(4, 25);
             this.tabOcarinaOfTime.Margin = new System.Windows.Forms.Padding(0);
             this.tabOcarinaOfTime.Name = "tabOcarinaOfTime";
@@ -149,24 +149,24 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tabOcarinaOfTime.Text = "Ocarina of time";
             this.tabOcarinaOfTime.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1
+            // splitContainerOotSideContent
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainerOotSideContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerOotSideContent.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerOotSideContent.Margin = new System.Windows.Forms.Padding(0);
+            this.splitContainerOotSideContent.Name = "splitContainerOotSideContent";
             // 
-            // splitContainer1.Panel1
+            // splitContainerOotSideContent.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.splitContainerOotCheckListCheckItemSeparator);
+            this.splitContainerOotSideContent.Panel1.Controls.Add(this.splitContainerOotCheckListCheckItemSeparator);
             // 
-            // splitContainer1.Panel2
+            // splitContainerOotSideContent.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panelMapOOT);
-            this.splitContainer1.Size = new System.Drawing.Size(1256, 625);
-            this.splitContainer1.SplitterDistance = 305;
-            this.splitContainer1.SplitterWidth = 5;
-            this.splitContainer1.TabIndex = 71;
+            this.splitContainerOotSideContent.Panel2.Controls.Add(this.panelMapOOT);
+            this.splitContainerOotSideContent.Size = new System.Drawing.Size(1256, 625);
+            this.splitContainerOotSideContent.SplitterDistance = 305;
+            this.splitContainerOotSideContent.SplitterWidth = 5;
+            this.splitContainerOotSideContent.TabIndex = 71;
             // 
             // splitContainerOotCheckListCheckItemSeparator
             // 
@@ -355,10 +355,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).EndInit();
             this.tabGameMenu.ResumeLayout(false);
             this.tabOcarinaOfTime.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.splitContainerOotSideContent.Panel1.ResumeLayout(false);
+            this.splitContainerOotSideContent.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerOotSideContent)).EndInit();
+            this.splitContainerOotSideContent.ResumeLayout(false);
             this.splitContainerOotCheckListCheckItemSeparator.Panel1.ResumeLayout(false);
             this.splitContainerOotCheckListCheckItemSeparator.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerOotCheckListCheckItemSeparator)).EndInit();
@@ -385,7 +385,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.Panel panelMapMM;
         private System.Windows.Forms.ListBox lbCheckListMM;
         private System.Windows.Forms.PictureBox pictureBoxMMItemList;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainerOotSideContent;
         private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
