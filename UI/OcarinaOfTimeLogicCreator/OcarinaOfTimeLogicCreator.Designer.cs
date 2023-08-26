@@ -50,16 +50,17 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             this.buttonAddConditionalItemContent = new System.Windows.Forms.Button();
             this.buttonRemoveConditionalItemContent = new System.Windows.Forms.Button();
             this.panelItemList = new System.Windows.Forms.Panel();
+            this.textBoxSearchLogicItemList = new System.Windows.Forms.TextBox();
             this.buttonInsertMissingRegionCheck = new System.Windows.Forms.Button();
             this.buttonSaveFile = new System.Windows.Forms.Button();
             this.panelLogicItem = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panelAvailableId = new System.Windows.Forms.Panel();
+            this.textBoxSearchAvailableId = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
             this.listBoxAvailableItemId = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxSearchAvailableId = new System.Windows.Forms.TextBox();
-            this.textBoxSearchLogicItemList = new System.Windows.Forms.TextBox();
+            this.buttonInsertMissingItem = new System.Windows.Forms.Button();
             this.panelItemList.SuspendLayout();
             this.panelLogicItem.SuspendLayout();
             this.panelAvailableId.SuspendLayout();
@@ -244,6 +245,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             // 
             // panelItemList
             // 
+            this.panelItemList.Controls.Add(this.buttonInsertMissingItem);
             this.panelItemList.Controls.Add(this.textBoxSearchLogicItemList);
             this.panelItemList.Controls.Add(this.buttonInsertMissingRegionCheck);
             this.panelItemList.Controls.Add(this.buttonSaveFile);
@@ -256,11 +258,19 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             this.panelItemList.Size = new System.Drawing.Size(398, 847);
             this.panelItemList.TabIndex = 21;
             // 
+            // textBoxSearchLogicItemList
+            // 
+            this.textBoxSearchLogicItemList.Location = new System.Drawing.Point(3, 29);
+            this.textBoxSearchLogicItemList.Name = "textBoxSearchLogicItemList";
+            this.textBoxSearchLogicItemList.Size = new System.Drawing.Size(392, 20);
+            this.textBoxSearchLogicItemList.TabIndex = 6;
+            this.textBoxSearchLogicItemList.TextChanged += new System.EventHandler(this.textBoxSearchLogicItemList_TextChanged);
+            // 
             // buttonInsertMissingRegionCheck
             // 
             this.buttonInsertMissingRegionCheck.Location = new System.Drawing.Point(0, 821);
             this.buttonInsertMissingRegionCheck.Name = "buttonInsertMissingRegionCheck";
-            this.buttonInsertMissingRegionCheck.Size = new System.Drawing.Size(382, 23);
+            this.buttonInsertMissingRegionCheck.Size = new System.Drawing.Size(201, 23);
             this.buttonInsertMissingRegionCheck.TabIndex = 5;
             this.buttonInsertMissingRegionCheck.Text = "Insert missing region check";
             this.buttonInsertMissingRegionCheck.UseVisualStyleBackColor = true;
@@ -318,6 +328,14 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             this.panelAvailableId.Size = new System.Drawing.Size(406, 847);
             this.panelAvailableId.TabIndex = 23;
             // 
+            // textBoxSearchAvailableId
+            // 
+            this.textBoxSearchAvailableId.Location = new System.Drawing.Point(3, 47);
+            this.textBoxSearchAvailableId.Name = "textBoxSearchAvailableId";
+            this.textBoxSearchAvailableId.Size = new System.Drawing.Size(395, 20);
+            this.textBoxSearchAvailableId.TabIndex = 16;
+            this.textBoxSearchAvailableId.TextChanged += new System.EventHandler(this.textBoxSearchAvailableId_TextChanged);
+            // 
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(257, 6);
@@ -344,21 +362,14 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             this.label7.TabIndex = 5;
             this.label7.Text = "Available Id";
             // 
-            // textBoxSearchAvailableId
+            // buttonInsertMissingItem
             // 
-            this.textBoxSearchAvailableId.Location = new System.Drawing.Point(3, 47);
-            this.textBoxSearchAvailableId.Name = "textBoxSearchAvailableId";
-            this.textBoxSearchAvailableId.Size = new System.Drawing.Size(395, 20);
-            this.textBoxSearchAvailableId.TabIndex = 16;
-            this.textBoxSearchAvailableId.TextChanged += new System.EventHandler(this.textBoxSearchAvailableId_TextChanged);
-            // 
-            // textBoxSearchLogicItemList
-            // 
-            this.textBoxSearchLogicItemList.Location = new System.Drawing.Point(3, 29);
-            this.textBoxSearchLogicItemList.Name = "textBoxSearchLogicItemList";
-            this.textBoxSearchLogicItemList.Size = new System.Drawing.Size(392, 20);
-            this.textBoxSearchLogicItemList.TabIndex = 6;
-            this.textBoxSearchLogicItemList.TextChanged += new System.EventHandler(this.textBoxSearchLogicItemList_TextChanged);
+            this.buttonInsertMissingItem.Location = new System.Drawing.Point(207, 821);
+            this.buttonInsertMissingItem.Name = "buttonInsertMissingItem";
+            this.buttonInsertMissingItem.Size = new System.Drawing.Size(191, 23);
+            this.buttonInsertMissingItem.TabIndex = 7;
+            this.buttonInsertMissingItem.Text = "Insert missing region check";
+            this.buttonInsertMissingItem.UseVisualStyleBackColor = true;
             // 
             // OcarinaOfTimeLogicCreator
             // 
@@ -414,5 +425,6 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         private System.Windows.Forms.Button buttonInsertMissingRegionCheck;
         private System.Windows.Forms.TextBox textBoxSearchLogicItemList;
         private System.Windows.Forms.TextBox textBoxSearchAvailableId;
+        private System.Windows.Forms.Button buttonInsertMissingItem;
     }
 }

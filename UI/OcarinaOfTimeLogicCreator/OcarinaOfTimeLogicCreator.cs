@@ -52,6 +52,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             logicFileController.selectedLogicItemConditionalItemContentSubject.Subscribe((it) => ClearAndAddList(listBoxConditionalItemContentList, it));
             logicFileController.ResolveSelectedItemAndRefreshAll();
             buttonInsertMissingRegionCheck.Click += (s, e2) => logicFileController.IsertMissingRegionFile();
+            buttonInsertMissingItem.Click += (s, e2) => logicFileController.InsertMissingItemIdInIdLogic();
             buttonSaveFile.Click += (s, e2) => controller.SaveLogic(CURRENT_VERSION, logicFileController.GetListOfItemList());
         }
 

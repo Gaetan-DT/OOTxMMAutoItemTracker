@@ -288,5 +288,20 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             }
             ResolveSelectedItemAndRefreshAll();
         }
+
+        public void InsertMissingItemIdInIdLogic()
+        {
+            foreach (var itemLogic in listItemLogic)
+                foreach (var itemLogicVariant in itemLogic.variants)
+                {
+                    if (!finalLogicItemList.ContainsKey(itemLogicVariant.idLogic))
+                        finalLogicItemList.Add(itemLogicVariant.idLogic, new OcarinaOfTimeJsonFormatLogicItem()
+                        {
+                            Id = itemLogicVariant.idLogic,
+                            IsTrick = false
+                        });
+                }
+            ResolveSelectedItemAndRefreshAll();
+        }
     }
 }
