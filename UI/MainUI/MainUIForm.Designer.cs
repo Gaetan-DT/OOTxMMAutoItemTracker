@@ -35,304 +35,370 @@ namespace MajoraAutoItemTracker.UI.MainUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDebug = new System.Windows.Forms.Label();
-            this.btnStartListener = new System.Windows.Forms.Button();
-            this.btnStopListener = new System.Windows.Forms.Button();
             this.tboxDebug = new System.Windows.Forms.TextBox();
             this.pictureBoxOOTItemList = new System.Windows.Forms.PictureBox();
             this.lbCheckListOOT = new System.Windows.Forms.ListBox();
             this.panelMapOOT = new System.Windows.Forms.Panel();
-            this.cbEmulatorList = new System.Windows.Forms.ComboBox();
             this.tabGameMenu = new System.Windows.Forms.TabControl();
             this.tabOcarinaOfTime = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabMajoraMask = new System.Windows.Forms.TabPage();
             this.panelMapMM = new System.Windows.Forms.Panel();
             this.lbCheckListMM = new System.Windows.Forms.ListBox();
             this.pictureBoxMMItemList = new System.Windows.Forms.PictureBox();
-            this.cbRomTypeList = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnRefreshGameAndRom = new System.Windows.Forms.Button();
-            this.btnOpenChekLogicEditor = new System.Windows.Forms.Button();
-            this.btnOpenLogicTester = new System.Windows.Forms.Button();
-            this.btnOotLogicCreator = new System.Windows.Forms.Button();
-            this.panelConfig = new System.Windows.Forms.Panel();
+            this.menuStripMain = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkLogicEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logicTesterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocarinaOfTimeLogicCreatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPageLog = new System.Windows.Forms.TabPage();
+            this.toolStripComboBoxEmulatorList = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBoxRomTypeList = new System.Windows.Forms.ToolStripComboBox();
+            this.emulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.romToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stratStopToolStripMenuItemStartStopEmulator = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitContainerOotCheckListCheckItemSeparator = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.tabMajoraMask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).BeginInit();
-            this.panelConfig.SuspendLayout();
+            this.menuStripMain.SuspendLayout();
+            this.tabPageLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerOotCheckListCheckItemSeparator)).BeginInit();
+            this.splitContainerOotCheckListCheckItemSeparator.Panel1.SuspendLayout();
+            this.splitContainerOotCheckListCheckItemSeparator.Panel2.SuspendLayout();
+            this.splitContainerOotCheckListCheckItemSeparator.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblDebug
-            // 
-            this.lblDebug.AutoSize = true;
-            this.lblDebug.Location = new System.Drawing.Point(8, 122);
-            this.lblDebug.Name = "lblDebug";
-            this.lblDebug.Size = new System.Drawing.Size(42, 13);
-            this.lblDebug.TabIndex = 0;
-            this.lblDebug.Text = "Debug:";
-            // 
-            // btnStartListener
-            // 
-            this.btnStartListener.Location = new System.Drawing.Point(198, 67);
-            this.btnStartListener.Name = "btnStartListener";
-            this.btnStartListener.Size = new System.Drawing.Size(77, 23);
-            this.btnStartListener.TabIndex = 1;
-            this.btnStartListener.Text = "Start";
-            this.btnStartListener.UseVisualStyleBackColor = true;
-            this.btnStartListener.Click += new System.EventHandler(this.BtnStartListenerClick);
-            // 
-            // btnStopListener
-            // 
-            this.btnStopListener.Location = new System.Drawing.Point(281, 67);
-            this.btnStopListener.Name = "btnStopListener";
-            this.btnStopListener.Size = new System.Drawing.Size(77, 23);
-            this.btnStopListener.TabIndex = 2;
-            this.btnStopListener.Text = "Stop";
-            this.btnStopListener.UseVisualStyleBackColor = true;
-            this.btnStopListener.Click += new System.EventHandler(this.BtnStopListener_Click);
             // 
             // tboxDebug
             // 
-            this.tboxDebug.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tboxDebug.Location = new System.Drawing.Point(4, 138);
+            this.tboxDebug.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tboxDebug.Location = new System.Drawing.Point(4, 4);
+            this.tboxDebug.Margin = new System.Windows.Forms.Padding(4);
             this.tboxDebug.Multiline = true;
             this.tboxDebug.Name = "tboxDebug";
-            this.tboxDebug.Size = new System.Drawing.Size(360, 687);
+            this.tboxDebug.Size = new System.Drawing.Size(1248, 615);
             this.tboxDebug.TabIndex = 3;
             // 
             // pictureBoxOOTItemList
             // 
+            this.pictureBoxOOTItemList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxOOTItemList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxOOTItemList.InitialImage = null;
-            this.pictureBoxOOTItemList.Location = new System.Drawing.Point(6, 3);
+            this.pictureBoxOOTItemList.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxOOTItemList.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxOOTItemList.Name = "pictureBoxOOTItemList";
-            this.pictureBoxOOTItemList.Size = new System.Drawing.Size(320, 522);
+            this.pictureBoxOOTItemList.Size = new System.Drawing.Size(305, 415);
             this.pictureBoxOOTItemList.TabIndex = 4;
             this.pictureBoxOOTItemList.TabStop = false;
             // 
             // lbCheckListOOT
             // 
+            this.lbCheckListOOT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbCheckListOOT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbCheckListOOT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lbCheckListOOT.FormattingEnabled = true;
-            this.lbCheckListOOT.Location = new System.Drawing.Point(6, 531);
+            this.lbCheckListOOT.Location = new System.Drawing.Point(0, 0);
+            this.lbCheckListOOT.Margin = new System.Windows.Forms.Padding(0);
             this.lbCheckListOOT.Name = "lbCheckListOOT";
-            this.lbCheckListOOT.Size = new System.Drawing.Size(320, 264);
+            this.lbCheckListOOT.Size = new System.Drawing.Size(305, 206);
             this.lbCheckListOOT.TabIndex = 67;
             // 
             // panelMapOOT
             // 
-            this.panelMapOOT.Location = new System.Drawing.Point(332, 3);
+            this.panelMapOOT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMapOOT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMapOOT.Location = new System.Drawing.Point(0, 0);
+            this.panelMapOOT.Margin = new System.Windows.Forms.Padding(0);
             this.panelMapOOT.Name = "panelMapOOT";
-            this.panelMapOOT.Size = new System.Drawing.Size(978, 792);
+            this.panelMapOOT.Size = new System.Drawing.Size(946, 625);
             this.panelMapOOT.TabIndex = 68;
-            // 
-            // cbEmulatorList
-            // 
-            this.cbEmulatorList.FormattingEnabled = true;
-            this.cbEmulatorList.Location = new System.Drawing.Point(108, 13);
-            this.cbEmulatorList.Name = "cbEmulatorList";
-            this.cbEmulatorList.Size = new System.Drawing.Size(250, 21);
-            this.cbEmulatorList.TabIndex = 69;
             // 
             // tabGameMenu
             // 
-            this.tabGameMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabGameMenu.Controls.Add(this.tabOcarinaOfTime);
             this.tabGameMenu.Controls.Add(this.tabMajoraMask);
-            this.tabGameMenu.Location = new System.Drawing.Point(0, 0);
+            this.tabGameMenu.Controls.Add(this.tabPageLog);
+            this.tabGameMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabGameMenu.Location = new System.Drawing.Point(0, 27);
+            this.tabGameMenu.Margin = new System.Windows.Forms.Padding(0);
             this.tabGameMenu.Name = "tabGameMenu";
             this.tabGameMenu.SelectedIndex = 0;
-            this.tabGameMenu.Size = new System.Drawing.Size(1344, 826);
+            this.tabGameMenu.Size = new System.Drawing.Size(1264, 654);
             this.tabGameMenu.TabIndex = 70;
             // 
             // tabOcarinaOfTime
             // 
-            this.tabOcarinaOfTime.Controls.Add(this.panelMapOOT);
-            this.tabOcarinaOfTime.Controls.Add(this.pictureBoxOOTItemList);
-            this.tabOcarinaOfTime.Controls.Add(this.lbCheckListOOT);
-            this.tabOcarinaOfTime.Location = new System.Drawing.Point(4, 22);
+            this.tabOcarinaOfTime.Controls.Add(this.splitContainer1);
+            this.tabOcarinaOfTime.Location = new System.Drawing.Point(4, 25);
+            this.tabOcarinaOfTime.Margin = new System.Windows.Forms.Padding(0);
             this.tabOcarinaOfTime.Name = "tabOcarinaOfTime";
-            this.tabOcarinaOfTime.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOcarinaOfTime.Size = new System.Drawing.Size(1336, 800);
+            this.tabOcarinaOfTime.Size = new System.Drawing.Size(1256, 625);
             this.tabOcarinaOfTime.TabIndex = 0;
             this.tabOcarinaOfTime.Text = "Ocarina of time";
             this.tabOcarinaOfTime.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainerOotCheckListCheckItemSeparator);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.panelMapOOT);
+            this.splitContainer1.Size = new System.Drawing.Size(1256, 625);
+            this.splitContainer1.SplitterDistance = 305;
+            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.TabIndex = 71;
             // 
             // tabMajoraMask
             // 
             this.tabMajoraMask.Controls.Add(this.panelMapMM);
             this.tabMajoraMask.Controls.Add(this.lbCheckListMM);
             this.tabMajoraMask.Controls.Add(this.pictureBoxMMItemList);
-            this.tabMajoraMask.Location = new System.Drawing.Point(4, 22);
+            this.tabMajoraMask.Location = new System.Drawing.Point(4, 25);
+            this.tabMajoraMask.Margin = new System.Windows.Forms.Padding(4);
             this.tabMajoraMask.Name = "tabMajoraMask";
-            this.tabMajoraMask.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMajoraMask.Size = new System.Drawing.Size(1322, 799);
+            this.tabMajoraMask.Padding = new System.Windows.Forms.Padding(4);
+            this.tabMajoraMask.Size = new System.Drawing.Size(1256, 625);
             this.tabMajoraMask.TabIndex = 1;
             this.tabMajoraMask.Text = "Majora mask";
             this.tabMajoraMask.UseVisualStyleBackColor = true;
             // 
             // panelMapMM
             // 
-            this.panelMapMM.Location = new System.Drawing.Point(322, 3);
+            this.panelMapMM.Location = new System.Drawing.Point(429, 4);
+            this.panelMapMM.Margin = new System.Windows.Forms.Padding(4);
             this.panelMapMM.Name = "panelMapMM";
-            this.panelMapMM.Size = new System.Drawing.Size(978, 792);
+            this.panelMapMM.Size = new System.Drawing.Size(1304, 974);
             this.panelMapMM.TabIndex = 69;
             // 
             // lbCheckListMM
             // 
             this.lbCheckListMM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lbCheckListMM.FormattingEnabled = true;
-            this.lbCheckListMM.Location = new System.Drawing.Point(0, 528);
+            this.lbCheckListMM.Location = new System.Drawing.Point(0, 650);
+            this.lbCheckListMM.Margin = new System.Windows.Forms.Padding(4);
             this.lbCheckListMM.Name = "lbCheckListMM";
-            this.lbCheckListMM.Size = new System.Drawing.Size(320, 264);
+            this.lbCheckListMM.Size = new System.Drawing.Size(425, 316);
             this.lbCheckListMM.TabIndex = 68;
             // 
             // pictureBoxMMItemList
             // 
             this.pictureBoxMMItemList.InitialImage = null;
             this.pictureBoxMMItemList.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxMMItemList.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxMMItemList.Name = "pictureBoxMMItemList";
-            this.pictureBoxMMItemList.Size = new System.Drawing.Size(320, 522);
+            this.pictureBoxMMItemList.Size = new System.Drawing.Size(427, 642);
             this.pictureBoxMMItemList.TabIndex = 5;
             this.pictureBoxMMItemList.TabStop = false;
             // 
-            // cbRomTypeList
+            // menuStripMain
             // 
-            this.cbRomTypeList.FormattingEnabled = true;
-            this.cbRomTypeList.Location = new System.Drawing.Point(108, 40);
-            this.cbRomTypeList.Name = "cbRomTypeList";
-            this.cbRomTypeList.Size = new System.Drawing.Size(250, 21);
-            this.cbRomTypeList.TabIndex = 71;
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem,
+            this.optionsToolStripMenuItem,
+            this.debugToolStripMenuItem,
+            this.emulatorToolStripMenuItem,
+            this.toolStripComboBoxEmulatorList,
+            this.romToolStripMenuItem,
+            this.toolStripComboBoxRomTypeList,
+            this.stratStopToolStripMenuItemStartStopEmulator,
+            this.refreshListToolStripMenuItem});
+            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMain.Name = "menuStripMain";
+            this.menuStripMain.Size = new System.Drawing.Size(1264, 27);
+            this.menuStripMain.TabIndex = 79;
+            this.menuStripMain.Text = "menuStrip1";
             // 
-            // label1
+            // menuToolStripMenuItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "Emulator";
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
+            this.menuToolStripMenuItem.Text = "File";
             // 
-            // label2
+            // optionsToolStripMenuItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "Rom type";
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 23);
+            this.optionsToolStripMenuItem.Text = "Options";
             // 
-            // btnRefreshGameAndRom
+            // debugToolStripMenuItem
             // 
-            this.btnRefreshGameAndRom.Location = new System.Drawing.Point(115, 67);
-            this.btnRefreshGameAndRom.Name = "btnRefreshGameAndRom";
-            this.btnRefreshGameAndRom.Size = new System.Drawing.Size(77, 23);
-            this.btnRefreshGameAndRom.TabIndex = 74;
-            this.btnRefreshGameAndRom.Text = "Refresh";
-            this.btnRefreshGameAndRom.UseVisualStyleBackColor = true;
-            this.btnRefreshGameAndRom.Click += new System.EventHandler(this.btnRefreshGameAndRom_Click);
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkLogicEditorToolStripMenuItem,
+            this.logicTesterToolStripMenuItem,
+            this.ocarinaOfTimeLogicCreatorToolStripMenuItem});
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 23);
+            this.debugToolStripMenuItem.Text = "Debug";
             // 
-            // btnOpenChekLogicEditor
+            // checkLogicEditorToolStripMenuItem
             // 
-            this.btnOpenChekLogicEditor.Location = new System.Drawing.Point(51, 96);
-            this.btnOpenChekLogicEditor.Name = "btnOpenChekLogicEditor";
-            this.btnOpenChekLogicEditor.Size = new System.Drawing.Size(109, 23);
-            this.btnOpenChekLogicEditor.TabIndex = 75;
-            this.btnOpenChekLogicEditor.Text = "Check logic editor";
-            this.btnOpenChekLogicEditor.UseVisualStyleBackColor = true;
-            this.btnOpenChekLogicEditor.Click += new System.EventHandler(this.btnOpenChekLogicEditor_Click);
+            this.checkLogicEditorToolStripMenuItem.Name = "checkLogicEditorToolStripMenuItem";
+            this.checkLogicEditorToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.checkLogicEditorToolStripMenuItem.Text = "Check logic editor";
+            this.checkLogicEditorToolStripMenuItem.Click += new System.EventHandler(this.OnCheckLogicEditorClick);
             // 
-            // btnOpenLogicTester
+            // logicTesterToolStripMenuItem
             // 
-            this.btnOpenLogicTester.Location = new System.Drawing.Point(166, 96);
-            this.btnOpenLogicTester.Name = "btnOpenLogicTester";
-            this.btnOpenLogicTester.Size = new System.Drawing.Size(77, 23);
-            this.btnOpenLogicTester.TabIndex = 76;
-            this.btnOpenLogicTester.Text = "Logic Tester";
-            this.btnOpenLogicTester.UseVisualStyleBackColor = true;
-            this.btnOpenLogicTester.Click += new System.EventHandler(this.btnOpenLogicTester_Click);
+            this.logicTesterToolStripMenuItem.Name = "logicTesterToolStripMenuItem";
+            this.logicTesterToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.logicTesterToolStripMenuItem.Text = "Logic tester";
+            this.logicTesterToolStripMenuItem.Click += new System.EventHandler(this.OnLogicTesterClick);
             // 
-            // btnOotLogicCreator
+            // ocarinaOfTimeLogicCreatorToolStripMenuItem
             // 
-            this.btnOotLogicCreator.Location = new System.Drawing.Point(249, 96);
-            this.btnOotLogicCreator.Name = "btnOotLogicCreator";
-            this.btnOotLogicCreator.Size = new System.Drawing.Size(109, 23);
-            this.btnOotLogicCreator.TabIndex = 77;
-            this.btnOotLogicCreator.Text = "OOT Logic creator";
-            this.btnOotLogicCreator.UseVisualStyleBackColor = true;
-            this.btnOotLogicCreator.Click += new System.EventHandler(this.btnOotLogicCreator_Click);
+            this.ocarinaOfTimeLogicCreatorToolStripMenuItem.Name = "ocarinaOfTimeLogicCreatorToolStripMenuItem";
+            this.ocarinaOfTimeLogicCreatorToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.ocarinaOfTimeLogicCreatorToolStripMenuItem.Text = "Ocarina of time Logic creator";
+            this.ocarinaOfTimeLogicCreatorToolStripMenuItem.Click += new System.EventHandler(this.OnOotLogicCreatorClick);
             // 
-            // panelConfig
+            // tabPageLog
             // 
-            this.panelConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelConfig.Controls.Add(this.label1);
-            this.panelConfig.Controls.Add(this.btnOpenChekLogicEditor);
-            this.panelConfig.Controls.Add(this.tboxDebug);
-            this.panelConfig.Controls.Add(this.btnOpenLogicTester);
-            this.panelConfig.Controls.Add(this.btnOotLogicCreator);
-            this.panelConfig.Controls.Add(this.cbEmulatorList);
-            this.panelConfig.Controls.Add(this.cbRomTypeList);
-            this.panelConfig.Controls.Add(this.label2);
-            this.panelConfig.Controls.Add(this.btnRefreshGameAndRom);
-            this.panelConfig.Controls.Add(this.lblDebug);
-            this.panelConfig.Controls.Add(this.btnStartListener);
-            this.panelConfig.Controls.Add(this.btnStopListener);
-            this.panelConfig.Location = new System.Drawing.Point(1342, 1);
-            this.panelConfig.Name = "panelConfig";
-            this.panelConfig.Size = new System.Drawing.Size(364, 825);
-            this.panelConfig.TabIndex = 78;
+            this.tabPageLog.Controls.Add(this.tboxDebug);
+            this.tabPageLog.Location = new System.Drawing.Point(4, 25);
+            this.tabPageLog.Name = "tabPageLog";
+            this.tabPageLog.Size = new System.Drawing.Size(1256, 625);
+            this.tabPageLog.TabIndex = 2;
+            this.tabPageLog.Text = "Log";
+            this.tabPageLog.UseVisualStyleBackColor = true;
+            // 
+            // toolStripComboBoxEmulatorList
+            // 
+            this.toolStripComboBoxEmulatorList.Name = "toolStripComboBoxEmulatorList";
+            this.toolStripComboBoxEmulatorList.Size = new System.Drawing.Size(150, 23);
+            // 
+            // toolStripComboBoxRomTypeList
+            // 
+            this.toolStripComboBoxRomTypeList.Name = "toolStripComboBoxRomTypeList";
+            this.toolStripComboBoxRomTypeList.Size = new System.Drawing.Size(150, 23);
+            // 
+            // emulatorToolStripMenuItem
+            // 
+            this.emulatorToolStripMenuItem.Enabled = false;
+            this.emulatorToolStripMenuItem.Name = "emulatorToolStripMenuItem";
+            this.emulatorToolStripMenuItem.Size = new System.Drawing.Size(67, 23);
+            this.emulatorToolStripMenuItem.Text = "Emulator";
+            // 
+            // romToolStripMenuItem
+            // 
+            this.romToolStripMenuItem.Enabled = false;
+            this.romToolStripMenuItem.Name = "romToolStripMenuItem";
+            this.romToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
+            this.romToolStripMenuItem.Text = "Rom";
+            // 
+            // stratStopToolStripMenuItemStartStopEmulator
+            // 
+            this.stratStopToolStripMenuItemStartStopEmulator.Name = "stratStopToolStripMenuItemStartStopEmulator";
+            this.stratStopToolStripMenuItemStartStopEmulator.Size = new System.Drawing.Size(72, 23);
+            this.stratStopToolStripMenuItemStartStopEmulator.Text = "Strat/Stop";
+            this.stratStopToolStripMenuItemStartStopEmulator.Click += new System.EventHandler(this.OnStartStopEmulatorClick);
+            // 
+            // refreshListToolStripMenuItem
+            // 
+            this.refreshListToolStripMenuItem.Name = "refreshListToolStripMenuItem";
+            this.refreshListToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
+            this.refreshListToolStripMenuItem.Text = "Refresh List";
+            this.refreshListToolStripMenuItem.Click += new System.EventHandler(this.OnRefreshEmulatorListClick);
+            // 
+            // splitContainerOotCheckListCheckItemSeparator
+            // 
+            this.splitContainerOotCheckListCheckItemSeparator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerOotCheckListCheckItemSeparator.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerOotCheckListCheckItemSeparator.Margin = new System.Windows.Forms.Padding(0);
+            this.splitContainerOotCheckListCheckItemSeparator.Name = "splitContainerOotCheckListCheckItemSeparator";
+            this.splitContainerOotCheckListCheckItemSeparator.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainerOotCheckListCheckItemSeparator.Panel1
+            // 
+            this.splitContainerOotCheckListCheckItemSeparator.Panel1.Controls.Add(this.pictureBoxOOTItemList);
+            // 
+            // splitContainerOotCheckListCheckItemSeparator.Panel2
+            // 
+            this.splitContainerOotCheckListCheckItemSeparator.Panel2.Controls.Add(this.lbCheckListOOT);
+            this.splitContainerOotCheckListCheckItemSeparator.Size = new System.Drawing.Size(305, 625);
+            this.splitContainerOotCheckListCheckItemSeparator.SplitterDistance = 415;
+            this.splitContainerOotCheckListCheckItemSeparator.TabIndex = 0;
             // 
             // MainUIForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1708, 829);
-            this.Controls.Add(this.panelConfig);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tabGameMenu);
+            this.Controls.Add(this.menuStripMain);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStripMain;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainUIForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.OnMainUiFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).EndInit();
             this.tabGameMenu.ResumeLayout(false);
             this.tabOcarinaOfTime.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.tabMajoraMask.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).EndInit();
-            this.panelConfig.ResumeLayout(false);
-            this.panelConfig.PerformLayout();
+            this.menuStripMain.ResumeLayout(false);
+            this.menuStripMain.PerformLayout();
+            this.tabPageLog.ResumeLayout(false);
+            this.tabPageLog.PerformLayout();
+            this.splitContainerOotCheckListCheckItemSeparator.Panel1.ResumeLayout(false);
+            this.splitContainerOotCheckListCheckItemSeparator.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerOotCheckListCheckItemSeparator)).EndInit();
+            this.splitContainerOotCheckListCheckItemSeparator.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblDebug;
-        private System.Windows.Forms.Button btnStartListener;
-        private System.Windows.Forms.Button btnStopListener;
         private System.Windows.Forms.TextBox tboxDebug;
         private System.Windows.Forms.PictureBox pictureBoxOOTItemList;
         private System.Windows.Forms.ListBox lbCheckListOOT;
         private System.Windows.Forms.Panel panelMapOOT;
-        private System.Windows.Forms.ComboBox cbEmulatorList;
         private System.Windows.Forms.TabControl tabGameMenu;
         private System.Windows.Forms.TabPage tabOcarinaOfTime;
         private System.Windows.Forms.TabPage tabMajoraMask;
-        private System.Windows.Forms.ComboBox cbRomTypeList;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnRefreshGameAndRom;
         private System.Windows.Forms.Panel panelMapMM;
         private System.Windows.Forms.ListBox lbCheckListMM;
         private System.Windows.Forms.PictureBox pictureBoxMMItemList;
-        private System.Windows.Forms.Button btnOpenChekLogicEditor;
-        private System.Windows.Forms.Button btnOpenLogicTester;
-        private System.Windows.Forms.Button btnOotLogicCreator;
-        private System.Windows.Forms.Panel panelConfig;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.MenuStrip menuStripMain;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkLogicEditorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logicTesterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ocarinaOfTimeLogicCreatorToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPageLog;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxEmulatorList;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxRomTypeList;
+        private System.Windows.Forms.ToolStripMenuItem emulatorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem romToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stratStopToolStripMenuItemStartStopEmulator;
+        private System.Windows.Forms.ToolStripMenuItem refreshListToolStripMenuItem;
+        private System.Windows.Forms.SplitContainer splitContainerOotCheckListCheckItemSeparator;
     }
 }
 

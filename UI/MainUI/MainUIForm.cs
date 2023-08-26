@@ -36,32 +36,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             mainUIController.pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
 
             // Init game controller
-            string errorMessage;
-            if (ocarinaOfTimeController.Init(mainUIController.pictureBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT, out errorMessage))
+            if (ocarinaOfTimeController.Init(Log, mainUIController.pictureBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT))
                 ocarinaOfTimeController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
-            else
-                Log(errorMessage);
-
-            if (majoraMaskController.Init(mainUIController.pictureBoxMapMM, pictureBoxMMItemList, lbCheckListMM, out errorMessage))
+            if (majoraMaskController.Init(Log, mainUIController.pictureBoxMapMM, pictureBoxMMItemList, lbCheckListMM))
                 majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
-            else
-                Log(errorMessage);
-        }
-
-        private void BtnStartListenerClick(object sender, EventArgs e)
-        {
-            var emulatorWrapper = emulatorController.GetSelectedEmulator(cbEmulatorList.SelectedIndex);
-            var romeType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
-            if (!mainUIController.StartMemoryListener(emulatorWrapper, romeType, OnOOTItemLogicChange, OnMMItemLogicChange, out string error))
-                Log(error);
-            else
-                Log("Thread started");
-        }
-
-        private void BtnStopListener_Click(object sender, EventArgs e)
-        {
-            mainUIController.StopMemoryListener();
-            Log("Thread Stoped");
         }
 
         private void OnOOTItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> itemLogicProperty)
@@ -86,7 +64,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void UpdateTabIfOOTxMM(TabPage newTabToDisplay)
         {
-            if (emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex) != RomType.RANDOMIZE_OOT_X_MM)
+            if (emulatorController.GetSelectedRomType(toolStripComboBoxRomTypeList.SelectedIndex) != RomType.RANDOMIZE_OOT_X_MM)
                 return;
             if (tabGameMenu.SelectedTab == newTabToDisplay)
                 return;
@@ -95,30 +73,29 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void UpdateRomList(List<RomType> romTypes)
         {
-            cbRomTypeList.SelectedIndex = -1;
-            cbRomTypeList.Items.Clear();
-            cbRomTypeList.Items.AddRange(romTypes.Select((it) => it.ToString()).ToArray());
-            cbRomTypeList.SelectedIndex = cbRomTypeList.Items.Count > 0 ? 0 : -1;
+            toolStripComboBoxRomTypeList.SelectedIndex = -1;
+            toolStripComboBoxRomTypeList.Items.Clear();
+            toolStripComboBoxRomTypeList.Items.AddRange(romTypes.Select((it) => it.ToString()).ToArray());
+            toolStripComboBoxRomTypeList.SelectedIndex = toolStripComboBoxRomTypeList.Items.Count >= 0 ? 0 : -1;
         }
 
         private void UpdateCbEmulatorList(List<AbstractRomController> emulatorList)
         {
-            cbEmulatorList.SelectedIndex = -1;
-            cbEmulatorList.Items.Clear();
-            cbEmulatorList.Items.AddRange(emulatorList.Select(it => it.GetDisplayName()).ToArray());
-            cbEmulatorList.SelectedIndex = cbEmulatorList.Items.Count > 0 ? 0 : -1;
+            toolStripComboBoxEmulatorList.SelectedIndex = -1;
+            toolStripComboBoxEmulatorList.Items.Clear();
+            toolStripComboBoxEmulatorList.Items.AddRange(emulatorList.Select(it => it.GetDisplayName()).ToArray());
+            toolStripComboBoxEmulatorList.SelectedIndex = toolStripComboBoxEmulatorList.Items.Count > 0 ? 0 : -1;
         }
 
         private void OnEmulatorStartStop(bool started)
         {
-            btnStartListener.Enabled = !started;
-            btnStopListener.Enabled = started;
-            btnRefreshGameAndRom.Enabled = !started;
-            cbEmulatorList.Enabled = !started;
-            cbRomTypeList.Enabled = !started;
+            stratStopToolStripMenuItemStartStopEmulator.Text = started ? "Stop" : "Start";
+            refreshListToolStripMenuItem.Enabled = !started;
+            toolStripComboBoxEmulatorList.Enabled = !started;
+            toolStripComboBoxRomTypeList.Enabled = !started;
             if (started)
             {
-                var romType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
+                var romType = emulatorController.GetSelectedRomType(toolStripComboBoxRomTypeList.SelectedIndex);
                 tabGameMenu.TabPages.Clear();
                 switch (romType)
                 {
@@ -142,24 +119,44 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Debug.WriteLine(message);
         }
 
-        private void btnRefreshGameAndRom_Click(object sender, EventArgs e)
-        {
-            emulatorController.RefreshEmulatorAndGameList();
-        }
-
-        private void btnOpenChekLogicEditor_Click(object sender, EventArgs e)
+        private void OnCheckLogicEditorClick(object sender, EventArgs e)
         {
             new CheckLogicEditor.CheckLogicEditor().Show(this);
         }
 
-        private void btnOpenLogicTester_Click(object sender, EventArgs e)
+        private void OnLogicTesterClick(object sender, EventArgs e)
         {
             new LogicTester.LogicTester().Show(this);
         }
 
-        private void btnOotLogicCreator_Click(object sender, EventArgs e)
+        private void OnOotLogicCreatorClick(object sender, EventArgs e)
         {
             new OcarinaOfTimeLogicCreator.OcarinaOfTimeLogicCreator().Show(this);
+        }
+
+        private void OnStartStopEmulatorClick(object sender, EventArgs e)
+        {
+            if (mainUIController.isMemoryListenerStartedSubject.Value)
+            {
+                // Stop memory listener
+                mainUIController.StopMemoryListener();
+                Log("Thread Stoped");
+            }
+            else
+            {
+                // Start memory listener
+                var emulatorWrapper = emulatorController.GetSelectedEmulator(toolStripComboBoxEmulatorList.SelectedIndex);
+                var romeType = emulatorController.GetSelectedRomType(toolStripComboBoxRomTypeList.SelectedIndex);
+                if (!mainUIController.StartMemoryListener(emulatorWrapper, romeType, OnOOTItemLogicChange, OnMMItemLogicChange, out string error))
+                    Log(error);
+                else
+                    Log("Thread started");
+            }
+        }
+
+        private void OnRefreshEmulatorListClick(object sender, EventArgs e)
+        {
+            emulatorController.RefreshEmulatorAndGameList();
         }
     }
 }

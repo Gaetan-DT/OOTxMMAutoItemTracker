@@ -21,12 +21,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<MajoraMaskCheckLogic> checkLogics;
 
         public override bool Init(
+            Action<string> logWrite,
             PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxZoomMoveController,
             PictureBox pbItemList, 
-            ListBox lbCheckList, 
-            out string errorMessage)
+            ListBox lbCheckList)
         {
-            errorMessage = "";
             try
             {
                 this.pictureBoxZoomMoveController = pictureBoxZoomMoveController;
@@ -49,7 +48,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             catch (Exception e)
             {
                 Debug.WriteLine(e);
-                errorMessage = e.Message;
+                logWrite(e.Message);
                 return false;
             }
         }

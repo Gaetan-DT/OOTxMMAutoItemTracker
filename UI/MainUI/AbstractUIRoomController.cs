@@ -21,10 +21,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
         protected PictureBoxZoomMoveController<CheckLogicZone> pictureBoxZoomMoveController;
 
         public abstract bool Init(
+            Action<string> logWrite,
             PictureBoxZoomMoveController<CheckLogicZone> pictureBoxZoomMoveController,
             PictureBox pbItemList, 
-            ListBox lbCheckList, 
-            out string errorMessage);
+            ListBox lbCheckList);
 
 
         public abstract void DrawSquareCategory(int rectWidthAndHeight);

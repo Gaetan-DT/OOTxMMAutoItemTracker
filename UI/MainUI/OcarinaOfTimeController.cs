@@ -24,6 +24,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         const string ITEM_CHECK_LOGIC_CATEGORY_PATH = @"\Resource\CheckLogic\" + OcarinaOfTimeCheckLogicCategory.CST_DEFAULT_FILE_NAME;
         const string ITEM_LOGIC_FILE_NAME = LogicFile<object>.CST_REQ_CASUAL_PATH + LogicFile<object>.CST_OOT_REQ_FILE_NAME;
 
+        private Action<string> logWrite;
+
         private LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile;
         public OcarinaOfTimeLogicResolver logicResolver;
 
@@ -32,22 +34,31 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<OcarinaOfTimeCheckLogic> checkLogics;
 
         public override bool Init(
+            Action<string> logWrite,
             PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBoxZoomMoveController, 
             PictureBox pbItemList, 
-            ListBox lbCheckList, 
-            out string errorMessage)
+            ListBox lbCheckList)
         {
-            errorMessage = "";
             try
             {
+                this.logWrite = logWrite;
                 this.pictureBoxZoomMoveController = pictureBoxZoomMoveController;
                 // Init picture box item list
                 this.pictureBoxItemList = pbItemList;
                 this.pictureBoxItemList.Paint += DrawAllItemList;
                 this.pictureBoxItemList.Refresh();
+                this.pictureBoxItemList.Resize += (s, e) =>
+                {
+                    logWrite("On pictureBoxItemList resize");
+                };
                 // Init ListBox
                 lbCheckList.DrawItem += DrawCheckList;
                 lbCheckList.MouseClick += OnCheckListItemClick;
+                lbCheckList.Resize += (s, e) =>
+                {
+                    logWrite("On lbCheckList resize");
+                };
+
                 // Init image
                 itemSpriteMono = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_MONO_PATH));
                 itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
@@ -62,19 +73,18 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
             catch (Exception e)
             {
-                Debug.WriteLine(e);
-                errorMessage = e.Message;
+                logWrite(e.Message);
                 return false;
             }
         }
 
         public void RefreshRegionInDrawingFollowingCheck(List<OcarinaOfTimeCheckLogic> checkLogic)
         {
-            Debug.WriteLine($"Call RefreshRegionInDrawingFollowingCheck with {checkLogic.Count} check updated");
+            logWrite($"Call RefreshRegionInDrawingFollowingCheck with {checkLogic.Count} check updated");
             // Get all region to update from the list of checkLogic
             foreach (var checkCategory in checkLogic.Select((it) => it.Zone).Distinct())
             {
-                Debug.WriteLine($"Updated check for the following category: [{checkCategory}]");
+                logWrite($"Updated check for the following category: [{checkCategory}]");
                 RefreshRegionInDrawingFollowingCheck(checkCategory);
             }
         }
@@ -160,6 +170,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public override void DrawAllItemList(object sender, PaintEventArgs e)
         {
+            
             Graphics g = e.Graphics;
             g.Clear(Color.White);
             foreach (var itemLogic in itemLogics)
@@ -174,12 +185,22 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 else
                     imageToDraw = itemSpriteMono.Clone(new Rectangle(posX, posY, ITEM_LIST_SIZE_IN_FILE, ITEM_LIST_SIZE_IN_FILE), itemSpriteMono.PixelFormat);
                 var point = GetPositionInDrawingOfItemLogicPropertyName(itemLogic);
-                g.DrawImage(imageToDraw, new Rectangle(point.X * ITEM_LIST_SIZE, point.Y * ITEM_LIST_SIZE, ITEM_LIST_SIZE, ITEM_LIST_SIZE));
+
+                var scaledSizeX = (sender as PictureBox).Width / 6;
+                var scaledSizeY = (sender as PictureBox).Height / 11;
+
+                var scaledSizeXY = Math.Min(scaledSizeX, scaledSizeY);
+
+                var scaledX = (point.X * scaledSizeXY);
+                var scaledY = (point.Y * scaledSizeXY);
+
+                g.DrawImage(imageToDraw, new Rectangle(scaledX, scaledY, scaledSizeXY, scaledSizeXY));
             }
         }
 
         public override void DrawCheckList(object sender, DrawItemEventArgs e)
         {
+
             if (e.Index < 0)
                 return;
             var listBox = (ListBox)sender;

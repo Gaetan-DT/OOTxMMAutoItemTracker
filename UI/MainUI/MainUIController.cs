@@ -19,7 +19,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private const string CST_OOT_MAP_PATH = @"\Resource\Map\OOT.png";
 
         private AbstractMemoryListener memoryListener = null;
-        public ReplaySubject<bool> isMemoryListenerStartedSubject = new ReplaySubject<bool>();
+        public BehaviorSubject<bool> isMemoryListenerStartedSubject = new BehaviorSubject<bool>(false);
 
         public PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBoxMapOOT;
         public PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxMapMM;
