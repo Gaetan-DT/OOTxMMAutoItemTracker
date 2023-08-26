@@ -20,11 +20,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<MajoraMaskCheckLogicCategory> checkLogicCategories;
         public List<MajoraMaskCheckLogic> checkLogics;
 
-        public override bool Init(PictureBox pbItemList, ListBox lbCheckList, out string errorMessage)
+        public override bool Init(
+            PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxZoomMoveController,
+            PictureBox pbItemList, 
+            ListBox lbCheckList, 
+            out string errorMessage)
         {
             errorMessage = "";
             try
             {
+                this.pictureBoxZoomMoveController = pictureBoxZoomMoveController;
                 // Init picture box item list
                 this.pictureBoxItemList = pbItemList;
                 this.pictureBoxItemList.Paint += DrawAllItemList;
@@ -59,11 +64,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     listbox.Items.Add(checkLogic);
         }
 
-        public override void DrawSquareCategory(PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBox, int rectWidthAndHeight)
+        public override void DrawSquareCategory(int rectWidthAndHeight)
         {
             foreach (var checkLogicCategory in checkLogicCategories)
             {
-                pictureBox.AddRect(
+                pictureBoxZoomMoveController.AddRect(
                     checkLogicCategory.SquarePositionX - rectWidthAndHeight / 2,
                     checkLogicCategory.SquarePositionY - rectWidthAndHeight / 2,
                     rectWidthAndHeight, rectWidthAndHeight,

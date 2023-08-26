@@ -31,11 +31,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories;
         public List<OcarinaOfTimeCheckLogic> checkLogics;
 
-        public override bool Init(PictureBox pbItemList, ListBox lbCheckList, out string errorMessage)
+        public override bool Init(
+            PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBoxZoomMoveController, 
+            PictureBox pbItemList, 
+            ListBox lbCheckList, 
+            out string errorMessage)
         {
             errorMessage = "";
             try
             {
+                this.pictureBoxZoomMoveController = pictureBoxZoomMoveController;
                 // Init picture box item list
                 this.pictureBoxItemList = pbItemList;
                 this.pictureBoxItemList.Paint += DrawAllItemList;
@@ -53,7 +58,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME);
                 // Init Logic resolver
                 logicResolver = new OcarinaOfTimeLogicResolver(logicFile);
-                logicResolver.OnCheckUpdate.Subscribe((it) => Debug.WriteLine($"Updated check change for [{it.Id}], new value [{it.IsAvailable}]")); // Temp
+                logicResolver.OnCheckUpdate.Subscribe((it) => RefreshRegionInDrawingFollowingCheck(it));
                 return true;
             }
             catch (Exception e)
@@ -62,6 +67,42 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 errorMessage = e.Message;
                 return false;
             }
+        }
+
+        public void RefreshRegionInDrawingFollowingCheck(OcarinaOfTimeCheckLogic checkLogic)
+        {
+            Debug.WriteLine($"Updated check change for [{checkLogic.Id}], new value [{checkLogic.IsAvailable}]");
+            //checkLogic.Id
+            var checkLogicCat = checkLogicCategories.Find((it) => OcarinaOfTimeCheckLogicZoneMethod.FromString(it.Name) == checkLogic.Zone);
+            if (checkLogicCat == null)
+                return;
+            bool isAllClaim = true;
+            bool isAllCheckAvailable = true;
+            bool isAtLeastOneCheckAvailable = false;
+            int availableCheck = 0;
+            foreach (var checkInZone in checkLogics.FindAll((it) => it.Zone == checkLogic.Zone))
+            {
+                if (!checkLogic.IsClaim)
+                    isAllClaim = false;
+                if (checkLogic.IsAvailable && !checkLogic.IsClaim)
+                    availableCheck++;
+                if (!checkLogic.IsAvailable)
+                    isAllCheckAvailable = false;
+                else
+                    isAtLeastOneCheckAvailable = true;
+            }
+            Color color;
+            if (isAllClaim)
+                color = Color.Gray;
+            else if (isAllCheckAvailable)
+                color = Color.Green;
+            else if (isAtLeastOneCheckAvailable)
+                color = Color.Yellow;
+            else
+                color = Color.Red;
+            var zoneGraphucsPathWithData = pictureBoxZoomMoveController.GetGraphicsPathWithData(checkLogic.Zone);
+            zoneGraphucsPathWithData.pathColor = color;
+            zoneGraphucsPathWithData.pathInnerText = availableCheck.ToString();
         }
 
         public void RefreshCheckListForCategory(ListBox listbox, OcarinaOfTimeCheckLogicZone checkLogicZone)
@@ -97,11 +138,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
             pictureBoxItemList.Refresh();
         }
 
-        public override void DrawSquareCategory(PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBox, int rectWidthAndHeight)
+        public override void DrawSquareCategory(int rectWidthAndHeight)
         {
             foreach (var checkLogicCategory in checkLogicCategories)
             {
-                pictureBox.AddRect(
+
+                pictureBoxZoomMoveController.AddRect(
                     checkLogicCategory.SquarePositionX - rectWidthAndHeight / 2,
                     checkLogicCategory.SquarePositionY - rectWidthAndHeight / 2,
                     rectWidthAndHeight, rectWidthAndHeight,

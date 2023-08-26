@@ -37,13 +37,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
             // Init game controller
             string errorMessage;
-            if (ocarinaOfTimeController.Init(pictureBoxOOTItemList, lbCheckListOOT, out errorMessage))
-                ocarinaOfTimeController.DrawSquareCategory(mainUIController.pictureBoxMapOOT, CST_RECT_WIDTH_HEIGHT);
+            if (ocarinaOfTimeController.Init(mainUIController.pictureBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT, out errorMessage))
+                ocarinaOfTimeController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
             else
                 Log(errorMessage);
 
-            if (majoraMaskController.Init(pictureBoxMMItemList, lbCheckListMM, out errorMessage))
-                majoraMaskController.DrawSquareCategory(mainUIController.pictureBoxMapMM, CST_RECT_WIDTH_HEIGHT);
+            if (majoraMaskController.Init(mainUIController.pictureBoxMapMM, pictureBoxMMItemList, lbCheckListMM, out errorMessage))
+                majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
             else
                 Log(errorMessage);
         }

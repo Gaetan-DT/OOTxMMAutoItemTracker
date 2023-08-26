@@ -18,9 +18,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
         protected Bitmap itemSpriteColor;
 
         public PictureBox pictureBoxItemList;
+        protected PictureBoxZoomMoveController<CheckLogicZone> pictureBoxZoomMoveController;
 
-        public abstract bool Init(PictureBox pbItemList, ListBox lbCheckList, out string errorMessage);
-        public abstract void DrawSquareCategory(PictureBoxZoomMoveController<CheckLogicZone> pictureBox, int rectWidthAndHeight);
+        public abstract bool Init(
+            PictureBoxZoomMoveController<CheckLogicZone> pictureBoxZoomMoveController,
+            PictureBox pbItemList, 
+            ListBox lbCheckList, 
+            out string errorMessage);
+
+
+        public abstract void DrawSquareCategory(int rectWidthAndHeight);
         public abstract void DrawAllItemList(object sender, PaintEventArgs e);
         public abstract void DrawCheckList(object sender, DrawItemEventArgs e);
 

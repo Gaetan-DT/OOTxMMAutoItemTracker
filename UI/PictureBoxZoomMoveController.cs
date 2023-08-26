@@ -6,6 +6,48 @@ using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.UI
 {
+    public class GraphicsPathWithData
+    {
+        public readonly Rectangle rect;
+        public Color pathColor;
+        public string pathInnerText;
+
+        public GraphicsPathWithData(Rectangle rect, Color pathColor, string pathInnerText)
+        {
+            this.rect = rect;
+            this.pathColor = pathColor;
+            this.pathInnerText = pathInnerText;
+        }
+
+        private Point GetRectCenter()
+        {
+            return new Point()
+            {
+                X = rect.X + (rect.Width/2),
+                Y = rect.Y + (rect.Height/2)
+            };
+        }
+
+        public GraphicsPath CreateGraphicPath()
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddRectangle(this.rect);
+            return path;
+        }
+
+        public GraphicsPath CreateStringPath()
+        {
+            GraphicsPath path = new GraphicsPath();
+            var fontFamily = new FontFamily("Times New Roman");
+            float emSize = 30;
+            StringFormat sf = new StringFormat();
+            sf.LineAlignment = StringAlignment.Center;
+            sf.Alignment = StringAlignment.Center;
+            path.AddString(pathInnerText, fontFamily, ((int)FontStyle.Bold), emSize, GetRectCenter(), sf);
+            return path;
+        }
+    }
+
     public class PictureBoxZoomMoveController<T>
     {
         #region CONSTANT
@@ -31,7 +73,7 @@ namespace MajoraAutoItemTracker.UI
 
         private bool _isLeftClickDown = false;
 
-        private readonly List<Tuple<GraphicsPath, T>> _ListPath = new List<Tuple<GraphicsPath, T>>();
+        private readonly List<Tuple<GraphicsPathWithData, T>> _ListPath = new List<Tuple<GraphicsPathWithData, T>>();
 
         public PictureBoxZoomMoveController(Panel panel)
         {
@@ -60,18 +102,29 @@ namespace MajoraAutoItemTracker.UI
             _pictureBox.Size = image.Size;
         }
 
-        public void AddPath(GraphicsPath path, T tag)
+        public void AddPath(GraphicsPathWithData path, T tag)
         {
-            _ListPath.Add(new Tuple<GraphicsPath, T>(path, tag));
+            _ListPath.Add(new Tuple<GraphicsPathWithData, T>(path, tag));
             _pictureBox.Invalidate();
         }
 
         public void AddRect(int left, int top, int width, int height, T tag)
         {
-            var rect = new Rectangle(left, top, width, height);
-            GraphicsPath path = new GraphicsPath();
-            path.AddRectangle(rect);
-            AddPath(path, tag);
+            GraphicsPathWithData data = new GraphicsPathWithData(
+                new Rectangle(left, top, width, height),
+                Color.Red,
+                "");
+            AddPath(data, tag);
+        }
+
+        public GraphicsPathWithData GetGraphicsPathWithData(T tag)
+        {
+            return _ListPath.Find((it) => it.Item2.Equals(tag)).Item1;
+        }
+
+        public void RefreshDrawwing()
+        {
+            _pictureBox.Refresh();
         }
 
         public void ClearPath()
@@ -82,8 +135,13 @@ namespace MajoraAutoItemTracker.UI
 
         private void OnPicImagePaint(object sender, PaintEventArgs e)
         {
-            var Brush = new SolidBrush(Color.Red);
-            _ListPath.ForEach(x => e.Graphics.FillPath(Brush, GetScaledPath(x.Item1)));
+            _ListPath.ForEach(x =>
+            {
+                var graphicsPathWithData = x.Item1;
+                var Brush = new SolidBrush(graphicsPathWithData.pathColor);
+                e.Graphics.FillPath(Brush, GetScaledPath(graphicsPathWithData.CreateGraphicPath()));
+                e.Graphics.FillPath(new SolidBrush(Color.Black), GetScaledPath(graphicsPathWithData.CreateStringPath()));
+            });
         }
 
         private GraphicsPath GetScaledPath(GraphicsPath path)
@@ -211,9 +269,9 @@ namespace MajoraAutoItemTracker.UI
 
         #region Utils
 
-        private bool HasClickInPath(MouseEventArgs e, Tuple<GraphicsPath, T> pathObject)
+        private bool HasClickInPath(MouseEventArgs e, Tuple<GraphicsPathWithData, T> pathObject)
         {
-            var scaledPath = GetScaledPath(pathObject.Item1);
+            var scaledPath = GetScaledPath(pathObject.Item1.CreateGraphicPath());
             var bounds = scaledPath.GetBounds();
             return e.X >= bounds.Left && e.X <= bounds.Right &&
                 e.Y >= bounds.Top && e.Y <= bounds.Bottom;
