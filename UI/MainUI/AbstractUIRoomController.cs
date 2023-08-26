@@ -17,20 +17,45 @@ namespace MajoraAutoItemTracker.UI.MainUI
         protected Bitmap itemSpriteMono;
         protected Bitmap itemSpriteColor;
 
-        public PictureBox pictureBoxItemList;
-        protected PictureBoxZoomMoveController<CheckLogicZone> pictureBoxZoomMoveController;
+        protected Action<string> logWrite;
 
-        public abstract bool Init(
+        protected PictureBoxZoomMoveController<CheckLogicZone> pictureBoxZoomMoveController;
+        protected PictureBox pictureBoxItemList;
+
+        public bool Init(
             Action<string> logWrite,
             PictureBoxZoomMoveController<CheckLogicZone> pictureBoxZoomMoveController,
             PictureBox pbItemList, 
-            ListBox lbCheckList);
+            ListBox lbCheckList)
+        {
+            this.logWrite = logWrite;
+            this.pictureBoxZoomMoveController = pictureBoxZoomMoveController;
+            this.pictureBoxItemList = pbItemList;
+            // Init picture box item list
+            this.pictureBoxItemList.Paint += DrawAllItemList;
+            this.pictureBoxItemList.Refresh();
+
+            // Init ListBox
+            lbCheckList.DrawItem += DrawCheckList;
+            lbCheckList.MouseClick += OnCheckListItemClick;
+
+            // Perform specific action
+            return OnInit(lbCheckList);
+        }
+
+        protected abstract bool OnInit(ListBox lbCheckList);
 
 
         public abstract void DrawSquareCategory(int rectWidthAndHeight);
-        public abstract void DrawAllItemList(object sender, PaintEventArgs e);
-        public abstract void DrawCheckList(object sender, DrawItemEventArgs e);
+        protected abstract void DrawAllItemList(object sender, PaintEventArgs e);
+        protected abstract void DrawCheckList(object sender, DrawItemEventArgs e);
 
-        public abstract void OnCheckListItemClick(object sender, MouseEventArgs e);
+        /// <summary>
+        /// When we click on a check on the list box.
+        /// We find the check list and Update the IsClaim bool
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected abstract void OnCheckListItemClick(object sender, MouseEventArgs e);
     }
 }

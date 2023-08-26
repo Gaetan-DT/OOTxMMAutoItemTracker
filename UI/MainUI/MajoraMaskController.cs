@@ -20,22 +20,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<MajoraMaskCheckLogicCategory> checkLogicCategories;
         public List<MajoraMaskCheckLogic> checkLogics;
 
-        public override bool Init(
-            Action<string> logWrite,
-            PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxZoomMoveController,
-            PictureBox pbItemList, 
-            ListBox lbCheckList)
+        protected override bool OnInit(ListBox lbCheckList)
         {
             try
             {
-                this.pictureBoxZoomMoveController = pictureBoxZoomMoveController;
-                // Init picture box item list
-                this.pictureBoxItemList = pbItemList;
-                this.pictureBoxItemList.Paint += DrawAllItemList;
-                this.pictureBoxItemList.Refresh();
-                // Init ListBox
-                lbCheckList.DrawItem += DrawCheckList;
-                lbCheckList.MouseClick += OnCheckListItemClick;
                 // Init image
                 itemSpriteMono = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_MONO_PATH));
                 itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
@@ -111,7 +99,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
         }
 
-        public override void DrawAllItemList(object sender, PaintEventArgs e)
+        protected override void DrawAllItemList(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             g.Clear(Color.White);
@@ -131,7 +119,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }
 
-        public override void DrawCheckList(object sender, DrawItemEventArgs e)
+        protected override void DrawCheckList(object sender, DrawItemEventArgs e)
         {
             if (e.Index < 0)
                 return;
@@ -147,7 +135,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             e.Graphics.DrawString(checkLogic.Id, e.Font, brush, e.Bounds, StringFormat.GenericDefault);
         }
 
-        public override void OnCheckListItemClick(object sender, MouseEventArgs e)
+        protected override void OnCheckListItemClick(object sender, MouseEventArgs e)
         {
             var listBox = (ListBox)sender;
             var checkList = (MajoraMaskCheckLogic)listBox.SelectedItem;

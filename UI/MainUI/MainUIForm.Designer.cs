@@ -35,6 +35,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUIForm));
             this.tboxDebug = new System.Windows.Forms.TextBox();
             this.pictureBoxOOTItemList = new System.Windows.Forms.PictureBox();
             this.lbCheckListOOT = new System.Windows.Forms.ListBox();
@@ -42,10 +43,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tabGameMenu = new System.Windows.Forms.TabControl();
             this.tabOcarinaOfTime = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainerOotCheckListCheckItemSeparator = new System.Windows.Forms.SplitContainer();
             this.tabMajoraMask = new System.Windows.Forms.TabPage();
             this.panelMapMM = new System.Windows.Forms.Panel();
             this.lbCheckListMM = new System.Windows.Forms.ListBox();
             this.pictureBoxMMItemList = new System.Windows.Forms.PictureBox();
+            this.tabPageLog = new System.Windows.Forms.TabPage();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,14 +56,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.checkLogicEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logicTesterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ocarinaOfTimeLogicCreatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPageLog = new System.Windows.Forms.TabPage();
-            this.toolStripComboBoxEmulatorList = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripComboBoxRomTypeList = new System.Windows.Forms.ToolStripComboBox();
             this.emulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBoxEmulatorList = new System.Windows.Forms.ToolStripComboBox();
             this.romToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBoxRomTypeList = new System.Windows.Forms.ToolStripComboBox();
             this.stratStopToolStripMenuItemStartStopEmulator = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainerOotCheckListCheckItemSeparator = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -68,14 +69,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tabMajoraMask.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).BeginInit();
-            this.menuStripMain.SuspendLayout();
-            this.tabPageLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerOotCheckListCheckItemSeparator)).BeginInit();
             this.splitContainerOotCheckListCheckItemSeparator.Panel1.SuspendLayout();
             this.splitContainerOotCheckListCheckItemSeparator.Panel2.SuspendLayout();
             this.splitContainerOotCheckListCheckItemSeparator.SuspendLayout();
+            this.tabMajoraMask.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).BeginInit();
+            this.tabPageLog.SuspendLayout();
+            this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // tboxDebug
@@ -167,6 +168,25 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 71;
             // 
+            // splitContainerOotCheckListCheckItemSeparator
+            // 
+            this.splitContainerOotCheckListCheckItemSeparator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerOotCheckListCheckItemSeparator.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerOotCheckListCheckItemSeparator.Margin = new System.Windows.Forms.Padding(0);
+            this.splitContainerOotCheckListCheckItemSeparator.Name = "splitContainerOotCheckListCheckItemSeparator";
+            this.splitContainerOotCheckListCheckItemSeparator.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainerOotCheckListCheckItemSeparator.Panel1
+            // 
+            this.splitContainerOotCheckListCheckItemSeparator.Panel1.Controls.Add(this.pictureBoxOOTItemList);
+            // 
+            // splitContainerOotCheckListCheckItemSeparator.Panel2
+            // 
+            this.splitContainerOotCheckListCheckItemSeparator.Panel2.Controls.Add(this.lbCheckListOOT);
+            this.splitContainerOotCheckListCheckItemSeparator.Size = new System.Drawing.Size(305, 625);
+            this.splitContainerOotCheckListCheckItemSeparator.SplitterDistance = 415;
+            this.splitContainerOotCheckListCheckItemSeparator.TabIndex = 0;
+            // 
             // tabMajoraMask
             // 
             this.tabMajoraMask.Controls.Add(this.panelMapMM);
@@ -208,6 +228,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.pictureBoxMMItemList.Size = new System.Drawing.Size(427, 642);
             this.pictureBoxMMItemList.TabIndex = 5;
             this.pictureBoxMMItemList.TabStop = false;
+            // 
+            // tabPageLog
+            // 
+            this.tabPageLog.Controls.Add(this.tboxDebug);
+            this.tabPageLog.Location = new System.Drawing.Point(4, 25);
+            this.tabPageLog.Name = "tabPageLog";
+            this.tabPageLog.Size = new System.Drawing.Size(1256, 625);
+            this.tabPageLog.TabIndex = 2;
+            this.tabPageLog.Text = "Log";
+            this.tabPageLog.UseVisualStyleBackColor = true;
             // 
             // menuStripMain
             // 
@@ -270,26 +300,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.ocarinaOfTimeLogicCreatorToolStripMenuItem.Text = "Ocarina of time Logic creator";
             this.ocarinaOfTimeLogicCreatorToolStripMenuItem.Click += new System.EventHandler(this.OnOotLogicCreatorClick);
             // 
-            // tabPageLog
-            // 
-            this.tabPageLog.Controls.Add(this.tboxDebug);
-            this.tabPageLog.Location = new System.Drawing.Point(4, 25);
-            this.tabPageLog.Name = "tabPageLog";
-            this.tabPageLog.Size = new System.Drawing.Size(1256, 625);
-            this.tabPageLog.TabIndex = 2;
-            this.tabPageLog.Text = "Log";
-            this.tabPageLog.UseVisualStyleBackColor = true;
-            // 
-            // toolStripComboBoxEmulatorList
-            // 
-            this.toolStripComboBoxEmulatorList.Name = "toolStripComboBoxEmulatorList";
-            this.toolStripComboBoxEmulatorList.Size = new System.Drawing.Size(150, 23);
-            // 
-            // toolStripComboBoxRomTypeList
-            // 
-            this.toolStripComboBoxRomTypeList.Name = "toolStripComboBoxRomTypeList";
-            this.toolStripComboBoxRomTypeList.Size = new System.Drawing.Size(150, 23);
-            // 
             // emulatorToolStripMenuItem
             // 
             this.emulatorToolStripMenuItem.Enabled = false;
@@ -297,12 +307,22 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.emulatorToolStripMenuItem.Size = new System.Drawing.Size(67, 23);
             this.emulatorToolStripMenuItem.Text = "Emulator";
             // 
+            // toolStripComboBoxEmulatorList
+            // 
+            this.toolStripComboBoxEmulatorList.Name = "toolStripComboBoxEmulatorList";
+            this.toolStripComboBoxEmulatorList.Size = new System.Drawing.Size(150, 23);
+            // 
             // romToolStripMenuItem
             // 
             this.romToolStripMenuItem.Enabled = false;
             this.romToolStripMenuItem.Name = "romToolStripMenuItem";
             this.romToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
             this.romToolStripMenuItem.Text = "Rom";
+            // 
+            // toolStripComboBoxRomTypeList
+            // 
+            this.toolStripComboBoxRomTypeList.Name = "toolStripComboBoxRomTypeList";
+            this.toolStripComboBoxRomTypeList.Size = new System.Drawing.Size(150, 23);
             // 
             // stratStopToolStripMenuItemStartStopEmulator
             // 
@@ -318,25 +338,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.refreshListToolStripMenuItem.Text = "Refresh List";
             this.refreshListToolStripMenuItem.Click += new System.EventHandler(this.OnRefreshEmulatorListClick);
             // 
-            // splitContainerOotCheckListCheckItemSeparator
-            // 
-            this.splitContainerOotCheckListCheckItemSeparator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerOotCheckListCheckItemSeparator.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerOotCheckListCheckItemSeparator.Margin = new System.Windows.Forms.Padding(0);
-            this.splitContainerOotCheckListCheckItemSeparator.Name = "splitContainerOotCheckListCheckItemSeparator";
-            this.splitContainerOotCheckListCheckItemSeparator.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainerOotCheckListCheckItemSeparator.Panel1
-            // 
-            this.splitContainerOotCheckListCheckItemSeparator.Panel1.Controls.Add(this.pictureBoxOOTItemList);
-            // 
-            // splitContainerOotCheckListCheckItemSeparator.Panel2
-            // 
-            this.splitContainerOotCheckListCheckItemSeparator.Panel2.Controls.Add(this.lbCheckListOOT);
-            this.splitContainerOotCheckListCheckItemSeparator.Size = new System.Drawing.Size(305, 625);
-            this.splitContainerOotCheckListCheckItemSeparator.SplitterDistance = 415;
-            this.splitContainerOotCheckListCheckItemSeparator.TabIndex = 0;
-            // 
             // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -345,10 +346,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.Controls.Add(this.tabGameMenu);
             this.Controls.Add(this.menuStripMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripMain;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainUIForm";
-            this.Text = "Form1";
+            this.Text = "Ocarin Of Time And Majora Mask Auto Tracker By Rukko";
             this.Load += new System.EventHandler(this.OnMainUiFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).EndInit();
             this.tabGameMenu.ResumeLayout(false);
@@ -357,16 +359,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tabMajoraMask.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).EndInit();
-            this.menuStripMain.ResumeLayout(false);
-            this.menuStripMain.PerformLayout();
-            this.tabPageLog.ResumeLayout(false);
-            this.tabPageLog.PerformLayout();
             this.splitContainerOotCheckListCheckItemSeparator.Panel1.ResumeLayout(false);
             this.splitContainerOotCheckListCheckItemSeparator.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerOotCheckListCheckItemSeparator)).EndInit();
             this.splitContainerOotCheckListCheckItemSeparator.ResumeLayout(false);
+            this.tabMajoraMask.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).EndInit();
+            this.tabPageLog.ResumeLayout(false);
+            this.tabPageLog.PerformLayout();
+            this.menuStripMain.ResumeLayout(false);
+            this.menuStripMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

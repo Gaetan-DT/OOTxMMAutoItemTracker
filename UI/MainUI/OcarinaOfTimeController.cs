@@ -24,8 +24,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
         const string ITEM_CHECK_LOGIC_CATEGORY_PATH = @"\Resource\CheckLogic\" + OcarinaOfTimeCheckLogicCategory.CST_DEFAULT_FILE_NAME;
         const string ITEM_LOGIC_FILE_NAME = LogicFile<object>.CST_REQ_CASUAL_PATH + LogicFile<object>.CST_OOT_REQ_FILE_NAME;
 
-        private Action<string> logWrite;
-
         private LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile;
         public OcarinaOfTimeLogicResolver logicResolver;
 
@@ -33,32 +31,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories;
         public List<OcarinaOfTimeCheckLogic> checkLogics;
 
-        public override bool Init(
-            Action<string> logWrite,
-            PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBoxZoomMoveController, 
-            PictureBox pbItemList, 
-            ListBox lbCheckList)
+        protected override bool OnInit(ListBox lbCheckList)
         {
             try
             {
-                this.logWrite = logWrite;
-                this.pictureBoxZoomMoveController = pictureBoxZoomMoveController;
-                // Init picture box item list
-                this.pictureBoxItemList = pbItemList;
-                this.pictureBoxItemList.Paint += DrawAllItemList;
-                this.pictureBoxItemList.Refresh();
-                this.pictureBoxItemList.Resize += (s, e) =>
-                {
-                    logWrite("On pictureBoxItemList resize");
-                };
-                // Init ListBox
-                lbCheckList.DrawItem += DrawCheckList;
-                lbCheckList.MouseClick += OnCheckListItemClick;
-                lbCheckList.Resize += (s, e) =>
-                {
-                    logWrite("On lbCheckList resize");
-                };
-
                 // Init image
                 itemSpriteMono = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_MONO_PATH));
                 itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
@@ -168,7 +144,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }
 
-        public override void DrawAllItemList(object sender, PaintEventArgs e)
+        protected override void DrawAllItemList(object sender, PaintEventArgs e)
         {
             
             Graphics g = e.Graphics;
@@ -198,7 +174,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }
 
-        public override void DrawCheckList(object sender, DrawItemEventArgs e)
+        protected override void DrawCheckList(object sender, DrawItemEventArgs e)
         {
 
             if (e.Index < 0)
@@ -215,7 +191,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             e.Graphics.DrawString(checkLogic.Id, e.Font, brush, e.Bounds, StringFormat.GenericDefault);
         }
 
-        public override void OnCheckListItemClick(object sender, MouseEventArgs e)
+        protected override void OnCheckListItemClick(object sender, MouseEventArgs e)
         {
             var listBox = (ListBox)sender;
             var checkList = (OcarinaOfTimeCheckLogic)listBox.SelectedItem;
