@@ -87,5 +87,12 @@ namespace MajoraAutoItemTracker.Model.Enum.OOT
         {
             return value.ToString();
         }
+
+        public static IEnumerable<OcarinaOfTimeItemLogicPopertyName> GetAsList()
+        {
+            return System.Enum
+                .GetValues(typeof(OcarinaOfTimeItemLogicPopertyName))
+                .Cast<OcarinaOfTimeItemLogicPopertyName>();
+        }
     }
 }

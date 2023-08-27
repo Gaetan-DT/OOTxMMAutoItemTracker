@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MajoraAutoItemTracker.Model.Enum
 {
@@ -87,6 +89,13 @@ namespace MajoraAutoItemTracker.Model.Enum
         public static String ToString(MajoraMaskItemLogicPopertyName value)
         {
             return MajoraMaskItemLogicPopertyName.ImgOcarina.ToString();
+        }
+
+        public static IEnumerable<MajoraMaskItemLogicPopertyName> GetAsList()
+        {
+            return System.Enum
+                .GetValues(typeof(MajoraMaskItemLogicPopertyName))
+                .Cast<MajoraMaskItemLogicPopertyName>();
         }
     }
 }

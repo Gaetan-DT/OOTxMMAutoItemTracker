@@ -116,6 +116,8 @@
     <Compile Include="MemoryReader\MemoryListener\OcarinaOfTimeMemoryListener.cs" />
     <Compile Include="MemoryReader\MemoryListener\OOTxMMMemoryListener.cs" />
     <Compile Include="MemoryReader\MemoryOffset\OOTxMMOffsets.cs" />
+    <Compile Include="Model\CheckLogic\AbstractCheckLogic.cs" />
+    <Compile Include="Model\CheckLogic\CheckSaveFormat.cs" />
     <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogic.cs" />
     <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogicCategory.cs" />
     <Compile Include="Model\Enum\EquipmentBombBag.cs" />
@@ -186,6 +188,7 @@
     </Compile>
     <Compile Include="UI\MainUI\MajoraMaskController.cs" />
     <Compile Include="UI\MainUI\OcarinaOfTimeController.cs" />
+    <Compile Include="UI\MainUI\SaveCheckController.cs" />
     <Compile Include="UI\OcarinaOfTimeLogicCreator\LogicFileController.cs" />
     <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.cs">
       <SubType>Form</SubType>
@@ -232,7 +235,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resource\Save\" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>

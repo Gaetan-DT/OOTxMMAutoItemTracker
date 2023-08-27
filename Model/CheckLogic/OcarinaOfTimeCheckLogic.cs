@@ -7,16 +7,16 @@ using System.IO;
 
 namespace MajoraAutoItemTracker.Model.CheckLogic
 {
-    public class OcarinaOfTimeCheckLogic
+    public class OcarinaOfTimeCheckLogic : AbstractCheckLogic<OcarinaOfTimeCheckLogicZone>
     {
         public const string CST_DEFAULT_FILE_NAME = "oot_check_logic.json";
 
-        public String Id { get; set; }        
-        public OcarinaOfTimeCheckLogicZone Zone { get; set; }
+        public override String Id { get; set; }        
+        public override OcarinaOfTimeCheckLogicZone Zone { get; set; }
         public int SquarePositionX { get; set; }
         public int SquarePositionY { get; set; }
-        public bool IsClaim { get; set; }
-        public bool IsAvailable { get; set; }
+        public override bool IsClaim { get; set; }
+        public override bool IsAvailable { get; set; }
 
         public static List<OcarinaOfTimeCheckLogic> LoadDefault()
         {

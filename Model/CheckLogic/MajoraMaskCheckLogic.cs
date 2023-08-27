@@ -6,16 +6,16 @@ using System.IO;
 
 namespace MajoraAutoItemTracker.Model.CheckLogic
 {
-    public class MajoraMaskCheckLogic
+    public class MajoraMaskCheckLogic : AbstractCheckLogic<MajoraMaskCheckLogicZone>
     {
         public const string CST_DEFAULT_FILE_NAME = "check_logic.json";
 
-        public String Id { get; set; }        
-        public MajoraMaskCheckLogicZone Zone { get; set; }
+        public override String Id { get; set; }        
+        public override MajoraMaskCheckLogicZone Zone { get; set; }
         public int SquarePositionX { get; set; }
         public int SquarePositionY { get; set; }
-        public bool IsClaim { get; set; }
-        public bool IsAvailable { get; set; }
+        public override bool IsClaim { get; set; }
+        public override bool IsAvailable { get; set; }
 
         public static List<MajoraMaskCheckLogic> LoadDefault()
         {

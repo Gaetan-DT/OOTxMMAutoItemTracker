@@ -17,6 +17,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private readonly EmulatorController emulatorController = new EmulatorController();
         private readonly MajoraMaskController majoraMaskController = new MajoraMaskController();
         private readonly OcarinaOfTimeController ocarinaOfTimeController = new OcarinaOfTimeController();
+        private readonly SaveCheckController saveCheckController = new SaveCheckController();
 
         public MainUIForm()
         {
@@ -36,10 +37,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             mainUIController.pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
 
             // Init game controller
-            if (ocarinaOfTimeController.Init(Log, mainUIController.pictureBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT))
-                ocarinaOfTimeController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
-            if (majoraMaskController.Init(Log, mainUIController.pictureBoxMapMM, pictureBoxMMItemList, lbCheckListMM))
-                majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
+            ocarinaOfTimeController.Init(Log, mainUIController.pictureBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT);
+            ocarinaOfTimeController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
+            majoraMaskController.Init(Log, mainUIController.pictureBoxMapMM, pictureBoxMMItemList, lbCheckListMM);
+            majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
         }
 
         private void OnOOTItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> itemLogicProperty)
