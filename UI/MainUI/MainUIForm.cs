@@ -111,6 +111,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
                         break;
                 }
             }
+            else
+            {
+                tabGameMenu.TabPages.Clear();
+                tabGameMenu.TabPages.Add(tabOcarinaOfTime);
+                tabGameMenu.TabPages.Add(tabMajoraMask);
+            }
+            tabGameMenu.TabPages.Add(tabPageLog);
         }
 
         private void Log(String message)
