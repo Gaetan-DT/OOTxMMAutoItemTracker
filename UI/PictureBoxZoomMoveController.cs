@@ -125,6 +125,7 @@ namespace MajoraAutoItemTracker.UI
             _pictureBox.MouseClick += new MouseEventHandler(OnPicMouseClick);
             _pictureBox.Paint += new PaintEventHandler(OnPicImagePaint);
             _pictureBox.MouseWheel += new MouseEventHandler(OnPanelOrImageMouseWheel);
+            
         }
 
         #region Drawing management
@@ -138,7 +139,7 @@ namespace MajoraAutoItemTracker.UI
         public void AddPath(GraphicsPathWithData path, T tag)
         {
             _ListPath.Add(new Tuple<GraphicsPathWithData, T>(path, tag));
-            _pictureBox.Invalidate();
+            _pictureBox.Refresh();
         }
 
         public void AddRect(int left, int top, int width, int height, T tag)
@@ -163,7 +164,7 @@ namespace MajoraAutoItemTracker.UI
         public void ClearPath()
         {
             _ListPath.Clear();
-            _pictureBox.Invalidate();
+            _pictureBox.Refresh();
         }
 
         private void OnPicImagePaint(object sender, PaintEventArgs e)
