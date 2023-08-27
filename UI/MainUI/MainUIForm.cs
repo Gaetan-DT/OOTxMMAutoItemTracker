@@ -179,13 +179,35 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void OnFormClosing(object sender, FormClosingEventArgs e)
         {
-            var checkSaveFormatHeader = new CheckSaveFormatHeader()
+            saveCheckController.SaveToAutoSave(CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM));
+        }
+
+        private void OnManualLoadCheckClaim(object sender, EventArgs e)
+        {
+            var checkSaveList = saveCheckController.LoadFromFile();
+            if (checkSaveList != null)
             {
-                SaveRomType = RomType.RANDOMIZE_OOT_X_MM,
+                ocarinaOfTimeController.LoadFromSave(checkSaveList.OOTCheckList);
+                majoraMaskController.LoadFromSave(checkSaveList.MMCheckList);
+
+            }
+            Log(checkSaveList != null ? "Check loaded!" : "Unable to load check!");
+        }
+
+        private void OnManualSaveCheckClaim(object sender, EventArgs e)
+        {
+            saveCheckController.SaveToFile(CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM));
+            Log("Save done");
+        }
+
+        private CheckSaveFormatHeader CreatecheckSaveFormatHeader(RomType romType)
+        {
+            return new CheckSaveFormatHeader()
+            {
+                SaveRomType = romType,
                 OOTCheckList = ocarinaOfTimeController.SaveListCheck(),
                 MMCheckList = majoraMaskController.SaveListCheck()
             };
-            saveCheckController.SaveToAutoSave(checkSaveFormatHeader);
         }
     }
 }
