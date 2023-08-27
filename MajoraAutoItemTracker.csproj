@@ -68,6 +68,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cyotek.Windows.Forms.ImageBox, Version=1.2.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
+      <HintPath>packages\CyotekImageBox.1.3.1\lib\net20\Cyotek.Windows.Forms.ImageBox.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -197,7 +200,7 @@
       <DependentUpon>OcarinaOfTimeLogicCreator.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreatorController.cs" />
-    <Compile Include="UI\PictureBoxZoomMoveController.cs" />
+    <Compile Include="UI\ImageBoxController.cs" />
     <EmbeddedResource Include="UI\CheckLogicEditor\CheckLogicEditor.resx">
       <DependentUpon>CheckLogicEditor.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.MemoryReader;
+﻿using Cyotek.Windows.Forms;
+using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.MemoryReader.MemoryData;
 using MajoraAutoItemTracker.MemoryReader.MemoryListener;
 using MajoraAutoItemTracker.MemoryReader.ModLoader64;
@@ -21,22 +22,22 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private AbstractMemoryListener memoryListener = null;
         public BehaviorSubject<bool> isMemoryListenerStartedSubject = new BehaviorSubject<bool>(false);
 
-        public PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone> pictureBoxMapOOT;
-        public PictureBoxZoomMoveController<MajoraMaskCheckLogicZone> pictureBoxMapMM;
+        public ImageBoxController<OcarinaOfTimeCheckLogicZone> imageBoxMapOOT;
+        public ImageBoxController<MajoraMaskCheckLogicZone> imageBoxMapMM;
 
         public MainUIController()
         {
             isMemoryListenerStartedSubject.OnNext(false);
         }
 
-        public void InitPictureBox(Panel panelOOT, Panel panelMM)
+        public void InitPictureBox(ImageBox imageBoxOOT, ImageBox imageBoxMM)
         {
             // Init OOT
-            pictureBoxMapOOT = new PictureBoxZoomMoveController<OcarinaOfTimeCheckLogicZone>(panelOOT);
-            pictureBoxMapOOT.SetSrcImage(Image.FromFile(Application.StartupPath + CST_OOT_MAP_PATH));
+            imageBoxMapOOT = new ImageBoxController<OcarinaOfTimeCheckLogicZone>(imageBoxOOT);
+            imageBoxMapOOT.SetSrcImage(Image.FromFile(Application.StartupPath + CST_OOT_MAP_PATH));
             // Init MM
-            pictureBoxMapMM = new PictureBoxZoomMoveController<MajoraMaskCheckLogicZone>(panelMM);
-            pictureBoxMapMM.SetSrcImage(Image.FromFile(Application.StartupPath + CST_MM_MAP_PATH));
+            imageBoxMapMM = new ImageBoxController<MajoraMaskCheckLogicZone>(imageBoxMM);
+            imageBoxMapMM.SetSrcImage(Image.FromFile(Application.StartupPath + CST_MM_MAP_PATH));
             //pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListOOT, it);
         }
 

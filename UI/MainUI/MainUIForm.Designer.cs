@@ -39,20 +39,23 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tboxDebug = new System.Windows.Forms.TextBox();
             this.pictureBoxOOTItemList = new System.Windows.Forms.PictureBox();
             this.lbCheckListOOT = new System.Windows.Forms.ListBox();
-            this.panelMapOOT = new System.Windows.Forms.Panel();
             this.tabGameMenu = new System.Windows.Forms.TabControl();
             this.tabOcarinaOfTime = new System.Windows.Forms.TabPage();
             this.splitContainerOotSideContent = new System.Windows.Forms.SplitContainer();
             this.splitContainerOotCheckListCheckItemSeparator = new System.Windows.Forms.SplitContainer();
+            this.imageBoxMapOOT = new Cyotek.Windows.Forms.ImageBox();
             this.tabMajoraMask = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.pictureBoxMMItemList = new System.Windows.Forms.PictureBox();
             this.lbCheckListMM = new System.Windows.Forms.ListBox();
-            this.panelMapMM = new System.Windows.Forms.Panel();
+            this.imageBoxMapMM = new Cyotek.Windows.Forms.ImageBox();
             this.tabPageLog = new System.Windows.Forms.TabPage();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearCheckClaimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkLogicEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,9 +67,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.toolStripComboBoxRomTypeList = new System.Windows.Forms.ToolStripComboBox();
             this.stratStopToolStripMenuItemStartStopEmulator = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearCheckClaimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -101,7 +101,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tboxDebug.Margin = new System.Windows.Forms.Padding(4);
             this.tboxDebug.Multiline = true;
             this.tboxDebug.Name = "tboxDebug";
-            this.tboxDebug.Size = new System.Drawing.Size(1248, 615);
+            this.tboxDebug.Size = new System.Drawing.Size(440, 615);
             this.tboxDebug.TabIndex = 3;
             // 
             // pictureBoxOOTItemList
@@ -127,16 +127,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.lbCheckListOOT.Name = "lbCheckListOOT";
             this.lbCheckListOOT.Size = new System.Drawing.Size(300, 221);
             this.lbCheckListOOT.TabIndex = 67;
-            // 
-            // panelMapOOT
-            // 
-            this.panelMapOOT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMapOOT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMapOOT.Location = new System.Drawing.Point(0, 0);
-            this.panelMapOOT.Margin = new System.Windows.Forms.Padding(0);
-            this.panelMapOOT.Name = "panelMapOOT";
-            this.panelMapOOT.Size = new System.Drawing.Size(951, 625);
-            this.panelMapOOT.TabIndex = 68;
             // 
             // tabGameMenu
             // 
@@ -176,7 +166,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // splitContainerOotSideContent.Panel2
             // 
-            this.splitContainerOotSideContent.Panel2.Controls.Add(this.panelMapOOT);
+            this.splitContainerOotSideContent.Panel2.Controls.Add(this.imageBoxMapOOT);
             this.splitContainerOotSideContent.Size = new System.Drawing.Size(1256, 625);
             this.splitContainerOotSideContent.SplitterDistance = 300;
             this.splitContainerOotSideContent.SplitterWidth = 5;
@@ -200,6 +190,15 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.splitContainerOotCheckListCheckItemSeparator.Size = new System.Drawing.Size(300, 625);
             this.splitContainerOotCheckListCheckItemSeparator.SplitterDistance = 400;
             this.splitContainerOotCheckListCheckItemSeparator.TabIndex = 0;
+            // 
+            // imageBoxMapOOT
+            // 
+            this.imageBoxMapOOT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imageBoxMapOOT.Location = new System.Drawing.Point(0, 0);
+            this.imageBoxMapOOT.Margin = new System.Windows.Forms.Padding(0);
+            this.imageBoxMapOOT.Name = "imageBoxMapOOT";
+            this.imageBoxMapOOT.Size = new System.Drawing.Size(951, 625);
+            this.imageBoxMapOOT.TabIndex = 0;
             // 
             // tabMajoraMask
             // 
@@ -226,7 +225,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panelMapMM);
+            this.splitContainer1.Panel2.Controls.Add(this.imageBoxMapMM);
             this.splitContainer1.Size = new System.Drawing.Size(1256, 625);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.SplitterWidth = 5;
@@ -275,15 +274,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.lbCheckListMM.Size = new System.Drawing.Size(300, 221);
             this.lbCheckListMM.TabIndex = 68;
             // 
-            // panelMapMM
+            // imageBoxMapMM
             // 
-            this.panelMapMM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMapMM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMapMM.Location = new System.Drawing.Point(0, 0);
-            this.panelMapMM.Margin = new System.Windows.Forms.Padding(0);
-            this.panelMapMM.Name = "panelMapMM";
-            this.panelMapMM.Size = new System.Drawing.Size(951, 625);
-            this.panelMapMM.TabIndex = 69;
+            this.imageBoxMapMM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imageBoxMapMM.Location = new System.Drawing.Point(0, 0);
+            this.imageBoxMapMM.Name = "imageBoxMapMM";
+            this.imageBoxMapMM.Size = new System.Drawing.Size(951, 625);
+            this.imageBoxMapMM.TabIndex = 0;
             // 
             // tabPageLog
             // 
@@ -322,6 +319,27 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
             this.menuToolStripMenuItem.Text = "File";
+            // 
+            // loadSaveToolStripMenuItem
+            // 
+            this.loadSaveToolStripMenuItem.Name = "loadSaveToolStripMenuItem";
+            this.loadSaveToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.loadSaveToolStripMenuItem.Text = "Load check claim";
+            this.loadSaveToolStripMenuItem.Click += new System.EventHandler(this.OnManualLoadCheckClaim);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.saveToolStripMenuItem.Text = "Save check claim";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.OnManualSaveCheckClaim);
+            // 
+            // clearCheckClaimToolStripMenuItem
+            // 
+            this.clearCheckClaimToolStripMenuItem.Name = "clearCheckClaimToolStripMenuItem";
+            this.clearCheckClaimToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.clearCheckClaimToolStripMenuItem.Text = "Reset check claim";
+            this.clearCheckClaimToolStripMenuItem.Click += new System.EventHandler(this.OnResetCheckClaimClick);
             // 
             // optionsToolStripMenuItem
             // 
@@ -398,27 +416,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.refreshListToolStripMenuItem.Text = "Refresh List";
             this.refreshListToolStripMenuItem.Click += new System.EventHandler(this.OnRefreshEmulatorListClick);
             // 
-            // loadSaveToolStripMenuItem
-            // 
-            this.loadSaveToolStripMenuItem.Name = "loadSaveToolStripMenuItem";
-            this.loadSaveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loadSaveToolStripMenuItem.Text = "Load check claim";
-            this.loadSaveToolStripMenuItem.Click += new System.EventHandler(this.OnManualLoadCheckClaim);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveToolStripMenuItem.Text = "Save check claim";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.OnManualSaveCheckClaim);
-            // 
-            // clearCheckClaimToolStripMenuItem
-            // 
-            this.clearCheckClaimToolStripMenuItem.Name = "clearCheckClaimToolStripMenuItem";
-            this.clearCheckClaimToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clearCheckClaimToolStripMenuItem.Text = "Reset check claim";
-            this.clearCheckClaimToolStripMenuItem.Click += new System.EventHandler(this.OnResetCheckClaimClick);
-            // 
             // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -469,11 +466,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.TextBox tboxDebug;
         private System.Windows.Forms.PictureBox pictureBoxOOTItemList;
         private System.Windows.Forms.ListBox lbCheckListOOT;
-        private System.Windows.Forms.Panel panelMapOOT;
         private System.Windows.Forms.TabControl tabGameMenu;
         private System.Windows.Forms.TabPage tabOcarinaOfTime;
         private System.Windows.Forms.TabPage tabMajoraMask;
-        private System.Windows.Forms.Panel panelMapMM;
         private System.Windows.Forms.ListBox lbCheckListMM;
         private System.Windows.Forms.PictureBox pictureBoxMMItemList;
         private System.Windows.Forms.SplitContainer splitContainerOotSideContent;
@@ -497,6 +492,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.ToolStripMenuItem loadSaveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearCheckClaimToolStripMenuItem;
+        private Cyotek.Windows.Forms.ImageBox imageBoxMapOOT;
+        private Cyotek.Windows.Forms.ImageBox imageBoxMapMM;
     }
 }
 

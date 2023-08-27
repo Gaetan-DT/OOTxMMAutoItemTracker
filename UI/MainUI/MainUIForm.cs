@@ -36,14 +36,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
             var checkSaveList = saveCheckController.LoadFromAutoSave(RomType.RANDOMIZE_OOT_X_MM); //TODO: Remove romtype for autosave ?
 
             // Init PictureBox
-            mainUIController.InitPictureBox(panelMapOOT, panelMapMM);
-            mainUIController.pictureBoxMapOOT.OnGraphicPathClick += (it) => ocarinaOfTimeController.RefreshCheckListForCategory(lbCheckListOOT, it);
-            mainUIController.pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
+            mainUIController.InitPictureBox(imageBoxMapOOT, imageBoxMapMM);
+            mainUIController.imageBoxMapOOT.OnGraphicPathClick += (it) => ocarinaOfTimeController.RefreshCheckListForCategory(lbCheckListOOT, it);
+            mainUIController.imageBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
 
             // Init game controller
-            ocarinaOfTimeController.Init(Log, mainUIController.pictureBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT);
+            ocarinaOfTimeController.Init(Log, mainUIController.imageBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT);
             ocarinaOfTimeController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
-            majoraMaskController.Init(Log, mainUIController.pictureBoxMapMM, pictureBoxMMItemList, lbCheckListMM);
+            majoraMaskController.Init(Log, mainUIController.imageBoxMapMM, pictureBoxMMItemList, lbCheckListMM);
             majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
 
             if (checkSaveList != null)
