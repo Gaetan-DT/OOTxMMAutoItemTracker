@@ -396,6 +396,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tabGameMenu);
             this.Controls.Add(this.menuStripMain);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripMain;
