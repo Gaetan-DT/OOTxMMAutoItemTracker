@@ -2,6 +2,7 @@
 using MajoraAutoItemTracker.Model.Enum;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,12 +19,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public CheckSaveFormatHeader LoadFromAutoSave(RomType romType)
         {
-            return Load(autoSavePath + GetAutoSaveFileName(romType));
+            return LoadOrNull(autoSavePath + GetAutoSaveFileName(romType));
         }
 
-        public void SaveToAutoSave(RomType romType, CheckSaveFormatHeader data)
+        public void SaveToAutoSave(CheckSaveFormatHeader data)
         {
-            Save(autoSavePath + GetAutoSaveFileName(romType), data);
+            Save(autoSavePath + GetAutoSaveFileName(data.SaveRomType), data);
         }
 
         public CheckSaveFormatHeader LoadFromFile()
@@ -48,7 +49,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             if (openFileDialog.ShowDialog() != DialogResult.OK)
                 return null;
             var filePathWithFileName = openFileDialog.FileName;
-            return Load(filePathWithFileName);
+            return LoadOrNull(filePathWithFileName);
         }
 
         public void SaveToFile(CheckSaveFormatHeader data)
@@ -72,9 +73,17 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Save(filePathWithFileName, data);
         }
 
-        private CheckSaveFormatHeader Load(string filePathWithName)
+        private CheckSaveFormatHeader LoadOrNull(string filePathWithName)
         {
-            return CheckSaveMethod.DeserializeFromFile(filePathWithName);
+            try
+            {
+                return CheckSaveMethod.DeserializeFromFile(filePathWithName);
+            } catch (Exception e)
+            {
+                Debug.WriteLine(e);
+                return null;
+            }
+            
         }
 
         private void Save(string filePathWithName, CheckSaveFormatHeader checkSaveFormatHeader)

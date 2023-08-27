@@ -156,5 +156,26 @@ namespace MajoraAutoItemTracker.UI.MainUI
         }
 
         protected abstract Point GetPositionInDrawingOfItemLogicPropertyName(string propertyName);
+
+        public List<CheckSaveFormat> SaveListCheck()
+        {
+            return checkLogics.Select((it) => new CheckSaveFormat()
+            {
+                Id = it.Id,
+                IsClaim = it.IsClaim
+            }).ToList();
+        }
+
+        public void LoadFromSave(List<CheckSaveFormat> listCheckSaveFormat)
+        {
+            foreach (var checkLogic in checkLogics)
+            {
+                var savedCheckToApply = listCheckSaveFormat.Find((it) => it.Id == checkLogic.Id);
+                if (savedCheckToApply != null)
+                {
+                    checkLogic.IsClaim = savedCheckToApply.IsClaim;
+                }
+            }
+        }
     }
 }

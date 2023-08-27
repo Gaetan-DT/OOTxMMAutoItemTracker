@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Linq;
 using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.Model.Enum.OOT;
+using MajoraAutoItemTracker.Model.CheckLogic;
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
@@ -31,6 +32,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             emulatorController.subRomList.Subscribe(UpdateRomList);
             mainUIController.isMemoryListenerStartedSubject.Subscribe(OnEmulatorStartStop);
 
+            // Load save
+            var checkSaveList = saveCheckController.LoadFromAutoSave(RomType.RANDOMIZE_OOT_X_MM); //TODO: Remove romtype for autosave ?
+
             // Init PictureBox
             mainUIController.InitPictureBox(panelMapOOT, panelMapMM);
             mainUIController.pictureBoxMapOOT.OnGraphicPathClick += (it) => ocarinaOfTimeController.RefreshCheckListForCategory(lbCheckListOOT, it);
@@ -41,6 +45,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
             ocarinaOfTimeController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
             majoraMaskController.Init(Log, mainUIController.pictureBoxMapMM, pictureBoxMMItemList, lbCheckListMM);
             majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
+
+            if (checkSaveList != null)
+            {
+                ocarinaOfTimeController.LoadFromSave(checkSaveList.OOTCheckList);
+                majoraMaskController.LoadFromSave(checkSaveList.MMCheckList);
+            }
         }
 
         private void OnOOTItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> itemLogicProperty)
@@ -165,6 +175,17 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private void OnRefreshEmulatorListClick(object sender, EventArgs e)
         {
             emulatorController.RefreshEmulatorAndGameList();
+        }
+
+        private void OnFormClosing(object sender, FormClosingEventArgs e)
+        {
+            var checkSaveFormatHeader = new CheckSaveFormatHeader()
+            {
+                SaveRomType = RomType.RANDOMIZE_OOT_X_MM,
+                OOTCheckList = ocarinaOfTimeController.SaveListCheck(),
+                MMCheckList = majoraMaskController.SaveListCheck()
+            };
+            saveCheckController.SaveToAutoSave(checkSaveFormatHeader);
         }
     }
 }
