@@ -61,6 +61,20 @@ namespace MajoraAutoItemTracker.UI.MainUI
             return checkLogics.FindAll((it) => it.Zone.Equals(zone)).ToList();
         }
 
+        protected List<CheckLogicZone> GetListOfZone()
+        {
+            return checkLogics
+                .Select((it) => it.Zone)
+                .Distinct()
+                .ToList();
+        }
+
+        public void RefreshRegionInDrawingFollowingCheck()
+        {
+            foreach (var zone in GetListOfZone())
+                RefreshRegionInDrawingFollowingCheck(zone);
+        }
+
         public void RefreshRegionInDrawingFollowingCheck(CheckLogicZone zone)
         {
             bool isAllClaim = true;
@@ -157,6 +171,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         protected abstract Point GetPositionInDrawingOfItemLogicPropertyName(string propertyName);
 
+        public void ResetCheckClaim()
+        {
+            foreach (var checkLogic in checkLogics)
+                checkLogic.IsClaim = false;
+            RefreshRegionInDrawingFollowingCheck();
+        }
+
         public List<CheckSaveFormat> SaveListCheck()
         {
             return checkLogics.Select((it) => new CheckSaveFormat()
@@ -176,6 +197,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     checkLogic.IsClaim = savedCheckToApply.IsClaim;
                 }
             }
+            RefreshRegionInDrawingFollowingCheck();
         }
     }
 }

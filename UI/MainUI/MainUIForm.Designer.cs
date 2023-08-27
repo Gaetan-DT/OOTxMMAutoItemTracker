@@ -66,6 +66,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.refreshListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearCheckClaimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -314,7 +315,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadSaveToolStripMenuItem,
-            this.saveToolStripMenuItem});
+            this.saveToolStripMenuItem,
+            this.clearCheckClaimToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
             this.menuToolStripMenuItem.Text = "File";
@@ -408,6 +410,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.saveToolStripMenuItem.Text = "Save check claim";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.OnManualSaveCheckClaim);
             // 
+            // clearCheckClaimToolStripMenuItem
+            // 
+            this.clearCheckClaimToolStripMenuItem.Name = "clearCheckClaimToolStripMenuItem";
+            this.clearCheckClaimToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clearCheckClaimToolStripMenuItem.Text = "Reset check claim";
+            this.clearCheckClaimToolStripMenuItem.Click += new System.EventHandler(this.OnResetCheckClaimClick);
+            // 
             // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -485,6 +494,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.ToolStripMenuItem loadSaveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearCheckClaimToolStripMenuItem;
     }
 }
 

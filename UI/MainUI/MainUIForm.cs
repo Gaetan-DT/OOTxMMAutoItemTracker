@@ -209,5 +209,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 MMCheckList = majoraMaskController.SaveListCheck()
             };
         }
+
+        private void OnResetCheckClaimClick(object sender, EventArgs e)
+        {
+            ocarinaOfTimeController.ResetCheckClaim();
+            majoraMaskController.ResetCheckClaim();
+        }
     }
 }
