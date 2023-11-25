@@ -24,7 +24,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void RefreshGameList()
         {
-            subRomList.OnNext(RomTypeMethod.getAsList());
+            var list = RomTypeMethod.getAsList();
+            list.Reverse(); // To display oot x mm first
+            subRomList.OnNext(list);
         }
 
         public AbstractRomController GetSelectedEmulator(int index)

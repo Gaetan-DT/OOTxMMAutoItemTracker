@@ -47,7 +47,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
                 Version = version,
                 Logic = logicFile
             });
-            Process.Start(GetFilPath(false, false));
+            System.Diagnostics.Process.Start(GetFilPath(false, false));
         }
 
     }

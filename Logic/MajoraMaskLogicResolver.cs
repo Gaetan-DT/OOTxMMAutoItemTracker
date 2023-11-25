@@ -11,12 +11,26 @@ namespace MajoraAutoItemTracker.Logic
     class MajoraMaskLogicResolver : AbstractLogicResolver
     {
         private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, MajoraMaskJsonFormatLogicItem>();
-        public Subject<MajoraMaskCheckLogic> OnCheckUpdate { get; } = new Subject<MajoraMaskCheckLogic>();
 
         public MajoraMaskLogicResolver(LogicFile<MajoraMaskJsonFormatLogicItem> logicFile)
         {
             foreach (var logic in logicFile.Logic)
                 _logicDictionary.Add(logic.Id, logic);
+        }
+
+        public List<MajoraMaskCheckLogic> UpdateCheckAndReturnListOfUpdatedCheck(
+            List<ItemLogic> itemLogicList,
+            List<MajoraMaskCheckLogic> checkLogicList,
+            bool allowTrick)
+        {
+            WriteToDebug("-------- UpdateCheckForItem called ---------");
+            List<MajoraMaskCheckLogic> listOfUpdatedCheck = new List<MajoraMaskCheckLogic>();
+            // We receive a new list of item, we will see if we can update every check available
+            foreach (var checkLogic in checkLogicList)
+                if (UpdateCheckAvailable(ToDictionaryItemLogicList(itemLogicList), checkLogic, allowTrick))
+                    listOfUpdatedCheck.Add(checkLogic);
+            WriteToDebug("-------- UpdateCheckForItem end -------------");
+            return listOfUpdatedCheck;
         }
 
         public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<MajoraMaskCheckLogic> checkLogicList, bool allowTrick)
@@ -28,20 +42,21 @@ namespace MajoraAutoItemTracker.Logic
             WriteToDebug("-------- UpdateCheckForItem end -------------");
         }
 
-        private void UpdateCheckAvailable(
+        private bool UpdateCheckAvailable(
             Dictionary<string, ItemLogic> dicItemLogic,
             MajoraMaskCheckLogic checkLogic, 
             bool allowTrick)
         {
             var jsonLogicItem = FindLogic(_logicDictionary, checkLogic.Id);
             if (jsonLogicItem == null)
-                return;
+                return false;
             var isItemLogicCanBeValidated = IsItemLogicCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, new HashSet<string>());
             if (isItemLogicCanBeValidated != checkLogic.IsAvailable)
             {
                 checkLogic.IsAvailable = isItemLogicCanBeValidated;
-                OnCheckUpdate.OnNext(checkLogic);
+                return true;
             }
+            return false;
         }
 
         private bool IsItemLogicCanBeValidated(

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows.Forms;
 using MajoraAutoItemTracker.Model;
 using MajoraAutoItemTracker.Model.Enum;
 
@@ -12,7 +13,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         protected abstract bool IsEmulatorUseBigEndian { get; }
 
-        protected Process m_Process;
+        /*protected*/public System.Diagnostics.Process m_Process;
         protected uint m_romAddrStart;
 
         public abstract bool AttachToProcess(RomType romType);
@@ -32,10 +33,32 @@ namespace MajoraAutoItemTracker.MemoryReader
             }   
         }
 
+        private int GetZeldaCheckPart2FollowingEndiandAndRomType(RomType romType)
+        {
+            switch (romType)
+            {
+                case RomType.OCARINA_OF_TIME_USA_V0:
+                    return IsEmulatorUseBigEndian ? OOTOffsets.ZELDAZ_CHECK_2_BE : OOTOffsets.ZELDAZ_CHECK_2_LE;
+                case RomType.MAJORA_MASK_USA_V0:
+                    return IsEmulatorUseBigEndian ? MMOffsets.ZELDAZ_CHECK_2_VALUE_BE : MMOffsets.ZELDAZ_CHECK_2_VALUE_LE;
+                default:
+                    throw new Exception($"Unknown rom type: {romType}");
+            }
+        }
+
         // Perform with current start address
         public bool PerformCheckFollowingRomType(RomType romType)
         {
             return PerformCheckFollowingRomType(romType, m_romAddrStart);
+        }
+
+        protected bool AskForStartMajoraMask()
+        {
+            return MessageBox.Show(
+                "Start from majora mask ?",
+                "Start",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         public bool PerformCheckFollowingRomType(RomType romType, uint possibleRomAddrStart)
@@ -55,7 +78,12 @@ namespace MajoraAutoItemTracker.MemoryReader
         private bool PerformOOTCheck(uint possibleRomAddrStart)
         {
             var ootCheck = Memory.ReadInt32(m_Process, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
-            if (ootCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.OCARINA_OF_TIME_USA_V0))
+            var ootCheckPart2 = Memory.ReadInt32(m_Process, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
+
+            var isOotCheckPart1Ok = (ootCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.OCARINA_OF_TIME_USA_V0));
+            var isOotCheckPart2Ok = (ootCheckPart2 == GetZeldaCheckPart2FollowingEndiandAndRomType(RomType.OCARINA_OF_TIME_USA_V0));
+
+            if (isOotCheckPart1Ok)
                 return true;
             return false;
         }

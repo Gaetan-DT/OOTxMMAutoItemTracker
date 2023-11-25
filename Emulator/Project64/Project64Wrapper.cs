@@ -36,7 +36,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
 
         public override bool ProcessExist()
         {
-            return Process.GetProcessesByName(PROCESS_NAME).Length > 0;
+            return System.Diagnostics.Process.GetProcessesByName(PROCESS_NAME).Length > 0;
         }
 
         public override string GetDisplayName()
@@ -44,9 +44,9 @@ namespace MajoraAutoItemTracker.MemoryReader.Project64
             return "Project64";
         }
 
-        public Process FindProcessOrThrow()
+        public System.Diagnostics.Process FindProcessOrThrow()
         {
-            var processList = Process.GetProcessesByName(PROCESS_NAME);
+            var processList = System.Diagnostics.Process.GetProcessesByName(PROCESS_NAME);
             if (processList.Length == 0)
                 throw new Exception($"Unable to find process: {PROCESS_NAME}");
             return processList[0];

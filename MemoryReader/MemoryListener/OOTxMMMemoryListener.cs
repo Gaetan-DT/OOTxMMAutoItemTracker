@@ -3,6 +3,7 @@ using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 {
@@ -10,7 +11,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
     {
         private enum CurrentRom { OcarinaOfTIme, MajoraMask, Unknown }
 
-        private CurrentRom lastCurrentRom = CurrentRom.OcarinaOfTIme; // Used to prevend reading wrong rom each time when in MM
+        private CurrentRom lastCurrentRom = CurrentRom.Unknown; // Used to prevend reading wrong rom each time when in MM
 
         private OcarinaOfTimeMemoryListener ocarinaOfTimeMemoryListener;
         private MajoraMaskMemoryListener majoraMaskMemoryListener;
@@ -23,6 +24,11 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
         {
             ocarinaOfTimeMemoryListener = new OcarinaOfTimeMemoryListener(emulatorWrapper, callBackOOT);
             majoraMaskMemoryListener = new MajoraMaskMemoryListener(emulatorWrapper, callBackMM);
+        }
+
+        public override void StartThread()
+        {
+            base.StartThread();
         }
 
         public override void OnTick()

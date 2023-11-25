@@ -30,7 +30,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         public abstract void OnTick();
 
-        public void StartThread()
+        public virtual void StartThread()
         {
             _thread = new Thread(new ThreadStart(ThreadRun));
             _thread.IsBackground = true;

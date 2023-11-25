@@ -7,6 +7,7 @@ using System.Linq;
 using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.CheckLogic;
+using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
@@ -179,6 +180,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void OnFormClosing(object sender, FormClosingEventArgs e)
         {
+            saveCheckController.SaveToAutoSave(CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM));
+        }
+
+        private void DoAutoSave() {
             saveCheckController.SaveToAutoSave(CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM));
         }
 

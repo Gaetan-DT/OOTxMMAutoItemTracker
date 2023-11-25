@@ -27,7 +27,7 @@ namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
 
         public override bool ProcessExist()
         {
-            return Process.GetProcessesByName(MODE_LOADER_PROCESS_NAME).Length > 0;
+            return System.Diagnostics.Process.GetProcessesByName(MODE_LOADER_PROCESS_NAME).Length > 0;
         }
 
         public override string GetDisplayName()
@@ -41,7 +41,7 @@ namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
                 throw new Exception("Not yet supported for modloader64");
             try
             {
-                var processList = Process.GetProcessesByName(MODE_LOADER_PROCESS_NAME);
+                var processList = System.Diagnostics.Process.GetProcessesByName(MODE_LOADER_PROCESS_NAME);
                 if (processList.Length == 0)
                     return false;
                 foreach (var process in processList)

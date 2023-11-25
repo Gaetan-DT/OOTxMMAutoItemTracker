@@ -1,10 +1,14 @@
-﻿using MajoraAutoItemTracker.Model.CheckLogic;
+﻿using MajoraAutoItemTracker.Logic;
+using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Item;
+using MajoraAutoItemTracker.Model.Logic;
+using MajoraAutoItemTracker.Model.Logic.MM;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.UI.MainUI
@@ -13,8 +17,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
     {
         const string ITEM_SPRITE_MONO_PATH = @"\Resource\Itemicons\mm_items_mono.png";
         const string ITEM_SPRITE_COLOR_PATH = @"\Resource\Itemicons\mm_items.png";
-        const string ITEM_LOGIC_FILE_NAME = @"\Resource\Mappings\" + ItemLogicMethod.CST_DEFAULT_FILE_NAME;
+        const string ITEM_POSITION_MAPING_NAME = @"\Resource\Mappings\" + ItemLogicMethod.CST_DEFAULT_FILE_NAME;
         const string ITEM_CHECK_LOGIC_CATEGORY_PATH = @"\Resource\CheckLogic\" + MajoraMaskCheckLogicCategory.CST_DEFAULT_FILE_NAME;
+        const string ITEM_LOGIC_FILE_NAME = LogicFile<object>.CST_REQ_CASUAL_PATH + LogicFile<object>.CST_MM_REQ_FILE_NAME;
 
         private readonly Dictionary<MajoraMaskItemLogicPopertyName, Point> mapPropertyNamePosition = new Dictionary<MajoraMaskItemLogicPopertyName, Point>()
         {
@@ -91,6 +96,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             { MajoraMaskItemLogicPopertyName.SunSong, new Point(5, 11) }
     };
 
+        private LogicFile<MajoraMaskJsonFormatLogicItem> logicFile;
+        public MajoraMaskLogicResolver logicResolver;
+
         public List<MajoraMaskCheckLogicCategory> checkLogicCategories;
 
         public MajoraMaskController()
@@ -106,9 +114,23 @@ namespace MajoraAutoItemTracker.UI.MainUI
             itemSpriteMono = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_MONO_PATH));
             itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
             // Init json
-            itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_LOGIC_FILE_NAME);
+            itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_POSITION_MAPING_NAME);
             checkLogicCategories = MajoraMaskCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH);
             checkLogics = MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
+            logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME);
+            // Logic resolver
+            logicResolver = new MajoraMaskLogicResolver(logicFile);
+        }
+
+        public void RefreshRegionInDrawingFollowingCheck(List<MajoraMaskCheckLogic> checkLogic)
+        {
+            logWrite($"Call RefreshRegionInDrawingFollowingCheck with {checkLogic.Count} check updated");
+            // Get all region to update from the list of checkLogic
+            foreach (var checkCategory in checkLogic.Select((it) => it.Zone).Distinct())
+            {
+                logWrite($"Updated check for the following category: [{checkCategory}]");
+                RefreshRegionInDrawingFollowingCheck(checkCategory);
+            }
         }
 
         public override void DrawSquareCategory(int rectWidthAndHeight)
@@ -157,6 +179,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // TODO: gerer les différent cas pour les enum
             pictureBoxItemList.Refresh();
             // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
+            var listOfUpdateCheck = logicResolver.UpdateCheckAndReturnListOfUpdatedCheck(itemLogics, checkLogics, false);
+            RefreshRegionInDrawingFollowingCheck(listOfUpdateCheck);
+            pictureBoxItemList.Refresh();
         }
 
         protected override Point GetPositionInDrawingOfItemLogicPropertyName(string propertyName)
