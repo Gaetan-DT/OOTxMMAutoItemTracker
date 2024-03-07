@@ -3,15 +3,14 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.Model.CheckLogic
 {
     class CheckSaveFormat
     {
-        public String Id { get; set; }
+        public string? Id { get; set; }
         public bool IsClaim { get; set; }
     }
 
@@ -25,7 +24,7 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
 
     class CheckSaveMethod
     {
-        public static CheckSaveFormatHeader DeserializeFromFile(String filePath)
+        public static CheckSaveFormatHeader? DeserializeFromFile(String filePath)
         {
             return JsonConvert.DeserializeObject<CheckSaveFormatHeader>(File.ReadAllText(filePath));
         }

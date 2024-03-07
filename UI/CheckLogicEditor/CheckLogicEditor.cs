@@ -3,16 +3,17 @@ using MajoraAutoItemTracker.Model.Logic;
 using MajoraAutoItemTracker.Model.Logic.MM;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.UI.CheckLogicEditor
 {
     public partial class CheckLogicEditor : Form
     {
 
-        private LogicFile<MajoraMaskJsonFormatLogicItem> _logicFile;
+        private LogicFile<MajoraMaskJsonFormatLogicItem>? _logicFile;
         private List<OcarinaOfTimeCheckLogic> checkLogics = new List<OcarinaOfTimeCheckLogic>();
 
         public CheckLogicEditor()
@@ -29,7 +30,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
         private void LoadJsonFile()
         {
             _logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromJson(File.ReadAllText(Application.StartupPath + @"\Resource\Logics\REQ_CASUAL_12.json"));
-            lbLogicVerion.Text = "V:" + _logicFile.Version;
+            lbLogicVerion.Text = "V:" + (_logicFile?.Version ?? -1);
             UpdateLogicFile();
         }
 
@@ -37,8 +38,8 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
         {
             var filter = textLogicFilter.Text;
             lbLogic.Items.Clear();
-            var filteredData = _logicFile.Logic.FindAll(x => filter.Length == 0 || x.Id.ToLower().Contains(filter.ToLower()));
-            filteredData.ForEach(x => lbLogic.Items.Add(x));
+            var filteredData = _logicFile?.Logic.FindAll(x => filter.Length == 0 || (x.Id?.ToLower().Contains(filter.ToLower()) ?? false));
+            filteredData?.ForEach(x => lbLogic.Items.Add(x));
             lbLogic.DisplayMember = "Id";
         }
 
@@ -52,7 +53,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
         private void addRemoveToCheck(string itemId, bool remove = false)
         {
             var check = checkLogics.Find(x => x.Id == itemId);
-            var logic = _logicFile.Logic.Find(x => x.Id == itemId);
+            var logic = _logicFile?.Logic.Find(x => x.Id == itemId);
             if (remove)
             {
                 if (check != null)
@@ -76,9 +77,18 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
         private void lbLogic_DoubleClick(object sender, EventArgs e)
         {
             if (sender == lbLogic)
-                addRemoveToCheck((lbLogic.Items[lbLogic.SelectedIndex] as MajoraMaskJsonFormatLogicItem).Id);
+            {
+                var id = (lbLogic.Items[lbLogic.SelectedIndex] as MajoraMaskJsonFormatLogicItem)?.Id;
+                if (id != null)
+                    addRemoveToCheck(id);
+            } 
             else if (sender == lbCheck)
-                addRemoveToCheck((lbCheck.Items[lbCheck.SelectedIndex] as OcarinaOfTimeCheckLogic).Id, true);
+            {
+                var id = (lbCheck.Items[lbCheck.SelectedIndex] as OcarinaOfTimeCheckLogic)?.Id;
+                if (id != null)
+                    addRemoveToCheck(id, true);
+            }
+                
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -110,7 +120,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             {
                 try
                 {
-                    checkLogics = OcarinaOfTimeCheckLogic.Deserialize(openFileDialog.FileName);
+                    checkLogics = OcarinaOfTimeCheckLogic.Deserialize(openFileDialog.FileName)!;
                     UpdateCheckListBox();
                 }
                 catch (Exception exception)
@@ -164,7 +174,8 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             {
                 try
                 {
-                    checkLogics = OcarinaOfTimeCheckLogic.FromHeader(OcarinaOfTimeCheckLogicCategory.fromJson(File.ReadAllText(openFileDialog.FileName)));
+                    var header = OcarinaOfTimeCheckLogicCategory.FromJson(File.ReadAllText(openFileDialog.FileName))!;
+                    checkLogics = OcarinaOfTimeCheckLogic.FromHeader(header);
                     UpdateCheckListBox();
                 }
                 catch (Exception exception)
@@ -179,7 +190,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             if (lbCheck.SelectedIndex < 0)
                 return;
             var selectedItem = (OcarinaOfTimeCheckLogic) lbCheck.Items[lbCheck.SelectedIndex];
-            textCheckId.Text = selectedItem.Id.ToString();
+            textCheckId.Text = selectedItem.Id?.ToString();
             textCheckIsAvailable.Text = selectedItem.IsAvailable.ToString();
             textCheckIsClaim.Text = selectedItem.IsClaim.ToString();
             textCheckSquareX.Text = selectedItem.SquarePositionX.ToString();

@@ -3,13 +3,15 @@ using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
 using System.Collections.Generic;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.MemoryReader
 {
     class OcarinaOfTimeMemoryListener : AbstractMemoryListener
     {
-        private OcarinaOfTimeMemoryData previousMemoryData;
+        private OcarinaOfTimeMemoryData? previousMemoryData;
 
-        Action<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> callBack;
+        readonly Action<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> callBack;
 
         public OcarinaOfTimeMemoryListener(AbstractRomController emulatorWrapper, Action<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> callBack) 
             : base(emulatorWrapper)

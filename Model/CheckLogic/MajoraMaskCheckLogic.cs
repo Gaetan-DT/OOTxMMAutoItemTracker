@@ -4,25 +4,27 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.Model.CheckLogic
 {
     public class MajoraMaskCheckLogic : AbstractCheckLogic<MajoraMaskCheckLogicZone>
     {
         public const string CST_DEFAULT_FILE_NAME = "check_logic.json";
 
-        public override String Id { get; set; }        
+        public override string? Id { get; set; }        
         public override MajoraMaskCheckLogicZone Zone { get; set; }
         public int SquarePositionX { get; set; }
         public int SquarePositionY { get; set; }
         public override bool IsClaim { get; set; }
         public override bool IsAvailable { get; set; }
 
-        public static List<MajoraMaskCheckLogic> LoadDefault()
+        public static List<MajoraMaskCheckLogic>? LoadDefault()
         {
             return Deserialize(CST_DEFAULT_FILE_NAME);
         }
 
-        public static List<MajoraMaskCheckLogic> Deserialize(String filePath)
+        public static List<MajoraMaskCheckLogic>? Deserialize(String filePath)
         {
             var jsonFile = File.ReadAllText(filePath);
             return JsonConvert.DeserializeObject<List<MajoraMaskCheckLogic>>(jsonFile);
@@ -47,7 +49,7 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
                         IsClaim = false,
                         SquarePositionX = checkLogicHeader.SquarePositionX,
                         SquarePositionY = checkLogicHeader.SquarePositionY,
-                        Zone = MajoraMaskCheckLogicZoneMethod.FromString(checkLogicHeader.Name)
+                        Zone = MajoraMaskCheckLogicZoneMethod.FromString(checkLogicHeader.Name!)
                     });
                 }
             }

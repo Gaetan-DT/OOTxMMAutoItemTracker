@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker
 {
     public struct SYSTEM_INFO
@@ -67,8 +69,8 @@ namespace MajoraAutoItemTracker
             {
                 if (module is ProcessModule && ((ProcessModule)module).ModuleName == moduleName)
                 {
-                    baseAddress = (module as ProcessModule).BaseAddress.ToInt32();
-                    moduleMemoryName = (module as ProcessModule).ModuleMemorySize;
+                    baseAddress = (module as ProcessModule)!.BaseAddress.ToInt32();
+                    moduleMemoryName = (module as ProcessModule)!.ModuleMemorySize;
                     return true;
                 }
             }

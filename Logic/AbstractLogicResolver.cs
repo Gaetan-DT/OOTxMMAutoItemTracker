@@ -1,10 +1,8 @@
 ﻿using MajoraAutoItemTracker.Model.Item;
-using MajoraAutoItemTracker.Model.Logic;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.Logic
 {
@@ -15,10 +13,16 @@ namespace MajoraAutoItemTracker.Logic
 
         #region Utilities
 
-        protected JsonFormatLogicItem FindLogic<JsonFormatLogicItem>(
+        protected JsonFormatLogicItem? FindLogic<JsonFormatLogicItem>(
             Dictionary<string, JsonFormatLogicItem> logicDictionary, 
-            string logicIdStr) where JsonFormatLogicItem : class
+            string? logicIdStr
+            ) where JsonFormatLogicItem : class
         {
+            if (logicIdStr == null)
+            {
+                Debug.WriteLine("Unable to find logic for check: " + logicIdStr);
+                return null;
+            }
             if (!logicDictionary.TryGetValue(logicIdStr, out JsonFormatLogicItem jsonLogicItem))
             {
                 Debug.WriteLine("Unable to find logic for check: " + logicIdStr);
@@ -32,8 +36,12 @@ namespace MajoraAutoItemTracker.Logic
             Dictionary<string, ItemLogic> dicItemLogic = new Dictionary<string, ItemLogic>();
             foreach (var itemLogic in itemLogicList)
                 foreach (var itemLogicVariant in itemLogic.variants)
+                {
+                    if (itemLogicVariant.idLogic == null)
+                        continue;
                     if (!dicItemLogic.ContainsKey(itemLogicVariant.idLogic)) // Can be duplicate ex:Bottle
                         dicItemLogic.Add(itemLogicVariant.idLogic, itemLogic);
+                }
             return dicItemLogic;
         }
 

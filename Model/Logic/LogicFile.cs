@@ -1,7 +1,8 @@
-﻿using MajoraAutoItemTracker.Model.Logic.MM;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.Model.Logic
 {
@@ -12,19 +13,19 @@ namespace MajoraAutoItemTracker.Model.Logic
         public const string CST_MM_REQ_FILE_NAME = "REQ_CASUAL_12.json";
 
         public int Version { get; set; }
-        public List<JsonFormatLogicItem> Logic { get; set; }
+        public List<JsonFormatLogicItem> Logic { get; set; } = new List<JsonFormatLogicItem>();
 
         public override string ToString()
         {
             return JsonConvert.SerializeObject(this);
         }
 
-        public static LogicFile<JsonFormatLogicItem> FromFile(string filePath)
+        public static LogicFile<JsonFormatLogicItem>? FromFile(string filePath)
         {
             return FromJson(File.ReadAllText(filePath));
         }
 
-        public static LogicFile<JsonFormatLogicItem> FromJson(string json)
+        public static LogicFile<JsonFormatLogicItem>? FromJson(string json)
         {
             // MajoraMaskJsonFormatLogicItem
             // OcarinaOfTimeJsonFormatLogicItem

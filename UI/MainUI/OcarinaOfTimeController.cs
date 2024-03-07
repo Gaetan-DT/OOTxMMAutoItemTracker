@@ -12,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.UI.MainUI
 {
     class OcarinaOfTimeController : AbstractUIRoomController<OcarinaOfTimeCheckLogic, OcarinaOfTimeCheckLogicZone>
@@ -112,20 +114,20 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
             // Init json
             itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_POSITION_MAPING_NAME);
-            checkLogicCategories = OcarinaOfTimeCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH);
+            checkLogicCategories = OcarinaOfTimeCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH)!;
             checkLogics = OcarinaOfTimeCheckLogic.FromHeader(checkLogicCategories);
-            logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME);
+            logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME)!;
             // Init Logic resolver
             logicResolver = new OcarinaOfTimeLogicResolver(logicFile);
         }
 
         public void RefreshRegionInDrawingFollowingCheck(List<OcarinaOfTimeCheckLogic> checkLogic)
         {
-            logWrite($"Call RefreshRegionInDrawingFollowingCheck with {checkLogic.Count} check updated");
+            logWrite?.Invoke($"Call RefreshRegionInDrawingFollowingCheck with {checkLogic.Count} check updated");
             // Get all region to update from the list of checkLogic
             foreach (var checkCategory in checkLogic.Select((it) => it.Zone).Distinct())
             {
-                logWrite($"Updated check for the following category: [{checkCategory}]");
+                logWrite?.Invoke($"Updated check for the following category: [{checkCategory}]");
                 RefreshRegionInDrawingFollowingCheck(checkCategory);
             }
         }
@@ -136,6 +138,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         /// <param name="listItemLogicProperty">List of updated propery with new value</param>
         public void OnItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> listItemLogicProperty)
         {
+            if (itemLogics == null || checkLogics == null)
+                return;
             foreach(var itemLogicProperty in listItemLogicProperty)
             {
                 var strItemLogicPropertyName = OcarinaOfTimeItemLogicPopertyNameMethod.ToString(itemLogicProperty.Item1);
@@ -156,14 +160,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
             //logicResolver.UpdateCheckForItem(itemLogics, checkLogics, false);
             var listOfUpdatedCheck = logicResolver.UpdateCheckAndReturnListOfUpdatedCheck(itemLogics, checkLogics, false);
             RefreshRegionInDrawingFollowingCheck(listOfUpdatedCheck);
-            pictureBoxItemList.Refresh();
+            pictureBoxItemList?.Refresh();
         }
 
         public override void DrawSquareCategory(int rectWidthAndHeight)
         {
             foreach (var checkLogicCategory in checkLogicCategories)
             {
-                pictureBoxZoomMoveController.AddRect(
+                if (checkLogicCategory.Name == null)
+                    throw new Exception("ERROR: checkLogicCategory.Name is null");
+                pictureBoxZoomMoveController?.AddRect(
                     checkLogicCategory.SquarePositionX - rectWidthAndHeight / 2,
                     checkLogicCategory.SquarePositionY - rectWidthAndHeight / 2,
                     rectWidthAndHeight, rectWidthAndHeight,

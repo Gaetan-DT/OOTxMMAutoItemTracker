@@ -3,9 +3,8 @@ using MajoraAutoItemTracker.Model.Enum;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 {
@@ -14,7 +13,8 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
         const String PROCESS_NAME = "Project64-EM";
 
         /** Same for MM and OOT **/
-        private const string ZeldazPatternLoopUpLe = "44 4C 45 5A 07 00 5A 41";
+        private const string ZeldazPatternLoopUpLe = "44 4C 45 5A ?? 00 5A 41";
+        //private const string ZeldazPatternLoopUpLe = "44 4C 45 5A 07 00 5A 41"; // IDK why last byte can be different
 
         private const uint CST_POSSIBLE_ROM_ADDR_START_1 = 0xDFE4_0000;
         private const uint CST_POSSIBLE_ROM_ADDR_START_2 = 0xDFE7_0000;
@@ -105,12 +105,11 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             throw new Exception("Process not found or unable to find Zelda check address");
         }
 
-        private List<uint> findInAllModule(string pattern, bool log = false)
+        private List<uint> FindInAllModule(string pattern, bool log = false)
         {
             List<uint> listPossibleAddress = new List<uint>();
-            foreach (var module in m_Process.Modules)
-                if (module is ProcessModule)
-                    listPossibleAddress.AddRange(findAllInModule(m_Process, (module as ProcessModule), pattern, log));
+            foreach (ProcessModule module in m_Process!.Modules)
+                listPossibleAddress.AddRange(findAllInModule(m_Process, module, pattern, log));
             return listPossibleAddress;
         }
 
@@ -151,6 +150,10 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         public bool ScanMemoryToFindStart(out uint ootAddrStart)
         {
+            if (m_Process == null)
+            {
+                throw new Exception("Process is null");
+            }
             // 4713BFD4
             // 4715A5EC
             // 4766C56C
@@ -162,6 +165,9 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                 ootAddrStart -= MMOffsets.ZELDAZ_CHECK_ADDRESS;
             else // Find for OOT
                 ootAddrStart -= OOTOffsets.ZELDAZ_CHECK_ADDRESS;
+
+
+
             return result;
         }
 

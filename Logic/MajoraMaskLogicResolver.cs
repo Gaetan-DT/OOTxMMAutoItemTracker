@@ -2,9 +2,10 @@
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
 using MajoraAutoItemTracker.Model.Logic.MM;
+using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reactive.Subjects;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.Logic
 {
@@ -15,7 +16,10 @@ namespace MajoraAutoItemTracker.Logic
         public MajoraMaskLogicResolver(LogicFile<MajoraMaskJsonFormatLogicItem> logicFile)
         {
             foreach (var logic in logicFile.Logic)
-                _logicDictionary.Add(logic.Id, logic);
+                if (logic.Id != null)
+                    _logicDictionary.Add(logic.Id, logic);
+                else
+                    Console.WriteLine($"Err: Unable to load logic, id is null [{logic}]");
         }
 
         public List<MajoraMaskCheckLogic> UpdateCheckAndReturnListOfUpdatedCheck(
@@ -68,6 +72,11 @@ namespace MajoraAutoItemTracker.Logic
             WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} BEGIN", false);
             HashSet<string> currentRecursivityCheck = new HashSet<string>(recursivityCheck);
             // Check if the logic id has not already been added in previous validation
+            if (jsonLogicItem.Id == null)
+            {
+                WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (Id is null)", true);
+                return false;
+            }
             if (currentRecursivityCheck.Contains(jsonLogicItem.Id))
             {
                 WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (Recursivity error Id has been checked twice)", true);
@@ -104,8 +113,13 @@ namespace MajoraAutoItemTracker.Logic
 
         private bool IsAnItemLogic(MajoraMaskJsonFormatLogicItem jsonLogicItem, Dictionary<string, ItemLogic> dicItemLogic, out bool isItemClaim)
         {
+            if (jsonLogicItem.Id == null)
+            {
+                isItemClaim = false;
+                return false;
+            }
             // Check if it a item and get the itemLogic
-            if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic itemLogic))
+            else if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic itemLogic))
             {
                 isItemClaim = itemLogic.IsVariantClaim(jsonLogicItem.Id);
                 return true;
@@ -123,6 +137,10 @@ namespace MajoraAutoItemTracker.Logic
             bool allowTrick,
             HashSet<string> recursivityCheck)
         {
+            if (jsonLogicItem.Id == null) 
+            { 
+                return false; 
+            }
             // All require item must be valid
             recursivityCheck.Add(jsonLogicItem.Id);
             if (jsonLogicItem.RequiredItems.Count == 0)
@@ -144,6 +162,10 @@ namespace MajoraAutoItemTracker.Logic
             bool allowTrick,
             HashSet<string> recursivityCheck)
         {
+            if (jsonLogicItem.Id == null)
+            {
+                return false;
+            }
             // Only one conditional item must be valid
             recursivityCheck.Add(jsonLogicItem.Id);
             if (jsonLogicItem.ConditionalItems.Count == 0)

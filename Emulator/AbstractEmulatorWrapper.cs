@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using MajoraAutoItemTracker.Model;
 using MajoraAutoItemTracker.Model.Enum;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.MemoryReader
 {
     abstract class AbstractRomController
@@ -13,7 +15,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         protected abstract bool IsEmulatorUseBigEndian { get; }
 
-        /*protected*/public System.Diagnostics.Process m_Process;
+        /*protected*/public Process? m_Process;
         protected uint m_romAddrStart;
 
         public abstract bool AttachToProcess(RomType romType);
@@ -77,8 +79,8 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         private bool PerformOOTCheck(uint possibleRomAddrStart)
         {
-            var ootCheck = Memory.ReadInt32(m_Process, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
-            var ootCheckPart2 = Memory.ReadInt32(m_Process, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
+            var ootCheck = Memory.ReadInt32(m_Process!, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
+            var ootCheckPart2 = Memory.ReadInt32(m_Process!, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
 
             var isOotCheckPart1Ok = (ootCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.OCARINA_OF_TIME_USA_V0));
             var isOotCheckPart2Ok = (ootCheckPart2 == GetZeldaCheckPart2FollowingEndiandAndRomType(RomType.OCARINA_OF_TIME_USA_V0));
@@ -90,7 +92,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         private bool PerformMMCheck(uint possibleRomAddrStart)
         {
-            var mmCheck = Memory.ReadInt32(m_Process, new UIntPtr(possibleRomAddrStart + MMOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
+            var mmCheck = Memory.ReadInt32(m_Process!, new UIntPtr(possibleRomAddrStart + MMOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
             if (mmCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.MAJORA_MASK_USA_V0))
                 return true;
             return false;
@@ -121,7 +123,7 @@ namespace MajoraAutoItemTracker.MemoryReader
             // Findind adress in endian size
             var startAddressInEdian = (offset % 4);
             // Claiming block size as byte array
-            var arrayByte = Memory.ReadBytes(m_Process, GetPtrOffsetWithRomStart(offset - startAddressInEdian), 4, IsEmulatorUseBigEndian);
+            var arrayByte = Memory.ReadBytes(m_Process!, GetPtrOffsetWithRomStart(offset - startAddressInEdian), 4, IsEmulatorUseBigEndian);
             // Use correction if we use bigEndian
             if (useBigEndian)
                 arrayByte = arrayByte.Reverse().ToArray();

@@ -7,6 +7,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.MemoryReader
 {
     class MemoryScanner

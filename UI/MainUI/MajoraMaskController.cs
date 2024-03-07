@@ -11,6 +11,8 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.UI.MainUI
 {
     class MajoraMaskController : AbstractUIRoomController<MajoraMaskCheckLogic, MajoraMaskCheckLogicZone>
@@ -115,20 +117,20 @@ namespace MajoraAutoItemTracker.UI.MainUI
             itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
             // Init json
             itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_POSITION_MAPING_NAME);
-            checkLogicCategories = MajoraMaskCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH);
+            checkLogicCategories = MajoraMaskCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH)!;
             checkLogics = MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
-            logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME);
+            logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME)!;
             // Logic resolver
             logicResolver = new MajoraMaskLogicResolver(logicFile);
         }
 
         public void RefreshRegionInDrawingFollowingCheck(List<MajoraMaskCheckLogic> checkLogic)
         {
-            logWrite($"Call RefreshRegionInDrawingFollowingCheck with {checkLogic.Count} check updated");
+            logWrite?.Invoke($"Call RefreshRegionInDrawingFollowingCheck with {checkLogic.Count} check updated");
             // Get all region to update from the list of checkLogic
             foreach (var checkCategory in checkLogic.Select((it) => it.Zone).Distinct())
             {
-                logWrite($"Updated check for the following category: [{checkCategory}]");
+                logWrite?.Invoke($"Updated check for the following category: [{checkCategory}]");
                 RefreshRegionInDrawingFollowingCheck(checkCategory);
             }
         }
@@ -137,7 +139,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             foreach (var checkLogicCategory in checkLogicCategories)
             {
-                pictureBoxZoomMoveController.AddRect(
+                if (checkLogicCategory.Name == null)
+                    throw new Exception("ERROR: checkLogicCategory.Name is null");
+                pictureBoxZoomMoveController?.AddRect(
                     checkLogicCategory.SquarePositionX - rectWidthAndHeight / 2,
                     checkLogicCategory.SquarePositionY - rectWidthAndHeight / 2,
                     rectWidthAndHeight, rectWidthAndHeight,
@@ -149,6 +153,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
         // Call when change is trigger from memory
         public void OnItemLogicChange(List<Tuple<MajoraMaskItemLogicPopertyName, object>> listItemLogicProperty)
         {
+            if (itemLogics == null || checkLogics == null)
+            {
+                return;
+            }
             foreach (var itemLogicProperty in listItemLogicProperty)
             {
                 foreach (var itemLogic in itemLogics)
@@ -177,11 +185,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 }
             }
             // TODO: gerer les différent cas pour les enum
-            pictureBoxItemList.Refresh();
+            pictureBoxItemList?.Refresh();
             // TODO: appeler la logicresolver pour mettre à jour les check avec le nouveau set d'items
             var listOfUpdateCheck = logicResolver.UpdateCheckAndReturnListOfUpdatedCheck(itemLogics, checkLogics, false);
             RefreshRegionInDrawingFollowingCheck(listOfUpdateCheck);
-            pictureBoxItemList.Refresh();
+            pictureBoxItemList?.Refresh();
         }
 
         protected override Point GetPositionInDrawingOfItemLogicPropertyName(string propertyName)

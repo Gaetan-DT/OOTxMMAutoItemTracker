@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
+﻿using System.Threading;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
@@ -8,8 +8,8 @@ namespace MajoraAutoItemTracker.MemoryReader
     {
         const int CST_DEFAULT_THREAD_DELLAY_MS = 2_000;
 
-        private Thread _thread;
-        private bool _isThreadActive;
+        private Thread? _thread = null;
+        private bool _isThreadActive = false;
 
         protected AbstractRomController emulatorWrapper;
 

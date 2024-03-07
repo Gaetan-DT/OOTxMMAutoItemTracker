@@ -6,32 +6,41 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 {
     class LogicFileController
     {
         // Variant used to get itemId of item
-        List<ItemLogic> listItemLogic = null;
-        List<string> listCheck = null;
+        List<ItemLogic>? listItemLogic = null;
+        List<string>? listCheck = null;
 
-        private Dictionary<string, OcarinaOfTimeJsonFormatLogicItem> finalLogicItemList;
+        private Dictionary<string?, OcarinaOfTimeJsonFormatLogicItem>? finalLogicItemList;
         // List of Id available in logic class
-        public BehaviorSubject<List<string>> selectedLogicIdSubject = new BehaviorSubject<List<string>>(null);
+        public BehaviorSubject<List<string>> selectedLogicIdSubject = new BehaviorSubject<List<string>>(new List<string>());
 
-        public BehaviorSubject<List<OcarinaOfTimeJsonFormatLogicItem>> logicItemListSubject = new BehaviorSubject<List<OcarinaOfTimeJsonFormatLogicItem>>(null);
-        public BehaviorSubject<OcarinaOfTimeJsonFormatLogicItem> selectedLogicItemSubject = new BehaviorSubject<OcarinaOfTimeJsonFormatLogicItem>(null);
-        public BehaviorSubject<List<string>> selectedLogicItemListRequireItemListSubject = new BehaviorSubject<List<string>>(null);
-        public BehaviorSubject<List<List<string>>> selectedLogicItemListListConditionalItemListSubject = new BehaviorSubject<List<List<string>>>(null);
-        public BehaviorSubject<List<string>> selectedLogicItemConditionalItemContentSubject = new BehaviorSubject<List<string>>(null);
+        public BehaviorSubject<List<OcarinaOfTimeJsonFormatLogicItem>> logicItemListSubject = 
+            new BehaviorSubject<List<OcarinaOfTimeJsonFormatLogicItem>>(new List<OcarinaOfTimeJsonFormatLogicItem>());
 
-        public string selectedLogicItemId = null;
-        public string selectedLogicItemListRequireItemListId = null;
-        public List<string> selectedLogicItemListConditionalItemListId = null;
-        public string selectedLogicItemListConditionalItemListContentId = null;
+        public BehaviorSubject<OcarinaOfTimeJsonFormatLogicItem?> selectedLogicItemSubject = 
+            new BehaviorSubject<OcarinaOfTimeJsonFormatLogicItem?>(null);
+
+        public BehaviorSubject<List<string>> selectedLogicItemListRequireItemListSubject = 
+            new BehaviorSubject<List<string>>(new List<string>());
+
+        public BehaviorSubject<List<List<string>>> selectedLogicItemListListConditionalItemListSubject = 
+            new BehaviorSubject<List<List<string>>>(new List<List<string>>());
+
+        public BehaviorSubject<List<string>> selectedLogicItemConditionalItemContentSubject = 
+            new BehaviorSubject<List<string>>(new List<string>());
+
+        public string? selectedLogicItemId = null;
+        public string? selectedLogicItemListRequireItemListId = null;
+        public List<string>? selectedLogicItemListConditionalItemListId = null;
+        public string? selectedLogicItemListConditionalItemListContentId = null;
 
         public void InitWith(LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile)
         {
@@ -40,7 +49,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             // Init list check
             listCheck = new List<string>();
             var filePath = Application.StartupPath + @"\Resource\CheckLogic\" + OcarinaOfTimeCheckLogicCategory.CST_DEFAULT_FILE_NAME;
-            var listOotCategory = OcarinaOfTimeCheckLogicCategory.LoadFromFile(filePath);
+            var listOotCategory = OcarinaOfTimeCheckLogicCategory.LoadFromFile(filePath)!;
             foreach (var ootCategory in listOotCategory)
                 foreach (var logicId in ootCategory.CheckLogicId)
                     listCheck.Add(logicId);
@@ -48,39 +57,55 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public List<OcarinaOfTimeJsonFormatLogicItem> GetListOfItemList()
         {
+            if (finalLogicItemList == null)
+            {
+                Console.WriteLine("ERROR: finalLogicItemList not initialized");
+                return new List<OcarinaOfTimeJsonFormatLogicItem>();
+            }
             return finalLogicItemList.Values.ToList();
         }
 
         private void RefreshAll()
         {
             List<OcarinaOfTimeJsonFormatLogicItem> newLogicItemList = finalLogicItemList.Select((it) => it.Value).ToList();
-            OcarinaOfTimeJsonFormatLogicItem newSelectedLogicItem = null;
-            List<string> newSelectedLogicItemListRequireItemList = null;
-            List<List<string>> newSelectedLogicItemListListConditionalItemContent = null;
-            List<string> newSelectedLogicItemConditionalItemContent = null;
+            OcarinaOfTimeJsonFormatLogicItem? newSelectedLogicItem = null;
+            List<string>? newSelectedLogicItemListRequireItemList = null;
+            List<List<string>>? newSelectedLogicItemListListConditionalItemContent = null;
+            List<string>? newSelectedLogicItemConditionalItemContent = null;
             if (selectedLogicItemId != null)
             {
-                if (finalLogicItemList.TryGetValue(selectedLogicItemId, out newSelectedLogicItem))
+                if (finalLogicItemList?.TryGetValue(selectedLogicItemId, out newSelectedLogicItem) ?? false)
                 {
                     newSelectedLogicItemListRequireItemList = newSelectedLogicItem.RequiredItems;
                     newSelectedLogicItemListListConditionalItemContent = newSelectedLogicItem.ConditionalItems;
                     if (selectedLogicItemListConditionalItemListId != null)
                     {
-                        newSelectedLogicItemConditionalItemContent = newSelectedLogicItem.ConditionalItems.Find((it) => it == selectedLogicItemListConditionalItemListId);
+                        newSelectedLogicItemConditionalItemContent = newSelectedLogicItem
+                            .ConditionalItems
+                            .Find((it) => it == selectedLogicItemListConditionalItemListId);
                     }
                 } else
                     selectedLogicItemId = null;
             }
             logicItemListSubject.OnNext(newLogicItemList);
-            selectedLogicItemSubject.OnNext(newSelectedLogicItem);
-            selectedLogicItemListRequireItemListSubject.OnNext(newSelectedLogicItemListRequireItemList);
-            selectedLogicItemListListConditionalItemListSubject.OnNext(newSelectedLogicItemListListConditionalItemContent);
-            selectedLogicItemConditionalItemContentSubject.OnNext(newSelectedLogicItemConditionalItemContent);
+            if (newSelectedLogicItem != null)
+                selectedLogicItemSubject.OnNext(newSelectedLogicItem);
+            if (newSelectedLogicItemListRequireItemList != null)
+                selectedLogicItemListRequireItemListSubject.OnNext(newSelectedLogicItemListRequireItemList);
+            if (newSelectedLogicItemListListConditionalItemContent != null)
+                selectedLogicItemListListConditionalItemListSubject.OnNext(newSelectedLogicItemListListConditionalItemContent);
+            if (newSelectedLogicItemConditionalItemContent != null)
+                selectedLogicItemConditionalItemContentSubject.OnNext(newSelectedLogicItemConditionalItemContent);
             RefreshListIdAvailable();
         }
 
         private void RefreshListIdAvailable()
         {
+            if (listItemLogic == null)
+            {
+                Console.WriteLine("ERROR: listItemLogic is null");
+                return;
+            }
             var finalList = finalLogicItemList.Select((it) => it.Key)/*.Except(listCheck)*/.ToList();
             foreach (var itemLogic in listItemLogic)
                 foreach (var itemLogicVariant in itemLogic.variants)
@@ -93,10 +118,10 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         }
 
         public void ResolveSelectedItemAndRefreshAll(
-            string logicItemId = null,
-            string logicItemListRequireItemListId = null,
-            List<string> logicItemListConditionalItemListId = null,
-            string logicItemListConditionalItemListContentId = null)
+            string? logicItemId = null,
+            string? logicItemListRequireItemListId = null,
+            List<string>? logicItemListConditionalItemListId = null,
+            string? logicItemListConditionalItemListContentId = null)
         {
             ResolveSelectedItem(
                 logicItemId,
@@ -107,10 +132,10 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         }
 
         private void ResolveSelectedItem(
-            string logicItemId = null,
-            string logicItemListRequireItemListId = null,
-            List<string> logicItemListConditionalItemListId = null,
-            string logicItemListConditionalItemListContentId = null)
+            string? logicItemId = null,
+            string? logicItemListRequireItemListId = null,
+            List<string>? logicItemListConditionalItemListId = null,
+            string? logicItemListConditionalItemListContentId = null)
         {
             selectedLogicItemId = logicItemId;
             if (logicItemId == null)
@@ -143,13 +168,18 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
                 MessageBox.Show("Id already exist !");
                 return;
             }
-            finalLogicItemList.Add(newItemLogic.Id, newItemLogic);
+            finalLogicItemList?.Add(newItemLogic.Id, newItemLogic);
             ResolveSelectedItemAndRefreshAll(newItemLogic.Id);
         }
 
         public void RemoveSelectedItemLogic()
         {
-            finalLogicItemList.Remove(selectedLogicItemId);
+            if (selectedLogicItemId == null)
+            {
+                Console.WriteLine("ERROR: RemoveSelectedItemLogic: selectedLogicItemId is null");
+                return;
+            }
+            finalLogicItemList?.Remove(selectedLogicItemId);
             ResolveSelectedItemAndRefreshAll();
         }
 
@@ -162,8 +192,13 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void SaveSelectedLogicItem(string newId, bool isTrick)
         {
+            if (selectedLogicItemId == null)
+            {
+                Console.WriteLine("ERROR: SaveSelectedLogicItem: selectedLogicItemId is null");
+                return;
+            }
             OcarinaOfTimeJsonFormatLogicItem value;
-            if (finalLogicItemList.TryGetValue(selectedLogicItemId, out value))
+            if (finalLogicItemList?.TryGetValue(selectedLogicItemId, out value) ?? false)
             {
                 value.Id = newId;
                 value.IsTrick = isTrick;
@@ -176,6 +211,10 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         public void AddSelectedLogicItemRequireItem(string itemId)
         {
             if (itemId == null)
+                return;
+            if (finalLogicItemList == null)
+                return;
+            if (selectedLogicItemId == null)
                 return;
             finalLogicItemList[selectedLogicItemId].RequiredItems.Add(itemId);
             ResolveSelectedItemAndRefreshAll(
@@ -196,6 +235,8 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         {
             if (selectedLogicItemListRequireItemListId == null)
                 return;
+            if (finalLogicItemList == null || selectedLogicItemId == null)
+                return;
             finalLogicItemList[selectedLogicItemId].RequiredItems.Remove(selectedLogicItemListRequireItemListId);
             ResolveSelectedItemAndRefreshAll(
                 selectedLogicItemId, 
@@ -206,6 +247,8 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void AddSelectedLogicItemConditionalItem()
         {
+            if (finalLogicItemList == null || selectedLogicItemId == null)
+                return;
             var newItem = new List<string>();
             finalLogicItemList[selectedLogicItemId].ConditionalItems.Add(newItem);
             ResolveSelectedItemAndRefreshAll(
@@ -216,6 +259,8 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void UpdateSelectedLogicItemConditionalItem(List<string> updatedListConditionalItem)
         {
+            if (finalLogicItemList == null || selectedLogicItemId == null)
+                return;
             var listConditionalItem = finalLogicItemList[selectedLogicItemId].ConditionalItems.Find((it) => it == selectedLogicItemListConditionalItemListId);
             listConditionalItem.Clear();
             listConditionalItem.AddRange(updatedListConditionalItem);
@@ -236,6 +281,8 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void RemoveSelectedLogicItemConditionalItem()
         {
+            if (finalLogicItemList == null || selectedLogicItemId == null || selectedLogicItemListConditionalItemListId == null)
+                return;
             finalLogicItemList[selectedLogicItemId].ConditionalItems.Remove(selectedLogicItemListConditionalItemListId);
             ResolveSelectedItemAndRefreshAll(
                 selectedLogicItemId,
@@ -250,6 +297,8 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             {
                 MessageBox.Show("No conditional item list selected !");
             }
+            if (finalLogicItemList == null || selectedLogicItemId == null)
+                return;
             finalLogicItemList[selectedLogicItemId].ConditionalItems.Find((it) => it == selectedLogicItemListConditionalItemListId).Add(itemId);
             ResolveSelectedItemAndRefreshAll(
                 selectedLogicItemId,
@@ -267,6 +316,8 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void RemoveLogicItemListContionalItemContent()
         {
+            if (finalLogicItemList == null || selectedLogicItemId == null || selectedLogicItemListConditionalItemListContentId == null)
+                return;
             finalLogicItemList[selectedLogicItemId].ConditionalItems.Find((it) => it == selectedLogicItemListConditionalItemListId).Remove(selectedLogicItemListConditionalItemListContentId);
             ResolveSelectedItemAndRefreshAll(
                 selectedLogicItemId,
@@ -276,6 +327,16 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void IsertMissingRegionFile()
         {
+            if (listCheck == null)
+            {
+                Console.WriteLine("ERROR: IsertMissingRegionFile: listCheck is null");
+                return;
+            }
+            if (finalLogicItemList == null)
+            {
+                Console.WriteLine("ERROR: IsertMissingRegionFile: finalLogicItemList is null");
+                return;
+            }
             // Open file
             foreach (var logicId in listCheck)
             {
@@ -291,9 +352,22 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void InsertMissingItemIdInIdLogic()
         {
+            if (listItemLogic == null)
+            {
+                Console.WriteLine("ERROR: InsertMissingItemIdInIdLogic: listItemLogic is null");
+                return;
+            }
+            
+            if (finalLogicItemList == null)
+            {
+                Console.WriteLine("ERROR: InsertMissingItemIdInIdLogic: finalLogicItemList is null");
+                return;
+            }
             foreach (var itemLogic in listItemLogic)
-                foreach (var itemLogicVariant in itemLogic.variants)
+                foreach (ItemLogicVariant itemLogicVariant in itemLogic.variants)
                 {
+                    if (itemLogicVariant.idLogic == null)
+                        continue;
                     if (!finalLogicItemList.ContainsKey(itemLogicVariant.idLogic))
                         finalLogicItemList.Add(itemLogicVariant.idLogic, new OcarinaOfTimeJsonFormatLogicItem()
                         {

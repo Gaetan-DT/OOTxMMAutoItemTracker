@@ -2,6 +2,8 @@
 using System;
 using System.Diagnostics;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
 {
     class ModLoader64Wrapper : AbstractRomController
@@ -66,27 +68,27 @@ namespace MajoraAutoItemTracker.MemoryReader.ModLoader64
         
         public int readInt8(int offset)
         {
-            return Memory.ReadInt8(m_Process, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);          
+            return Memory.ReadInt8(m_Process!, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);          
         }
 
         public int readInt16(int offset)
         {
-            return Memory.ReadInt16(m_Process, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
+            return Memory.ReadInt16(m_Process!, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
         }
 
         public int readInt32(int offset)
         {
-            return Memory.ReadInt32(m_Process, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
+            return Memory.ReadInt32(m_Process!, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
         }
 
         public uint readUInt32(int offset)
         {
-            return Memory.ReadUInt32(m_Process, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
+            return Memory.ReadUInt32(m_Process!, new UIntPtr(m_romAddrStart) + offset, IsEmulatorUseBigEndian);
         }
 
         public byte[] readByte(int offset, int bytesToRead)
         {
-            return Memory.ReadBytes(m_Process, new UIntPtr(m_romAddrStart) + offset, bytesToRead, IsEmulatorUseBigEndian);
+            return Memory.ReadBytes(m_Process!, new UIntPtr(m_romAddrStart) + offset, bytesToRead, IsEmulatorUseBigEndian);
         }
 
         public bool ReadNotFF(int offset)

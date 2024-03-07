@@ -1,10 +1,11 @@
 ﻿using Cyotek.Windows.Forms;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.UI
 {
@@ -33,7 +34,7 @@ namespace MajoraAutoItemTracker.UI
 
     public class ImageBoxController<T>
     {
-        public event Action<T> OnGraphicPathClick;
+        public event Action<T>? OnGraphicPathClick;
 
         private readonly ImageBox imageBox;
 
@@ -73,7 +74,7 @@ namespace MajoraAutoItemTracker.UI
 
         public GraphicsPathWithData GetGraphicsPathWithData(T tag)
         {
-            return _ListPath.Find((it) => it.Item2.Equals(tag)).Item1;
+            return _ListPath.Find((it) => it.Item2?.Equals(tag) ?? false).Item1;
         }
 
         public void RefreshDrawwing()

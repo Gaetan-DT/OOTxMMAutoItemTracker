@@ -3,13 +3,15 @@ using MajoraAutoItemTracker.Model.Enum;
 using System;
 using System.Collections.Generic;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.MemoryReader
 {
     class MajoraMaskMemoryListener: AbstractMemoryListener
     {
-        private MajoraMemoryData previousMemoryData;
+        private MajoraMemoryData? previousMemoryData = null;
 
-        Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> callBack;
+        readonly Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> callBack;
 
         public MajoraMaskMemoryListener(AbstractRomController emulatorWrapper, Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> callBack) 
             : base(emulatorWrapper)

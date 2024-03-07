@@ -1,8 +1,6 @@
 ﻿using Cyotek.Windows.Forms;
 using MajoraAutoItemTracker.MemoryReader;
-using MajoraAutoItemTracker.MemoryReader.MemoryData;
 using MajoraAutoItemTracker.MemoryReader.MemoryListener;
-using MajoraAutoItemTracker.MemoryReader.ModLoader64;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
@@ -12,6 +10,8 @@ using System.Drawing;
 using System.Reactive.Subjects;
 using System.Windows.Forms;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.UI.MainUI
 {
     class MainUIController
@@ -19,11 +19,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private const string CST_MM_MAP_PATH = @"\Resource\Map\82k78q66tcha1.png";
         private const string CST_OOT_MAP_PATH = @"\Resource\Map\OOT.png";
 
-        private AbstractMemoryListener memoryListener = null;
+        private AbstractMemoryListener? memoryListener = null;
         public BehaviorSubject<bool> isMemoryListenerStartedSubject = new BehaviorSubject<bool>(false);
 
-        public ImageBoxController<OcarinaOfTimeCheckLogicZone> imageBoxMapOOT;
-        public ImageBoxController<MajoraMaskCheckLogicZone> imageBoxMapMM;
+        public ImageBoxController<OcarinaOfTimeCheckLogicZone>? imageBoxMapOOT;
+        public ImageBoxController<MajoraMaskCheckLogicZone>? imageBoxMapMM;
 
         public MainUIController()
         {
@@ -82,7 +82,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             try
             {
-                memoryListener.StartThread();
+                memoryListener?.StopThread();
                 memoryListener = null;
             }
             finally

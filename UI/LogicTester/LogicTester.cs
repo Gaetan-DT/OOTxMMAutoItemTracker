@@ -10,13 +10,15 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.UI.LogicTester
 {
     public partial class LogicTester : Form
     {
-        private LogicFile<MajoraMaskJsonFormatLogicItem> _logicFile;
-        private List<MajoraMaskCheckLogic> _checkLogics;
-        private List<ItemLogic> _itemLogics;
+        private LogicFile<MajoraMaskJsonFormatLogicItem>? _logicFile;
+        private List<MajoraMaskCheckLogic>? _checkLogics;
+        private List<ItemLogic>? _itemLogics;
 
         public LogicTester()
         {
@@ -33,7 +35,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             try
             {
                 _logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromJson(File.ReadAllText(GetPathOfJson()));
-                Log($"logic file loaded: ({_logicFile.Logic.Count} logic)");
+                Log($"logic file loaded: ({_logicFile?.Logic.Count} logic)");
             }
             catch (Exception exception)
             {
@@ -46,7 +48,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             try
             {
                 _checkLogics = MajoraMaskCheckLogic.Deserialize(GetPathOfJson());
-                Log($"check file loaded: ({_checkLogics.Count} check)");
+                Log($"check file loaded: ({_checkLogics?.Count} check)");
             }
             catch (Exception exception)
             {
@@ -59,9 +61,9 @@ namespace MajoraAutoItemTracker.UI.LogicTester
             try
             {
                 _itemLogics = ItemLogicMethod.Deserialize(GetPathOfJson());
-                Log($"item file loaded: ({_itemLogics.Count} item)");
+                Log($"item file loaded: ({_itemLogics?.Count} item)");
                 var enabledCount = 0;
-                foreach (var itemLogic in _itemLogics)
+                foreach (var itemLogic in _itemLogics!)
                     if (itemLogic.hasItem)
                         enabledCount++;
                 Log($"{enabledCount} item enabled");

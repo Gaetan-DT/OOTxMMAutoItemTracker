@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 {
     abstract class AbstractMemoryData<ItemLogicPropertyName>
@@ -9,7 +11,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 
         public abstract Dictionary<ItemLogicPropertyName, object> GetMemoryDataMap();
 
-        public List<Tuple<ItemLogicPropertyName, object>> CompareWithPreviousAndReturnDiff(AbstractMemoryData<ItemLogicPropertyName> previousMemoryData)
+        public List<Tuple<ItemLogicPropertyName, object>> CompareWithPreviousAndReturnDiff(AbstractMemoryData<ItemLogicPropertyName>? previousMemoryData)
         {
             var currentMemoryData = GetMemoryDataMap();
             List<Tuple<ItemLogicPropertyName, object>> listOfUpdatedPropertyName = new List<Tuple<ItemLogicPropertyName, object>>();

@@ -1,13 +1,12 @@
 ﻿using MajoraAutoItemTracker.Model.CheckLogic;
-using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Item;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
@@ -19,16 +18,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         protected Point maxPropertyNamePosition = new Point();
 
-        protected Bitmap itemSpriteMono;
-        protected Bitmap itemSpriteColor;
+        protected Bitmap? itemSpriteMono;
+        protected Bitmap? itemSpriteColor;
 
-        protected List<ItemLogic> itemLogics;
-        protected List<CheckLogic> checkLogics;
+        protected List<ItemLogic>? itemLogics;
+        protected List<CheckLogic>? checkLogics;
 
-        protected Action<string> logWrite;
+        protected Action<string>? logWrite;
 
-        protected ImageBoxController<CheckLogicZone> pictureBoxZoomMoveController;
-        protected PictureBox pictureBoxItemList;
+        protected ImageBoxController<CheckLogicZone>? pictureBoxZoomMoveController;
+        protected PictureBox? pictureBoxItemList;
 
         public void Init(
             Action<string> logWrite,
@@ -48,25 +47,47 @@ namespace MajoraAutoItemTracker.UI.MainUI
             lbCheckList.MouseClick += OnCheckListItemClick;
         }
 
-        public void RefreshCheckListForCategory(ListBox listbox, CheckLogicZone checkLogicZone)
+        public void RefreshCheckListForCategory(
+            ListBox listbox, 
+            CheckLogicZone checkLogicZone)
         {
+            if (checkLogics == null)
+            {
+                Console.WriteLine("ERROR: RefreshCheckListForCategory: Not initialized");
+                return;
+            }
             listbox.BeginUpdate();
             listbox.Items.Clear();
-            listbox.Items.AddRange(checkLogics.FindAll((it) => it.Zone.Equals(checkLogicZone)).ToArray());
+            listbox.Items.AddRange(checkLogics.FindAll((it) => it.Zone?.Equals(checkLogicZone) ?? false).ToArray());
             listbox.EndUpdate();
         }
 
         protected List<CheckLogic> GetListOfCheckLogicForZone(CheckLogicZone zone)
         {
-            return checkLogics.FindAll((it) => it.Zone.Equals(zone)).ToList();
+            var result = new List<CheckLogic>();
+            if (checkLogics == null)
+            {
+                Console.WriteLine("ERROR: GetListOfCheckLogicForZone: Not initialized");
+                return result;
+            }
+            foreach (var checkLogic in checkLogics)
+                if (checkLogic.Zone != null && checkLogic.Zone.Equals(zone))
+                    result.Add(checkLogic);
+            return result;
         }
 
         protected List<CheckLogicZone> GetListOfZone()
         {
-            return checkLogics
-                .Select((it) => it.Zone)
-                .Distinct()
-                .ToList();
+            var result = new List<CheckLogicZone>();
+            if (checkLogics == null)
+            {
+                Console.WriteLine("ERROR: GetListOfZone: Not initialized");
+                return result;
+            }
+            foreach (var checkLogic in checkLogics)
+                if (checkLogic.Zone != null)
+                    result.Add(checkLogic.Zone);
+            return result.Distinct().ToList();
         }
 
         public void RefreshRegionInDrawingFollowingCheck()
@@ -77,11 +98,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public void RefreshRegionInDrawingFollowingCheck(CheckLogicZone zone)
         {
+            if (checkLogics == null || pictureBoxZoomMoveController == null)
+            {
+                Console.WriteLine("ERROR: RefreshRegionInDrawingFollowingCheck: Not initialized");
+                return;
+            }
             bool isAllClaim = true;
             bool isAllCheckAvailable = true;
             bool isAtLeastOneCheckAvailable = false;
             int availableCheck = 0;
-            foreach (var checkInZone in checkLogics.FindAll((it) => it.Zone.Equals(zone)))
+            foreach (var checkInZone in this.GetListOfCheckLogicForZone(zone))
             {
                 if (!checkInZone.IsClaim)
                     isAllClaim = false;
@@ -109,6 +135,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         protected void DrawAllItemList(object sender, PaintEventArgs e)
         {
+            if (itemLogics == null || itemSpriteColor == null || itemSpriteMono == null)
+            {
+                Console.WriteLine("ERROR: DrawAllItemList: Not initialized");
+                return;
+            }
             Graphics g = e.Graphics;
             g.Clear(Color.White);
             foreach (var itemLogic in itemLogics)
@@ -124,8 +155,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     imageToDraw = itemSpriteMono.Clone(new Rectangle(posX, posY, ITEM_LIST_SIZE_IN_FILE, ITEM_LIST_SIZE_IN_FILE), itemSpriteMono.PixelFormat);
                 var point = GetPositionInDrawingOfItemLogicPropertyName(itemLogic.propertyName);
 
-                var scaledSizeX = (sender as PictureBox).Width / (maxPropertyNamePosition.X + 1);
-                var scaledSizeY = (sender as PictureBox).Height / (maxPropertyNamePosition.Y + 1);
+                var scaledSizeX = (sender as PictureBox)!.Width / (maxPropertyNamePosition.X + 1);
+                var scaledSizeY = (sender as PictureBox)!.Height / (maxPropertyNamePosition.Y + 1);
 
                 var scaledSizeXY = Math.Min(scaledSizeX, scaledSizeY);
 
@@ -161,10 +192,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
         /// <param name="e"></param>
         protected void OnCheckListItemClick(object sender, MouseEventArgs e)
         {
+            if (pictureBoxZoomMoveController == null)
+            {
+                Console.WriteLine("ERROR: OnCheckListItemClick: Not initialized");
+                return;
+            }
             var listBox = (ListBox)sender;
             var checkList = (AbstractCheckLogic<CheckLogicZone>)listBox.SelectedItem;
             checkList.IsClaim = !checkList.IsClaim;
-            RefreshRegionInDrawingFollowingCheck(checkList.Zone);
+            if (checkList.Zone != null)
+                RefreshRegionInDrawingFollowingCheck(checkList.Zone);
             listBox.Refresh();
             pictureBoxZoomMoveController.RefreshDrawwing();
         }
@@ -173,6 +210,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public void ResetCheckClaim()
         {
+            if (checkLogics == null)
+            {
+                Console.WriteLine("ERROR: ResetCheckClaim: Not initialized");
+                return;
+            }
             foreach (var checkLogic in checkLogics)
                 checkLogic.IsClaim = false;
             RefreshRegionInDrawingFollowingCheck();
@@ -189,6 +231,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public void LoadFromSave(List<CheckSaveFormat> listCheckSaveFormat)
         {
+            if (checkLogics == null)
+            {
+                Console.WriteLine("ERROR: LoadFromSave: Not initialized");
+                return;
+            }
             foreach (var checkLogic in checkLogics)
             {
                 var savedCheckToApply = listCheckSaveFormat.Find((it) => it.Id == checkLogic.Id);

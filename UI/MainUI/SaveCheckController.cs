@@ -1,12 +1,10 @@
 ﻿using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
@@ -17,7 +15,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private string autoSavePath = Application.StartupPath + CST_SAVE_PATH;
 
-        public CheckSaveFormatHeader LoadFromAutoSave(RomType romType)
+        public CheckSaveFormatHeader? LoadFromAutoSave(RomType romType)
         {
             return LoadOrNull(autoSavePath + GetAutoSaveFileName(romType));
         }
@@ -27,7 +25,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Save(autoSavePath + GetAutoSaveFileName(data.SaveRomType), data);
         }
 
-        public CheckSaveFormatHeader LoadFromFile()
+        public CheckSaveFormatHeader? LoadFromFile()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
@@ -73,7 +71,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Save(filePathWithFileName, data);
         }
 
-        private CheckSaveFormatHeader LoadOrNull(string filePathWithName)
+        private CheckSaveFormatHeader? LoadOrNull(string filePathWithName)
         {
             try
             {

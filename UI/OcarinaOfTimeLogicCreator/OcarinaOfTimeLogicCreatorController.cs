@@ -1,14 +1,9 @@
 ﻿using MajoraAutoItemTracker.Model.Logic;
 using MajoraAutoItemTracker.Model.Logic.OOT;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 {
@@ -18,7 +13,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         const string CST_REQ_FILE_NAME = "OOT_CUSTOM_REQ_CASUAL_1.json";
         const string CST_REQ_FILE_NAME_UPDATED = "OOT_CUSTOM_REQ_CASUAL_1_updated.json";
 
-        public LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile;
+        public LogicFile<OcarinaOfTimeJsonFormatLogicItem>? logicFile;
 
         public void LoadLogic()
         {
@@ -37,7 +32,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public int GetLogicFileVersion()
         {
-            return logicFile.Version;
+            return logicFile?.Version ?? -1;
         }
 
         public void SaveLogic(int version, List<OcarinaOfTimeJsonFormatLogicItem> logicFile)

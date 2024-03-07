@@ -1,14 +1,13 @@
 ﻿using MajoraAutoItemTracker.Model.Logic.OOT;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reactive.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 {
@@ -35,16 +34,16 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             InitLogicItemListConditionalItem();
             InitLogicItemListContionalItemContent();
             controller.LoadLogic();
-            labelLogicItemList.Text = $"Logic Item List (version {controller.logicFile.Version}):";
-            logicFileController.InitWith(controller.logicFile);
+            labelLogicItemList.Text = $"Logic Item List (version {controller?.logicFile?.Version}):";
+            logicFileController.InitWith(controller!.logicFile!);
             logicFileController.selectedLogicIdSubject.Subscribe((it) => {
                 // Filter list
-                var filteredList = it?.Where((idSubject) => idSubject.ToLower().Contains(textBoxSearchAvailableId.Text.ToLower()));
-                ClearAndAddList(listBoxAvailableItemId, filteredList?.ToList());
+                var filteredList = it.Where((idSubject) => idSubject.ToLower().Contains(textBoxSearchAvailableId.Text.ToLower()));
+                ClearAndAddList(listBoxAvailableItemId, filteredList.ToList());
             });
             logicFileController.logicItemListSubject.Subscribe((it) => {
-                var filteredList = it?.Where((listLogicItem) => listLogicItem.Id.ToLower().Contains(textBoxSearchLogicItemList.Text.ToLower()));
-                ClearAndAddList(listBoxLogicItemList, filteredList?.ToList()); 
+                var filteredList = it.Where((listLogicItem) => listLogicItem!.Id!.ToLower().Contains(textBoxSearchLogicItemList.Text.ToLower()));
+                ClearAndAddList(listBoxLogicItemList, filteredList.ToList()); 
             });
             logicFileController.selectedLogicItemSubject.Subscribe(DisplayLogicItem);
             logicFileController.selectedLogicItemListRequireItemListSubject.Subscribe((it) => ClearAndAddList(listBoxLogicItemRequireItemList, it));
@@ -66,7 +65,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
                 if (e.Index >= 0)
                 {
                     var itemList = listBoxLogicItemList.Items[e.Index] as OcarinaOfTimeJsonFormatLogicItem;
-                    messsage = $"{itemList.Id} ({itemList.RequiredItems.Count + itemList.ConditionalItems.Count} item)";
+                    messsage = $"{itemList?.Id} ({itemList?.RequiredItems.Count + itemList?.ConditionalItems.Count} item)";
                 }
                 DrawListBoxLineAndRect(e, listBoxLogicItemList, messsage);
             };
@@ -74,10 +73,9 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             {
                 if (isRefreshing)
                     return;
-                string logicItemId = null;
-                if (listBoxLogicItemList.SelectedItem != null)
-                    logicItemId = (listBoxLogicItemList.SelectedItem as OcarinaOfTimeJsonFormatLogicItem).Id;
-                logicFileController.ResolveSelectedItemAndRefreshAll(logicItemId);
+                string? logicItemId = (listBoxLogicItemList.SelectedItem as OcarinaOfTimeJsonFormatLogicItem)?.Id;
+                if (logicItemId != null)
+                    logicFileController.ResolveSelectedItemAndRefreshAll(logicItemId);
             };
         }
 
@@ -150,7 +148,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             buttonRemoveConditionalItemContent.Click += (s, e) => logicFileController.RemoveLogicItemListContionalItemContent();
         }
 
-        private void DisplayLogicItem(OcarinaOfTimeJsonFormatLogicItem logicItem)
+        private void DisplayLogicItem(OcarinaOfTimeJsonFormatLogicItem? logicItem)
         {
             isRefreshing = true;
             try
@@ -165,7 +163,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             }
         }
 
-        private string GetFromSelectedAndUncheck()
+        private string? GetFromSelectedAndUncheck()
         {
             var selectedItem = listBoxAvailableItemId.SelectedItem;
             if (selectedItem == null)
@@ -177,7 +175,10 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             return selectedItem as string;
         }
 
-        private void ClearAndAddList<T>(ListBox listBox, List<T> content) where T : class
+        private void ClearAndAddList<T>(
+            ListBox listBox, 
+            List<T> content
+            ) where T : class
         {
             var previousItem = listBox.SelectedItem;
             isRefreshing = true;
@@ -208,7 +209,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         {
             if (isRefreshing)
                 return;
-            var filteredList = logicFileController.logicItemListSubject.Value.Where((it) => it.Id.ToLower().Contains(textBoxSearchLogicItemList.Text.ToLower()));
+            var filteredList = logicFileController.logicItemListSubject.Value.Where((it) => it!.Id!.ToLower().Contains(textBoxSearchLogicItemList.Text.ToLower()));
             ClearAndAddList(listBoxLogicItemList, filteredList.ToList());
         }
 

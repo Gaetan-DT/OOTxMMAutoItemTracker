@@ -9,6 +9,8 @@ using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using System.Threading.Tasks;
 
+#nullable enable
+
 namespace MajoraAutoItemTracker.UI.MainUI
 {
     public partial class MainUIForm : Form
@@ -38,8 +40,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
             // Init PictureBox
             mainUIController.InitPictureBox(imageBoxMapOOT, imageBoxMapMM);
-            mainUIController.imageBoxMapOOT.OnGraphicPathClick += (it) => ocarinaOfTimeController.RefreshCheckListForCategory(lbCheckListOOT, it);
-            mainUIController.imageBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
+            mainUIController.imageBoxMapOOT!.OnGraphicPathClick += (it) => ocarinaOfTimeController.RefreshCheckListForCategory(lbCheckListOOT, it);
+            mainUIController.imageBoxMapMM!.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
 
             // Init game controller
             ocarinaOfTimeController.Init(Log, mainUIController.imageBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT);

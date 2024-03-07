@@ -4,22 +4,23 @@ using MajoraAutoItemTracker.Model.Logic;
 using MajoraAutoItemTracker.Model.Logic.OOT;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.Logic
 {
     class OcarinaOfTimeLogicResolver : AbstractLogicResolver
     {
-        protected readonly Dictionary<string, OcarinaOfTimeJsonFormatLogicItem> _logicDictionary = new Dictionary<string, OcarinaOfTimeJsonFormatLogicItem>();
+        protected readonly Dictionary<string, OcarinaOfTimeJsonFormatLogicItem> _logicDictionary = 
+            new Dictionary<string, OcarinaOfTimeJsonFormatLogicItem>();
 
         public OcarinaOfTimeLogicResolver(LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile)
         {
             foreach (var logic in logicFile.Logic)
-                _logicDictionary.Add(logic.Id, logic);
+                if (logic.Id != null)
+                    _logicDictionary.Add(logic.Id, logic);
+                else
+                    Console.WriteLine($"Err: Unable to load logic, id is null [{logic}]");
         }
 
         public List<OcarinaOfTimeCheckLogic> UpdateCheckAndReturnListOfUpdatedCheck(
@@ -69,8 +70,13 @@ namespace MajoraAutoItemTracker.Logic
         {
             WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} BEGIN", false);
             HashSet<string> currentRecursivityCheck = new HashSet<string>(recursivityCheck);
+            if (jsonLogicItem.Id == null)
+            {
+                WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (Id is null)", true);
+                return false;
+            }
             // Check if the logic id has not already been added in previous validation
-            if (currentRecursivityCheck.Contains(jsonLogicItem.Id))
+            else if (currentRecursivityCheck.Contains(jsonLogicItem.Id))
             {
                 WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH FALSE (Recursivity error Id has been checked twice)", true);
                 return false;
@@ -106,8 +112,13 @@ namespace MajoraAutoItemTracker.Logic
 
         private bool IsAnItemLogic(OcarinaOfTimeJsonFormatLogicItem jsonLogicItem, Dictionary<string, ItemLogic> dicItemLogic, out bool isItemClaim)
         {
+            if (jsonLogicItem.Id == null)
+            {
+                isItemClaim = false;
+                return false;
+            }
             // Check if it a item and get the itemLogic
-            if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic itemLogic))
+            else if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic itemLogic))
             {
                 isItemClaim = itemLogic.IsVariantClaim(jsonLogicItem.Id);
                 return true;
@@ -125,6 +136,10 @@ namespace MajoraAutoItemTracker.Logic
             bool allowTrick,
             HashSet<string> recursivityCheck)
         {
+            if (jsonLogicItem.Id == null)
+            {
+                return false;
+            }
             // All require item must be valid
             recursivityCheck.Add(jsonLogicItem.Id);
             if (jsonLogicItem.RequiredItems.Count == 0)
@@ -146,6 +161,10 @@ namespace MajoraAutoItemTracker.Logic
             bool allowTrick,
             HashSet<string> recursivityCheck)
         {
+            if (jsonLogicItem.Id == null)
+            {
+                return false;
+            }
             // Only one conditional item must be valid
             recursivityCheck.Add(jsonLogicItem.Id);
             if (jsonLogicItem.ConditionalItems.Count == 0)

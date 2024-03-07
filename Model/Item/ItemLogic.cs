@@ -1,17 +1,14 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
+﻿#nullable enable
 
 namespace MajoraAutoItemTracker.Model.Item
 {
     public class ItemLogic
     {
-        public String displayName { get; set; }
+        public string? displayName { get; set; }
 
-        public String propertyName { get; set; }
+        public string? propertyName { get; set; }
 
-        public ItemLogicVariant[] variants { get; set; }
+        public ItemLogicVariant[] variants { get; set; } = new ItemLogicVariant[0];
 
         public bool hasItem { get; set; }
 
