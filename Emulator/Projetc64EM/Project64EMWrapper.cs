@@ -13,7 +13,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
         const String PROCESS_NAME = "Project64-EM";
 
         /** Same for MM and OOT **/
-        private const string ZeldazPatternLoopUpLe = "44 4C 45 5A ?? 00 5A 41";
+        private const string ZeldazPatternLoopUpLe = "44 4C 45 5A ?? 00 5A 41 DF DF AB AB DF DF DF DF";
         //private const string ZeldazPatternLoopUpLe = "44 4C 45 5A 07 00 5A 41"; // IDK why last byte can be different
 
         private const uint CST_POSSIBLE_ROM_ADDR_START_1 = 0xDFE4_0000;
@@ -165,9 +165,8 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                 ootAddrStart -= MMOffsets.ZELDAZ_CHECK_ADDRESS;
             else // Find for OOT
                 ootAddrStart -= OOTOffsets.ZELDAZ_CHECK_ADDRESS;
-
-
-
+            var tototo = Memory.ReadInt16(m_Process, new UIntPtr(ootAddrStart), IsEmulatorUseBigEndian);
+            Console.WriteLine($"Int 16 => [${tototo.ToString("X")}]");
             return result;
         }
 

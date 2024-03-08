@@ -92,6 +92,7 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         private bool PerformMMCheck(uint possibleRomAddrStart)
         {
+            //FIXME: Not working
             var mmCheck = Memory.ReadInt32(m_Process!, new UIntPtr(possibleRomAddrStart + MMOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
             if (mmCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.MAJORA_MASK_USA_V0))
                 return true;

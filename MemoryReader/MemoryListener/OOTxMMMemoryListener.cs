@@ -57,9 +57,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
             if (lastCurrentRom == CurrentRom.MajoraMask)
                 arrayRoomToCheck.Reverse();
             foreach(var roomToCheck in arrayRoomToCheck)
-                if (roomToCheck == CurrentRom.OcarinaOfTIme && emulatorWrapper.PerformCheckFollowingRomType(Model.Enum.RomType.OCARINA_OF_TIME_USA_V0))
+                if (roomToCheck == CurrentRom.OcarinaOfTIme && emulatorWrapper.PerformCheckFollowingRomType(RomType.OCARINA_OF_TIME_USA_V0))
                     return CurrentRom.OcarinaOfTIme;
-                else if (roomToCheck == CurrentRom.MajoraMask && emulatorWrapper.PerformCheckFollowingRomType(Model.Enum.RomType.MAJORA_MASK_USA_V0))
+                else if (roomToCheck == CurrentRom.MajoraMask && emulatorWrapper.PerformCheckFollowingRomType(RomType.MAJORA_MASK_USA_V0))
                     return CurrentRom.MajoraMask;
             return CurrentRom.Unknown;
         }

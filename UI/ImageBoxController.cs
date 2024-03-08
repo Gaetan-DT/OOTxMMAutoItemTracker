@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
 using System.Windows.Forms;
 
 #nullable enable
@@ -34,7 +35,7 @@ namespace MajoraAutoItemTracker.UI
 
     public class ImageBoxController<T>
     {
-        public event Action<T>? OnGraphicPathClick;
+        public event Action<List<T>>? OnGraphicPathClick;
 
         private readonly ImageBox imageBox;
 
@@ -130,9 +131,14 @@ namespace MajoraAutoItemTracker.UI
 
             // Check if we click on any graphic element
             if (OnGraphicPathClick != null)
-                foreach (var path in _ListPath)
-                    if (HasClickInPath(e, path))
-                        OnGraphicPathClick(path.Item2);
+            {
+                var itemFound = _ListPath
+                        .FindAll((it) => HasClickInPath(e, it))
+                        .Select((it) => it.Item2)
+                        .ToList();
+                if (itemFound.Count > 0)
+                    OnGraphicPathClick(itemFound);
+            }
         }
 
         #endregion

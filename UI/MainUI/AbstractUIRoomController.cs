@@ -49,7 +49,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public void RefreshCheckListForCategory(
             ListBox listbox, 
-            CheckLogicZone checkLogicZone)
+            List<CheckLogicZone> checkLogicZoneList)
         {
             if (checkLogics == null)
             {
@@ -58,7 +58,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
             listbox.BeginUpdate();
             listbox.Items.Clear();
-            listbox.Items.AddRange(checkLogics.FindAll((it) => it.Zone?.Equals(checkLogicZone) ?? false).ToArray());
+            listbox.Items.AddRange(checkLogics.FindAll((it) => it.Zone != null && checkLogicZoneList.Contains(it.Zone)).ToArray());
             listbox.EndUpdate();
         }
 
