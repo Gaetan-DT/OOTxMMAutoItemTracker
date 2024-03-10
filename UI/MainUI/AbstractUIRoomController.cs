@@ -48,6 +48,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         }
 
         public void RefreshCheckListForCategory(
+            GroupBox groupBox,
             ListBox listbox, 
             List<CheckLogicZone> checkLogicZoneList)
         {
@@ -56,9 +57,15 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 Console.WriteLine("ERROR: RefreshCheckListForCategory: Not initialized");
                 return;
             }
+
+            var listCheckForZone = checkLogics.FindAll((it) => it.Zone != null && checkLogicZoneList.Contains(it.Zone)).ToArray();
+
+            var zoneStr = checkLogicZoneList.FirstOrDefault()?.ToString();
+            groupBox.Text = $"Zone: {zoneStr}";
+
             listbox.BeginUpdate();
             listbox.Items.Clear();
-            listbox.Items.AddRange(checkLogics.FindAll((it) => it.Zone != null && checkLogicZoneList.Contains(it.Zone)).ToArray());
+            listbox.Items.AddRange(listCheckForZone);
             listbox.EndUpdate();
         }
 

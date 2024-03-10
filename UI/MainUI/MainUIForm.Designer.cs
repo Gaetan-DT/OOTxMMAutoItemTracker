@@ -67,6 +67,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.toolStripComboBoxRomTypeList = new System.Windows.Forms.ToolStripComboBox();
             this.stratStopToolStripMenuItemStartStopEmulator = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbCheckListOOT = new System.Windows.Forms.GroupBox();
+            this.gbCheckListMM = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -90,6 +92,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMMItemList)).BeginInit();
             this.tabPageLog.SuspendLayout();
             this.menuStripMain.SuspendLayout();
+            this.gbCheckListOOT.SuspendLayout();
+            this.gbCheckListMM.SuspendLayout();
             this.SuspendLayout();
             // 
             // tboxDebug
@@ -123,10 +127,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.lbCheckListOOT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lbCheckListOOT.FormattingEnabled = true;
             this.lbCheckListOOT.ItemHeight = 17;
-            this.lbCheckListOOT.Location = new System.Drawing.Point(0, 0);
+            this.lbCheckListOOT.Location = new System.Drawing.Point(3, 19);
             this.lbCheckListOOT.Margin = new System.Windows.Forms.Padding(0);
             this.lbCheckListOOT.Name = "lbCheckListOOT";
-            this.lbCheckListOOT.Size = new System.Drawing.Size(300, 221);
+            this.lbCheckListOOT.Size = new System.Drawing.Size(294, 199);
             this.lbCheckListOOT.TabIndex = 67;
             // 
             // tabGameMenu
@@ -187,7 +191,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // splitContainerOotCheckListCheckItemSeparator.Panel2
             // 
-            this.splitContainerOotCheckListCheckItemSeparator.Panel2.Controls.Add(this.lbCheckListOOT);
+            this.splitContainerOotCheckListCheckItemSeparator.Panel2.Controls.Add(this.gbCheckListOOT);
             this.splitContainerOotCheckListCheckItemSeparator.Size = new System.Drawing.Size(300, 625);
             this.splitContainerOotCheckListCheckItemSeparator.SplitterDistance = 400;
             this.splitContainerOotCheckListCheckItemSeparator.TabIndex = 0;
@@ -246,7 +250,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.lbCheckListMM);
+            this.splitContainer2.Panel2.Controls.Add(this.gbCheckListMM);
             this.splitContainer2.Size = new System.Drawing.Size(300, 625);
             this.splitContainer2.SplitterDistance = 400;
             this.splitContainer2.TabIndex = 0;
@@ -270,10 +274,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.lbCheckListMM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lbCheckListMM.FormattingEnabled = true;
             this.lbCheckListMM.ItemHeight = 17;
-            this.lbCheckListMM.Location = new System.Drawing.Point(0, 0);
+            this.lbCheckListMM.Location = new System.Drawing.Point(3, 19);
             this.lbCheckListMM.Margin = new System.Windows.Forms.Padding(0);
             this.lbCheckListMM.Name = "lbCheckListMM";
-            this.lbCheckListMM.Size = new System.Drawing.Size(300, 221);
+            this.lbCheckListMM.Size = new System.Drawing.Size(294, 199);
             this.lbCheckListMM.TabIndex = 68;
             // 
             // imageBoxMapMM
@@ -418,6 +422,28 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.refreshListToolStripMenuItem.Text = "Refresh List";
             this.refreshListToolStripMenuItem.Click += new System.EventHandler(this.OnRefreshEmulatorListClick);
             // 
+            // gbCheckListOOT
+            // 
+            this.gbCheckListOOT.Controls.Add(this.lbCheckListOOT);
+            this.gbCheckListOOT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbCheckListOOT.Location = new System.Drawing.Point(0, 0);
+            this.gbCheckListOOT.Name = "gbCheckListOOT";
+            this.gbCheckListOOT.Size = new System.Drawing.Size(300, 221);
+            this.gbCheckListOOT.TabIndex = 68;
+            this.gbCheckListOOT.TabStop = false;
+            this.gbCheckListOOT.Text = "Zone";
+            // 
+            // gbCheckListMM
+            // 
+            this.gbCheckListMM.Controls.Add(this.lbCheckListMM);
+            this.gbCheckListMM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbCheckListMM.Location = new System.Drawing.Point(0, 0);
+            this.gbCheckListMM.Name = "gbCheckListMM";
+            this.gbCheckListMM.Size = new System.Drawing.Size(300, 221);
+            this.gbCheckListMM.TabIndex = 69;
+            this.gbCheckListMM.TabStop = false;
+            this.gbCheckListMM.Text = "Zone";
+            // 
             // MainUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -459,6 +485,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.tabPageLog.PerformLayout();
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
+            this.gbCheckListOOT.ResumeLayout(false);
+            this.gbCheckListMM.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,6 +524,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.ToolStripMenuItem clearCheckClaimToolStripMenuItem;
         private Cyotek.Windows.Forms.ImageBox imageBoxMapOOT;
         private Cyotek.Windows.Forms.ImageBox imageBoxMapMM;
+        private System.Windows.Forms.GroupBox gbCheckListOOT;
+        private System.Windows.Forms.GroupBox gbCheckListMM;
     }
 }
 

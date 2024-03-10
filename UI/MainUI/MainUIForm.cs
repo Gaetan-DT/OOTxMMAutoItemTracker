@@ -40,8 +40,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
             // Init PictureBox
             mainUIController.InitPictureBox(imageBoxMapOOT, imageBoxMapMM);
-            mainUIController.imageBoxMapOOT!.OnGraphicPathClick += (it) => ocarinaOfTimeController.RefreshCheckListForCategory(lbCheckListOOT, it);
-            mainUIController.imageBoxMapMM!.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListMM, it);
+            mainUIController.imageBoxMapOOT!.OnGraphicPathClick += (it) => ocarinaOfTimeController.RefreshCheckListForCategory(gbCheckListOOT, lbCheckListOOT, it);
+            mainUIController.imageBoxMapMM!.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(gbCheckListMM, lbCheckListMM, it);
 
             // Init game controller
             ocarinaOfTimeController.Init(Log, mainUIController.imageBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT);
