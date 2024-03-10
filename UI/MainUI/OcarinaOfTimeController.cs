@@ -152,6 +152,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
                             itemLogic.hasItem = (bool)itemLogicProperty.Item2;
                             itemLogic.CurrentVariant = 0;
                         }
+                        else if (itemLogicProperty.Item2 is uint)
+                        {
+                            var itemCount = itemLogicProperty.Item2 as uint? ?? 0;
+                            itemLogic.hasItem = itemCount > 0;
+                            itemLogic.ItemCount = itemCount;
+                        }
                         break;
                     }
                 }

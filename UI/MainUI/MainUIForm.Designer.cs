@@ -122,6 +122,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.lbCheckListOOT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbCheckListOOT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lbCheckListOOT.FormattingEnabled = true;
+            this.lbCheckListOOT.ItemHeight = 17;
             this.lbCheckListOOT.Location = new System.Drawing.Point(0, 0);
             this.lbCheckListOOT.Margin = new System.Windows.Forms.Padding(0);
             this.lbCheckListOOT.Name = "lbCheckListOOT";
@@ -268,6 +269,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.lbCheckListMM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbCheckListMM.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lbCheckListMM.FormattingEnabled = true;
+            this.lbCheckListMM.ItemHeight = 17;
             this.lbCheckListMM.Location = new System.Drawing.Point(0, 0);
             this.lbCheckListMM.Margin = new System.Windows.Forms.Padding(0);
             this.lbCheckListMM.Name = "lbCheckListMM";

@@ -119,7 +119,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             // Stuff
             var addressEquipementModifier1 = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_1);
             var addressEquipementModifier2 = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_2);
-            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Goron_Bracelet] = emulatorWrapper.CheckAnyHexValueRaised(addressEquipementModifier1, new byte[] {
+            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Goron_Bracelet] = emulatorWrapper.CheckAnyHexValueRaised(addressEquipementModifier2, new byte[] {
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_GORON_BRACELET,
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_SILVER_GAUNTLETS,
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_GOLDEN_GAUNTLETS
@@ -128,6 +128,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_SILVER_SCALE,
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_GOLDEN_SCALE
             });
+
+            // Skultula counter
+            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Gold_Skulltula] = emulatorWrapper.ReadUint8InEdianSizeAsInt(Model.OOTOffsets.CST_INVENTORY_ADDRESS_SKULTULA_COUNTER);
 
             //TODO: Find Address
             mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Wallet] = emulatorWrapper.CheckAnyHexValueRaised(Model.OOTOffsets.CST_INVENTORY_ADDRESS_WALLET, new byte[] {

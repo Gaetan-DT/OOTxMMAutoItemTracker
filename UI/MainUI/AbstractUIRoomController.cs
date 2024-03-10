@@ -163,7 +163,31 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 var scaledX = (point.X * scaledSizeXY);
                 var scaledY = (point.Y * scaledSizeXY);
 
-                g.DrawImage(imageToDraw, new Rectangle(scaledX, scaledY, scaledSizeXY, scaledSizeXY));
+                var imageRectangle = new Rectangle(scaledX, scaledY, scaledSizeXY, scaledSizeXY);
+
+                g.DrawImage(imageToDraw, imageRectangle);
+
+                if (itemLogic.ItemCount > 0)
+                {
+                    var brushText = new SolidBrush(Color.Black);
+
+                    var fontFamily = new FontFamily("Times New Roman");
+                    StringFormat sf = new StringFormat();
+                    sf.LineAlignment = StringAlignment.Center;
+                    sf.Alignment = StringAlignment.Center;
+                    var font = new Font(fontFamily, 20);
+
+                    StringFormat stringFormat = new StringFormat();
+                    stringFormat.Alignment = StringAlignment.Center;
+                    stringFormat.LineAlignment = StringAlignment.Center;
+
+                    g.DrawString(
+                        itemLogic.ItemCount.ToString(),
+                        font,
+                        brushText,
+                        imageRectangle,
+                        stringFormat);
+                }
             }
         }
 
@@ -198,12 +222,15 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 return;
             }
             var listBox = (ListBox)sender;
-            var checkList = (AbstractCheckLogic<CheckLogicZone>)listBox.SelectedItem;
-            checkList.IsClaim = !checkList.IsClaim;
-            if (checkList.Zone != null)
-                RefreshRegionInDrawingFollowingCheck(checkList.Zone);
-            listBox.Refresh();
-            pictureBoxZoomMoveController.RefreshDrawwing();
+            var checkList = (AbstractCheckLogic<CheckLogicZone>?)listBox.SelectedItem;
+            if (checkList != null)
+            {
+                checkList.IsClaim = !checkList.IsClaim;
+                if (checkList.Zone != null)
+                    RefreshRegionInDrawingFollowingCheck(checkList.Zone);
+                listBox.Refresh();
+                pictureBoxZoomMoveController.RefreshDrawwing();
+            }
         }
 
         protected abstract Point GetPositionInDrawingOfItemLogicPropertyName(string propertyName);

@@ -12,6 +12,8 @@ namespace MajoraAutoItemTracker.Model.Item
 
         public bool hasItem { get; set; }
 
+        public uint ItemCount { get; set; } 
+
         public int CurrentVariant { get; set; }
 
         public bool IsVariantClaim(string idStr)

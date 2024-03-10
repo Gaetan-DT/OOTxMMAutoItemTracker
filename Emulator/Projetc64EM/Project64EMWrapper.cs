@@ -14,7 +14,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         /** Same for MM and OOT **/
         private const string ZeldazPatternLoopUpLe = "44 4C 45 5A ?? 00 5A 41 DF DF AB AB DF DF DF DF";
-        private const string ZeldazPatternMM = "44 4C 45 5A 00 00 5A 41"; // 
+        private const string ZeldazPatternMM = "44 4C 45 5A ?? 00 5A 41"; // 
         //private const string ZeldazPatternLoopUpLe = "44 4C 45 5A 07 00 5A 41"; // IDK why last byte can be different
 
         private const uint CST_POSSIBLE_ROM_ADDR_START_1 = 0xDFE4_0000;
