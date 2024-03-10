@@ -9,7 +9,7 @@ namespace MajoraAutoItemTracker
     class MMOffsets // Big Endian
     {
         // 0x8076D55C: Zeldaz check address for mm
-        public const int ZELDAZ_CHECK_ADDRESS = 0x77229C;
+        public const int ZELDAZ_CHECK_ADDRESS = 0x7765CC;
         public const int ZELDAZ_CHECK_BE = 0x5A454C44;
         public const int ZELDAZ_CHECK_LE = 0x444C455A;
 
@@ -97,7 +97,7 @@ namespace MajoraAutoItemTracker
 
         #region INVENTORY Masks
 
-        public const int CST_MASK_DEKU_MASK = 0x1EF6FE; // Deku mask 1EF6FE // 32, FF
+        public const int CST_MASK_DEKU_MASK = 0x1EF6FD; // Deku mask 1EF6FE // 32, FF
         public const int CST_MASK_GORON_MASK = 0x1EF700; // Goron Mask 1EF700 // 33, FF
         public const int CST_MASK_ZORA_MASK = 0x1EF70A; // Zora Mask 1EF70A // 34, FF
         public const int CST_MASK_FIERCE_DEITY_MASK = 0x1EF70C; // Fierce Deity's Mask 1EF70C // 35, FF

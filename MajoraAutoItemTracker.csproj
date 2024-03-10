@@ -154,7 +154,6 @@
   <ItemGroup>
     <Compile Include="Emulator\AbstractEmulatorWrapper.cs" />
     <Compile Include="Emulator\EmulatorWrapperProvider.cs" />
-    <Compile Include="Emulator\Project64\Project64Wrapper.cs" />
     <Compile Include="Emulator\Projetc64EM\Project64EMWrapper.cs" />
     <Compile Include="Logic\AbstractLogicResolver.cs" />
     <Compile Include="Logic\OcarinaOfTimeLogicResolver.cs" />
@@ -170,6 +169,7 @@
     <Compile Include="Model\CheckLogic\CheckSaveFormat.cs" />
     <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogic.cs" />
     <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogicCategory.cs" />
+    <Compile Include="Model\Enum\CurrentRom.cs" />
     <Compile Include="Model\Enum\EquipmentBombBag.cs" />
     <Compile Include="Model\Enum\EquipmentQuiver.cs" />
     <Compile Include="Model\Enum\EquipmentWallet.cs" />
@@ -228,7 +228,6 @@
     <Compile Include="MemoryReader\MemoryListener\MajoraMaskMemoryListener.cs" />
     <Compile Include="MemoryReader\MemoryData\MajoraMemoryData.cs" />
     <Compile Include="MemoryReader\MemoryOffset\MMOffsets.cs" />
-    <Compile Include="Emulator\ModLoader64\ModLoader64Wrapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\LogicTester\LogicTester.cs">
@@ -289,6 +288,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Emulator\ModLoader64\" />
+    <Folder Include="Emulator\Project64\" />
     <Folder Include="Resource\Save\" />
   </ItemGroup>
   <ItemGroup>

@@ -42,13 +42,18 @@ namespace MajoraAutoItemTracker.UI.MainUI
         }
 
         public bool StartMemoryListener(
-            AbstractRomController emulatorWrapper,
+            EmulatorName? emulatorName,
             RomType romType,
             Action<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> onOOTItemLogicChange,
             Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> onMMItemLogicChange, 
             out string error)
         {
-            error = "";
+            if (emulatorName == null)
+            {
+                error = "No emulator selected";
+                return false;
+            }
+            var emulatorWrapper = EmulatorWrapperProvider.CreateEmulatorFromEnum((EmulatorName)emulatorName);
             if (emulatorWrapper == null)
             {
                 error = "No emulator selected";
@@ -68,6 +73,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
                     romType);
                 memoryListener.StartThread();
                 isMemoryListenerStartedSubject.OnNext(true);
+                error = "";
                 return true;
             }
             catch (Exception e)

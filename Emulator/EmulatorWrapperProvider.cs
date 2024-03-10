@@ -1,33 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+
+#nullable enable
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
+    internal enum EmulatorName
+    {
+        Project64EM
+    }
+
     class EmulatorWrapperProvider
     {
-        private static AbstractRomController[] GetArrayEmulator()
+        private static IEnumerable<EmulatorName> GetArrayEmulator()
         {
-            return new AbstractRomController[]
+            return Enum.GetValues(typeof(EmulatorName)).Cast<EmulatorName>();
+        }
+
+        public static AbstractRomController? CreateEmulatorFromEnum(EmulatorName emulatorName)
+        {
+            switch (emulatorName)
             {
-                new Project64.Project64Wrapper(),
-                new Projetc64EM.Project64EMWrapper(),
-                new ModLoader64.ModLoader64Wrapper()
-            };
+                case EmulatorName.Project64EM:
+                    return new Projetc64EM.Project64EMWrapper();
+                default:
+                    return null;
+            }
         }
 
-        public static AbstractRomController ProvideEmulatorWrapper()
+        public static List<EmulatorName> ProvideEmulatorWrapperList()
         {
+            var result = new List<EmulatorName>();
             foreach (var emulatorWrapper in GetArrayEmulator())
-                if (emulatorWrapper.ProcessExist())
-                    return emulatorWrapper;
-            throw new Exception("No emulator found");
-        }
-
-        public static List<AbstractRomController> ProvideEmulatorWrapperList()
-        {
-            List<AbstractRomController> result = new List<AbstractRomController>();
-            foreach ( var emulatorWrapper in GetArrayEmulator() )
-                if (emulatorWrapper.ProcessExist())
+                //if (emulatorWrapper.ProcessExist())
                     result.Add(emulatorWrapper);
             return result;
         }

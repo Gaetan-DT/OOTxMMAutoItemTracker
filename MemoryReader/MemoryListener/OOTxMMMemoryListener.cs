@@ -9,7 +9,6 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 {
     class OOTxMMMemoryListener : AbstractMemoryListener
     {
-        private enum CurrentRom { OcarinaOfTIme, MajoraMask, Unknown }
 
         private CurrentRom lastCurrentRom = CurrentRom.Unknown; // Used to prevend reading wrong rom each time when in MM
 
@@ -57,10 +56,13 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
             if (lastCurrentRom == CurrentRom.MajoraMask)
                 arrayRoomToCheck.Reverse();
             foreach(var roomToCheck in arrayRoomToCheck)
-                if (roomToCheck == CurrentRom.OcarinaOfTIme && emulatorWrapper.PerformCheckFollowingRomType(RomType.OCARINA_OF_TIME_USA_V0))
+                if (roomToCheck == CurrentRom.OcarinaOfTIme && emulatorWrapper.PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme))
                     return CurrentRom.OcarinaOfTIme;
-                else if (roomToCheck == CurrentRom.MajoraMask && emulatorWrapper.PerformCheckFollowingRomType(RomType.MAJORA_MASK_USA_V0))
+                else if (roomToCheck == CurrentRom.MajoraMask && emulatorWrapper.PerformCheckFollowingRomType(CurrentRom.MajoraMask))
                     return CurrentRom.MajoraMask;
+            // If nothing found try to find any new address
+            if (emulatorWrapper.GetRomAddrStartFollowingLoaddedRom(out uint romAddrStart, out CurrentRom currentRom))
+                return currentRom; 
             return CurrentRom.Unknown;
         }
     }

@@ -102,6 +102,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgBow] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_HERO_BOW);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgIceArrow] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_ICE_ARROWS);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgLightArrow] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_LIGHT_ARROWS);
+            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgFireArrow] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_FIRE_ARROWS);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgBomb] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOMB);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgBombchu] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOMBCHUS);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgStick] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_DEKU_STICKS);

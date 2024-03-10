@@ -93,11 +93,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
             toolStripComboBoxRomTypeList.SelectedIndex = toolStripComboBoxRomTypeList.Items.Count >= 0 ? 0 : -1;
         }
 
-        private void UpdateCbEmulatorList(List<AbstractRomController> emulatorList)
+        private void UpdateCbEmulatorList(List<EmulatorName> emulatorList)
         {
             toolStripComboBoxEmulatorList.SelectedIndex = -1;
             toolStripComboBoxEmulatorList.Items.Clear();
-            toolStripComboBoxEmulatorList.Items.AddRange(emulatorList.Select(it => it.GetDisplayName()).ToArray());
+            toolStripComboBoxEmulatorList.Items.AddRange(emulatorList.Select(it => it.ToString()).ToArray());
             toolStripComboBoxEmulatorList.SelectedIndex = toolStripComboBoxEmulatorList.Items.Count > 0 ? 0 : -1;
         }
 

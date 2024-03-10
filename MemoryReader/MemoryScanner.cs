@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 
 #nullable enable
 
@@ -14,13 +11,14 @@ namespace MajoraAutoItemTracker.MemoryReader
     class MemoryScanner
     {
 
-        public static bool ScannMemoryBeta(
-            Process process,
-            string pattern,
-            out uint patternStartAddres
-        )
+        public static bool ScannMemoryBeta(Process process, string pattern, out uint patternStartAddres)
         {
             return MemoryScannerBeta.ScannMemoryBeta(process, pattern, out patternStartAddres);
+        }
+
+        public static List<uint> ScannMultipleMemoryBeta(Process process, string pattern)
+        {
+            return MemoryScannerBeta.ScannMemoryListBeta(process, pattern);
         }
 
     }
@@ -31,10 +29,9 @@ namespace MajoraAutoItemTracker.MemoryReader
         const uint DEFAULT_STEP = 0x000f_0000;
         // Project64 EM matching -> 44 4C 45 5A 07 00 5A 41
 
-        public static bool ScannMemoryBeta(
-            Process process, 
-            string pattern, 
-            out uint patternStartAddres,
+        public static List<uint> ScannMemoryListBeta(
+            Process process,
+            string pattern,
             uint step = DEFAULT_STEP
         )
         {
@@ -54,7 +51,17 @@ namespace MajoraAutoItemTracker.MemoryReader
                 else
                     offset += step;
             }
+            return listUintFound;
+        }
 
+        public static bool ScannMemoryBeta(
+            Process process, 
+            string pattern, 
+            out uint patternStartAddres,
+            uint step = DEFAULT_STEP
+        )
+        {
+            var listUintFound = ScannMemoryListBeta(process, pattern, step);
             patternStartAddres = listUintFound.FirstOrDefault();
             return listUintFound.Count != 0;
         }

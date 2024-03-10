@@ -16,11 +16,86 @@ namespace MajoraAutoItemTracker.MemoryReader
         protected abstract bool IsEmulatorUseBigEndian { get; }
 
         /*protected*/public Process? m_Process;
-        protected uint m_romAddrStart;
+        private CurrentRom currentRomType;
+        private uint? m_romAddrOcarinaOfTime;
+        private uint? m_romAddrMajoraMask;
+
+        public AbstractRomController()
+        {
+            if (AskForStartMajoraMask())
+                currentRomType = CurrentRom.MajoraMask;
+            else
+                currentRomType = CurrentRom.OcarinaOfTIme;
+        }
 
         public abstract bool AttachToProcess(RomType romType);
         public abstract bool ProcessExist();
         public abstract string GetDisplayName();
+
+        public abstract bool FindRomStartAndRomType(out uint romStart, out CurrentRom romType);
+
+        public abstract bool FindRomStartForRomType(out uint romStart, CurrentRom romType);
+
+        public bool GetRomAddrStartFollowingLoaddedRom(
+            out uint foundRomAddrStart,
+            out CurrentRom foundRomType)
+        {
+            //foundRomAddrStart = 0;
+            //foundRomType = CurrentRom.Unknown;
+            if (GetRomAddrStart() == null)
+            {
+                if (FindRomStartForRomType(out foundRomAddrStart, currentRomType))
+                {
+                    foundRomType = currentRomType;
+                    SetRomAddStartForRomType(foundRomType, foundRomAddrStart);
+                    return true;
+                }
+                else
+                {
+                    foundRomType = CurrentRom.Unknown;
+                    return false;
+                }
+            }
+            else
+            {
+                foundRomAddrStart = RequireRomAddrStart();
+                foundRomType = currentRomType;
+                return true;
+            }
+        }
+
+        private uint? GetRomAddrStart()
+        {
+            switch (currentRomType)
+            {
+                case CurrentRom.OcarinaOfTIme:
+                    return m_romAddrOcarinaOfTime;
+                case CurrentRom.MajoraMask:
+                    return m_romAddrMajoraMask;
+                default:
+                    throw new Exception($"Unknown rom type: {currentRomType}");
+            }
+        }
+
+        private uint RequireRomAddrStart()
+        {
+            return GetRomAddrStart() ?? throw new Exception("Unknown rom start");
+        }
+
+        private void SetRomAddStartForRomType(CurrentRom romType, uint romStart)
+        {
+            switch (romType)
+            {
+                case CurrentRom.OcarinaOfTIme:
+                    m_romAddrOcarinaOfTime = romStart;
+                    break;
+                case CurrentRom.MajoraMask:
+                    m_romAddrMajoraMask = romStart;
+                    break;
+                default:
+                    throw new Exception($"Unknown rom type: {romType}");
+            }
+        }
 
         private int GetZeldaCheckFollowingEndianAndRomType(RomType romType)
         {
@@ -35,23 +110,11 @@ namespace MajoraAutoItemTracker.MemoryReader
             }   
         }
 
-        private int GetZeldaCheckPart2FollowingEndiandAndRomType(RomType romType)
-        {
-            switch (romType)
-            {
-                case RomType.OCARINA_OF_TIME_USA_V0:
-                    return IsEmulatorUseBigEndian ? OOTOffsets.ZELDAZ_CHECK_2_BE : OOTOffsets.ZELDAZ_CHECK_2_LE;
-                case RomType.MAJORA_MASK_USA_V0:
-                    return IsEmulatorUseBigEndian ? MMOffsets.ZELDAZ_CHECK_2_VALUE_BE : MMOffsets.ZELDAZ_CHECK_2_VALUE_LE;
-                default:
-                    throw new Exception($"Unknown rom type: {romType}");
-            }
-        }
-
         // Perform with current start address
-        public bool PerformCheckFollowingRomType(RomType romType)
+        public bool PerformCheckFollowingRomType(CurrentRom romType)
         {
-            return PerformCheckFollowingRomType(romType, m_romAddrStart);
+            var possibleRomAddrStart = GetRomAddrStart() ?? 0;
+            return PerformCheckFollowingRomType(romType, possibleRomAddrStart);
         }
 
         protected bool AskForStartMajoraMask()
@@ -63,16 +126,14 @@ namespace MajoraAutoItemTracker.MemoryReader
                 MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
-        public bool PerformCheckFollowingRomType(RomType romType, uint possibleRomAddrStart)
+        public bool PerformCheckFollowingRomType(CurrentRom romType, uint possibleRomAddrStart)
         {
             switch (romType)
             {
-                case RomType.OCARINA_OF_TIME_USA_V0:
+                case CurrentRom.OcarinaOfTIme:
                     return PerformOOTCheck(possibleRomAddrStart);
-                case RomType.MAJORA_MASK_USA_V0:
+                case CurrentRom.MajoraMask:
                     return PerformMMCheck(possibleRomAddrStart);
-                case RomType.RANDOMIZE_OOT_X_MM:
-                    return PerformOOTCheck(possibleRomAddrStart) || PerformMMCheck(possibleRomAddrStart);
             }
             return false;
         }
@@ -80,10 +141,7 @@ namespace MajoraAutoItemTracker.MemoryReader
         private bool PerformOOTCheck(uint possibleRomAddrStart)
         {
             var ootCheck = Memory.ReadInt32(m_Process!, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
-            var ootCheckPart2 = Memory.ReadInt32(m_Process!, new UIntPtr(possibleRomAddrStart + OOTOffsets.ZELDAZ_CHECK_ADDRESS), IsEmulatorUseBigEndian);
-
             var isOotCheckPart1Ok = (ootCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.OCARINA_OF_TIME_USA_V0));
-            var isOotCheckPart2Ok = (ootCheckPart2 == GetZeldaCheckPart2FollowingEndiandAndRomType(RomType.OCARINA_OF_TIME_USA_V0));
 
             if (isOotCheckPart1Ok)
                 return true;
@@ -101,7 +159,8 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         public UIntPtr GetPtrOffsetWithRomStart(uint offset)
         {
-            return new UIntPtr(m_romAddrStart + offset);
+            var romAddrStart = GetRomAddrStart() ?? 0;
+            return new UIntPtr(romAddrStart + offset);
         }
 
         public uint ReadUint8InEdianSizeAsInt(uint offset)

@@ -14,6 +14,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         /** Same for MM and OOT **/
         private const string ZeldazPatternLoopUpLe = "44 4C 45 5A ?? 00 5A 41 DF DF AB AB DF DF DF DF";
+        private const string ZeldazPatternMM = "44 4C 45 5A 00 00 5A 41"; // 
         //private const string ZeldazPatternLoopUpLe = "44 4C 45 5A 07 00 5A 41"; // IDK why last byte can be different
 
         private const uint CST_POSSIBLE_ROM_ADDR_START_1 = 0xDFE4_0000;
@@ -51,12 +52,35 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         protected override bool IsEmulatorUseBigEndian => true;
 
+        public override bool FindRomStartAndRomType(out uint romStart, out CurrentRom romType)
+        {
+            if (DoFindStart(CurrentRom.OcarinaOfTIme, out romStart))
+            {
+                romType = CurrentRom.OcarinaOfTIme;
+                return true;
+            }
+            else if (DoFindStart(CurrentRom.MajoraMask, out romStart))
+            {
+                romType = CurrentRom.MajoraMask;
+                return true;
+            }                
+            else
+            {
+                romType = CurrentRom.Unknown;
+                return false;
+            }
+        }
+
+        public override bool FindRomStartForRomType(out uint romStart, CurrentRom romType)
+        {
+            return DoFindStart(romType, out romStart);
+        }
+
         public override bool AttachToProcess(RomType romType)
         {
             try
             {
                 m_Process = FindProcessOrThrow();
-                m_romAddrStart = FindStratAddressOrThrow(romType);
                 return true;
             }
             catch (Exception e)
@@ -86,6 +110,8 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         public uint FindStratAddressOrThrow(RomType romType)
         {
+            throw new Exception("Not yet implemented");
+            /*
             // Src: https://github.com/SM64-TAS-ABC/STROOP/blob/096d0ced5bd460b71022ac1da8c8800e95c4fb32/STROOP/Config/Config.xml#L19
             // ramStart seems to be at this adress "0x4BAF0000"
             if (PerformCheckFollowingRomType(romType, 0x4BAF0000))
@@ -103,6 +129,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                 return possibleAddrStart;
 
             throw new Exception("Process not found or unable to find Zelda check address");
+            */
         }
 
         private List<uint> FindInAllModule(string pattern, bool log = false)
@@ -113,7 +140,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             return listPossibleAddress;
         }
 
-        private static List<uint> findAllInModule(System.Diagnostics.Process process, ProcessModule module, string pattern, bool log)
+        private static List<uint> findAllInModule(Process process, ProcessModule module, string pattern, bool log)
         {
             List<uint> listPossibleAddress = new List<uint>();
             try
@@ -148,34 +175,51 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             return listPossibleAddress;
         }
 
-        public bool ScanMemoryToFindStart(out uint ootAddrStart)
+        private bool DoFindStart(CurrentRom currentRom, out uint ootAddrStart)
         {
             if (m_Process == null)
             {
                 throw new Exception("Process is null");
             }
-            // 4713BFD4
-            // 4715A5EC
-            // 4766C56C
-            // 47675824
-            var result = MemoryScanner.ScannMemoryBeta(m_Process, ZeldazPatternLoopUpLe, out ootAddrStart);
-            if (!result)
-                return false;
-            if (AskForStartMajoraMask()) // Find for MM
-                ootAddrStart -= MMOffsets.ZELDAZ_CHECK_ADDRESS;
-            else // Find for OOT
-                ootAddrStart -= OOTOffsets.ZELDAZ_CHECK_ADDRESS;
-            var tototo = Memory.ReadInt16(m_Process, new UIntPtr(ootAddrStart), IsEmulatorUseBigEndian);
-            Console.WriteLine($"Int 16 => [${tototo.ToString("X")}]");
-            return result;
+            List<uint> listpossibleMemory;
+            switch (currentRom)
+            {
+                case CurrentRom.MajoraMask:
+                    listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, ZeldazPatternMM);
+                    foreach (var possibleMemory in listpossibleMemory)
+                    {
+                        ootAddrStart = possibleMemory - MMOffsets.ZELDAZ_CHECK_ADDRESS;
+                        if (PerformCheckFollowingRomType(CurrentRom.MajoraMask, ootAddrStart))
+                            return true;
+                    }
+                    ootAddrStart = 0;
+                    return false;
+                case CurrentRom.OcarinaOfTIme:
+                    listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, ZeldazPatternLoopUpLe);
+                    foreach (var possibleMemory in listpossibleMemory)
+                    {
+                        ootAddrStart = possibleMemory - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
+                        if (PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme, ootAddrStart))
+                            return true;
+                    }
+                    ootAddrStart = 0;
+                    return false;                    
+                case CurrentRom.Unknown:
+                default:
+                    throw new Exception("Unknown rom start");
+            }
         }
 
         public static void Test()
         {
             var wrapper = new Project64EMWrapper();
-            if (wrapper.AttachToProcess(RomType.OCARINA_OF_TIME_USA_V0))
+            if (wrapper.AttachToProcess(RomType.MAJORA_MASK_USA_V0))
             {
-                var result5 = wrapper.ReadUint8InEdianSizeAsInt(Model.OOTOffsets.CST_INVENTORY_ADDRESS_OCARINA).ToString("X");
+                wrapper.GetRomAddrStartFollowingLoaddedRom(
+                    out uint romStart,
+                    out CurrentRom romType);
+
+                var result5 = wrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_INVENTORY_FIRE_ARROWS).ToString("X");
                 // Ocarina oot adress: 0x0011A648 but 0x8011A64B in emulator memory acces
                 // @see https://fr.wiktionary.org/wiki/big-endian & https://fr.wiktionary.org/wiki/little-endian
                 Debug.WriteLine("result5: " + result5);
