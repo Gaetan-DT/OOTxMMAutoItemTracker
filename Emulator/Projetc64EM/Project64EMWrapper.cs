@@ -52,34 +52,6 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             //0x4D45A5EC - OOTOffsets.ZELDAZ_CHECK_ADDRESS,
         };
 
-        private uint GetStoredMemoryAddress(CurrentRom currentRom)
-        { 
-            switch (currentRom)
-            {
-                case CurrentRom.MajoraMask:
-                    return Settings.Default.AvailableMmMemoryAddress;
-                case CurrentRom.OcarinaOfTIme:
-                    return Settings.Default.AvailableOotMemoryAddress;
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-
-        private void UpdateStoredMemoryAddress(CurrentRom currentRom, uint newListAddr)
-        {
-            switch (currentRom)
-            {
-                case CurrentRom.MajoraMask:
-                    Settings.Default.AvailableMmMemoryAddress = newListAddr;
-                    break;
-                case CurrentRom.OcarinaOfTIme:
-                    Settings.Default.AvailableOotMemoryAddress = newListAddr;
-                    break;
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-
         protected override bool IsEmulatorUseBigEndian => true;
 
         public override bool FindRomStartAndRomType(out uint romStart, out CurrentRom romType)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using MajoraAutoItemTracker.Model;
 using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Properties;
 
 #nullable enable
 
@@ -35,6 +36,34 @@ namespace MajoraAutoItemTracker.MemoryReader
         public abstract bool FindRomStartAndRomType(out uint romStart, out CurrentRom romType);
 
         public abstract bool FindRomStartForRomType(out uint romStart, CurrentRom romType);
+
+        protected uint GetStoredMemoryAddress(CurrentRom currentRom)
+        {
+            switch (currentRom)
+            {
+                case CurrentRom.MajoraMask:
+                    return Settings.Default.AvailableMmMemoryAddress;
+                case CurrentRom.OcarinaOfTIme:
+                    return Settings.Default.AvailableOotMemoryAddress;
+                default:
+                    throw new NotImplementedException();
+            }
+        }
+
+        protected void UpdateStoredMemoryAddress(CurrentRom currentRom, uint newListAddr)
+        {
+            switch (currentRom)
+            {
+                case CurrentRom.MajoraMask:
+                    Settings.Default.AvailableMmMemoryAddress = newListAddr;
+                    break;
+                case CurrentRom.OcarinaOfTIme:
+                    Settings.Default.AvailableOotMemoryAddress = newListAddr;
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+        }
 
         public bool GetRomAddrStartFollowingLoaddedRom(
             out uint foundRomAddrStart,
