@@ -8,6 +8,7 @@ using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using System.Threading.Tasks;
+using MajoraAutoItemTracker.Core;
 
 #nullable enable
 
@@ -30,6 +31,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void OnMainUiFormLoad(object sender, EventArgs e)
         {
+            FormUtils.RestoreFormState(this);
             emulatorController.RefreshEmulatorAndGameList();
             emulatorController.subEmulatorList.Subscribe(UpdateCbEmulatorList);
             emulatorController.subRomList.Subscribe(UpdateRomList);
@@ -183,6 +185,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private void OnFormClosing(object sender, FormClosingEventArgs e)
         {
             saveCheckController.SaveToAutoSave(CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM));
+            FormUtils.SaveFormState(this);
         }
 
         private void DoAutoSave() {

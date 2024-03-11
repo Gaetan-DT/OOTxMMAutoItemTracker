@@ -1,7 +1,9 @@
 ﻿using MajoraAutoItemTracker.Model;
 using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Properties;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Diagnostics;
 
 #nullable enable
@@ -49,6 +51,34 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             //CST_POSSIBLE_ROM_ADDR_START_EM_4
             //0x4D45A5EC - OOTOffsets.ZELDAZ_CHECK_ADDRESS,
         };
+
+        private uint GetStoredMemoryAddress(CurrentRom currentRom)
+        { 
+            switch (currentRom)
+            {
+                case CurrentRom.MajoraMask:
+                    return Settings.Default.AvailableMmMemoryAddress;
+                case CurrentRom.OcarinaOfTIme:
+                    return Settings.Default.AvailableOotMemoryAddress;
+                default:
+                    throw new NotImplementedException();
+            }
+        }
+
+        private void UpdateStoredMemoryAddress(CurrentRom currentRom, uint newListAddr)
+        {
+            switch (currentRom)
+            {
+                case CurrentRom.MajoraMask:
+                    Settings.Default.AvailableMmMemoryAddress = newListAddr;
+                    break;
+                case CurrentRom.OcarinaOfTIme:
+                    Settings.Default.AvailableOotMemoryAddress = newListAddr;
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+        }
 
         protected override bool IsEmulatorUseBigEndian => true;
 
@@ -108,78 +138,17 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             return processList[0];
         }
 
-        public uint FindStratAddressOrThrow(RomType romType)
-        {
-            throw new Exception("Not yet implemented");
-            /*
-            // Src: https://github.com/SM64-TAS-ABC/STROOP/blob/096d0ced5bd460b71022ac1da8c8800e95c4fb32/STROOP/Config/Config.xml#L19
-            // ramStart seems to be at this adress "0x4BAF0000"
-            if (PerformCheckFollowingRomType(romType, 0x4BAF0000))
-                return 0x4BAF0000;
-
-            // Option2
-            // Src: 
-            // I have found 3 different addresses when connecting to project 64
-            foreach (uint romAddrStart in CST_POSSIBLE_ROOM_ADDR_START)
-                if (PerformCheckFollowingRomType(romType, romAddrStart)) // ' Try to read what should be the first part of the ZELDAZ check
-                    return romAddrStart;
-
-            // Option 3, manualy lookup to process
-            if (ScanMemoryToFindStart(out uint possibleAddrStart))
-                return possibleAddrStart;
-
-            throw new Exception("Process not found or unable to find Zelda check address");
-            */
-        }
-
-        private List<uint> FindInAllModule(string pattern, bool log = false)
-        {
-            List<uint> listPossibleAddress = new List<uint>();
-            foreach (ProcessModule module in m_Process!.Modules)
-                listPossibleAddress.AddRange(findAllInModule(m_Process, module, pattern, log));
-            return listPossibleAddress;
-        }
-
-        private static List<uint> findAllInModule(Process process, ProcessModule module, string pattern, bool log)
-        {
-            List<uint> listPossibleAddress = new List<uint>();
-            try
-            {
-                bool canContinue = false;
-                Reloaded.Memory.ExternalMemory externalMemory = new Reloaded.Memory.ExternalMemory(process);
-                uint patternSize = (uint)pattern.Replace(" ", "").Length / 2;
-                uint remainingSize = (uint)module.ModuleMemorySize;
-                uint baseAddress = (uint)module.BaseAddress;
-                do
-                {
-                    var data = externalMemory.ReadRaw(baseAddress, (int)remainingSize);
-                    var findResult = new Reloaded.Memory.Sigscan.Scanner(data).FindPattern(pattern);
-                    if (findResult.Found)
-                    {
-                        uint possibleAddress = (uint)module.BaseAddress + (uint)findResult.Offset;
-                        Console.WriteLine($"Found [{pattern}] at module: [{module.ModuleName}], address=[{possibleAddress.ToString("X")}]");
-                        listPossibleAddress.Add(possibleAddress);
-                        // Update offset and remaining size
-                        baseAddress = (uint)module.BaseAddress + (uint)findResult.Offset + patternSize;
-                        remainingSize -= (uint)findResult.Offset - patternSize;
-                    }
-                    canContinue = findResult.Found;
-                } while (canContinue);
-
-            }
-            catch (Exception e)
-            {
-                if (log)
-                    Console.WriteLine($"Unable to read process: {module.ModuleName}: {e.Message}");
-            }
-            return listPossibleAddress;
-        }
-
         private bool DoFindStart(CurrentRom currentRom, out uint ootAddrStart)
         {
             if (m_Process == null)
             {
                 throw new Exception("Process is null");
+            }
+            var possibleSavedMemory = GetStoredMemoryAddress(currentRom);
+            if (PerformCheckFollowingRomType(currentRom, possibleSavedMemory))
+            {
+                ootAddrStart = possibleSavedMemory;
+                return true;
             }
             List<uint> listpossibleMemory;
             switch (currentRom)
@@ -190,7 +159,10 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                     {
                         ootAddrStart = possibleMemory - MMOffsets.ZELDAZ_CHECK_ADDRESS;
                         if (PerformCheckFollowingRomType(CurrentRom.MajoraMask, ootAddrStart))
+                        {
+                            UpdateStoredMemoryAddress(CurrentRom.MajoraMask, ootAddrStart);
                             return true;
+                        }
                     }
                     ootAddrStart = 0;
                     return false;
@@ -200,33 +172,16 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                     {
                         ootAddrStart = possibleMemory - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
                         if (PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme, ootAddrStart))
+                        {
+                            UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, ootAddrStart);
                             return true;
+                        }
                     }
                     ootAddrStart = 0;
                     return false;                    
                 case CurrentRom.Unknown:
                 default:
                     throw new Exception("Unknown rom start");
-            }
-        }
-
-        public static void Test()
-        {
-            var wrapper = new Project64EMWrapper();
-            if (wrapper.AttachToProcess(RomType.MAJORA_MASK_USA_V0))
-            {
-                wrapper.GetRomAddrStartFollowingLoaddedRom(
-                    out uint romStart,
-                    out CurrentRom romType);
-
-                var result5 = wrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_INVENTORY_FIRE_ARROWS).ToString("X");
-                // Ocarina oot adress: 0x0011A648 but 0x8011A64B in emulator memory acces
-                // @see https://fr.wiktionary.org/wiki/big-endian & https://fr.wiktionary.org/wiki/little-endian
-                Debug.WriteLine("result5: " + result5);
-            }
-            else
-            {
-                Debug.WriteLine("Unable to find process :(");
             }
         }
     }
