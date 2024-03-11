@@ -6,10 +6,12 @@ using System.Diagnostics;
 
 namespace MajoraAutoItemTracker.Logic
 {
-    abstract class AbstractLogicResolver
+    public abstract class AbstractLogicResolver
     {
         public bool debugMode = false;
         private int indentDebug = 0;
+
+        public AbstractLogicResolver() { }
 
         #region Utilities
 

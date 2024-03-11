@@ -6,7 +6,7 @@ using System.IO;
 
 namespace MajoraAutoItemTracker.Model.Logic
 {
-    class LogicFile<JsonFormatLogicItem>
+    public class LogicFile<JsonFormatLogicItem>
     {
         public const string CST_REQ_CASUAL_PATH = @"Resource\Logics\";
         public const string CST_OOT_REQ_FILE_NAME = "OOT_CUSTOM_REQ_CASUAL_1.json";

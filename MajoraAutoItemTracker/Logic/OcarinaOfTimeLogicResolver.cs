@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace MajoraAutoItemTracker.Logic
 {
-    class OcarinaOfTimeLogicResolver : AbstractLogicResolver
+    public class OcarinaOfTimeLogicResolver : AbstractLogicResolver
     {
         protected readonly Dictionary<string, OcarinaOfTimeJsonFormatLogicItem> _logicDictionary = 
             new Dictionary<string, OcarinaOfTimeJsonFormatLogicItem>();
