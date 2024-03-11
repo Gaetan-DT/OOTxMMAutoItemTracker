@@ -1,1 +1,1 @@
-POC for a majora's mask auto item tracker working with ModLoader64 x86
+WIP for a Ocarina of time X Majora mask item tracker working with Project64EM

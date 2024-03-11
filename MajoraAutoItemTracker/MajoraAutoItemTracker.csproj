@@ -278,7 +278,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="README.MD" />
     <None Include="Resource\CheckLogic\CheckLogicCategory.json" />
     <None Include="Resource\CheckLogic\oot_CheckLogicCategory.json" />
     <None Include="Resource\Logics\OOT_CUSTOM_REQ_CASUAL_1.json" />

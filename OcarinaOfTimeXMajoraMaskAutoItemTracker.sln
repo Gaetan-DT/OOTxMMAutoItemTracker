@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajoraAutoItemTracker", "MajoraAutoItemTracker.csproj", "{80FB407B-6193-41A1-B7D0-7B013E2D0F81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MajoraAutoItemTracker", "MajoraAutoItemTracker\MajoraAutoItemTracker.csproj", "{80FB407B-6193-41A1-B7D0-7B013E2D0F81}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BAB31E7D-41A4-47C0-B98E-EB00E3B70F16}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C5692070-2B75-4D7E-A423-501937F15062}"
 	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
+		README.MD = README.MD
 	EndProjectSection
 EndProject
 Global
@@ -31,6 +31,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {86658864-5CF0-48CF-AF95-19CBF9C93F85}
+		SolutionGuid = {7B756526-2099-41CB-99E2-3BE28C9ED257}
 	EndGlobalSection
 EndGlobal
