@@ -152,7 +152,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\FormUtils.cs" />
+    <Compile Include="Core\Utils\FormUtils.cs" />
+    <Compile Include="Core\Utils\JsonConvertUtils.cs" />
     <Compile Include="Emulator\AbstractEmulatorWrapper.cs" />
     <Compile Include="Emulator\EmulatorWrapperProvider.cs" />
     <Compile Include="Emulator\Projetc64EM\Project64EMWrapper.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="MemoryReader\MemoryOffset\OOTxMMOffsets.cs" />
     <Compile Include="MemoryReader\MemoryScanner.cs" />
     <Compile Include="Model\CheckLogic\AbstractCheckLogic.cs" />
+    <Compile Include="Model\CheckLogic\CheckLogicCategoryUtils.cs" />
     <Compile Include="Model\CheckLogic\CheckSaveFormat.cs" />
     <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogic.cs" />
     <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogicCategory.cs" />
@@ -198,6 +200,7 @@
     <Compile Include="Model\Item\ItemLogicMethod.cs" />
     <Compile Include="Model\Item\ItemLogicVariant.cs" />
     <Compile Include="Model\Logic\AbstractsonFormatLogicItem.cs" />
+    <Compile Include="Model\Logic\LogicFileUtils.cs" />
     <Compile Include="Model\Logic\MM\MajoraMaskJsonFormatLogicItem.cs" />
     <Compile Include="Logic\MajoraMaskLogicResolver.cs" />
     <Compile Include="Model\Logic\LogicFile.cs" />
@@ -278,10 +281,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resource\CheckLogic\CheckLogicCategory.json" />
+    <None Include="Resource\CheckLogic\mm_CheckLogicCategory.json" />
     <None Include="Resource\CheckLogic\oot_CheckLogicCategory.json" />
     <None Include="Resource\Logics\OOT_CUSTOM_REQ_CASUAL_1.json" />
-    <None Include="Resource\Logics\REQ_CASUAL_12.json" />
+    <None Include="Resource\Logics\MM_CUSTOM_REQ_CASUAL_12.json" />
     <None Include="Resource\Mappings\oot_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
   <ItemGroup>
@@ -309,11 +312,11 @@
     <Content Include="Resource\Itemicons\mm_items_mono.png" />
     <Content Include="Resource\Itemicons\oot_items.png" />
     <Content Include="Resource\Itemicons\oot_items_mono.png" />
-    <Content Include="Resource\Map\OOT.png" />
+    <Content Include="Resource\Map\oot_Map.png" />
     <Content Include="UI\Layout\BarinadesItemTracker_R4tPCG0m05.png" />
     <Content Include="UI\Layout\mm_layout.png" />
-    <Content Include="Resource\Map\82k78q66tcha1.png" />
-    <Content Include="Resource\Mappings\InterfaceItemsPositionsMapping.json" />
+    <Content Include="Resource\Map\mm_Map.png" />
+    <Content Include="Resource\Mappings\mm_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

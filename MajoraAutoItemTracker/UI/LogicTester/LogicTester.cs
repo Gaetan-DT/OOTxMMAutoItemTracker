@@ -34,7 +34,7 @@ namespace MajoraAutoItemTracker.UI.LogicTester
         {
             try
             {
-                _logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromJson(File.ReadAllText(GetPathOfJson()));
+                _logicFile = LogicFileUtils.FromJson<MajoraMaskJsonFormatLogicItem>(File.ReadAllText(GetPathOfJson()));
                 Log($"logic file loaded: ({_logicFile?.Logic.Count} logic)");
             }
             catch (Exception exception)

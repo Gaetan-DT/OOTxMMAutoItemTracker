@@ -29,7 +29,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
 
         private void LoadJsonFile()
         {
-            _logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromJson(File.ReadAllText(Application.StartupPath + @"\Resource\Logics\REQ_CASUAL_12.json"));
+            _logicFile = LogicFileUtils.FromJson<MajoraMaskJsonFormatLogicItem>(File.ReadAllText(Application.StartupPath + @"\Resource\Logics\REQ_CASUAL_12.json"));
             lbLogicVerion.Text = "V:" + (_logicFile?.Version ?? -1);
             UpdateLogicFile();
         }
@@ -174,7 +174,7 @@ namespace MajoraAutoItemTracker.UI.CheckLogicEditor
             {
                 try
                 {
-                    var header = OcarinaOfTimeCheckLogicCategory.FromJson(File.ReadAllText(openFileDialog.FileName))!;
+                    var header = CheckLogicCategoryUtils.LoadOcarinaOfTimeFromFile(openFileDialog.FileName)!;
                     checkLogics = OcarinaOfTimeCheckLogic.FromHeader(header);
                     UpdateCheckListBox();
                 }

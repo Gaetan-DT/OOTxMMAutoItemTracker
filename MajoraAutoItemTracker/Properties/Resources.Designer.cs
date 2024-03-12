@@ -61,11 +61,121 @@ namespace MajoraAutoItemTracker.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] mm_CheckLogicCategory {
+            get {
+                object obj = ResourceManager.GetObject("mm_CheckLogicCategory", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MM_CUSTOM_REQ_CASUAL_12 {
+            get {
+                object obj = ResourceManager.GetObject("MM_CUSTOM_REQ_CASUAL_12", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] mm_InterfaceItemsPositionsMapping {
+            get {
+                object obj = ResourceManager.GetObject("mm_InterfaceItemsPositionsMapping", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BarinadesItemTracker_R4tPCG0m05 {
+        internal static System.Drawing.Bitmap mm_items {
             get {
-                object obj = ResourceManager.GetObject("BarinadesItemTracker_R4tPCG0m05", resourceCulture);
+                object obj = ResourceManager.GetObject("mm_items", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mm_items_mono {
+            get {
+                object obj = ResourceManager.GetObject("mm_items_mono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mm_Map {
+            get {
+                object obj = ResourceManager.GetObject("mm_Map", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] oot_CheckLogicCategory {
+            get {
+                object obj = ResourceManager.GetObject("oot_CheckLogicCategory", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OOT_CUSTOM_REQ_CASUAL_1 {
+            get {
+                object obj = ResourceManager.GetObject("OOT_CUSTOM_REQ_CASUAL_1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] oot_InterfaceItemsPositionsMapping {
+            get {
+                object obj = ResourceManager.GetObject("oot_InterfaceItemsPositionsMapping", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oot_items {
+            get {
+                object obj = ResourceManager.GetObject("oot_items", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oot_items_mono {
+            get {
+                object obj = ResourceManager.GetObject("oot_items_mono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap oot_Map {
+            get {
+                object obj = ResourceManager.GetObject("oot_Map", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

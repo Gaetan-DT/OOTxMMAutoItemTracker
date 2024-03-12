@@ -45,11 +45,10 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         public void InitWith(LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile)
         {
             finalLogicItemList = logicFile.Logic.ToDictionary((it) => it.Id);
-            listItemLogic = ItemLogicMethod.DeserializeOOT();
+            listItemLogic = ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
             // Init list check
             listCheck = new List<string>();
-            var filePath = Application.StartupPath + @"\Resource\CheckLogic\" + OcarinaOfTimeCheckLogicCategory.CST_DEFAULT_FILE_NAME;
-            var listOotCategory = OcarinaOfTimeCheckLogicCategory.LoadFromFile(filePath)!;
+            var listOotCategory = CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
             foreach (var ootCategory in listOotCategory)
                 foreach (var logicId in ootCategory.CheckLogicId)
                     listCheck.Add(logicId);

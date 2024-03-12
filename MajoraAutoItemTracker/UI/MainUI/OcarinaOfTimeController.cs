@@ -18,12 +18,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
 {
     class OcarinaOfTimeController : AbstractUIRoomController<OcarinaOfTimeCheckLogic, OcarinaOfTimeCheckLogicZone>
     {
-        const string ITEM_SPRITE_MONO_PATH = @"\Resource\Itemicons\oot_items_mono.png";
-        const string ITEM_SPRITE_COLOR_PATH = @"\Resource\Itemicons\oot_items.png";
-        const string ITEM_POSITION_MAPING_NAME = @"\Resource\Mappings\" + ItemLogicMethod.CST_OOT_FILE_NAME;
-        const string ITEM_CHECK_LOGIC_CATEGORY_PATH = @"\Resource\CheckLogic\" + OcarinaOfTimeCheckLogicCategory.CST_DEFAULT_FILE_NAME;
-        const string ITEM_LOGIC_FILE_NAME = LogicFile<object>.CST_REQ_CASUAL_PATH + LogicFile<object>.CST_OOT_REQ_FILE_NAME;
-
         private readonly Dictionary<OcarinaOfTimeItemLogicPopertyName, Point> mapPropertyNamePosition = new Dictionary<OcarinaOfTimeItemLogicPopertyName, Point>()
         {
             { OcarinaOfTimeItemLogicPopertyName.Deku_Stick, new Point(0, 0) },
@@ -109,14 +103,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
             };
 
             // Init image
-            itemSpriteMono = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_MONO_PATH));
-            itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
-
+            itemSpriteMono = Properties.Resources.oot_items_mono;
+            itemSpriteColor = Properties.Resources.oot_items;
             // Init json
-            itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_POSITION_MAPING_NAME);
-            checkLogicCategories = OcarinaOfTimeCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH)!;
+            itemLogics = ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
+            checkLogicCategories = CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
             checkLogics = OcarinaOfTimeCheckLogic.FromHeader(checkLogicCategories);
-            logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME)!;
+            logicFile = LogicFileUtils.LoadOcarinaOfTimeFromRessource();
             // Init Logic resolver
             logicResolver = new OcarinaOfTimeLogicResolver(logicFile);
         }

@@ -17,7 +17,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void LoadLogic()
         {
-            logicFile = LogicFile<OcarinaOfTimeJsonFormatLogicItem>.FromFile(GetFilPath(true, false));
+            logicFile = LogicFileUtils.FromFile<OcarinaOfTimeJsonFormatLogicItem>(GetFilPath(true, false));
         }
 
         private string GetFilPath(bool withFileName, bool updatedFile)
@@ -37,7 +37,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void SaveLogic(int version, List<OcarinaOfTimeJsonFormatLogicItem> logicFile)
         {
-            LogicFile<OcarinaOfTimeJsonFormatLogicItem>.Save(GetFilPath(true, true), new LogicFile<OcarinaOfTimeJsonFormatLogicItem>()
+            LogicFileUtils.Save<OcarinaOfTimeJsonFormatLogicItem>(GetFilPath(true, true), new LogicFile<OcarinaOfTimeJsonFormatLogicItem>()
             {
                 Version = version,
                 Logic = logicFile

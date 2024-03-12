@@ -6,10 +6,8 @@ using MajoraAutoItemTracker.Model.Logic;
 using MajoraAutoItemTracker.Model.Logic.MM;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
-using System.Windows.Forms;
 
 #nullable enable
 
@@ -17,12 +15,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
 {
     class MajoraMaskController : AbstractUIRoomController<MajoraMaskCheckLogic, MajoraMaskCheckLogicZone>
     {
-        const string ITEM_SPRITE_MONO_PATH = @"\Resource\Itemicons\mm_items_mono.png";
-        const string ITEM_SPRITE_COLOR_PATH = @"\Resource\Itemicons\mm_items.png";
-        const string ITEM_POSITION_MAPING_NAME = @"\Resource\Mappings\" + ItemLogicMethod.CST_DEFAULT_FILE_NAME;
-        const string ITEM_CHECK_LOGIC_CATEGORY_PATH = @"\Resource\CheckLogic\" + MajoraMaskCheckLogicCategory.CST_DEFAULT_FILE_NAME;
-        const string ITEM_LOGIC_FILE_NAME = LogicFile<object>.CST_REQ_CASUAL_PATH + LogicFile<object>.CST_MM_REQ_FILE_NAME;
-
         private readonly Dictionary<MajoraMaskItemLogicPopertyName, Point> mapPropertyNamePosition = new Dictionary<MajoraMaskItemLogicPopertyName, Point>()
         {
             { MajoraMaskItemLogicPopertyName.ImgOcarina, new Point(0, 0) },
@@ -113,13 +105,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 maxPropertyNamePosition.Y = Math.Max(maxPropertyNamePosition.Y, positionOfEnum.Y);
             };
             // Init image
-            itemSpriteMono = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_MONO_PATH));
-            itemSpriteColor = new Bitmap(Image.FromFile(Application.StartupPath + ITEM_SPRITE_COLOR_PATH));
+            itemSpriteMono = Properties.Resources.mm_items_mono;
+            itemSpriteColor = Properties.Resources.mm_items;
             // Init json
-            itemLogics = ItemLogicMethod.Deserialize(Application.StartupPath + ITEM_POSITION_MAPING_NAME);
-            checkLogicCategories = MajoraMaskCheckLogicCategory.LoadFromFile(Application.StartupPath + ITEM_CHECK_LOGIC_CATEGORY_PATH)!;
+            itemLogics = ItemLogicMethod.LoadMajoraMaskItemLogicFromRessource();
+            checkLogicCategories = CheckLogicCategoryUtils.LoadMajoraMaskFromRessource();
             checkLogics = MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
-            logicFile = LogicFile<MajoraMaskJsonFormatLogicItem>.FromFile(ITEM_LOGIC_FILE_NAME)!;
+            logicFile = LogicFileUtils.LoadMajoraMaskFromRessource();
             // Logic resolver
             logicResolver = new MajoraMaskLogicResolver(logicFile);
         }

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace MajoraAutoItemTracker.Logic
 {
-    class MajoraMaskLogicResolver : AbstractLogicResolver
+    public class MajoraMaskLogicResolver : AbstractLogicResolver
     {
         private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, MajoraMaskJsonFormatLogicItem>();
 
