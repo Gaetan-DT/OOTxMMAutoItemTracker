@@ -12,5 +12,13 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
         public virtual CheckLogicZone Zone { get; set; }
         public virtual bool IsClaim { get; set; }
         public virtual bool IsAvailable { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id={Id} " +
+                $"Zone={Zone} " +
+                $"IsClaim={IsClaim} " +
+                $"IsAvailable={IsAvailable} ";
+        }
     }
 }

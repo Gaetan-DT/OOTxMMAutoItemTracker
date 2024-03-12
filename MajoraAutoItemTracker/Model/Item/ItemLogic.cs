@@ -1,5 +1,7 @@
 ﻿#nullable enable
 
+using System.Linq;
+
 namespace MajoraAutoItemTracker.Model.Item
 {
     public class ItemLogic
@@ -16,6 +18,14 @@ namespace MajoraAutoItemTracker.Model.Item
 
         public int CurrentVariant { get; set; }
 
+        public string? GetVariantIdLogicOrNull()
+        {
+            if (CurrentVariant >= 0 && CurrentVariant < variants.Length)
+                return variants[CurrentVariant].idLogic;
+            else
+                return null;
+        }
+
         public bool IsVariantClaim(string idStr)
         {
             // Check if we have the item
@@ -26,6 +36,15 @@ namespace MajoraAutoItemTracker.Model.Item
                 if (variants[variant].idLogic == idStr)
                     return true; // we have the correct variant or higher
             return false; // We didn't have the correct variant
+        }
+
+        public override string ToString()
+        {
+            return $"{displayName} " +
+                $"hasItem={hasItem} " +
+                $"ItemCount={ItemCount} " +
+                $"CurrentVariant={CurrentVariant}" +
+                $"variants={variants}";
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MajoraAutoItemTracker.Model.Enum
 {
-    enum MajoraMaskItemLogicPopertyName
+    public enum MajoraMaskItemLogicPopertyName
     {
         ImgOcarina,
         ImgBow,
@@ -79,7 +79,7 @@ namespace MajoraAutoItemTracker.Model.Enum
         SunSong,
     }
 
-    class MajoraMaskItemLogicPopertyNameMethod
+    public class MajoraMaskItemLogicPopertyNameMethod
     {
         public static MajoraMaskItemLogicPopertyName FromString(string value)
         {
@@ -88,7 +88,7 @@ namespace MajoraAutoItemTracker.Model.Enum
 
         public static String ToString(MajoraMaskItemLogicPopertyName value)
         {
-            return MajoraMaskItemLogicPopertyName.ImgOcarina.ToString();
+            return value.ToString();
         }
 
         public static IEnumerable<MajoraMaskItemLogicPopertyName> GetAsList()

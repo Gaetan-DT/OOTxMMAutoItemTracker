@@ -37,7 +37,10 @@ namespace MajoraAutoItemTracker.Logic
             return listOfUpdatedCheck;
         }
 
-        public void UpdateCheckForItem(List<ItemLogic> itemLogicList, List<MajoraMaskCheckLogic> checkLogicList, bool allowTrick)
+        public void UpdateCheckForItem(
+            List<ItemLogic> itemLogicList, 
+            List<MajoraMaskCheckLogic> checkLogicList, 
+            bool allowTrick)
         {
             WriteToDebug("-------- UpdateCheckForItem called ---------");
             // We receive a new list of item, we will see if we can update every check available
