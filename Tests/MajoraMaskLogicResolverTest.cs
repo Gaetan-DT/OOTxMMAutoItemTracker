@@ -23,16 +23,16 @@ namespace Tests
 
             var logicFile = LogicFileUtils.LoadMajoraMaskFromRessource();
             var majoraMaskLogicResolver = new MajoraMaskLogicResolver(logicFile);
-            majoraMaskLogicResolver.debugMode = true;
+            majoraMaskLogicResolver.debugMode = false;
 
             var listItemLogic = ItemLogicMethod
                 .LoadMajoraMaskItemLogicFromRessource()
-                .Where((it) => it.propertyName == kafeiMaskPropertyName)
+                //.Where((it) => it.propertyName == kafeiMaskPropertyName)
                 .ToList();
 
             var checkLogicList = MajoraMaskCheckLogic
                 .FromHeader(CheckLogicCategoryUtils.LoadMajoraMaskFromRessource())
-                .Where((it) => it.Id == checkLogicId)
+                //.Where((it) => it.Id == checkLogicId)
                 .ToList();
 
             majoraMaskLogicResolver.UpdateCheckForItem(
@@ -50,7 +50,7 @@ namespace Tests
                 checkLogicList,
                 false);
 
-            var kafeiMaskCheckLogic = result.Find((it) => it.Id == kafeiMaskPropertyName);
+            var kafeiMaskCheckLogic = result.Find((it) => it.Id == checkLogicId);
 
             Assert.IsNotNull(
                 kafeiMaskCheckLogic,
