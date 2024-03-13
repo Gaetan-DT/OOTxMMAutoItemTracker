@@ -73,9 +73,9 @@ namespace MajoraAutoItemTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] MM_CUSTOM_REQ_CASUAL_12 {
+        internal static byte[] MM_CUSTOM_REQ_CASUAL_1 {
             get {
-                object obj = ResourceManager.GetObject("MM_CUSTOM_REQ_CASUAL_12", resourceCulture);
+                object obj = ResourceManager.GetObject("MM_CUSTOM_REQ_CASUAL_1", resourceCulture);
                 return ((byte[])(obj));
             }
         }

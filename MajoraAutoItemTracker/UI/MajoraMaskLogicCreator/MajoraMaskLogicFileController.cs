@@ -1,7 +1,7 @@
 ﻿using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
-using MajoraAutoItemTracker.Model.Logic.OOT;
+using MajoraAutoItemTracker.Model.Logic.MM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 #nullable enable
 
-namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
+namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
 {
-    class OcarinaOfTimeLogicFileController
+    class MajoraMaskLogicFileController
     {
         // Variant used to get itemId of item
         List<ItemLogic>? listItemLogic = null;
         List<string>? listCheck = null;
 
-        private Dictionary<string?, OcarinaOfTimeJsonFormatLogicItem>? finalLogicItemList;
+        private Dictionary<string?, MajoraMaskJsonFormatLogicItem>? finalLogicItemList;
         // List of Id available in logic class
         public BehaviorSubject<List<string>> selectedLogicIdSubject = new BehaviorSubject<List<string>>(new List<string>());
 
-        public BehaviorSubject<List<OcarinaOfTimeJsonFormatLogicItem>> logicItemListSubject = 
-            new BehaviorSubject<List<OcarinaOfTimeJsonFormatLogicItem>>(new List<OcarinaOfTimeJsonFormatLogicItem>());
+        public BehaviorSubject<List<MajoraMaskJsonFormatLogicItem>> logicItemListSubject = 
+            new BehaviorSubject<List<MajoraMaskJsonFormatLogicItem>>(new List<MajoraMaskJsonFormatLogicItem>());
 
-        public BehaviorSubject<OcarinaOfTimeJsonFormatLogicItem?> selectedLogicItemSubject = 
-            new BehaviorSubject<OcarinaOfTimeJsonFormatLogicItem?>(null);
+        public BehaviorSubject<MajoraMaskJsonFormatLogicItem?> selectedLogicItemSubject = 
+            new BehaviorSubject<MajoraMaskJsonFormatLogicItem?>(null);
 
         public BehaviorSubject<List<string>> selectedLogicItemListRequireItemListSubject = 
             new BehaviorSubject<List<string>>(new List<string>());
@@ -42,32 +42,32 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
         public List<string>? selectedLogicItemListConditionalItemListId = null;
         public string? selectedLogicItemListConditionalItemListContentId = null;
 
-        public void InitWith(LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile)
+        public void InitWith(LogicFile<MajoraMaskJsonFormatLogicItem> logicFile)
         {
             finalLogicItemList = logicFile.Logic.ToDictionary((it) => it.Id);
-            listItemLogic = ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
+            listItemLogic = ItemLogicMethod.LoadMajoraMaskItemLogicFromRessource();
             // Init list check
             listCheck = new List<string>();
-            var listOotCategory = CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
+            var listOotCategory = CheckLogicCategoryUtils.LoadMajoraMaskFromRessource();
             foreach (var ootCategory in listOotCategory)
                 foreach (var logicId in ootCategory.CheckLogicId)
                     listCheck.Add(logicId);
         }
 
-        public List<OcarinaOfTimeJsonFormatLogicItem> GetListOfItemList()
+        public List<MajoraMaskJsonFormatLogicItem> GetListOfItemList()
         {
             if (finalLogicItemList == null)
             {
                 Console.WriteLine("ERROR: finalLogicItemList not initialized");
-                return new List<OcarinaOfTimeJsonFormatLogicItem>();
+                return new List<MajoraMaskJsonFormatLogicItem>();
             }
             return finalLogicItemList.Values.ToList();
         }
 
         private void RefreshAll()
         {
-            List<OcarinaOfTimeJsonFormatLogicItem> newLogicItemList = finalLogicItemList.Select((it) => it.Value).ToList();
-            OcarinaOfTimeJsonFormatLogicItem? newSelectedLogicItem = null;
+            List<MajoraMaskJsonFormatLogicItem> newLogicItemList = finalLogicItemList.Select((it) => it.Value).ToList();
+            MajoraMaskJsonFormatLogicItem? newSelectedLogicItem = null;
             List<string>? newSelectedLogicItemListRequireItemList = null;
             List<List<string>>? newSelectedLogicItemListListConditionalItemContent = null;
             List<string>? newSelectedLogicItemConditionalItemContent = null;
@@ -158,7 +158,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
 
         public void CreateAndInsertNewItemLogic()
         {
-            OcarinaOfTimeJsonFormatLogicItem newItemLogic = new OcarinaOfTimeJsonFormatLogicItem()
+            MajoraMaskJsonFormatLogicItem newItemLogic = new MajoraMaskJsonFormatLogicItem()
             {
                 Id = "New itemLogic"
             };
@@ -196,7 +196,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
                 Console.WriteLine("ERROR: SaveSelectedLogicItem: selectedLogicItemId is null");
                 return;
             }
-            OcarinaOfTimeJsonFormatLogicItem value;
+            MajoraMaskJsonFormatLogicItem value;
             if (finalLogicItemList?.TryGetValue(selectedLogicItemId, out value) ?? false)
             {
                 value.Id = newId;
@@ -340,7 +340,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             foreach (var logicId in listCheck)
             {
                 if (!finalLogicItemList.ContainsKey(logicId))
-                    finalLogicItemList.Add(logicId, new OcarinaOfTimeJsonFormatLogicItem()
+                    finalLogicItemList.Add(logicId, new MajoraMaskJsonFormatLogicItem()
                     {
                         Id = logicId,
                         IsTrick = false
@@ -368,7 +368,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
                     if (itemLogicVariant.idLogic == null)
                         continue;
                     if (!finalLogicItemList.ContainsKey(itemLogicVariant.idLogic))
-                        finalLogicItemList.Add(itemLogicVariant.idLogic, new OcarinaOfTimeJsonFormatLogicItem()
+                        finalLogicItemList.Add(itemLogicVariant.idLogic, new MajoraMaskJsonFormatLogicItem()
                         {
                             Id = itemLogicVariant.idLogic,
                             IsTrick = false

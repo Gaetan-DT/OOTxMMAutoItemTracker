@@ -4,12 +4,11 @@
         "SquarePositionX": 3470,
         "SquarePositionY": 2946,
         "CheckLogicId": [
-            "HeartPieceSouthClockTown",
-            "TradeItemLandDeed",
-            "ShopItemBusinessScrubMagicBean",
-            "ChestSouthClockTownRedRupee",
-            "ChestSouthClockTownPurpleRupee",
-            "HeartPiecePostBox"
+            "S Clock Town Under the Clock",
+            "S Clock Town Scrubs Trade",
+            "S Clock Town Straw Roof Chest",
+            "S Clock Town Final Day Chest",
+            "S Clock Town Postbox"
         ]
     },
     {
@@ -17,11 +16,11 @@
         "SquarePositionX": 3384,
         "SquarePositionY": 3112,
         "CheckLogicId": [
-            "MaskBremen",
-            "CollectibleStrayFairyClockTown",
-            "TradeItemPendant",
-            "MaskKeaton",
-            "TradeItemMamaLetter"
+            "Laundry Pool Guru-guru (the guys who teach you Song of Storm in OoT)",
+            "Laundry Pool Stray Fairy",
+            "Laundry Pool Pendant of Memories (Kafei Quest)",
+            "Laundry Pool Keaton Mask (Kafei Quest)",
+            "Laundry Pool Letter to Mama (Kafei Quest)"
         ]
     },
     {
@@ -29,25 +28,25 @@
         "SquarePositionX": 3537,
         "SquarePositionY": 2808,
         "CheckLogicId": [
-            "MaskKafei",
-            "ItemBottleMadameAroma",
-            "MaskPostmanHat",
-            "HeartPieceNotebookMayor",
-            "MaskCircusLeader",
-            "ChestEastClockTownSilverRupee",
-            "ChestBomberHideoutSilverRupee",
-            "MundaneItemHoneyAndDarlingPurpleRupee",
-            "HeartPieceHoneyAndDarling",
-            "ShopItemMilkBarChateau",
-            "ShopItemMilkBarMilk",
-            "UpgradeBigQuiver",
-            "HeartPieceTownArchery",
-            "MundaneItemTreasureChestGamePurpleRupee",
-            "MundaneItemTreasureChestGameDekuNuts",
-            "HeartPieceTreasureChestGame",
-            "MundaneItemTreasureChestGameRedRupee",
-            "CollectibleStrayFairyClockTown",
-            "HeartPiecePostBox"
+            "E Clock Town Madam Aroma in the office",
+            "E Clock Town Madam Aroma in bar (Kafei Quest)",
+            "E Clock Town Postman Freedom (Kafei Quest)",
+            "E Clock Town Mayor PoH",
+            "E Clock Town Circus Leader Mask",
+            "E Clock Town Chest Above Archery",
+            "E Clock Town Bomber's Hideout Chest",
+            "E Clock Town Honey And Darling Any Day",
+            "E Clock Town Honey And Darling Three Days",
+            "E Clock Town Milk Bar",
+            "E Clock Town Milk Bar",
+            "E Clock Town Town Archery #1",
+            "E Clock Town Town Archery #2",
+            "E Clock Town Treasure Chest Game Human",
+            "E Clock Town Treasure Chest Game Deku",
+            "E Clock Town Treasure Chest Game Goron",
+            "E Clock Town Treasure Chest Game Zora",
+            "E Clock Town Clock Town Stray Fairy (Night Time)",
+            "E Clock Town Postbox"
         ]
     },
     {
@@ -55,14 +54,14 @@
         "SquarePositionX": 3465,
         "SquarePositionY": 2783,
         "CheckLogicId": [
-            "TradeItemRoomKey", 
-            "TradeItemKafeiLetter", 
-            "ChestInnStaffRoom", 
-            "ChestInnGuestRoom", 
-            "HeartPieceNotebookGran1", 
-            "HeartPieceNotebookGran2", 
-            "HeartPieceNotebookHand", 
-            "MaskCouple"
+            "Stock Pot Inn Room Key",
+            "Stock Pot Inn Letter to Kafei (Kafei Quest)",
+            "Stock Pot Inn Staff Room Chest",
+            "Stock Pot Inn Guest Room Chest",
+            "Stock Pot Inn Grandma Short Story",
+            "Stock Pot Inn Grandma Long Story",
+            "Stock Pot Inn Toilet Hand (Paper please)",
+            "Stock Pot Inn Anju and Kafei (End of Kafei Quest)"
         ]
     },
     {
@@ -70,30 +69,30 @@
         "SquarePositionX": 3267,
         "SquarePositionY": 2971,
         "CheckLogicId": [
-            "UpgradeAdultWallet",
-            "MundaneItemBankBlueRupee",
-            "HeartPieceBank",
-            "HeartPieceNotebookPostman",
-            "HeartPieceNotebookRosa",
-            "HeartPieceSwordsmanSchool",
-            "MundaneItemLotteryPurpleRupee",
-            "MaskAllNight",
-            "MundaneItemCuriosityShopBlueRupee",
-            "MundaneItemCuriosityShopRedRupee",
-            "MundaneItemCuriosityShopPurpleRupee",
-            "MundaneItemCuriosityShopGoldRupee",
-            "ShopItemTradingPostNut10",
-            "ShopItemTradingPostArrow30",
-            "ShopItemTradingPostArrow50",
-            "ShopItemTradingPostStick",
-            "ShopItemTradingPostFairy",
-            "ShopItemTradingPostGreenPotion",
-            "ShopItemTradingPostShield",
-            "ShopItemTradingPostRedPotion",
-            "ShopItemBombsBombchu10",
-            "ShopItemBombsBomb10",
-            "ItemBombBag",
-            "UpgradeBigBombBag"
+            "W Clock Town Bank Reward #1",
+            "W Clock Town Bank Reward #2",
+            "W Clock Town Bank Reward #3",
+            "W Clock Town Postman's Game",
+            "W Clock Town Rosa Sisters",
+            "W Clock Town Swordsman's School",
+            "W Clock Town Lottery",
+            "W Clock Town All-Night Mask Purchase",
+            "W Clock Town Curiosity Shop Blue Rupee",
+            "W Clock Town Curiosity Shop Red Rupee",
+            "W Clock Town Curiosity Shop Purple Rupee",
+            "W Clock Town Curiosity Shop Gold Rupee",
+            "W Clock Town Trading Post 10 Deku Nuts",
+            "W Clock Town Trading Post 30 Arrows",
+            "W Clock Town Trading Post 50 Arrows",
+            "W Clock Town Trading Post Deku Stick",
+            "W Clock Town Trading Post Fairy",
+            "W Clock Town Trading Post Green Potion",
+            "W Clock Town Trading Post Hero's Shield",
+            "W Clock Town Trading Post Red Potion",
+            "W Clock Town Bomb Shop 10 Bombchu",
+            "W Clock Town Bomb Shop 10 Bombs",
+            "W Clock Town Bomb Bag Purchase",
+            "W Clock Town Big Bomb Bag Purchase"
         ]
     },
     {
@@ -101,16 +100,16 @@
         "SquarePositionX": 3246,
         "SquarePositionY": 2781,
         "CheckLogicId": [
-            "ItemNotebook",
-            "HeartPieceNorthClockTown",
-            "HeartPieceKeatonQuiz",
-            "MundaneItemDekuPlaygroundPurpleRupee",
-            "HeartPieceDekuPlayground",
-            "MaskGreatFairy",
-            "FairyMagic",
-            "ItemTingleMapTownInTown",
-            "ItemTingleMapWoodfallInTown",
-            "MaskBlast"
+            "N Clock Town Bomber's Hide And Seek",
+            "N Clock Town Tree PoH",
+            "N Clock Town Keaton PoH",
+            "N Clock Town Deku Playground 1 Day",
+            "N Clock Town Deku Playground all 3 Days",
+            "N Clock Town Great Fairy Human",
+            "N Clock Town Great Fairy non-Human",
+            "N Clock Town Tingle map shop",
+            "N Clock Town Tingle map shop",
+            "N Clock Town Bombshop Grandma save"
         ]
     },
     {
@@ -118,20 +117,20 @@
         "SquarePositionX": 3834,
         "SquarePositionY": 2932,
         "CheckLogicId": [
-            "TradeItemMoonTear",
-            "HeartPieceZoraGrotto",
-            "HeartPieceTerminaBusinessScrub",
-            "HeartPieceDodong",
-            "HeartPieceTerminaGossipStones",
-            "MaskKamaro",
-            "HeartPiecePeahat",
-            "ChestTerminaGrassRedRupee",
-            "ChestTerminaGrottoRedRupee",
-            "ChestTerminaGrottoBombchu",
-            "ChestTerminaStumpRedRupee",
-            "ChestTerminaUnderwaterRedRupee",
-            "ItemTerminaGrottoCowMilk1",
-            "ItemTerminaGrottoCowMilk2"
+            "Termina Field Astronomy Telescope",
+            "Termina Field Bio Baba Grotto",
+            "Termina Field Business Scrub Purchase",
+            "Termina Field Dodongo Grotto",
+            "Termina Field Gossip Stones Grotto",
+            "Termina Field Kamaro",
+            "Termina Field Peahat Grotto",
+            "Termina Field Grass Chest",
+            "Termina Field Grass Grotto",
+            "Termina Field Pillar Grotto",
+            "Termina Field Stump Chest",
+            "Termina Field Underwater Chest",
+            "Termina Field Termina Grotto Cow #1",
+            "Termina Field Termina Grotto Cow #2"
         ]
     },
     {
@@ -139,12 +138,12 @@
         "SquarePositionX": 4061,
         "SquarePositionY": 3673,
         "CheckLogicId": [
-            "ChestToSwampGrotto",
-            "HeartPieceToSwamp",
-            "ItemTingleMapSnowhead",
-            "UpgradeBiggestQuiver",
-            "HeartPieceSwampArchery",
-            "ItemTingleMapWoodfall"
+            "Road to Southern Swamp Path to Swamp Grotto",
+            "Road to Southern Swamp Path to Swamp Tree",
+            "Road to Southern Swamp Snowhead Map Purchase",
+            "Road to Southern Swamp Swamp Archery #1",
+            "Road to Southern Swamp Swamp Archery #2",
+            "Road to Southern Swamp Woodfall Map Purchase"
         ]
     },
     {
@@ -152,23 +151,23 @@
         "SquarePositionX": 4192,
         "SquarePositionY": 4037,
         "CheckLogicId": [
-            "HeartPieceBoatArchery",
-            "ItemBottleWitch",
-            "MundaneItemKotakeMushroomSaleRedRupee",
-            "ItemPictobox",
-            "ChestWoodsGrotto",
-            "ChestSwampGrotto",
-            "MundaneItemPictographContestRedRupee",
-            "MundaneItemPictographContestBlueRupee",
-            "HeartPiecePictobox",
-            "SongSoaring",
-            "ShopItemBusinessScrubMagicBean",
-            "TradeItemSwampDeed",
-            "MaskTruth",
-            "HeartPieceSwampScrub",
-            "ShopItemWitchBluePotion",
-            "ShopItemWitchGreenPotion",
-            "ShopItemWitchRedPotion"
+            "Southern Swamp Boat Archery",
+            "Southern Swamp Kotake",
+            "Southern Swamp Kotake Mushroom Sale",
+            "Southern Swamp Koume",
+            "Southern Swamp Mystery Woods Grotto",
+            "Southern Swamp Near Swamp Spider House Grotto ",
+            "Southern Swamp Pictograph Contest Good Photo",
+            "Southern Swamp Pictograph Contest Standard Photo",
+            "Southern Swamp Pictograph Contest Winner",
+            "Southern Swamp Music Statue",
+            "Southern Swamp Scrub Purchase",
+            "Southern Swamp Scrub Trade",
+            "Southern Swamp Spider House Reward",
+            "Southern Swamp Tourist Center Roof",
+            "Southern Swamp Witch Shop Blue Potion",
+            "Southern Swamp Witch Shop Green Potion",
+            "Southern Swamp Witch Shop Red Potion"
         ]
     },
     {
@@ -176,36 +175,36 @@
         "SquarePositionX": 4363,
         "SquarePositionY": 4209,
         "CheckLogicId": [
-            "CollectibleSwampSpiderToken18",
-            "CollectibleSwampSpiderToken2",
-            "CollectibleSwampSpiderToken4",
-            "CollectibleSwampSpiderToken25",
-            "CollectibleSwampSpiderToken30",
-            "CollectibleSwampSpiderToken9",
-            "CollectibleSwampSpiderToken12",
-            "CollectibleSwampSpiderToken1",
-            "CollectibleSwampSpiderToken15",
-            "CollectibleSwampSpiderToken19",
-            "CollectibleSwampSpiderToken11",
-            "CollectibleSwampSpiderToken8",
-            "CollectibleSwampSpiderToken10",
-            "CollectibleSwampSpiderToken27",
-            "CollectibleSwampSpiderToken13",
-            "CollectibleSwampSpiderToken14",
-            "CollectibleSwampSpiderToken3",
-            "CollectibleSwampSpiderToken20",
-            "CollectibleSwampSpiderToken23",
-            "CollectibleSwampSpiderToken28",
-            "CollectibleSwampSpiderToken5",
-            "CollectibleSwampSpiderToken16",
-            "CollectibleSwampSpiderToken17",
-            "CollectibleSwampSpiderToken22",
-            "CollectibleSwampSpiderToken6",
-            "CollectibleSwampSpiderToken7",
-            "CollectibleSwampSpiderToken26",
-            "CollectibleSwampSpiderToken21",
-            "CollectibleSwampSpiderToken24",
-            "CollectibleSwampSpiderToken29"
+            "Swamp Spider House Items Gold Room Hive",
+            "Swamp Spider House Items Gold Room Near Ceiling",
+            "Swamp Spider House Items Gold Room Pillar",
+            "Swamp Spider House Items Gold Room Wall",
+            "Swamp Spider House Items Main Room Jar",
+            "Swamp Spider House Items Main Room Lower Left Soft Soil",
+            "Swamp Spider House Items Main Room Lower Right Soft Soil",
+            "Swamp Spider House Items Main Room Near Ceiling",
+            "Swamp Spider House Items Main Room Pillar",
+            "Swamp Spider House Items Main Room Upper Pillar",
+            "Swamp Spider House Items Main Room Upper Soft Soil",
+            "Swamp Spider House Items Main Room Water",
+            "Swamp Spider House Items Monument Room Crate 1",
+            "Swamp Spider House Items Monument Room Crate 2",
+            "Swamp Spider House Items Monument Room Lower Wall",
+            "Swamp Spider House Items Monument Room On Monument",
+            "Swamp Spider House Items Monument Room Torch",
+            "Swamp Spider House Items Pot Room Behind Vines",
+            "Swamp Spider House Items Pot Room Hive 1",
+            "Swamp Spider House Items Pot Room Hive 2",
+            "Swamp Spider House Items Pot Room Jar",
+            "Swamp Spider House Items Pot Room Pot 1",
+            "Swamp Spider House Items Pot Room Pot 2",
+            "Swamp Spider House Items Pot Room Wall",
+            "Swamp Spider House Items Tree Room Grass 1",
+            "Swamp Spider House Items Tree Room Grass 2",
+            "Swamp Spider House Items Tree Room Hive",
+            "Swamp Spider House Items Tree Room Tree 1",
+            "Swamp Spider House Items Tree Room Tree 2",
+            "Swamp Spider House Items Tree Room Tree 3"
         ]
     },
     {
@@ -213,11 +212,11 @@
         "SquarePositionX": 4607,
         "SquarePositionY": 4669,
         "CheckLogicId": [
-            "ChestBeanGrottoRedRupee",
-            "ItemMagicBean",
-            "MaskScents",
-            "HeartPieceDekuPalace",
-            "SongSonata"
+            "Deku Palace Bean Grotto",
+            "Deku Palace Bean Man",
+            "Deku Palace Butler",
+            "Deku Palace West Garden",
+            "Deku Palace Imprisoned Monkey"
         ]
     },
     {
@@ -225,10 +224,10 @@
         "SquarePositionX": 4510,
         "SquarePositionY": 4048,
         "CheckLogicId": [
-            "ChestWoodfallBlueRupee",
-            "ChestWoodfallRedRupee",
-            "HeartPieceWoodFallChest",
-            "FairySpinAttack"
+            "Woodfall Behind Woodfall Owl Chest",
+            "Woodfall Entrance to Woodfall Chest",
+            "Woodfall Bridge Chest",
+            "Woodfall Great Fairy"
         ]
     },
     {
@@ -236,28 +235,28 @@
         "SquarePositionX": 4857,
         "SquarePositionY": 3827,
         "CheckLogicId": [
-            "RemainsOdolwa",
-            "ItemBow",
-            "HeartContainerWoodfall",
-            "ItemWoodfallBossKey",
-            "CollectibleStrayFairyWoodfall14",
-            "ItemWoodfallCompass",
-            "CollectibleStrayFairyWoodfall12",
-            "CollectibleStrayFairyWoodfall5",
-            "CollectibleStrayFairyWoodfall2",
-            "CollectibleStrayFairyWoodfall11",
-            "CollectibleStrayFairyWoodfall13",
-            "CollectibleStrayFairyWoodfall7",
-            "CollectibleStrayFairyWoodfall10",
-            "ItemWoodfallMap",
-            "CollectibleStrayFairyWoodfall15",
-            "CollectibleStrayFairyWoodfall6",
-            "CollectibleStrayFairyWoodfall1",
-            "CollectibleStrayFairyWoodfall4",
-            "CollectibleStrayFairyWoodfall3",
-            "CollectibleStrayFairyWoodfall9",
-            "CollectibleStrayFairyWoodfall8",
-            "ItemWoodfallKey1"
+            "Woodfall Temple Boss Blue Warp (same check for all Temple)",
+            "Woodfall Temple Hero's Bow Chest",
+            "Woodfall Temple Odolwa Heart Container",
+            "Woodfall Temple Boss Key Chest",
+            "Woodfall Temple Bridge Room Hive",
+            "Woodfall Temple Compass Chest",
+            "Woodfall Temple Dark Room",
+            "Woodfall Temple Deku Baba",
+            "Woodfall Temple Entrance Fairy",
+            "Woodfall Temple Entrance Platform",
+            "Woodfall Temple Jar Fairy",
+            "Woodfall Temple Main Room Bubble",
+            "Woodfall Temple Main Room Switch",
+            "Woodfall Temple Map Chest",
+            "Woodfall Temple Platform Room Hive",
+            "Woodfall Temple Poison Water Bubble",
+            "Woodfall Temple Pre-Boss Lower Right Bubble",
+            "Woodfall Temple Pre-Boss Pillar Bubble",
+            "Woodfall Temple Pre-Boss Upper Left Bubble",
+            "Woodfall Temple Pre-Boss Upper Right Bubble",
+            "Woodfall Temple Skulltula",
+            "Woodfall Temple Small Key Chest"
         ]
     },
     {
@@ -265,14 +264,14 @@
         "SquarePositionX": 2223,
         "SquarePositionY": 1919,
         "CheckLogicId": [
-            "MaskGoron",
-            "HeartPieceChoir",
-            "MaskDonGero",
-            "HeartPieceKeatonQuiz",
-            "UpgradeRazorSword",
-            "UpgradeGildedSword",
-            "ChestMountainVillageGrottoRedRupee",
-            "ChestMountainVillage"
+            "Mountain Village Darmani",
+            "Mountain Village Frog Choir",
+            "Mountain Village Hungry Goron",
+            "Mountain Village Keaton Quiz (you just need to do it 1 time in all the run)",
+            "Mountain Village Mountain Smithy Day 1",
+            "Mountain Village Mountain Smithy Day 2",
+            "Mountain Village Mountain Spring Grotto",
+            "Mountain Village Mountain Waterfall Chest"
         ]
     },
     {
@@ -280,13 +279,13 @@
         "SquarePositionX": 2807,
         "SquarePositionY": 1667,
         "CheckLogicId": [
-            "ItemBottleGoronRace",
-            "ChestToGoronRaceGrotto",
-            "ChestHotSpringGrottoRedRupee",
-            "ItemTingleMapRanchInMountain",
-            "ItemTingleMapSnowheadInMountain",
-            "ChestToGoronVillageRedRupee",
-            "HeartPieceTwinIslandsChest"
+            "Twin Islands Goron Race",
+            "Twin Islands Goron Racetrack Grotto",
+            "Twin Islands Hot Spring Water Grotto",
+            "Twin Islands Romani Ranch Map Purchase",
+            "Twin Islands Snowhead Map Purchase",
+            "Twin Islands Cave Chest",
+            "Twin Islands Underwater Ramp Chest"
         ]
     },
     {
@@ -294,17 +293,17 @@
         "SquarePositionX": 3079,
         "SquarePositionY": 1395,
         "CheckLogicId": [
-            "SongLullaby",
-            "UpgradeBiggestBombBag",
-            "ShopItemGoronArrow10",
-            "ShopItemGoronBomb10",
-            "ShopItemGoronRedPotion",
-            "HeartPieceGoronVillageScrub",
-            "ChestLensCaveRedRupee",
-            "ChestLensCavePurpleRupee",
-            "ItemLens",
-            "TradeItemMountainDeed",
-            "ItemPowderKeg"
+            "Goron Village Baby Goron",
+            "Goron Village Biggest Bomb Bag Purchase",
+            "Goron Village Goron Shop 10 Arrows",
+            "Goron Village Goron Shop 10 Bombs",
+            "Goron Village Goron Shop Red Potion",
+            "Goron Village Ledge",
+            "Goron Village Lens Cave Invisible Chest",
+            "Goron Village Lens Cave Rock Chest",
+            "Goron Village Lens of Truth Chest",
+            "Goron Village Mountain Scrub Trade",
+            "Goron Village Powder Keg Challenge"
         ]
     },
     {
@@ -312,8 +311,8 @@
         "SquarePositionX": 2027,
         "SquarePositionY": 1547,
         "CheckLogicId": [
-            "ChestToSnowheadGrotto",
-            "HeartPieceToSnowhead"
+            "Path to Snowhead Grotto",
+            "Path to Snowhead Pillar"
         ]
     },
     {
@@ -321,7 +320,7 @@
         "SquarePositionX": 1357,
         "SquarePositionY": 933,
         "CheckLogicId": [
-            "FairyDoubleMagic"
+            "Snowhead Great Fairy"
         ]
     },
     {
@@ -329,30 +328,30 @@
         "SquarePositionX": 517,
         "SquarePositionY": 813,
         "CheckLogicId": [
-            "RemainsGoht",
-            "ItemFireArrow",
-            "HeartContainerSnowhead",
-            "CollectibleStrayFairySnowhead9",
-            "ItemSnowheadKey1",
-            "ItemSnowheadBossKey",
-            "ItemSnowheadKey3",
-            "CollectibleStrayFairySnowhead4",
-            "CollectibleStrayFairySnowhead5",
-            "CollectibleStrayFairySnowhead2",
-            "ItemSnowheadCompass",
-            "CollectibleStrayFairySnowhead15",
-            "CollectibleStrayFairySnowhead3",
-            "CollectibleStrayFairySnowhead6",
-            "CollectibleStrayFairySnowhead14",
-            "ItemSnowheadKey2",
-            "CollectibleStrayFairySnowhead11",
-            "CollectibleStrayFairySnowhead12",
-            "ItemSnowheadMap",
-            "CollectibleStrayFairySnowhead7",
-            "CollectibleStrayFairySnowhead8",
-            "CollectibleStrayFairySnowhead13",
-            "CollectibleStrayFairySnowhead1",
-            "CollectibleStrayFairySnowhead10"
+            "Snowhead Temple Boss Blue Warp (Same reward in all temple)",
+            "Snowhead Temple Fire Arrow Chest",
+            "Snowhead Temple Goht Heart Container",
+            "Snowhead Temple Basement",
+            "Snowhead Temple Block Room Chest",
+            "Snowhead Temple Boss Key Chest",
+            "Snowhead Temple Bridge Room Chest",
+            "Snowhead Temple Bridge Room Ledge Bubble",
+            "Snowhead Temple Bridge Room Pillar Bubble",
+            "Snowhead Temple Ceiling Bubble",
+            "Snowhead Temple Compass Chest",
+            "Snowhead Temple Crate",
+            "Snowhead Temple Dinolfos 1",
+            "Snowhead Temple Dinolfos 2",
+            "Snowhead Temple Ice Puzzle",
+            "Snowhead Temple Icicle Room Chest",
+            "Snowhead Temple Icicle Room Wall",
+            "Snowhead Temple Main Room Wall",
+            "Snowhead Temple Map Chest",
+            "Snowhead Temple Map Room Fairy",
+            "Snowhead Temple Map Room Ledge",
+            "Snowhead Temple Pillar Freezards",
+            "Snowhead Temple Snow Room Bubble",
+            "Snowhead Temple Twin Block"
         ]
     },
     {
@@ -360,11 +359,11 @@
         "SquarePositionX": 3233,
         "SquarePositionY": 3639,
         "CheckLogicId": [
-            "ShopItemGormanBrosMilk",
-            "MaskGaro",
-            "ItemTingleMapGreatBayInRanch",
-            "HeartPieceKeatonQuiz",
-            "ItemTingleMapRanchInRanch"
+            "Milk Road Gorman Bros Milk Purchase",
+            "Milk Road Gorman Bros Race",
+            "Milk Road Great Bay Map Purchase",
+            "Milk Road Keaton Quiz",
+            "Milk Road Romani Ranch Map Purchase"
         ]
     },
     {
@@ -372,15 +371,15 @@
         "SquarePositionX": 3369,
         "SquarePositionY": 4107,
         "CheckLogicId": [
-            "ItemBottleAliens",
-            "MaskRomani",
-            "HeartPieceDogRace",
-            "ChestDogRacePurpleRupee",
-            "MaskBunnyHood",
-            "ItemRanchBarnMainCowMilk",
-            "ItemRanchBarnOtherCowMilk1",
-            "ItemRanchBarnOtherCowMilk2",
-            "SongEpona"
+            "Romani Ranch Aliens Defense",
+            "Romani Ranch Cremia",
+            "Romani Ranch Dog Race",
+            "Romani Ranch Doggy Racetrack Roof Chest",
+            "Romani Ranch Grog",
+            "Romani Ranch Ranch Cow #1",
+            "Romani Ranch Ranch Cow #2",
+            "Romani Ranch Ranch Cow #3",
+            "Romani Ranch Romani's Game"
         ]
     },
     {
@@ -388,21 +387,21 @@
         "SquarePositionX": 1865,
         "SquarePositionY": 3175,
         "CheckLogicId": [
-            "SongNewWaveBossaNova",
-            "HeartPieceFishermanGame",
-            "MundaneItemSeahorse",
-            "ChestGreatBayCoastGrotto",
-            "ItemCoastGrottoCowMilk1",
-            "ItemCoastGrottoCowMilk2",
-            "HeartPieceGreatBayCoast",
-            "ItemTingleMapGreatBay",
-            "HeartPieceLabFish",
-            "MaskZora",
-            "HeartPieceOceanSpiderHouse",
-            "UpgradeGiantWallet",
-            "MundaneItemOceanSpiderHouseDay2PurpleRupee",
-            "MundaneItemOceanSpiderHouseDay3RedRupee",
-            "ItemTingleMapStoneTowerInOcean"
+            "Great Bay Coast Baby Zoras",
+            "Great Bay Coast Fisherman Game",
+            "Great Bay Coast Fisherman Pictograph",
+            "Great Bay Coast Grotto",
+            "Great Bay Coast Grotto Cow #1",
+            "Great Bay Coast Grotto Cow #2",
+            "Great Bay Coast Ledge",
+            "Great Bay Coast Great Bay Map Purchase",
+            "Great Bay Coast Lab Fish",
+            "Great Bay Coast Mikau",
+            "Great Bay Coast Ocean Spider House Chest",
+            "Great Bay Coast Ocean Spider House Day 1 Reward",
+            "Great Bay Coast Ocean Spider House Day 2 Reward",
+            "Great Bay Coast Ocean Spider House Day 3 Reward",
+            "Great Bay Coast Stone Tower Map Purchase"
         ]
     },
     {
@@ -410,36 +409,36 @@
         "SquarePositionX": 2031,
         "SquarePositionY": 3237,
         "CheckLogicId": [
-            "CollectibleOceanSpiderToken29",
-            "CollectibleOceanSpiderToken30",
-            "CollectibleOceanSpiderToken5",
-            "CollectibleOceanSpiderToken6",
-            "CollectibleOceanSpiderToken11",
-            "CollectibleOceanSpiderToken27",
-            "CollectibleOceanSpiderToken24",
-            "CollectibleOceanSpiderToken14",
-            "CollectibleOceanSpiderToken23",
-            "CollectibleOceanSpiderToken19",
-            "CollectibleOceanSpiderToken7",
-            "CollectibleOceanSpiderToken16",
-            "CollectibleOceanSpiderToken17",
-            "CollectibleOceanSpiderToken18",
-            "CollectibleOceanSpiderToken25",
-            "CollectibleOceanSpiderToken13",
-            "CollectibleOceanSpiderToken12",
-            "CollectibleOceanSpiderToken15",
-            "CollectibleOceanSpiderToken21",
-            "CollectibleOceanSpiderToken28",
-            "CollectibleOceanSpiderToken20",
-            "CollectibleOceanSpiderToken8",
-            "CollectibleOceanSpiderToken3",
-            "CollectibleOceanSpiderToken2",
-            "CollectibleOceanSpiderToken4",
-            "CollectibleOceanSpiderToken1",
-            "CollectibleOceanSpiderToken10",
-            "CollectibleOceanSpiderToken9",
-            "CollectibleOceanSpiderToken22",
-            "CollectibleOceanSpiderToken26"
+            "Ocean Spider House Items 2nd Room Behind Skull 1",
+            "Ocean Spider House Items 2nd Room Behind Skull 2",
+            "Ocean Spider House Items 2nd Room Ceiling Edge",
+            "Ocean Spider House Items 2nd Room Ceiling Plank",
+            "Ocean Spider House Items 2nd Room Jar",
+            "Ocean Spider House Items 2nd Room Lower Pot",
+            "Ocean Spider House Items 2nd Room Upper Pot",
+            "Ocean Spider House Items 2nd Room Webbed Hole",
+            "Ocean Spider House Items 2nd Room Webbed Pot",
+            "Ocean Spider House Items Colored Skulls Behind Picture",
+            "Ocean Spider House Items Colored Skulls Ceiling Edge",
+            "Ocean Spider House Items Colored Skulls Chandelier 1",
+            "Ocean Spider House Items Colored Skulls Chandelier 2",
+            "Ocean Spider House Items Colored Skulls Chandelier 3",
+            "Ocean Spider House Items Colored Skulls Pot",
+            "Ocean Spider House Items Entrance Left Wall",
+            "Ocean Spider House Items Entrance Right Wall",
+            "Ocean Spider House Items Entrance Web",
+            "Ocean Spider House Items Library Behind Bookcase 1",
+            "Ocean Spider House Items Library Behind Bookcase 2",
+            "Ocean Spider House Items Library Behind Picture",
+            "Ocean Spider House Items Library Ceiling Edge",
+            "Ocean Spider House Items Library Hole Behind Cabinet",
+            "Ocean Spider House Items Library Hole Behind Picture",
+            "Ocean Spider House Items Library On Corner Bookshelf",
+            "Ocean Spider House Items Storage Room Behind Boat",
+            "Ocean Spider House Items Storage Room Behind Crate",
+            "Ocean Spider House Items Storage Room Ceiling Web",
+            "Ocean Spider House Items Storage Room Crate",
+            "Ocean Spider House Items Storage Room Jar"
         ]
     },
     {
@@ -447,15 +446,15 @@
         "SquarePositionX": 1260,
         "SquarePositionY": 4200,
         "CheckLogicId": [
-            "ItemBottleBeavers",
-            "HeartPieceBeaverRace",
-            "FairyDoubleDefense",
-            "ChestGreatBayCapeGrotto",
-            "CollectableZoraCapeJarGame1",
-            "ChestGreatBayCapeLedge2",
-            "ChestGreatBayCapeLedge1",
-            "HeartPieceGreatBayCapeLikeLike",
-            "ChestGreatBayCapeUnderwater"
+            "Zora Cape Beaver Race #1",
+            "Zora Cape Beaver Race #2",
+            "Zora Cape Ocean Great Fairy",
+            "Zora Cape Grotto",
+            "Zora Cape Jar Game",
+            "Zora Cape Ledge With Tree Chest",
+            "Zora Cape Ledge Without Tree Chest",
+            "Zora Cape Like-Like",
+            "Zora Cape Underwater Chest"
         ]
     },
     {
@@ -463,50 +462,50 @@
         "SquarePositionX": 1327,
         "SquarePositionY": 3813,
         "CheckLogicId": [
-            "MundaneItemLuluBadPictographBlueRupee",
-            "MundaneItemLuluGoodPictographRedRupee",
-            "HeartPieceEvan",
-            "MundaneItemLuluGoodPictographRedRupee",
-            "HeartPieceZoraHallScrub",
-            "ShopItemBusinessScrubGreenPotion",
-            "TradeItemOceanDeed",
-            "MundaneItemZoraStageLightsBlueRupee",
-            "ShopItemZoraArrow10",
-            "ShopItemZoraShield",
-            "ShopItemZoraRedPotion"
+            "Zora Hall Bad Pictograph of Lulu",
+            "Zora Hall Good Pictograph of Lulu",
+            "Zora Hall Evan",
+            "Zora Hall Good Pictograph of Lulu",
+            "Zora Hall Lulu's Room Ledge",
+            "Zora Hall Ocean Scrub Purchase",
+            "Zora Hall Ocean Scrub Trade",
+            "Zora Hall Stage Lights",
+            "Zora Hall Zora Shop 10",
+            "Zora Hall Zora Shop Hero's Shield",
+            "Zora Hall Zora Shop Red Potion"
         ]
     },
     {
-        "Name": "Pirates' Fortress Exterior",
+        "Name": "Pirates Fortress Exterior",
         "SquarePositionX": 1731,
         "SquarePositionY": 2531,
         "CheckLogicId": [
-            "ChestPiratesFortressEntranceRedRupee3",
-            "ChestPiratesFortressEntranceRedRupee1",
-            "ChestPiratesFortressEntranceRedRupee2"
+            "Pirates Fortress Exterior Corner Chest",
+            "Pirates Fortress Exterior Log Chest",
+            "Pirates Fortress Exterior Sand Chest"
         ]
     },
     {
-        "Name": "Pirates' Fortress Sewer",
+        "Name": "Pirates Fortress Sewer",
         "SquarePositionX": 1923,
         "SquarePositionY": 2553,
         "CheckLogicId": [
-            "HeartPiecePiratesFortress",
-            "ChestInsidePiratesFortressHeartPieceRoomBlueRupee",
-            "ChestInsidePiratesFortressHeartPieceRoomRedRupee",
-            "ChestInsidePiratesFortressMazeRedRupee"
+            "Pirates Fortress Sewer Cage",
+            "Pirates Fortress Sewer Cage Room Deep Chest",
+            "Pirates Fortress Sewer Cage Room Shallow Chest",
+            "Pirates Fortress Sewer Maze Chest"
         ]
     },
     {
-        "Name": "Pirates' Fortress Interior",
+        "Name": "Pirates Fortress Interior",
         "SquarePositionX": 1873,
         "SquarePositionY": 2297,
         "CheckLogicId": [
-            "ItemHookshot",
-            "ChestInsidePiratesFortressGuardSilverRupee",
-            "ChestPiratesFortressRedRupee1",
-            "ChestInsidePiratesFortressTankRedRupee",
-            "ChestPiratesFortressRedRupee2"
+            "Pirates Fortress Interior Hookshot Chest",
+            "Pirates Fortress Interior Guard Room Chest",
+            "Pirates Fortress Interior Lower Chest",
+            "Pirates Fortress Interior Tank Chest",
+            "Pirates Fortress Interior Upper Chest"
         ]
     },
     {
@@ -514,9 +513,9 @@
         "SquarePositionX": 685,
         "SquarePositionY": 2871,
         "CheckLogicId": [
-            "ChestPinacleRockRedRupee1",
-            "ChestPinacleRockRedRupee2",
-            "HeartPieceSeaHorse"
+            "Pinnacle Rock Lower Chest",
+            "Pinnacle Rock Upper Chest",
+            "Pinnacle Rock Seahorses"
         ]
     },
     {
@@ -524,28 +523,28 @@
         "SquarePositionX": 373,
         "SquarePositionY": 3549,
         "CheckLogicId": [
-            "RemainsGyorg",
-            "CollectibleStrayFairyGreatBay10",
-            "ItemGreatBayBossKey",
-            "ItemGreatBayCompass",
-            "CollectibleStrayFairyGreatBay14",
-            "CollectibleStrayFairyGreatBay9",
-            "CollectibleStrayFairyGreatBay6",
-            "CollectibleStrayFairyGreatBay15",
-            "ItemGreatBayMap",
-            "CollectibleStrayFairyGreatBay4",
-            "CollectibleStrayFairyGreatBay2",
-            "CollectibleStrayFairyGreatBay7",
-            "CollectibleStrayFairyGreatBay1",
-            "ItemGreatBayKey1",
-            "CollectibleStrayFairyGreatBay11",
-            "CollectibleStrayFairyGreatBay3",
-            "CollectibleStrayFairyGreatBay8",
-            "CollectibleStrayFairyGreatBay5",
-            "CollectibleStrayFairyGreatBay13",
-            "CollectibleStrayFairyGreatBay12",
-            "HeartContainerGreatBay",
-            "ItemIceArrow"
+            "Great Bay Temple Boss Blue Warp (same as all temple)",
+            "Great Bay Temple Great Bay Bio Babas",
+            "Great Bay Temple Great Bay Boss Key Chest",
+            "Great Bay Temple Great Bay Compass Chest",
+            "Great Bay Temple Great Bay Dexihands Jar",
+            "Great Bay Temple Great Bay Entrance Torches",
+            "Great Bay Temple Great Bay Green Valve",
+            "Great Bay Temple Great Bay Ledge Jar",
+            "Great Bay Temple Great Bay Map Chest",
+            "Great Bay Temple Great Bay Pre-Boss Room Bubble",
+            "Great Bay Temple Great Bay Pre-Boss Room Underwater Bubble ",
+            "Great Bay Temple Great Bay Seesaw Room",
+            "Great Bay Temple Great Bay Skulltula",
+            "Great Bay Temple Great Bay Small Key Chest",
+            "Great Bay Temple Great Bay Underwater Barrel",
+            "Great Bay Temple Great Bay Water Control Room Underwater Bubble",
+            "Great Bay Temple Great Bay Waterwheel Room Lower",
+            "Great Bay Temple Great Bay Waterwheel Room Upper",
+            "Great Bay Temple Great Bay Whirlpool Barrel",
+            "Great Bay Temple Great Bay Whirlpool Jar",
+            "Great Bay Temple Gyorg Heart Container",
+            "Great Bay Temple Ice Arrow Chest"
         ]
     },
     {
@@ -553,9 +552,9 @@
         "SquarePositionX": 4223,
         "SquarePositionY": 2211,
         "CheckLogicId": [
-            "MaskStone",
-            "ChestToIkanaGrotto",
-            "ChestToIkanaRedRupee"
+            "Road To Ikana Invisible Soldier",
+            "Road To Ikana Path to Ikana Grotto",
+            "Road To Ikana Path to Ikana Pillar Chest"
         ]
     },
     {
@@ -563,13 +562,13 @@
         "SquarePositionX": 3959,
         "SquarePositionY": 1961,
         "CheckLogicId": [
-            "MaskCaptainHat",
-            "ItemBottleDampe",
-            "ChestBadBatsGrottoPurpleRupee",
-            "SongStorms",
-            "CollectableIkanaGraveyardDay2Bats1",
-            "ChestGraveyardGrotto",
-            "HeartPieceKnuckle"
+            "Ikana Graveyard Captain Keeta's Chest",
+            "Ikana Graveyard Dampe Digging",
+            "Ikana Graveyard Day 1 Grave Bats",
+            "Ikana Graveyard Day 1 Grave Tablet",
+            "Ikana Graveyard Day 2 Bats",
+            "Ikana Graveyard Grotto",
+            "Ikana Graveyard Iron Knuckle Chest"
         ]
     },
     {
@@ -577,15 +576,15 @@
         "SquarePositionX": 4861,
         "SquarePositionY": 1693,
         "CheckLogicId": [
-            "ShopItemBusinessScrubBluePotion",
-            "IkanaScrubGoldRupee",
-            "ItemTingleMapTownInCanyon",
-            "ItemTingleMapStoneTower",
-            "HeartPieceIkana",
-            "ItemFairySword",
-            "MaskGibdo",
-            "HeartPiecePoeHut",
-            "ChestIkanaSecretShrineGrotto"
+            "Ikana Canyon Canyon Scrub Purchase",
+            "Ikana Canyon Canyon Scrub Trade",
+            "Ikana Canyon Clock Town Map Purchase ",
+            "Ikana Canyon Stone Tower Map Purchase",
+            "Ikana Canyon Ledge",
+            "Ikana Canyon Ikana Great Fairy",
+            "Ikana Canyon Pamela's Father",
+            "Ikana Canyon Poe Hut",
+            "Ikana Canyon Secret Shrine Grotto"
         ]
     },
     {
@@ -593,11 +592,11 @@
         "SquarePositionX": 4565,
         "SquarePositionY": 1645,
         "CheckLogicId": [
-            "ChestSecretShrineDinoGrotto",
-            "ChestSecretShrineHeartPiece",
-            "ChestSecretShrineGaroGrotto",
-            "ChestSecretShrineWartGrotto",
-            "ChestSecretShrineWizzGrotto"
+            "Secret Shrine Dinolfos Chest",
+            "Secret Shrine Final Chest",
+            "Secret Shrine Garo Master Chest",
+            "Secret Shrine Wart Chest",
+            "Secret Shrine Wizzrobe Chest"
         ]
     },
     {
@@ -605,10 +604,10 @@
         "SquarePositionX": 4619,
         "SquarePositionY": 2197,
         "CheckLogicId": [
-            "ItemWellCowMilk",
-            "UpgradeMirrorShield",
-            "ChestWellLeftPurpleRupee",
-            "ChestWellRightPurpleRupee"
+            "Beneath the Well Cow Beneath the Well",
+            "Beneath the Well Mirror Shield Chest",
+            "Beneath the Well Well Left Path Chest",
+            "Beneath the Well Well Right Path Chest"
         ]
     },
     {
@@ -616,8 +615,8 @@
         "SquarePositionX": 5000,
         "SquarePositionY": 1827,
         "CheckLogicId": [
-            "HeartPieceCastle",
-            "SongElegy"
+            "Ikana Castle Ikana Castle Pillar",
+            "Ikana Castle Ikana King"
         ]
     },
     {
@@ -625,9 +624,9 @@
         "SquarePositionX": 5245,
         "SquarePositionY": 1507,
         "CheckLogicId": [
-            "ChestInvertedStoneTowerBean",
-            "ChestInvertedStoneTowerBombchu10",
-            "ChestInvertedStoneTowerSilverRupee"
+            "Stone Tower Inverted Stone Tower Left Chest",
+            "Stone Tower Inverted Stone Tower Middle Chest",
+            "Stone Tower Inverted Stone Tower Right Chest"
         ]
     },
     {
@@ -635,32 +634,32 @@
         "SquarePositionX": 5397,
         "SquarePositionY": 1383,
         "CheckLogicId": [
-            "RemainsTwinmold",
-            "MaskGiant",
-            "ItemLightArrow",
-            "ItemStoneTowerKey1",
-            "CollectibleStrayFairyStoneTower11",
-            "ItemStoneTowerBossKey",
-            "CollectibleStrayFairyStoneTower14",
-            "ItemStoneTowerCompass",
-            "CollectibleStrayFairyStoneTower8",
-            "ItemStoneTowerKey4",
-            "CollectibleStrayFairyStoneTower6",
-            "CollectibleStrayFairyStoneTower2",
-            "ItemStoneTowerKey2",
-            "CollectibleStrayFairyStoneTower3",
-            "ItemStoneTowerKey3",
-            "ItemStoneTowerMap",
-            "CollectibleStrayFairyStoneTower1",
-            "CollectibleStrayFairyStoneTower5",
-            "CollectibleStrayFairyStoneTower12",
-            "CollectibleStrayFairyStoneTower10",
-            "CollectibleStrayFairyStoneTower13",
-            "CollectibleStrayFairyStoneTower4",
-            "CollectibleStrayFairyStoneTower9",
-            "ItemStoneTowerKey3",
-            "CollectibleStrayFairyStoneTower7",
-            "HeartContainerStoneTower"
+            "Stone Tower Temple Boss Blue Warp (same as all temple)",
+            "Stone Tower Temple Giant's Mask Chest",
+            "Stone Tower Temple Light Arrow Chest",
+            "Stone Tower Temple Stone Tower Armos Room Chest",
+            "Stone Tower Temple Stone Tower Basement Ledge",
+            "Stone Tower Temple Stone Tower Boss Key Chest",
+            "Stone Tower Temple Stone Tower Bridge Crystal",
+            "Stone Tower Temple Stone Tower Compass Chest",
+            "Stone Tower Temple Stone Tower Death Armos",
+            "Stone Tower Temple Stone Tower Death Armos Maze Chest",
+            "Stone Tower Temple Stone Tower Entrance Sun Switch",
+            "Stone Tower Temple Stone Tower Eyegore",
+            "Stone Tower Temple Stone Tower Eyegore Room Chest",
+            "Stone Tower Temple Stone Tower Lava Room Fire Ring",
+            "Stone Tower Temple Stone Tower Lava Room Ledge",
+            "Stone Tower Temple Stone Tower Map Chest",
+            "Stone Tower Temple Stone Tower Mirror Sun Block",
+            "Stone Tower Temple Stone Tower Mirror Sun Switch",
+            "Stone Tower Temple Stone Tower Statue Eye",
+            "Stone Tower Temple Stone Tower Thin Bridge",
+            "Stone Tower Temple Stone Tower Underwater",
+            "Stone Tower Temple Stone Tower Updraft Fire Ring",
+            "Stone Tower Temple Stone Tower Updraft Frozen Eye",
+            "Stone Tower Temple Stone Tower Updraft Room Chest",
+            "Stone Tower Temple Stone Tower Wizzrobe",
+            "Stone Tower Temple Twinmold Heart Container"
         ]
     },
     {
@@ -668,7 +667,7 @@
         "SquarePositionX": 5569,
         "SquarePositionY": 5269,
         "CheckLogicId": [
-            "MaskFierceDeity"
+            "The Moon Fierce Deity Mask"
         ]
     }
 ]

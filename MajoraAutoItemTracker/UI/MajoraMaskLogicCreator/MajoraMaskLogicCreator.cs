@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.Model.Logic.OOT;
+﻿using MajoraAutoItemTracker.Model.Logic.MM;
+using MajoraAutoItemTracker.Model.Logic.OOT;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,24 +10,24 @@ using System.Windows.Forms;
 
 #nullable enable
 
-namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
+namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
 {
-    public partial class OcarinaOfTimeLogicCreator : Form
+    public partial class MajoraMaskLogicCreator : Form
     {
 
         const int CURRENT_VERSION = 1;
 
-        OcarinaOfTimeLogicCreatorController controller = new OcarinaOfTimeLogicCreatorController();
-        OcarinaOfTimeLogicFileController logicFileController = new OcarinaOfTimeLogicFileController();
+        MajoraMaskLogicCreatorController controller = new MajoraMaskLogicCreatorController();
+        MajoraMaskLogicFileController logicFileController = new MajoraMaskLogicFileController();
 
         private bool isRefreshing = false;
 
-        public OcarinaOfTimeLogicCreator()
+        public MajoraMaskLogicCreator()
         {
             InitializeComponent();
         }
 
-        private void OcarinaOfTimeLogicCreator_Load(object sender, EventArgs e)
+        private void MajoraMaskLogicCreator_Load(object sender, EventArgs e)
         {
             InitLogicItemListEvent();
             InitLogicItemEvent();
@@ -64,7 +65,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
                 var messsage = "";
                 if (e.Index >= 0)
                 {
-                    var itemList = listBoxLogicItemList.Items[e.Index] as OcarinaOfTimeJsonFormatLogicItem;
+                    var itemList = listBoxLogicItemList.Items[e.Index] as MajoraMaskJsonFormatLogicItem;
                     messsage = $"{itemList?.Id} ({itemList?.RequiredItems.Count + itemList?.ConditionalItems.Count} item)";
                 }
                 DrawListBoxLineAndRect(e, listBoxLogicItemList, messsage);
@@ -73,7 +74,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             {
                 if (isRefreshing)
                     return;
-                string? logicItemId = (listBoxLogicItemList.SelectedItem as OcarinaOfTimeJsonFormatLogicItem)?.Id;
+                string? logicItemId = (listBoxLogicItemList.SelectedItem as MajoraMaskJsonFormatLogicItem)?.Id;
                 if (logicItemId != null)
                     logicFileController.ResolveSelectedItemAndRefreshAll(logicItemId);
             };
@@ -148,7 +149,7 @@ namespace MajoraAutoItemTracker.UI.OcarinaOfTimeLogicCreator
             buttonRemoveConditionalItemContent.Click += (s, e) => logicFileController.RemoveLogicItemListContionalItemContent();
         }
 
-        private void DisplayLogicItem(OcarinaOfTimeJsonFormatLogicItem? logicItem)
+        private void DisplayLogicItem(MajoraMaskJsonFormatLogicItem? logicItem)
         {
             isRefreshing = true;
             try

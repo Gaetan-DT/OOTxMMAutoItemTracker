@@ -12,6 +12,32 @@ namespace Tests
     public class MajoraMaskLogicResolverTest
     {
         [TestMethod]
+        [TimeoutAttribute(10_000)]
+        public void TestSolveChecklogic()
+        {
+            var logicFile = LogicFileUtils.LoadMajoraMaskFromRessource();
+            var majoraMaskLogicResolver = new MajoraMaskLogicResolver(logicFile);
+
+            var listItemLogic = ItemLogicMethod
+                .LoadMajoraMaskItemLogicFromRessource()
+                .ToList();
+
+            var checkLogicList = MajoraMaskCheckLogic
+                .FromHeader(CheckLogicCategoryUtils.LoadMajoraMaskFromRessource())
+                .ToList();
+
+            majoraMaskLogicResolver.UpdateCheckForItem(
+                listItemLogic,
+                checkLogicList,
+                false);
+
+            majoraMaskLogicResolver.UpdateCheckAndReturnListOfUpdatedCheck(
+                listItemLogic,
+                checkLogicList,
+                false);
+        }
+
+        [TestMethod]
         public void TestKafeiMaskCheck()
         {
             var kafeiMaskPropertyName = MajoraMaskItemLogicPopertyNameMethod
@@ -27,12 +53,12 @@ namespace Tests
 
             var listItemLogic = ItemLogicMethod
                 .LoadMajoraMaskItemLogicFromRessource()
-                //.Where((it) => it.propertyName == kafeiMaskPropertyName)
+                .Where((it) => it.propertyName == kafeiMaskPropertyName)
                 .ToList();
 
             var checkLogicList = MajoraMaskCheckLogic
                 .FromHeader(CheckLogicCategoryUtils.LoadMajoraMaskFromRessource())
-                //.Where((it) => it.Id == checkLogicId)
+                .Where((it) => it.Id == checkLogicId)
                 .ToList();
 
             majoraMaskLogicResolver.UpdateCheckForItem(
@@ -40,17 +66,12 @@ namespace Tests
                 checkLogicList,
                 false);
 
-            // Update kafei mask
-            listItemLogic
-                .First((it) => it.propertyName == kafeiMaskPropertyName)
-                .hasItem = true;
-
-            var result = majoraMaskLogicResolver.UpdateCheckAndReturnListOfUpdatedCheck(
+            majoraMaskLogicResolver.UpdateCheckAndReturnListOfUpdatedCheck(
                 listItemLogic,
                 checkLogicList,
                 false);
 
-            var kafeiMaskCheckLogic = result.Find((it) => it.Id == checkLogicId);
+            var kafeiMaskCheckLogic = checkLogicList.Find((it) => it.Id == checkLogicId);
 
             Assert.IsNotNull(
                 kafeiMaskCheckLogic,

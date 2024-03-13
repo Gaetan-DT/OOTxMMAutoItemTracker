@@ -243,6 +243,14 @@
     <Compile Include="UI\MainUI\MajoraMaskController.cs" />
     <Compile Include="UI\MainUI\OcarinaOfTimeController.cs" />
     <Compile Include="UI\MainUI\SaveCheckController.cs" />
+    <Compile Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicFileController.cs" />
+    <Compile Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicCreator.Designer.cs">
+      <DependentUpon>MajoraMaskLogicCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicCreatorController.cs" />
     <Compile Include="UI\OcarinaOfTimeLogicCreator\LogicFileController.cs" />
     <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.cs">
       <SubType>Form</SubType>
@@ -266,6 +274,9 @@
     <EmbeddedResource Include="UI\LogicTester\LogicTester.resx">
       <DependentUpon>LogicTester.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicCreator.resx">
+      <DependentUpon>MajoraMaskLogicCreator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.resx">
       <DependentUpon>OcarinaOfTimeLogicCreator.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,8 +294,9 @@
     </Compile>
     <None Include="Resource\CheckLogic\mm_CheckLogicCategory.json" />
     <None Include="Resource\CheckLogic\oot_CheckLogicCategory.json" />
+    <None Include="Resource\Logics\MM_CUSTOM_REQ_CASUAL_1.json" />
     <None Include="Resource\Logics\OOT_CUSTOM_REQ_CASUAL_1.json" />
-    <None Include="Resource\Logics\MM_CUSTOM_REQ_CASUAL_12.json" />
+    <None Include="Resource\Logics\old_MM_CUSTOM_REQ_CASUAL_12.json" />
     <None Include="Resource\Mappings\oot_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
   <ItemGroup>

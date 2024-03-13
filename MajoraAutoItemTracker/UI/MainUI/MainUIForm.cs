@@ -7,7 +7,6 @@ using System.Linq;
 using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.CheckLogic;
-using System.Threading.Tasks;
 using MajoraAutoItemTracker.Core;
 
 #nullable enable
@@ -155,6 +154,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private void OnOotLogicCreatorClick(object sender, EventArgs e)
         {
             new OcarinaOfTimeLogicCreator.OcarinaOfTimeLogicCreator().Show(this);
+        }
+
+        private void OnMmLogicCreatorClick(object sender, EventArgs e)
+        {
+            new MajoraMaskLogicCreator.MajoraMaskLogicCreator().Show(this);
         }
 
         private void OnStartStopEmulatorClick(object sender, EventArgs e)

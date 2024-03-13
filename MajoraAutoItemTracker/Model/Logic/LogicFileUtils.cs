@@ -43,7 +43,7 @@ namespace MajoraAutoItemTracker.Model.Logic
 
         public static LogicFile<MajoraMaskJsonFormatLogicItem> LoadMajoraMaskFromRessource()
         {
-            var dataStr = Properties.Resources.MM_CUSTOM_REQ_CASUAL_12;
+            var dataStr = Properties.Resources.MM_CUSTOM_REQ_CASUAL_1;
             return JsonConvertUtils.DeserializeObjectFromByteOrThrow<LogicFile<MajoraMaskJsonFormatLogicItem>>(dataStr);
         }
     }

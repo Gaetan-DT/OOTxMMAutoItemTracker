@@ -105,11 +105,11 @@ namespace MajoraAutoItemTracker.Model.Enum
                     return MajoraMaskCheckLogicZone.ZORA_CAPE;
                 case "Zora Hall":
                     return MajoraMaskCheckLogicZone.ZORA_HALL;
-                case "Pirates' Fortress Exterior":
+                case "Pirates Fortress Exterior":
                     return MajoraMaskCheckLogicZone.PIRATES_FORTRESS_EXTERIOR;
-                case "Pirates' Fortress Sewer":
+                case "Pirates Fortress Sewer":
                     return MajoraMaskCheckLogicZone.PIRATES_FORTRESS_INTERIOR;
-                case "Pirates' Fortress Interior":
+                case "Pirates Fortress Interior":
                     return MajoraMaskCheckLogicZone.PIRATES_FORTRESS_SEWER;
                 case "Pinnacle Rock":
                     return MajoraMaskCheckLogicZone.PINNACLE_ROCK;

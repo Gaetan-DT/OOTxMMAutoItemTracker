@@ -501,7 +501,7 @@
       "Id": "ItemBottleMadameAroma",
       "RequiredItems": [
         "TradeItemMamaLetter",
-        "MaskKafei"
+        "ItemMaskKafei"
       ],
       "ConditionalItems": [],
       "TimeNeeded": "None",
@@ -828,7 +828,7 @@
     {
       "Id": "TradeItemKafeiLetter",
       "RequiredItems": [
-        "MaskKafei",
+        "ItemMaskKafei",
         "Night Inn Access"
       ],
       "ConditionalItems": [],
@@ -1637,7 +1637,7 @@
       "IsTrick": false
     },
     {
-      "Id": "MaskKafei",
+      "Id": "ItemMaskKafei",
       "RequiredItems": [],
       "ConditionalItems": [],
       "TimeNeeded": "None",
@@ -1649,7 +1649,7 @@
       "Id": "MaskCouple",
       "RequiredItems": [
         "TradeItemPendant",
-        "MaskKafei",
+        "ItemMaskKafei",
         "TradeItemKafeiLetter",
         "AreaEastAccess",
         "Night Inn Access"
@@ -5344,7 +5344,7 @@
           "MaskCircusLeader"
         ],
         [
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskCouple"
@@ -5423,7 +5423,7 @@
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -5495,7 +5495,7 @@
         ],
         [
           "MaskAllNight",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -5563,7 +5563,7 @@
         ],
         [
           "MaskBlast",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -5627,7 +5627,7 @@
         ],
         [
           "MaskStone",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -5687,7 +5687,7 @@
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -5743,7 +5743,7 @@
         ],
         [
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -5795,7 +5795,7 @@
         ],
         [
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -5843,7 +5843,7 @@
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -5887,7 +5887,7 @@
         ],
         [
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskDonGero",
@@ -5927,7 +5927,7 @@
         ],
         [
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskScents",
@@ -5963,7 +5963,7 @@
         ],
         [
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskRomani",
@@ -5995,7 +5995,7 @@
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskCircusLeader",
@@ -6026,31 +6026,31 @@
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -6200,7 +6200,7 @@
         [
           "MaskPostmanHat",
           "MaskAllNight",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6285,7 +6285,7 @@
         [
           "MaskPostmanHat",
           "MaskBlast",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6365,7 +6365,7 @@
         [
           "MaskPostmanHat",
           "MaskStone",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6440,7 +6440,7 @@
         [
           "MaskPostmanHat",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6510,7 +6510,7 @@
         [
           "MaskPostmanHat",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6575,7 +6575,7 @@
         [
           "MaskPostmanHat",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6635,7 +6635,7 @@
         [
           "MaskPostmanHat",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6690,7 +6690,7 @@
         [
           "MaskPostmanHat",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6740,7 +6740,7 @@
         [
           "MaskPostmanHat",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6785,7 +6785,7 @@
         [
           "MaskPostmanHat",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6825,7 +6825,7 @@
         [
           "MaskPostmanHat",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -6864,37 +6864,37 @@
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -7050,7 +7050,7 @@
         [
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7130,7 +7130,7 @@
         [
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7205,7 +7205,7 @@
         [
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7275,7 +7275,7 @@
         [
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7340,7 +7340,7 @@
         [
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7400,7 +7400,7 @@
         [
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7455,7 +7455,7 @@
         [
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7505,7 +7505,7 @@
         [
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7550,7 +7550,7 @@
         [
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7590,7 +7590,7 @@
         [
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -7629,37 +7629,37 @@
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -7810,7 +7810,7 @@
         [
           "MaskBlast",
           "MaskStone",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -7885,7 +7885,7 @@
         [
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -7955,7 +7955,7 @@
         [
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -8020,7 +8020,7 @@
         [
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -8080,7 +8080,7 @@
         [
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -8135,7 +8135,7 @@
         [
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -8185,7 +8185,7 @@
         [
           "MaskBlast",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -8230,7 +8230,7 @@
         [
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -8270,7 +8270,7 @@
         [
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -8309,37 +8309,37 @@
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -8485,7 +8485,7 @@
         [
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -8555,7 +8555,7 @@
         [
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -8620,7 +8620,7 @@
         [
           "MaskStone",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -8680,7 +8680,7 @@
         [
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -8735,7 +8735,7 @@
         [
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -8785,7 +8785,7 @@
         [
           "MaskStone",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -8830,7 +8830,7 @@
         [
           "MaskStone",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -8870,7 +8870,7 @@
         [
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -8909,37 +8909,37 @@
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -9080,7 +9080,7 @@
         [
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -9145,7 +9145,7 @@
         [
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -9205,7 +9205,7 @@
         [
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -9260,7 +9260,7 @@
         [
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -9310,7 +9310,7 @@
         [
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -9355,7 +9355,7 @@
         [
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -9395,7 +9395,7 @@
         [
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -9434,37 +9434,37 @@
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -9600,7 +9600,7 @@
         [
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -9660,7 +9660,7 @@
         [
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -9715,7 +9715,7 @@
         [
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -9765,7 +9765,7 @@
         [
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -9810,7 +9810,7 @@
         [
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -9850,7 +9850,7 @@
         [
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -9889,37 +9889,37 @@
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -10050,7 +10050,7 @@
         [
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -10105,7 +10105,7 @@
         [
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -10155,7 +10155,7 @@
         [
           "MaskBremen",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -10200,7 +10200,7 @@
         [
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -10240,7 +10240,7 @@
         [
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -10279,37 +10279,37 @@
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -10435,7 +10435,7 @@
         [
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -10485,7 +10485,7 @@
         [
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -10530,7 +10530,7 @@
         [
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -10570,7 +10570,7 @@
         [
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -10609,37 +10609,37 @@
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -10760,7 +10760,7 @@
         [
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskDonGero",
@@ -10805,7 +10805,7 @@
         [
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskDonGero",
@@ -10845,7 +10845,7 @@
         [
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskDonGero",
@@ -10884,37 +10884,37 @@
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -11030,7 +11030,7 @@
         [
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskScents",
@@ -11070,7 +11070,7 @@
         [
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskScents",
@@ -11109,37 +11109,37 @@
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -11250,7 +11250,7 @@
         [
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskRomani",
@@ -11289,37 +11289,37 @@
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -11429,37 +11429,37 @@
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -11568,107 +11568,107 @@
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -11915,7 +11915,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12011,7 +12011,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12101,7 +12101,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12185,7 +12185,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12263,7 +12263,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12335,7 +12335,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12401,7 +12401,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12461,7 +12461,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12515,7 +12515,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12563,7 +12563,7 @@
           "MaskPostmanHat",
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12610,43 +12610,43 @@
         [
           "MaskPostmanHat",
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -12827,7 +12827,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskStone",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -12917,7 +12917,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13001,7 +13001,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13079,7 +13079,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13151,7 +13151,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13217,7 +13217,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13277,7 +13277,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13331,7 +13331,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13379,7 +13379,7 @@
           "MaskPostmanHat",
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13426,43 +13426,43 @@
         [
           "MaskPostmanHat",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -13637,7 +13637,7 @@
           "MaskPostmanHat",
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13721,7 +13721,7 @@
           "MaskPostmanHat",
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13799,7 +13799,7 @@
           "MaskPostmanHat",
           "MaskStone",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13871,7 +13871,7 @@
           "MaskPostmanHat",
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13937,7 +13937,7 @@
           "MaskPostmanHat",
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -13997,7 +13997,7 @@
           "MaskPostmanHat",
           "MaskStone",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14051,7 +14051,7 @@
           "MaskPostmanHat",
           "MaskStone",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14099,7 +14099,7 @@
           "MaskPostmanHat",
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14146,43 +14146,43 @@
         [
           "MaskPostmanHat",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -14351,7 +14351,7 @@
           "MaskPostmanHat",
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14429,7 +14429,7 @@
           "MaskPostmanHat",
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14501,7 +14501,7 @@
           "MaskPostmanHat",
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14567,7 +14567,7 @@
           "MaskPostmanHat",
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14627,7 +14627,7 @@
           "MaskPostmanHat",
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14681,7 +14681,7 @@
           "MaskPostmanHat",
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14729,7 +14729,7 @@
           "MaskPostmanHat",
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -14776,43 +14776,43 @@
         [
           "MaskPostmanHat",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -14975,7 +14975,7 @@
           "MaskPostmanHat",
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15047,7 +15047,7 @@
           "MaskPostmanHat",
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15113,7 +15113,7 @@
           "MaskPostmanHat",
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15173,7 +15173,7 @@
           "MaskPostmanHat",
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15227,7 +15227,7 @@
           "MaskPostmanHat",
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15275,7 +15275,7 @@
           "MaskPostmanHat",
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15322,43 +15322,43 @@
         [
           "MaskPostmanHat",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -15515,7 +15515,7 @@
           "MaskPostmanHat",
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15581,7 +15581,7 @@
           "MaskPostmanHat",
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15641,7 +15641,7 @@
           "MaskPostmanHat",
           "MaskBremen",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15695,7 +15695,7 @@
           "MaskPostmanHat",
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15743,7 +15743,7 @@
           "MaskPostmanHat",
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -15790,43 +15790,43 @@
         [
           "MaskPostmanHat",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -15977,7 +15977,7 @@
           "MaskPostmanHat",
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16037,7 +16037,7 @@
           "MaskPostmanHat",
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16091,7 +16091,7 @@
           "MaskPostmanHat",
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16139,7 +16139,7 @@
           "MaskPostmanHat",
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16186,43 +16186,43 @@
         [
           "MaskPostmanHat",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -16367,7 +16367,7 @@
           "MaskPostmanHat",
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16421,7 +16421,7 @@
           "MaskPostmanHat",
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16469,7 +16469,7 @@
           "MaskPostmanHat",
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16516,43 +16516,43 @@
         [
           "MaskPostmanHat",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -16691,7 +16691,7 @@
           "MaskPostmanHat",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16739,7 +16739,7 @@
           "MaskPostmanHat",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -16786,43 +16786,43 @@
         [
           "MaskPostmanHat",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -16955,7 +16955,7 @@
           "MaskPostmanHat",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskPostmanHat",
@@ -17002,43 +17002,43 @@
         [
           "MaskPostmanHat",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -17170,43 +17170,43 @@
         [
           "MaskPostmanHat",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskPostmanHat",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -17337,127 +17337,127 @@
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskPostmanHat",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -17723,7 +17723,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskStone",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -17813,7 +17813,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -17897,7 +17897,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -17975,7 +17975,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18047,7 +18047,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18113,7 +18113,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18173,7 +18173,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18227,7 +18227,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18275,7 +18275,7 @@
           "MaskAllNight",
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18322,43 +18322,43 @@
         [
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -18533,7 +18533,7 @@
           "MaskAllNight",
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18617,7 +18617,7 @@
           "MaskAllNight",
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18695,7 +18695,7 @@
           "MaskAllNight",
           "MaskStone",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18767,7 +18767,7 @@
           "MaskAllNight",
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18833,7 +18833,7 @@
           "MaskAllNight",
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18893,7 +18893,7 @@
           "MaskAllNight",
           "MaskStone",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18947,7 +18947,7 @@
           "MaskAllNight",
           "MaskStone",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -18995,7 +18995,7 @@
           "MaskAllNight",
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19042,43 +19042,43 @@
         [
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -19247,7 +19247,7 @@
           "MaskAllNight",
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19325,7 +19325,7 @@
           "MaskAllNight",
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19397,7 +19397,7 @@
           "MaskAllNight",
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19463,7 +19463,7 @@
           "MaskAllNight",
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19523,7 +19523,7 @@
           "MaskAllNight",
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19577,7 +19577,7 @@
           "MaskAllNight",
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19625,7 +19625,7 @@
           "MaskAllNight",
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19672,43 +19672,43 @@
         [
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -19871,7 +19871,7 @@
           "MaskAllNight",
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -19943,7 +19943,7 @@
           "MaskAllNight",
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20009,7 +20009,7 @@
           "MaskAllNight",
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20069,7 +20069,7 @@
           "MaskAllNight",
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20123,7 +20123,7 @@
           "MaskAllNight",
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20171,7 +20171,7 @@
           "MaskAllNight",
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20218,43 +20218,43 @@
         [
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -20411,7 +20411,7 @@
           "MaskAllNight",
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20477,7 +20477,7 @@
           "MaskAllNight",
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20537,7 +20537,7 @@
           "MaskAllNight",
           "MaskBremen",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20591,7 +20591,7 @@
           "MaskAllNight",
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20639,7 +20639,7 @@
           "MaskAllNight",
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20686,43 +20686,43 @@
         [
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -20873,7 +20873,7 @@
           "MaskAllNight",
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20933,7 +20933,7 @@
           "MaskAllNight",
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -20987,7 +20987,7 @@
           "MaskAllNight",
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -21035,7 +21035,7 @@
           "MaskAllNight",
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -21082,43 +21082,43 @@
         [
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -21263,7 +21263,7 @@
           "MaskAllNight",
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -21317,7 +21317,7 @@
           "MaskAllNight",
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -21365,7 +21365,7 @@
           "MaskAllNight",
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -21412,43 +21412,43 @@
         [
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -21587,7 +21587,7 @@
           "MaskAllNight",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -21635,7 +21635,7 @@
           "MaskAllNight",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -21682,43 +21682,43 @@
         [
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -21851,7 +21851,7 @@
           "MaskAllNight",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskAllNight",
@@ -21898,43 +21898,43 @@
         [
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -22066,43 +22066,43 @@
         [
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -22233,127 +22233,127 @@
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskAllNight",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -22613,7 +22613,7 @@
           "MaskBlast",
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -22697,7 +22697,7 @@
           "MaskBlast",
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -22775,7 +22775,7 @@
           "MaskBlast",
           "MaskStone",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -22847,7 +22847,7 @@
           "MaskBlast",
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -22913,7 +22913,7 @@
           "MaskBlast",
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -22973,7 +22973,7 @@
           "MaskBlast",
           "MaskStone",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23027,7 +23027,7 @@
           "MaskBlast",
           "MaskStone",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23075,7 +23075,7 @@
           "MaskBlast",
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23122,43 +23122,43 @@
         [
           "MaskBlast",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -23327,7 +23327,7 @@
           "MaskBlast",
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23405,7 +23405,7 @@
           "MaskBlast",
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23477,7 +23477,7 @@
           "MaskBlast",
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23543,7 +23543,7 @@
           "MaskBlast",
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23603,7 +23603,7 @@
           "MaskBlast",
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23657,7 +23657,7 @@
           "MaskBlast",
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23705,7 +23705,7 @@
           "MaskBlast",
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -23752,43 +23752,43 @@
         [
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -23951,7 +23951,7 @@
           "MaskBlast",
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24023,7 +24023,7 @@
           "MaskBlast",
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24089,7 +24089,7 @@
           "MaskBlast",
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24149,7 +24149,7 @@
           "MaskBlast",
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24203,7 +24203,7 @@
           "MaskBlast",
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24251,7 +24251,7 @@
           "MaskBlast",
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24298,43 +24298,43 @@
         [
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -24491,7 +24491,7 @@
           "MaskBlast",
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24557,7 +24557,7 @@
           "MaskBlast",
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24617,7 +24617,7 @@
           "MaskBlast",
           "MaskBremen",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24671,7 +24671,7 @@
           "MaskBlast",
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24719,7 +24719,7 @@
           "MaskBlast",
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -24766,43 +24766,43 @@
         [
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -24953,7 +24953,7 @@
           "MaskBlast",
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25013,7 +25013,7 @@
           "MaskBlast",
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25067,7 +25067,7 @@
           "MaskBlast",
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25115,7 +25115,7 @@
           "MaskBlast",
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25162,43 +25162,43 @@
         [
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -25343,7 +25343,7 @@
           "MaskBlast",
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25397,7 +25397,7 @@
           "MaskBlast",
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25445,7 +25445,7 @@
           "MaskBlast",
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25492,43 +25492,43 @@
         [
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -25667,7 +25667,7 @@
           "MaskBlast",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25715,7 +25715,7 @@
           "MaskBlast",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25762,43 +25762,43 @@
         [
           "MaskBlast",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -25931,7 +25931,7 @@
           "MaskBlast",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBlast",
@@ -25978,43 +25978,43 @@
         [
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -26146,43 +26146,43 @@
         [
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -26313,127 +26313,127 @@
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskBlast",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -26687,7 +26687,7 @@
           "MaskStone",
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -26765,7 +26765,7 @@
           "MaskStone",
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -26837,7 +26837,7 @@
           "MaskStone",
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -26903,7 +26903,7 @@
           "MaskStone",
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -26963,7 +26963,7 @@
           "MaskStone",
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27017,7 +27017,7 @@
           "MaskStone",
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27065,7 +27065,7 @@
           "MaskStone",
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27112,43 +27112,43 @@
         [
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -27311,7 +27311,7 @@
           "MaskStone",
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27383,7 +27383,7 @@
           "MaskStone",
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27449,7 +27449,7 @@
           "MaskStone",
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27509,7 +27509,7 @@
           "MaskStone",
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27563,7 +27563,7 @@
           "MaskStone",
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27611,7 +27611,7 @@
           "MaskStone",
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27658,43 +27658,43 @@
         [
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -27851,7 +27851,7 @@
           "MaskStone",
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27917,7 +27917,7 @@
           "MaskStone",
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -27977,7 +27977,7 @@
           "MaskStone",
           "MaskBremen",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28031,7 +28031,7 @@
           "MaskStone",
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28079,7 +28079,7 @@
           "MaskStone",
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28126,43 +28126,43 @@
         [
           "MaskStone",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -28313,7 +28313,7 @@
           "MaskStone",
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28373,7 +28373,7 @@
           "MaskStone",
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28427,7 +28427,7 @@
           "MaskStone",
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28475,7 +28475,7 @@
           "MaskStone",
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28522,43 +28522,43 @@
         [
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -28703,7 +28703,7 @@
           "MaskStone",
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28757,7 +28757,7 @@
           "MaskStone",
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28805,7 +28805,7 @@
           "MaskStone",
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -28852,43 +28852,43 @@
         [
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -29027,7 +29027,7 @@
           "MaskStone",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -29075,7 +29075,7 @@
           "MaskStone",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -29122,43 +29122,43 @@
         [
           "MaskStone",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -29291,7 +29291,7 @@
           "MaskStone",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskStone",
@@ -29338,43 +29338,43 @@
         [
           "MaskStone",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -29506,43 +29506,43 @@
         [
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -29673,127 +29673,127 @@
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskStone",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -30041,7 +30041,7 @@
           "MaskGreatFairy",
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30113,7 +30113,7 @@
           "MaskGreatFairy",
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30179,7 +30179,7 @@
           "MaskGreatFairy",
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30239,7 +30239,7 @@
           "MaskGreatFairy",
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30293,7 +30293,7 @@
           "MaskGreatFairy",
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30341,7 +30341,7 @@
           "MaskGreatFairy",
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30388,43 +30388,43 @@
         [
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -30581,7 +30581,7 @@
           "MaskGreatFairy",
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30647,7 +30647,7 @@
           "MaskGreatFairy",
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30707,7 +30707,7 @@
           "MaskGreatFairy",
           "MaskBremen",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30761,7 +30761,7 @@
           "MaskGreatFairy",
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30809,7 +30809,7 @@
           "MaskGreatFairy",
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -30856,43 +30856,43 @@
         [
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -31043,7 +31043,7 @@
           "MaskGreatFairy",
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31103,7 +31103,7 @@
           "MaskGreatFairy",
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31157,7 +31157,7 @@
           "MaskGreatFairy",
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31205,7 +31205,7 @@
           "MaskGreatFairy",
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31252,43 +31252,43 @@
         [
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -31433,7 +31433,7 @@
           "MaskGreatFairy",
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31487,7 +31487,7 @@
           "MaskGreatFairy",
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31535,7 +31535,7 @@
           "MaskGreatFairy",
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31582,43 +31582,43 @@
         [
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -31757,7 +31757,7 @@
           "MaskGreatFairy",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31805,7 +31805,7 @@
           "MaskGreatFairy",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -31852,43 +31852,43 @@
         [
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -32021,7 +32021,7 @@
           "MaskGreatFairy",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskGreatFairy",
@@ -32068,43 +32068,43 @@
         [
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -32236,43 +32236,43 @@
         [
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -32403,127 +32403,127 @@
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskGreatFairy",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -32765,7 +32765,7 @@
           "MaskKeaton",
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -32831,7 +32831,7 @@
           "MaskKeaton",
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -32891,7 +32891,7 @@
           "MaskKeaton",
           "MaskBremen",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -32945,7 +32945,7 @@
           "MaskKeaton",
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -32993,7 +32993,7 @@
           "MaskKeaton",
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33040,43 +33040,43 @@
         [
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -33227,7 +33227,7 @@
           "MaskKeaton",
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33287,7 +33287,7 @@
           "MaskKeaton",
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33341,7 +33341,7 @@
           "MaskKeaton",
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33389,7 +33389,7 @@
           "MaskKeaton",
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33436,43 +33436,43 @@
         [
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -33617,7 +33617,7 @@
           "MaskKeaton",
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33671,7 +33671,7 @@
           "MaskKeaton",
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33719,7 +33719,7 @@
           "MaskKeaton",
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33766,43 +33766,43 @@
         [
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -33941,7 +33941,7 @@
           "MaskKeaton",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -33989,7 +33989,7 @@
           "MaskKeaton",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -34036,43 +34036,43 @@
         [
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -34205,7 +34205,7 @@
           "MaskKeaton",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskKeaton",
@@ -34252,43 +34252,43 @@
         [
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -34420,43 +34420,43 @@
         [
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -34587,127 +34587,127 @@
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskKeaton",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -34943,7 +34943,7 @@
           "MaskBremen",
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35003,7 +35003,7 @@
           "MaskBremen",
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35057,7 +35057,7 @@
           "MaskBremen",
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35105,7 +35105,7 @@
           "MaskBremen",
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35152,43 +35152,43 @@
         [
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -35333,7 +35333,7 @@
           "MaskBremen",
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35387,7 +35387,7 @@
           "MaskBremen",
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35435,7 +35435,7 @@
           "MaskBremen",
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35482,43 +35482,43 @@
         [
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -35657,7 +35657,7 @@
           "MaskBremen",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35705,7 +35705,7 @@
           "MaskBremen",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35752,43 +35752,43 @@
         [
           "MaskBremen",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBremen",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBremen",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBremen",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBremen",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -35921,7 +35921,7 @@
           "MaskBremen",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBremen",
@@ -35968,43 +35968,43 @@
         [
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -36136,43 +36136,43 @@
         [
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -36303,127 +36303,127 @@
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskBremen",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -36653,7 +36653,7 @@
           "MaskBunnyHood",
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -36707,7 +36707,7 @@
           "MaskBunnyHood",
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -36755,7 +36755,7 @@
           "MaskBunnyHood",
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -36802,43 +36802,43 @@
         [
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -36977,7 +36977,7 @@
           "MaskBunnyHood",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -37025,7 +37025,7 @@
           "MaskBunnyHood",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -37072,43 +37072,43 @@
         [
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -37241,7 +37241,7 @@
           "MaskBunnyHood",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskBunnyHood",
@@ -37288,43 +37288,43 @@
         [
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -37456,43 +37456,43 @@
         [
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -37623,127 +37623,127 @@
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskBunnyHood",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -37967,7 +37967,7 @@
           "MaskDonGero",
           "MaskScents",
           "MaskRomani",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskDonGero",
@@ -38015,7 +38015,7 @@
           "MaskDonGero",
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskDonGero",
@@ -38062,43 +38062,43 @@
         [
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -38231,7 +38231,7 @@
           "MaskDonGero",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskDonGero",
@@ -38278,43 +38278,43 @@
         [
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -38446,43 +38446,43 @@
         [
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -38613,127 +38613,127 @@
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskDonGero",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -38951,7 +38951,7 @@
           "MaskScents",
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei"
+          "ItemMaskKafei"
         ],
         [
           "MaskScents",
@@ -38998,43 +38998,43 @@
         [
           "MaskScents",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskScents",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskScents",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskScents",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskScents",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskScents",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskScents",
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -39166,43 +39166,43 @@
         [
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskScents",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -39333,127 +39333,127 @@
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskScents",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -39670,43 +39670,43 @@
         [
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple"
         ],
         [
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth"
         ],
         [
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro"
         ],
         [
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo"
         ],
         [
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro"
         ],
         [
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat"
         ],
         [
           "MaskRomani",
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGiant"
         ],
         [
@@ -39837,127 +39837,127 @@
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskRomani",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -40173,127 +40173,127 @@
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGiant"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGiant"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskGiant"
         ],
         [
           "MaskCircusLeader",
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCaptainHat",
           "MaskGiant"
         ],
@@ -40508,211 +40508,211 @@
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth",
           "MaskKamaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth",
           "MaskGibdo"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskTruth",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskGaro",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskCouple",
           "MaskCaptainHat",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro",
           "MaskGibdo"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskKamaro",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskGaro",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskTruth",
           "MaskCaptainHat",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo",
           "MaskGaro"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGibdo",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskGaro",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskKamaro",
           "MaskCaptainHat",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro",
           "MaskCaptainHat"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskGaro",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGibdo",
           "MaskCaptainHat",
           "MaskGiant"
         ],
         [
-          "MaskKafei",
+          "ItemMaskKafei",
           "MaskGaro",
           "MaskCaptainHat",
           "MaskGiant"
@@ -59483,7 +59483,7 @@
         "MaskScents",
         "MaskRomani",
         "MaskCircusLeader",
-        "MaskKafei",
+        "ItemMaskKafei",
         "MaskCouple",
         "MaskTruth",
         "MaskKamaro",

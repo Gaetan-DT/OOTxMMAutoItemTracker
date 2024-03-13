@@ -11,7 +11,8 @@ namespace MajoraAutoItemTracker.Logic
 {
     public class MajoraMaskLogicResolver : AbstractLogicResolver
     {
-        private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = new Dictionary<string, MajoraMaskJsonFormatLogicItem>();
+        private readonly Dictionary<string, MajoraMaskJsonFormatLogicItem> _logicDictionary = 
+            new Dictionary<string, MajoraMaskJsonFormatLogicItem>();
 
         public MajoraMaskLogicResolver(LogicFile<MajoraMaskJsonFormatLogicItem> logicFile)
         {
@@ -97,7 +98,6 @@ namespace MajoraAutoItemTracker.Logic
                 WriteToDebug($"IsItemLogicCanBeValidated {jsonLogicItem.Id} END WITH {isItemLogicClaim} (item with claim check performed)", true);
                 return isItemLogicClaim;
             }
-                
             // Check if we have the require condition
             if (!IsRequireItemCanBeValidated(jsonLogicItem, dicItemLogic, allowTrick, currentRecursivityCheck))
             {
