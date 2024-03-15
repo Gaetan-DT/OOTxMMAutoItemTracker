@@ -92,7 +92,7 @@
     "propertyName": "ImgNuts",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "ItemDekuNuts",
         "positionX": 9,
         "positionY": 0
       }
@@ -697,7 +697,7 @@
     "propertyName": "ImgWallet",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "DefaultWallet",
         "positionX": 10,
         "positionY": 5
       },
@@ -806,7 +806,7 @@
     "propertyName": "SongOfTime",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_SongOfTime",
         "positionX": 1,
         "positionY": 6
       }
@@ -817,7 +817,7 @@
     "propertyName": "SongOfHealing",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_SongOfHealing",
         "positionX": 2,
         "positionY": 6
       }
@@ -828,7 +828,7 @@
     "propertyName": "EponaSong",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_EponaSong",
         "positionX": 3,
         "positionY": 6
       }
@@ -839,7 +839,7 @@
     "propertyName": "SongOfSoaring",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_SongOfSoaring",
         "positionX": 4,
         "positionY": 6
       }
@@ -850,7 +850,7 @@
     "propertyName": "SongOfStorm",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_SongOfStorm",
         "positionX": 5,
         "positionY": 6
       }
@@ -861,7 +861,7 @@
     "propertyName": "SonataOfAwakening",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_SonataOfAwakening",
         "positionX": 6,
         "positionY": 6
       }
@@ -872,12 +872,12 @@
     "propertyName": "GoronLullaby",
     "variants": [
       {
-        "idLogic": "GoronLullabyHalf",
+        "idLogic": "SongItem_GoronLullabyHalf",
         "positionX": 7,
         "positionY": 6
       },
       {
-        "idLogic": "GoronLullabyFull",
+        "idLogic": "SongItem_GoronLullabyFull",
         "positionX": 8,
         "positionY": 6
       }
@@ -888,7 +888,7 @@
     "propertyName": "NewWaveBossaNova",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_NewWaveBossaNova",
         "positionX": 9,
         "positionY": 6
       }
@@ -899,7 +899,7 @@
     "propertyName": "ElegyOfEmptyness",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_ElegyOfEmptyness",
         "positionX": 10,
         "positionY": 6
       }
@@ -910,7 +910,7 @@
     "propertyName": "SongOathToOrder",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_SongOathToOrder",
         "positionX": 11,
         "positionY": 6
       }
@@ -921,7 +921,7 @@
     "propertyName": "SunSong",
     "variants": [
       {
-        "idLogic": null,
+        "idLogic": "SongItem_SunSong",
         "positionX": 12,
         "positionY": 6
       }

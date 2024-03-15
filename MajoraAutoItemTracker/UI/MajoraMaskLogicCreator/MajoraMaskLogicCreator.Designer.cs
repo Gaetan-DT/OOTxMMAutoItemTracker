@@ -50,6 +50,7 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
             this.buttonAddConditionalItemContent = new System.Windows.Forms.Button();
             this.buttonRemoveConditionalItemContent = new System.Windows.Forms.Button();
             this.panelItemList = new System.Windows.Forms.Panel();
+            this.buttonInsertMissingItem = new System.Windows.Forms.Button();
             this.textBoxSearchLogicItemList = new System.Windows.Forms.TextBox();
             this.buttonInsertMissingRegionCheck = new System.Windows.Forms.Button();
             this.buttonSaveFile = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
             this.button12 = new System.Windows.Forms.Button();
             this.listBoxAvailableItemId = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.buttonInsertMissingItem = new System.Windows.Forms.Button();
             this.panelItemList.SuspendLayout();
             this.panelLogicItem.SuspendLayout();
             this.panelAvailableId.SuspendLayout();
@@ -258,6 +258,15 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
             this.panelItemList.Size = new System.Drawing.Size(398, 847);
             this.panelItemList.TabIndex = 21;
             // 
+            // buttonInsertMissingItem
+            // 
+            this.buttonInsertMissingItem.Location = new System.Drawing.Point(207, 821);
+            this.buttonInsertMissingItem.Name = "buttonInsertMissingItem";
+            this.buttonInsertMissingItem.Size = new System.Drawing.Size(191, 23);
+            this.buttonInsertMissingItem.TabIndex = 7;
+            this.buttonInsertMissingItem.Text = "Insert missing item";
+            this.buttonInsertMissingItem.UseVisualStyleBackColor = true;
+            // 
             // textBoxSearchLogicItemList
             // 
             this.textBoxSearchLogicItemList.Location = new System.Drawing.Point(3, 29);
@@ -362,16 +371,7 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
             this.label7.TabIndex = 5;
             this.label7.Text = "Available Id";
             // 
-            // buttonInsertMissingItem
-            // 
-            this.buttonInsertMissingItem.Location = new System.Drawing.Point(207, 821);
-            this.buttonInsertMissingItem.Name = "buttonInsertMissingItem";
-            this.buttonInsertMissingItem.Size = new System.Drawing.Size(191, 23);
-            this.buttonInsertMissingItem.TabIndex = 7;
-            this.buttonInsertMissingItem.Text = "Insert missing region check";
-            this.buttonInsertMissingItem.UseVisualStyleBackColor = true;
-            // 
-            // OcarinaOfTimeLogicCreator
+            // MajoraMaskLogicCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -379,7 +379,7 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
             this.Controls.Add(this.panelAvailableId);
             this.Controls.Add(this.panelLogicItem);
             this.Controls.Add(this.panelItemList);
-            this.Name = "OcarinaOfTimeLogicCreator";
+            this.Name = "MajoraMaskLogicCreator";
             this.Text = "OcarinaOfTimeLogicCreator";
             this.Load += new System.EventHandler(this.MajoraMaskLogicCreator_Load);
             this.panelItemList.ResumeLayout(false);
