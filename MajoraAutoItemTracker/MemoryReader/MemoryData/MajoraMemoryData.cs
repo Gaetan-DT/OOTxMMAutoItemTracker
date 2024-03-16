@@ -2,6 +2,7 @@
 using System.Reactive.Subjects;
 using System;
 using System.Collections.Generic;
+using MajoraAutoItemTracker.Model.Enum.MM;
 
 namespace MajoraAutoItemTracker.MemoryReader.MemoryData
 {
@@ -114,9 +115,12 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgLens] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_LENS_OF_TRUTH);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgHook] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_HOOKSHOT);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgGfsword] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_GREAT_FAIRY_SWORD);
-            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgScrubTrade] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_1);
-            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgKeyMama] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_2);
-            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgLetterpendant] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_TRADING_ITEM_3);
+            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgScrubTrade] = MajoraTradeScrubTradeMethod
+                .FromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_INVENTORY_TRADING_ITEM_1));
+            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgKeyMama] = MajoraTradeKeyMamaMethod
+                .FromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_INVENTORY_TRADING_ITEM_2));
+            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgLetterpendant] = MajoraTradeLetterpendantMethod
+                .FromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_INVENTORY_TRADING_ITEM_3));
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.Imgbottle1] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_1);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.Imgbottle2] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_2);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.Imgbottle3] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_BOTTLE_3);

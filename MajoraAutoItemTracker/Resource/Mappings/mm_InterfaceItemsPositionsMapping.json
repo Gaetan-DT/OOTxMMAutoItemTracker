@@ -238,46 +238,22 @@
         "idLogic": "TradeItemMoonTear",
         "positionX": 8,
         "positionY": 2
-      }
-    ]
-  },
-  {
-    "displayName": "Land Deed",
-    "propertyName": "",
-    "variants": [
+      },
       {
         "idLogic": "TradeItemLandDeed",
         "positionX": 9,
         "positionY": 2
-      }
-    ]
-  },
-  {
-    "displayName": "Swamp Deed",
-    "propertyName": "",
-    "variants": [
+      },
       {
         "idLogic": "TradeItemSwampDeed",
         "positionX": 10,
         "positionY": 2
-      }
-    ]
-  },
-  {
-    "displayName": "Mountain Deed",
-    "propertyName": "",
-    "variants": [
+      },
       {
         "idLogic": "TradeItemMountainDeed",
         "positionX": 11,
         "positionY": 2
-      }
-    ]
-  },
-  {
-    "displayName": "Ocean Deed",
-    "propertyName": "",
-    "variants": [
+      },
       {
         "idLogic": "TradeItemOceanDeed",
         "positionX": 12,
@@ -293,6 +269,11 @@
         "idLogic": "TradeItemRoomKey",
         "positionX": 13,
         "positionY": 2
+      },
+      {
+        "idLogic": "TradeItemMamaLetter",
+        "positionX": 14,
+        "positionY": 2
       }
     ]
   },
@@ -304,24 +285,7 @@
         "idLogic": "TradeItemKafeiLetter",
         "positionX": 15,
         "positionY": 2
-      }
-    ]
-  },
-  {
-    "displayName": "Mama Letter",
-    "propertyName": "",
-    "variants": [
-      {
-        "idLogic": "TradeItemMamaLetter",
-        "positionX": 14,
-        "positionY": 2
-      }
-    ]
-  },
-  {
-    "displayName": "Pendant",
-    "propertyName": "",
-    "variants": [
+      },
       {
         "idLogic": "TradeItemPendant",
         "positionX": 0,

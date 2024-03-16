@@ -183,6 +183,9 @@
     <Compile Include="Model\Enum\EquipmentWallet.cs" />
     <Compile Include="Model\CheckLogic\MajoraMaskCheckLogic.cs" />
     <Compile Include="Model\CheckLogic\MajoraMaskCheckLogicCategory.cs" />
+    <Compile Include="Model\Enum\MM\MajoraTradeScrubTrade.cs" />
+    <Compile Include="Model\Enum\MM\MajoraTradeKeyMama.cs" />
+    <Compile Include="Model\Enum\MM\MajoraTradeLetterpendant.cs" />
     <Compile Include="Model\Enum\OOT\OotItemBottle.cs" />
     <Compile Include="Model\Enum\OOT\OotItemGiantKnifeBiggoronSword.cs" />
     <Compile Include="Model\Enum\OOT\OotItemGoldSkulltula.cs" />

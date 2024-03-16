@@ -85,8 +85,8 @@ namespace MajoraAutoItemTracker
         public const int CST_INVENTORY_GREAT_FAIRY_SWORD = 0x1EF6F3;// Great Fairy's 1EF6F3 Sword // 10, FF
 
         public const int CST_INVENTORY_TRADING_ITEM_1 = 0x1EF6E5;// Trading Item 1 1EF6E6 // 28..2C=Moon's Tear, Land Title Deed, Swmap Title Deed, Mountain Tiutle Deed, Ocean Title Deed, FF=Nothing
-        public const int CST_INVENTORY_TRADING_ITEM_2 = 0x1EF6E5/*0x1EF6EB*/;// Trading Item 2 1EF6E8 // 2D..2E=Room Key, Special Delivery To Mama, FF=Nothing
-        public const int CST_INVENTORY_TRADING_ITEM_3 = 0x1EF6E5/*0x1EF6F1*/;// Trading Item 3 1EF6F2 // 2F..30=Letter to Kafei, Pendant Of Memories, FF=Nothing
+        public const int CST_INVENTORY_TRADING_ITEM_2 = 0x1EF6EB/*0x1EF6EB*/;// Trading Item 2 1EF6E8 // 2D..2E=Room Key, Special Delivery To Mama, FF=Nothing
+        public const int CST_INVENTORY_TRADING_ITEM_3 = 0x1EF6F1/*0x1EF6F1*/;// Trading Item 3 1EF6F2 // 2F..30=Letter to Kafei, Pendant Of Memories, FF=Nothing
         public const int CST_INVENTORY_BOTTLE_1 = 0x1EF6F2;// Bottle 1 1EF6F1 // Lazy to find value, FF=Nothing
         public const int CST_INVENTORY_BOTTLE_2 = 0x1EF6F3;// Bottle 2 1EF6F0 // Lazy to find value, FF=Nothing
         public const int CST_INVENTORY_BOTTLE_3 = 0x1EF6F4;// Bottle 3 1EF6F7 // Lazy to find value, FF=Nothing

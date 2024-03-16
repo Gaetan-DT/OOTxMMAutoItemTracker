@@ -1,6 +1,7 @@
 ﻿using MajoraAutoItemTracker.Logic;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Model.Enum.MM;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
 using MajoraAutoItemTracker.Model.Logic.MM;
@@ -179,6 +180,24 @@ namespace MajoraAutoItemTracker.UI.MainUI
                             itemLogic.hasItem = true;
                             itemLogic.CurrentVariant = EquipmentWalletMethod
                                 .ToForVariantMajoraMask((EquipmentWallet)itemLogicProperty.Item2);
+                        }
+                        else if (itemLogicProperty.Item2 is MajoraTradeScrubTrade)
+                        {
+                            var scrubTrade = (MajoraTradeScrubTrade)itemLogicProperty.Item2;
+                            itemLogic.hasItem = scrubTrade != MajoraTradeScrubTrade.None;
+                            itemLogic.CurrentVariant = MajoraTradeScrubTradeMethod.ToInterfaceMappingVariant(scrubTrade);
+                        }
+                        else if (itemLogicProperty.Item2 is MajoraTradeKeyMama)
+                        {
+                            var scrubTrade = (MajoraTradeKeyMama)itemLogicProperty.Item2;
+                            itemLogic.hasItem = scrubTrade != MajoraTradeKeyMama.None;
+                            itemLogic.CurrentVariant = MajoraTradeKeyMamaMethod.ToInterfaceMappingVariant(scrubTrade);
+                        }
+                        else if (itemLogicProperty.Item2 is MajoraTradeLetterpendant)
+                        {
+                            var scrubTrade = (MajoraTradeLetterpendant)itemLogicProperty.Item2;
+                            itemLogic.hasItem = scrubTrade != MajoraTradeLetterpendant.None;
+                            itemLogic.CurrentVariant = MajoraTradeLetterpendantMethod.ToInterfaceMappingVariant(scrubTrade);
                         }
                         else if (itemLogicProperty.Item2 is uint)
                         {
