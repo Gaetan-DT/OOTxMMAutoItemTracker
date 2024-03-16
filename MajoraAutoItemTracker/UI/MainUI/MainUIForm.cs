@@ -45,32 +45,25 @@ namespace MajoraAutoItemTracker.UI.MainUI
             mainUIController.imageBoxMapMM!.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(gbCheckListMM, lbCheckListMM, it);
 
             // Init game controller
-            ocarinaOfTimeController.Init(Log, mainUIController.imageBoxMapOOT, pictureBoxOOTItemList, lbCheckListOOT);
+            ocarinaOfTimeController.Init(
+                Log, 
+                mainUIController.imageBoxMapOOT, 
+                pictureBoxOOTItemList, 
+                lbCheckListOOT,
+                cmsCheckList);
             ocarinaOfTimeController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
-            majoraMaskController.Init(Log, mainUIController.imageBoxMapMM, pictureBoxMMItemList, lbCheckListMM);
+            majoraMaskController.Init(
+                Log, 
+                mainUIController.imageBoxMapMM, 
+                pictureBoxMMItemList, 
+                lbCheckListMM,
+                cmsCheckList);
             majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
 
             if (checkSaveList != null)
             {
                 ocarinaOfTimeController.LoadFromSave(checkSaveList.OOTCheckList);
                 majoraMaskController.LoadFromSave(checkSaveList.MMCheckList);
-            }
-
-            lbCheckListOOT.ContextMenuStrip = cmsCheckMenu;
-            lbCheckListOOT.MouseDown += TestListBoxMouseDown;
-        }
-
-        private void TestListBoxMouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                var index = lbCheckListOOT.IndexFromPoint(e.Location);
-                if (index != -1)
-                {
-                    cmsCheckMenu.Items.Clear();
-                    cmsCheckMenu.Items.Add("Item 1");
-                    cmsCheckMenu.Show();
-                }
             }
         }
 

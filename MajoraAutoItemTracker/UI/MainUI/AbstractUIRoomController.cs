@@ -38,7 +38,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Action<string> logWrite,
             ImageBoxController<CheckLogicZone> pictureBoxZoomMoveController,
             PictureBox pbItemList, 
-            ListBox lbCheckList)
+            ListBox lbCheckList,
+            ContextMenuStrip cmsCheckList)
         {
             this.logWrite = logWrite;
             this.pictureBoxZoomMoveController = pictureBoxZoomMoveController;
@@ -50,6 +51,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // Init ListBox
             lbCheckList.DrawItem += DrawCheckList;
             lbCheckList.MouseClick += OnCheckListItemClick;
+            lbCheckList.MouseDown += ListBoxMouseDown;
+            lbCheckList.ContextMenuStrip = cmsCheckList;
         }
 
         public void RefreshCheckListForCategory(
@@ -268,6 +271,21 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }
 
+        private void ListBoxMouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var listbox = ((ListBox)sender);
+                var index = listbox.IndexFromPoint(e.Location);
+                if (index >= 0)
+                {
+                    var checkLogic = (CheckLogic)listbox.Items[index];
+                    PrepareMenuItemForCheck(listbox.ContextMenuStrip, checkLogic);
+                    listbox.ContextMenuStrip.Show();
+                }
+            }
+        }
+
         protected abstract Point GetPositionInDrawingOfItemLogicPropertyName(string propertyName);
 
         public void ResetCheckClaim()
@@ -307,6 +325,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 }
             }
             RefreshRegionInDrawingFollowingCheck();
+        }
+
+        public void PrepareMenuItemForCheck(ContextMenuStrip cms, CheckLogic checkLogic)
+        {
+            cms.Items.Clear();
+            cms.Items.Add($"{checkLogic.Id}").Enabled = false;
+            cms.Items.Add("See logic (WIP)").Enabled = false;
         }
     }
 }
