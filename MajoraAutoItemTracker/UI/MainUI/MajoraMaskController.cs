@@ -87,7 +87,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
             { MajoraMaskItemLogicPopertyName.NewWaveBossaNova, new Point(2, 11) },
             { MajoraMaskItemLogicPopertyName.ElegyOfEmptyness, new Point(3, 11) },
             { MajoraMaskItemLogicPopertyName.SongOathToOrder, new Point(4, 11) },
-            { MajoraMaskItemLogicPopertyName.SunSong, new Point(5, 11) }
+            { MajoraMaskItemLogicPopertyName.SunSong, new Point(5, 11) },
+            { MajoraMaskItemLogicPopertyName.ItemSkulltulaSwampSpiderHouseCount, new Point(6, 1) }, //TODO
+            { MajoraMaskItemLogicPopertyName.ItemSkulltulaOceanSideSouderHouseCount, new Point(6, 2) }, //TODO
+            { MajoraMaskItemLogicPopertyName.ItemDungeonWoodfallFairiesCount, new Point(6, 5) }, //TODO
+            { MajoraMaskItemLogicPopertyName.ItemDungeonSnowHeadFairiesCount, new Point(6, 6) }, //TODO
+            { MajoraMaskItemLogicPopertyName.ItemDungeonGreatBayFairiesCount, new Point(6, 7) }, //TODO
+            { MajoraMaskItemLogicPopertyName.ItemDungeonStoneTowerFairiesCount, new Point(6, 8) }, //TODO
+
     };
 
         private LogicFile<MajoraMaskJsonFormatLogicItem> logicFile;
@@ -167,11 +174,37 @@ namespace MajoraAutoItemTracker.UI.MainUI
                             itemLogic.hasItem = (EquipmentQuiver)itemLogicProperty.Item2 != EquipmentQuiver.None;
                             itemLogic.CurrentVariant = (int)itemLogicProperty.Item2;
                         }
+                        else if (itemLogicProperty.Item2 is EquipmentWallet)
+                        {
+                            itemLogic.hasItem = true;
+                            itemLogic.CurrentVariant = EquipmentWalletMethod
+                                .ToForVariantMajoraMask((EquipmentWallet)itemLogicProperty.Item2);
+                        }
+                        else if (itemLogicProperty.Item2 is uint)
+                        {
+                            var itemCount = itemLogicProperty.Item2 as uint? ?? 0;
+                            itemLogic.hasItem = itemCount > 0;
+                            itemLogic.ItemCount = itemCount;
+                        }
                         else
                         {
                             itemLogic.hasItem = false;
                             itemLogic.CurrentVariant = 0;
                         }
+
+                        /*if (new List<MajoraMaskItemLogicPopertyName>()
+                        {
+                            MajoraMaskItemLogicPopertyName.ItemDungeonGreatBayFairiesCount,
+                            MajoraMaskItemLogicPopertyName.ItemDungeonSnowHeadFairiesCount,
+                            MajoraMaskItemLogicPopertyName.ItemDungeonStoneTowerFairiesCount,
+                            MajoraMaskItemLogicPopertyName.ItemDungeonWoodfallFairiesCount,
+                            MajoraMaskItemLogicPopertyName.ItemSkulltulaOceanSideSouderHouseCount,
+                            MajoraMaskItemLogicPopertyName.ItemSkulltulaSwampSpiderHouseCount
+                        }.Contains(itemLogicProperty.Item1))
+                        {
+                            itemLogic.ItemCount = itemLogicProperty.i
+                        }*/
+
                         break;
                     }
                 }

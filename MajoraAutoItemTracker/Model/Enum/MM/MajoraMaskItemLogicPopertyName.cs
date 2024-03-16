@@ -77,6 +77,12 @@ namespace MajoraAutoItemTracker.Model.Enum
         ElegyOfEmptyness,
         SongOathToOrder,
         SunSong,
+        ItemSkulltulaSwampSpiderHouseCount,
+        ItemSkulltulaOceanSideSouderHouseCount,
+        ItemDungeonWoodfallFairiesCount,
+        ItemDungeonSnowHeadFairiesCount,
+        ItemDungeonGreatBayFairiesCount,
+        ItemDungeonStoneTowerFairiesCount
     }
 
     public class MajoraMaskItemLogicPopertyNameMethod

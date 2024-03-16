@@ -39,7 +39,8 @@ namespace MajoraAutoItemTracker
         // Sword = 1EF6BF // 4D..4F=Kokiri, Razor, Gilded FF=None
         // TODO: Find Shield only address if exist
 
-        public const int CST_INVENTORY_EQUIPEMENT_WALLET = 0x1EF729; // Wallet 1EF729 // 00=Child, 10=Adult, 20=Giant
+        
+        public const int CST_INVENTORY_EQUIPEMENT_WALLET = 0x1EF72A; // Wallet 1EF729 // 00=Child, 10=Adult, 20=Giant
 
         // ___B B_QQ
         // 0000 0000
@@ -199,48 +200,79 @@ namespace MajoraAutoItemTracker
 
         #region Dungeon Items
 
+        // Dungeon data struct
+        // 11111    1       1          1 
+        //KeyCount Map   Compass    Boss key
+        public const int CST_DUNGEON_VALUE_BOSS_KEY = 0x01;
+        public const int CST_DUNGEON_VALUE_COMPASS  = 0x02;
+        public const int CST_DUNGEON_VALUE_MAP = 0x04;
+        public const int CST_DUNGEON_VALUE_KEY = 0xF8;
+        public const int CST_DUNGEON_VALUE_KEY_MASK = 0xF8;
+
         // Woodfall
+        public const int CST_DUNGEON_WOODFALL_DATA_ADDRESS = 0x1EF730;
         // Map
+
         // Compass
         // Boss Key
         // Key
-        // Fairies
+        // Fairies (801EF744)
+        public const int CST_DUNGEON_WOODFALL_FAIRIES_COUNT = 0x1EF744;
 
         // Snow Head
+        // 0x1EF731;
         // Map
         // Compass
         // Boss Key
         // Key
         // Fairies
+        public const int CST_DUNGEON_SNOW_HEAD_FAIRIES_COUNT = 0x1EF745;
 
         // Great Bay
+        // 0x1EF732;
         // Map
         // Compass
         // Boss Key
         // Key
         // Fairies
+        public const int CST_DUNGEON_GREAT_BAY_FAIRIES_COUNT = 0x1EF746;
 
         // Stone Tower
+        // 0x1EF733;
         // Map
         // Compass
         // Boss Key
         // Key
         // Fairies
+        public const int CST_DUNGEON_STONE_TOWER_FAIRIES_COUNT = 0x1EF747;
 
         #endregion
 
         #region Other
 
         // MEM 0x801EF690: [Byte] #Form
-		// 0x00 Fierce Deity
-		// 0x01 Goron
-		// 0x02 Zora
-		// 0x03 Deku
-		// 0x04 Link
+        // 0x00 Fierce Deity
+        // 0x01 Goron
+        // 0x02 Zora
+        // 0x03 Deku
+        // 0x04 Link
         public const int CURRENT_TRANSFORMATION = 0x1EF690;
 
         public const int CST_ADDRESS_CURRENT_RUPEE = 0x1EF6A;
 
+        public const int CST_DEKU_STICK_COUNT = 0x1EF718;
+        public const int CST_DEKU_NUTS_COUNT = 0x1EF719;
+        public const int CST_MAGIC_BEANS_COUNT = 0x1EF71A;
+
+        public const int CST_CURRENT_DATE = 0x1EF68F;
+        public const int CST_CURRENT_TIME_PART_1 = 0x1EF67C; // 40 = 6am
+        public const int CST_CURRENT_TIME_PART_2 = 0x1EF67D;
+
+        public const int CST_SKULLTULA_SWAMP_SPIDER_HOUSE_COUNT = 0x1F0531;
+        public const int CST_SKULLTULA_OCEANSIDE_SPIDER_HOUSE_COUNT = 0x1F0533;
+
         #endregion
     }
 }
+
+

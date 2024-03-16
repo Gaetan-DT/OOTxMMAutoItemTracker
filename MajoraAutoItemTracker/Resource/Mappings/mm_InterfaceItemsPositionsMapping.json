@@ -926,5 +926,71 @@
         "positionY": 6
       }
     ]
+  },
+  {
+    "displayName": "Swamp Spider House",
+    "propertyName": "ItemSkulltulaSwampSpiderHouseCount",
+    "variants": [
+      {
+        "idLogic": "ItemSkulltulaSwampSpiderHouseCount",
+        "positionX": 0,
+        "positionY": 14
+      }
+    ]
+  },
+  {
+    "displayName": "Ocean Side Souder House",
+    "propertyName": "ItemSkulltulaOceanSideSouderHouseCount",
+    "variants": [
+      {
+        "idLogic": "ItemSkulltulaOceanSideSouderHouseCount",
+        "positionX": 0,
+        "positionY": 14
+      }
+    ]
+  },
+  {
+    "displayName": "Woodfall Fairies",
+    "propertyName": "ItemDungeonWoodfallFairiesCount",
+    "variants": [
+      {
+        "idLogic": "ItemDungeonWoodfallFairiesCount",
+        "positionX": 2,
+        "positionY": 15
+      }
+    ]
+  },
+  {
+    "displayName": "Snow Head Fairies",
+    "propertyName": "ItemDungeonSnowHeadFairiesCount",
+    "variants": [
+      {
+        "idLogic": "ItemDungeonSnowHeadFairiesCount",
+        "positionX": 3,
+        "positionY": 15
+      }
+    ]
+  },
+  {
+    "displayName": "Great Bay Fairies",
+    "propertyName": "ItemDungeonGreatBayFairiesCount",
+    "variants": [
+      {
+        "idLogic": "ItemDungeonGreatBayFairiesCount",
+        "positionX": 4,
+        "positionY": 15
+      }
+    ]
+  },
+  {
+    "displayName": "Stone Tower Fairies",
+    "propertyName": "ItemDungeonStoneTowerFairiesCount",
+    "variants": [
+      {
+        "idLogic": "ItemDungeonStoneTowerFairiesCount",
+        "positionX": 5,
+        "positionY": 15
+      }
+    ]
   }
 ]

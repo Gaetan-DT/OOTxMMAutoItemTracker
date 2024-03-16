@@ -18,12 +18,27 @@ namespace MajoraAutoItemTracker.Model.Enum
         public static EquipmentWallet ReadFromMemory(this uint equipmentWallet)
         {
             equipmentWallet = (equipmentWallet >> 4) & 0x3;
-            if (System.Enum.IsDefined(typeof(EquipmentWallet), equipmentWallet))
+            switch(equipmentWallet)
             {
-                return (EquipmentWallet)equipmentWallet;
+                case 0: return EquipmentWallet.Child;
+                case 1: return EquipmentWallet.Adult;
+                default:
+                case 2: return EquipmentWallet.Giant;
             }
-            
-            throw new Exception("Unknown EquipmentWallet");
+        }
+
+        public static int ToForVariantMajoraMask(EquipmentWallet equipmentWallet)
+        {
+            switch (equipmentWallet)
+            {
+                case EquipmentWallet.Child:
+                    return 0;
+                case EquipmentWallet.Adult:
+                    return 1;
+                case EquipmentWallet.Giant:
+                    return 2;
+                default: return 0;
+            }
         }
     }
 }

@@ -95,7 +95,8 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             //HasDoubleDefense = (bDoubleDefense[0] & 00010020) != bDoubleDefense[0];
 
             // Inventory Equipment
-            // FIXME: EquipmentWallet = EquipmentWalletMethod.ReadFromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
+            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgWallet] = EquipmentWalletMethod
+                .ReadFromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_INVENTORY_EQUIPEMENT_WALLET));
 
             // INVENTORY C-Button Items
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ImgOcarina] = emulatorWrapper.CheckIsNotFF(MMOffsets.CST_INVENTORY_OCARINA);
@@ -178,6 +179,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.GohtMask] = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_GOHT_REMAINS);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.GyorgMask] = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_GYORG_REMAINS);
             mapPropertyNameAny[MajoraMaskItemLogicPopertyName.TwinmoldMask] = emulatorWrapper.CheckBitRaise(valueSongAndRemains, MMOffsets.CST_INVENTORY_VALUE_TWINMODL_REMAINS);
+
+            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ItemSkulltulaSwampSpiderHouseCount] = emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_SKULLTULA_SWAMP_SPIDER_HOUSE_COUNT);
+            mapPropertyNameAny[MajoraMaskItemLogicPopertyName.ItemSkulltulaOceanSideSouderHouseCount] = emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CST_SKULLTULA_OCEANSIDE_SPIDER_HOUSE_COUNT);
 
             // Other
             // FIXME: CurrentLinkTransformation = LinkTransformationMethods.ReadFromMemory(emulatorWrapper.ReadUint8InEdianSizeAsInt(MMOffsets.CURRENT_TRANSFORMATION));

@@ -1,8 +1,11 @@
-﻿using MajoraAutoItemTracker.Model.CheckLogic;
+﻿using MajoraAutoItemTracker.Core.Extensions;
+using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Item;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -153,49 +156,72 @@ namespace MajoraAutoItemTracker.UI.MainUI
             {
                 if (itemLogic.propertyName == null || itemLogic.propertyName == "")
                     continue;
-                var posX = itemLogic.variants[itemLogic.CurrentVariant].positionX * ITEM_LIST_SIZE_IN_FILE;
-                var posY = itemLogic.variants[itemLogic.CurrentVariant].positionY * ITEM_LIST_SIZE_IN_FILE;
-                Image imageToDraw;
-                if (itemLogic.hasItem)
-                    imageToDraw = itemSpriteColor.Clone(new Rectangle(posX, posY, ITEM_LIST_SIZE_IN_FILE, ITEM_LIST_SIZE_IN_FILE), itemSpriteColor.PixelFormat);
-                else
-                    imageToDraw = itemSpriteMono.Clone(new Rectangle(posX, posY, ITEM_LIST_SIZE_IN_FILE, ITEM_LIST_SIZE_IN_FILE), itemSpriteMono.PixelFormat);
+
+                // Get scalled point
                 var point = GetPositionInDrawingOfItemLogicPropertyName(itemLogic.propertyName);
 
                 var scaledSizeX = (sender as PictureBox)!.Width / (maxPropertyNamePosition.X + 1);
                 var scaledSizeY = (sender as PictureBox)!.Height / (maxPropertyNamePosition.Y + 1);
 
                 var scaledSizeXY = Math.Min(scaledSizeX, scaledSizeY);
-
                 var scaledX = (point.X * scaledSizeXY);
                 var scaledY = (point.Y * scaledSizeXY);
 
                 var imageRectangle = new Rectangle(scaledX, scaledY, scaledSizeXY, scaledSizeXY);
 
-                g.DrawImage(imageToDraw, imageRectangle);
 
-                if (itemLogic.ItemCount > 0)
-                {
-                    var brushText = new SolidBrush(Color.Black);
-
-                    var fontFamily = new FontFamily("Times New Roman");
-                    StringFormat sf = new StringFormat();
-                    sf.LineAlignment = StringAlignment.Center;
-                    sf.Alignment = StringAlignment.Center;
-                    var font = new Font(fontFamily, 20);
-
-                    StringFormat stringFormat = new StringFormat();
-                    stringFormat.Alignment = StringAlignment.Center;
-                    stringFormat.LineAlignment = StringAlignment.Center;
-
-                    g.DrawString(
-                        itemLogic.ItemCount.ToString(),
-                        font,
-                        brushText,
-                        imageRectangle,
-                        stringFormat);
-                }
+                // Draw Item and Text
+                DrawItemImageAtPos(g, itemLogic, imageRectangle);
+                DrawItemTextAtPos(g, itemLogic, imageRectangle);
             }
+        }
+
+        private void DrawItemImageAtPos(Graphics g, ItemLogic itemLogic, Rectangle pos)
+        {
+            if (itemSpriteColor == null || itemSpriteMono == null)
+                return;
+            var blurImage = itemLogic.ItemCount > 0;
+            var posX = itemLogic.variants[itemLogic.CurrentVariant].positionX * ITEM_LIST_SIZE_IN_FILE;
+            var posY = itemLogic.variants[itemLogic.CurrentVariant].positionY * ITEM_LIST_SIZE_IN_FILE;
+            Image imageToDraw;
+            if (itemLogic.hasItem)
+                imageToDraw = itemSpriteColor.Clone(new Rectangle(posX, posY, ITEM_LIST_SIZE_IN_FILE, ITEM_LIST_SIZE_IN_FILE), itemSpriteColor.PixelFormat);
+            else
+                imageToDraw = itemSpriteMono.Clone(new Rectangle(posX, posY, ITEM_LIST_SIZE_IN_FILE, ITEM_LIST_SIZE_IN_FILE), itemSpriteMono.PixelFormat);
+
+            if (blurImage)
+            {
+                imageToDraw = new Bitmap(imageToDraw).Blur(2);
+            }
+
+            g.DrawImage(imageToDraw, pos);
+        }
+
+        private void DrawItemTextAtPos(Graphics g, ItemLogic itemLogic, Rectangle pos)
+        {
+            if (itemLogic.ItemCount <= 0)
+                return;
+            var brushText = new SolidBrush(Color.White);
+            var brushOutlineText = new Pen(Color.Black);
+            var fontSize = 18;
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Center;
+            stringFormat.LineAlignment = StringAlignment.Center;
+            GraphicsPath stringPath = new GraphicsPath();
+            stringPath.AddString(
+                itemLogic.ItemCount.ToString(),
+                new FontFamily("Georgia"),
+                (int)FontStyle.Bold,
+                g.DpiX * fontSize / 72,
+                new Rectangle(
+                    pos.X,
+                    pos.Y + (pos.Height / 2),
+                    pos.Width,
+                    pos.Height / 2),
+                stringFormat);
+
+            g.FillPath(brushText, stringPath);
+            g.DrawPath(brushOutlineText, stringPath);
         }
 
         protected void DrawCheckList(object sender, DrawItemEventArgs e)
