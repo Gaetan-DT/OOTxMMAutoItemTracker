@@ -55,6 +55,23 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 ocarinaOfTimeController.LoadFromSave(checkSaveList.OOTCheckList);
                 majoraMaskController.LoadFromSave(checkSaveList.MMCheckList);
             }
+
+            lbCheckListOOT.ContextMenuStrip = cmsCheckMenu;
+            lbCheckListOOT.MouseDown += TestListBoxMouseDown;
+        }
+
+        private void TestListBoxMouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var index = lbCheckListOOT.IndexFromPoint(e.Location);
+                if (index != -1)
+                {
+                    cmsCheckMenu.Items.Clear();
+                    cmsCheckMenu.Items.Add("Item 1");
+                    cmsCheckMenu.Show();
+                }
+            }
         }
 
         private void OnOOTItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> itemLogicProperty)

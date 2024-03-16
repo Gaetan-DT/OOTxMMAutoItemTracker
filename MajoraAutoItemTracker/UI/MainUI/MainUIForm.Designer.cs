@@ -35,6 +35,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUIForm));
             this.tboxDebug = new System.Windows.Forms.TextBox();
             this.pictureBoxOOTItemList = new System.Windows.Forms.PictureBox();
@@ -63,13 +64,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.checkLogicEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logicTesterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ocarinaOfTimeLogicCreatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocarinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emulatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxEmulatorList = new System.Windows.Forms.ToolStripComboBox();
             this.romToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxRomTypeList = new System.Windows.Forms.ToolStripComboBox();
             this.stratStopToolStripMenuItemStartStopEmulator = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ocarinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsCheckMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOOTItemList)).BeginInit();
             this.tabGameMenu.SuspendLayout();
             this.tabOcarinaOfTime.SuspendLayout();
@@ -408,6 +410,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.ocarinaOfTimeLogicCreatorToolStripMenuItem.Text = "Ocarina of time Logic creator";
             this.ocarinaOfTimeLogicCreatorToolStripMenuItem.Click += new System.EventHandler(this.OnOotLogicCreatorClick);
             // 
+            // ocarinaToolStripMenuItem
+            // 
+            this.ocarinaToolStripMenuItem.Name = "ocarinaToolStripMenuItem";
+            this.ocarinaToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.ocarinaToolStripMenuItem.Text = "Majora mask Logic creator";
+            this.ocarinaToolStripMenuItem.Click += new System.EventHandler(this.OnMmLogicCreatorClick);
+            // 
             // emulatorToolStripMenuItem
             // 
             this.emulatorToolStripMenuItem.Enabled = false;
@@ -446,12 +455,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             this.refreshListToolStripMenuItem.Text = "Refresh List";
             this.refreshListToolStripMenuItem.Click += new System.EventHandler(this.OnRefreshEmulatorListClick);
             // 
-            // ocarinaToolStripMenuItem
+            // cmsCheckMenu
             // 
-            this.ocarinaToolStripMenuItem.Name = "ocarinaToolStripMenuItem";
-            this.ocarinaToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.ocarinaToolStripMenuItem.Text = "Majora mask Logic creator";
-            this.ocarinaToolStripMenuItem.Click += new System.EventHandler(this.OnMmLogicCreatorClick);
+            this.cmsCheckMenu.Name = "cmsCheckMenu";
+            this.cmsCheckMenu.Size = new System.Drawing.Size(181, 26);
             // 
             // MainUIForm
             // 
@@ -536,6 +543,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.GroupBox gbCheckListOOT;
         private System.Windows.Forms.GroupBox gbCheckListMM;
         private System.Windows.Forms.ToolStripMenuItem ocarinaToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip cmsCheckMenu;
     }
 }
 

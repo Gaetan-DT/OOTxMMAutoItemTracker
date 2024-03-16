@@ -21,11 +21,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         protected Point maxPropertyNamePosition = new Point();
 
-        protected Bitmap? itemSpriteMono;
-        protected Bitmap? itemSpriteColor;
+        protected abstract Bitmap itemSpriteMono { get; }
+        
+        protected abstract Bitmap itemSpriteColor { get; }
 
-        protected List<ItemLogic>? itemLogics;
-        protected List<CheckLogic>? checkLogics;
+        protected abstract List<ItemLogic> itemLogics { get; }
+        
+        protected abstract List<CheckLogic> checkLogics { get; }
 
         protected Action<string>? logWrite;
 

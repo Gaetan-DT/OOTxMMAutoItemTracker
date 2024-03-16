@@ -18,7 +18,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
 {
     class OcarinaOfTimeController : AbstractUIRoomController<OcarinaOfTimeCheckLogic, OcarinaOfTimeCheckLogicZone>
     {
-        private readonly Dictionary<OcarinaOfTimeItemLogicPopertyName, Point> mapPropertyNamePosition = new Dictionary<OcarinaOfTimeItemLogicPopertyName, Point>()
+        private readonly Dictionary<OcarinaOfTimeItemLogicPopertyName, Point> mapPropertyNamePosition = 
+            new Dictionary<OcarinaOfTimeItemLogicPopertyName, Point>()
         {
             { OcarinaOfTimeItemLogicPopertyName.Deku_Stick, new Point(0, 0) },
             { OcarinaOfTimeItemLogicPopertyName.Deku_Nut, new Point(1, 0) },
@@ -86,11 +87,22 @@ namespace MajoraAutoItemTracker.UI.MainUI
             { OcarinaOfTimeItemLogicPopertyName.Song_of_Time, new Point(4, 9) },
             { OcarinaOfTimeItemLogicPopertyName.Song_of_Storms, new Point(5, 9) }
     };
+        
+        public OcarinaOfTimeLogicResolver logicResolver = 
+            new OcarinaOfTimeLogicResolver(LogicFileUtils.LoadOcarinaOfTimeFromRessource());
 
-        private LogicFile<OcarinaOfTimeJsonFormatLogicItem> logicFile;
-        public OcarinaOfTimeLogicResolver logicResolver;
+        public List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories = 
+            CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
 
-        public List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories;
+        protected override Bitmap itemSpriteMono => Properties.Resources.oot_items_mono;
+
+        protected override Bitmap itemSpriteColor => Properties.Resources.oot_items;
+
+        protected override List<ItemLogic> itemLogics =>
+            ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
+
+        protected override List<OcarinaOfTimeCheckLogic> checkLogics =>
+            OcarinaOfTimeCheckLogic.FromHeader(checkLogicCategories);
 
         public OcarinaOfTimeController()
         {
@@ -101,17 +113,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 maxPropertyNamePosition.X = Math.Max(maxPropertyNamePosition.X, positionOfEnum.X);
                 maxPropertyNamePosition.Y = Math.Max(maxPropertyNamePosition.Y, positionOfEnum.Y);
             };
-
-            // Init image
-            itemSpriteMono = Properties.Resources.oot_items_mono;
-            itemSpriteColor = Properties.Resources.oot_items;
-            // Init json
-            itemLogics = ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
-            checkLogicCategories = CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
-            checkLogics = OcarinaOfTimeCheckLogic.FromHeader(checkLogicCategories);
-            logicFile = LogicFileUtils.LoadOcarinaOfTimeFromRessource();
-            // Init Logic resolver
-            logicResolver = new OcarinaOfTimeLogicResolver(logicFile);
         }
 
         public void RefreshRegionInDrawingFollowingCheck(List<OcarinaOfTimeCheckLogic> checkLogic)

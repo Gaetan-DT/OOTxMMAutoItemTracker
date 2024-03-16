@@ -4,7 +4,6 @@ using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Enum.MM;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
-using MajoraAutoItemTracker.Model.Logic.MM;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -16,7 +15,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
 {
     class MajoraMaskController : AbstractUIRoomController<MajoraMaskCheckLogic, MajoraMaskCheckLogicZone>
     {
-        private readonly Dictionary<MajoraMaskItemLogicPopertyName, Point> mapPropertyNamePosition = new Dictionary<MajoraMaskItemLogicPopertyName, Point>()
+        private readonly Dictionary<MajoraMaskItemLogicPopertyName, Point> mapPropertyNamePosition = 
+            new Dictionary<MajoraMaskItemLogicPopertyName, Point>()
         {
             { MajoraMaskItemLogicPopertyName.ImgOcarina, new Point(0, 0) },
             { MajoraMaskItemLogicPopertyName.ImgBow, new Point(1, 0) },
@@ -98,10 +98,21 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
     };
 
-        private LogicFile<MajoraMaskJsonFormatLogicItem> logicFile;
-        public MajoraMaskLogicResolver logicResolver;
+        public MajoraMaskLogicResolver logicResolver = 
+            new MajoraMaskLogicResolver(LogicFileUtils.LoadMajoraMaskFromRessource());
 
-        public List<MajoraMaskCheckLogicCategory> checkLogicCategories;
+        public List<MajoraMaskCheckLogicCategory> checkLogicCategories = 
+            CheckLogicCategoryUtils.LoadMajoraMaskFromRessource();
+
+        protected override Bitmap itemSpriteMono => Properties.Resources.mm_items_mono;
+        
+        protected override Bitmap itemSpriteColor => Properties.Resources.mm_items;
+
+        protected override List<ItemLogic> itemLogics => 
+            ItemLogicMethod.LoadMajoraMaskItemLogicFromRessource();
+
+        protected override List<MajoraMaskCheckLogic> checkLogics => 
+            MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
 
         public MajoraMaskController()
         {
@@ -112,16 +123,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 maxPropertyNamePosition.X = Math.Max(maxPropertyNamePosition.X, positionOfEnum.X);
                 maxPropertyNamePosition.Y = Math.Max(maxPropertyNamePosition.Y, positionOfEnum.Y);
             };
-            // Init image
-            itemSpriteMono = Properties.Resources.mm_items_mono;
-            itemSpriteColor = Properties.Resources.mm_items;
-            // Init json
-            itemLogics = ItemLogicMethod.LoadMajoraMaskItemLogicFromRessource();
-            checkLogicCategories = CheckLogicCategoryUtils.LoadMajoraMaskFromRessource();
-            checkLogics = MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
-            logicFile = LogicFileUtils.LoadMajoraMaskFromRessource();
-            // Logic resolver
-            logicResolver = new MajoraMaskLogicResolver(logicFile);
         }
 
         public void RefreshRegionInDrawingFollowingCheck(List<MajoraMaskCheckLogic> checkLogic)
