@@ -169,6 +169,11 @@
     "propertyName": "Imgbottle1",
     "variants": [
       {
+        "idLogic": "ItemEmptyBottle",
+        "positionX": 2,
+        "positionY": 1
+      },
+      {
         "idLogic": "ItemBottleWitch",
         "positionX": 2,
         "positionY": 1
