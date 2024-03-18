@@ -904,6 +904,11 @@
         "idLogic": "ItemSkulltulaSwampSpiderHouseCount",
         "positionX": 0,
         "positionY": 14
+      },
+      {
+        "idLogic": "ItemAllSkulltulaSwampSpiderHouse",
+        "positionX": 0,
+        "positionY": 14
       }
     ]
   },
@@ -913,6 +918,11 @@
     "variants": [
       {
         "idLogic": "ItemSkulltulaOceanSideSouderHouseCount",
+        "positionX": 0,
+        "positionY": 14
+      },
+      {
+        "idLogic": "ItemAllSkulltulaOceanSideSouderHouse",
         "positionX": 0,
         "positionY": 14
       }
@@ -926,6 +936,11 @@
         "idLogic": "ItemDungeonWoodfallFairiesCount",
         "positionX": 2,
         "positionY": 15
+      },
+      {
+        "idLogic": "ItemDungeonWoodfallAllFairies",
+        "positionX": 2,
+        "positionY": 15
       }
     ]
   },
@@ -935,6 +950,11 @@
     "variants": [
       {
         "idLogic": "ItemDungeonSnowHeadFairiesCount",
+        "positionX": 3,
+        "positionY": 15
+      },
+      {
+        "idLogic": "ItemDungeonSnowHeadAllFairies",
         "positionX": 3,
         "positionY": 15
       }
@@ -948,6 +968,11 @@
         "idLogic": "ItemDungeonGreatBayFairiesCount",
         "positionX": 4,
         "positionY": 15
+      },
+      {
+        "idLogic": "ItemDungeonGreatBayAllFairies",
+        "positionX": 4,
+        "positionY": 15
       }
     ]
   },
@@ -957,6 +982,11 @@
     "variants": [
       {
         "idLogic": "ItemDungeonStoneTowerFairiesCount",
+        "positionX": 5,
+        "positionY": 15
+      },
+      {
+        "idLogic": "ItemDungeonStoneTowerAllFairies",
         "positionX": 5,
         "positionY": 15
       }
