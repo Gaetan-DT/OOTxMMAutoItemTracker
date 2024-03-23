@@ -4,16 +4,13 @@ using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-#nullable enable
-
 namespace MajoraAutoItemTracker.UI.MainUI
 {
     class SaveCheckController
     {
-        const string CST_SAVE_PATH = @"\Resource\Save";
         const string CST_AUTO_SAVE_NAME = "AutoSave.json";
 
-        private string autoSavePath = Application.StartupPath + CST_SAVE_PATH;
+        private string autoSavePath = Application.StartupPath;
 
         public CheckSaveFormatHeader? LoadFromAutoSave(RomType romType)
         {
