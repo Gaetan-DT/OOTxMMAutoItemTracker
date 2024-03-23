@@ -66,7 +66,10 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
 
         private void RefreshAll()
         {
-            List<MajoraMaskJsonFormatLogicItem> newLogicItemList = finalLogicItemList.Select((it) => it.Value).ToList();
+            List<MajoraMaskJsonFormatLogicItem> newLogicItemList = finalLogicItemList
+                ?.Select((it) => it.Value)
+                ?.ToList()
+                ?? new List<MajoraMaskJsonFormatLogicItem>();
             MajoraMaskJsonFormatLogicItem? newSelectedLogicItem = null;
             List<string>? newSelectedLogicItemListRequireItemList = null;
             List<List<string>>? newSelectedLogicItemListListConditionalItemContent = null;
@@ -105,7 +108,11 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
                 Console.WriteLine("ERROR: listItemLogic is null");
                 return;
             }
-            var finalList = finalLogicItemList.Select((it) => it.Key)/*.Except(listCheck)*/.ToList();
+            var finalList = finalLogicItemList
+                ?.Select((it) => it.Key)
+                /*.Except(listCheck)*/
+                ?.ToList()
+                ?? new List<string?>();
             foreach (var itemLogic in listItemLogic)
                 foreach (var itemLogicVariant in itemLogic.variants)
                 {
@@ -185,8 +192,9 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
         private bool IsItemLogicAlreadyExist(string itemId)
         {
             return finalLogicItemList
-                .Select((it) => it.Key)
-                .Contains(itemId);
+                ?.Select((it) => it.Key)
+                ?.Contains(itemId)
+                ?? false;
         }
 
         public void SaveSelectedLogicItem(string newId, bool isTrick)
@@ -196,8 +204,9 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
                 Console.WriteLine("ERROR: SaveSelectedLogicItem: selectedLogicItemId is null");
                 return;
             }
-            MajoraMaskJsonFormatLogicItem value;
-            if (finalLogicItemList?.TryGetValue(selectedLogicItemId, out value) ?? false)
+            if (finalLogicItemList?.TryGetValue(
+                selectedLogicItemId, 
+                out MajoraMaskJsonFormatLogicItem? value) ?? false)
             {
                 value.Id = newId;
                 value.IsTrick = isTrick;
@@ -260,7 +269,10 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
         {
             if (finalLogicItemList == null || selectedLogicItemId == null)
                 return;
-            var listConditionalItem = finalLogicItemList[selectedLogicItemId].ConditionalItems.Find((it) => it == selectedLogicItemListConditionalItemListId);
+            var listConditionalItem = finalLogicItemList[selectedLogicItemId]
+                .ConditionalItems
+                .Find((it) => it == selectedLogicItemListConditionalItemListId)
+                ?? new List<string>();
             listConditionalItem.Clear();
             listConditionalItem.AddRange(updatedListConditionalItem);
             ResolveSelectedItemAndRefreshAll(
@@ -298,7 +310,10 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
             }
             if (finalLogicItemList == null || selectedLogicItemId == null)
                 return;
-            finalLogicItemList[selectedLogicItemId].ConditionalItems.Find((it) => it == selectedLogicItemListConditionalItemListId).Add(itemId);
+            finalLogicItemList[selectedLogicItemId]
+                .ConditionalItems
+                .Find((it) => it == selectedLogicItemListConditionalItemListId)
+                ?.Add(itemId);
             ResolveSelectedItemAndRefreshAll(
                 selectedLogicItemId,
                 selectedLogicItemListRequireItemListId,
@@ -317,7 +332,10 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
         {
             if (finalLogicItemList == null || selectedLogicItemId == null || selectedLogicItemListConditionalItemListContentId == null)
                 return;
-            finalLogicItemList[selectedLogicItemId].ConditionalItems.Find((it) => it == selectedLogicItemListConditionalItemListId).Remove(selectedLogicItemListConditionalItemListContentId);
+            finalLogicItemList[selectedLogicItemId]
+                .ConditionalItems
+                .Find((it) => it == selectedLogicItemListConditionalItemListId)
+                ?.Remove(selectedLogicItemListConditionalItemListContentId);
             ResolveSelectedItemAndRefreshAll(
                 selectedLogicItemId,
                 selectedLogicItemListRequireItemListId,

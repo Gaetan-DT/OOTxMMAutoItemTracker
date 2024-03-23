@@ -113,7 +113,7 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
                 string message = "";
                 if (e.Index >= 0)
                 {
-                    var result = listBoxLogicItemConditionalItemList.Items[e.Index] as List<string>;
+                    var result = listBoxLogicItemConditionalItemList.Items[e.Index] as List<string> ?? new List<string>();
                     message = $"Conditional no:{e.Index}, {String.Join(", ", result)}";
                 }
                 DrawListBoxLineAndRect(e, listBoxLogicItemConditionalItemList, message);
@@ -202,7 +202,12 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
         private void DrawListBoxLineAndRect(DrawItemEventArgs e, ListBox lb, string message)
         {
             e.Graphics.FillRectangle(lb.SelectedIndex == e.Index ? Brushes.LightBlue : Brushes.White, e.Bounds);
-            e.Graphics.DrawString(message, e.Font, Brushes.Black, e.Bounds, StringFormat.GenericDefault);
+            e.Graphics.DrawString(
+                message, 
+                e.Font ?? SystemFonts.DefaultFont, 
+                Brushes.Black, 
+                e.Bounds, 
+                StringFormat.GenericDefault);
         }
 
 

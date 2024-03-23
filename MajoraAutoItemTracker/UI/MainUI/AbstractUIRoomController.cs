@@ -143,12 +143,15 @@ namespace MajoraAutoItemTracker.UI.MainUI
             else
                 color = Color.Red;
             var zoneGraphucsPathWithData = pictureBoxZoomMoveController.GetGraphicsPathWithData(zone);
-            zoneGraphucsPathWithData.pathColor = color;
-            zoneGraphucsPathWithData.pathInnerText = availableCheck.ToString();
+            if (zoneGraphucsPathWithData != null)
+            {
+                zoneGraphucsPathWithData.pathColor = color;
+                zoneGraphucsPathWithData.pathInnerText = availableCheck.ToString();
+            }
         }
         public abstract void DrawSquareCategory(int rectWidthAndHeight);
 
-        protected void DrawAllItemList(object sender, PaintEventArgs e)
+        protected void DrawAllItemList(object? sender, PaintEventArgs e)
         {
             if (itemLogics == null || itemSpriteColor == null || itemSpriteMono == null)
             {
@@ -229,8 +232,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             g.DrawPath(brushOutlineText, stringPath);
         }
 
-        protected void DrawCheckList(object sender, DrawItemEventArgs e)
+        protected void DrawCheckList(object? sender, DrawItemEventArgs e)
         {
+            if (sender == null)
+                return;
             if (e.Index < 0)
                 return;
             var listBox = (ListBox)sender;
@@ -242,7 +247,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 brush = Brushes.Green;
             else
                 brush = Brushes.Red;
-            e.Graphics.DrawString(checkLogic.Id, e.Font, brush, e.Bounds, StringFormat.GenericDefault);
+            e.Graphics.DrawString(
+                checkLogic.Id, 
+                e.Font ?? SystemFonts.DefaultFont, 
+                brush, 
+                e.Bounds, 
+                StringFormat.GenericDefault);
         }
 
 
@@ -252,8 +262,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void OnCheckListItemClick(object sender, MouseEventArgs e)
+        protected void OnCheckListItemClick(object? sender, MouseEventArgs e)
         {
+            if (sender == null)
+                return;
             if (pictureBoxZoomMoveController == null)
             {
                 Console.WriteLine("ERROR: OnCheckListItemClick: Not initialized");
@@ -271,8 +283,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
             }
         }
 
-        private void ListBoxMouseDown(object sender, MouseEventArgs e)
+        private void ListBoxMouseDown(object? sender, MouseEventArgs e)
         {
+            if (sender == null)
+                return;
             if (e.Button == MouseButtons.Right)
             {
                 var listbox = ((ListBox)sender);
@@ -280,8 +294,11 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 if (index >= 0)
                 {
                     var checkLogic = (CheckLogic)listbox.Items[index];
-                    PrepareMenuItemForCheck(listbox.ContextMenuStrip, checkLogic);
-                    listbox.ContextMenuStrip.Show();
+                    if (listbox.ContextMenuStrip != null)
+                    {
+                        PrepareMenuItemForCheck(listbox.ContextMenuStrip, checkLogic);
+                        listbox.ContextMenuStrip.Show();
+                    }
                 }
             }
         }

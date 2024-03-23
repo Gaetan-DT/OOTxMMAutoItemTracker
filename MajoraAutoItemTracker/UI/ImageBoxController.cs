@@ -7,7 +7,6 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
 
-#nullable enable
 
 namespace MajoraAutoItemTracker.UI
 {
@@ -79,9 +78,9 @@ namespace MajoraAutoItemTracker.UI
             AddPath(data, tag);
         }
 
-        public GraphicsPathWithData GetGraphicsPathWithData(T tag)
+        public GraphicsPathWithData? GetGraphicsPathWithData(T tag)
         {
-            return _ListPath.Find((it) => it.Item2?.Equals(tag) ?? false).Item1;
+            return _ListPath.Find((it) => it.Item2?.Equals(tag) ?? false)?.Item1;
         }
 
         public void RefreshDrawwing()
@@ -95,7 +94,7 @@ namespace MajoraAutoItemTracker.UI
             imageBox.Refresh();
         }
 
-        private void OnPicImagePaint(object sender, PaintEventArgs e)
+        private void OnPicImagePaint(object? sender, PaintEventArgs e)
         {
             _ListPath.ForEach(x =>
             {
@@ -126,7 +125,7 @@ namespace MajoraAutoItemTracker.UI
 
         #region Click event
 
-        private void OnPicMouseClick(object sender, MouseEventArgs e)
+        private void OnPicMouseClick(object? sender, MouseEventArgs e)
         {
             var mouseDownPanelLocation = imageBox.PointToClient(Cursor.Position);
             var cursorMovement = new Point(_mouseDownPanelPosition.X - mouseDownPanelLocation.X, _mouseDownPanelPosition.Y - mouseDownPanelLocation.Y);

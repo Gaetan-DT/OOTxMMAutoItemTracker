@@ -118,7 +118,7 @@ namespace MajoraAutoItemTracker.Logic
                 return false;
             }
             // Check if it a item and get the itemLogic
-            else if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic itemLogic))
+            else if (dicItemLogic.TryGetValue(jsonLogicItem.Id, out ItemLogic? itemLogic))
             {
                 isItemClaim = itemLogic.IsVariantClaim(jsonLogicItem.Id);
                 return true;

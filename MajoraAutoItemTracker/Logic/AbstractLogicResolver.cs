@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-#nullable enable
-
 namespace MajoraAutoItemTracker.Logic
 {
     public abstract class AbstractLogicResolver
@@ -25,7 +23,7 @@ namespace MajoraAutoItemTracker.Logic
                 Debug.WriteLine("Unable to find logic for check: " + logicIdStr);
                 return null;
             }
-            if (!logicDictionary.TryGetValue(logicIdStr, out JsonFormatLogicItem jsonLogicItem))
+            if (!logicDictionary.TryGetValue(logicIdStr, out JsonFormatLogicItem? jsonLogicItem))
             {
                 Debug.WriteLine("Unable to find logic for check: " + logicIdStr);
                 return null;

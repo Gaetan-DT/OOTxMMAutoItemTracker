@@ -1,21 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{80FB407B-6193-41A1-B7D0-7B013E2D0F81}</ProjectGuid>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MajoraAutoItemTracker</RootNamespace>
-    <AssemblyName>MajoraAutoItemTracker</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
-    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,54 +19,22 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>8.0</LangVersion>
-    <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>8.0</LangVersion>
-    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
@@ -86,230 +43,6 @@
   <PropertyGroup>
     <StartupObject>MajoraAutoItemTracker.Program</StartupObject>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Cyotek.Windows.Forms.ImageBox, Version=1.2.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
-      <HintPath>packages\CyotekImageBox.1.3.1\lib\net20\Cyotek.Windows.Forms.ImageBox.dll</HintPath>
-    </Reference>
-    <Reference Include="Fasm.NET, Version=1.0.4939.27955, Culture=neutral, processorArchitecture=x86">
-      <HintPath>packages\Fasm.NET.1.70.03.2\lib\Fasm.NET.dll</HintPath>
-    </Reference>
-    <Reference Include="MemorySharp, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\MemorySharp.1.2.0\lib\MemorySharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="PInvoke.Kernel32, Version=0.7.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
-      <HintPath>packages\PInvoke.Kernel32.0.7.124\lib\net46\PInvoke.Kernel32.dll</HintPath>
-    </Reference>
-    <Reference Include="PInvoke.Windows.Core, Version=0.7.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
-      <HintPath>packages\PInvoke.Windows.Core.0.7.124\lib\net45\PInvoke.Windows.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="Reloaded.Memory, Version=9.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Reloaded.Memory.9.3.2\lib\net48\Reloaded.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="Reloaded.Memory.Sigscan, Version=3.1.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Reloaded.Memory.Sigscan.3.1.8\lib\netstandard2.0\Reloaded.Memory.Sigscan.dll</HintPath>
-    </Reference>
-    <Reference Include="Reloaded.Memory.Sigscan.Definitions, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Reloaded.Memory.Sigscan.Definitions.1.1.1\lib\netstandard2.0\Reloaded.Memory.Sigscan.Definitions.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Management" />
-    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive, Version=6.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
-      <HintPath>packages\System.Reactive.6.0.0\lib\net472\System.Reactive.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Core\Extensions\BitmapExt.cs" />
-    <Compile Include="Core\Utils\FormUtils.cs" />
-    <Compile Include="Core\Utils\JsonConvertUtils.cs" />
-    <Compile Include="Emulator\AbstractEmulatorWrapper.cs" />
-    <Compile Include="Emulator\EmulatorWrapperProvider.cs" />
-    <Compile Include="Emulator\Projetc64EM\Project64EMWrapper.cs" />
-    <Compile Include="Logic\AbstractLogicResolver.cs" />
-    <Compile Include="Logic\OcarinaOfTimeLogicResolver.cs" />
-    <Compile Include="MemoryReader\MemoryData\AbstractMemoryData.cs" />
-    <Compile Include="MemoryReader\MemoryData\OcarinaOfTimeMemoryData.cs" />
-    <Compile Include="MemoryReader\MemoryListener\AbstractMemoryListener.cs" />
-    <Compile Include="MemoryReader\MemoryListener\MemoryListenerProvider.cs" />
-    <Compile Include="MemoryReader\MemoryListener\OcarinaOfTimeMemoryListener.cs" />
-    <Compile Include="MemoryReader\MemoryListener\OOTxMMMemoryListener.cs" />
-    <Compile Include="MemoryReader\MemoryOffset\OOTxMMOffsets.cs" />
-    <Compile Include="MemoryReader\MemoryScanner.cs" />
-    <Compile Include="Model\CheckLogic\AbstractCheckLogic.cs" />
-    <Compile Include="Model\CheckLogic\CheckLogicCategoryUtils.cs" />
-    <Compile Include="Model\CheckLogic\CheckSaveFormat.cs" />
-    <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogic.cs" />
-    <Compile Include="Model\CheckLogic\OcarinaOfTimeCheckLogicCategory.cs" />
-    <Compile Include="Model\Enum\CurrentRom.cs" />
-    <Compile Include="Model\Enum\EquipmentBombBag.cs" />
-    <Compile Include="Model\Enum\EquipmentQuiver.cs" />
-    <Compile Include="Model\Enum\EquipmentWallet.cs" />
-    <Compile Include="Model\CheckLogic\MajoraMaskCheckLogic.cs" />
-    <Compile Include="Model\CheckLogic\MajoraMaskCheckLogicCategory.cs" />
-    <Compile Include="Model\Enum\MM\MajoraTradeScrubTrade.cs" />
-    <Compile Include="Model\Enum\MM\MajoraTradeKeyMama.cs" />
-    <Compile Include="Model\Enum\MM\MajoraTradeLetterpendant.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemBottle.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemGiantKnifeBiggoronSword.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemGoldSkulltula.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemGoronBracelet.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemHookshot.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemMagic.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemMaskQuest.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemOcarina.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemScale.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemTradingItem.cs" />
-    <Compile Include="Model\Enum\MM\MajoraMaskCheckLogicZone.cs" />
-    <Compile Include="Model\Enum\MM\MajoraMaskItemLogicPopertyName.cs" />
-    <Compile Include="Model\Enum\LinkTransformation.cs" />
-    <Compile Include="Model\Enum\MagicMeter.cs" />
-    <Compile Include="Model\Enum\OOT\OcarinaOfTimeCheckLogicZone.cs" />
-    <Compile Include="Model\Enum\OOT\OcarinaOfTimeItemLogicPopertyName.cs" />
-    <Compile Include="Model\Enum\OOT\OotItemWallet.cs" />
-    <Compile Include="Model\Enum\RomType.cs" />
-    <Compile Include="Model\Item\ItemLogic.cs" />
-    <Compile Include="Model\Item\ItemLogicMethod.cs" />
-    <Compile Include="Model\Item\ItemLogicVariant.cs" />
-    <Compile Include="Model\Logic\AbstractsonFormatLogicItem.cs" />
-    <Compile Include="Model\Logic\LogicFileUtils.cs" />
-    <Compile Include="Model\Logic\MM\MajoraMaskJsonFormatLogicItem.cs" />
-    <Compile Include="Logic\MajoraMaskLogicResolver.cs" />
-    <Compile Include="Model\Logic\LogicFile.cs" />
-    <Compile Include="Model\Logic\OOT\OcarinaOfTimeJsonFormatLogicItem.cs" />
-    <Compile Include="Model\Logic\TimeOfDay.cs" />
-    <Compile Include="MemoryReader\MemoryOffset\OOTOffsets.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.cs" />
-    <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.Designer.cs">
-      <DependentUpon>CheckLogicEditor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MainUI\EmulatorController.cs" />
-    <Compile Include="UI\MainUI\AbstractUIRoomController.cs" />
-    <Compile Include="UI\MainUI\MainUIController.cs" />
-    <Compile Include="UI\MainUI\MainUIForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MainUI\MainUIForm.Designer.cs">
-      <DependentUpon>MainUIForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MemoryReader\Memory.cs" />
-    <Compile Include="MemoryReader\MemoryListener\MajoraMaskMemoryListener.cs" />
-    <Compile Include="MemoryReader\MemoryData\MajoraMemoryData.cs" />
-    <Compile Include="MemoryReader\MemoryOffset\MMOffsets.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\LogicTester\LogicTester.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\LogicTester\LogicTester.Designer.cs">
-      <DependentUpon>LogicTester.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MainUI\MajoraMaskController.cs" />
-    <Compile Include="UI\MainUI\OcarinaOfTimeController.cs" />
-    <Compile Include="UI\MainUI\SaveCheckController.cs" />
-    <Compile Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicFileController.cs" />
-    <Compile Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicCreator.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicCreator.Designer.cs">
-      <DependentUpon>MajoraMaskLogicCreator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicCreatorController.cs" />
-    <Compile Include="UI\OcarinaOfTimeLogicCreator\LogicFileController.cs" />
-    <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.Designer.cs">
-      <DependentUpon>OcarinaOfTimeLogicCreator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreatorController.cs" />
-    <Compile Include="UI\ImageBoxController.cs" />
-    <EmbeddedResource Include="UI\CheckLogicEditor\CheckLogicEditor.resx">
-      <DependentUpon>CheckLogicEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainUI\MainUIForm.resx">
-      <DependentUpon>MainUIForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\LogicTester\LogicTester.resx">
-      <DependentUpon>LogicTester.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\MajoraMaskLogicCreator\MajoraMaskLogicCreator.resx">
-      <DependentUpon>MajoraMaskLogicCreator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\OcarinaOfTimeLogicCreator\OcarinaOfTimeLogicCreator.resx">
-      <DependentUpon>OcarinaOfTimeLogicCreator.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include=".editorconfig" />
-    <None Include="app.manifest" />
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <None Include="Resource\CheckLogic\mm_CheckLogicCategory.json" />
-    <None Include="Resource\CheckLogic\oot_CheckLogicCategory.json" />
-    <None Include="Resource\Logics\MM_CUSTOM_REQ_CASUAL_1.json" />
-    <None Include="Resource\Logics\OOT_CUSTOM_REQ_CASUAL_1.json" />
-    <None Include="Resource\Logics\old_MM_CUSTOM_REQ_CASUAL_12.json" />
-    <None Include="Resource\Mappings\oot_InterfaceItemsPositionsMapping.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Emulator\ModLoader64\" />
     <Folder Include="Emulator\Project64\" />
@@ -338,8 +71,23 @@
     <Content Include="UI\Layout\mm_layout.png" />
     <Content Include="Resource\Mappings\mm_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <PackageReference Include="CyotekImageBox" Version="1.3.1" />
+    <PackageReference Include="Fasm.NET" Version="1.70.03.2" />
+    <PackageReference Include="MemorySharp" Version="1.2.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="PInvoke.Kernel32" Version="0.7.124" />
+    <PackageReference Include="PInvoke.Windows.Core" Version="0.7.124" />
+    <PackageReference Include="Reloaded.Memory" Version="9.3.2" />
+    <PackageReference Include="Reloaded.Memory.Sigscan" Version="3.1.8" />
+    <PackageReference Include="Reloaded.Memory.Sigscan.Definitions" Version="1.1.1" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="System.Reactive" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+  </ItemGroup>
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)\Resource" "$(ProjectDir)bin\$(ConfigurationName)\Resource" /e /y /i /r</PostBuildEvent>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 </Project>
