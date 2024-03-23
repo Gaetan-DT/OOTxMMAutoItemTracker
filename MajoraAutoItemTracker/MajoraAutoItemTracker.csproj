@@ -214,12 +214,12 @@
     <Compile Include="Model\Logic\LogicFile.cs" />
     <Compile Include="Model\Logic\OOT\OcarinaOfTimeJsonFormatLogicItem.cs" />
     <Compile Include="Model\Logic\TimeOfDay.cs" />
+    <Compile Include="MemoryReader\MemoryOffset\OOTOffsets.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="MemoryReader\MemoryOffset\OOTOffsets.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="UI\CheckLogicEditor\CheckLogicEditor.cs">
       <SubType>Form</SubType>
@@ -332,10 +332,10 @@
     <Content Include="Resource\Itemicons\mm_items_mono.png" />
     <Content Include="Resource\Itemicons\oot_items.png" />
     <Content Include="Resource\Itemicons\oot_items_mono.png" />
-    <Content Include="Resource\Map\oot_Map.png" />
+    <Content Include="Resource\Map\mm_Map.jpg" />
+    <Content Include="Resource\Map\oot_Map.jpg" />
     <Content Include="UI\Layout\BarinadesItemTracker_R4tPCG0m05.png" />
     <Content Include="UI\Layout\mm_layout.png" />
-    <Content Include="Resource\Map\mm_Map.png" />
     <Content Include="Resource\Mappings\mm_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

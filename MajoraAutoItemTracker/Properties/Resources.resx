@@ -134,7 +134,7 @@
     <value>..\Resource\Itemicons\mm_items_mono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mm_Map" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\Map\mm_Map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resource\Map\mm_Map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="oot_CheckLogicCategory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\CheckLogic\oot_CheckLogicCategory.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -152,6 +152,6 @@
     <value>..\Resource\Itemicons\oot_items_mono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="oot_Map" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\Map\oot_Map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resource\Map\oot_Map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
