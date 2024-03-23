@@ -1,4 +1,5 @@
 ﻿using Cyotek.Windows.Forms;
+using Newtonsoft.Json.Bson;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -56,6 +57,11 @@ namespace MajoraAutoItemTracker.UI
         public void SetSrcImage(Image image)
         {
             imageBox.Image = image;
+        }
+
+        public void SetSrcBitmap(Bitmap bitmap)
+        {
+            imageBox.Image = bitmap;
         }
 
         public void AddPath(GraphicsPathWithData path, T tag)

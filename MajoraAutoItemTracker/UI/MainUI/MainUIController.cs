@@ -16,9 +16,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
 {
     class MainUIController
     {
-        private const string CST_MM_MAP_PATH = @"\Resource\Map\82k78q66tcha1.png";
-        private const string CST_OOT_MAP_PATH = @"\Resource\Map\OOT.png";
-
         private AbstractMemoryListener? memoryListener = null;
         public BehaviorSubject<bool> isMemoryListenerStartedSubject = new BehaviorSubject<bool>(false);
 
@@ -34,10 +31,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             // Init OOT
             imageBoxMapOOT = new ImageBoxController<OcarinaOfTimeCheckLogicZone>(imageBoxOOT);
-            imageBoxMapOOT.SetSrcImage(Image.FromFile(Application.StartupPath + CST_OOT_MAP_PATH));
+            imageBoxMapOOT.SetSrcBitmap(Properties.Resources.oot_Map);
             // Init MM
             imageBoxMapMM = new ImageBoxController<MajoraMaskCheckLogicZone>(imageBoxMM);
-            imageBoxMapMM.SetSrcImage(Image.FromFile(Application.StartupPath + CST_MM_MAP_PATH));
+            imageBoxMapMM.SetSrcBitmap(Properties.Resources.mm_Map);
             //pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListOOT, it);
         }
 
