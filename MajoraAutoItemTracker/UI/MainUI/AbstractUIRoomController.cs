@@ -21,9 +21,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         protected Point maxPropertyNamePosition = new Point();
 
-        protected abstract Bitmap itemSpriteMono { get; }
-        
-        protected abstract Bitmap itemSpriteColor { get; }
+        protected Bitmap itemSpriteMono;
+
+        protected Bitmap itemSpriteColor;
 
         protected abstract List<ItemLogic> itemLogics { get; }
         
@@ -33,6 +33,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         protected ImageBoxController<CheckLogicZone>? pictureBoxZoomMoveController;
         protected PictureBox? pictureBoxItemList;
+
+        public AbstractUIRoomController(
+            Bitmap itemSpriteMono,
+            Bitmap itemSpriteColor)
+        {
+            this.itemSpriteMono = itemSpriteMono;
+            this.itemSpriteColor = itemSpriteColor;
+        }
 
         public void Init(
             Action<string> logWrite,

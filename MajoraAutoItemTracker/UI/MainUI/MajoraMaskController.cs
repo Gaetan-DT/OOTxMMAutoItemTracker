@@ -104,17 +104,15 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<MajoraMaskCheckLogicCategory> checkLogicCategories = 
             CheckLogicCategoryUtils.LoadMajoraMaskFromRessource();
 
-        protected override Bitmap itemSpriteMono => Properties.Resources.mm_items_mono;
-        
-        protected override Bitmap itemSpriteColor => Properties.Resources.mm_items;
-
         protected override List<ItemLogic> itemLogics => 
             ItemLogicMethod.LoadMajoraMaskItemLogicFromRessource();
 
         protected override List<MajoraMaskCheckLogic> checkLogics => 
             MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
 
-        public MajoraMaskController()
+        public MajoraMaskController(): base(
+            Properties.Resources.mm_items_mono,
+            Properties.Resources.mm_items)
         {
             // Init max point
             foreach (var enumPropertyName in MajoraMaskItemLogicPopertyNameMethod.GetAsList())

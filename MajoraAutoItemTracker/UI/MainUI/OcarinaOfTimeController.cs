@@ -94,17 +94,15 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories = 
             CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
 
-        protected override Bitmap itemSpriteMono => Properties.Resources.oot_items_mono;
-
-        protected override Bitmap itemSpriteColor => Properties.Resources.oot_items;
-
         protected override List<ItemLogic> itemLogics =>
             ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
 
         protected override List<OcarinaOfTimeCheckLogic> checkLogics =>
             OcarinaOfTimeCheckLogic.FromHeader(checkLogicCategories);
 
-        public OcarinaOfTimeController()
+        public OcarinaOfTimeController(): base(
+            Properties.Resources.oot_items_mono,
+            Properties.Resources.oot_items)
         {
             // Iniut max point
             foreach (var enumPropertyName in OcarinaOfTimeItemLogicPopertyNameMethod.GetAsList())
