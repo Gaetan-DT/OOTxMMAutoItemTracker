@@ -3,16 +3,10 @@ using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.Item;
 using MajoraAutoItemTracker.Model.Logic;
-using MajoraAutoItemTracker.Model.Logic.OOT;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-
-#nullable enable
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
@@ -88,29 +82,48 @@ namespace MajoraAutoItemTracker.UI.MainUI
             { OcarinaOfTimeItemLogicPopertyName.Song_of_Storms, new Point(5, 9) }
     };
         
-        public OcarinaOfTimeLogicResolver logicResolver = 
+        public readonly OcarinaOfTimeLogicResolver logicResolver = 
             new OcarinaOfTimeLogicResolver(LogicFileUtils.LoadOcarinaOfTimeFromRessource());
 
-        public List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories = 
-            CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
+        public readonly List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories;
 
-        protected override List<ItemLogic> itemLogics =>
-            ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
+        private readonly Bitmap ootItem = Properties.Resources.oot_items;
+        private readonly Bitmap ootItemMono = Properties.Resources.oot_items_mono;
+        private readonly List<ItemLogic> itemLogics = ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
+        private readonly List<OcarinaOfTimeCheckLogic> checkLogics;
 
-        protected override List<OcarinaOfTimeCheckLogic> checkLogics =>
-            OcarinaOfTimeCheckLogic.FromHeader(checkLogicCategories);
-
-        public OcarinaOfTimeController(): base(
-            Properties.Resources.oot_items_mono,
-            Properties.Resources.oot_items)
+        public OcarinaOfTimeController()
         {
-            // Iniut max point
+            checkLogicCategories = CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
+            checkLogicCategories = CheckLogicCategoryUtils.LoadOcarinaOfTimeFromRessource();
+            checkLogics = OcarinaOfTimeCheckLogic.FromHeader(checkLogicCategories);
+            // Init max point
             foreach (var enumPropertyName in OcarinaOfTimeItemLogicPopertyNameMethod.GetAsList())
             {
                 var positionOfEnum = GetPositionInDrawingOfItemLogicPropertyName(enumPropertyName);
                 maxPropertyNamePosition.X = Math.Max(maxPropertyNamePosition.X, positionOfEnum.X);
                 maxPropertyNamePosition.Y = Math.Max(maxPropertyNamePosition.Y, positionOfEnum.Y);
             };
+        }
+
+        protected override Bitmap GetItemSpriteMono()
+        {
+            return ootItemMono;
+        }
+
+        protected override Bitmap GetItemSpriteColor()
+        {
+            return ootItem;
+        }
+
+        protected override List<ItemLogic> GetItemLogics()
+        {
+            return itemLogics;
+        }
+
+        protected override List<OcarinaOfTimeCheckLogic> GetCheckLogics()
+        {
+            return checkLogics;
         }
 
         public void RefreshRegionInDrawingFollowingCheck(List<OcarinaOfTimeCheckLogic> checkLogic)

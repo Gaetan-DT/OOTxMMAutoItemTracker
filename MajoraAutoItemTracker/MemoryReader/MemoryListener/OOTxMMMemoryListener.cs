@@ -52,6 +52,44 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 
         private CurrentRom CheckCurrentRom()
         {
+            var romOrderToLookUp = new Tuple<CurrentRom, CurrentRom>(
+                CurrentRom.OcarinaOfTIme,
+                CurrentRom.MajoraMask);
+            if (lastCurrentRom == CurrentRom.MajoraMask)
+            {
+                romOrderToLookUp = new Tuple<CurrentRom, CurrentRom>(
+                    CurrentRom.MajoraMask,
+                    CurrentRom.OcarinaOfTIme);
+            }
+
+            //TODO: Export this to emulator class
+            uint romStart;
+            if (emulatorWrapper.PerformCheckFollowingRomType(romOrderToLookUp.Item1))
+            {
+                return romOrderToLookUp.Item1;
+            }
+            else if (!emulatorWrapper.IsAddressFound(romOrderToLookUp.Item1) &&
+                emulatorWrapper.FindRomStartForRomType(out romStart, romOrderToLookUp.Item1))
+            {
+                emulatorWrapper.SetRomAddStartForRomType(romOrderToLookUp.Item1, romStart);
+                return romOrderToLookUp.Item1;
+            }
+            else if (emulatorWrapper.PerformCheckFollowingRomType(romOrderToLookUp.Item2))
+            {
+                return romOrderToLookUp.Item2;
+            }
+            else if (!emulatorWrapper.IsAddressFound(romOrderToLookUp.Item2) &&
+                emulatorWrapper.FindRomStartForRomType(out romStart, romOrderToLookUp.Item2))
+            {
+                emulatorWrapper.SetRomAddStartForRomType(romOrderToLookUp.Item2, romStart);
+                return romOrderToLookUp.Item2;
+            }
+            else
+            {
+                return CurrentRom.Unknown;
+            }
+
+            /*
             var arrayRoomToCheck = new List<CurrentRom>{ CurrentRom.OcarinaOfTIme, CurrentRom.MajoraMask };
             if (lastCurrentRom == CurrentRom.MajoraMask)
                 arrayRoomToCheck.Reverse();
@@ -62,8 +100,9 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
                     return CurrentRom.MajoraMask;
             // If nothing found try to find any new address
             if (emulatorWrapper.GetRomAddrStartFollowingLoaddedRom(out uint romAddrStart, out CurrentRom currentRom))
-                return currentRom; 
+                return currentRom;
             return CurrentRom.Unknown;
+            */
         }
     }
 }

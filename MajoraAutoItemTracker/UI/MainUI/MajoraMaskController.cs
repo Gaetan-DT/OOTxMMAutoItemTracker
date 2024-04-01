@@ -104,16 +104,14 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<MajoraMaskCheckLogicCategory> checkLogicCategories = 
             CheckLogicCategoryUtils.LoadMajoraMaskFromRessource();
 
-        protected override List<ItemLogic> itemLogics => 
-            ItemLogicMethod.LoadMajoraMaskItemLogicFromRessource();
+        private readonly Bitmap mmItem = Properties.Resources.mm_items;
+        private readonly Bitmap mmItemMono = Properties.Resources.mm_items_mono;
+        private readonly List<ItemLogic> itemLogics = ItemLogicMethod.LoadMajoraMaskItemLogicFromRessource();
+        private readonly List<MajoraMaskCheckLogic> checkLogics;
 
-        protected override List<MajoraMaskCheckLogic> checkLogics => 
-            MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
-
-        public MajoraMaskController(): base(
-            Properties.Resources.mm_items_mono,
-            Properties.Resources.mm_items)
+        public MajoraMaskController()
         {
+            checkLogics = MajoraMaskCheckLogic.FromHeader(checkLogicCategories);
             // Init max point
             foreach (var enumPropertyName in MajoraMaskItemLogicPopertyNameMethod.GetAsList())
             {
@@ -121,6 +119,26 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 maxPropertyNamePosition.X = Math.Max(maxPropertyNamePosition.X, positionOfEnum.X);
                 maxPropertyNamePosition.Y = Math.Max(maxPropertyNamePosition.Y, positionOfEnum.Y);
             };
+        }
+
+        protected override Bitmap GetItemSpriteMono()
+        {
+            return mmItemMono;
+        }
+
+        protected override Bitmap GetItemSpriteColor()
+        {
+            return mmItem;
+        }
+
+        protected override List<ItemLogic> GetItemLogics()
+        {
+            return itemLogics;
+        }
+
+        protected override List<MajoraMaskCheckLogic> GetCheckLogics()
+        {
+            return checkLogics;
         }
 
         public void RefreshRegionInDrawingFollowingCheck(List<MajoraMaskCheckLogic> checkLogic)

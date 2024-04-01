@@ -95,7 +95,12 @@ namespace MajoraAutoItemTracker.MemoryReader
 
         private uint? GetRomAddrStart()
         {
-            switch (currentRomType)
+            return GetRomAddrStart(currentRomType);
+        }
+
+        private uint? GetRomAddrStart(CurrentRom currentRom)
+        {
+            switch (currentRom)
             {
                 case CurrentRom.OcarinaOfTIme:
                     return m_romAddrOcarinaOfTime;
@@ -106,12 +111,17 @@ namespace MajoraAutoItemTracker.MemoryReader
             }
         }
 
+        public bool IsAddressFound(CurrentRom romType)
+        {
+            return GetRomAddrStart(romType) != null;
+        }
+
         private uint RequireRomAddrStart()
         {
             return GetRomAddrStart() ?? throw new Exception("Unknown rom start");
         }
 
-        private void SetRomAddStartForRomType(CurrentRom romType, uint romStart)
+        public void SetRomAddStartForRomType(CurrentRom romType, uint romStart)
         {
             switch (romType)
             {
@@ -142,7 +152,7 @@ namespace MajoraAutoItemTracker.MemoryReader
         // Perform with current start address
         public bool PerformCheckFollowingRomType(CurrentRom romType)
         {
-            var possibleRomAddrStart = GetRomAddrStart() ?? 0;
+            var possibleRomAddrStart = GetRomAddrStart(romType) ?? 0;
             return PerformCheckFollowingRomType(romType, possibleRomAddrStart);
         }
 
