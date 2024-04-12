@@ -17,7 +17,8 @@ namespace MajoraAutoItemTracker.MemoryReader
         protected abstract bool IsEmulatorUseBigEndian { get; }
 
         /*protected*/public Process? m_Process;
-        private CurrentRom currentRomType;
+        public CurrentRom currentRomType { get; private set; }
+            
         private uint? m_romAddrOcarinaOfTime;
         private uint? m_romAddrMajoraMask;
 

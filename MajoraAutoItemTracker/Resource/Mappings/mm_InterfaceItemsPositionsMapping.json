@@ -185,6 +185,11 @@
     "propertyName": "Imgbottle2",
     "variants": [
       {
+        "idLogic": "ItemEmptyBottle",
+        "positionX": 2,
+        "positionY": 1
+      },
+      {
         "idLogic": "ItemBottleAliens",
         "positionX": 2,
         "positionY": 1
@@ -195,6 +200,11 @@
     "displayName": "Beavers Bottle",
     "propertyName": "Imgbottle3",
     "variants": [
+      {
+        "idLogic": "ItemEmptyBottle",
+        "positionX": 2,
+        "positionY": 1
+      },
       {
         "idLogic": "ItemBottleBeavers",
         "positionX": 2,
@@ -207,6 +217,11 @@
     "propertyName": "Imgbottle4",
     "variants": [
       {
+        "idLogic": "ItemEmptyBottle",
+        "positionX": 2,
+        "positionY": 1
+      },
+      {
         "idLogic": "ItemBottleDampe",
         "positionX": 2,
         "positionY": 1
@@ -218,6 +233,11 @@
     "propertyName": "Imgbottle5",
     "variants": [
       {
+        "idLogic": "ItemEmptyBottle",
+        "positionX": 2,
+        "positionY": 1
+      },
+      {
         "idLogic": "ItemBottleMadameAroma",
         "positionX": 2,
         "positionY": 1
@@ -228,6 +248,11 @@
     "displayName": "Goron Race Bottle",
     "propertyName": "Imgbottle6",
     "variants": [
+      {
+        "idLogic": "ItemEmptyBottle",
+        "positionX": 2,
+        "positionY": 1
+      },
       {
         "idLogic": "ItemBottleGoronRace",
         "positionX": 2,

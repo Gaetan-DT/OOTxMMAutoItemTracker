@@ -3,13 +3,11 @@ using MajoraAutoItemTracker.Model.Logic.MM;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-#nullable enable
-
 namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
 {
     class MajoraMaskLogicCreatorController
     {
-        const string CST_REQ_CASUAL_PATH = @"\Resource\Logics\";
+        const string CST_REQ_CASUAL_PATH = @"\";
         const string CST_REQ_FILE_NAME = "MM_CUSTOM_REQ_CASUAL_1.json";
         const string CST_REQ_FILE_NAME_UPDATED = "MM_CUSTOM_REQ_CASUAL_1_updated.json";
 
@@ -17,7 +15,7 @@ namespace MajoraAutoItemTracker.UI.MajoraMaskLogicCreator
 
         public void LoadLogic()
         {
-            logicFile = LogicFileUtils.FromFile<MajoraMaskJsonFormatLogicItem>(GetFilPath(true, false));
+            logicFile = LogicFileUtils.LoadMajoraMaskFromRessource();
         }
 
         private string GetFilPath(bool withFileName, bool updatedFile)

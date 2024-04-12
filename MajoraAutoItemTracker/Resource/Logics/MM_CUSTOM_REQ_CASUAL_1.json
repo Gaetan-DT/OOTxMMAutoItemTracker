@@ -7031,6 +7031,160 @@
             "IsTrick": false,
             "TrickTooltip": null,
             "TrickCategory": null
+        },
+        {
+            "Id": "IST Temple Boss Blue Warp (same as all temple)",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemEmptyBottle",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemSkulltulaSwampSpiderHouseCount",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemAllSkulltulaSwampSpiderHouse",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemSkulltulaOceanSideSouderHouseCount",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemAllSkulltulaOceanSideSouderHouse",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemDungeonWoodfallFairiesCount",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemDungeonWoodfallAllFairies",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemDungeonSnowHeadFairiesCount",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemDungeonSnowHeadAllFairies",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemDungeonGreatBayFairiesCount",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemDungeonGreatBayAllFairies",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemDungeonStoneTowerFairiesCount",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
+        },
+        {
+            "Id": "ItemDungeonStoneTowerAllFairies",
+            "RequiredItems": [],
+            "ConditionalItems": [],
+            "TimeNeeded": 0,
+            "TimeAvailable": 0,
+            "TimeSetup": 0,
+            "IsTrick": false,
+            "TrickTooltip": null,
+            "TrickCategory": null
         }
     ]
 }

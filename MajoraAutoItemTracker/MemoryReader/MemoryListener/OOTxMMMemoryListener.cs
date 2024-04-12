@@ -3,7 +3,6 @@ using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 {
@@ -21,6 +20,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
             Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> callBackMM)
             : base(emulatorWrapper)
         {
+            lastCurrentRom = emulatorWrapper.currentRomType;
             ocarinaOfTimeMemoryListener = new OcarinaOfTimeMemoryListener(emulatorWrapper, callBackOOT);
             majoraMaskMemoryListener = new MajoraMaskMemoryListener(emulatorWrapper, callBackMM);
         }
