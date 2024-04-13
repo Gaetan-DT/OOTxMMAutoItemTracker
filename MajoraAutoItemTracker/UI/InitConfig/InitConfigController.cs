@@ -89,6 +89,12 @@ namespace MajoraAutoItemTracker.UI.InitConfig
                 error = "Unable to attach to process emulator";
                 return null;
             }
+            var romFound = emulatorWrapper.CheckCurrentRom(currentRom);
+            if (romFound != currentRom)
+            {
+                error = "Unable to attache to current rom";
+                return null;
+            }
             try
             {
                 error = "";

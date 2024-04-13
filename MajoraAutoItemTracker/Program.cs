@@ -20,19 +20,34 @@ namespace MajoraAutoItemTracker
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var initConfigForm = new InitConfigForm();
-
-            if (initConfigForm.ShowDialog() == DialogResult.OK)
+            var restart = false;
+            do
             {
-                AbstractMemoryListener? memoryListener = initConfigForm.memoryListener;
-                CheckSaveFormatHeader? checkSave = initConfigForm.GetLastSubbjectCheckSave();
-                if (memoryListener == null)
+                if (StartConfigScreen(out var memoryListener, out var checkSave))
                 {
-                    throw new Exception("Unable to start");
+                    restart = StartEmulatorScreen(memoryListener!, checkSave!);
                 }
-                var mainForm = new MainUIForm(memoryListener, checkSave);
-                Application.Run(mainForm);
-            }
+            } while (restart);
+        }
+
+        private static bool StartConfigScreen(
+            out AbstractMemoryListener? memoryListener,
+            out CheckSaveFormatHeader? checkSave)
+        {
+            var initConfigForm = new InitConfigForm();
+            var dialogResult = initConfigForm.ShowDialog();
+            memoryListener = initConfigForm.memoryListener;
+            checkSave = initConfigForm.GetLastSubbjectCheckSave();
+            return dialogResult == DialogResult.OK;
+        }
+
+        private static bool StartEmulatorScreen(
+            AbstractMemoryListener memoryListener,
+            CheckSaveFormatHeader checkSave)
+        {
+            var mainForm = new MainUIForm(memoryListener, checkSave);
+            Application.Run(mainForm);
+            return mainForm.restartToConfig;
         }
     }
 }

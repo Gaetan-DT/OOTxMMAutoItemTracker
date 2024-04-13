@@ -57,7 +57,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
             menuStripMain = new System.Windows.Forms.MenuStrip();
             menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             clearCheckClaimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            saveToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             cmsCheckList = new System.Windows.Forms.ContextMenuStrip(components);
+            goToConfigScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBoxOOTItemList).BeginInit();
             tabGameMenu.SuspendLayout();
             tabOcarinaOfTime.SuspendLayout();
@@ -318,7 +320,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             // 
             // menuToolStripMenuItem
             // 
-            menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { clearCheckClaimToolStripMenuItem });
+            menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { clearCheckClaimToolStripMenuItem, saveToFileToolStripMenuItem, goToConfigScreenToolStripMenuItem });
             menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             menuToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             menuToolStripMenuItem.Text = "File";
@@ -330,10 +332,24 @@ namespace MajoraAutoItemTracker.UI.MainUI
             clearCheckClaimToolStripMenuItem.Text = "Reset check claim";
             clearCheckClaimToolStripMenuItem.Click += OnResetCheckClaimClick;
             // 
+            // saveToFileToolStripMenuItem
+            // 
+            saveToFileToolStripMenuItem.Name = "saveToFileToolStripMenuItem";
+            saveToFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            saveToFileToolStripMenuItem.Text = "Save to file";
+            saveToFileToolStripMenuItem.Click += saveToFileToolStripMenuItem_Click;
+            // 
             // cmsCheckList
             // 
             cmsCheckList.Name = "cmsCheckMenu";
             cmsCheckList.Size = new System.Drawing.Size(61, 4);
+            // 
+            // goToConfigScreenToolStripMenuItem
+            // 
+            goToConfigScreenToolStripMenuItem.Name = "goToConfigScreenToolStripMenuItem";
+            goToConfigScreenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            goToConfigScreenToolStripMenuItem.Text = "Go to config screen";
+            goToConfigScreenToolStripMenuItem.Click += goToConfigScreenToolStripMenuItem_Click;
             // 
             // MainUIForm
             // 
@@ -404,6 +420,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private System.Windows.Forms.GroupBox gbCheckListOOT;
         private System.Windows.Forms.GroupBox gbCheckListMM;
         private System.Windows.Forms.ContextMenuStrip cmsCheckList;
+        private System.Windows.Forms.ToolStripMenuItem saveToFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goToConfigScreenToolStripMenuItem;
     }
 }
 

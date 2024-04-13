@@ -15,6 +15,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
     {
         private const int CST_RECT_WIDTH_HEIGHT = 40;
 
+        public bool restartToConfig = false;
+
         private readonly CheckSaveFormatHeader? checkSave;
         private readonly AbstractMemoryListener memoryListener;
 
@@ -43,16 +45,16 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
             // Init game controller
             ocarinaOfTimeController.Init(
-                Log, 
-                mainUIController.imageBoxMapOOT, 
-                pictureBoxOOTItemList, 
+                Log,
+                mainUIController.imageBoxMapOOT,
+                pictureBoxOOTItemList,
                 lbCheckListOOT,
                 cmsCheckList);
             ocarinaOfTimeController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
             majoraMaskController.Init(
-                Log, 
-                mainUIController.imageBoxMapMM, 
-                pictureBoxMMItemList, 
+                Log,
+                mainUIController.imageBoxMapMM,
+                pictureBoxMMItemList,
                 lbCheckListMM,
                 cmsCheckList);
             majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
@@ -78,7 +80,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
             });
         }
 
-        private void OnMMItemLogicChange(List<Tuple <MajoraMaskItemLogicPopertyName, object>> itemLogicProperty)
+        private void OnMMItemLogicChange(List<Tuple<MajoraMaskItemLogicPopertyName, object>> itemLogicProperty)
         {
             this.Invoke((MethodInvoker)delegate
             {
@@ -114,9 +116,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
         private bool AskToSaveFromFile()
         {
             return MessageBox.Show(
-                "Save to file ?", 
-                "Save to file ?", 
-                MessageBoxButtons.YesNo, 
+                "Save to file ?",
+                "Save to file ?",
+                MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
@@ -141,6 +143,18 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 ocarinaOfTimeController.ResetCheckClaim();
                 majoraMaskController.ResetCheckClaim();
             }
+        }
+
+        private void saveToFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var checkSave = CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM);
+            CheckItemUtils.SaveToFile(checkSave);
+        }
+
+        private void goToConfigScreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            restartToConfig = true;
+            Close();
         }
     }
 }

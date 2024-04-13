@@ -28,7 +28,7 @@ namespace MajoraAutoItemTracker.MemoryReader
         public abstract bool ProcessExist();
         public abstract string GetDisplayName();
 
-        public abstract bool FindRomStartForRomType(out uint romStart, CurrentRom romType);
+        protected abstract bool FindRomStartForRomType(out uint romStart, CurrentRom romType);
 
         private uint? GetRomAddrStart()
         {
@@ -117,6 +117,44 @@ namespace MajoraAutoItemTracker.MemoryReader
             if (mmCheck == GetZeldaCheckFollowingEndianAndRomType(RomType.MAJORA_MASK_USA_V0))
                 return true;
             return false;
+        }
+
+        public CurrentRom CheckCurrentRom(CurrentRom lastCurrentRom)
+        {
+            var romOrderToLookUp = new Tuple<CurrentRom, CurrentRom>(
+                CurrentRom.OcarinaOfTIme,
+                CurrentRom.MajoraMask);
+            if (lastCurrentRom == CurrentRom.MajoraMask)
+            {
+                romOrderToLookUp = new Tuple<CurrentRom, CurrentRom>(
+                    CurrentRom.MajoraMask,
+                    CurrentRom.OcarinaOfTIme);
+            }
+            uint romStart;
+            if (PerformCheckFollowingRomType(romOrderToLookUp.Item1))
+            {
+                return romOrderToLookUp.Item1;
+            }
+            else if (!IsAddressFound(romOrderToLookUp.Item1) &&
+                FindRomStartForRomType(out romStart, romOrderToLookUp.Item1))
+            {
+                SetRomAddStartForRomType(romOrderToLookUp.Item1, romStart);
+                return romOrderToLookUp.Item1;
+            }
+            else if (PerformCheckFollowingRomType(romOrderToLookUp.Item2))
+            {
+                return romOrderToLookUp.Item2;
+            }
+            else if (!IsAddressFound(romOrderToLookUp.Item2) &&
+                FindRomStartForRomType(out romStart, romOrderToLookUp.Item2))
+            {
+                SetRomAddStartForRomType(romOrderToLookUp.Item2, romStart);
+                return romOrderToLookUp.Item2;
+            }
+            else
+            {
+                return CurrentRom.Unknown;
+            }
         }
 
         public UIntPtr GetPtrOffsetWithRomStart(uint offset)

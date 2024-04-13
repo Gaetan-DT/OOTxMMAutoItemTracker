@@ -1,7 +1,5 @@
 ﻿using MajoraAutoItemTracker.Model.Enum;
-using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
@@ -9,7 +7,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
     class OOTxMMMemoryListener : AbstractMemoryListener
     {
 
-        private CurrentRom lastCurrentRom = CurrentRom.Unknown; // Used to prevend reading wrong rom each time when in MM
+        private CurrentRom lastCurrentRom;
 
         private OcarinaOfTimeMemoryListener ocarinaOfTimeMemoryListener;
         private MajoraMaskMemoryListener majoraMaskMemoryListener;
@@ -31,7 +29,7 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
 
         public override void OnTick()
         {
-            var currentRom = CheckCurrentRom();
+            var currentRom = emulatorWrapper.CheckCurrentRom(lastCurrentRom);
             switch (currentRom)
             {
                 case CurrentRom.OcarinaOfTIme:
@@ -49,44 +47,6 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
             lastCurrentRom = currentRom;
         }
 
-        private CurrentRom CheckCurrentRom()
-        {
-            var romOrderToLookUp = new Tuple<CurrentRom, CurrentRom>(
-                CurrentRom.OcarinaOfTIme,
-                CurrentRom.MajoraMask);
-            if (lastCurrentRom == CurrentRom.MajoraMask)
-            {
-                romOrderToLookUp = new Tuple<CurrentRom, CurrentRom>(
-                    CurrentRom.MajoraMask,
-                    CurrentRom.OcarinaOfTIme);
-            }
-
-            //TODO: Export this to emulator class
-            uint romStart;
-            if (emulatorWrapper.PerformCheckFollowingRomType(romOrderToLookUp.Item1))
-            {
-                return romOrderToLookUp.Item1;
-            }
-            else if (!emulatorWrapper.IsAddressFound(romOrderToLookUp.Item1) &&
-                emulatorWrapper.FindRomStartForRomType(out romStart, romOrderToLookUp.Item1))
-            {
-                emulatorWrapper.SetRomAddStartForRomType(romOrderToLookUp.Item1, romStart);
-                return romOrderToLookUp.Item1;
-            }
-            else if (emulatorWrapper.PerformCheckFollowingRomType(romOrderToLookUp.Item2))
-            {
-                return romOrderToLookUp.Item2;
-            }
-            else if (!emulatorWrapper.IsAddressFound(romOrderToLookUp.Item2) &&
-                emulatorWrapper.FindRomStartForRomType(out romStart, romOrderToLookUp.Item2))
-            {
-                emulatorWrapper.SetRomAddStartForRomType(romOrderToLookUp.Item2, romStart);
-                return romOrderToLookUp.Item2;
-            }
-            else
-            {
-                return CurrentRom.Unknown;
-            }
-        }
+        
     }
 }

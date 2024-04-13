@@ -27,7 +27,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         }
 
-        public override bool FindRomStartForRomType(out uint romStart, CurrentRom romType)
+        protected override bool FindRomStartForRomType(out uint romStart, CurrentRom romType)
         {
             return DoFindStart(romType, out romStart);
         }
