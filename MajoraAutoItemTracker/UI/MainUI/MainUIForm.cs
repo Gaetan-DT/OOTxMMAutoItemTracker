@@ -9,8 +9,6 @@ using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Core;
 
-#nullable enable
-
 namespace MajoraAutoItemTracker.UI.MainUI
 {
     public partial class MainUIForm : Form
