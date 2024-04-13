@@ -53,6 +53,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="refill_item.ico" />
     <Content Include="UI\Layout\BarinadesItemTracker_R4tPCG0m05.png" />
     <Content Include="UI\Layout\mm_layout.png" />
   </ItemGroup>
@@ -90,5 +91,6 @@
   </ItemGroup>
   <PropertyGroup>
     <PlatformTarget>x86</PlatformTarget>
+    <ApplicationIcon>refill_item.ico</ApplicationIcon>
   </PropertyGroup>
 </Project>
