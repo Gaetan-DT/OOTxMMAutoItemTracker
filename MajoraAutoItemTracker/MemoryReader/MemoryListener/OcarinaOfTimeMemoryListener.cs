@@ -3,8 +3,6 @@ using MajoraAutoItemTracker.Model.Enum.OOT;
 using System;
 using System.Collections.Generic;
 
-#nullable enable
-
 namespace MajoraAutoItemTracker.MemoryReader
 {
     class OcarinaOfTimeMemoryListener : AbstractMemoryListener

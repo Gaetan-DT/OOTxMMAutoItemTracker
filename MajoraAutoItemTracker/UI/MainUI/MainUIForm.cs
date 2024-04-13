@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
-using System.Linq;
 using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Core;
+using MajoraAutoItemTracker.Core.Utils;
 
 namespace MajoraAutoItemTracker.UI.MainUI
 {
@@ -15,27 +15,31 @@ namespace MajoraAutoItemTracker.UI.MainUI
     {
         private const int CST_RECT_WIDTH_HEIGHT = 40;
 
+        private readonly EmulatorName emulatorName;
+        private readonly RomType romType;
+        private readonly CurrentRom currentRom;
+        private readonly CheckSaveFormatHeader? checkSave;
+
         private readonly MainUIController mainUIController = new MainUIController();
-        private readonly EmulatorController emulatorController = new EmulatorController();
         private readonly MajoraMaskController majoraMaskController = new MajoraMaskController();
         private readonly OcarinaOfTimeController ocarinaOfTimeController = new OcarinaOfTimeController();
-        private readonly SaveCheckController saveCheckController = new SaveCheckController();
 
-        public MainUIForm()
+        public MainUIForm(
+            EmulatorName emulatorName,
+            RomType romType,
+            CurrentRom currentRom,
+            CheckSaveFormatHeader? checkSave)
         {
+            this.emulatorName = emulatorName;
+            this.romType = romType;
+            this.currentRom = currentRom;
+            this.checkSave = checkSave;
             InitializeComponent();
         }
 
         private void OnMainUiFormLoad(object sender, EventArgs e)
         {
             FormUtils.RestoreFormState(this);
-            emulatorController.RefreshEmulatorAndGameList();
-            emulatorController.subEmulatorList.Subscribe(UpdateCbEmulatorList);
-            emulatorController.subRomList.Subscribe(UpdateRomList);
-            mainUIController.isMemoryListenerStartedSubject.Subscribe(OnEmulatorStartStop);
-
-            // Load save
-            var checkSaveList = saveCheckController.LoadFromAutoSave(RomType.RANDOMIZE_OOT_X_MM); //TODO: Remove romtype for autosave ?
 
             // Init PictureBox
             mainUIController.InitPictureBox(imageBoxMapOOT, imageBoxMapMM);
@@ -58,11 +62,22 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 cmsCheckList);
             majoraMaskController.DrawSquareCategory(CST_RECT_WIDTH_HEIGHT);
 
-            if (checkSaveList != null)
+            if (checkSave != null)
             {
-                ocarinaOfTimeController.LoadFromSave(checkSaveList.OOTCheckList);
-                majoraMaskController.LoadFromSave(checkSaveList.MMCheckList);
+                ocarinaOfTimeController.LoadFromSave(checkSave.OOTCheckList);
+                majoraMaskController.LoadFromSave(checkSave.MMCheckList);
             }
+
+            // Start memory listener
+            if (!mainUIController.StartMemoryListener(
+                emulatorName,
+                romType, 
+                OnOOTItemLogicChange, 
+                OnMMItemLogicChange, 
+                out string error))
+                Log(error);
+            else
+                Log("Thread started");
         }
 
         private void OnOOTItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> itemLogicProperty)
@@ -87,60 +102,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void UpdateTabIfOOTxMM(TabPage newTabToDisplay)
         {
-            if (emulatorController.GetSelectedRomType(toolStripComboBoxRomTypeList.SelectedIndex) != RomType.RANDOMIZE_OOT_X_MM)
-                return;
             if (tabGameMenu.SelectedTab == newTabToDisplay)
                 return;
             tabGameMenu.SelectedTab = newTabToDisplay;
-        }
-
-        private void UpdateRomList(List<RomType> romTypes)
-        {
-            toolStripComboBoxRomTypeList.SelectedIndex = -1;
-            toolStripComboBoxRomTypeList.Items.Clear();
-            toolStripComboBoxRomTypeList.Items.AddRange(romTypes.Select((it) => it.ToString()).ToArray());
-            toolStripComboBoxRomTypeList.SelectedIndex = toolStripComboBoxRomTypeList.Items.Count >= 0 ? 0 : -1;
-        }
-
-        private void UpdateCbEmulatorList(List<EmulatorName> emulatorList)
-        {
-            toolStripComboBoxEmulatorList.SelectedIndex = -1;
-            toolStripComboBoxEmulatorList.Items.Clear();
-            toolStripComboBoxEmulatorList.Items.AddRange(emulatorList.Select(it => it.ToString()).ToArray());
-            toolStripComboBoxEmulatorList.SelectedIndex = toolStripComboBoxEmulatorList.Items.Count > 0 ? 0 : -1;
-        }
-
-        private void OnEmulatorStartStop(bool started)
-        {
-            stratStopToolStripMenuItemStartStopEmulator.Text = started ? "Stop" : "Start";
-            refreshListToolStripMenuItem.Enabled = !started;
-            toolStripComboBoxEmulatorList.Enabled = !started;
-            toolStripComboBoxRomTypeList.Enabled = !started;
-            if (started)
-            {
-                var romType = emulatorController.GetSelectedRomType(toolStripComboBoxRomTypeList.SelectedIndex);
-                tabGameMenu.TabPages.Clear();
-                switch (romType)
-                {
-                    case RomType.MAJORA_MASK_USA_V0:
-                        tabGameMenu.TabPages.Add(tabMajoraMask);
-                        break;
-                    case RomType.OCARINA_OF_TIME_USA_V0:
-                        tabGameMenu.TabPages.Add(tabOcarinaOfTime);
-                        break;
-                    case RomType.RANDOMIZE_OOT_X_MM:
-                        tabGameMenu.TabPages.Add(tabOcarinaOfTime);
-                        tabGameMenu.TabPages.Add(tabMajoraMask);
-                        break;
-                }
-            }
-            else
-            {
-                tabGameMenu.TabPages.Clear();
-                tabGameMenu.TabPages.Add(tabOcarinaOfTime);
-                tabGameMenu.TabPages.Add(tabMajoraMask);
-            }
-            tabGameMenu.TabPages.Add(tabPageLog);
         }
 
         private void Log(String message)
@@ -149,77 +113,23 @@ namespace MajoraAutoItemTracker.UI.MainUI
             Debug.WriteLine(message);
         }
 
-        private void OnCheckLogicEditorClick(object sender, EventArgs e)
-        {
-            new CheckLogicEditor.CheckLogicEditor().Show(this);
-        }
-
-        private void OnLogicTesterClick(object sender, EventArgs e)
-        {
-            new LogicTester.LogicTester().Show(this);
-        }
-
-        private void OnOotLogicCreatorClick(object sender, EventArgs e)
-        {
-            new OcarinaOfTimeLogicCreator.OcarinaOfTimeLogicCreator().Show(this);
-        }
-
-        private void OnMmLogicCreatorClick(object sender, EventArgs e)
-        {
-            new MajoraMaskLogicCreator.MajoraMaskLogicCreator().Show(this);
-        }
-
-        private void OnStartStopEmulatorClick(object sender, EventArgs e)
-        {
-            if (mainUIController.isMemoryListenerStartedSubject.Value)
-            {
-                // Stop memory listener
-                mainUIController.StopMemoryListener();
-                Log("Thread Stoped");
-            }
-            else
-            {
-                // Start memory listener
-                var emulatorWrapper = emulatorController.GetSelectedEmulator(toolStripComboBoxEmulatorList.SelectedIndex);
-                var romeType = emulatorController.GetSelectedRomType(toolStripComboBoxRomTypeList.SelectedIndex);
-                if (!mainUIController.StartMemoryListener(emulatorWrapper, romeType, OnOOTItemLogicChange, OnMMItemLogicChange, out string error))
-                    Log(error);
-                else
-                    Log("Thread started");
-            }
-        }
-
-        private void OnRefreshEmulatorListClick(object sender, EventArgs e)
-        {
-            emulatorController.RefreshEmulatorAndGameList();
-        }
-
         private void OnFormClosing(object sender, FormClosingEventArgs e)
         {
-            saveCheckController.SaveToAutoSave(CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM));
+            mainUIController.StopMemoryListener();
+            var checkSave = CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM);
+            CheckItemUtils.SaveCheckSaveToMemory(checkSave);
+            if (AskToSaveFromFile())
+                CheckItemUtils.SaveToFile(checkSave);
             FormUtils.SaveFormState(this);
         }
 
-        private void DoAutoSave() {
-            saveCheckController.SaveToAutoSave(CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM));
-        }
-
-        private void OnManualLoadCheckClaim(object sender, EventArgs e)
+        private bool AskToSaveFromFile()
         {
-            var checkSaveList = saveCheckController.LoadFromFile();
-            if (checkSaveList != null)
-            {
-                ocarinaOfTimeController.LoadFromSave(checkSaveList.OOTCheckList);
-                majoraMaskController.LoadFromSave(checkSaveList.MMCheckList);
-
-            }
-            Log(checkSaveList != null ? "Check loaded!" : "Unable to load check!");
-        }
-
-        private void OnManualSaveCheckClaim(object sender, EventArgs e)
-        {
-            saveCheckController.SaveToFile(CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM));
-            Log("Save done");
+            return MessageBox.Show(
+                "Save to file ?", 
+                "Save to file ?", 
+                MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         private CheckSaveFormatHeader CreatecheckSaveFormatHeader(RomType romType)
@@ -234,8 +144,15 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void OnResetCheckClaimClick(object sender, EventArgs e)
         {
-            ocarinaOfTimeController.ResetCheckClaim();
-            majoraMaskController.ResetCheckClaim();
+            if (MessageBox.Show(
+                "Clear check ?",
+                "Clear check ?",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ocarinaOfTimeController.ResetCheckClaim();
+                majoraMaskController.ResetCheckClaim();
+            }
         }
     }
 }

@@ -84,7 +84,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
             {
                 throw new Exception("Process is null");
             }
-            var possibleSavedMemory = GetStoredMemoryAddress(currentRom);
+            var possibleSavedMemory = RomUtils.GetStoredMemoryAddress(currentRom);
             if (PerformCheckFollowingRomType(currentRom, possibleSavedMemory))
             {
                 ootAddrStart = possibleSavedMemory;
@@ -100,7 +100,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                         ootAddrStart = possibleMemory - MMOffsets.ZELDAZ_CHECK_ADDRESS;
                         if (PerformCheckFollowingRomType(CurrentRom.MajoraMask, ootAddrStart))
                         {
-                            UpdateStoredMemoryAddress(CurrentRom.MajoraMask, ootAddrStart);
+                            RomUtils.UpdateStoredMemoryAddress(CurrentRom.MajoraMask, ootAddrStart);
                             return true;
                         }
                     }
@@ -115,7 +115,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                         ootAddrStart = selectedMemory.Value - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
                         if (PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme, ootAddrStart))
                         {
-                            UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, ootAddrStart);
+                            RomUtils.UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, ootAddrStart);
                             return true;
                         }
                         else

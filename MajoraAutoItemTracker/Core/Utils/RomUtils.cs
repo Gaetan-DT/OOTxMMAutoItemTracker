@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,5 +63,32 @@ namespace MajoraAutoItemTracker.Core.Utils
             return result;
         }
 
+        public static uint GetStoredMemoryAddress(CurrentRom currentRom)
+        {
+            switch (currentRom)
+            {
+                case CurrentRom.MajoraMask:
+                    return Settings.Default.AvailableMmMemoryAddress;
+                case CurrentRom.OcarinaOfTIme:
+                    return Settings.Default.AvailableOotMemoryAddress;
+                default:
+                    throw new NotImplementedException();
+            }
+        }
+
+        public static void UpdateStoredMemoryAddress(CurrentRom currentRom, uint newListAddr)
+        {
+            switch (currentRom)
+            {
+                case CurrentRom.MajoraMask:
+                    Settings.Default.AvailableMmMemoryAddress = newListAddr;
+                    break;
+                case CurrentRom.OcarinaOfTIme:
+                    Settings.Default.AvailableOotMemoryAddress = newListAddr;
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+        }
     }
 }

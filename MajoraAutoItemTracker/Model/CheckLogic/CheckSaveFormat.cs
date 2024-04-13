@@ -4,17 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-#nullable enable
-
 namespace MajoraAutoItemTracker.Model.CheckLogic
 {
-    class CheckSaveFormat
+    public class CheckSaveFormat
     {
         public string? Id { get; set; }
         public bool IsClaim { get; set; }
     }
 
-    class CheckSaveFormatHeader
+    public class CheckSaveFormatHeader
     {
         public RomType SaveRomType { get; set; }
         
@@ -22,16 +20,22 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
         public List<CheckSaveFormat> MMCheckList { get; set; } = new List<CheckSaveFormat>();
     }
 
-    class CheckSaveMethod
+    public class CheckSaveMethod
     {
-        public static CheckSaveFormatHeader? DeserializeFromFile(String filePath)
+
+        public static string SerializeOrThrow(CheckSaveFormatHeader checkSaveFormat)
+        {
+            return JsonConvert.SerializeObject(checkSaveFormat);
+        }
+
+        public static CheckSaveFormatHeader? DeserializeFromStringOrThrow(String filePath)
         {
             return JsonConvert.DeserializeObject<CheckSaveFormatHeader>(File.ReadAllText(filePath));
         }
 
         public static void SerializeToFile(CheckSaveFormatHeader checkSaveFormat, String filePath)
         {
-            File.WriteAllText(filePath, JsonConvert.SerializeObject(checkSaveFormat));
+            File.WriteAllText(filePath, SerializeOrThrow(checkSaveFormat));
         }
             
     }

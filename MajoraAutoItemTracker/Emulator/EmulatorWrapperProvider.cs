@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
-    internal enum EmulatorName
+    public enum EmulatorName
     {
         Project64EM
     }

@@ -106,5 +106,17 @@ namespace MajoraAutoItemTracker.Properties {
                 this["AvailableMmMemoryAddress"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MemoryCheckJsonStr {
+            get {
+                return ((string)(this["MemoryCheckJsonStr"]));
+            }
+            set {
+                this["MemoryCheckJsonStr"] = value;
+            }
+        }
     }
 }
