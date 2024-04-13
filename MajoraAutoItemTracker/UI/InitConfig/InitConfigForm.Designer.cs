@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitConfigForm));
             gbDebug = new System.Windows.Forms.GroupBox();
             btnStartMmLogicCreator = new System.Windows.Forms.Button();
             btnStartOotLogicCreator = new System.Windows.Forms.Button();
@@ -317,6 +318,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.SystemColors.Control;
             ClientSize = new System.Drawing.Size(400, 588);
             Controls.Add(groupBox3);
             Controls.Add(lbLastErrorText);
@@ -325,10 +327,11 @@
             Controls.Add(gbRomType);
             Controls.Add(gbEmulatorSelection);
             Controls.Add(gbDebug);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "InitConfigForm";
-            Text = "InitConfigForm";
+            Text = "Configuration";
             Load += InitConfigForm_Load;
             gbDebug.ResumeLayout(false);
             gbEmulatorSelection.ResumeLayout(false);
