@@ -24,7 +24,7 @@ namespace MajoraAutoItemTracker.Core.Utils
         {
             try
             {
-                return CheckSaveMethod.DeserializeFromStringOrThrow(filePathWithName);
+                return CheckSaveMethod.DeserializeFromPathOrThrow(filePathWithName);
             }
             catch (Exception e)
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MajoraAutoItemTracker.Model.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,12 +19,14 @@ namespace MajoraAutoItemTracker.MemoryReader
             return Enum.GetValues(typeof(EmulatorName)).Cast<EmulatorName>();
         }
 
-        public static AbstractRomController? CreateEmulatorFromEnum(EmulatorName emulatorName)
+        public static AbstractRomController? CreateEmulatorFromEnum(
+            EmulatorName emulatorName,
+            CurrentRom currentRom)
         {
             switch (emulatorName)
             {
                 case EmulatorName.Project64EM:
-                    return new Projetc64EM.Project64EMWrapper();
+                    return new Projetc64EM.Project64EMWrapper(currentRom);
                 default:
                     return null;
             }

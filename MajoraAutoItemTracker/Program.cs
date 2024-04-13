@@ -1,6 +1,5 @@
 ﻿using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.Model.CheckLogic;
-using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.UI.InitConfig;
 using MajoraAutoItemTracker.UI.MainUI;
 using System;
@@ -25,19 +24,13 @@ namespace MajoraAutoItemTracker
 
             if (initConfigForm.ShowDialog() == DialogResult.OK)
             {
-                EmulatorName? emulatorName = initConfigForm.emulatorName;
-                RomType? romType = initConfigForm.romType;
-                CurrentRom? currentRom = initConfigForm.currentRom;
-                CheckSaveFormatHeader? checkSave = initConfigForm.checkSave;
-                if (emulatorName == null || romType == null || currentRom == null)
+                AbstractMemoryListener? memoryListener = initConfigForm.memoryListener;
+                CheckSaveFormatHeader? checkSave = initConfigForm.GetLastSubbjectCheckSave();
+                if (memoryListener == null)
                 {
                     throw new Exception("Unable to start");
                 }
-                var mainForm = new MainUIForm(
-                    emulatorName.Value,
-                    romType.Value,
-                    currentRom.Value,
-                    checkSave);
+                var mainForm = new MainUIForm(memoryListener, checkSave);
                 Application.Run(mainForm);
             }
         }

@@ -1,10 +1,13 @@
-﻿using System.Threading;
-
-#nullable enable
+﻿using System.Collections.Generic;
+using System.Reactive.Subjects;
+using System;
+using System.Threading;
+using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.Model.Enum.OOT;
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
-    abstract class AbstractMemoryListener
+    public abstract class AbstractMemoryListener
     {
         const int CST_DEFAULT_THREAD_DELLAY_MS = 2_000;
 
@@ -12,6 +15,13 @@ namespace MajoraAutoItemTracker.MemoryReader
         private bool _isThreadActive = false;
 
         protected AbstractRomController emulatorWrapper;
+
+        // First value should be OcarinaOfTimeItemLogicPopertyName or MM one
+        public readonly ReplaySubject<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> callBackEventOot =
+            new ReplaySubject<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>>(50);
+
+        public readonly ReplaySubject<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> callBackEventMm =
+            new ReplaySubject<List<Tuple<MajoraMaskItemLogicPopertyName, object>>>(50);
 
         public AbstractMemoryListener(AbstractRomController emulatorWrapper)
         {

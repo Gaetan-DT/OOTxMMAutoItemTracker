@@ -22,6 +22,11 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         protected override bool IsEmulatorUseBigEndian => true;
 
+        public Project64EMWrapper(CurrentRom currentRom): base(currentRom)
+        {
+
+        }
+
         public override bool FindRomStartAndRomType(out uint romStart, out CurrentRom romType)
         {
             if (DoFindStart(CurrentRom.OcarinaOfTIme, out romStart))

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MajoraAutoItemTracker.Model.Enum.OOT
 {
-    enum OcarinaOfTimeItemLogicPopertyName
+    public enum OcarinaOfTimeItemLogicPopertyName
     {
         Deku_Stick,
         Deku_Nut,

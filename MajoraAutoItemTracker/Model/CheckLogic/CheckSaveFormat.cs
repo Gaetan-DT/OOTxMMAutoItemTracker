@@ -28,9 +28,14 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
             return JsonConvert.SerializeObject(checkSaveFormat);
         }
 
-        public static CheckSaveFormatHeader? DeserializeFromStringOrThrow(String filePath)
+        public static CheckSaveFormatHeader? DeserializeFromStringOrThrow(string strJson)
         {
-            return JsonConvert.DeserializeObject<CheckSaveFormatHeader>(File.ReadAllText(filePath));
+            return JsonConvert.DeserializeObject<CheckSaveFormatHeader>(strJson);
+        }
+
+        public static CheckSaveFormatHeader? DeserializeFromPathOrThrow(String filePath)
+        {
+            return DeserializeFromStringOrThrow(File.ReadAllText(filePath));
         }
 
         public static void SerializeToFile(CheckSaveFormatHeader checkSaveFormat, String filePath)

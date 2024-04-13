@@ -49,7 +49,7 @@
             btnClearMmAddress = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
             tbMmStartAddress = new System.Windows.Forms.TextBox();
-            label3 = new System.Windows.Forms.Label();
+            lbLastErrorText = new System.Windows.Forms.Label();
             groupBox3 = new System.Windows.Forms.GroupBox();
             btnResetCheckSave = new System.Windows.Forms.Button();
             btnLoadCheckSave = new System.Windows.Forms.Button();
@@ -272,15 +272,15 @@
             tbMmStartAddress.Size = new System.Drawing.Size(100, 23);
             tbMmStartAddress.TabIndex = 4;
             // 
-            // label3
+            // lbLastErrorText
             // 
-            label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label3.ForeColor = System.Drawing.Color.Red;
-            label3.Location = new System.Drawing.Point(18, 460);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(364, 26);
-            label3.TabIndex = 5;
-            label3.Text = "Waiting for command";
+            lbLastErrorText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            lbLastErrorText.ForeColor = System.Drawing.Color.Red;
+            lbLastErrorText.Location = new System.Drawing.Point(18, 460);
+            lbLastErrorText.Name = "lbLastErrorText";
+            lbLastErrorText.Size = new System.Drawing.Size(364, 26);
+            lbLastErrorText.TabIndex = 5;
+            lbLastErrorText.Text = "Waiting for command";
             // 
             // groupBox3
             // 
@@ -319,7 +319,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(400, 588);
             Controls.Add(groupBox3);
-            Controls.Add(label3);
+            Controls.Add(lbLastErrorText);
             Controls.Add(gbMajoraMask);
             Controls.Add(gbOcarinaOfTime);
             Controls.Add(gbRomType);
@@ -360,7 +360,7 @@
         private System.Windows.Forms.Button btnStartLogicTester;
         private System.Windows.Forms.Button btnStartMmLogicCreator;
         private System.Windows.Forms.Button btnStartOotLogicCreator;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbLastErrorText;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnRefreshEmulatorList;
         private System.Windows.Forms.ComboBox cbEmulatorList;

@@ -14,15 +14,14 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
         private OcarinaOfTimeMemoryListener ocarinaOfTimeMemoryListener;
         private MajoraMaskMemoryListener majoraMaskMemoryListener;
 
-        public OOTxMMMemoryListener(
-            AbstractRomController emulatorWrapper,
-            Action<List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>>> callBackOOT,
-            Action<List<Tuple<MajoraMaskItemLogicPopertyName, object>>> callBackMM)
-            : base(emulatorWrapper)
+        public OOTxMMMemoryListener(AbstractRomController emulatorWrapper): base(emulatorWrapper)
         {
             lastCurrentRom = emulatorWrapper.currentRomType;
-            ocarinaOfTimeMemoryListener = new OcarinaOfTimeMemoryListener(emulatorWrapper, callBackOOT);
-            majoraMaskMemoryListener = new MajoraMaskMemoryListener(emulatorWrapper, callBackMM);
+            ocarinaOfTimeMemoryListener = new OcarinaOfTimeMemoryListener(emulatorWrapper);
+            majoraMaskMemoryListener = new MajoraMaskMemoryListener(emulatorWrapper);
+
+            ocarinaOfTimeMemoryListener.callBackEventOot.Subscribe(callBackEventOot.OnNext);
+            majoraMaskMemoryListener.callBackEventMm.Subscribe(callBackEventMm.OnNext);
         }
 
         public override void StartThread()
@@ -88,21 +87,6 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryListener
             {
                 return CurrentRom.Unknown;
             }
-
-            /*
-            var arrayRoomToCheck = new List<CurrentRom>{ CurrentRom.OcarinaOfTIme, CurrentRom.MajoraMask };
-            if (lastCurrentRom == CurrentRom.MajoraMask)
-                arrayRoomToCheck.Reverse();
-            foreach(var roomToCheck in arrayRoomToCheck)
-                if (roomToCheck == CurrentRom.OcarinaOfTIme && emulatorWrapper.PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme))
-                    return CurrentRom.OcarinaOfTIme;
-                else if (roomToCheck == CurrentRom.MajoraMask && emulatorWrapper.PerformCheckFollowingRomType(CurrentRom.MajoraMask))
-                    return CurrentRom.MajoraMask;
-            // If nothing found try to find any new address
-            if (emulatorWrapper.GetRomAddrStartFollowingLoaddedRom(out uint romAddrStart, out CurrentRom currentRom))
-                return currentRom;
-            return CurrentRom.Unknown;
-            */
         }
     }
 }

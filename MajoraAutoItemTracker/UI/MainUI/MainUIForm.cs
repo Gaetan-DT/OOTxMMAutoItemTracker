@@ -15,25 +15,20 @@ namespace MajoraAutoItemTracker.UI.MainUI
     {
         private const int CST_RECT_WIDTH_HEIGHT = 40;
 
-        private readonly EmulatorName emulatorName;
-        private readonly RomType romType;
-        private readonly CurrentRom currentRom;
         private readonly CheckSaveFormatHeader? checkSave;
+        private readonly AbstractMemoryListener memoryListener;
 
         private readonly MainUIController mainUIController = new MainUIController();
         private readonly MajoraMaskController majoraMaskController = new MajoraMaskController();
         private readonly OcarinaOfTimeController ocarinaOfTimeController = new OcarinaOfTimeController();
 
         public MainUIForm(
-            EmulatorName emulatorName,
-            RomType romType,
-            CurrentRom currentRom,
+            AbstractMemoryListener memoryListener,
             CheckSaveFormatHeader? checkSave)
         {
-            this.emulatorName = emulatorName;
-            this.romType = romType;
-            this.currentRom = currentRom;
+            this.memoryListener = memoryListener;
             this.checkSave = checkSave;
+
             InitializeComponent();
         }
 
@@ -68,16 +63,9 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 majoraMaskController.LoadFromSave(checkSave.MMCheckList);
             }
 
-            // Start memory listener
-            if (!mainUIController.StartMemoryListener(
-                emulatorName,
-                romType, 
-                OnOOTItemLogicChange, 
-                OnMMItemLogicChange, 
-                out string error))
-                Log(error);
-            else
-                Log("Thread started");
+            memoryListener.callBackEventOot.Subscribe(OnOOTItemLogicChange);
+            memoryListener.callBackEventMm.Subscribe(OnMMItemLogicChange);
+            memoryListener.StartThread();
         }
 
         private void OnOOTItemLogicChange(List<Tuple<OcarinaOfTimeItemLogicPopertyName, object>> itemLogicProperty)
@@ -115,7 +103,7 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         private void OnFormClosing(object sender, FormClosingEventArgs e)
         {
-            mainUIController.StopMemoryListener();
+            memoryListener.StopThread();
             var checkSave = CreatecheckSaveFormatHeader(RomType.RANDOMIZE_OOT_X_MM);
             CheckItemUtils.SaveCheckSaveToMemory(checkSave);
             if (AskToSaveFromFile())

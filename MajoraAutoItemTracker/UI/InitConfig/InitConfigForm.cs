@@ -1,23 +1,21 @@
-﻿using MajoraAutoItemTracker.Core.Utils;
-using MajoraAutoItemTracker.MemoryReader;
+﻿using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.UI.MainUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker.UI.InitConfig
 {
     public partial class InitConfigForm : Form
     {
+        private readonly InitConfigController initConfigController = new InitConfigController();
         private readonly EmulatorController emulatorController = new EmulatorController();
 
-        public EmulatorName? emulatorName = null;
-        public RomType? romType = null;
-        public CurrentRom? currentRom = null;
-        public CheckSaveFormatHeader? checkSave = null;
+        public AbstractMemoryListener? memoryListener = null;
 
         public InitConfigForm()
         {
@@ -29,9 +27,14 @@ namespace MajoraAutoItemTracker.UI.InitConfig
             emulatorController.RefreshEmulatorAndGameList();
             emulatorController.subEmulatorList.Subscribe(UpdateCbEmulatorList);
             emulatorController.subRomList.Subscribe(UpdateRomList);
-            tbOotStartAddress.Text = RomUtils.GetStoredMemoryAddress(CurrentRom.OcarinaOfTIme).ToString("X");
-            tbMmStartAddress.Text = RomUtils.GetStoredMemoryAddress(CurrentRom.MajoraMask).ToString("X");
-            checkSave = CheckItemUtils.GetCheckSaveFromMemoryOrNull();
+            initConfigController.rsOotStartAddress.Subscribe((data) => tbOotStartAddress.Text = data);
+            initConfigController.rsMmStartAddress.Subscribe((data) => tbMmStartAddress.Text = data);
+        }
+
+        public CheckSaveFormatHeader? GetLastSubbjectCheckSave()
+        {
+            initConfigController.rsCheckSave.TryGetValue(out CheckSaveFormatHeader? result);
+            return result;
         }
 
         private void UpdateCbEmulatorList(List<EmulatorName> emulatorList)
@@ -60,9 +63,19 @@ namespace MajoraAutoItemTracker.UI.InitConfig
                 return;
             if (cbEmulatorList.SelectedIndex == -1)
                 return;
-            romType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
-            emulatorName = emulatorController.GetSelectedEmulator(cbEmulatorList.SelectedIndex);
-            this.currentRom = currentRom;
+            var romType = emulatorController.GetSelectedRomType(cbRomTypeList.SelectedIndex);
+            var emulatorName = emulatorController.GetSelectedEmulator(cbEmulatorList.SelectedIndex);
+
+            memoryListener = initConfigController.GetMemoryListenerOrNull(
+                emulatorName, 
+                romType,
+                currentRom,
+                out string lastError);
+            if (memoryListener == null)
+            {
+                lbLastErrorText.Text = lastError;
+                return;
+            }
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -79,24 +92,17 @@ namespace MajoraAutoItemTracker.UI.InitConfig
 
         private void btnLoadCheckSave_Click(object sender, EventArgs e)
         {
-            checkSave = CheckItemUtils.LoadFromFile();
+            initConfigController.LoadCheckFromFile();
         }
 
         private void btnResetCheckSave_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(
-                "Clear check ?",
-                "Clear check ?",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                checkSave = null;
-            }
+            initConfigController.ResetCheckSave();
         }
 
         private void btnClearOOTStartAddrs_Click(object sender, EventArgs e)
         {
-            RomUtils.UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, 0);
+            initConfigController.ResetMemoryAddress(CurrentRom.OcarinaOfTIme);
         }
 
         private void btnStartFromOOT_Click(object sender, EventArgs e)
@@ -106,7 +112,7 @@ namespace MajoraAutoItemTracker.UI.InitConfig
 
         private void btnClearMmAddress_Click(object sender, EventArgs e)
         {
-            RomUtils.UpdateStoredMemoryAddress(CurrentRom.MajoraMask, 0);
+            initConfigController.ResetMemoryAddress(CurrentRom.MajoraMask);
         }
 
         private void btnStartFromMM_Click(object sender, EventArgs e)

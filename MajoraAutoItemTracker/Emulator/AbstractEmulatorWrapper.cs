@@ -4,9 +4,6 @@ using System.Linq;
 using System.Windows.Forms;
 using MajoraAutoItemTracker.Model;
 using MajoraAutoItemTracker.Model.Enum;
-using MajoraAutoItemTracker.Properties;
-
-#nullable enable
 
 namespace MajoraAutoItemTracker.MemoryReader
 {
@@ -22,12 +19,9 @@ namespace MajoraAutoItemTracker.MemoryReader
         private uint? m_romAddrOcarinaOfTime;
         private uint? m_romAddrMajoraMask;
 
-        public AbstractRomController()
+        public AbstractRomController(CurrentRom currentRom)
         {
-            if (AskForStartMajoraMask())
-                currentRomType = CurrentRom.MajoraMask;
-            else
-                currentRomType = CurrentRom.OcarinaOfTIme;
+            this.currentRomType = currentRom;
         }
 
         public abstract bool AttachToProcess(RomType romType);
