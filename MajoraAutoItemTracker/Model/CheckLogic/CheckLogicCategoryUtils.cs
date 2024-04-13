@@ -28,7 +28,8 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
 
         public static List<MajoraMaskCheckLogicCategory> LoadMajoraMaskFromRessource()
         {
-            var data = Properties.Resources.mm_CheckLogicCategory;
+            
+            var data = Ressources.Properties.Resources.mm_CheckLogicCategory;
             return JsonConvertUtils.DeserializeObjectFromByteOrThrow<List<MajoraMaskCheckLogicCategory>>(data);
         }
 
@@ -44,7 +45,7 @@ namespace MajoraAutoItemTracker.Model.CheckLogic
 
         public static List<OcarinaOfTimeCheckLogicCategory> LoadOcarinaOfTimeFromRessource()
         {
-            var data = Properties.Resources.oot_CheckLogicCategory;
+            var data = Ressources.Properties.Resources.oot_CheckLogicCategory;
             return JsonConvertUtils.DeserializeObjectFromByteOrThrow<List<OcarinaOfTimeCheckLogicCategory>>(data);
         }
     }

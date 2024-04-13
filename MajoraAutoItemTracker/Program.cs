@@ -1,10 +1,11 @@
-﻿using MajoraAutoItemTracker.Properties;
-using MajoraAutoItemTracker.UI.MainUI;
+﻿using MajoraAutoItemTracker.UI.MainUI;
 using System;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 
 namespace MajoraAutoItemTracker
 {
+    [SupportedOSPlatform("windows7.0")]
     static class Program
     {
         /// <summary>

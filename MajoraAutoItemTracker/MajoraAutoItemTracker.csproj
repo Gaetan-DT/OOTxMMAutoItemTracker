@@ -19,7 +19,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
@@ -27,15 +26,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <LangVersion>8.0</LangVersion>
-    <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
-    <LangVersion>8.0</LangVersion>
-    <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -46,7 +39,6 @@
   <ItemGroup>
     <Folder Include="Emulator\ModLoader64\" />
     <Folder Include="Emulator\Project64\" />
-    <Folder Include="Resource\Save\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -61,15 +53,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resource\Itemicons\mm_items.png" />
-    <Content Include="Resource\Itemicons\mm_items_mono.png" />
-    <Content Include="Resource\Itemicons\oot_items.png" />
-    <Content Include="Resource\Itemicons\oot_items_mono.png" />
-    <Content Include="Resource\Map\mm_Map.jpg" />
-    <Content Include="Resource\Map\oot_Map.jpg" />
     <Content Include="UI\Layout\BarinadesItemTracker_R4tPCG0m05.png" />
     <Content Include="UI\Layout\mm_layout.png" />
-    <Content Include="Resource\Mappings\mm_InterfaceItemsPositionsMapping.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CyotekImageBox" Version="1.3.1" />
@@ -86,6 +71,9 @@
     <PackageReference Include="System.Reactive" Version="6.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ressources\Ressources.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">

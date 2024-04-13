@@ -32,13 +32,13 @@ namespace MajoraAutoItemTracker.Model.Logic
 
         public static LogicFile<OcarinaOfTimeJsonFormatLogicItem> LoadOcarinaOfTimeFromRessource()
         {
-            var dataStr = Properties.Resources.OOT_CUSTOM_REQ_CASUAL_1;
+            var dataStr = Ressources.Properties.Resources.OOT_CUSTOM_REQ_CASUAL_1;
             return JsonConvertUtils.DeserializeObjectFromByteOrThrow<LogicFile<OcarinaOfTimeJsonFormatLogicItem>>(dataStr);
         }
 
         public static LogicFile<MajoraMaskJsonFormatLogicItem> LoadMajoraMaskFromRessource()
         {
-            var dataStr = Properties.Resources.MM_CUSTOM_REQ_CASUAL_1;
+            var dataStr = Ressources.Properties.Resources.MM_CUSTOM_REQ_CASUAL_1;
             return JsonConvertUtils.DeserializeObjectFromByteOrThrow<LogicFile<MajoraMaskJsonFormatLogicItem>>(dataStr);
         }
     }

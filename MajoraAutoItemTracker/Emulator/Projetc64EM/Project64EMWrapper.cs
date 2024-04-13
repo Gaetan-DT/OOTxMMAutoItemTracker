@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 {
-    class Project64EMWrapper : AbstractRomController
+    public class Project64EMWrapper : AbstractRomController
     {
         const string PROCESS_NAME = "Project64-EM";
 

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MajoraAutoItemTracker.Model.Enum
+﻿namespace MajoraAutoItemTracker.Model.Enum
 {
-    internal enum CurrentRom
+    public enum CurrentRom
     {
         OcarinaOfTIme, 
         MajoraMask, 

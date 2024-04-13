@@ -1,4 +1,5 @@
 ﻿using Cyotek.Windows.Forms;
+using MajoraAutoItemTracker.Core.Extensions;
 using MajoraAutoItemTracker.MemoryReader;
 using MajoraAutoItemTracker.MemoryReader.MemoryListener;
 using MajoraAutoItemTracker.Model.Enum;
@@ -31,10 +32,10 @@ namespace MajoraAutoItemTracker.UI.MainUI
         {
             // Init OOT
             imageBoxMapOOT = new ImageBoxController<OcarinaOfTimeCheckLogicZone>(imageBoxOOT);
-            imageBoxMapOOT.SetSrcBitmap(Properties.Resources.oot_Map);
+            imageBoxMapOOT.SetSrcBitmap(Ressources.Properties.Resources.oot_Map.ConvertToBitmap());
             // Init MM
             imageBoxMapMM = new ImageBoxController<MajoraMaskCheckLogicZone>(imageBoxMM);
-            imageBoxMapMM.SetSrcBitmap(Properties.Resources.mm_Map);
+            imageBoxMapMM.SetSrcBitmap(Ressources.Properties.Resources.mm_Map.ConvertToBitmap());
             //pictureBoxMapMM.OnGraphicPathClick += (it) => majoraMaskController.RefreshCheckListForCategory(lbCheckListOOT, it);
         }
 

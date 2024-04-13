@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.Logic;
+﻿using MajoraAutoItemTracker.Core.Extensions;
+using MajoraAutoItemTracker.Logic;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum.OOT;
 using MajoraAutoItemTracker.Model.Item;
@@ -87,8 +88,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
 
         public readonly List<OcarinaOfTimeCheckLogicCategory> checkLogicCategories;
 
-        private readonly Bitmap ootItem = Properties.Resources.oot_items;
-        private readonly Bitmap ootItemMono = Properties.Resources.oot_items_mono;
+        private readonly Bitmap ootItem = Ressources.Properties.Resources.oot_items.ConvertToBitmap();
+        private readonly Bitmap ootItemMono = Ressources.Properties.Resources.oot_items_mono.ConvertToBitmap();
         private readonly List<ItemLogic> itemLogics = ItemLogicMethod.LoadOcarinaOfTimeItemLogicFromRessource();
         private readonly List<OcarinaOfTimeCheckLogic> checkLogics;
 

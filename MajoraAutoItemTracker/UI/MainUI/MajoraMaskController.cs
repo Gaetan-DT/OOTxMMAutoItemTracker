@@ -1,4 +1,5 @@
-﻿using MajoraAutoItemTracker.Logic;
+﻿using MajoraAutoItemTracker.Core.Extensions;
+using MajoraAutoItemTracker.Logic;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Enum;
 using MajoraAutoItemTracker.Model.Enum.MM;
@@ -104,8 +105,8 @@ namespace MajoraAutoItemTracker.UI.MainUI
         public List<MajoraMaskCheckLogicCategory> checkLogicCategories = 
             CheckLogicCategoryUtils.LoadMajoraMaskFromRessource();
 
-        private readonly Bitmap mmItem = Properties.Resources.mm_items;
-        private readonly Bitmap mmItemMono = Properties.Resources.mm_items_mono;
+        private readonly Bitmap mmItem = Ressources.Properties.Resources.mm_items.ConvertToBitmap();
+        private readonly Bitmap mmItemMono = Ressources.Properties.Resources.mm_items_mono.ConvertToBitmap();
         private readonly List<ItemLogic> itemLogics = ItemLogicMethod.LoadMajoraMaskItemLogicFromRessource();
         private readonly List<MajoraMaskCheckLogic> checkLogics;
 
