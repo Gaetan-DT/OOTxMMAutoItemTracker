@@ -28,37 +28,7 @@ namespace MajoraAutoItemTracker.MemoryReader
         public abstract bool ProcessExist();
         public abstract string GetDisplayName();
 
-        public abstract bool FindRomStartAndRomType(out uint romStart, out CurrentRom romType);
-
         public abstract bool FindRomStartForRomType(out uint romStart, CurrentRom romType);
-
-        public bool GetRomAddrStartFollowingLoaddedRom(
-            out uint foundRomAddrStart,
-            out CurrentRom foundRomType)
-        {
-            //foundRomAddrStart = 0;
-            //foundRomType = CurrentRom.Unknown;
-            if (GetRomAddrStart() == null)
-            {
-                if (FindRomStartForRomType(out foundRomAddrStart, currentRomType))
-                {
-                    foundRomType = currentRomType;
-                    SetRomAddStartForRomType(foundRomType, foundRomAddrStart);
-                    return true;
-                }
-                else
-                {
-                    foundRomType = CurrentRom.Unknown;
-                    return false;
-                }
-            }
-            else
-            {
-                foundRomAddrStart = RequireRomAddrStart();
-                foundRomType = currentRomType;
-                return true;
-            }
-        }
 
         private uint? GetRomAddrStart()
         {
@@ -81,11 +51,6 @@ namespace MajoraAutoItemTracker.MemoryReader
         public bool IsAddressFound(CurrentRom romType)
         {
             return GetRomAddrStart(romType) != null;
-        }
-
-        private uint RequireRomAddrStart()
-        {
-            return GetRomAddrStart() ?? throw new Exception("Unknown rom start");
         }
 
         public void SetRomAddStartForRomType(CurrentRom romType, uint romStart)
@@ -121,15 +86,6 @@ namespace MajoraAutoItemTracker.MemoryReader
         {
             var possibleRomAddrStart = GetRomAddrStart(romType) ?? 0;
             return PerformCheckFollowingRomType(romType, possibleRomAddrStart);
-        }
-
-        protected bool AskForStartMajoraMask()
-        {
-            return MessageBox.Show(
-                "Start from majora mask ?",
-                "Start",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         public bool PerformCheckFollowingRomType(CurrentRom romType, uint possibleRomAddrStart)

@@ -27,25 +27,6 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         }
 
-        public override bool FindRomStartAndRomType(out uint romStart, out CurrentRom romType)
-        {
-            if (DoFindStart(CurrentRom.OcarinaOfTIme, out romStart))
-            {
-                romType = CurrentRom.OcarinaOfTIme;
-                return true;
-            }
-            else if (DoFindStart(CurrentRom.MajoraMask, out romStart))
-            {
-                romType = CurrentRom.MajoraMask;
-                return true;
-            }                
-            else
-            {
-                romType = CurrentRom.Unknown;
-                return false;
-            }
-        }
-
         public override bool FindRomStartForRomType(out uint romStart, CurrentRom romType)
         {
             return DoFindStart(romType, out romStart);
