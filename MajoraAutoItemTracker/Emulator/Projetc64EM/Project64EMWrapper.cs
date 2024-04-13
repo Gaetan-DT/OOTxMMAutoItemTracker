@@ -12,8 +12,8 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 
         private string[] arrayOcarinaOfTimePattern = new string[]
         {
-            "44 4C 45 5A ?? 00 5A 41 DF DF AB AB DF DF DF DF",
-            "44 4C 45 5A ?? 00 5A 41 AB AB AB AB AB AB AB AB",
+            "44 4C 45 5A ?? 00 5A 41 ?? ?? ?? DF",
+            "44 4C 45 5A ?? 00 5A 41 ?? ?? ?? AB"
         };
 
         private const string ZeldazPatternMM = "44 4C 45 5A ?? 00 5A 41"; // 
@@ -109,6 +109,17 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                     foreach (var ootPattern in arrayOcarinaOfTimePattern)
                     {
                         listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, ootPattern);
+
+                        if (listpossibleMemory.Count >= 2)
+                        {
+                            ootAddrStart = listpossibleMemory[1] - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
+                            if (PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme, ootAddrStart))
+                            {
+                                UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, ootAddrStart);
+                                return true;
+                            }
+                        }
+
                         foreach (var possibleMemory in listpossibleMemory)
                         {
                             ootAddrStart = possibleMemory - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
