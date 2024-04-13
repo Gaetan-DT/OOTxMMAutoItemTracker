@@ -1,8 +1,12 @@
-﻿using MajoraAutoItemTracker.Model;
+﻿using MajoraAutoItemTracker.Core.Extensions;
+using MajoraAutoItemTracker.Core.Utils;
+using MajoraAutoItemTracker.Model;
 using MajoraAutoItemTracker.Model.Enum;
+using MajoraAutoItemTracker.UI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
 {
@@ -10,11 +14,8 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
     {
         const string PROCESS_NAME = "Project64-EM";
 
-        private string[] arrayOcarinaOfTimePattern = new string[]
-        {
-            "44 4C 45 5A ?? 00 5A 41 ?? ?? ?? DF",
-            "44 4C 45 5A ?? 00 5A 41 ?? ?? ?? AB"
-        };
+        // More info: https://wiki.cloudmodding.com/oot/Save_Format#Save_Context
+        private const string zeldazPatternOot = "44 4C 45 5A ?? ?? ?? 41";
 
         private const string ZeldazPatternMM = "44 4C 45 5A ?? 00 5A 41"; // 
         //private const string ZeldazPatternLoopUpLe = "44 4C 45 5A 07 00 5A 41"; // IDK why last byte can be different
@@ -106,36 +107,75 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                     ootAddrStart = 0;
                     return false;
                 case CurrentRom.OcarinaOfTIme:
-                    foreach (var ootPattern in arrayOcarinaOfTimePattern)
+                    listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, zeldazPatternOot);
+                    List<KeyValuePair<uint, string>> listPairSaveNameMemory = ReadFileNameFromZeldazAddress(listpossibleMemory);
+                    var selectedMemory = EmitAskForSaveFile(listPairSaveNameMemory);
+                    if (selectedMemory != null)
                     {
-                        listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, ootPattern);
-
-                        if (listpossibleMemory.Count >= 2)
+                        ootAddrStart = selectedMemory.Value - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
+                        if (PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme, ootAddrStart))
                         {
-                            ootAddrStart = listpossibleMemory[1] - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
-                            if (PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme, ootAddrStart))
-                            {
-                                UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, ootAddrStart);
-                                return true;
-                            }
+                            UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, ootAddrStart);
+                            return true;
                         }
-
-                        foreach (var possibleMemory in listpossibleMemory)
+                        else
                         {
-                            ootAddrStart = possibleMemory - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
-                            if (PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme, ootAddrStart))
-                            {
-                                UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, ootAddrStart);
-                                return true;
-                            }
+                            return false;
                         }
                     }
-                    ootAddrStart = 0;
-                    return false;                    
+                    else
+                    {
+                        ootAddrStart = 0;
+                        return false;
+                    }
                 case CurrentRom.Unknown:
                 default:
                     throw new Exception("Unknown rom start");
             }
+        }
+
+        private List<KeyValuePair<uint, string>> ReadFileNameFromZeldazAddress(List<uint> zeldaAddrsList)
+        {
+            var result = new List<KeyValuePair<uint, string>>();
+            foreach (var zeldaAddrs in zeldaAddrsList)
+            {
+                try
+                {
+                    var startTemplate = zeldaAddrs + 8;
+                    var saveNameByteArray = Memory.ReadBytes(
+                        m_Process!,
+                        new UIntPtr(startTemplate),
+                        8,
+                        IsEmulatorUseBigEndian);
+                    var fileName = RomUtils.ConvertRomNameToString(saveNameByteArray);
+                    if (fileName != null)
+                        result.Add(new KeyValuePair<uint, string>(zeldaAddrs, fileName));
+                } catch (Exception e) { 
+                    Debug.WriteLine(e.Message);
+                }
+            }
+            return result;
+        }
+
+        private uint? EmitAskForSaveFile(List<KeyValuePair<uint, string>> listMemFileName)
+        {
+            /*if (listMemFileName.Count == 0)
+                return null;
+            else if (listMemFileName.Count == 1)
+                return listMemFileName[0].Key;*/
+
+            List<string> dataToDisplay = listMemFileName
+                .Select((it) => $"{it.Key:X} - {it.Value}")
+                .ToList();
+            int selectedSaveIndex = -1;
+            DialogListBox.Show(
+                "Select save",
+                "Select save",
+                dataToDisplay,
+                ref selectedSaveIndex);
+            if (selectedSaveIndex == -1)
+                return null;
+            return listMemFileName[selectedSaveIndex].Key;
         }
     }
 }
