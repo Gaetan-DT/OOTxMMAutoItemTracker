@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-#nullable enable
-
 namespace MajoraAutoItemTracker.Model.Logic.OOT
 {
     public class OcarinaOfTimeJsonFormatLogicItem : AbstractsonFormatLogicItem

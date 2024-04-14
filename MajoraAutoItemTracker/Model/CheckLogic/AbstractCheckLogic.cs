@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
-
-#nullable enable
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace MajoraAutoItemTracker.Model.CheckLogic
 {

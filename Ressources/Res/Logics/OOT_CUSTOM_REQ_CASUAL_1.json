@@ -1175,7 +1175,10 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Gerudo Valley Hammer Rocks Chest",
+      "HintText": "TODO",
+      "HintVideoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     },
     {
       "Id": "Gerudo Valley Crate Heart Piece",

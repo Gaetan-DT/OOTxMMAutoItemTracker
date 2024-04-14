@@ -96,7 +96,6 @@ namespace MajoraAutoItemTracker.UI.MainUI
             { MajoraMaskItemLogicPopertyName.ItemDungeonSnowHeadFairiesCount, new Point(6, 6) }, //TODO
             { MajoraMaskItemLogicPopertyName.ItemDungeonGreatBayFairiesCount, new Point(6, 7) }, //TODO
             { MajoraMaskItemLogicPopertyName.ItemDungeonStoneTowerFairiesCount, new Point(6, 8) }, //TODO
-
     };
 
         public MajoraMaskLogicResolver logicResolver = 
@@ -264,6 +263,13 @@ namespace MajoraAutoItemTracker.UI.MainUI
             if (mapPropertyNamePosition.TryGetValue(enumPropertyName, out var result))
                 return result;
             throw new Exception($"Unknown property name: {enumPropertyName}");
+        }
+
+        protected override AbstractsonFormatLogicItem? FindLogicItemFromCheckLogic(MajoraMaskCheckLogic checkLogic)
+        {
+            if (checkLogic.Id == null)
+                return null;
+            return logicResolver.FindLogicOrNull(checkLogic.Id);
         }
     }
 }

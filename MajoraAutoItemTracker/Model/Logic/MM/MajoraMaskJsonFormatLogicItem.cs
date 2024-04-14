@@ -9,7 +9,7 @@ namespace MajoraAutoItemTracker.Model.Logic.MM
     {
         public override string? Id { get; set; }
         public override List<String> RequiredItems { get; set; } = new List<string>();
-        public override List<List<string>> ConditionalItems { get; set; } = new List<List<string>>();        
+        public override List<List<string>> ConditionalItems { get; set; } = new List<List<string>>();
         public TimeOfDay TimeNeeded { get; set; }
         public TimeOfDay TimeAvailable { get; set; }
         public TimeOfDay TimeSetup { get; set; }

@@ -1,6 +1,8 @@
 ﻿using MajoraAutoItemTracker.Core.Extensions;
+using MajoraAutoItemTracker.Core.Utils;
 using MajoraAutoItemTracker.Model.CheckLogic;
 using MajoraAutoItemTracker.Model.Item;
+using MajoraAutoItemTracker.Model.Logic;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -305,11 +307,31 @@ namespace MajoraAutoItemTracker.UI.MainUI
             RefreshRegionInDrawingFollowingCheck();
         }
 
+        protected abstract AbstractsonFormatLogicItem? FindLogicItemFromCheckLogic(CheckLogic checkLogic);
+
         public void PrepareMenuItemForCheck(ContextMenuStrip cms, CheckLogic checkLogic)
         {
             cms.Items.Clear();
-            cms.Items.Add($"{checkLogic.Id}").Enabled = false;
-            cms.Items.Add("See logic (WIP)").Enabled = false;
+            var logicItem = FindLogicItemFromCheckLogic(checkLogic);
+            if( logicItem != null)
+            {
+                cms.Items.Add($"{logicItem.Id}").Click += (a, b) =>
+                {
+                    Clipboard.SetText(logicItem.ReadableName ?? logicItem.Id ?? "");
+                };
+                cms.Items.Add("See logic (WIP)").Enabled = false;
+                var hintBtn = cms.Items.Add("See hint");
+                hintBtn.Enabled = logicItem.HintText != null;
+                hintBtn.Click += (a, b) => {
+                    MessageBox.Show(logicItem.HintText, "Hint");
+                };
+                var youtubeBtn = cms.Items.Add("See how to get it (youtube)");
+                youtubeBtn.Enabled = logicItem.HintVideoUrl != null;
+                youtubeBtn.Click += (a, b) =>
+                {
+                    Utils.OpenUrlInBrowser(logicItem.HintVideoUrl!);
+                };
+            } 
         }
     }
 }

@@ -5,8 +5,6 @@ using MajoraAutoItemTracker.Model.Logic.MM;
 using System;
 using System.Collections.Generic;
 
-#nullable enable
-
 namespace MajoraAutoItemTracker.Logic
 {
     public class MajoraMaskLogicResolver : AbstractLogicResolver
@@ -21,6 +19,11 @@ namespace MajoraAutoItemTracker.Logic
                     _logicDictionary.Add(logic.Id, logic);
                 else
                     Console.WriteLine($"Err: Unable to load logic, id is null [{logic}]");
+        }
+
+        public MajoraMaskJsonFormatLogicItem? FindLogicOrNull(string logicId)
+        {
+            return FindLogic(_logicDictionary, logicId);
         }
 
         public List<MajoraMaskCheckLogic> UpdateCheckAndReturnListOfUpdatedCheck(

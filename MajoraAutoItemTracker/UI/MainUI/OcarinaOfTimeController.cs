@@ -201,5 +201,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
                 return result;
             throw new Exception($"Unknown property name: {enumPropertyName}");
         }
+
+        protected override AbstractsonFormatLogicItem? FindLogicItemFromCheckLogic(OcarinaOfTimeCheckLogic checkLogic)
+        {
+            if (checkLogic.Id == null)
+                return null;
+            return logicResolver.FindLogicOrNull(checkLogic.Id);
+        }
     }
 }
