@@ -99,7 +99,7 @@ namespace MajoraAutoItemTracker
         #region INVENTORY Masks
 
         public const int CST_MASK_DEKU_MASK = 0x1EF6FD; // Deku mask 1EF6FE // 32, FF
-        public const int CST_MASK_GORON_MASK = 0x1EF700; // Goron Mask 1EF700 // 33, FF
+        public const int CST_MASK_GORON_MASK = 0x1EF703; // Goron Mask 1EF700 // 33, FF
         public const int CST_MASK_ZORA_MASK = 0x1EF70A; // Zora Mask 1EF70A // 34, FF
         public const int CST_MASK_FIERCE_DEITY_MASK = 0x1EF70C; // Fierce Deity's Mask 1EF70C // 35, FF
         public const int CST_MASK_POSTMAN_HAT = 0x1EF6F8; // Postman's Hat 1EF6FB // 3E, FF

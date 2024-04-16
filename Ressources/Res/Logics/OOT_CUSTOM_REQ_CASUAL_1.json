@@ -10,7 +10,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Left Chest",
+      "HintVideoUrl": "https://youtu.be/V23jBRT9lh8?si=oaqyrR69eNkzqKdP&t=260"
     },
     {
       "Id": "STV Child Right Chest",
@@ -21,7 +23,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Right Chest",
+      "HintVideoUrl": "https://youtu.be/V23jBRT9lh8?si=rniwLpvOJnHRuSQN&t=352"
     },
     {
       "Id": "STV Compass Chest",
@@ -34,7 +38,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Compass Chest",
+      "HintVideoUrl": "https://youtu.be/Jof4-RXi-sw?si=V6TpsXYKWRMUu0_0&t=36"
     },
     {
       "Id": "STV Early Adult Right Chest",
@@ -50,7 +56,9 @@
           "ItemBow"
         ]
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Early Adult Right Chest",
+      "HintVideoUrl": "https://youtu.be/2afSBGEWEmg?si=vDSaRrOA9YSlZmWI&t=92"
     },
     {
       "Id": "STV First Mirror Right Chest",
@@ -60,7 +68,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "First Mirror Right Chest",
+      "HintVideoUrl": "https://youtu.be/LG2ROzKlOjA?si=W-87-ay8kZKzUpE5&t=43"
     },
     {
       "Id": "STV First Mirror Left Chest",
@@ -70,7 +80,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "First Mirror Left Chest",
+      "HintVideoUrl": "https://youtu.be/LG2ROzKlOjA?si=W-87-ay8kZKzUpE5&t=43"
     },
     {
       "Id": "STV Map Chest",
@@ -81,7 +93,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Map Chest",
+      "HintVideoUrl": "https://youtu.be/tWib087HGNo?si=JT2NtMK7CQ51JvRu&t=145"
     },
     {
       "Id": "STV Child Climb East Chest",
@@ -91,7 +105,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Child Climb East Chest",
+      "HintVideoUrl": "https://youtu.be/tWib087HGNo?si=AK-EZOlttLOpOb4Z&t=102"
     },
     {
       "Id": "STV Child Climb North Chest",
@@ -101,7 +117,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Child Climb North Chest",
+      "HintVideoUrl": "https://youtu.be/tWib087HGNo?si=AK-EZOlttLOpOb4Z&t=102"
     },
     {
       "Id": "STV Sun Block Room Chest",
@@ -112,7 +130,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Sun Block Room Chest",
+      "HintVideoUrl": "https://youtu.be/zWJSdnswcH0?si=bRf7jPFwjtVlAkAK&t=107"
     },
     {
       "Id": "STV Statue Hand Chest",
@@ -124,7 +144,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Statue Hand Chest",
+      "HintVideoUrl": "https://youtu.be/cnHVnetV2Qo?si=MOpgWJ7B-lUnTw4l&t=105"
     },
     {
       "Id": "STV NE Main Room Chest",
@@ -1650,7 +1672,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Deku Salesman Grotto",
+      "HintVideoUrl": "https://youtu.be/JXnTsPhs5nM?si=bkvhZH_9wNW7TXfW&t=273"
     },
     {
       "Id": "Hyrule Field South Grotto",
@@ -1658,7 +1682,10 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "South Grotto",
+      "HintText": "Open south grotto",
+      "HintVideoUrl": "https://youtu.be/LY9YqZzm740?si=JdhMZq2qVr1mxKmE&t=48"
     },
     {
       "Id": "Hyrule Field Diving Heart Piece Grotto",
@@ -1674,7 +1701,9 @@
           "ItemIronBoots"
         ]
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Diving Heart Piece Grotto",
+      "HintVideoUrl": "https://youtu.be/n4eyIgkHQzE?si=VS-j0lLqZJ0kgCpi&t=39"
     },
     {
       "Id": "Hyrule Field North Grotto",
@@ -1688,7 +1717,9 @@
           "ItemMegatonHammer"
         ]
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "North Grotto",
+      "HintVideoUrl": "https://youtu.be/JXnTsPhs5nM?si=lsY1CMAXXy1omBh6&t=5"
     },
     {
       "Id": "Hyrule Field Forest Grotto",
@@ -1702,7 +1733,9 @@
           "ItemBombBag"
         ]
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Forest Grotto",
+      "HintVideoUrl": "https://youtu.be/JXnTsPhs5nM?si=3DCad7PWFfevZgoF&t=348"
     },
     {
       "Id": "Hyrule Field Cow in West Grotto",
@@ -1714,7 +1747,9 @@
       ],
       "ConditionalItems": [
       ],
-      "IsTrick": false
+      "IsTrick": false,
+      "ReadableName": "Cow in West Grotto",
+      "HintVideoUrl": "https://youtu.be/JXnTsPhs5nM?si=s0iY6RuaKkYiLd2Y&t=158"
     },
     {
       "Id": "Castle Town Entrance Ten Big Poes",
