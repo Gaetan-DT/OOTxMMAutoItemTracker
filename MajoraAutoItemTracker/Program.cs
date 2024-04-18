@@ -23,6 +23,7 @@ namespace MajoraAutoItemTracker
             var restart = false;
             do
             {
+                restart = false;
                 if (StartConfigScreen(out var memoryListener, out var checkSave))
                 {
                     restart = StartEmulatorScreen(memoryListener!, checkSave!);
