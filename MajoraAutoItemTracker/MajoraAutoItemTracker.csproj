@@ -60,7 +60,6 @@
   <ItemGroup>
     <PackageReference Include="CyotekImageBox" Version="1.3.1" />
     <PackageReference Include="Fasm.NET" Version="1.70.03.2" />
-    <PackageReference Include="MemorySharp" Version="1.2.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="PInvoke.Kernel32" Version="0.7.124" />
     <PackageReference Include="PInvoke.Windows.Core" Version="0.7.124" />

@@ -14,7 +14,8 @@
             switch (value)
             {
                 case 0x28: return MajoraTradeLetterpendant.LetterToKafei;
-                case 0x29: return MajoraTradeLetterpendant.PendantOfMemories;
+                case 0x29:
+                case 0x30: return MajoraTradeLetterpendant.PendantOfMemories;
                 default: return MajoraTradeLetterpendant.None;
             }
         }

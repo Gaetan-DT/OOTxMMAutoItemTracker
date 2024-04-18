@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reloaded.Memory.Sigscan.Definitions.Structs;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -59,7 +60,7 @@ namespace MajoraAutoItemTracker
         public static extern int VirtualQueryEx(IntPtr hProcess, IntPtr lpAddress, out MEMORY_BASIC_INFORMATION lpBuffer, uint dwLength);
 
         private static bool FindModuleBaseAddressAndMemorySize(
-            System.Diagnostics.Process process,
+            Process process,
             string moduleName,
             out int baseAddress,
             out int moduleMemoryName
@@ -133,40 +134,16 @@ namespace MajoraAutoItemTracker
             var dataAsByteArray = externalMemory.ReadRaw((uint)startAddress, memorySize);
             var findResult = new Reloaded.Memory.Sigscan.Scanner(dataAsByteArray).FindPattern(hexPattern);
 
-            var findResultArray = new Reloaded.Memory.Sigscan.Scanner(dataAsByteArray).FindPatterns(new String[] { hexPattern });
-
+            PatternScanResult[] findResultArray;
+            using (var memoryScanner = new Reloaded.Memory.Sigscan.Scanner(dataAsByteArray))
+            {
+                findResultArray = memoryScanner.FindPatterns(new String[] { hexPattern });
+            }
             addressFound = findResult.Offset;
             return findResult.Found;
-            /*
-            var count = 0;
-            do
-            {
-                count++;
-                var lengthToRead = Math.Min(consumingChunkSize, remainingSize);
-                byte[] dataAsByteArray;
-                uint startAddressToRead;
-                try
-                {
-                    startAddressToRead = (uint)(startAddress + (consumingChunkSize * count));
-                    dataAsByteArray = externalMemory.ReadRaw(startAddressToRead, lengthToRead);
-                } catch (Exception e)
-                {
-                    throw e;
-                }
-                var findResult = new Reloaded.Memory.Sigscan.Scanner(dataAsByteArray).FindPattern(hexPattern);
-                if (findResult.Found)
-                {
-                    addressFound = startAddress + (consumingChunkSize * count) + findResult.Offset;
-                    return true;
-                }
-                remainingSize -= lengthToRead;
-            } while (remainingSize > 0);
-            addressFound = -1;
-            return false;
-            */
         }
 
-        public static List<int> FindMultipleInProcessModule(System.Diagnostics.Process process,string moduleName,string hexPattern)
+        public static List<int> FindMultipleInProcessModule(Process process,string moduleName,string hexPattern)
         {
             if (!FindModuleBaseAddressAndMemorySize(process, moduleName, out int baseAddress, out int moduleMemorySize))
                 return new List<int>();
@@ -180,7 +157,7 @@ namespace MajoraAutoItemTracker
         }
 
         public static bool FindInProcessModule(
-            System.Diagnostics.Process process, 
+            Process process, 
             string moduleName, 
             string hexPattern,
             out int addressLocation
@@ -212,27 +189,27 @@ namespace MajoraAutoItemTracker
 
         #region read data
 
-        public static int ReadInt8(System.Diagnostics.Process p, UIntPtr address, bool bigEndian)
+        public static int ReadInt8(Process p, UIntPtr address, bool bigEndian)
         {
             return ReadBytes(p, address, 1, bigEndian)[0];
         }
 
-        public static int ReadInt16(System.Diagnostics.Process p, UIntPtr address, bool bigEndian)
+        public static int ReadInt16(Process p, UIntPtr address, bool bigEndian)
         {
             return BitConverter.ToInt16(ReadBytes(p, address, 2, bigEndian), 0);
         }
 
-        public static int ReadInt32(System.Diagnostics.Process p, UIntPtr address, bool bigEndian)
+        public static int ReadInt32(Process p, UIntPtr address, bool bigEndian)
         {
             return BitConverter.ToInt32(ReadBytes(p, address, 4, bigEndian), 0);
         }
 
-        public static uint ReadUInt32(System.Diagnostics.Process p, UIntPtr address, bool bigEndian)
+        public static uint ReadUInt32(Process p, UIntPtr address, bool bigEndian)
         {
             return BitConverter.ToUInt32(ReadBytes(p, address, 4, bigEndian), 0);
         }
 
-        public static byte[] ReadBytes(System.Diagnostics.Process p, UIntPtr address, int bytesToRead, bool bigEndian)
+        public static byte[] ReadBytes(Process p, UIntPtr address, int bytesToRead, bool bigEndian)
         {
             int bytesRead = 0;
             byte[] buffer = new byte[bytesToRead];
@@ -248,17 +225,17 @@ namespace MajoraAutoItemTracker
 
         #region write data
 
-        private static bool Write16(System.Diagnostics.Process p, IntPtr address, Int16 value)
+        private static bool Write16(Process p, IntPtr address, Int16 value)
         {
             return WriteBytes(p, address, BitConverter.GetBytes(value), 2);
         }
 
-        private static bool Write32(System.Diagnostics.Process p, IntPtr address, int value)
+        private static bool Write32(Process p, IntPtr address, int value)
         {
             return WriteBytes(p, address, BitConverter.GetBytes(value), 4);
         }
 
-        private static bool WriteBytes(System.Diagnostics.Process p, IntPtr address, byte[] bytes, int length)
+        private static bool WriteBytes(Process p, IntPtr address, byte[] bytes, int length)
         {
             IntPtr bytesWritten;
             return WriteProcessMemory(p.Handle, address, bytes, length, out bytesWritten);
