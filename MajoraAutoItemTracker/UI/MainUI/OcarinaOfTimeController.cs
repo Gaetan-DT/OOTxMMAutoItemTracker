@@ -164,6 +164,18 @@ namespace MajoraAutoItemTracker.UI.MainUI
                             itemLogic.hasItem = itemCount > 0;
                             itemLogic.ItemCount = itemCount;
                         }
+                        else if (itemLogicProperty.Item2 is OotItemTradingItem)
+                        {
+                            OotItemTradingItem ootItemTradingItem = (OotItemTradingItem)itemLogicProperty.Item2;
+                            itemLogic.hasItem = ootItemTradingItem != OotItemTradingItem.ItemNone;
+                            itemLogic.CurrentVariant = OotItemTradingItemMethod.ToInterfaceMappingVariant(ootItemTradingItem);
+                        }
+                        else if (itemLogicProperty.Item2 is OotItemMaskQuest)
+                        {
+                            OotItemMaskQuest ootItemMaskQuest = (OotItemMaskQuest)itemLogicProperty.Item2;
+                            itemLogic.hasItem = ootItemMaskQuest != OotItemMaskQuest.ItemNone;
+                            itemLogic.CurrentVariant = OotItemMaskQuestMethod.ToInterfaceMappingVariant(ootItemMaskQuest);
+                        }
                         break;
                     }
                 }

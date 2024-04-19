@@ -502,53 +502,53 @@
       },
       {
         "idLogic": "ItemPocketCucco",
-        "positionX": 1,
+        "positionX": 2,
         "positionY": 2
       },
       {
         "idLogic": "ItemCojiro",
-        "positionX": 1,
+        "positionX": 15,
         "positionY": 2
       },
       {
         "idLogic": "ItemOddMushroom",
-        "positionX": 1,
-        "positionY": 2
+        "positionX": 0,
+        "positionY": 3
       },
       {
         "idLogic": "ItemOddPotion",
         "positionX": 1,
-        "positionY": 2
+        "positionY": 3
       },
       {
         "idLogic": "ItemPoacherSaw",
-        "positionX": 1,
-        "positionY": 2
+        "positionX": 2,
+        "positionY": 3
       },
       {
         "idLogic": "ItemBrokenGoronSword",
-        "positionX": 1,
-        "positionY": 2
+        "positionX": 3,
+        "positionY": 3
       },
       {
         "idLogic": "ItemPrescription",
-        "positionX": 1,
-        "positionY": 2
+        "positionX": 4,
+        "positionY": 3
       },
       {
         "idLogic": "ItemEyeballFrog",
-        "positionX": 1,
-        "positionY": 2
+        "positionX": 5,
+        "positionY": 3
       },
       {
         "idLogic": "ItemWorldFinestEyeDrops",
-        "positionX": 1,
-        "positionY": 2
+        "positionX": 6,
+        "positionY": 3
       },
       {
         "idLogic": "ItemClaimCheck",
-        "positionX": 1,
-        "positionY": 2
+        "positionX": 7,
+        "positionY": 3
       }
     ]
   },
@@ -558,43 +558,43 @@
     "variants": [
       {
         "idLogic": "ItemKeatonMask",
-        "positionX": 1,
+        "positionX": 4,
         "positionY": 2
       },
       {
         "idLogic": "ItemSkullMask",
-        "positionX": 1,
+        "positionX": 5,
         "positionY": 2
       },
       {
         "idLogic": "ItemSpookyMask",
-        "positionX": 1,
+        "positionX": 6,
         "positionY": 2
       },
       {
         "idLogic": "ItemBunnyHood",
-        "positionX": 1,
+        "positionX": 7,
         "positionY": 2
       },
       {
         "idLogic": "ItemMaskOfTruth",
-        "positionX": 1,
+        "positionX": 11,
         "positionY": 2
       },
       {
         "idLogic": "ItemGoronMask",
-        "positionX": 1,
+        "positionX": 8,
         "positionY": 2
       },
       {
         "idLogic": "ItemZoraMask",
-        "positionX": 1,
+        "positionX": 9,
         "positionY": 2
       },
 
       {
         "idLogic": "ItemGerudoMask",
-        "positionX": 1,
+        "positionX": 10,
         "positionY": 2
       }
     ]
@@ -605,7 +605,7 @@
     "variants": [
       {
         "idLogic": "ItemKokiriSword",
-        "positionX": 12,
+        "positionX": 11,
         "positionY": 3
       }
     ]
@@ -616,7 +616,7 @@
     "variants": [
       {
         "idLogic": "ItemMasterSword",
-        "positionX": 13,
+        "positionX": 12,
         "positionY": 3
       }
     ]

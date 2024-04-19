@@ -113,8 +113,10 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Bottle_2] = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_2);
             mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Bottle_3] = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_3);
             mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Bottle_4] = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_BOTTLE_4);
-            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Weird_Egg] = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ITEM_MODIFIER_1);
-            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Mask_Quest] = emulatorWrapper.CheckIsNotFF(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ITEM_MODIFIER_2);
+            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Weird_Egg] = OotItemTradingItemMethod.FromMemoryAddress(
+                emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ITEM_MODIFIER_1));
+            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Mask_Quest] = OotItemMaskQuestMethod.FromMemoryAddress(
+                emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_ITEM_MODIFIER_2));
 
             // Stuff
             var addressEquipementModifier1 = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_1);
