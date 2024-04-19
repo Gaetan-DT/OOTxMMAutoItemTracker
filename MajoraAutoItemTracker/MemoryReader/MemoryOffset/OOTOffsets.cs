@@ -209,9 +209,9 @@
         public const int CST_INVENTORY_ADDRESS_BOMB_BAG_30 = 0x0010;
         public const int CST_INVENTORY_ADDRESS_BOMB_BAG_40 = 0x0018;
         public const int CST_INVENTORY_ADDRESS_GORON_BRACELET = 0x0040; // Old 0x0020 For unknown reason
-        public const int CST_INVENTORY_ADDRESS_SILVER_GAUNTLETS = 0x0028;
-        public const int CST_INVENTORY_ADDRESS_GOLDEN_GAUNTLETS = 0x0030;
-
+        public const int CST_INVENTORY_ADDRESS_SILVER_GAUNTLETS = 0x0080;
+        public const int CST_INVENTORY_ADDRESS_GOLDEN_GAUNTLETS = 0x00C0;
+        // 1001 1010
         public const int CST_INVENTORY_ADDRESS_SKULTULA_COUNTER = 0x11A6A1;
 
         //8111A5DC xxxx     Time of Day Modifier

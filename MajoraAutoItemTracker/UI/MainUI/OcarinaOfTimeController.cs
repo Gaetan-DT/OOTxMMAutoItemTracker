@@ -176,6 +176,12 @@ namespace MajoraAutoItemTracker.UI.MainUI
                             itemLogic.hasItem = ootItemMaskQuest != OotItemMaskQuest.ItemNone;
                             itemLogic.CurrentVariant = OotItemMaskQuestMethod.ToInterfaceMappingVariant(ootItemMaskQuest);
                         }
+                        else if (itemLogicProperty.Item2 is OotItemGoronBracelet)
+                        {
+                            OotItemGoronBracelet ootItemGoronBracelet = (OotItemGoronBracelet)itemLogicProperty.Item2;
+                            itemLogic.hasItem = ootItemGoronBracelet != OotItemGoronBracelet.ItemNone;
+                            itemLogic.CurrentVariant = OotItemGoronBraceletMethod.ToInterfaceMappingVariant(ootItemGoronBracelet);
+                        }
                         break;
                     }
                 }

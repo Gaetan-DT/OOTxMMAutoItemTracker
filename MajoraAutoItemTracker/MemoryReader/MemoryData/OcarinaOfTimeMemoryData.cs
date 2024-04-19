@@ -121,11 +121,8 @@ namespace MajoraAutoItemTracker.MemoryReader.MemoryData
             // Stuff
             var addressEquipementModifier1 = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_1);
             var addressEquipementModifier2 = emulatorWrapper.ReadUint8InEdianSizeAsByte(Model.OOTOffsets.CST_INVENTORY_ADDRESS_EQUIPEMENT_MODIFIER_2);
-            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Goron_Bracelet] = emulatorWrapper.CheckAnyHexValueRaised(addressEquipementModifier2, new byte[] {
-                Model.OOTOffsets.CST_INVENTORY_ADDRESS_GORON_BRACELET,
-                Model.OOTOffsets.CST_INVENTORY_ADDRESS_SILVER_GAUNTLETS,
-                Model.OOTOffsets.CST_INVENTORY_ADDRESS_GOLDEN_GAUNTLETS
-            });
+            
+            mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Goron_Bracelet] = OotItemGoronBraceletMethod.FromMemoryAddress(addressEquipementModifier2);
             mapPropertyNameBool[OcarinaOfTimeItemLogicPopertyName.Scale] = emulatorWrapper.CheckAnyHexValueRaised(addressEquipementModifier1, new byte[] {
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_SILVER_SCALE,
                 Model.OOTOffsets.CST_INVENTORY_ADDRESS_GOLDEN_SCALE
