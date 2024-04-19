@@ -1017,7 +1017,7 @@
     "variants": [
       {
         "idLogic": "ItemRequiemOfSpirit",
-        "positionX": 9,
+        "positionX": 10,
         "positionY": 11
       }
     ]
@@ -1028,7 +1028,7 @@
     "variants": [
       {
         "idLogic": "ItemNocturneOfShadow",
-        "positionX": 10,
+        "positionX": 9,
         "positionY": 11
       }
     ]
