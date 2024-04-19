@@ -108,9 +108,9 @@ namespace MajoraAutoItemTracker.Model.Enum
                 case "Pirates Fortress Exterior":
                     return MajoraMaskCheckLogicZone.PIRATES_FORTRESS_EXTERIOR;
                 case "Pirates Fortress Sewer":
-                    return MajoraMaskCheckLogicZone.PIRATES_FORTRESS_INTERIOR;
-                case "Pirates Fortress Interior":
                     return MajoraMaskCheckLogicZone.PIRATES_FORTRESS_SEWER;
+                case "Pirates Fortress Interior":
+                    return MajoraMaskCheckLogicZone.PIRATES_FORTRESS_INTERIOR;
                 case "Pinnacle Rock":
                     return MajoraMaskCheckLogicZone.PINNACLE_ROCK;
                 case "Great Bay Temple":

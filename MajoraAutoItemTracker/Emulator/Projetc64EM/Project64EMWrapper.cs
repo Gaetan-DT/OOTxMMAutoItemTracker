@@ -15,9 +15,7 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
         const string PROCESS_NAME = "Project64-EM";
 
         // More info: https://wiki.cloudmodding.com/oot/Save_Format#Save_Context
-        private const string zeldazPatternOot = "44 4C 45 5A ?? ?? ?? 41";
-
-        private const string ZeldazPatternMM = "44 4C 45 5A ?? 00 5A 41"; // 
+        private const string zeldazPattern = "44 4C 45 5A ?? ?? ?? 41";
         //private const string ZeldazPatternLoopUpLe = "44 4C 45 5A 07 00 5A 41"; // IDK why last byte can be different
 
         protected override bool IsEmulatorUseBigEndian => true;
@@ -77,46 +75,40 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                 return true;
             }
             List<uint> listpossibleMemory;
+            uint zeldazCheckAddress;
             switch (currentRom)
             {
                 case CurrentRom.MajoraMask:
-                    listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, ZeldazPatternMM);
-                    foreach (var possibleMemory in listpossibleMemory)
-                    {
-                        ootAddrStart = possibleMemory - MMOffsets.ZELDAZ_CHECK_ADDRESS;
-                        if (PerformCheckFollowingRomType(CurrentRom.MajoraMask, ootAddrStart))
-                        {
-                            RomUtils.UpdateStoredMemoryAddress(CurrentRom.MajoraMask, ootAddrStart);
-                            return true;
-                        }
-                    }
-                    ootAddrStart = 0;
-                    return false;
+                    listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, zeldazPattern);
+                    zeldazCheckAddress = MMOffsets.ZELDAZ_CHECK_ADDRESS;
+                    break;
                 case CurrentRom.OcarinaOfTIme:
-                    listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, zeldazPatternOot);
-                    List<KeyValuePair<uint, string>> listPairSaveNameMemory = ReadFileNameFromZeldazAddress(listpossibleMemory);
-                    var selectedMemory = EmitAskForSaveFile(listPairSaveNameMemory);
-                    if (selectedMemory != null)
-                    {
-                        ootAddrStart = selectedMemory.Value - OOTOffsets.ZELDAZ_CHECK_ADDRESS;
-                        if (PerformCheckFollowingRomType(CurrentRom.OcarinaOfTIme, ootAddrStart))
-                        {
-                            RomUtils.UpdateStoredMemoryAddress(CurrentRom.OcarinaOfTIme, ootAddrStart);
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
-                    }
-                    else
-                    {
-                        ootAddrStart = 0;
-                        return false;
-                    }
+                    listpossibleMemory = MemoryScanner.ScannMultipleMemoryBeta(m_Process, zeldazPattern);
+                    zeldazCheckAddress = OOTOffsets.ZELDAZ_CHECK_ADDRESS;
+                    break;
                 case CurrentRom.Unknown:
                 default:
                     throw new Exception("Unknown rom start");
+            }
+            List<KeyValuePair<uint, string>> listPairSaveNameMemory = ReadFileNameFromZeldazAddress(listpossibleMemory);
+            uint? selectedMemory = EmitAskForSaveFile(listPairSaveNameMemory);
+            if (selectedMemory != null)
+            {
+                ootAddrStart = selectedMemory.Value - zeldazCheckAddress;
+                if (PerformCheckFollowingRomType(currentRom, ootAddrStart))
+                {
+                    RomUtils.UpdateStoredMemoryAddress(currentRom, ootAddrStart);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                ootAddrStart = 0;
+                return false;
             }
         }
 
@@ -134,6 +126,8 @@ namespace MajoraAutoItemTracker.MemoryReader.Projetc64EM
                         8,
                         IsEmulatorUseBigEndian);
                     var fileName = RomUtils.ConvertRomNameToString(saveNameByteArray);
+                    if (IsEmulatorUseBigEndian)
+                        fileName = fileName?.ReverseString();
                     if (fileName != null)
                         result.Add(new KeyValuePair<uint, string>(zeldaAddrs, fileName));
                 } catch (Exception e) { 
