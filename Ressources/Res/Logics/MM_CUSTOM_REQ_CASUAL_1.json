@@ -2,6 +2,9 @@
     "Version": 1,
     "Logic": [
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "S Clock Town Under the Clock",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -13,6 +16,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "S Clock Town Scrubs Trade",
             "RequiredItems": [
                 "TradeItemMoonTear"
@@ -26,6 +32,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "S Clock Town Straw Roof Chest",
             "RequiredItems": [
                 "ItemHookshot"
@@ -39,6 +48,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "S Clock Town Final Day Chest",
             "RequiredItems": [
                 "ItemHookshot"
@@ -52,6 +64,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "S Clock Town Postbox",
             "RequiredItems": [
                 "MaskPostmanHat"
@@ -65,6 +80,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Laundry Pool Guru-guru (the guys who teach you Song of Storm in OoT)",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -76,6 +94,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Laundry Pool Stray Fairy",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -87,6 +108,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Laundry Pool Pendant of Memories (Kafei Quest)",
             "RequiredItems": [
                 "MaskKafei",
@@ -101,6 +125,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Laundry Pool Keaton Mask (Kafei Quest)",
             "RequiredItems": [
                 "TradeItemKafeiLetter",
@@ -116,6 +143,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Laundry Pool Letter to Mama (Kafei Quest)",
             "RequiredItems": [
                 "TradeItemKafeiLetter",
@@ -131,6 +161,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Madam Aroma in the office",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -142,6 +175,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Madam Aroma in bar (Kafei Quest)",
             "RequiredItems": [
                 "TradeItemMamaLetter"
@@ -155,6 +191,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Postman Freedom (Kafei Quest)",
             "RequiredItems": [
                 "TradeItemMamaLetter"
@@ -168,6 +207,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Mayor PoH",
             "RequiredItems": [
                 "MaskCouple"
@@ -181,6 +223,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Circus Leader Mask",
             "RequiredItems": [
                 "ItemOcarina",
@@ -198,6 +243,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Chest Above Archery",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -209,6 +257,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Bomber's Hideout Chest",
             "RequiredItems": [
                 "CanDoBombers",
@@ -223,6 +274,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Honey And Darling Any Day",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -241,6 +295,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Honey And Darling Three Days",
             "RequiredItems": [
                 "ItemBow",
@@ -255,6 +312,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Milk Bar",
             "RequiredItems": [
                 "MaskRomani",
@@ -269,6 +329,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Town Archery #1",
             "RequiredItems": [
                 "ItemBow"
@@ -282,6 +345,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Town Archery #2",
             "RequiredItems": [
                 "ItemBow"
@@ -295,6 +361,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Treasure Chest Game Human",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -306,6 +375,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Treasure Chest Game Deku",
             "RequiredItems": [
                 "MaskDeku"
@@ -319,6 +391,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Treasure Chest Game Goron",
             "RequiredItems": [
                 "MaskGoron"
@@ -332,6 +407,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Treasure Chest Game Zora",
             "RequiredItems": [
                 "MaskZora"
@@ -345,6 +423,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Clock Town Stray Fairy (Night Time)",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -356,6 +437,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "E Clock Town Postbox",
             "RequiredItems": [
                 "S Clock Town Postbox"
@@ -369,6 +453,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stock Pot Inn Room Key",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -380,6 +467,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stock Pot Inn Letter to Kafei (Kafei Quest)",
             "RequiredItems": [
                 "MaskKafei"
@@ -393,6 +483,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stock Pot Inn Staff Room Chest",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -404,6 +497,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stock Pot Inn Guest Room Chest",
             "RequiredItems": [
                 "TradeItemRoomKey"
@@ -417,6 +513,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stock Pot Inn Grandma Short Story",
             "RequiredItems": [
                 "MaskAllNight"
@@ -430,6 +529,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stock Pot Inn Grandma Long Story",
             "RequiredItems": [
                 "MaskAllNight"
@@ -443,6 +545,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stock Pot Inn Toilet Hand (Paper please)",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -464,6 +569,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stock Pot Inn Anju and Kafei (End of Kafei Quest)",
             "RequiredItems": [
                 "MaskKafei",
@@ -480,6 +588,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Bank Reward #1",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -491,6 +602,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Bank Reward #2",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -502,6 +616,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Bank Reward #3",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -513,6 +630,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Postman's Game",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -524,6 +644,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Rosa Sisters",
             "RequiredItems": [
                 "MaskKamaro"
@@ -537,6 +660,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Swordsman's School",
             "RequiredItems": [
                 "StartingSword"
@@ -550,6 +676,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Lottery",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -561,6 +690,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town All-Night Mask Purchase",
             "RequiredItems": [
                 "N Clock Town Bombshop Grandma save",
@@ -575,6 +707,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Curiosity Shop Blue Rupee",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -586,6 +721,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Curiosity Shop Red Rupee",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -597,6 +735,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Curiosity Shop Purple Rupee",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -608,6 +749,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Curiosity Shop Gold Rupee",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -619,6 +763,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Trading Post 10 Deku Nuts",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -630,6 +777,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Trading Post 30 Arrows",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -641,6 +791,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Trading Post 50 Arrows",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -652,6 +805,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Trading Post Deku Stick",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -663,6 +819,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Trading Post Fairy",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -674,6 +833,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Trading Post Green Potion",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -685,6 +847,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Trading Post Hero's Shield",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -696,6 +861,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Trading Post Red Potion",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -707,6 +875,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Bomb Shop 10 Bombchu",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -718,6 +889,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Bomb Shop 10 Bombs",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -729,6 +903,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Bomb Bag Purchase",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -740,6 +917,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "W Clock Town Big Bomb Bag Purchase",
             "RequiredItems": [
                 "N Clock Town Bombshop Grandma save"
@@ -753,6 +933,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Bomber's Hide And Seek",
             "RequiredItems": [
                 "CanDoBombers"
@@ -766,6 +949,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Tree PoH",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -777,6 +963,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Keaton PoH",
             "RequiredItems": [
                 "MaskKeaton"
@@ -790,6 +979,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Deku Playground 1 Day",
             "RequiredItems": [
                 "MaskDeku"
@@ -803,6 +995,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Deku Playground all 3 Days",
             "RequiredItems": [
                 "MaskDeku"
@@ -816,6 +1011,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Great Fairy Human",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -827,6 +1025,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Great Fairy non-Human",
             "RequiredItems": [
                 "AnyTransformationMask"
@@ -840,6 +1041,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Tingle map shop",
             "RequiredItems": [
                 "CanDoShotBowOrHookshot"
@@ -853,6 +1057,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "N Clock Town Bombshop Grandma save",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -871,6 +1078,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Astronomy Telescope",
             "RequiredItems": [
                 "CanDoBombers"
@@ -884,6 +1094,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Bio Baba Grotto",
             "RequiredItems": [
                 "MaskZora"
@@ -904,6 +1117,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Business Scrub Purchase",
             "RequiredItems": [
                 "CanDoBombers",
@@ -918,6 +1134,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Dodongo Grotto",
             "RequiredItems": [
                 "CanAttack"
@@ -931,6 +1150,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Gossip Stones Grotto",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -955,6 +1177,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Kamaro",
             "RequiredItems": [
                 "ItemOcarina",
@@ -969,6 +1194,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Peahat Grotto",
             "RequiredItems": [
                 "CanAttack"
@@ -982,6 +1210,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Grass Chest",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -993,6 +1224,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Grass Grotto",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -1004,6 +1238,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Pillar Grotto",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -1015,6 +1252,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Stump Chest",
             "RequiredItems": [
                 "ItemHookshot"
@@ -1028,6 +1268,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Underwater Chest",
             "RequiredItems": [
                 "MaskZora"
@@ -1041,6 +1284,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Termina Grotto Cow #1",
             "RequiredItems": [
                 "CanDoExplosion",
@@ -1056,6 +1302,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Termina Field Termina Grotto Cow #2",
             "RequiredItems": [
                 "ItemOcarina",
@@ -1071,6 +1320,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road to Southern Swamp Path to Swamp Grotto",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -1082,6 +1334,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road to Southern Swamp Path to Swamp Tree",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -1104,6 +1359,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road to Southern Swamp Snowhead Map Purchase",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -1126,6 +1384,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road to Southern Swamp Swamp Archery #1",
             "RequiredItems": [
                 "ItemBow"
@@ -1139,6 +1400,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road to Southern Swamp Swamp Archery #2",
             "RequiredItems": [
                 "ItemBow"
@@ -1152,6 +1416,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road to Southern Swamp Woodfall Map Purchase",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -1174,6 +1441,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Boat Archery",
             "RequiredItems": [
                 "Woodfall Temple Boss Blue Warp (same check for all Temple)",
@@ -1188,6 +1458,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Kotake",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -1199,6 +1472,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Kotake Mushroom Sale",
             "RequiredItems": [
                 "MaskScents",
@@ -1213,6 +1489,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Koume",
             "RequiredItems": [
                 "ItemAnyBottle"
@@ -1226,6 +1505,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Mystery Woods Grotto",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -1237,6 +1519,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Near Swamp Spider House Grotto ",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -1276,6 +1561,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Pictograph Contest Good Photo",
             "RequiredItems": [
                 "ItemPictobox"
@@ -1289,6 +1577,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Pictograph Contest Standard Photo",
             "RequiredItems": [
                 "ItemPictobox"
@@ -1302,6 +1593,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Pictograph Contest Winner",
             "RequiredItems": [
                 "ItemPictobox"
@@ -1315,6 +1609,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Music Statue",
             "RequiredItems": [
                 "MaskDeku",
@@ -1329,6 +1626,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Scrub Purchase",
             "RequiredItems": [
                 "MaskDeku"
@@ -1342,6 +1642,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Scrub Trade",
             "RequiredItems": [
                 "TradeItemLandDeed"
@@ -1355,6 +1658,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Spider House Reward",
             "RequiredItems": [
                 "ItemSkulltulaSwampSpiderHouseCount"
@@ -1368,6 +1674,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Tourist Center Roof",
             "RequiredItems": [
                 "Southern Swamp Scrub Trade",
@@ -1382,6 +1691,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Witch Shop Blue Potion",
             "RequiredItems": [
                 "Southern Swamp Kotake Mushroom Sale"
@@ -1395,6 +1707,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Witch Shop Green Potion",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -1406,6 +1721,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Southern Swamp Witch Shop Red Potion",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -1417,6 +1735,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Gold Room Hive",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -1435,6 +1756,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Gold Room Near Ceiling",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -1453,6 +1777,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Gold Room Pillar",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1466,6 +1793,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Gold Room Wall",
             "RequiredItems": [
                 "CanGatherDistantSkulltula"
@@ -1479,6 +1809,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Main Room Jar",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1492,6 +1825,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Main Room Lower Left Soft Soil",
             "RequiredItems": [
                 "ItemAnyBottle",
@@ -1506,6 +1842,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Main Room Lower Right Soft Soil",
             "RequiredItems": [
                 "CanGatherCloseSkulltula",
@@ -1520,6 +1859,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Main Room Near Ceiling",
             "RequiredItems": [
                 "CanGatherDistantSkulltula"
@@ -1533,6 +1875,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Main Room Pillar",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -1551,6 +1896,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Main Room Upper Pillar",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1564,6 +1912,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Main Room Upper Soft Soil",
             "RequiredItems": [
                 "CanGatherCloseSkulltula",
@@ -1578,6 +1929,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Main Room Water",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1591,6 +1945,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Monument Room Crate 1",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1604,6 +1961,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Monument Room Crate 2",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1617,6 +1977,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Monument Room Lower Wall",
             "RequiredItems": [
                 "CanGatherDistantSkulltula"
@@ -1630,6 +1993,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Monument Room On Monument",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1643,6 +2009,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Monument Room Torch",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1656,6 +2025,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Pot Room Behind Vines",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1679,6 +2051,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Pot Room Hive 1",
             "RequiredItems": [
                 "CanGatherDistantSkulltula"
@@ -1692,6 +2067,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Pot Room Hive 2",
             "RequiredItems": [
                 "CanGatherDistantSkulltula"
@@ -1705,6 +2083,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Pot Room Jar",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1718,6 +2099,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Pot Room Pot 1",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1731,6 +2115,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Pot Room Pot 2",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1744,6 +2131,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Pot Room Wall",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1757,6 +2147,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Tree Room Grass 1",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1770,6 +2163,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Tree Room Grass 2",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1783,6 +2179,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Tree Room Hive",
             "RequiredItems": [
                 "CanGatherDistantSkulltula"
@@ -1796,6 +2195,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Tree Room Tree 1",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1809,6 +2211,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Tree Room Tree 2",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1822,6 +2227,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Swamp Spider House Items Tree Room Tree 3",
             "RequiredItems": [
                 "CanGatherCloseSkulltula"
@@ -1835,6 +2243,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Deku Palace Bean Grotto",
             "RequiredItems": [
                 "CanAccesDekuPalace",
@@ -1849,6 +2260,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Deku Palace Bean Man",
             "RequiredItems": [
                 "MaskDeku",
@@ -1863,6 +2277,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Deku Palace Butler",
             "RequiredItems": [
                 "MaskDeku",
@@ -1879,6 +2296,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Deku Palace West Garden",
             "RequiredItems": [
                 "MaskDeku",
@@ -1893,6 +2313,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Deku Palace Imprisoned Monkey",
             "RequiredItems": [
                 "MaskDeku",
@@ -1908,6 +2331,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Behind Woodfall Owl Chest",
             "RequiredItems": [
                 "MaskDeku"
@@ -1921,6 +2347,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Entrance to Woodfall Chest",
             "RequiredItems": [
                 "MaskDeku"
@@ -1934,6 +2363,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Bridge Chest",
             "RequiredItems": [
                 "MaskDeku"
@@ -1947,6 +2379,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Great Fairy",
             "RequiredItems": [
                 "MaskDeku",
@@ -1961,6 +2396,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Boss Blue Warp (same check for all Temple)",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -1983,6 +2421,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Hero's Bow Chest",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -1997,6 +2438,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Odolwa Heart Container",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -2011,6 +2455,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Boss Key Chest",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -2026,6 +2473,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Bridge Room Hive",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -2040,6 +2490,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Compass Chest",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -2055,6 +2508,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Dark Room",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -2070,6 +2526,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Deku Baba",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -2084,6 +2543,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Entrance Fairy",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2097,6 +2559,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Entrance Platform",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2110,6 +2575,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Jar Fairy",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2123,6 +2591,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Main Room Bubble",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2136,6 +2607,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Main Room Switch",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2149,6 +2623,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Map Chest",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2162,6 +2639,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Platform Room Hive",
             "RequiredItems": [
                 "CanAccesWoodfallTemple ",
@@ -2183,6 +2663,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Poison Water Bubble",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2196,6 +2679,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Pre-Boss Lower Right Bubble",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2209,6 +2695,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Pre-Boss Pillar Bubble",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2222,6 +2711,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Pre-Boss Upper Left Bubble",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2235,6 +2727,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Pre-Boss Upper Right Bubble",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2248,6 +2743,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Skulltula",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2268,6 +2766,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Woodfall Temple Small Key Chest",
             "RequiredItems": [
                 "CanAccesWoodfallTemple "
@@ -2281,6 +2782,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Mountain Village Darmani",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2296,6 +2800,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Mountain Village Frog Choir",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2311,6 +2818,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Mountain Village Hungry Goron",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2326,6 +2836,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Mountain Village Keaton Quiz (you just need to do it 1 time in all the run)",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2341,6 +2854,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Mountain Village Mountain Smithy Day 1",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2357,6 +2873,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Mountain Village Mountain Smithy Day 2",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2371,6 +2890,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Mountain Village Mountain Spring Grotto",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2386,6 +2908,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Mountain Village Mountain Waterfall Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2401,6 +2926,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Twin Islands Goron Race",
             "RequiredItems": [
                 "MaskGoron",
@@ -2418,6 +2946,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Twin Islands Goron Racetrack Grotto",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2440,6 +2971,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Twin Islands Hot Spring Water Grotto",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -2465,6 +2999,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Twin Islands Romani Ranch Map Purchase",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2479,6 +3016,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Twin Islands Snowhead Map Purchase",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2493,6 +3033,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Twin Islands Cave Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2508,6 +3051,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Twin Islands Underwater Ramp Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2523,9 +3069,13 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Baby Goron",
             "RequiredItems": [
-                "CanAccesMountainVillage"
+                "CanAccesMountainVillage",
+                "MaskGoron"
             ],
             "ConditionalItems": [],
             "TimeNeeded": 0,
@@ -2536,9 +3086,13 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Biggest Bomb Bag Purchase",
             "RequiredItems": [
-                "CanAccesMountainVillage"
+                "CanAccesMountainVillage",
+                "MaskGoron"
             ],
             "ConditionalItems": [],
             "TimeNeeded": 0,
@@ -2549,6 +3103,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Goron Shop 10 Arrows",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -2562,6 +3119,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Goron Shop 10 Bombs",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -2575,6 +3135,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Goron Shop Red Potion",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -2588,6 +3151,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Ledge",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2602,6 +3168,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Lens Cave Invisible Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2617,6 +3186,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Lens Cave Rock Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2631,6 +3203,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Lens of Truth Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -2644,6 +3219,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Mountain Scrub Trade",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2658,6 +3236,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Goron Village Powder Keg Challenge",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -2682,6 +3263,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Path to Snowhead Grotto",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2698,6 +3282,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Path to Snowhead Pillar",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2716,6 +3303,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Great Fairy",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2731,6 +3321,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Boss Blue Warp (Same reward in all temple)",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2748,6 +3341,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Fire Arrow Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2763,6 +3359,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Goht Heart Container",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2780,6 +3379,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Basement",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -2793,6 +3395,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Block Room Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -2806,6 +3411,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Boss Key Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2823,6 +3431,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Bridge Room Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2840,6 +3451,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Bridge Room Ledge Bubble",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2855,6 +3469,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Bridge Room Pillar Bubble",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2870,6 +3487,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Ceiling Bubble",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2886,6 +3506,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Compass Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2900,6 +3523,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Crate",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2915,6 +3541,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Dinolfos 1",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2932,6 +3561,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Dinolfos 2",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2949,6 +3581,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Ice Puzzle",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2965,6 +3600,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Icicle Room Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2979,6 +3617,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Icicle Room Wall",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -2995,6 +3636,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Main Room Wall",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -3012,6 +3656,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Map Chest",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -3025,6 +3672,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Map Room Fairy",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -3038,6 +3688,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Map Room Ledge",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -3055,6 +3708,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Pillar Freezards",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -3069,6 +3725,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Snow Room Bubble",
             "RequiredItems": [
                 "CanAccesMountainVillage",
@@ -3085,6 +3744,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Snowhead Temple Twin Block",
             "RequiredItems": [
                 "CanAccesMountainVillage"
@@ -3098,6 +3760,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Milk Road Gorman Bros Milk Purchase",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -3109,6 +3774,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Milk Road Gorman Bros Race",
             "RequiredItems": [
                 "SongItem_EponaSong",
@@ -3123,6 +3791,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Milk Road Great Bay Map Purchase",
             "RequiredItems": [
                 "CanDoShotBowOrHookshot"
@@ -3136,6 +3807,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Milk Road Keaton Quiz",
             "RequiredItems": [
                 "MaskKeaton"
@@ -3149,6 +3823,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Milk Road Romani Ranch Map Purchase",
             "RequiredItems": [
                 "CanDoShotBowOrHookshot"
@@ -3162,6 +3839,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Aliens Defense",
             "RequiredItems": [
                 "ItemPowderKeg",
@@ -3176,6 +3856,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Cremia",
             "RequiredItems": [
                 "ItemPowderKeg",
@@ -3190,6 +3873,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Dog Race",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -3201,6 +3887,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Doggy Racetrack Roof Chest",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -3225,6 +3914,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Grog",
             "RequiredItems": [
                 "MaskBremen"
@@ -3238,6 +3930,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Ranch Cow #1",
             "RequiredItems": [
                 "ItemPowderKeg",
@@ -3253,6 +3948,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Ranch Cow #2",
             "RequiredItems": [
                 "ItemPowderKeg",
@@ -3268,6 +3966,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Ranch Cow #3",
             "RequiredItems": [
                 "ItemPowderKeg",
@@ -3283,6 +3984,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Romani Ranch Romani's Game",
             "RequiredItems": [
                 "ItemPowderKeg",
@@ -3297,6 +4001,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Baby Zoras",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3311,6 +4018,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Fisherman Game",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3325,6 +4035,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Fisherman Pictograph",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3339,6 +4052,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Grotto",
             "RequiredItems": [
                 "CanAccesGreatBay"
@@ -3352,6 +4068,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Grotto Cow #1",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3368,6 +4087,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Grotto Cow #2",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3384,6 +4106,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Ledge",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3407,6 +4132,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Great Bay Map Purchase",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3421,6 +4149,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Lab Fish",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3435,6 +4166,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Mikau",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3450,6 +4184,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Ocean Spider House Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3466,6 +4203,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Ocean Spider House Day 1 Reward",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3480,6 +4220,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Ocean Spider House Day 2 Reward",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3494,6 +4237,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Ocean Spider House Day 3 Reward",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3508,6 +4254,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Coast Stone Tower Map Purchase",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3522,6 +4271,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Behind Skull 1",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3535,6 +4287,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Behind Skull 2",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3548,6 +4303,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Ceiling Edge",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3561,6 +4319,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Ceiling Plank",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3574,6 +4335,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Jar",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3587,6 +4351,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Lower Pot",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3600,6 +4367,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Upper Pot",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3613,6 +4383,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Webbed Hole",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3626,6 +4399,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items 2nd Room Webbed Pot",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3639,6 +4415,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Colored Skulls Behind Picture",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3652,6 +4431,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Colored Skulls Ceiling Edge",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3665,6 +4447,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Colored Skulls Chandelier 1",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3678,6 +4463,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Colored Skulls Chandelier 2",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3691,6 +4479,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Colored Skulls Chandelier 3",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3704,6 +4495,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Colored Skulls Pot",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3717,6 +4511,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Entrance Left Wall",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3730,6 +4527,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Entrance Right Wall",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3743,6 +4543,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Entrance Web",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3756,6 +4559,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Library Behind Bookcase 1",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3769,6 +4575,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Library Behind Bookcase 2",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3782,6 +4591,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Library Behind Picture",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3795,6 +4607,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Library Ceiling Edge",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3808,6 +4623,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Library Hole Behind Cabinet",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3821,6 +4639,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Library Hole Behind Picture",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3834,6 +4655,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Library On Corner Bookshelf",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3847,6 +4671,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Storage Room Behind Boat",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3860,6 +4687,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Storage Room Behind Crate",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3873,6 +4703,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Storage Room Ceiling Web",
             "RequiredItems": [
                 "CanAccesOceanSkullhose",
@@ -3889,6 +4722,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Storage Room Crate",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3902,6 +4738,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ocean Spider House Items Storage Room Jar",
             "RequiredItems": [
                 "CanAccesOceanSkullhose"
@@ -3915,6 +4754,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Beaver Race #1",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3930,6 +4772,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Beaver Race #2",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3945,6 +4790,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Ocean Great Fairy",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3961,6 +4809,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Grotto",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3975,6 +4826,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Jar Game",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -3989,6 +4843,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Ledge With Tree Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4003,6 +4860,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Ledge Without Tree Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4017,6 +4877,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Like-Like",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4031,6 +4894,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Cape Underwater Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4045,6 +4911,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Bad Pictograph of Lulu",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4060,6 +4929,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Good Pictograph of Lulu",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4075,6 +4947,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Evan",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4090,6 +4965,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Lulu's Room Ledge",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4106,6 +4984,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Ocean Scrub Purchase",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4120,6 +5001,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Ocean Scrub Trade",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4136,6 +5020,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Stage Lights",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4152,6 +5039,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Zora Shop 10",
             "RequiredItems": [
                 "CanAccesGreatBay"
@@ -4165,6 +5055,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Zora Shop Hero's Shield",
             "RequiredItems": [
                 "CanAccesGreatBay"
@@ -4178,6 +5071,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Zora Hall Zora Shop Red Potion",
             "RequiredItems": [
                 "CanAccesGreatBay"
@@ -4191,6 +5087,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Exterior Corner Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4205,6 +5104,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Exterior Log Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4219,6 +5121,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Exterior Sand Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4233,6 +5138,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Sewer Cage",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4248,6 +5156,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Sewer Cage Room Deep Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4262,6 +5173,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Sewer Cage Room Shallow Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4276,6 +5190,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Sewer Maze Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4290,6 +5207,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Interior Hookshot Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4304,6 +5224,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Interior Guard Room Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4318,6 +5241,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Interior Lower Chest",
             "RequiredItems": [
                 "CanAccesGreatBay"
@@ -4331,6 +5257,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Interior Tank Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4346,6 +5275,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pirates Fortress Interior Upper Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4360,6 +5292,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pinnacle Rock Lower Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4374,6 +5309,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pinnacle Rock Upper Chest",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4388,6 +5326,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Pinnacle Rock Seahorses",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -4403,6 +5344,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Boss Blue Warp (same as all temple)",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4420,6 +5364,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Bio Babas",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4434,6 +5381,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Boss Key Chest",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4451,6 +5401,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Compass Chest",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4465,6 +5418,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Dexihands Jar",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4480,6 +5436,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Entrance Torches",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4502,6 +5461,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Green Valve",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4516,6 +5478,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Ledge Jar",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4529,6 +5494,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Map Chest",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4543,6 +5511,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Pre-Boss Room Bubble",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4558,6 +5529,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Pre-Boss Room Underwater Bubble ",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4572,6 +5546,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Seesaw Room",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4585,6 +5562,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Skulltula",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4599,6 +5579,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Small Key Chest",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4612,6 +5595,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Underwater Barrel",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4626,6 +5612,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Water Control Room Underwater Bubble",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4640,6 +5629,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Waterwheel Room Lower",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4653,6 +5645,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Waterwheel Room Upper",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4666,6 +5661,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Whirlpool Barrel",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4679,6 +5677,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Great Bay Whirlpool Jar",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4692,6 +5693,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Gyorg Heart Container",
             "RequiredItems": [
                 "CanAccesGreatBayTemple",
@@ -4709,6 +5713,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Great Bay Temple Ice Arrow Chest",
             "RequiredItems": [
                 "CanAccesGreatBayTemple"
@@ -4722,6 +5729,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road To Ikana Invisible Soldier",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4738,6 +5748,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road To Ikana Path to Ikana Grotto",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4752,6 +5765,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Road To Ikana Path to Ikana Pillar Chest",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4766,6 +5782,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Graveyard Captain Keeta's Chest",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4780,6 +5799,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Graveyard Dampe Digging",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4794,6 +5816,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Graveyard Day 1 Grave Bats",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4808,6 +5833,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Graveyard Day 1 Grave Tablet",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4822,6 +5850,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Graveyard Day 2 Bats",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4836,6 +5867,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Graveyard Grotto",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4850,6 +5884,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Graveyard Iron Knuckle Chest",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -4864,6 +5901,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Canyon Scrub Purchase",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -4878,6 +5918,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Canyon Scrub Trade",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -4893,6 +5936,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Clock Town Map Purchase ",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -4907,6 +5953,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Stone Tower Map Purchase",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -4921,6 +5970,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Ledge",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -4936,6 +5988,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Ikana Great Fairy",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -4950,6 +6005,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Pamela's Father",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -4967,6 +6025,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Poe Hut",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -4981,6 +6042,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Canyon Secret Shrine Grotto",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon"
@@ -4994,6 +6058,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Secret Shrine Dinolfos Chest",
             "RequiredItems": [
                 "CanAccesSecretShrine"
@@ -5007,6 +6074,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Secret Shrine Final Chest",
             "RequiredItems": [
                 "CanAccesSecretShrine"
@@ -5020,6 +6090,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Secret Shrine Garo Master Chest",
             "RequiredItems": [
                 "CanAccesSecretShrine"
@@ -5033,6 +6106,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Secret Shrine Wart Chest",
             "RequiredItems": [
                 "CanAccesSecretShrine"
@@ -5046,6 +6122,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Secret Shrine Wizzrobe Chest",
             "RequiredItems": [
                 "CanAccesSecretShrine"
@@ -5059,6 +6138,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Beneath the Well Cow Beneath the Well",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -5077,6 +6159,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Beneath the Well Mirror Shield Chest",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -5092,6 +6177,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Beneath the Well Well Left Path Chest",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -5107,6 +6195,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Beneath the Well Well Right Path Chest",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -5121,6 +6212,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Castle Ikana Castle Pillar",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -5144,6 +6238,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Ikana Castle Ikana King",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -5161,6 +6258,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stone Tower Inverted Stone Tower Left Chest",
             "RequiredItems": [
                 "ItemMagicBean",
@@ -5175,6 +6275,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stone Tower Inverted Stone Tower Middle Chest",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed",
@@ -5189,6 +6292,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Stone Tower Inverted Stone Tower Right Chest",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed",
@@ -5203,6 +6309,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Boss Blue Warp (same as all temple)",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed",
@@ -5223,6 +6332,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Temple Giant's Mask Chest",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed",
@@ -5242,6 +6354,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Light Arrow Chest",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5262,6 +6377,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Armos Room Chest",
             "RequiredItems": [
                 "CanAccesToStoneTower",
@@ -5285,6 +6403,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Basement Ledge",
             "RequiredItems": [
                 "CanAccesToStoneTower",
@@ -5299,6 +6420,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Temple Stone Tower Boss Key Chest",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed",
@@ -5313,6 +6437,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Bridge Crystal",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5326,6 +6453,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Compass Chest",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5346,6 +6476,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Death Armos",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed"
@@ -5359,6 +6492,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Temple Stone Tower Death Armos Maze Chest",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed"
@@ -5372,6 +6508,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Entrance Sun Switch",
             "RequiredItems": [
                 "CanAccesToStoneTower",
@@ -5388,6 +6527,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Eyegore",
             "RequiredItems": [
                 "CanAccesToStoneTower",
@@ -5402,6 +6544,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Eyegore Room Chest",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5415,6 +6560,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Lava Room Fire Ring",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5428,6 +6576,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Lava Room Ledge",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5441,6 +6592,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Map Chest",
             "RequiredItems": [
                 "CanAccesToStoneTower",
@@ -5464,6 +6618,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Mirror Sun Block",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5484,6 +6641,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Mirror Sun Switch",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5504,6 +6664,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Statue Eye",
             "RequiredItems": [
                 "CanAccesToStoneTower",
@@ -5518,6 +6681,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Thin Bridge",
             "RequiredItems": [
                 "CanAccesToStoneTower",
@@ -5532,6 +6698,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Underwater",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5545,6 +6714,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ST Temple Stone Tower Updraft Fire Ring",
             "RequiredItems": [
                 "CanAccesToStoneTower"
@@ -5558,6 +6730,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Temple Stone Tower Updraft Frozen Eye",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed",
@@ -5572,6 +6747,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Temple Stone Tower Updraft Room Chest",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed"
@@ -5585,6 +6763,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Temple Stone Tower Wizzrobe",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed"
@@ -5598,6 +6779,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Temple Twinmold Heart Container",
             "RequiredItems": [
                 "CanAccesToInvertedStoneTowed",
@@ -5618,6 +6802,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "The Moon Fierce Deity Mask",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5629,6 +6816,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanDoShotBowOrHookshot",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5647,6 +6837,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanDoBombers",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5669,6 +6862,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanDoExplosion",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5690,6 +6886,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "AnyTitleDeed",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5714,6 +6913,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "AnyTransformationMask",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5735,6 +6937,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAttack",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5771,6 +6976,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Wallet99RupeesOrMore",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5792,6 +7000,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Wallet200RupeesOrMore",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5810,6 +7021,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Wallet500RupeesOrMore",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -5825,6 +7039,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemOcarina",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5836,6 +7053,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemBow",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5847,6 +7067,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemFireArrow",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5858,6 +7081,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemIceArrow",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5869,6 +7095,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemLightArrow",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5880,6 +7109,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemBombBag",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5891,6 +7123,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "Deku Stick Fighting",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5902,6 +7137,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDekuNuts",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5913,6 +7151,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemMagicBean",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5924,6 +7165,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemPowderKeg",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5935,6 +7179,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemPictobox",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5946,6 +7193,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemLens",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5957,6 +7207,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemHookshot",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5968,6 +7221,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemFairySword",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5979,6 +7235,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemBottleWitch",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -5990,6 +7249,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemBottleAliens",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6001,6 +7263,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemBottleBeavers",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6012,6 +7277,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemBottleDampe",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6023,6 +7291,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemBottleMadameAroma",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6034,6 +7305,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemBottleGoronRace",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6045,6 +7319,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemMoonTear",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6056,6 +7333,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemLandDeed",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6067,6 +7347,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemSwampDeed",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6078,6 +7361,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemMountainDeed",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6089,6 +7375,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemOceanDeed",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6100,6 +7389,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemRoomKey",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6111,6 +7403,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemKafeiLetter",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6122,6 +7417,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemMamaLetter",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6133,6 +7431,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "TradeItemPendant",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6144,6 +7445,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskDeku",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6155,6 +7459,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskGoron",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6166,6 +7473,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskZora",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6177,6 +7487,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskFierceDeity",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6188,6 +7501,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskTruth",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6199,6 +7515,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskKafei",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6210,6 +7529,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskAllNight",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6221,6 +7543,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskBunnyHood",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6232,6 +7557,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskKeaton",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6243,6 +7571,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskGaro",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6254,6 +7585,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskRomani",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6265,6 +7599,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskCircusLeader",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6276,6 +7613,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskPostmanHat",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6287,6 +7627,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskCouple",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6298,6 +7641,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskGreatFairy",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6309,6 +7655,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskGibdo",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6320,6 +7669,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskDonGero",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6331,6 +7683,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskKamaro",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6342,6 +7697,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskCaptainHat",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6353,6 +7711,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskStone",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6364,6 +7725,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskBremen",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6375,6 +7739,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskBlast",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6386,6 +7753,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskScents",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6397,6 +7767,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "MaskGiant",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6408,6 +7781,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "StartingSword",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6419,6 +7795,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeRazorSword",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6430,6 +7809,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeGildedSword",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6441,6 +7823,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "StartingShield",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6452,6 +7837,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeMirrorShield",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6463,6 +7851,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeBigQuiver",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6474,6 +7865,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeBiggestQuiver",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6485,6 +7879,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeBigBombBag",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6496,6 +7893,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeBiggestBombBag",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6507,6 +7907,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "DefaultWallet",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6518,6 +7921,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeAdultWallet",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6529,6 +7935,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "UpgradeGiantWallet",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6540,6 +7949,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "RemainsOdolwa",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6551,6 +7963,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "RemainsGoht",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6562,6 +7977,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "RemainsGyorg",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6573,6 +7991,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "RemainsTwinmold",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6584,6 +8005,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemNotebook",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6595,6 +8019,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "FairyDoubleDefense",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6606,6 +8033,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "FairyMagic",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6617,6 +8047,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "FairyDoubleMagic",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6628,6 +8061,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_SongOfTime",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6639,6 +8075,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_SongOfHealing",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6650,6 +8089,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_EponaSong",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6661,6 +8103,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_SongOfSoaring",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6672,6 +8117,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_SongOfStorm",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6683,6 +8131,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_SonataOfAwakening",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6694,6 +8145,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_GoronLullabyHalf",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6705,6 +8159,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_GoronLullabyFull",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6716,6 +8173,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_NewWaveBossaNova",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6727,6 +8187,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_ElegyOfEmptyness",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6738,6 +8201,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_SongOathToOrder",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6749,6 +8215,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "SongItem_SunSong",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -6760,6 +8229,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemAnyBottle",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -6775,6 +8247,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesDekuPalace",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -6808,6 +8283,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanGatherDistantSkulltula",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -6826,6 +8304,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanGatherCloseSkulltula",
             "RequiredItems": [],
             "ConditionalItems": [
@@ -6850,6 +8331,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesWoodfallTemple ",
             "RequiredItems": [
                 "MaskDeku",
@@ -6865,6 +8349,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesMountainVillage",
             "RequiredItems": [
                 "ItemBow"
@@ -6889,6 +8376,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesSnowheadTemple",
             "RequiredItems": [
                 "MaskGoron",
@@ -6905,6 +8395,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesGreatBay",
             "RequiredItems": [
                 "ItemOcarina",
@@ -6919,6 +8412,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesGreatBayTemple",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -6934,6 +8430,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesOceanSkullhose",
             "RequiredItems": [
                 "CanAccesGreatBay",
@@ -6949,6 +8448,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesToRoadToIkana",
             "RequiredItems": [
                 "ItemOcarina",
@@ -6963,6 +8465,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesToIkanaCanyon",
             "RequiredItems": [
                 "CanAccesToRoadToIkana",
@@ -6984,6 +8489,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesToStoneTower",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -7001,6 +8509,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesToInvertedStoneTowed",
             "RequiredItems": [
                 "CanAccesToStoneTower",
@@ -7017,6 +8528,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "CanAccesSecretShrine",
             "RequiredItems": [
                 "CanAccesToIkanaCanyon",
@@ -7033,6 +8547,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "IST Temple Boss Blue Warp (same as all temple)",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7044,6 +8561,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemEmptyBottle",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7055,6 +8575,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemSkulltulaSwampSpiderHouseCount",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7066,6 +8589,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemAllSkulltulaSwampSpiderHouse",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7077,6 +8603,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemSkulltulaOceanSideSouderHouseCount",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7088,6 +8617,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemAllSkulltulaOceanSideSouderHouse",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7099,6 +8631,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDungeonWoodfallFairiesCount",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7110,6 +8645,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDungeonWoodfallAllFairies",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7121,6 +8659,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDungeonSnowHeadFairiesCount",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7132,6 +8673,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDungeonSnowHeadAllFairies",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7143,6 +8687,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDungeonGreatBayFairiesCount",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7154,6 +8701,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDungeonGreatBayAllFairies",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7165,6 +8715,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDungeonStoneTowerFairiesCount",
             "RequiredItems": [],
             "ConditionalItems": [],
@@ -7176,6 +8729,9 @@
             "TrickCategory": null
         },
         {
+            "ReadableName": null,
+            "HintText": null,
+            "HintVideoUrl": null,
             "Id": "ItemDungeonStoneTowerAllFairies",
             "RequiredItems": [],
             "ConditionalItems": [],
